@@ -3,6 +3,7 @@ OUTCOMES OF THE WEEK
 tuesday (23.02) - sunday (28.02)
 
 DONE:
+Minutes
 
 Repository
 
@@ -22,7 +23,7 @@ Agendas for meetings
 
 PARTIALLY DONE:
 
-Minutes
+
 Roles
 Questions
 
