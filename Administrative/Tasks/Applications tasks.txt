@@ -19,6 +19,6 @@ Applications tasks:
 	-Betas
 	-Trial
 	-Demos
-	
+	-Documentation of the software
 	
 	
