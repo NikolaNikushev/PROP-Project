@@ -1,0 +1,42 @@
+Week1: 
+	Study the ProP work
+	Chose the name
+	Chose the logo
+	Defined what is unclear
+	Made a proposal of visitor's authorization process 
+	Discussed the possible website functionality
+
+Week2:
+	Tuesday:
+		Held a meeting with the tutor
+	Wednesday: 
+		Initialized GitHub repo
+		Learned how to use it
+		Prepared the templates for future agendas and minutes
+		Agreed on the group meetings schedule:
+			Wednesday
+			Friday
+			Sunday
+		For the tutor meeting 2
+		Chose the chairman: Dimitar
+		Chose the notetaker: Atanas
+		Finished the questions
+		Sent the questions
+	Friday:
+		Project plan initialized
+		Project statement discussed
+		Meeting roles schedule defined
+			1 Dimitar
+			2 Hristian
+			3 Atanas
+			4 Dmitrii
+			13
+			42
+			21
+			34
+		Drunk beer 
+		Listened to RHCP
+		Prepared the milestones review doc
+		Started discussing the DBMS
+		Started searching for event website examples
+		Mentioned barcodes - started researching
