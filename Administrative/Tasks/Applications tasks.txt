@@ -1,0 +1,24 @@
+Applications tasks:
+	-Interview 
+	-Requirement gathering
+	-Project Scope
+	-App list
+	-Logical design
+	-Wireframes
+	-Design docs.
+	-UI
+	-Mockups
+	-Functionality Doc
+	-Process flowchart
+	-Feasibility Study
+	-Restrictions
+	-Software Model
+	-Integration
+	-Implementation
+	-Testing
+	-Betas
+	-Trial
+	-Demos
+	
+	
+	

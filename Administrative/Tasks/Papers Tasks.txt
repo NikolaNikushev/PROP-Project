@@ -1,0 +1,18 @@
+Papers Tasks:
+	-Project Plan
+	-Milestones list
+	-Project Scope 
+	-Progress Tracking
+	-Accomplishment tracking
+	-Task list
+	-Website design doc.
+	-Database design doc.
+	-Applications design doc.
+	-Process Report
+	-Meeting agendas
+	-MOSCOW
+	-Setup document
+	-Project Charter
+	-Event description
+	-Question list
+	

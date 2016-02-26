@@ -1,0 +1,11 @@
+Database Tasks:
+	-Data Scope
+	-Data model
+	-Database Design
+	-Forms and Reports
+	-Normalization
+	-Implementation
+	-Server implementation
+	-Queries
+	-Testing
+	-Management

@@ -1,0 +1,14 @@
+WEBSITE TASKS:
+	-Process Chart
+	-Scope
+	-Design Document
+	-Wireframes
+	-Graphic Design
+	-HTML
+	-CSS
+	-JavaScript
+	-Database 
+	-PHP
+	-Betas and shit
+	-Test
+	
