@@ -2,6 +2,7 @@ WEBSITE TASKS:
 	-Process Chart
 	-Scope
 	-Design Document
+	-Sitemap
 	-Wireframes
 	-Graphic Design
 	-HTML
@@ -12,3 +13,15 @@ WEBSITE TASKS:
 	-Betas and shit
 	-Test
 	
+
+
+
+Week3: 
+	Interview the client for the website details
+	Define the website's scope
+	Make a process chart proposal 
+	Make a sitemap proposal
+	Make several homepage wireframes 
+		and present to the client to 
+		choose the best
+
