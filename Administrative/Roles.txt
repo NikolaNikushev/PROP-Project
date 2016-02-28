@@ -1,0 +1,11 @@
+1. Dimitar
+2. Hrisitian 
+3. Atanas
+4. Dmitrii
+==============
+Tutor meeting:
+==============
+week i:   13
+week i+1: 42
+week i+2: 21
+week i+3: 34
