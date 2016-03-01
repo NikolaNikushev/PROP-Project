@@ -1,0 +1,38 @@
+		CLIENT
+- contact only through bert(is gonna send info through him).
+- has many events (most about music)
+- 4000 - 50 000 visitors (small/big event)
+- 20-45 yrs - age of visitors
+- camping mandatory
+- 1 ticket only with name and registration
+- entrance second queue with tickets on the spot
+- we track how much of all the products are sold and how much are in storage
+- keep track of who is in who bought a ticket 
+- windows form about keeping track of that
+- better than what he has (entry).
+
+-website
+	- all orders through the website
+	- lineup
+	- rules
+	- what's the event what's going on
+	- no sponsors
+	- merch optional
+-we don't organize the hardware, medical staff, employees
+		
+		Bert
+-we have to have clear scope of what we have to do
+-don't do proposals for things we are not suppose to do
+-sitemap is good
+
+-db for people
+	-general info
+	-bank account
+	-keep track of purchases
+	-option to give left money back
+-db for items
+	-connected to the apps
+	-we have to keep track of everything that is sold (quantity, price, stock, sold)
+-MySQL
+-document front page should have name and logo
+-!!WHEN WE ARE MEETING WITH CLIENT WE MUST HAVE CLEAR IDEAS, ASK ABOUT HIS CURRENT SITUATION, AND PROPOSE A BETTER SOLUTION!!
