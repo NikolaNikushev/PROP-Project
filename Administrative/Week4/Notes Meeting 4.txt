@@ -1,0 +1,14 @@
+Tutor Meeting Week 4 Notes:
+1.Project Plan Evaluation: 
+1.1 Front Page: Project plan.
+1.2 Table of Contents Adjustments.
+1.2 Project Goal: State only the activities that we are going to be responsible for.
+1.3 Deliverables and Non-Deliverables should be separated.
+1.4 Project Phasing: Week 8 and 9, make final changes, only if necessary.
+1.5 Project Risk example: Which app should be skipped, App for one of the shops or App for inputting articles (Solution: MoSCoW)
+2. Event Description: 
+2.1 Workshops with reservation - approved.
+2.2 Make rules about use.
+3. Processes:
+3.1 Barcodes - major con compared to RFID chips: easier to copy and high possibility to abuse the principle of barcodes.
+3.2 RFID Chips - Less fraud-prone than barcodes. ISSD Desk, schedule a meeting 
