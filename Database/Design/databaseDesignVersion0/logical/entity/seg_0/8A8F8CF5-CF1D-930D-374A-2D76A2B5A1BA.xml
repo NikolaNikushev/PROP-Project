@@ -14,4 +14,75 @@
 <maxVolumes>9999999</maxVolumes>
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="PRODUCT_ID" id="9C80A409-D2C2-CB18-3E85-0A36CA6675A2">
+<createdBy>Dmitry</createdBy>
+<createdTime>2016-03-14 20:41:25 UTC</createdTime>
+<generatorID>8A93A696-8386-128E-80BD-19017CE2EFF2</generatorID>
+<ownerDesignName>databaseDesignVersion0</ownerDesignName>
+<engineerTo>
+<item key="61197903-AE99-12F5-D9F9-9761B88F1D71" value="true"/>
+</engineerTo>
+<referedAttribute>85981A7E-601A-2FCF-DA3D-A3E74E0B1E1C</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="USER_ID" id="2D2847BD-2C5E-4C1E-31A5-F46B1C26A730">
+<createdBy>Dmitry</createdBy>
+<createdTime>2016-03-14 20:42:06 UTC</createdTime>
+<generatorID>7AFA5CE2-6A60-94AF-FBF3-F4EC70530969</generatorID>
+<ownerDesignName>databaseDesignVersion0</ownerDesignName>
+<engineerTo>
+<item key="61197903-AE99-12F5-D9F9-9761B88F1D71" value="true"/>
+</engineerTo>
+<referedAttribute>3D4F250B-9952-4B6F-FC03-764B2102ABD3</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="QUANTITY" id="669ABC48-210E-AF61-C0B4-F2C385F74047">
+<createdBy>Dmitry</createdBy>
+<createdTime>2016-03-14 20:42:13 UTC</createdTime>
+<ownerDesignName>databaseDesignVersion0</ownerDesignName>
+<engineerTo>
+<item key="61197903-AE99-12F5-D9F9-9761B88F1D71" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="DATE" id="20E6ADC1-88F7-5E8F-2CDB-8F9794301BDF">
+<createdBy>Dmitry</createdBy>
+<createdTime>2016-03-14 20:42:18 UTC</createdTime>
+<ownerDesignName>databaseDesignVersion0</ownerDesignName>
+<engineerTo>
+<item key="61197903-AE99-12F5-D9F9-9761B88F1D71" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="343CDE23-6BAF-7346-DC39-2428A5D3316F" name="SALELINES PK">
+<createdBy>Dmitry</createdBy>
+<createdTime>2016-03-14 20:42:06 UTC</createdTime>
+<ownerDesignName>databaseDesignVersion0</ownerDesignName>
+<engineerTo>
+<item key="61197903-AE99-12F5-D9F9-9761B88F1D71" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>2D2847BD-2C5E-4C1E-31A5-F46B1C26A730</attributeRef>
+<attributeRef>9C80A409-D2C2-CB18-3E85-0A36CA6675A2</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
 </Entity>

@@ -14,4 +14,59 @@
 <maxVolumes>9999999</maxVolumes>
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="BRACELET_ID" id="4465D9C2-F40D-681F-28C4-BA8039D5897F">
+<createdBy>Dmitry</createdBy>
+<createdTime>2016-03-14 20:16:56 UTC</createdTime>
+<ownerDesignName>databaseDesignVersion0</ownerDesignName>
+<engineerTo>
+<item key="61197903-AE99-12F5-D9F9-9761B88F1D71" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="STATUS" id="5C9D1FF8-1642-F4AE-030A-0CF63A7DB16B">
+<createdBy>Dmitry</createdBy>
+<createdTime>2016-03-14 20:17:17 UTC</createdTime>
+<ownerDesignName>databaseDesignVersion0</ownerDesignName>
+<engineerTo>
+<item key="61197903-AE99-12F5-D9F9-9761B88F1D71" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="USER_ID" id="03C0D712-3BFA-7A7D-D113-3E4686B5D5A8">
+<createdBy>Dmitry</createdBy>
+<createdTime>2016-03-14 20:16:24 UTC</createdTime>
+<generatorID>3F015945-D3E0-5EA6-1A12-E23DF786A013</generatorID>
+<ownerDesignName>databaseDesignVersion0</ownerDesignName>
+<engineerTo>
+<item key="61197903-AE99-12F5-D9F9-9761B88F1D71" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<referedAttribute>3D4F250B-9952-4B6F-FC03-764B2102ABD3</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="0EC02450-3EB3-3A55-7D57-83E1880F0C65" name="RFIDS PK">
+<createdBy>Dmitry</createdBy>
+<createdTime>2016-03-14 20:16:24 UTC</createdTime>
+<ownerDesignName>databaseDesignVersion0</ownerDesignName>
+<engineerTo>
+<item key="61197903-AE99-12F5-D9F9-9761B88F1D71" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>4465D9C2-F40D-681F-28C4-BA8039D5897F</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
 </Entity>

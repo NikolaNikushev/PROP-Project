@@ -14,4 +14,69 @@
 <maxVolumes>9999999</maxVolumes>
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="ACTIVITY_ID" id="DAE613EA-CA29-47BE-61C6-98E6C771B075">
+<createdBy>Dmitry</createdBy>
+<createdTime>2016-03-14 20:49:01 UTC</createdTime>
+<ownerDesignName>databaseDesignVersion0</ownerDesignName>
+<engineerTo>
+<item key="61197903-AE99-12F5-D9F9-9761B88F1D71" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ACTIVITYNAME" id="17597661-DC09-D1E8-1A5E-9BC935DCAC0A">
+<createdBy>Dmitry</createdBy>
+<createdTime>2016-03-14 20:49:12 UTC</createdTime>
+<ownerDesignName>databaseDesignVersion0</ownerDesignName>
+<engineerTo>
+<item key="61197903-AE99-12F5-D9F9-9761B88F1D71" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="CAPACITY" id="F4392579-0F48-D3BF-C7A8-C5ED19AA9153">
+<createdBy>Dmitry</createdBy>
+<createdTime>2016-03-14 20:49:27 UTC</createdTime>
+<ownerDesignName>databaseDesignVersion0</ownerDesignName>
+<engineerTo>
+<item key="61197903-AE99-12F5-D9F9-9761B88F1D71" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="RESERVED" id="6FCD9590-8102-4D4F-4121-DA51495DCD14">
+<createdBy>Dmitry</createdBy>
+<createdTime>2016-03-14 20:51:01 UTC</createdTime>
+<ownerDesignName>databaseDesignVersion0</ownerDesignName>
+<engineerTo>
+<item key="61197903-AE99-12F5-D9F9-9761B88F1D71" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="5CCE904B-BA86-1A6B-D00C-E1B47B708E06" name="ACTIVITIES PK">
+<createdBy>Dmitry</createdBy>
+<createdTime>2016-03-14 20:49:08 UTC</createdTime>
+<ownerDesignName>databaseDesignVersion0</ownerDesignName>
+<engineerTo>
+<item key="61197903-AE99-12F5-D9F9-9761B88F1D71" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>DAE613EA-CA29-47BE-61C6-98E6C771B075</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
 </Entity>

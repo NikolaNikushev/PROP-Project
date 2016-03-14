@@ -14,4 +14,87 @@
 <maxVolumes>9999999</maxVolumes>
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="ARTICLE_ID" id="F68847E4-8EE9-3D36-919C-0DAC4637EB2A">
+<createdBy>Dmitry</createdBy>
+<createdTime>2016-03-14 20:45:59 UTC</createdTime>
+<generatorID>7F5751A1-EBA5-0FB7-3D40-466984119BD5</generatorID>
+<ownerDesignName>databaseDesignVersion0</ownerDesignName>
+<engineerTo>
+<item key="61197903-AE99-12F5-D9F9-9761B88F1D71" value="true"/>
+</engineerTo>
+<referedAttribute>B1419BCE-F7A6-6B94-FCB3-B1F4607EBF4E</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="STARTDATE" id="77031A95-440C-5B9D-2005-A9BAB88DD7CA">
+<createdBy>Dmitry</createdBy>
+<createdTime>2016-03-14 20:46:22 UTC</createdTime>
+<ownerDesignName>databaseDesignVersion0</ownerDesignName>
+<engineerTo>
+<item key="61197903-AE99-12F5-D9F9-9761B88F1D71" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="DUEDATE" id="4A9EB09A-1B7F-678E-168B-F81908129F8D">
+<createdBy>Dmitry</createdBy>
+<createdTime>2016-03-14 20:46:03 UTC</createdTime>
+<ownerDesignName>databaseDesignVersion0</ownerDesignName>
+<engineerTo>
+<item key="61197903-AE99-12F5-D9F9-9761B88F1D71" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="RETURNDATE" id="83C04D56-087C-AEB3-CADF-7326ACA87A5E">
+<createdBy>Dmitry</createdBy>
+<createdTime>2016-03-14 20:46:38 UTC</createdTime>
+<ownerDesignName>databaseDesignVersion0</ownerDesignName>
+<engineerTo>
+<item key="61197903-AE99-12F5-D9F9-9761B88F1D71" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="USER_ID" id="387B1B8E-E6E3-C871-C580-BC591B5DBC0B">
+<createdBy>Dmitry</createdBy>
+<createdTime>2016-03-14 20:48:04 UTC</createdTime>
+<generatorID>F4A91A10-EBEB-C62A-D15C-80928CBB8716</generatorID>
+<ownerDesignName>databaseDesignVersion0</ownerDesignName>
+<engineerTo>
+<item key="61197903-AE99-12F5-D9F9-9761B88F1D71" value="true"/>
+</engineerTo>
+<referedAttribute>3D4F250B-9952-4B6F-FC03-764B2102ABD3</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="788FA5C3-210C-4983-160F-8F17D401D5B2" name="LOANLINES PK">
+<createdBy>Dmitry</createdBy>
+<createdTime>2016-03-14 20:48:04 UTC</createdTime>
+<ownerDesignName>databaseDesignVersion0</ownerDesignName>
+<engineerTo>
+<item key="61197903-AE99-12F5-D9F9-9761B88F1D71" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>387B1B8E-E6E3-C871-C580-BC591B5DBC0B</attributeRef>
+<attributeRef>F68847E4-8EE9-3D36-919C-0DAC4637EB2A</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
 </Entity>

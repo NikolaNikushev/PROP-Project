@@ -14,4 +14,49 @@
 <maxVolumes>9999999</maxVolumes>
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="ACTIVITY_ID" id="58BD521C-38BA-C224-CBC2-8201948F35F5">
+<createdBy>Dmitry</createdBy>
+<createdTime>2016-03-14 20:49:44 UTC</createdTime>
+<generatorID>6037C392-4394-233E-2B76-CC7AF0619258</generatorID>
+<ownerDesignName>databaseDesignVersion0</ownerDesignName>
+<engineerTo>
+<item key="61197903-AE99-12F5-D9F9-9761B88F1D71" value="true"/>
+</engineerTo>
+<referedAttribute>DAE613EA-CA29-47BE-61C6-98E6C771B075</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="USER_ID" id="AFCE01B5-1258-CB60-F626-30A6CF9F500F">
+<createdBy>Dmitry</createdBy>
+<createdTime>2016-03-14 20:51:42 UTC</createdTime>
+<generatorID>193C0F01-C508-3C77-6743-93EEEAE3C5F1</generatorID>
+<ownerDesignName>databaseDesignVersion0</ownerDesignName>
+<engineerTo>
+<item key="61197903-AE99-12F5-D9F9-9761B88F1D71" value="true"/>
+</engineerTo>
+<referedAttribute>3D4F250B-9952-4B6F-FC03-764B2102ABD3</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="07F44A7A-8B65-3B41-C5F9-02AFB8C878EF" name="ACTIVITYRESERVATIONS PK">
+<createdBy>Dmitry</createdBy>
+<createdTime>2016-03-14 20:51:39 UTC</createdTime>
+<ownerDesignName>databaseDesignVersion0</ownerDesignName>
+<engineerTo>
+<item key="61197903-AE99-12F5-D9F9-9761B88F1D71" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>58BD521C-38BA-C224-CBC2-8201948F35F5</attributeRef>
+<attributeRef>AFCE01B5-1258-CB60-F626-30A6CF9F500F</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
 </Entity>

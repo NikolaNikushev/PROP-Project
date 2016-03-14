@@ -2,6 +2,7 @@
 <Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="9CF38A7C-7CAB-336D-B2C6-6D126A8D87FA" name="VISITORS">
 <createdBy>Dmitry</createdBy>
 <createdTime>2016-03-13 18:36:15 UTC</createdTime>
+<notes>BECOMES ONE ONLY WHEN PAID ENOUGH</notes>
 <ownerDesignName>databaseDesignVersion0</ownerDesignName>
 <engineerTo>
 <item key="61197903-AE99-12F5-D9F9-9761B88F1D71" value="true"/>
@@ -15,4 +16,20 @@
 <maxVolumes>9999999</maxVolumes>
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="CAMPING_ID" id="C5B45CEB-8D5C-E5D7-E640-B22374E4EAAC">
+<createdBy>Dmitry</createdBy>
+<createdTime>2016-03-14 20:21:28 UTC</createdTime>
+<generatorID>C3F52872-7525-1505-C490-9CAF79E87059</generatorID>
+<ownerDesignName>databaseDesignVersion0</ownerDesignName>
+<engineerTo>
+<item key="61197903-AE99-12F5-D9F9-9761B88F1D71" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<referedAttribute>2F7FA045-A4AB-3E44-E40E-89099C0174F6</referedAttribute>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
 </Entity>

@@ -14,4 +14,56 @@
 <maxVolumes>9999999</maxVolumes>
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="PRODUCT_ID" id="85981A7E-601A-2FCF-DA3D-A3E74E0B1E1C">
+<createdBy>Dmitry</createdBy>
+<createdTime>2016-03-14 20:40:05 UTC</createdTime>
+<ownerDesignName>databaseDesignVersion0</ownerDesignName>
+<engineerTo>
+<item key="61197903-AE99-12F5-D9F9-9761B88F1D71" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="PRICE" id="2DF480A0-2143-75B3-35FD-598D43D02918">
+<createdBy>Dmitry</createdBy>
+<createdTime>2016-03-14 20:40:15 UTC</createdTime>
+<ownerDesignName>databaseDesignVersion0</ownerDesignName>
+<engineerTo>
+<item key="61197903-AE99-12F5-D9F9-9761B88F1D71" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT043</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="STOCK" id="2D13442C-CED2-E5FB-270E-4AB3DE8AA13C">
+<createdBy>Dmitry</createdBy>
+<createdTime>2016-03-14 20:40:23 UTC</createdTime>
+<ownerDesignName>databaseDesignVersion0</ownerDesignName>
+<engineerTo>
+<item key="61197903-AE99-12F5-D9F9-9761B88F1D71" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="E1034737-E165-E792-4B2B-9B1AA463E425" name="FOODPRODUCTS PK">
+<createdBy>Dmitry</createdBy>
+<createdTime>2016-03-14 20:40:14 UTC</createdTime>
+<ownerDesignName>databaseDesignVersion0</ownerDesignName>
+<engineerTo>
+<item key="61197903-AE99-12F5-D9F9-9761B88F1D71" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>85981A7E-601A-2FCF-DA3D-A3E74E0B1E1C</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
 </Entity>
