@@ -15,7 +15,7 @@ CREATE TABLE rfids (
 	user_id INT NULL,
 	bracelet_id INT UNSIGNED NOT NULL AUTO_INCREMENT,
 	status VARCHAR(30) NULL,
-	FOREIGN KEY user_id REFERENCES users(user_id)
+	FOREIGN KEY (user_id) REFERENCES users(user_id)
 	PRIMARY KEY(bracelet_id ));
 
 CREATE TABLE camps (
