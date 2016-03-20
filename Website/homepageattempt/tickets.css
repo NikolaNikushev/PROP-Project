@@ -1,0 +1,182 @@
+*{
+    padding:0;
+    margin:0;
+}
+@font-face {
+    font-family: "bauhaus93";
+    src:url("bauhaus93.ttf") format("truetype");
+}
+body {
+	font-family: bauhaus93;
+	background : #F58235;
+    background : rgba(245, 130, 53, 1);}
+.ORANGEBG
+{
+	background : #F58235;
+	background : rgba(245, 130, 53, 1);
+	width : 1000pt;
+	height : 570pt;
+}
+.BESTINFO
+{
+	background-image : url(BESTINFO.png);
+	background-repeat : no-repeat;
+	width : 229pt;
+	height : 38pt;
+}
+.BTNFAQ
+{
+	background-image : url(BTNFAQ.png);
+	background-repeat : no-repeat;
+	width : 229pt;
+	height : 61pt;
+}
+.BTNBEST
+{
+	background-image : url(BTNBEST.png);
+	background-repeat : no-repeat;
+	width : 90pt;
+	height : 37pt;
+}
+.BTNSIGN
+{
+	background-image : url(BTNSIGN.png);
+	background-repeat : no-repeat;
+	width : 229pt;
+	height : 61pt;
+}
+.image1
+{
+	background-image : url(image1.png);
+	background-repeat : no-repeat;
+	width : 538pt;
+	height : 21pt;
+}
+.BTNPER
+{
+	background-image : url(BTNPER.png);
+	background-repeat : no-repeat;
+	width : 90pt;
+	height : 37pt;
+}
+.image
+{
+	background-image : url(image.png);
+	background-repeat : no-repeat;
+	width : 720pt;
+	height : 142pt;
+}
+.HEADERBLACK_2_
+{
+	background : #010205;
+	background : rgba(1, 2, 5, 1);
+	width : 1000pt;
+	height : 55pt;
+}
+.TICKETS
+{
+	
+	width : 264pt;
+	height : 106pt;
+    margin: auto;
+    position: relative;
+    display: block;
+    padding: 100px;
+}
+.PERFINFO
+{
+	background-image : url(PERFINFO.png);
+	background-repeat : no-repeat;
+	width : 191pt;
+	height : 61pt;
+}
+.BETTERINFO
+{
+	background-image : url(BETTERINFO.png);
+	background-repeat : no-repeat;
+	width : 216pt;
+	height : 49pt;
+}
+.BTNBETR
+{
+	background-image : url(BTNBETR.png);
+	background-repeat : no-repeat;
+	width : 90pt;
+	height : 36pt;
+}
+.LOGO
+{
+	background-image : url(LOGO.png);
+	background-repeat : no-repeat;
+	width : 33pt;
+	height : 49pt;
+}
+.image2
+{
+	background-image : url(image2.png);
+	background-repeat : no-repeat;
+	width : 1000pt;
+	height : 243pt;
+}
+.NormalCharacterStyle
+{
+	font-family : Bauhaus 93;
+	font-size : 24pt;
+	color : #FFD105;
+	color : rgb(255, 209, 5);
+}
+.NormalCharacterStyle2
+{
+	font-family : Bauhaus 93;
+	font-size : 18pt;
+	color : #3B4D80;
+	color : rgb(59, 77, 128);
+}
+#header{
+    z-index: 9999; 
+}
+
+.nav {
+	width:100%;
+	height:47px;
+	background-color:green;
+	display:inline-block;
+	position:fixed;
+	background-image: none;
+	background-color:#060709;
+}
+.nav img{
+	height:100%;
+	width:2.5%;
+	float:left;
+}
+.nav ul{
+	float:left;
+	list-style-type: none;
+    margin: 0;
+	padding:0;
+    overflow: hidden;
+	background-color: #060709;
+	width:97%;
+	height:100%;
+
+}
+
+.nav ul li{
+    float: left;
+	margin-left:11%;
+	width:11%;
+}
+.nav ul li a{
+	display: block;
+    color: black;
+    text-align: center;
+    padding: 8px 16px;
+    text-decoration: none;
+	color : rgb(215, 225, 242);;
+	font-size:125%;
+}
+.nav ul li a:hover {
+    background-color: #111;
+}
+
