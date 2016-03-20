@@ -1,0 +1,119 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="C6848128-842B-C086-A528-A8703F00B3B7" name="USERS">
+<createdBy>Dmitry</createdBy>
+<createdTime>2016-03-16 19:44:10 UTC</createdTime>
+<generatorID>C33868E7-B110-9945-9CC9-550B3080C8EA</generatorID>
+<ownerDesignName>dbDesignWebsite</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="USER_ID" id="CD8BE542-0AA3-FC3F-BA16-DA70B2E8672C">
+<createdBy>Dmitry</createdBy>
+<createdTime>2016-03-16 19:44:10 UTC</createdTime>
+<generatorID>3D4F250B-9952-4B6F-FC03-764B2102ABD3</generatorID>
+<ownerDesignName>dbDesignWebsite</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="LOGIN" id="5AE63223-21ED-D6C5-2510-DE4D2E83D6DD">
+<createdBy>Dmitry</createdBy>
+<createdTime>2016-03-16 19:44:10 UTC</createdTime>
+<generatorID>E57371BF-BE70-E9A4-955E-695D5B209A74</generatorID>
+<ownerDesignName>dbDesignWebsite</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>25</dataTypeSize>
+<ownDataTypeParameters>25,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PASSWORD" id="88318B0B-BDDF-C7BA-26D5-AF14D193922C">
+<createdBy>Dmitry</createdBy>
+<createdTime>2016-03-16 19:44:10 UTC</createdTime>
+<generatorID>929CF4CA-E617-F2B3-067C-3CC10184A28E</generatorID>
+<ownerDesignName>dbDesignWebsite</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>25</dataTypeSize>
+<ownDataTypeParameters>25,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="EMAIL" id="23443908-AB18-63B9-44A4-79D6C89668F6">
+<createdBy>Dmitry</createdBy>
+<createdTime>2016-03-16 19:44:10 UTC</createdTime>
+<generatorID>D967A765-CE15-3DE8-166E-A674EE97D8D3</generatorID>
+<ownerDesignName>dbDesignWebsite</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>40</dataTypeSize>
+<ownDataTypeParameters>40,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DATEOFBIRTH" id="2C967313-D802-EACB-8CD5-A6F1D84F311E">
+<createdBy>Dmitry</createdBy>
+<createdTime>2016-03-16 19:44:10 UTC</createdTime>
+<generatorID>76ED578D-4A5A-6A6E-0E17-C47D698105D7</generatorID>
+<ownerDesignName>dbDesignWebsite</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="BALANCE" id="D00F3C9C-3050-159D-C89E-F86E97E2C5F1">
+<createdBy>Dmitry</createdBy>
+<createdTime>2016-03-16 19:44:10 UTC</createdTime>
+<generatorID>D7C58D11-7071-3584-CA7B-4F2F8948A2D7</generatorID>
+<ownerDesignName>dbDesignWebsite</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT043</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PAID" id="A0B9CBB5-3BA9-3019-CD9D-6CFA02ADB511">
+<createdBy>Dmitry</createdBy>
+<createdTime>2016-03-16 19:44:10 UTC</createdTime>
+<generatorID>10E2E85A-C919-0C00-7A4E-55F98DF3DD0B</generatorID>
+<ownerDesignName>dbDesignWebsite</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT033</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="REGDATE" id="C6890F70-A3DB-0D3D-A2F0-5D003B87BE45">
+<createdBy>Dmitry</createdBy>
+<createdTime>2016-03-16 19:44:10 UTC</createdTime>
+<generatorID>E9C03ED7-61FA-6B7B-794C-CD60E08DFA24</generatorID>
+<ownerDesignName>dbDesignWebsite</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="840F7440-59CC-A96B-E89E-6874AAACE3F5" name="USERS_PK">
+<createdBy>Dmitry</createdBy>
+<createdTime>2016-03-16 19:44:10 UTC</createdTime>
+<generatorID>E95EC36F-5DD7-2C00-050A-C87E6052406D</generatorID>
+<ownerDesignName>dbDesignWebsite</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="CD8BE542-0AA3-FC3F-BA16-DA70B2E8672C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

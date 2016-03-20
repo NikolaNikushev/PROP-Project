@@ -1,0 +1,74 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="0AB3C04A-4F78-471C-40C3-A7E4D17CFD39" name="CAMPS">
+<createdBy>Dmitry</createdBy>
+<createdTime>2016-03-16 19:44:10 UTC</createdTime>
+<generatorID>1936CF96-BB9D-D0FC-12CB-14D2F105ADD1</generatorID>
+<ownerDesignName>dbDesignWebsite</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="CAMPING_ID" id="ECD0D381-07E3-5C69-5C9B-91688EDCE3DD">
+<createdBy>Dmitry</createdBy>
+<createdTime>2016-03-16 19:44:10 UTC</createdTime>
+<generatorID>2F7FA045-A4AB-3E44-E40E-89099C0174F6</generatorID>
+<ownerDesignName>dbDesignWebsite</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TENTNR" id="D5900570-69A1-A2AD-A6E6-FDF0D3E18B7F">
+<createdBy>Dmitry</createdBy>
+<createdTime>2016-03-16 19:44:10 UTC</createdTime>
+<generatorID>9A1CDB48-9227-8F9B-E26C-C26A79F022AB</generatorID>
+<ownerDesignName>dbDesignWebsite</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CAPACITY" id="9ED2D1F2-BFA5-4CB3-C34A-C0430346F527">
+<createdBy>Dmitry</createdBy>
+<createdTime>2016-03-16 19:44:10 UTC</createdTime>
+<generatorID>65ACE6FE-7745-CFB3-D184-90F8506A3A6B</generatorID>
+<ownerDesignName>dbDesignWebsite</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="STATUS" id="244DF047-B080-DCD9-8016-F7D2D640C98E">
+<createdBy>Dmitry</createdBy>
+<createdTime>2016-03-16 19:44:10 UTC</createdTime>
+<generatorID>0D67BAA4-BF82-1D34-DF6D-A0500C7229BC</generatorID>
+<ownerDesignName>dbDesignWebsite</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="917CF293-A1DE-EC34-2661-A70DB1E190E7" name="CAMPS_PK">
+<createdBy>Dmitry</createdBy>
+<createdTime>2016-03-16 19:44:10 UTC</createdTime>
+<generatorID>118D2BBC-D80A-28F1-690F-F1C146F6B1B1</generatorID>
+<ownerDesignName>dbDesignWebsite</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="ECD0D381-07E3-5C69-5C9B-91688EDCE3DD"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

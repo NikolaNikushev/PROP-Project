@@ -1,0 +1,79 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="7AA90CAB-5285-433A-0E4E-7B22968BDC9C" name="VISITORS">
+<createdBy>Dmitry</createdBy>
+<createdTime>2016-03-16 19:44:10 UTC</createdTime>
+<generatorID>9CF38A7C-7CAB-336D-B2C6-6D126A8D87FA</generatorID>
+<notes>BECOMES ONE ONLY WHEN PAID ENOUGH</notes>
+<ownerDesignName>dbDesignWebsite</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="USER_ID" id="2CB0734C-A7EF-5833-025C-F72AE6E25180">
+<createdBy>Dmitry</createdBy>
+<createdTime>2016-03-16 19:44:10 UTC</createdTime>
+<generatorID>3D4F250B-9952-4B6F-FC03-764B2102ABD3</generatorID>
+<ownerDesignName>dbDesignWebsite</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="3AEB0B68-2739-223E-0561-977D977B6349" referredColumn="CD8BE542-0AA3-FC3F-BA16-DA70B2E8672C"/>
+</associations>
+</Column>
+<Column name="CAMPS_CAMPING_ID" id="17288839-8AE5-C5F9-B7FC-F1B29F4B1818">
+<createdBy>Dmitry</createdBy>
+<createdTime>2016-03-16 19:44:10 UTC</createdTime>
+<generatorID>C5B45CEB-8D5C-E5D7-E640-B22374E4EAAC</generatorID>
+<ownerDesignName>dbDesignWebsite</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="5FAF55CD-E606-1C30-69E2-7750B12358BA" referredColumn="ECD0D381-07E3-5C69-5C9B-91688EDCE3DD"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="8F58C3EA-DED9-D0B4-1B82-A14D944E9953" name="VISITORS_PK">
+<createdBy>Dmitry</createdBy>
+<createdTime>2016-03-16 19:44:10 UTC</createdTime>
+<generatorID>E95EC36F-5DD7-2C00-050A-C87E6052406D</generatorID>
+<ownerDesignName>dbDesignWebsite</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="2CB0734C-A7EF-5833-025C-F72AE6E25180"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="4BFD38ED-5D9E-17EC-A338-4CA39262083E" name="VISITORS_USERS_FK">
+<createdBy>Dmitry</createdBy>
+<createdTime>2016-03-16 19:44:10 UTC</createdTime>
+<generatorID>15934324-A2CC-31A2-C324-42AE83BDC786</generatorID>
+<ownerDesignName>dbDesignWebsite</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="2CB0734C-A7EF-5833-025C-F72AE6E25180"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="44AEBC87-E2B0-B248-7773-05680AAB4241" name="VISITORS_CAMPS_FK">
+<createdBy>Dmitry</createdBy>
+<createdTime>2016-03-16 19:44:10 UTC</createdTime>
+<generatorID>C3F52872-7525-1505-C490-9CAF79E87059</generatorID>
+<ownerDesignName>dbDesignWebsite</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="17288839-8AE5-C5F9-B7FC-F1B29F4B1818"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

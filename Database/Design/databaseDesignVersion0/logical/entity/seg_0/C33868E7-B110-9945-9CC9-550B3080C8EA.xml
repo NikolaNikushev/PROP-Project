@@ -63,15 +63,16 @@
 <dataTypeSize>40</dataTypeSize>
 <ownDataTypeParameters>40,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="ADDRESS" id="094CDB99-4A91-66F3-224F-6C87B28CA6A8">
+<Attribute name="DATEOFBIRTH" id="76ED578D-4A5A-6A6E-0E17-C47D698105D7">
 <createdBy>Dmitry</createdBy>
-<createdTime>2016-03-14 20:07:10 UTC</createdTime>
+<createdTime>2016-03-16 19:36:23 UTC</createdTime>
 <ownerDesignName>databaseDesignVersion0</ownerDesignName>
 <engineerTo>
 <item key="61197903-AE99-12F5-D9F9-9761B88F1D71" value="true"/>
 </engineerTo>
-<nullsAllowed>true</nullsAllowed>
-<use>0</use>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="BALANCE" id="D7C58D11-7071-3584-CA7B-4F2F8948A2D7">
