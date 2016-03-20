@@ -1,0 +1,85 @@
+@charset "utf-8";
+	.ORANGEBG
+{
+	background : #F58235;
+	background : rgba(245, 130, 53, 1);
+	width : 1000pt;
+	height : 570pt;
+}
+.BTNSIGN
+{
+	background-image : url(BTNSIGN.png);
+	background-repeat : no-repeat;
+	width : 229pt;
+	height : 61pt;
+}
+.image1
+{
+	background-image : url(image1.png);
+	background-repeat : no-repeat;
+	width : 538pt;
+	height : 21pt;
+}
+.image
+{
+	background-image : url(image.png);
+	background-repeat : no-repeat;
+	width : 720pt;
+	height : 142pt;
+}
+.TICKETS_1_
+{
+	background-image : url(TICKETS_1_.png);
+	background-repeat : no-repeat;
+	width : 330pt;
+	height : 366pt;
+}
+.HEADERBLACK_2_
+{
+	background : #010205;
+	background : rgba(1, 2, 5, 1);
+	width : 1000pt;
+	height : 55pt;
+}
+.TICKETS
+{
+	background-image : url(TICKETS.png);
+	background-repeat : no-repeat;
+	width : 264pt;
+	height : 106pt;
+}
+.LOGO
+{
+	background-image : url(LOGO.png);
+	background-repeat : no-repeat;
+	width : 33pt;
+	height : 49pt;
+}
+.image2
+{
+	background-image : url(image2.png);
+	background-repeat : no-repeat;
+	width : 1000pt;
+	height : 243pt;
+}
+.NormalCharacterStyle
+{
+	font-family : Bauhaus 93;
+	font-size : 24pt;
+	color : #FFD105;
+	color : rgb(255, 209, 5);
+}
+.NormalCharacterStyle2
+{
+	font-family : Bauhaus 93;
+	font-size : 18pt;
+	color : #3B4D80;
+	color : rgb(59, 77, 128);
+}
+.NormalCharacterStyle1
+{
+	font-family : Bauhaus 93;
+	font-size : 18pt;
+	color : #3B4D80;
+	color : rgb(59, 77, 128);
+}
