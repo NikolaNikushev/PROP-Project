@@ -8,17 +8,17 @@
 }
 body {
 	font-family: bauhaus93;
-	zoom:175%;
 }
 
 .headernotscrolled {
+	position: relative;
 	width:100%;
 	display:inline-block;
 	background-image: url(bground.jpg);
-	background-size: 100% 90%;
+	background-size: 100% 91%;
 }
 .logo{
-	margin: 100px 0 100px 0;
+	margin: 13% 0 15% 0;
 	display:block;
 	margin-left: auto;
     margin-right: auto;
@@ -34,21 +34,26 @@ body {
 	width:100%;
 	height:10%;
 	background-color: #060709;
+	position:absolute;
+	bottom:0;
 }
 
 .nav li {
     float: left;
 	margin-left:11%;
 	width:11%;
+	height:100%;
 }
 
 .nav li a {
     display: block;
     color: black;
     text-align: center;
-    padding: 14px 16px;
+    padding: 10% 16px;
     text-decoration: none;
-		color:white;
+	color:white;
+	font-size:125%;
+	height:100%;
 }
 
 .nav li a:hover {
@@ -66,7 +71,7 @@ body {
 }
 .scrolled img{
 	height:100%;
-	width:3%;
+	width:2.5%;
 	float:left;
 }
 .scrolled ul{
@@ -89,9 +94,10 @@ body {
 	display: block;
     color: black;
     text-align: center;
-    padding: 14px 16px;
+    padding: 8px 16px;
     text-decoration: none;
 	color:white;
+	font-size:125%;
 }
 .scrolled ul li a:hover{
 	    background-color: #111;
