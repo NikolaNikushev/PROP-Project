@@ -3,7 +3,12 @@
     src:url("bauhaus93.ttf") format("truetype");
 }
 
-
+#blank{
+	height:100vh;
+	margin-top:-90vh;
+	border: 1px white solid;
+	display:block;
+}
 
 #wrapper p{
 	

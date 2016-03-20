@@ -18,6 +18,37 @@
 				<li><a href="/jquery/">CAMPING</a></li>
 			</ul>
 	</div>
+	<!-- this div is with default display none and it 
+	appears when it needs to fill the space from header-->
+	<div id="potato">
+	<p>text</p>
+	<p>text</p>
+	<p>text</p>
+	<p>text</p>
+	<p>text</p>
+	<p>text</p>
+	<p>text</p>
+	<p>text</p>
+	<p>text</p>
+	<p>text</p>
+	<p>text</p>
+	<p>text</p>
+	<p>text</p>
+	<p>text</p>
+	<p>text</p>
+	<p>text</p>
+	<p>text</p>
+	<p>text</p>
+	<p>text</p>
+	<p>text</p>
+	<p>text</p>
+	<p>text</p>
+	<p>text</p>
+	<p>text</p>
+	<p>text</p>
+	<p>text</p>
+	<p>text</p>
+	</div>
 	<div id="wrapper">
 		<div id="txtcont">
 		<h2 class="caption" id="fline">29-31 JULY 2016. GALLOWAY FOREST PARK.</h2>
@@ -50,6 +81,7 @@
 <script>
 window.onload = function() {
 $("#header").addClass("headernotscrolled");
+document.getElementById("potato").style.display="none";
 }
 var logo = document.getElementById('logo');
 
@@ -60,6 +92,7 @@ $(window).on("scroll", function () {
 		$("#nav").removeClass("nav");
 		$("#logo").removeClass("logo");
 		logo.src = "logo.png";
+		document.getElementById("potato").style.display="inline";
     }
     else {
         $("#header").removeClass("scrolled");
@@ -67,6 +100,7 @@ $(window).on("scroll", function () {
 		$("#logo").addClass("logo");
 		$("#header").addClass("headernotscrolled");
 		logo.src = "logotext.png";
+		document.getElementById("potato").style.display="none";
     }
 });
 </script>
