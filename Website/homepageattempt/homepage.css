@@ -1,0 +1,75 @@
+@font-face {
+    font-family: "bauhaus93";
+    src:url("bauhaus93.ttf") format("truetype");
+}
+
+
+
+#wrapper p{
+	
+		color: rgb(215, 225, 242);
+}
+#txtcont {
+	background : #010205;
+	background : rgba(1, 2, 5, 1);
+	margin-top: -90vh;
+	padding-top: 90vh;
+	position:relative;
+	display:inline-block;
+	width: 100%;
+	text-align: center;
+	padding-bottom: 
+}
+.caption{
+		 font-family : Bauhaus 93;
+ 
+  color : #FFD105;
+  color : rgb(255, 209, 5);
+}
+#fline{
+	 font-size : 38pt;
+  margin-top: 20pt;
+}
+
+#sline{
+	 font-size : 51pt;
+	 margin-bottom:10pt;
+	 margin-top: 30pt;
+}
+/*First ARTist, not what you though...*/
+#fart{
+	margin-top:30pt;
+  font-size : 34pt;
+}
+#sart{
+   font-size : 34pt;
+}
+
+.smallart{
+	margin-top: 6pt;
+ font-size : 26pt;
+}
+#fiart{
+	margin-top: 6pt;
+  font-size : 34pt;
+}
+#emptyfart{
+	  font-size : 34pt;
+}
+
+
+#imgs{
+
+	margin-top: -25pt;	
+}
+#imgs div{
+
+	width:700pt;
+		margin:auto;
+}
+#pictograms{
+
+	width: 700pt;
+	position: relative;
+	
+}
