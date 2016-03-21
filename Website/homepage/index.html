@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" type="text/css" href="header.css">
+<link rel="stylesheet" type="text/css" href="homepage.css">
+<link rel="stylesheet" type="text/css" href="footer.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+<script type="text/javascript" src="test.js"></script>
+</head>
+<body>
+	<div id="header">
+		<img id="logo" class="logo" src="logotext.png"/>
+			<ul id="nav" class="nav">
+				<li><a href="index.html">INFO</a></li>
+				<li><a href="/css/">PROGRAM</a></li>
+				<li><a href="/js/">TICKETS</a></li>
+				<li><a href="/jquery/">CAMPING</a></li>
+			</ul>
+	</div>
+	<!-- this div is with default display none and it 
+	appears when it needs to fill the space from header-->
+	<div id="potato">
+	<p>text</p>
+	<p>text</p>
+	<p>text</p>
+	<p>text</p>
+	<p>text</p>
+	<p>text</p>
+	<p>text</p>
+	<p>text</p>
+	<p>text</p>
+	<p>text</p>
+	<p>text</p>
+	<p>text</p>
+	<p>text</p>
+	<p>text</p>
+	<p>text</p>
+	<p>text</p>
+	<p>text</p>
+	<p>text</p>
+	<p>text</p>
+	<p>text</p>
+	<p>text</p>
+	<p>text</p>
+	<p>text</p>
+	<p>text</p>
+	<p>text</p>
+	<p>text</p>
+	<p>text</p>
+	</div>
+	<div id="wrapper">
+		<div id="txtcont">
+		<h2 class="caption" id="fline">29-31 JULY 2016. GALLOWAY FOREST PARK.</h2>
+		<h1 class="caption" id="sline">TICKETS SOON ON SALE!</h1>
+		<p id="fart">Red Hot Chilli Peppers, DJ Carl Cox, Eminem,</p>
+		<p id="sart">Dave Growl, The Drums, Dimitar Markov,</p>
+		<p class="smallart" id="tart">MGMT, Jay Z, Madonna, Childish Gambino, Casiokids,</p>
+		<p class="smallart" id="foart">Gay Fish, Gramatik, 痛苦的信仰, Snatam Kaur, Trevor Hall</p>
+		<p class="smallart" id="tart">Yoga, Atanas Naydenov, Damon Albarn, Don Passman,</p>
+		<p class="smallart" id="foart">Future Islands, Mirabai Ceiba, Noodles, Hussain AlJassmi</p>
+		<p id="fiart">and much more!</p>
+		<p id="emptyfart">	&nbsp</p>
+		</div>
+		<div id="imgs">
+			<div>
+			<img src="PICTOGRAMS.png" alt="Pictograms" id="pictograms">
+			</div>
+		</div>
+		
+		
+	</div>
+	<div id="footer">
+<img id="footerlogo" src="LOGOFOOT.png" />
+<ul id="footernav">
+  <li><a href="#">NEWS & SOCIAL</a></li>
+  <li><a href="#">CONTACT US</a></li>
+  <li><a href="#">TERMS AND PRIVACY</a></li>
+</ul>
+<div id="social">
+	<img id="footerfacebook" src="facebook.png" />
+	<img id="footertwitter" src="twitter.png" />
+	<img id="footergplus" src="gplus.png" />
+</div>
+<p id="copyright">COPYRIGHT:2016</p>
+</div>
+	
+	
+	
+	
+
+<script>
+window.onload = function() {
+$("#header").addClass("headernotscrolled");
+document.getElementById("potato").style.display="none";
+}
+var logo = document.getElementById('logo');
+
+$(window).on("scroll", function () {
+    if ($(this).scrollTop() > 580) {
+		$("#header").removeClass("headernotscrolled");
+        $("#header").addClass("scrolled");
+		$("#nav").removeClass("nav");
+		$("#logo").removeClass("logo");
+		logo.src = "logo.png";
+		document.getElementById("potato").style.display="inline";
+    }
+    else {
+        $("#header").removeClass("scrolled");
+		$("#nav").addClass("nav");
+		$("#logo").addClass("logo");
+		$("#header").addClass("headernotscrolled");
+		logo.src = "logotext.png";
+		document.getElementById("potato").style.display="none";
+    }
+});
+</script>
+
+</body>
+</html>
