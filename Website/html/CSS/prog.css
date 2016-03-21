@@ -1,0 +1,140 @@
+*{
+	padding: 0;
+	margin: 0;
+	font-family: bauhaus93;
+}
+
+.TOPBAR
+{
+	position: relative;
+	background : #3B4D81;
+	background : rgba(59, 77, 129, 1);
+	width : 100%;
+	height : 55pt;
+}
+#daybuttns{
+		list-style-type: none;
+		height : 55pt;
+		width : 460pt;
+		margin: auto;
+		
+}
+
+.BTN
+{
+	display:inline-block;
+	background : #3B4D81;
+	background : rgba(59, 77, 129, 1);
+	
+	width : 140pt;
+	height : 100%;
+	text-align: center;
+}
+/*TO BE DELETED WITH THE JS*/
+#leftBtnDay{
+	background : #D7E1F2;
+	background : rgba(215, 225, 242, 1);
+}
+#leftBtnDay p{
+	color : #F58235;
+	color : rgb(245, 130, 53);
+}
+/**/
+#centerBtnDay{
+	margin-left:17pt;
+	margin-right:17pt;
+}
+.BTN:hover{
+	background : #D7E1F2;
+	background : rgba(215, 225, 242, 1);
+}
+.BTN:hover p{
+	color : #F58235;
+  color : rgb(245, 130, 53);
+}
+.DAY{
+	  font-family : Bauhaus 93;
+	  color : #FFD105;
+  color : rgb(255, 209, 5);
+  font-size : 36pt;
+  
+  height: 100%;
+}
+
+
+
+.schedule{
+  background : #D7E1F2;
+  background : rgba(215, 225, 242, 1);
+  width : 460pt;
+  height : 1069pt;
+  margin: auto;
+  color : #3B4D81;
+  display: block;
+}
+/*ALSO FOR JS*/
+#fday{
+	display: block;
+}
+#sday{
+	display: none;
+}
+#tday{
+	display: none;
+}
+/**/
+.event{
+	width:322pt;
+	margin:auto;
+	display: block;
+	border-left: 2pt  #3B4D81 solid;
+	height : auto;
+	padding-bottom: 14pt;
+}
+.time{
+	height : 23pt;
+	border-bottom: 2pt  #3B4D81 solid;
+}
+.time p{
+	font-size : 12pt;
+	color : #3B4D81;
+	height: auto;
+	width:auto;
+	margin-left:2pt;
+	padding-top: 8pt;
+}
+.desc{
+	text-align: center;
+}
+.desc h2{
+	margin-top: 4pt;
+	font-size : 24pt;
+}
+.desc p{
+	font-size : 14pt;
+	line-height : 18pt;
+}
+
+#firsttime{
+	padding-top: 14pt;
+}
+
+/* LOWER IMAGE WITH STAGES*/
+
+#imges{
+	height:auto;
+	margin-top: 25pt;
+	
+}
+#imges div{
+	height: inherit;
+	width:700pt;
+		margin:auto;
+	background-image: url(images/STAGES.png);
+}
+#stages{
+	height:100%;
+	width: 700pt;
+	position: relative;
+	
+}

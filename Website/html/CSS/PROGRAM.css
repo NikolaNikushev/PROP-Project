@@ -1,0 +1,344 @@
+@charset "utf-8";
+	.image2
+{
+	background-image : url(image2.png);
+	background-repeat : no-repeat;
+	width : 1000pt;
+	height : 243pt;
+}
+.image3
+{
+	background-image : url(image3.png);
+	background-repeat : no-repeat;
+	width : 32pt;
+	height : 190pt;
+}
+.st0
+{
+	border-style : Solid;
+	border-color : #3B4D81;
+	border-color : rgba(59, 77, 129, 1);
+	border-width : 2pt;
+	width : 322pt;
+	height : 0pt;
+}
+.st1
+{
+	border-style : Solid;
+	border-color : #3B4D81;
+	border-color : rgba(59, 77, 129, 1);
+	border-width : 2pt;
+	width : 322pt;
+	height : 0pt;
+}
+.image
+{
+	background-image : url(image.png);
+	background-repeat : no-repeat;
+	width : 720pt;
+	height : 142pt;
+}
+.STAGES
+{
+	background-image : url(STAGES.png);
+	background-repeat : no-repeat;
+	width : 729pt;
+	height : 192pt;
+}
+.HEADERBLACK_2_
+{
+	background : #010205;
+	background : rgba(1, 2, 5, 1);
+	width : 1000pt;
+	height : 55pt;
+}
+.image1
+{
+	background-image : url(image1.png);
+	background-repeat : no-repeat;
+	width : 538pt;
+	height : 21pt;
+}
+.st2
+{
+	border-style : Solid;
+	border-color : #3B4D81;
+	border-color : rgba(59, 77, 129, 1);
+	border-width : 2pt;
+	width : 322pt;
+	height : 0pt;
+}
+.BTNDTH
+{
+	background : #3B4D81;
+	background : rgba(59, 77, 129, 1);
+	width : 140pt;
+	height : 61pt;
+}
+.image4
+{
+	background-image : url(image4.png);
+	background-repeat : no-repeat;
+	width : 32pt;
+	height : 190pt;
+}
+.BTNDTW
+{
+	background : #3B4D81;
+	background : rgba(59, 77, 129, 1);
+	width : 140pt;
+	height : 61pt;
+}
+.BTNDO
+{
+	background : #D7E1F2;
+	background : rgba(215, 225, 242, 1);
+	width : 140pt;
+	height : 61pt;
+}
+.TOPBAR
+{
+	background : #3B4D81;
+	background : rgba(59, 77, 129, 1);
+	width : 1000pt;
+	height : 61pt;
+}
+.LUBG
+{
+	background : #D7E1F2;
+	background : rgba(215, 225, 242, 1);
+	width : 460pt;
+	height : 1069pt;
+}
+.st3
+{
+	border-style : Solid;
+	border-color : #3B4D81;
+	border-color : rgba(59, 77, 129, 1);
+	border-width : 2pt;
+	width : 322pt;
+	height : 0pt;
+}
+.st4
+{
+	border-style : Solid;
+	border-color : #3B4D81;
+	border-color : rgba(59, 77, 129, 1);
+	border-width : 2pt;
+	width : 322pt;
+	height : 0pt;
+}
+.st5
+{
+	border-style : Solid;
+	border-color : #3B4D81;
+	border-color : rgba(59, 77, 129, 1);
+	border-width : 2pt;
+	width : 322pt;
+	height : 0pt;
+}
+.ORANGEBG
+{
+	background : #F58235;
+	background : rgba(245, 130, 53, 1);
+	width : 1000pt;
+	height : 1456pt;
+}
+.LOGO
+{
+	background-image : url(LOGO.png);
+	background-repeat : no-repeat;
+	width : 33pt;
+	height : 49pt;
+}
+.image5
+{
+	background-image : url(image5.png);
+	background-repeat : no-repeat;
+	width : 32pt;
+	height : 190pt;
+}
+.st6
+{
+	border-style : Solid;
+	border-color : #3B4D81;
+	border-color : rgba(59, 77, 129, 1);
+	border-width : 2pt;
+	width : 322pt;
+	height : 0pt;
+}
+.st7
+{
+	border-style : Solid;
+	border-color : #3B4D81;
+	border-color : rgba(59, 77, 129, 1);
+	border-width : 2pt;
+	width : 322pt;
+	height : 0pt;
+}
+.st8
+{
+	border-style : Solid;
+	border-color : #3B4D81;
+	border-color : rgba(59, 77, 129, 1);
+	border-width : 2pt;
+	width : 0pt;
+	height : 1012pt;
+}
+.NormalCharacterStyle20
+{
+	font-family : Bauhaus 93;
+	font-size : 36pt;
+	color : #F58235;
+	color : rgb(245, 130, 53);
+}
+.NormalCharacterStyle19
+{
+	font-family : Bauhaus 93;
+	font-size : 36pt;
+	color : #FFD105;
+	color : rgb(255, 209, 5);
+}
+.NormalCharacterStyle18
+{
+	font-family : Bauhaus 93;
+	font-size : 36pt;
+	color : #FFD105;
+	color : rgb(255, 209, 5);
+}
+.NormalCharacterStyle17
+{
+	font-family : Bauhaus 93;
+	font-size : 14pt;
+	line-height : 18pt;
+	color : #3B4D81;
+	color : rgb(59, 77, 129);
+}
+.NormalCharacterStyle16
+{
+	font-family : Bauhaus 93;
+	font-size : 12pt;
+	color : #3B4D81;
+	color : rgb(59, 77, 129);
+}
+.NormalCharacterStyle15
+{
+	font-family : Bauhaus 93;
+	font-size : 14pt;
+	line-height : 18pt;
+	color : #3B4D81;
+	color : rgb(59, 77, 129);
+}
+.NormalCharacterStyle14
+{
+	font-family : Bauhaus 93;
+	font-size : 12pt;
+	color : #3B4D81;
+	color : rgb(59, 77, 129);
+}
+.NormalCharacterStyle13
+{
+	font-family : Bauhaus 93;
+	font-size : 14pt;
+	line-height : 18pt;
+	color : #3B4D81;
+	color : rgb(59, 77, 129);
+}
+.NormalCharacterStyle12
+{
+	font-family : Bauhaus 93;
+	font-size : 12pt;
+	color : #3B4D81;
+	color : rgb(59, 77, 129);
+}
+.NormalCharacterStyle11
+{
+	font-family : Bauhaus 93;
+	font-size : 14pt;
+	line-height : 18pt;
+	color : #3B4D81;
+	color : rgb(59, 77, 129);
+}
+.NormalCharacterStyle10
+{
+	font-family : Bauhaus 93;
+	font-size : 12pt;
+	color : #3B4D81;
+	color : rgb(59, 77, 129);
+}
+.NormalCharacterStyle9
+{
+	font-family : Bauhaus 93;
+	font-size : 14pt;
+	line-height : 18pt;
+	color : #3B4D81;
+	color : rgb(59, 77, 129);
+}
+.NormalCharacterStyle8
+{
+	font-family : Bauhaus 93;
+	font-size : 12pt;
+	color : #3B4D81;
+	color : rgb(59, 77, 129);
+}
+.NormalCharacterStyle7
+{
+	font-family : Bauhaus 93;
+	font-size : 14pt;
+	line-height : 18pt;
+	color : #3B4D81;
+	color : rgb(59, 77, 129);
+}
+.NormalCharacterStyle6
+{
+	font-family : Bauhaus 93;
+	font-size : 14pt;
+	line-height : 18pt;
+	color : #3B4D81;
+	color : rgb(59, 77, 129);
+}
+.NormalCharacterStyle5
+{
+	font-family : Bauhaus 93;
+	font-size : 12pt;
+	color : #3B4D81;
+	color : rgb(59, 77, 129);
+}
+.NormalCharacterStyle4
+{
+	font-family : Bauhaus 93;
+	font-size : 12pt;
+	color : #3B4D81;
+	color : rgb(59, 77, 129);
+}
+.NormalCharacterStyle3
+{
+	font-family : Bauhaus 93;
+	font-size : 14pt;
+	line-height : 18pt;
+	color : #3B4D81;
+	color : rgb(59, 77, 129);
+}
+.NormalCharacterStyle2
+{
+	font-family : Bauhaus 93;
+	font-size : 14pt;
+	line-height : 18pt;
+	color : #3B4D81;
+	color : rgb(59, 77, 129);
+}
+.NormalCharacterStyle1
+{
+	font-family : Bauhaus 93;
+	font-size : 12pt;
+	color : #3B4D81;
+	color : rgb(59, 77, 129);
+}
+.NormalCharacterStyle
+{
+	font-family : Bauhaus 93;
+	font-size : 14pt;
+	line-height : 18pt;
+	color : #3B4D81;
+	color : rgb(59, 77, 129);
+}
