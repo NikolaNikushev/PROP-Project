@@ -27,13 +27,28 @@
 <logicalDatatype>LOGDT019</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="LOGIN" id="E57371BF-BE70-E9A4-955E-695D5B209A74">
+<Attribute name="FNAME" id="4FC048BC-8C49-DA86-ABBF-9FA3A5169E5D">
 <createdBy>Dmitry</createdBy>
-<createdTime>2016-03-14 20:06:50 UTC</createdTime>
+<createdTime>2016-03-22 11:45:03 UTC</createdTime>
 <ownerDesignName>dbDesignWebsite</ownerDesignName>
 <engineerTo>
 <item key="61197903-AE99-12F5-D9F9-9761B88F1D71" value="true"/>
 </engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>25</dataTypeSize>
+<ownDataTypeParameters>25,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="LNAME" id="AB66EF51-0740-0BAA-4EA1-E7A2193A443C">
+<createdBy>Dmitry</createdBy>
+<createdTime>2016-03-22 11:45:09 UTC</createdTime>
+<ownerDesignName>dbDesignWebsite</ownerDesignName>
+<engineerTo>
+<item key="61197903-AE99-12F5-D9F9-9761B88F1D71" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>

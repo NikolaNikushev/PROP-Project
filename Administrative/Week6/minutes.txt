@@ -1,0 +1,84 @@
+website - 
+bootstrap? 
+okay-nice one-nice one
+
+rfid - go to the website phidgets.com and download the drivers
+driver is the dll for it
+quick download - driver for .net
+code examples and help file available 
+installs a small program phidgets... 
+in the rfid in the middle there's a chip and a wire around it 
+by induction the signal is transfered from the antenna 
+antennas have nique serial numbers
+by do-click we can get the info about the antenna 
+a unique number i a string of numbers and characters
+you can attach the antenna to the lamp or whatever to show the 
+results
+with the program it is possible to adjust the settings of the rfid antenna 
+like with db - phidgets9.1.net dll to add it to the events
+
+initialize component -> .... btn has a click event with a special 
+  notation we make that this method is a method for this event! 
+phidgets provide drivers for different things but we need only the
+RFID 
+detect tag is the event 
+	- close - detect
+	- remove - 'mouse up'
+methods to open and close connection
+event like atach and detach 
+
+on the start the antenna is atached and we use a method to show
+events can be custom - for exmaple file is downloaded - go to the
+	other thing
+	event 'I'm done' can be customized
+1) create rfid reader + 3 methods
+2) start it 	
+	connection might be not established on time
+	use wait for connection
+3) buttons - 
+
+event must be of a certain prototype
+	sender + args[]
+args(depends on what are you doing)
+in the attach event the sender is the antenna 
+e. - one of the fields as a device, convert to string add it to 
+the listbox 
+
+tagevent arguments hold the tag's unique number
+hot unplug is not safe and will be resulted in the 
+	antenna detached 
+an event - something that happens and many methods can be atached 
+	to it
+event is a mysterious list who holds all the methods
+prediscribed parameters are a must
+e. tag can be shown in the 
+protocol is about how it is stored
+tag is the actual value
+
+also info about the device can be added 
+if we want to check it in the database thus we need to combine 
+the demo of the app with the actual event
+
+the queries will depend on the desired result and specifications
+of the situation 
+for now f.e. you can just return all the info found be the rfid 
+chip foreign key
+
+USB port sniffer will check were exactly the phidget is connected
+the e-mail was recieved 
+
+database consult with the teacher etc...
+php and ajax combination 
+
+set up document - state all the decisions, progress etcetcetcetc
+set up document should be delivered before the break
+final report - what did you do, what solutions did you choose
+and what did you learn from it etcetcetc...
+specifications - php, structure, decisions, coding and solutions
+	list of directories etc....
+prepare the better solutions and think about efficiency etc
+we can use subfolders for storing different projects and 
+websites on the athena
+
+
+10:45

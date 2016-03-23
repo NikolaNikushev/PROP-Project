@@ -1,7 +1,7 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="C12C8400-5885-D4EE-29C7-1DA6912CFC3E" name="RFIDS">
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="D69B4C12-6180-01D2-8DA4-F658029F6E69" name="STORAGES">
 <createdBy>Dmitry</createdBy>
-<createdTime>2016-03-13 18:35:56 UTC</createdTime>
+<createdTime>2016-03-22 11:59:15 UTC</createdTime>
 <ownerDesignName>databaseDesignVersion0</ownerDesignName>
 <engineerTo>
 <item key="61197903-AE99-12F5-D9F9-9761B88F1D71" value="true"/>
@@ -15,40 +15,39 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="BRACELET_ID" id="4465D9C2-F40D-681F-28C4-BA8039D5897F">
+<Attribute name="IN_ST_QUAN" id="CE69E99E-69C6-B0EE-7D01-9CC743BADB7B">
 <createdBy>Dmitry</createdBy>
-<createdTime>2016-03-14 20:16:56 UTC</createdTime>
+<createdTime>2016-03-22 12:02:24 UTC</createdTime>
 <ownerDesignName>databaseDesignVersion0</ownerDesignName>
 <engineerTo>
 <item key="61197903-AE99-12F5-D9F9-9761B88F1D71" value="true"/>
 </engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="PRODUCT_ID" id="AB87CB6B-9EA5-083A-A5DA-13952A020F09">
+<createdBy>Dmitry</createdBy>
+<createdTime>2016-03-22 12:03:15 UTC</createdTime>
+<generatorID>21300BEE-63C0-A6F9-DD0B-6AE2C592514B</generatorID>
+<ownerDesignName>databaseDesignVersion0</ownerDesignName>
+<engineerTo>
+<item key="61197903-AE99-12F5-D9F9-9761B88F1D71" value="true"/>
+</engineerTo>
+<referedAttribute>85981A7E-601A-2FCF-DA3D-A3E74E0B1E1C</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="STATUS" id="5C9D1FF8-1642-F4AE-030A-0CF63A7DB16B">
+<Attribute name="STORE_ID" id="416B302E-BDF3-6357-0A12-A4F388E5DFF8">
 <createdBy>Dmitry</createdBy>
-<createdTime>2016-03-14 20:17:17 UTC</createdTime>
+<createdTime>2016-03-22 12:04:03 UTC</createdTime>
+<generatorID>424CE086-627F-3B2B-B082-FD2235008EC7</generatorID>
 <ownerDesignName>databaseDesignVersion0</ownerDesignName>
 <engineerTo>
 <item key="61197903-AE99-12F5-D9F9-9761B88F1D71" value="true"/>
 </engineerTo>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="USER_ID" id="03C0D712-3BFA-7A7D-D113-3E4686B5D5A8">
-<createdBy>Dmitry</createdBy>
-<createdTime>2016-03-14 20:16:24 UTC</createdTime>
-<generatorID>3F015945-D3E0-5EA6-1A12-E23DF786A013</generatorID>
-<ownerDesignName>databaseDesignVersion0</ownerDesignName>
-<engineerTo>
-<item key="61197903-AE99-12F5-D9F9-9761B88F1D71" value="true"/>
-</engineerTo>
-<nullsAllowed>true</nullsAllowed>
-<referedAttribute>3D4F250B-9952-4B6F-FC03-764B2102ABD3</referedAttribute>
+<referedAttribute>997D5AAD-2F16-A73A-88B5-C8C3EF6BD8BF</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
@@ -56,16 +55,17 @@
 </Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
-<identifier id="0EC02450-3EB3-3A55-7D57-83E1880F0C65" name="RFIDS PK">
+<identifier id="2E03F6BC-668E-7E78-2326-0F6F2AD54E0E" name="STORAGES PK">
 <createdBy>Dmitry</createdBy>
-<createdTime>2016-03-14 20:16:24 UTC</createdTime>
+<createdTime>2016-03-22 12:03:19 UTC</createdTime>
 <ownerDesignName>databaseDesignVersion0</ownerDesignName>
 <engineerTo>
 <item key="61197903-AE99-12F5-D9F9-9761B88F1D71" value="true"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>
-<attributeRef>4465D9C2-F40D-681F-28C4-BA8039D5897F</attributeRef>
+<attributeRef>AB87CB6B-9EA5-083A-A5DA-13952A020F09</attributeRef>
+<attributeRef>416B302E-BDF3-6357-0A12-A4F388E5DFF8</attributeRef>
 </usedAttributes>
 </identifier>
 </identifiers>

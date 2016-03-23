@@ -1,8 +1,7 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="9CF38A7C-7CAB-336D-B2C6-6D126A8D87FA" name="VISITORS">
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="7712BFD7-98B8-FB5A-507F-1E88FF5A8B94" name="RFIDS">
 <createdBy>Dmitry</createdBy>
-<createdTime>2016-03-13 18:36:15 UTC</createdTime>
-<notes>BECOMES ONE ONLY WHEN PAID ENOUGH</notes>
+<createdTime>2016-03-22 11:50:44 UTC</createdTime>
 <ownerDesignName>databaseDesignVersion0</ownerDesignName>
 <engineerTo>
 <item key="61197903-AE99-12F5-D9F9-9761B88F1D71" value="true"/>
@@ -12,40 +11,48 @@
 <fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
 <growthPercent>0</growthPercent>
 <growthType>Year</growthType>
-<hierarchicalParent>C33868E7-B110-9945-9CC9-550B3080C8EA</hierarchicalParent>
 <maxVolumes>9999999</maxVolumes>
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="CAMPING_ID" id="C5B45CEB-8D5C-E5D7-E640-B22374E4EAAC">
+<Attribute name="BRACELET_ID" id="0A512807-13B0-25EE-CD15-9B3AEC62AE36">
 <createdBy>Dmitry</createdBy>
-<createdTime>2016-03-14 20:21:28 UTC</createdTime>
-<generatorID>C3F52872-7525-1505-C490-9CAF79E87059</generatorID>
+<createdTime>2016-03-22 11:50:44 UTC</createdTime>
 <ownerDesignName>databaseDesignVersion0</ownerDesignName>
 <engineerTo>
 <item key="61197903-AE99-12F5-D9F9-9761B88F1D71" value="true"/>
 </engineerTo>
-<nullsAllowed>true</nullsAllowed>
-<referedAttribute>2F7FA045-A4AB-3E44-E40E-89099C0174F6</referedAttribute>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT019</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="BRACELET_ID" id="CC94A0F7-CE77-C32A-1ACA-1C71709B6AF0">
-<createdBy>Dmitry</createdBy>
-<createdTime>2016-03-23 08:26:10 UTC</createdTime>
-<generatorID>3F015945-D3E0-5EA6-1A12-E23DF786A013</generatorID>
-<ownerDesignName>databaseDesignVersion0</ownerDesignName>
-<engineerTo>
-<item key="61197903-AE99-12F5-D9F9-9761B88F1D71" value="true"/>
-</engineerTo>
-<referedAttribute>0A512807-13B0-25EE-CD15-9B3AEC62AE36</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
 <dataTypeSize>15</dataTypeSize>
+<ownDataTypeParameters>15,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="STATUS" id="54F729B8-733A-ADAA-6CB3-1E0BEBB389FE">
+<createdBy>Dmitry</createdBy>
+<createdTime>2016-03-22 11:50:44 UTC</createdTime>
+<ownerDesignName>databaseDesignVersion0</ownerDesignName>
+<engineerTo>
+<item key="61197903-AE99-12F5-D9F9-9761B88F1D71" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 </attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="8CB5808E-3829-DCB8-50D8-5FA6A66EDC90" name="RFIDS PK">
+<createdBy>Dmitry</createdBy>
+<createdTime>2016-03-22 11:50:44 UTC</createdTime>
+<ownerDesignName>databaseDesignVersion0</ownerDesignName>
+<engineerTo>
+<item key="61197903-AE99-12F5-D9F9-9761B88F1D71" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>0A512807-13B0-25EE-CD15-9B3AEC62AE36</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
 </Entity>

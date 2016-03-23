@@ -27,19 +27,6 @@
 <logicalDatatype>LOGDT019</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="LOGIN" id="E57371BF-BE70-E9A4-955E-695D5B209A74">
-<createdBy>Dmitry</createdBy>
-<createdTime>2016-03-14 20:06:50 UTC</createdTime>
-<ownerDesignName>databaseDesignVersion0</ownerDesignName>
-<engineerTo>
-<item key="61197903-AE99-12F5-D9F9-9761B88F1D71" value="true"/>
-</engineerTo>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>25</dataTypeSize>
-<ownDataTypeParameters>25,,</ownDataTypeParameters>
-</Attribute>
 <Attribute name="PASSWORD" id="929CF4CA-E617-F2B3-067C-3CC10184A28E">
 <createdBy>Dmitry</createdBy>
 <createdTime>2016-03-14 20:06:55 UTC</createdTime>
