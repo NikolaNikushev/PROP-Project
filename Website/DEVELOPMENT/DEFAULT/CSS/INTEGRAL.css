@@ -4,7 +4,7 @@
 }
 @font-face {
     font-family: "bauhaus93";
-    src:url("../../FONTS/bauhaus93.ttf") format("truetype");
+    src:url("../FONTS/bauhaus93.ttf") format("truetype");
 }
 body{
 	    background: rgba(245, 130, 53, 1);
