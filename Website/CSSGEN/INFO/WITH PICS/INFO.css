@@ -1,0 +1,85 @@
+@charset "utf-8";
+	.NormalCharacterStyle1
+{
+	font-family : Bauhaus 93;
+	font-size : 39pt;
+	color : #3B4D81;
+	color : rgb(59, 77, 129);
+}
+.NormalCharacterStyle
+{
+	font-family : Bauhaus 93;
+	font-size : 39pt;
+	color : #3B4D81;
+	color : rgb(59, 77, 129);
+}
+.CAPTION_1_
+{
+	background-image : url(CAPTION_1_.png);
+	background-repeat : no-repeat;
+	width : 854pt;
+	height : 174pt;
+}
+.image1
+{
+	background-image : url(image1.png);
+	background-repeat : no-repeat;
+	width : 538pt;
+	height : 21pt;
+}
+.HEADERBLACK_2_
+{
+	background : #010205;
+	background : rgba(1, 2, 5, 1);
+	width : 1000pt;
+	height : 55pt;
+}
+.LOGO
+{
+	background-image : url(LOGO.png);
+	background-repeat : no-repeat;
+	width : 33pt;
+	height : 49pt;
+}
+.image2
+{
+	background-image : url(image2.png);
+	background-repeat : no-repeat;
+	width : 1000pt;
+	height : 243pt;
+}
+.TAGS
+{
+	background-image : url(TAGS.png);
+	background-repeat : no-repeat;
+	width : 662pt;
+	height : 216pt;
+}
+.ORANGEBG
+{
+	background : #F58235;
+	background : rgba(245, 130, 53, 1);
+	width : 1000pt;
+	height : 214pt;
+}
+.ORANGEBG_1_
+{
+	background : #D7E1F2;
+	background : rgba(215, 225, 242, 1);
+	width : 1000pt;
+	height : 507pt;
+}
+.BUSES
+{
+	background-image : url(BUSES.png);
+	background-repeat : no-repeat;
+	width : 419pt;
+	height : 73pt;
+}
+.image
+{
+	background-image : url(image.png);
+	background-repeat : no-repeat;
+	width : 720pt;
+	height : 142pt;
+}
