@@ -6,6 +6,7 @@
 
 .TOPBAR
 {
+	padding-top: 36pt;
 	position: relative;
 	background : #3B4D81;
 	background : rgba(59, 77, 129, 1);
@@ -123,8 +124,8 @@
 
 #imges{
 	height:auto;
-	margin-top: 25pt;
-	
+	margin-top: 50pt;
+	margin-bottom: -8px;
 }
 #imges div{
 	height: inherit;
@@ -137,4 +138,19 @@
 	width: 700pt;
 	position: relative;
 	
+}
+
+/* TAB SELECTION */
+#left_btns {
+	margin-top: 10vh;
+	position: fixed; /* to be changed when scrolled from bottom almost a footer's size*/
+	float: left;
+	
+}
+#left_btns img{
+	position:relative;
+	display: block;
+	margin-top:4pt;
+	margin-bottom:4pt;
+	height: 20vh;
 }
