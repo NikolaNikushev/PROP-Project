@@ -26,19 +26,20 @@
 	display:inline-block;
 	background : #3B4D81;
 	background : rgba(59, 77, 129, 1);
-	
+	cursor: pointer;
 	width : 140pt;
 	height : 100%;
 	text-align: center;
+		color : #FFD105;
+	color : rgb(255, 209, 5);
+	font-size : 36pt;
 }
 /*TO BE DELETED WITH THE JS*/
 #leftBtnDay{
 	background : #D7E1F2;
 	background : rgba(215, 225, 242, 1);
-}
-#leftBtnDay p{
-	color : #F58235;
-	color : rgb(245, 130, 53);
+	color: #F58235;
+
 }
 /**/
 #centerBtnDay{
@@ -48,20 +49,9 @@
 .BTN:hover{
 	background : #D7E1F2;
 	background : rgba(215, 225, 242, 1);
-}
-.BTN:hover p{
 	color : #F58235;
-  color : rgb(245, 130, 53);
+	color : rgb(245, 130, 53);
 }
-.DAY{
-	  font-family : Bauhaus 93;
-	  color : #FFD105;
-  color : rgb(255, 209, 5);
-  font-size : 36pt;
-  
-  height: 100%;
-}
-
 
 
 .schedule{
@@ -129,28 +119,61 @@
 }
 #imges div{
 	height: inherit;
-	width:700pt;
+	width:80%;
 		margin:auto;
 	background-image: url(images/STAGES.png);
 }
 #stages{
 	height:100%;
-	width: 700pt;
+	width: 100%;
 	position: relative;
 	
 }
 
 /* TAB SELECTION */
 #left_btns {
-	margin-top: 10vh;
-	position: fixed; /* to be changed when scrolled from bottom almost a footer's size*/
+	margin-top: 5vh;
+	position: absolute; /* to be changed when scrolled from bottom almost a footer's size*/
 	float: left;
+}
+
+.section{
+	background-color: #FFD105;
+	cursor: pointer;
+	display: flex;
+	margin-top:4pt;
+	margin-bottom:14pt;
+	height: 20vh;
+	display: -webkit-flex; /* Safari */
+    -webkit-align-items: center; /* Safari 7.0+ */
+	align-items: center;
 	
+	overflow: visible;
+}
+#firstsec{
+	width:2vw;
+}
+#secsec{
+	width:2vw;
+}
+#thirsec{
+	width:2vw;
+}
+.sectext{
+	display: none;
+	overflow: hidden;
+	float: left;
+	width: 80%;
+	font-size: 2vh;
+	margin-left: 7%;
+	color: #3B4D81;
 }
 #left_btns img{
 	position:relative;
 	display: block;
-	margin-top:4pt;
-	margin-bottom:4pt;
+	float: right;
+	margin-left:10%;
 	height: 20vh;
+	right: 0;
+	
 }
