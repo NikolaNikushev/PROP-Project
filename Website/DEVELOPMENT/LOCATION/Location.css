@@ -39,4 +39,9 @@ p2{
     float: right;
     position: relative;
     margin: auto;
+    padding-right: 150px;
+}
+#contents div{
+    display: inline-block;
+    padding-bottom: 40px;
 }
