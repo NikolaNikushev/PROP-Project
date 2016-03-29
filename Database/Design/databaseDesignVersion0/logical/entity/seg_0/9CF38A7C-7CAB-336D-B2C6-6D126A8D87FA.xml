@@ -32,9 +32,9 @@
 <logicalDatatype>LOGDT019</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="BRACELET_ID" id="CC94A0F7-CE77-C32A-1ACA-1C71709B6AF0">
+<Attribute name="BRACELET_ID" id="9984275E-F453-AB6D-1136-49500049CFAF">
 <createdBy>Dmitry</createdBy>
-<createdTime>2016-03-23 08:26:10 UTC</createdTime>
+<createdTime>2016-03-29 08:22:00 UTC</createdTime>
 <generatorID>3F015945-D3E0-5EA6-1A12-E23DF786A013</generatorID>
 <ownerDesignName>databaseDesignVersion0</ownerDesignName>
 <engineerTo>

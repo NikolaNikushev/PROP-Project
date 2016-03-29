@@ -1,5 +1,5 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="D69B4C12-6180-01D2-8DA4-F658029F6E69" name="STORAGES">
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="D69B4C12-6180-01D2-8DA4-F658029F6E69" name="PRODUCTSTORAGES">
 <createdBy>Dmitry</createdBy>
 <createdTime>2016-03-22 11:59:15 UTC</createdTime>
 <ownerDesignName>databaseDesignVersion0</ownerDesignName>
@@ -15,14 +15,16 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="IN_ST_QUAN" id="CE69E99E-69C6-B0EE-7D01-9CC743BADB7B">
+<Attribute name="INSTOREQUAN" id="CE69E99E-69C6-B0EE-7D01-9CC743BADB7B">
 <createdBy>Dmitry</createdBy>
 <createdTime>2016-03-22 12:02:24 UTC</createdTime>
 <ownerDesignName>databaseDesignVersion0</ownerDesignName>
 <engineerTo>
 <item key="61197903-AE99-12F5-D9F9-9761B88F1D71" value="true"/>
 </engineerTo>
-<use>0</use>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="PRODUCT_ID" id="AB87CB6B-9EA5-083A-A5DA-13952A020F09">

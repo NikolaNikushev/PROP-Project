@@ -1,7 +1,7 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="7712BFD7-98B8-FB5A-507F-1E88FF5A8B94" name="RFIDS">
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="D81B7849-B45E-0671-2017-E0255E2719C3" name="TENTLEADER">
 <createdBy>Dmitry</createdBy>
-<createdTime>2016-03-22 11:50:44 UTC</createdTime>
+<createdTime>2016-03-29 08:14:26 UTC</createdTime>
 <ownerDesignName>databaseDesignVersion0</ownerDesignName>
 <engineerTo>
 <item key="61197903-AE99-12F5-D9F9-9761B88F1D71" value="true"/>
@@ -15,56 +15,47 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="BRACELET_ID" id="0A512807-13B0-25EE-CD15-9B3AEC62AE36">
+<Attribute name="CAMPING_ID" id="AD96152F-E031-0638-02E2-EF25A5E9A31C">
 <createdBy>Dmitry</createdBy>
-<createdTime>2016-03-22 11:50:44 UTC</createdTime>
+<createdTime>2016-03-29 08:14:46 UTC</createdTime>
+<generatorID>C6E43573-5F5C-2BEE-732B-BB2A43CF4819</generatorID>
 <ownerDesignName>databaseDesignVersion0</ownerDesignName>
 <engineerTo>
 <item key="61197903-AE99-12F5-D9F9-9761B88F1D71" value="true"/>
 </engineerTo>
+<referedAttribute>2F7FA045-A4AB-3E44-E40E-89099C0174F6</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>15</dataTypeSize>
-<ownDataTypeParameters>15,,</ownDataTypeParameters>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="USER_PIN" id="0D0D6B26-07B2-7421-0D15-66BC7F3C0860">
+<Attribute name="USER_ID" id="D65F7233-806A-11DB-3A8F-68854C1BCF30">
 <createdBy>Dmitry</createdBy>
-<createdTime>2016-03-29 08:13:09 UTC</createdTime>
+<createdTime>2016-03-29 08:14:50 UTC</createdTime>
+<generatorID>C5010249-E244-C24A-BB3C-0B84E0144521</generatorID>
 <ownerDesignName>databaseDesignVersion0</ownerDesignName>
 <engineerTo>
 <item key="61197903-AE99-12F5-D9F9-9761B88F1D71" value="true"/>
 </engineerTo>
+<referedAttribute>3D4F250B-9952-4B6F-FC03-764B2102ABD3</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>3</dataTypeSize>
-<ownDataTypeParameters>3,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="STATUS" id="54F729B8-733A-ADAA-6CB3-1E0BEBB389FE">
-<createdBy>Dmitry</createdBy>
-<createdTime>2016-03-22 11:50:44 UTC</createdTime>
-<ownerDesignName>databaseDesignVersion0</ownerDesignName>
-<engineerTo>
-<item key="61197903-AE99-12F5-D9F9-9761B88F1D71" value="true"/>
-</engineerTo>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
+<logicalDatatype>LOGDT019</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
-<identifier id="8CB5808E-3829-DCB8-50D8-5FA6A66EDC90" name="RFIDS PK">
+<identifier id="F21392B7-8E04-40CA-7DCC-79E6F80BB6C8" name="TENTLEADER PK">
 <createdBy>Dmitry</createdBy>
-<createdTime>2016-03-22 11:50:44 UTC</createdTime>
+<createdTime>2016-03-29 08:15:17 UTC</createdTime>
 <ownerDesignName>databaseDesignVersion0</ownerDesignName>
 <engineerTo>
 <item key="61197903-AE99-12F5-D9F9-9761B88F1D71" value="true"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>
-<attributeRef>0A512807-13B0-25EE-CD15-9B3AEC62AE36</attributeRef>
+<attributeRef>AD96152F-E031-0638-02E2-EF25A5E9A31C</attributeRef>
+<attributeRef>D65F7233-806A-11DB-3A8F-68854C1BCF30</attributeRef>
 </usedAttributes>
 </identifier>
 </identifiers>
