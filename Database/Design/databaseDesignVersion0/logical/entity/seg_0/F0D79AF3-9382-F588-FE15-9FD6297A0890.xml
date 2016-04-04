@@ -1,7 +1,7 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="8A8F8CF5-CF1D-930D-374A-2D76A2B5A1BA" name="SALELINES">
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="F0D79AF3-9382-F588-FE15-9FD6297A0890" name="PRODUCTPAYMENT">
 <createdBy>Dmitry</createdBy>
-<createdTime>2016-03-13 19:25:15 UTC</createdTime>
+<createdTime>2016-04-02 16:32:40 UTC</createdTime>
 <ownerDesignName>databaseDesignVersion0</ownerDesignName>
 <engineerTo>
 <item key="61197903-AE99-12F5-D9F9-9761B88F1D71" value="true"/>
@@ -15,23 +15,9 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="PRODUCT_ID" id="9C80A409-D2C2-CB18-3E85-0A36CA6675A2">
+<Attribute name="USER_ID" id="94980A17-AEC9-0671-D08E-E33F376F7521">
 <createdBy>Dmitry</createdBy>
-<createdTime>2016-03-14 20:41:25 UTC</createdTime>
-<generatorID>8A93A696-8386-128E-80BD-19017CE2EFF2</generatorID>
-<ownerDesignName>databaseDesignVersion0</ownerDesignName>
-<engineerTo>
-<item key="61197903-AE99-12F5-D9F9-9761B88F1D71" value="true"/>
-</engineerTo>
-<referedAttribute>85981A7E-601A-2FCF-DA3D-A3E74E0B1E1C</referedAttribute>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT019</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="USER_ID" id="2D2847BD-2C5E-4C1E-31A5-F46B1C26A730">
-<createdBy>Dmitry</createdBy>
-<createdTime>2016-03-14 20:42:06 UTC</createdTime>
+<createdTime>2016-04-02 16:33:10 UTC</createdTime>
 <generatorID>7AFA5CE2-6A60-94AF-FBF3-F4EC70530969</generatorID>
 <ownerDesignName>databaseDesignVersion0</ownerDesignName>
 <engineerTo>
@@ -43,44 +29,50 @@
 <logicalDatatype>LOGDT019</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="QUANTITY" id="669ABC48-210E-AF61-C0B4-F2C385F74047">
+<Attribute name="PAYMENT_ID" id="51866256-DEA9-844C-1C76-15FD0B34B8F1">
 <createdBy>Dmitry</createdBy>
-<createdTime>2016-03-14 20:42:13 UTC</createdTime>
+<createdTime>2016-04-02 16:33:34 UTC</createdTime>
+<ownerDesignName>databaseDesignVersion0</ownerDesignName>
+<engineerTo>
+<item key="61197903-AE99-12F5-D9F9-9761B88F1D71" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="TOTALPRICE" id="AEA77B81-1027-D0EA-9361-AFCD3B3DD49A">
+<createdBy>Dmitry</createdBy>
+<createdTime>2016-04-02 16:34:23 UTC</createdTime>
 <ownerDesignName>databaseDesignVersion0</ownerDesignName>
 <engineerTo>
 <item key="61197903-AE99-12F5-D9F9-9761B88F1D71" value="true"/>
 </engineerTo>
 <nullsAllowed>true</nullsAllowed>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT019</logicalDatatype>
+<use>0</use>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="PAYMENT_ID" id="247C3859-0150-4303-6F6F-E2BE85E9925F">
+<Attribute name="DATE" id="1F1EFCFD-1041-5BAB-EB11-D36A48B67BB7">
 <createdBy>Dmitry</createdBy>
-<createdTime>2016-04-02 16:33:41 UTC</createdTime>
-<generatorID>D5A16521-15E4-6021-FDA9-A63E4F890080</generatorID>
+<createdTime>2016-04-02 16:34:29 UTC</createdTime>
 <ownerDesignName>databaseDesignVersion0</ownerDesignName>
 <engineerTo>
 <item key="61197903-AE99-12F5-D9F9-9761B88F1D71" value="true"/>
 </engineerTo>
-<referedAttribute>51866256-DEA9-844C-1C76-15FD0B34B8F1</referedAttribute>
+<nullsAllowed>true</nullsAllowed>
 <use>0</use>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
-<identifier id="343CDE23-6BAF-7346-DC39-2428A5D3316F" name="SALELINES PK">
+<identifier id="924F8074-FEC4-5A53-B04C-C46C8C4AC946" name="PRODUCTPAYMENT PK">
 <createdBy>Dmitry</createdBy>
-<createdTime>2016-03-14 20:42:06 UTC</createdTime>
+<createdTime>2016-04-02 16:33:10 UTC</createdTime>
 <ownerDesignName>databaseDesignVersion0</ownerDesignName>
 <engineerTo>
 <item key="61197903-AE99-12F5-D9F9-9761B88F1D71" value="true"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>
-<attributeRef>247C3859-0150-4303-6F6F-E2BE85E9925F</attributeRef>
-<attributeRef>9C80A409-D2C2-CB18-3E85-0A36CA6675A2</attributeRef>
+<attributeRef>51866256-DEA9-844C-1C76-15FD0B34B8F1</attributeRef>
 </usedAttributes>
 </identifier>
 </identifiers>

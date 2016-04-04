@@ -28,19 +28,6 @@
 <dataTypeSize>15</dataTypeSize>
 <ownDataTypeParameters>15,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="USER_PIN" id="0D0D6B26-07B2-7421-0D15-66BC7F3C0860">
-<createdBy>Dmitry</createdBy>
-<createdTime>2016-03-29 08:13:09 UTC</createdTime>
-<ownerDesignName>databaseDesignVersion0</ownerDesignName>
-<engineerTo>
-<item key="61197903-AE99-12F5-D9F9-9761B88F1D71" value="true"/>
-</engineerTo>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>3</dataTypeSize>
-<ownDataTypeParameters>3,,</ownDataTypeParameters>
-</Attribute>
 <Attribute name="STATUS" id="54F729B8-733A-ADAA-6CB3-1E0BEBB389FE">
 <createdBy>Dmitry</createdBy>
 <createdTime>2016-03-22 11:50:44 UTC</createdTime>

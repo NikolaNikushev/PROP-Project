@@ -39,7 +39,7 @@
 <logicalDatatype>LOGDT024</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="CAPACITY" id="F4392579-0F48-D3BF-C7A8-C5ED19AA9153">
+<Attribute name="TOTALPLACES" id="F4392579-0F48-D3BF-C7A8-C5ED19AA9153">
 <createdBy>Dmitry</createdBy>
 <createdTime>2016-03-14 20:49:27 UTC</createdTime>
 <ownerDesignName>databaseDesignVersion0</ownerDesignName>
@@ -51,9 +51,10 @@
 <logicalDatatype>LOGDT019</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="RESERVED" id="6FCD9590-8102-4D4F-4121-DA51495DCD14">
+<Attribute name="RESERVEDPLACES" id="6FCD9590-8102-4D4F-4121-DA51495DCD14">
 <createdBy>Dmitry</createdBy>
 <createdTime>2016-03-14 20:51:01 UTC</createdTime>
+<comment>Not more than 50%</comment>
 <ownerDesignName>databaseDesignVersion0</ownerDesignName>
 <engineerTo>
 <item key="61197903-AE99-12F5-D9F9-9761B88F1D71" value="true"/>
