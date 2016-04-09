@@ -8,9 +8,9 @@ isSectOpen["thirsec"] = 0;
 //contentchanging
 var BtnIndics = ["leftBtnDay","centerBtnDay","rightBtnDay"];
 var contents = [];
-contents["leftBtnDay"] = "fdaysched.html";
-contents["centerBtnDay"] = "sdaysched.html";
-contents["rightBtnDay"] = "tdaysched.html";
+contents["leftBtnDay"] = "program/fdaysched.html";
+contents["centerBtnDay"] = "program/sdaysched.html";
+contents["rightBtnDay"] = "program/tdaysched.html";
 var isLoaded = [];
 isLoaded["leftBtnDay"] = 1;
 isLoaded["centerBtnDay"] = 0;
@@ -58,7 +58,7 @@ function DayClick(indicBtn)
 	// load content
 	if(isLoaded[indicBtn] === 0)
 	{
-		$( ".schedule" ).load( "blank.html" );
+		$( ".schedule" ).load( "program/blank.html" );
 		$( ".schedule" ).load( contents[indicBtn] );
 		isLoaded[indicBtn] = 1;
 		
@@ -78,7 +78,7 @@ function DayClick(indicBtn)
 // jQuery hovering functionality
 $(document).ready(function() {
 	// first page load
-	$( ".schedule" ).load( "fdaysched.html" );
+	$( ".schedule" ).load( "program/fdaysched.html" );
   // only if this thing is not yet open
    if(isOpen === 0)
    {
