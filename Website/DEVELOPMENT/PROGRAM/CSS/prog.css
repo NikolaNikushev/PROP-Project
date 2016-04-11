@@ -132,7 +132,7 @@
 
 /* TAB SELECTION */
 #left_btns {
-	margin-top: 5vh;
+	margin-top: 11vh;
 	position: absolute; /* to be changed when scrolled from bottom almost a footer's size*/
 	float: left;
 }

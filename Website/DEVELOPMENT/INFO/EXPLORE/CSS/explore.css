@@ -1,0 +1,27 @@
+.imgban{
+	width: 100vw;
+	display: block;
+}
+.section_desc{
+	height: 100%;
+	width: 100vw;
+	padding-bottom: 2vh;
+}
+.blue{
+	background : #D7E1F2;
+	background : rgba(215, 225, 242, 1);
+}
+
+.orange{
+	background : #F58235;
+	background : rgba(245, 130, 53, 1);
+}
+
+.text{
+	color : #3B4D81;
+	color : rgb(59, 77, 129);
+	margin-left:15vw;
+	padding-top:3vh;
+	font-size: 120%;
+}
+
