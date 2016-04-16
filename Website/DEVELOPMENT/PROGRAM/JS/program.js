@@ -78,6 +78,9 @@ function DayClick(indicBtn)
 // jQuery hovering functionality
 $(document).ready(function() {
 	// first page load
+	// to load up the header
+	$( "#header").load( "default/headerstatic.html" );
+	// to load the schedule
 	$( ".schedule" ).load( "program/fdaysched.html" );
   // only if this thing is not yet open
    if(isOpen === 0)
@@ -100,8 +103,6 @@ $(document).ready(function() {
 	
    }
 });
-
-
 
 
 
