@@ -1,3 +1,5 @@
+/* this thing really requires some more styling adjustments, but I will leave them for later*/
+
 .imgban{
 	width: 100vw;
 	display: block;
@@ -5,13 +7,18 @@
 .section_desc{
 	height: 100%;
 	width: 100vw;
-	padding-bottom: 2vh;
+	padding-bottom: 35pt;
 }
 .blue{
 	background : #D7E1F2;
 	background : rgba(215, 225, 242, 1);
 }
-
+#ftsec{
+	padding-top: 30pt;
+}
+#scsec{
+	margin-top: -20px !important;
+}
 .orange{
 	background : #F58235;
 	background : rgba(245, 130, 53, 1);
@@ -23,5 +30,12 @@
 	margin-left:15vw;
 	padding-top:3vh;
 	font-size: 120%;
+	display: inline-block;
 }
-
+#map_pic{
+	display: inline-block;
+	margin-left: 25vw;
+}
+#imgmap{
+	height: 270px;
+}
