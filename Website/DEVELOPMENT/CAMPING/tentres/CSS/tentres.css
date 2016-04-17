@@ -1,8 +1,24 @@
 #tentform{
+	padding-top:25pt;
 	background : #D7E1F2;
   background : rgba(215, 225, 242, 1);
   width : 64vw;
   min-width: 640pt;
   height : 833pt;
   margin: auto;
+}
+
+#grtit{
+	display: block;
+	width: 30%;
+	margin: auto;
+	text-align: center;
+	margin-top: 40pt;
+	margin-bottom: 40pt;
+}
+#grtit h1{
+	width: auto;
+	 font-size : 30pt;
+  color : #3B4D81;
+  color : rgb(59, 77, 129);
 }
