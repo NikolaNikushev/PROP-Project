@@ -27,7 +27,7 @@ namespace WAvisitorCheck
                 listBox1.Items.Add("WELCOME");
             }
             catch (PhidgetException) { listBox1.Items.Add("error at start-up."); }
-            pictureBox1.BackColor = Color.Red;
+            pictureBox1.BackColor = Color.White;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -56,29 +56,39 @@ namespace WAvisitorCheck
            int paid = dbh.CheckIfPaid(e.Tag);
             if (paid == 1)
             {
+                
                 pictureBox1.BackColor = Color.Green;
                 //Start timer, your program continues execution normaly
                 timer1.Start();
                 //If you use sleep(2000) your program stop working for two seconds.
                 //listBox1.Items.Add(paid.ToString());
-
+                dbh.UpdateStatus(e.Tag);
 
             }
             else if(paid==0)
             {
                 pictureBox1.BackColor = Color.Red;
-                MessageBox.Show("This person has not payed");
+                //Start timer, your program continues execution normaly
+                timer1.Start();
+                //If you use sleep(2000) your program stop working for two seconds.
+                //listBox1.Items.Add(paid.ToString());
+                AutoClosingMessageBox.Show("This person has not payed","capiton",1000);
             }
             else
             {
-                MessageBox.Show("this rfid is not registered");
+                pictureBox1.BackColor = Color.Red;
+                //Start timer, your program continues execution normaly
+                timer1.Start();
+                //If you use sleep(2000) your program stop working for two seconds.
+                //listBox1.Items.Add(paid.ToString());
+                AutoClosingMessageBox.Show("this rfid is not registered", "capiton", 1000);
             }
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
             timer1.Stop();
-            pictureBox1.BackColor = Color.Red;
+            pictureBox1.BackColor = Color.White;
         }
 
         private void button3_Click(object sender, EventArgs e)

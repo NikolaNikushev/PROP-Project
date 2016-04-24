@@ -152,16 +152,47 @@ namespace WAvisitorCheck
 
             if (GetStatus(bracelet_id) == 1)
             {
-                sql = "UPDATE visitors SET STATUS=0 WHERE BRACELET_ID = " + "\"" + bracelet_id + "\"";
+                //sql = "UPDATE visitors SET STATUS=0 WHERE BRACELET_ID = " + "\"" + bracelet_id + "\"";
+                //command = new MySqlCommand(sql, connection);
+
+                //try
+                //{
+                //    connection.Open();
+                //    MySqlDataReader reader = command.ExecuteReader();
+                //}
+                //catch (Exception ex)
+                //{
+                //    MessageBox.Show(ex.ToString());
+                //}
+                //finally
+                //{
+                //    connection.Close();
+                //}
+                AutoClosingMessageBox.Show("well dude you are already inside", "caption", 1000);
+            }
+            else
+            if (GetStatus(bracelet_id) == 0)
+            {
+                sql = "UPDATE visitors SET STATUS=1 WHERE BRACELET_ID = " + "\"" + bracelet_id + "\"";
                 command = new MySqlCommand(sql, connection);
 
-
+                try
+                {
+                    connection.Open();
+                    MySqlDataReader reader = command.ExecuteReader();
+                }
+                catch (Exception ex)
+                {
+                    AutoClosingMessageBox.Show(ex.ToString(),"caption",1000);
+                }
+                finally
+                {
+                    connection.Close();
+                }
             }
-            else if (GetStatus(bracelet_id) == 0)
-            {
-
+            else {
+                AutoClosingMessageBox.Show("Not a valid bracelet", "Caption", 1000);
             }
-            else { MessageBox.Show("NOT A VALID BRACELET"); }
         }
 
 
