@@ -45,8 +45,8 @@ body {
 
 .nav li {
     float: left;
-	margin-left:11%;
-	width:11%;
+	margin-left:5%;
+	width:12%;
 	height:100%;
 }
 
@@ -76,7 +76,7 @@ body {
 }
 .scrolled img{
 	height:100%;
-	width:2.5%;
+	width:auto;
 	float:left;
 }
 .scrolled ul{
@@ -93,8 +93,8 @@ body {
 
 .scrolled ul li{
     float: left;
-	margin-left:11%;
-	width:11%;
+	margin-left:5%;
+	width:12%;
 }
 .scrolled ul li a{
 	display: block;

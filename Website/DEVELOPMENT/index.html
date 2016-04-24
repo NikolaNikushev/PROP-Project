@@ -1,22 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
+
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<link rel="stylesheet" type="text/css" href="header.css">
-<link rel="stylesheet" type="text/css" href="homepage.css">
-<link rel="stylesheet" type="text/css" href="../DEFAULT/CSS/footer.css">
+<link rel="stylesheet" type="text/css" href="HOME/header.css">
+<link rel="stylesheet" type="text/css" href="HOME/homepage.css">
+<link rel="stylesheet" type="text/css" href="DEFAULT/CSS/footer.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
-<script type="text/javascript" src="test.js"></script>
+<script type="text/javascript" src="HOMEtest.js"></script>
 </head>
 <body>
 	<div id="header">
-		<img id="logo" src="../DEFAULT/IMAGES/logohead.png"/>
+		<img id="logo" src="DEFAULT/IMAGES/logohead.png"/>
 			<ul id="nav" >
 				<li><a href="index.html">INFO</a></li>
-				<li><a href="/css/">PROGRAM</a></li>
-				<li><a href="/js/">TICKETS</a></li>
-				<li><a href="/jquery/">CAMPING</a></li>
+				<li><a href="program.html">PROGRAM</a></li>
+				<li><a href="tickets.html">TICKETS</a></li>
+				<li><a href="camping.html">CAMPING</a></li>
+				<li><a href="/personalpage/">PERSONAL PAGE</a></li>
 			</ul>
 	</div>
 	<!-- this div is with default display none and it 
@@ -65,23 +67,23 @@
 		</div>
 		<div id="imgs">
 			<div>
-			<img src="PICTOGRAMS.png" alt="Pictograms" id="pictograms">
+			<img src="HOME/PICTOGRAMS.png" alt="Pictograms" id="pictograms">
 			</div>
 		</div>
 		
 		
 	</div>
 	<div id="footer">
-<img id="footerlogo" src="../DEFAULT/IMAGES/LOGOFOOT.png" />
+<img id="footerlogo" src="DEFAULT/IMAGES/LOGOFOOT.png" />
 <ul id="footernav">
   <li><a href="#">NEWS & SOCIAL</a></li>
   <li><a href="#">CONTACT US</a></li>
   <li><a href="#">TERMS AND PRIVACY</a></li>
 </ul>
 <div id="social">
-	<img id="footerfacebook" src="../DEFAULT/IMAGES/facebook.png" />
-	<img id="footertwitter" src="../DEFAULT/IMAGES/twitter.png" />
-	<img id="footergplus" src="../DEFAULT/IMAGES/gplus.png" />
+	<img id="footerfacebook" src="DEFAULT/IMAGES/facebook.png" />
+	<img id="footertwitter" src="DEFAULT/IMAGES/twitter.png" />
+	<img id="footergplus" src="DEFAULT/IMAGES/gplus.png" />
 </div>
 <p id="copyright">COPYRIGHT:2016</p>
 </div>
@@ -98,7 +100,7 @@ document.getElementById("potato").style.display="none";
 		$("#nav").addClass("nav");
 		$("#logo").addClass("logo");
 		$("#header").addClass("headernotscrolled");
-		logo.src = "logotext.png";
+		logo.src = "HOME/logotext.png";
 		document.getElementById("potato").style.display="none";
 }
 var logo = document.getElementById('logo');
@@ -109,7 +111,7 @@ $(window).on("scroll", function () {
         $("#header").addClass("scrolled");
 		$("#nav").removeClass("nav");
 		$("#logo").removeClass("logo");
-		logo.src = "../DEFAULT/IMAGES/logohead.png";
+		logo.src = "DEFAULT/IMAGES/logohead.png";
 		document.getElementById("potato").style.display="inline";
     }
     else {
@@ -117,7 +119,7 @@ $(window).on("scroll", function () {
 		$("#nav").addClass("nav");
 		$("#logo").addClass("logo");
 		$("#header").addClass("headernotscrolled");
-		logo.src = "logotext.png";
+		logo.src = "HOME/logotext.png";
 		document.getElementById("potato").style.display="none";
     }
 });
