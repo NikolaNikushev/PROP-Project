@@ -1,0 +1,151 @@
+ private bool SaveBinFile(List<Trip> tripsToSave, string path)
+        {
+            bool MethodRes = false;
+            /// byte cracker
+            /// helper
+            FileStream fs = null;
+            BinaryFormatter bf = null;
+            /// 
+            try
+            {
+                fs = new FileStream(path, FileMode.Create, FileAccess.Write);
+                bf = new BinaryFormatter();
+                bf.Serialize(fs, tripsToSave);
+                //bf.Serialize(fs, t);
+                MethodRes = true;
+            }
+            catch (SerializationException)
+            { MessageBox.Show("something wrong with Serialization", "SERIALIZE ERROR"); }
+            catch (IOException)
+            { MessageBox.Show("something wrong with IO", "IO ERROR"); }
+            catch
+            {
+                MessageBox.Show("something is wrong");
+            }
+            finally
+            {
+                if (fs != null) fs.Close();
+            }
+            return MethodRes;
+        }
+        //
+
+ private void btnExportToHtml_Click(object sender, EventArgs e)
+        {
+            if(listBox1.Items.Count != 0)
+            {
+                saveFileDialog1.Title = "Export to HTML";
+                //saveFileDialog1.CheckFileExists = true;
+                //saveFileDialog1.CheckPathExists = true;
+                // sets a filter for the files displayed in the dialog
+                saveFileDialog1.Filter = "Text files (*.html)|*.html|All files (*.*)|*.*";
+                saveFileDialog1.DefaultExt = "html";
+                saveFileDialog1.RestoreDirectory = true;
+                String FilePath = "";
+
+                if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+                {
+                    String[] linesToSave = new String[this.listBox1.Items.Count];
+                    for (int i = 0; i < listBox1.Items.Count - 1; i++)
+                    {
+                        linesToSave[i] = listBox1.Items[i].ToString();
+                    }
+                    FilePath = this.saveFileDialog1.FileName;
+                    if (TextFileHelper.SaveFile(true,
+                        FilePath, linesToSave))
+                        MessageBox.Show("Congrats, saved to " + TextFileHelper.DefFilePath);
+                    else
+                        MessageBox.Show("Sorry, couldn't save");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Sorry, couldn't export, populate the listbox first");
+            }
+            
+
+        }
+
+
+private void btnSave_Click(object sender, EventArgs e)
+        {
+            // Begin code, by <your name>
+
+            try
+            {
+                // buses
+
+                List<Bus> busesToSave = myCompany.GetAllRentedBuses();
+                if (busesToSave.Count != 0)
+                {
+                    String[] busLinesToSave = new String[busesToSave.Count];
+                    for (int i = 0; i < busesToSave.Count; i++)
+                    {
+                        busLinesToSave[i] = busesToSave[i].AsAString();
+                    }
+                    TextFileHelper.SaveFile("../../RentedBuses.txt", busLinesToSave);
+                    MessageBox.Show("Successfully saved buses");
+                }
+                else
+                {
+                    MessageBox.Show("Couldn't save buses");
+                }
+
+                // cars
+                List<PassengerCar> carsToSave = myCompany.GetAllRentedCars();
+                if (carsToSave.Count != 0)
+                {
+                    String[] carLinesToSave = new String[carsToSave.Count];
+                for (int i = 0; i < carsToSave.Count; i++)
+                {
+                        String carString = carsToSave[i].AsAString();
+                    carLinesToSave[i] = carString;
+                }
+                TextFileHelper.SaveFile("../../RentedCars.txt", carLinesToSave);
+                    MessageBox.Show("Successfully saved cars");
+                }
+                else
+                {
+                    MessageBox.Show("Couldn't save cars");
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Exception caught while saving");
+            }
+            // End code, by <your name>
+        }
+
+    }
+
+
+
+
+public static bool OpenBinFile(out List<Animal> Res) 
+        {
+            bool MethodRes = false;
+            FileStream fs = null;
+            BinaryFormatter bf = null;
+            Res = null;
+            try
+            {
+                fs = new FileStream(DefFilePath, FileMode.Open, FileAccess.Read);
+                bf = new BinaryFormatter();
+                Res = (List<Animal>)(bf.Deserialize(fs));
+                MethodRes = true;
+            }
+            catch (SerializationException)
+            { MessageBox.Show("something wrong with Serialization"); }
+            catch (IOException)
+            { MessageBox.Show("something wrong with IO"); }
+            catch
+            {
+                MessageBox.Show("something is wrong");
+            }
+            finally
+            {
+                if (fs != null) fs.Close();
+            }
+
+            return MethodRes;
+        }
