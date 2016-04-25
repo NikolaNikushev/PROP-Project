@@ -31,6 +31,7 @@ body{
 }
 .desc p1{
     font-size: 130%;
+	text-align: right;
 }
 p2{
     font-size: 65%;

@@ -3,16 +3,26 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <link rel="stylesheet" type="text/css" href="tickets/css/tickets.css">
-    </head>
-    <body>
+	
+</head>
+<body>
         <div id="header" class="nav">
             <img src="default/images/logohead.png">
-            <ul>
-                <li><a href="info.html">INFO</a></li>
-				<li><a href="program.html">PROGRAM</a></li>
-				<li><a href="tickets.html">TICKETS</a></li>
-				<li><a href="camping.html">CAMPING</a></li>
-            </ul>
+            <ul id="nav">
+				<li class="dropdown">
+					<a class="dropbtn" href="//localhost/ProP/DEVELOPMENT/index.html">INFO</a>
+					<div class="dropdown-content">
+						<a href="//localhost/ProP/DEVELOPMENT/info/general.html">GENERAL</a>
+						<a href="//localhost/ProP/DEVELOPMENT/info/explore.html">EXPLORE</a>
+						<!--<a href="//localhost/ProP/DEVELOPMENT/info/location.html">LOCATION</a>-->
+						<a href="//localhost/ProP/DEVELOPMENT/info/rules.html">RULES</a>
+					</div>
+				</li>
+				<li><a href="//localhost/ProP/DEVELOPMENT/program.html">PROGRAM</a></li>
+				<li><a href="//localhost/ProP/DEVELOPMENT/tickets.html">TICKETS</a></li>
+				<li><a href="//localhost/ProP/DEVELOPMENT/camping.html">CAMPING</a></li>
+				<li><a href="//localhost/ProP/DEVELOPMENT/tickets/register/register.html">ACCOUNT</a></li>
+			</ul>
         </div>
         <div id="contents">
         <div class="TICKETS">
@@ -125,13 +135,13 @@
 			</div>
 			<div id="largebtns">
 				<div class="lrgbutt">
-					
-						<img class="largebutt" src="tickets/images/BTNFAQ.png" class="FAQ">	
-					
+					<a href="mailto:faq@uos.com?subject=Oh Jeez, Help Me Pleeze&body=I am having troubles with: ">
+						<div class="largebutt FAQ"><p>QUESTIONS?</p></div>
+					</a>
 				</div>
 				<div class="lrgbutt">
 					<a href="tickets/register/register.html">
-						<img class="largebutt lbr" src="tickets/images/BTNSIGN.png" class="signin">	
+						<div class="largebutt lbr"><p>SIGN IN/REGISTER</p></div>
 					</a>
 				</div>
 			</div>

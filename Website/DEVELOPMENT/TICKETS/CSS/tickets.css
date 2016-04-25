@@ -155,7 +155,7 @@ body {
 	list-style-type: none;
     margin: 0;
 	padding:0;
-    overflow: hidden;
+    /*overflow: hidden;*/
 	background-color: #060709;
 	width:97%;
 	height:100%;
@@ -164,21 +164,71 @@ body {
 
 .nav ul li{
     float: left;
-	margin-left:11%;
-	width:11%;
+	margin-left:5%;
+	width:12%;
 }
 .nav ul li a{
 	display: block;
-    color: black;
     text-align: center;
     padding: 8px 16px;
     text-decoration: none;
-	color : rgb(215, 225, 242);;
-	font-size:125%;
+	color : rgb(215, 225, 242);
+	font-size: 16pt;
 }
 .nav ul li a:hover {
     background-color: #111;
 }
+
+
+
+.dropbtn {
+
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #060709;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	z-index:9999;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+	background-color: #111;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #111;
+}
+
+
+
+
+
+
+
 
 #tickinfo{
 	width: 80vw;
@@ -241,6 +291,19 @@ body {
 .largebutt{
 	margin-top: 25pt;
 	margin-left: 80pt;
+	border: none;
+	background-color: rgb(215, 225, 242);
+	color: #3B4D81;
+	width: 229px;
+	height: 61px;
+	display: inline-block;
+	text-decoration: none;
+	text-align: center;
+	float: left;
+}
+.largebutt p{
+	font-size: 22pt;
+	margin-top: 6pt;
 }
 .lbr{
 	float: right;

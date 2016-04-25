@@ -7,18 +7,37 @@
 <link rel="stylesheet" type="text/css" href="../DEFAULT/CSS/integral.css">
 <link rel="stylesheet" type="text/css" href="../DEFAULT/CSS/footer.css">
 <link rel="stylesheet" type="text/css" href="explore/CSS/explore.css">
+<link rel="stylesheet" type="text/css" href="explore/CSS/banner.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
 <script type="text/javascript" src="explore/JS/explore.js"></script>
 </head>
 <body>
+	
 	<div id="header" class="scrolled">
 		<!-- WIll BE LOADED WITH JQUERY -->
 	</div>
+	<!-- once you click the map a huge ass banner appears-->
+	<div class="overlap banner">
+		<div class="central">
+			<div id="top">
+				<img class="topcont" src="explore/img/mapimg.png" id="bannerapp" alt="Visit our location">
+				<div class="topcont" id="toptext">
+					<h2>LOCATION</h2>
+					<p>Here you can find our location and plan your route!</p>
+					<p>Please don't forget to drive safely.<br></p>
+					<p>The park is also accesible by bike and hiking.</p>
+					<p id="smallline">Click here <!--<span class="closebanner">(or anywhere outside the map below)</span>--> to close <b><span class="closebanner x">X</span></b></p>
+				</div>
+			</div>
+			<iframe src="https://www.google.com/maps/d/u/0/embed?mid=1BTy2-mMBvfeHLNt6ua4yGi0Gsfc&q=Galloway+Forest+Park" width="860" height="640"></iframe>
+		</div>
+	</div>
+
 	<!-- this div is with default display none and it 
 	appears when it needs to fill the space from header-->
 	<div id="ftsec" >
-		<img src="explore/img/img1.jpg" class = "imgban"/>
+		<img src="explore/img/img1.jpg" class = "imgban one"/>
 		<div class = "section_desc blue">
 		
 			<div class = "text">
@@ -38,10 +57,12 @@
 			</div>
 		</div>
 	</div>
-	<div id="scsec">
-		<img src="explore/img/img2.jpg" class = "imgban"/>
+	
+
+	<div id="scsec" >
+		<img src="explore/img/img2.jpg" class = "imgban closedfirst tobeclosed two"/>
 		<div class = "section_desc orange">
-			<div class = "text">
+			<div class = "text ">
 				<h1>AT NIGHT</h1>
 				<br/> <!-- Empty line intended-->
 				<p>The Galloway Forest Park is the darkest place of Scotland.</p>
@@ -57,8 +78,8 @@
 			</div>
 		</div>
 	</div>
-	<div id="tdsec">
-		<img src="explore/img/img3.jpg" class = "imgban"/>
+	<div id="tdsec" class="closedsecond">
+		<img src="explore/img/img3.jpg" class = "imgban tobeclosed three"/>
 		<div class = "section_desc blue">
 			<div class = "text">
 				<h1>THE FESTIVAL</h1>
@@ -81,8 +102,8 @@
 			</div>
 		</div>
 	</div>
-	<div id="fhsec">
-		<img src="explore/img/img4.jpg" class = "imgban"/>
+	<div id="fhsec" class="closedsecond">
+		<img src="explore/img/img4.jpg" class = "imgban tobeclosed four"/>
 		<!-- the last picture does not have a discription-->
 	</div>
 	<div id="footer">

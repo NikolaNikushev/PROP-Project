@@ -128,7 +128,10 @@ input{
 	float: none;
 	text-align: center;
 }
-
+.rdbtn{
+	width: 18pt;
+	height: 18pt;
+}
 .deflabel{
 	font-size: 24pt;
 }

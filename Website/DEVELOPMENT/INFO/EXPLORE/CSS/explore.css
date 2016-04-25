@@ -1,12 +1,12 @@
 /* this thing really requires some more styling adjustments, but I will leave them for later*/
-
 .imgban{
-	width: 100vw;
+	position: relative;
+	width: 100%;
 	display: block;
 }
 .section_desc{
 	height: 100%;
-	width: 100vw;
+	width: 100%;
 	padding-bottom: 35pt;
 }
 .blue{
@@ -38,4 +38,6 @@
 }
 #imgmap{
 	height: 270px;
+	cursor: pointer;
 }
+
