@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{CBF98DEF-9495-4EF9-AA81-719F57DFF053}</ProjectGuid>
+    <ProjectGuid>{E81268E9-A99D-4D29-980C-8EA01DE57421}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>WAvisitorCheck</RootNamespace>
-    <AssemblyName>WAvisitorCheck</AssemblyName>
+    <RootNamespace>StatsApp</RootNamespace>
+    <AssemblyName>StatsApp</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -33,12 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="MySql.Data">
-      <HintPath>..\..\week 6 AppAboutUsingMySqlDatabaseOnAthena - startup\MySql.Data.dll</HintPath>
-    </Reference>
-    <Reference Include="Phidget21.NET, Version=2.1.8.243, Culture=neutral, PublicKeyToken=c2b1f2a3594bce52, processorArchitecture=MSIL">
+    <Reference Include="MySql.Data, Version=6.9.8.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\phidget_rfid\Phidgets\Phidget21.NET.dll</HintPath>
+      <HintPath>D:\School\C#\PCS3\week6\week 6 AppAboutUsingMySqlDatabaseOnAthena - startup\MySql.Data.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -53,7 +50,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AutoClosingMessageBox.cs" />
+    <Compile Include="BinaryFileHelper.cs" />
     <Compile Include="DBHelper.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -63,7 +60,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Visitor.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -76,7 +72,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include="ClassDiagram1.cd" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
