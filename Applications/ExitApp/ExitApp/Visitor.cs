@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WAvisitorCheck
+namespace ExitApp
 {
     public class Visitor
     {
@@ -38,7 +38,7 @@ namespace WAvisitorCheck
 
         public string getInfo()
         {
-            return this.user_id.ToString() + "- " + this.password + "- " + this.email + "- " + this.fname + "- " + this.lname + "- " + this.dob.ToString() + "- " + this.balance.ToString() + "- " + this.paid.ToString() + "- " + this.bracelet_id + "- " + this.camping_id.ToString()+"- " + this.status.ToString();
+            return this.user_id.ToString() + "- " + this.password + "- " + this.email + "- " + this.fname + "- " + this.lname + "- " + this.dob.ToString() + "- " + this.balance.ToString() + "- " + this.paid.ToString() + "- " + this.bracelet_id + "- " + this.camping_id.ToString() + "- " + this.status.ToString();
         }
     }
 }
