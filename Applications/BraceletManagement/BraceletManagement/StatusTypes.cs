@@ -18,8 +18,7 @@ namespace BraceletManagement
         public enum SearchType
         {
             CODE,
-            EMAIL,
-            NAME
+            EMAIL
         }
         public enum visitStatus
         {

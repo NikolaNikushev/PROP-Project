@@ -12,31 +12,47 @@ namespace BraceletManagement
 {
     public partial class Form1 : Form
     {
+        private RFIDHelper myRFIDHelper;
+        private VisitorData myVisitor;
+        private RFIDData scannedRFID;
+       
+
         public Form1()
         {
             InitializeComponent();
-            
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void cmbxSearchType_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if(cmbxSearchType.SelectedItem != null)
+            myRFIDHelper = new RFIDHelper();
+            cmbxSearchType.Items.Clear();
+            // solution from StackOverflow
+            foreach(var searchType in Enum.GetValues(typeof(StatusTypes.SearchType)))
             {
-                if (cmbxSearchType.SelectedItem.ToString() == StatusTypes.SearchType.NAME.ToString())
+                cmbxSearchType.Items.Add(searchType);
+            }
+        }
+
+        private void btnSearchVisitor_Click(object sender, EventArgs e)
+        {
+            if(this.cmbxSearchType.SelectedItem != null && this.tbSearchVisitorText.Text != "")
+            {
+                // searchs for a correct visitor
+                myVisitor = DBHelper.getVisitorData((StatusTypes.SearchType)this.cmbxSearchType.SelectedItem, this.tbSearchVisitorText.Text);
+                if(myVisitor != null)
                 {
-                    this.tbSearchLastName.ReadOnly = false;
+                    this.tbVisitorEmail.Text = this.myVisitor.Email;
+                    this.tbVisitorCode.Text = this.myVisitor.Code;
+                    this.tbVisitorFirstName.Text = this.myVisitor.FirstName;
+                    this.tbVisitorLastName.Text = this.myVisitor.LastName;
+                    this.tbVisitorRfid.Text = this.myVisitor.ChipNumber;
+                    this.tbVisitorStatus.Text = this.myVisitor.Status.ToString();
+                    this.tbVisitorRFIDStatus.Text = this.myVisitor.RFIDStatus.ToString();
                 }
                 else
                 {
-                    this.tbSearchLastName.Text = "";
-                    this.tbSearchLastName.ReadOnly = true;
-
+                    this.lbSearchLog.Items.Insert(0, "Search returned no visitors");
                 }
+            }
+            else
+            {
+                this.lbSearchLog.Items.Insert(0, "Search unsuccessful");
             }
             
         }

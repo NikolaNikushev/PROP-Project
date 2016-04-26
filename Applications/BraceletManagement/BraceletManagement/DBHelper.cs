@@ -15,7 +15,7 @@ namespace BraceletManagement
 
         static String connectionInfo = "server=localhost;" +
                                     "database=propdbtest;" +
-                                    "user id=root;" +
+                                    "user id=root@localhost;" +
                                     "password=;" +
                                     "connect timeout=30;" +
                                     "convert zero datetime=True";
@@ -31,7 +31,7 @@ namespace BraceletManagement
         {
             string output = "";
             char[] tempCharArray = new char[input.Length];
-
+            tempCharArray = input.ToCharArray();
             foreach (char potentialWS in tempCharArray)
             {
                 if(potentialWS != ' ' && potentialWS != '\t' && potentialWS != '\n')
@@ -54,6 +54,8 @@ namespace BraceletManagement
         {
             //First we make sure that something meaningful is returned in all cases
             StatusTypes.BraceletStatus valueToReturn = StatusTypes.BraceletStatus.NOT_VALID;
+            
+            
             // Somekind of a protective measure
             chipNum = RemoveWhiteSpaces(chipNum);
 
@@ -66,8 +68,12 @@ namespace BraceletManagement
                 MySqlDataReader reader = command.ExecuteReader();
                 while (reader.Read())
                 {
-                    // should create a new instance of a retrieved status for this particular chip
-                    valueToReturn = (StatusTypes.BraceletStatus)reader["STATUS"];
+                    if(reader["STATUS"]!=DBNull.Value)
+                    {
+                        // should create a new instance of a retrieved status for this particular chip
+                        valueToReturn = (StatusTypes.BraceletStatus)reader["STATUS"];
+                    }
+                    
                 }
 
             }
@@ -86,17 +92,19 @@ namespace BraceletManagement
 
         /// <summary>
         /// Returns the whole data container for the visitor retrieved by the specified attribute-value pair
+        /// If no such visitor is found, returns null
         /// </summary>
         /// <param name="whereClauseAttribute"></param>
         /// <param name="whereClauseValue"></param>
         /// <returns></returns>
-        static public VisitorData getVisitorData(StatusTypes.SearchType whereClauseAttribute, string whereClauseValue)
+        static public VisitorData getVisitorData(StatusTypes.SearchType searchAttribute, string whereClauseValue)
         {
             // returns null if there no such email
             VisitorData valueToReturn = null;
 
             // removing the whitespaces from user input
             whereClauseValue = RemoveWhiteSpaces(whereClauseValue);
+            string whereClauseAttribute = searchAttribute.ToString();
 
             // We need to think of some ways to prevent the sql injections and other messed up user entries
             String sql = "SELECT EMAIL, FNAME, LNAME, SECCODE, BRACELET_ID, STATUS FROM VISITORS WHERE " 
@@ -111,8 +119,18 @@ namespace BraceletManagement
                 while (reader.Read())
                 {
                     // should create a new instance of a DataContainer with retrieved values
-                    valueToReturn = new VisitorData((string)reader["EMAIL"], (string)reader["FNAME"], (string)reader["LNAME"], 
-                        (string)reader["SECCODE"], (string)reader["BRACELET_ID"], (int)reader["STATUS"]);
+                    if(reader["EMAIL"]!= DBNull.Value)
+                    {
+                        string chipNum = "";
+                        if(reader["BRACELET_ID"] == DBNull.Value)
+                        {
+                            chipNum = "NULL";
+                        }
+                        valueToReturn = new VisitorData((string)reader["EMAIL"], (string)reader["FNAME"], (string)reader["LNAME"],
+                                                (string)reader["SECCODE"], chipNum, (int)reader["STATUS"]);
+                    }
+
+                    
                 }
 
             }

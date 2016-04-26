@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BraceletManagement
 {
-    class VisitorData: SomeAbstractData, IDataContainer
+    class VisitorData: SomeAbstractData
     {
 
         //--------Properties and Fields:
@@ -38,7 +38,12 @@ namespace BraceletManagement
             get;
             private set;
         }
-
+        // this way we will store all the data for the RFID of this guy
+        public StatusTypes.BraceletStatus RFIDStatus
+        {
+            get;
+            private set;
+        }
         // 0 or 1 originally, but is redirected to the StatusTypes
         public StatusTypes.visitStatus Status
         {
@@ -81,6 +86,15 @@ namespace BraceletManagement
             this.Code = secCode;
             this.ChipNumber = chipNum;
             this.Status = (StatusTypes.visitStatus)visitStatus;
+            
+            if(chipNum!= "NULL")
+            {
+                this.RFIDStatus = DBHelper.getRFIDStatus(chipNum);
+            }
+            else
+            {
+                this.RFIDStatus = StatusTypes.BraceletStatus.NOT_VALID;
+            }
             // that's all we've got folks
         }
 

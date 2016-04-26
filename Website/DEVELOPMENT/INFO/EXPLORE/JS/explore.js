@@ -15,6 +15,22 @@ $(document).ready(function() {
 	$( "#imgmap" ).click(function() {
 		$(".banner").show();
 	});
+	
+	
+	
+	// $( "#imgmap" ).mouseenter(function(
+	// {
+		
+		// $("#imgmap").animate({
+			// width: '+=5px'
+		// });
+	// });
+	// $( "#imgmap" ).mouseleave(function(
+	// {
+		// $("#imgmap").animate({
+			// width: '-=5px'
+		// });
+	// });
 });
 
 

@@ -8,6 +8,6 @@ namespace BraceletManagement
 {
     abstract class SomeAbstractData
     {
-         
+        
     }
 }
