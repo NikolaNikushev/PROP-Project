@@ -20,8 +20,9 @@ namespace BraceletManagement
         {
             get;
             private set;
-        } 
+        }
 
+        private DBHelper myDBHelper = new DBHelper();
 
 
         //--------Methods:
@@ -38,7 +39,7 @@ namespace BraceletManagement
         public RFIDData(string rfidNumber)
         {
             this.RFIDNumber = rfidNumber;
-            this.Status = DBHelper.getRFIDStatus(this.RFIDNumber);
+            this.Status = myDBHelper.getRFIDStatus(this.RFIDNumber);
         }
 
     }

@@ -18,7 +18,12 @@ namespace BraceletManagement
             private set;
         }
         // the reader itself - the class RFIDReader is just an overlay of all the dirty work
-        private RFID myRFIDReader;
+        public RFID myRFIDReader
+        {
+            get;
+            private set;
+        }
+
         public RFIDData RetrievedBraceletData
         {
             get;
@@ -33,7 +38,9 @@ namespace BraceletManagement
             try
             {
                 myRFIDReader = new RFID();
+                // event! 
                 myRFIDReader.Tag += new TagEventHandler(ProcessThisTag);
+
                 StringResultRep = "Successful connection";
             }
             catch
@@ -42,6 +49,10 @@ namespace BraceletManagement
             }
         }
 
+        /// <summary>
+        /// Tries to start the connection, returns the string depicting the failure
+        /// </summary>
+        /// <returns></returns>
         public string StartConnection()
         {
             string methodResult = "";
@@ -52,7 +63,7 @@ namespace BraceletManagement
                 myRFIDReader.Antenna = true;
                 myRFIDReader.LED = true;
 
-                methodResult = "an RFID-reader is found and opened.";
+                methodResult = "RFID-reader is found and opened.";
             }
             catch (PhidgetException)
             {
@@ -62,22 +73,27 @@ namespace BraceletManagement
         }
 
 
-        public string CloseConnection()
+        public string StopConnection()
         {
             string methodResult = "";
-
-            myRFIDReader.LED = false;
-            myRFIDReader.Antenna = false;
-            myRFIDReader.close();
-
-            methodResult = "an RFID-reader is closed.";
+            try
+            {
+                myRFIDReader.LED = false;
+                myRFIDReader.Antenna = false;
+                myRFIDReader.close();
+                methodResult = "RFID-reader is closed.";
+            }
+            catch
+            {
+                methodResult = "RFID-reader can not be closed.";
+            }
 
             return methodResult;
         }
 
         private void ProcessThisTag(object sender, TagEventArgs e)
         {
-            this.RetrievedBraceletData = new RFIDData(e.Tag);
+            this.RetrievedBraceletData = new RFIDData(e.Tag.ToString());
         }
 
 

@@ -1,0 +1,14 @@
+Exams in week 7 and 8, week 9 - final presentation
+Athena should be used soon
+for the visitor tracking it might be a good idea to use the console app
+two parts for the app 
+	one part is for MrGeorge to see, 
+	Today visitors should be always running, 
+	but saving all the parts we can use in the console app
+product tracking should give suggestions on what and whether to buy 
+see staticstics per product
+3 dimensional cube analysis: sales of products per day per shop
+how many are there
+how many are missing
+history to be kept per visitor
+prevent from entering again and again for the same 

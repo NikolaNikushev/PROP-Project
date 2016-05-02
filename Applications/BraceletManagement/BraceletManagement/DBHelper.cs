@@ -9,32 +9,38 @@ using MySql.Data.MySqlClient;
 
 namespace BraceletManagement
 {
-    static class DBHelper
+    class DBHelper
     {
-        static public MySqlConnection connection = new MySqlConnection(connectionInfo);
+        public MySqlConnection connection;
 
-        static String connectionInfo = "server=localhost;" +
+
+        //----------Constructors:
+        public DBHelper()
+        {
+            String connectionInfo = "server=localhost;" +
                                     "database=propdbtest;" +
-                                    "user id=root@localhost;" +
+                                    "user id=root;" +
                                     "password=;" +
                                     "connect timeout=30;" +
                                     "convert zero datetime=True";
 
+            connection = new MySqlConnection(connectionInfo);
+        }
         //----------Methods:
 
-            /// <summary>
-            /// Used to prevent some malicious user inputs
-            /// </summary>
-            /// <param name="input"></param>
-            /// <returns></returns>
-        static private string RemoveWhiteSpaces(string input)
+        /// <summary>
+        /// Used to prevent some malicious user inputs
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
+        private string RemoveWhiteSpaces(string input)
         {
             string output = "";
             char[] tempCharArray = new char[input.Length];
             tempCharArray = input.ToCharArray();
             foreach (char potentialWS in tempCharArray)
             {
-                if(potentialWS != ' ' && potentialWS != '\t' && potentialWS != '\n')
+                if (potentialWS != ' ' && potentialWS != '\t' && potentialWS != '\n')
                 {
                     // if no crap is detected, we can add it into the output string
                     output += potentialWS;
@@ -46,16 +52,16 @@ namespace BraceletManagement
         }
 
         /// <summary>
-            /// Returns the status of the requred RFID chip
-            /// </summary>
-            /// <param name="chipNum"></param>
-            /// <returns></returns>
-        static public StatusTypes.BraceletStatus getRFIDStatus(string chipNum)
+        /// Returns the status of the requred RFID chip
+        /// </summary>
+        /// <param name="chipNum"></param>
+        /// <returns></returns>
+        public StatusTypes.BraceletStatus getRFIDStatus(string chipNum)
         {
             //First we make sure that something meaningful is returned in all cases
             StatusTypes.BraceletStatus valueToReturn = StatusTypes.BraceletStatus.NOT_VALID;
-            
-            
+
+
             // Somekind of a protective measure
             chipNum = RemoveWhiteSpaces(chipNum);
 
@@ -68,18 +74,23 @@ namespace BraceletManagement
                 MySqlDataReader reader = command.ExecuteReader();
                 while (reader.Read())
                 {
-                    if(reader["STATUS"]!=DBNull.Value)
+                    if (reader["STATUS"] != DBNull.Value)
                     {
+                        string recStatus = reader["STATUS"].ToString();
+
+                        // solution from msdn:
+                        //Colors colorValue = (Colors) Enum.Parse(typeof(Colors), colorString);     
+                        StatusTypes.BraceletStatus bracStatus = (StatusTypes.BraceletStatus)Enum.Parse((typeof(StatusTypes.BraceletStatus)), recStatus);
                         // should create a new instance of a retrieved status for this particular chip
-                        valueToReturn = (StatusTypes.BraceletStatus)reader["STATUS"];
+                        valueToReturn = bracStatus;
                     }
-                    
+
                 }
 
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.ToString());
+                AutoClosingMessageBox.Show(ex.ToString(), "Oups! You can skip it", 300);
             }
             finally
             {
@@ -97,7 +108,7 @@ namespace BraceletManagement
         /// <param name="whereClauseAttribute"></param>
         /// <param name="whereClauseValue"></param>
         /// <returns></returns>
-        static public VisitorData getVisitorData(StatusTypes.SearchType searchAttribute, string whereClauseValue)
+        public VisitorData getVisitorData(StatusTypes.SearchType searchAttribute, string whereClauseValue)
         {
             // returns null if there no such email
             VisitorData valueToReturn = null;
@@ -107,8 +118,8 @@ namespace BraceletManagement
             string whereClauseAttribute = searchAttribute.ToString();
 
             // We need to think of some ways to prevent the sql injections and other messed up user entries
-            String sql = "SELECT EMAIL, FNAME, LNAME, SECCODE, BRACELET_ID, STATUS FROM VISITORS WHERE " 
-                + whereClauseAttribute + " =" + " \"" + whereClauseValue + "\" ";
+            String sql = "SELECT EMAIL, FNAME, LNAME, SECCODE, BRACELET_ID, STATUS FROM VISITORS WHERE UPPER("
+                + whereClauseAttribute + ") =" + " UPPER(\"" + whereClauseValue + "\")";
             MySqlCommand command = new MySqlCommand(sql, connection);
 
 
@@ -119,24 +130,28 @@ namespace BraceletManagement
                 while (reader.Read())
                 {
                     // should create a new instance of a DataContainer with retrieved values
-                    if(reader["EMAIL"]!= DBNull.Value)
+                    if (reader["EMAIL"] != DBNull.Value)
                     {
                         string chipNum = "";
-                        if(reader["BRACELET_ID"] == DBNull.Value)
+                        if (reader["BRACELET_ID"] == DBNull.Value)
                         {
                             chipNum = "NULL";
+                        }
+                        else
+                        {
+                            chipNum = (string)reader["BRACELET_ID"];
                         }
                         valueToReturn = new VisitorData((string)reader["EMAIL"], (string)reader["FNAME"], (string)reader["LNAME"],
                                                 (string)reader["SECCODE"], chipNum, (int)reader["STATUS"]);
                     }
 
-                    
+
                 }
 
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.ToString());
+                AutoClosingMessageBox.Show(ex.ToString(), "Oups!", 300);
             }
             finally
             {
@@ -146,6 +161,56 @@ namespace BraceletManagement
 
             return valueToReturn;
         }
+
+        public bool DeactivateBracelet(string chipNum, string secCode)
+        {
+            bool methodResult = false;
+            String sql = "UPDATE RFIDS "
+                + "SET STATUS = \"DEACTIVATED\""
+                + "WHERE BRACELET_ID =" + " \"" + chipNum + "\" ";
+            MySqlCommand command = new MySqlCommand(sql, connection);
+
+
+            try
+            {
+                connection.Open();
+                int affectedRows = 0;
+                affectedRows += command.ExecuteNonQuery();
+                sql = "UPDATE VISITORS "
+                        + "SET BRACELET_ID = NULL"
+                        + "WHERE SECCODE =" + " \"" + secCode + "\" ";
+                command = new MySqlCommand(sql, connection);
+                affectedRows += command.ExecuteNonQuery();
+                switch (affectedRows)
+                {
+                    case 0:
+                        methodResult = false;
+                        break;
+                    //check sum == 2
+                    case 2:
+                        methodResult = true;
+                        break;
+                    default:
+                        methodResult = false;
+                        break;
+
+                }
+            }
+            catch (Exception ex)
+            {
+                methodResult = false;
+                AutoClosingMessageBox.Show(ex.Message, "Oups!", 300);
+            }
+            finally
+            {
+                connection.Close();
+            }
+            return methodResult;
+        }
+
+
+
+
 
 
 

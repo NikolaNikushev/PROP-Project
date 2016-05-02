@@ -10,14 +10,14 @@ namespace BraceletManagement
     {
         public enum BraceletStatus
         {
-            AVAILABLE,
-            IN_USE,
+            STAND_BY,
+            ACTIVE,
             DEACTIVATED,
             NOT_VALID //reserved for not found RFIDs
         }
         public enum SearchType
         {
-            CODE,
+            SECCODE,
             EMAIL
         }
         public enum visitStatus

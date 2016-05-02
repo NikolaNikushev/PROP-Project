@@ -50,7 +50,7 @@ namespace BraceletManagement
             get;
             private set;
         }
-
+        private DBHelper myDBHelper = new DBHelper();
 
         //--------Constructors:
 
@@ -64,7 +64,7 @@ namespace BraceletManagement
         //public VisitorData(StatusTypes.SearchType searchBy, string searchValue)
         //{
         //    DBHelper.getVisitorData(searchBy, searchValue);
-            
+
         //}
 
 
@@ -89,7 +89,7 @@ namespace BraceletManagement
             
             if(chipNum!= "NULL")
             {
-                this.RFIDStatus = DBHelper.getRFIDStatus(chipNum);
+                this.RFIDStatus = myDBHelper.getRFIDStatus(chipNum);
             }
             else
             {
@@ -98,6 +98,10 @@ namespace BraceletManagement
             // that's all we've got folks
         }
 
+        public void SetRFIDStatus(StatusTypes.BraceletStatus newStatus)
+        {
+            this.RFIDStatus = newStatus;
+        }
 
 
     }
