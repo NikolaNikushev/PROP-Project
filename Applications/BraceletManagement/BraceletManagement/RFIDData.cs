@@ -19,7 +19,7 @@ namespace BraceletManagement
         public StatusTypes.BraceletStatus Status
         {
             get;
-            private set;
+            set;
         }
 
         private DBHelper myDBHelper = new DBHelper();

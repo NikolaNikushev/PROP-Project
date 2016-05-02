@@ -11,6 +11,7 @@ namespace BraceletManagement
 {
     class DBHelper
     {
+        private int messageShowTime = 1000;
         public MySqlConnection connection;
 
 
@@ -90,7 +91,7 @@ namespace BraceletManagement
             }
             catch (Exception ex)
             {
-                AutoClosingMessageBox.Show(ex.ToString(), "Oups! You can skip it", 300);
+                AutoClosingMessageBox.Show(ex.ToString(), "Oups! You can skip it", messageShowTime);
             }
             finally
             {
@@ -151,7 +152,7 @@ namespace BraceletManagement
             }
             catch (Exception ex)
             {
-                AutoClosingMessageBox.Show(ex.ToString(), "Oups!", 300);
+                AutoClosingMessageBox.Show(ex.ToString(), "Oups!", messageShowTime);
             }
             finally
             {
@@ -162,7 +163,15 @@ namespace BraceletManagement
             return valueToReturn;
         }
 
-        public bool DeactivateBracelet(string chipNum, string secCode)
+        /// <summary>
+        /// Deactivates the bracelet by according RFID
+        /// sets the status of the bracelet to DEACTIVATED
+        /// does not affect the visitors table
+        /// </summary>
+        /// <param name="chipNum"></param>
+        /// <param name="secCode"></param>
+        /// <returns></returns>
+        public bool DeactivateBracelet(string chipNum)
         {
             bool methodResult = false;
             String sql = "UPDATE RFIDS "
@@ -176,18 +185,13 @@ namespace BraceletManagement
                 connection.Open();
                 int affectedRows = 0;
                 affectedRows += command.ExecuteNonQuery();
-                sql = "UPDATE VISITORS "
-                        + "SET BRACELET_ID = NULL"
-                        + "WHERE SECCODE =" + " \"" + secCode + "\" ";
-                command = new MySqlCommand(sql, connection);
-                affectedRows += command.ExecuteNonQuery();
                 switch (affectedRows)
                 {
                     case 0:
                         methodResult = false;
                         break;
-                    //check sum == 2
-                    case 2:
+                    //check sum == 1
+                    case 1:
                         methodResult = true;
                         break;
                     default:
@@ -199,7 +203,7 @@ namespace BraceletManagement
             catch (Exception ex)
             {
                 methodResult = false;
-                AutoClosingMessageBox.Show(ex.Message, "Oups!", 300);
+                AutoClosingMessageBox.Show(ex.Message, "Oups!", messageShowTime);
             }
             finally
             {
@@ -208,10 +212,94 @@ namespace BraceletManagement
             return methodResult;
         }
 
+        public bool UpdateVisitorBracelet(string newChipNum, string secCode)
+        {
+            connection.Close();
+            bool methodResult = false;
+            String sql = "UPDATE VISITORS "
+                + "SET BRACELET_ID =" + " \"" + newChipNum + "\" "
+                + "WHERE SECCODE =" + " \"" + secCode + "\" ";
+            MySqlCommand command = new MySqlCommand(sql, connection);
 
 
+            try
+            {
+                connection.Open();
+                int affectedRows = 0;
+                affectedRows += command.ExecuteNonQuery();
+                switch (affectedRows)
+                {
+                    case 0:
+                        methodResult = false;
+                        break;
+                    //check sum == 1
+                    case 1:
+                        methodResult = this.ActivateBracelet(newChipNum);
+                        break;
+                    default:
+                        methodResult = false;
+                        break;
+
+                }
+            }
+            catch (Exception ex)
+            {
+                methodResult = false;
+                AutoClosingMessageBox.Show(ex.Message, "Oups!", messageShowTime);
+            }
+            finally
+            {
+                connection.Close();
+            }
+            return methodResult;
+        }
+
+        /// <summary>
+        /// Sets the status of a certain bracelet to active
+        /// </summary>
+        /// <param name="chipNum"></param>
+        /// <returns></returns>
+        private bool ActivateBracelet(string chipNum)
+        {
+            connection.Close();
+            bool methodResult = false;
+            String sql = "UPDATE RFIDS "
+                + "SET STATUS = \"ACTIVE\""
+                + "WHERE BRACELET_ID =" + " \"" + chipNum + "\" ";
+            MySqlCommand command = new MySqlCommand(sql, connection);
 
 
+            try
+            {
+                connection.Open();
+                int affectedRows = 0;
+                affectedRows += command.ExecuteNonQuery();
+                switch (affectedRows)
+                {
+                    case 0:
+                        methodResult = false;
+                        break;
+                    //check sum == 1
+                    case 1:
+                        methodResult = true;
+                        break;
+                    default:
+                        methodResult = false;
+                        break;
+
+                }
+            }
+            catch (Exception ex)
+            {
+                methodResult = false;
+                AutoClosingMessageBox.Show(ex.Message, "Oups!", messageShowTime);
+            }
+            finally
+            {
+                connection.Close();
+            }
+            return methodResult;
+        }
 
 
         // would be nice to make use of delegates somehow

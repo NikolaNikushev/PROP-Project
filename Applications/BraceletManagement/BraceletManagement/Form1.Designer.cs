@@ -39,7 +39,6 @@
             this.tbVisitorEmail = new System.Windows.Forms.TextBox();
             this.lblVisitorEmail = new System.Windows.Forms.Label();
             this.btnDeactivateRFID = new System.Windows.Forms.Button();
-            this.btnAssignNewRfid = new System.Windows.Forms.Button();
             this.tbVisitorRfid = new System.Windows.Forms.TextBox();
             this.tbVisitorStatus = new System.Windows.Forms.TextBox();
             this.tbVisitorCode = new System.Windows.Forms.TextBox();
@@ -51,6 +50,7 @@
             this.lblVisitorCode = new System.Windows.Forms.Label();
             this.lblVisitorLastName = new System.Windows.Forms.Label();
             this.lblVisitorFirstName = new System.Windows.Forms.Label();
+            this.btnAssignNewRfid = new System.Windows.Forms.Button();
             this.gbScannedRFID = new System.Windows.Forms.GroupBox();
             this.btnScanAgain = new System.Windows.Forms.Button();
             this.btnStopReader = new System.Windows.Forms.Button();
@@ -62,6 +62,8 @@
             this.lblScannedRfidNmb = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.lbSearchLog = new System.Windows.Forms.ListBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.btnDeactivateScannedBrac = new System.Windows.Forms.Button();
             this.pnlMainSearch.SuspendLayout();
             this.gbVisitorInfo.SuspendLayout();
             this.gbScannedRFID.SuspendLayout();
@@ -191,16 +193,6 @@
             this.btnDeactivateRFID.UseVisualStyleBackColor = true;
             this.btnDeactivateRFID.Click += new System.EventHandler(this.btnDeactivateRFID_Click);
             // 
-            // btnAssignNewRfid
-            // 
-            this.btnAssignNewRfid.Location = new System.Drawing.Point(68, 181);
-            this.btnAssignNewRfid.Name = "btnAssignNewRfid";
-            this.btnAssignNewRfid.Size = new System.Drawing.Size(123, 23);
-            this.btnAssignNewRfid.TabIndex = 11;
-            this.btnAssignNewRfid.Text = "Assign  RFID to Visitor";
-            this.btnAssignNewRfid.UseVisualStyleBackColor = true;
-            this.btnAssignNewRfid.Click += new System.EventHandler(this.btnAssignNewRfid_Click);
-            // 
             // tbVisitorRfid
             // 
             this.tbVisitorRfid.BackColor = System.Drawing.SystemColors.ButtonFace;
@@ -302,10 +294,22 @@
             this.lblVisitorFirstName.TabIndex = 0;
             this.lblVisitorFirstName.Text = "First Name:";
             // 
+            // btnAssignNewRfid
+            // 
+            this.btnAssignNewRfid.Location = new System.Drawing.Point(5, 213);
+            this.btnAssignNewRfid.Name = "btnAssignNewRfid";
+            this.btnAssignNewRfid.Size = new System.Drawing.Size(101, 44);
+            this.btnAssignNewRfid.TabIndex = 11;
+            this.btnAssignNewRfid.Text = "ASSIGN \r\nnew bracelet";
+            this.btnAssignNewRfid.UseVisualStyleBackColor = true;
+            this.btnAssignNewRfid.Click += new System.EventHandler(this.btnAssignNewRfid_Click);
+            // 
             // gbScannedRFID
             // 
             this.gbScannedRFID.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.gbScannedRFID.Controls.Add(this.btnDeactivateScannedBrac);
+            this.gbScannedRFID.Controls.Add(this.textBox1);
             this.gbScannedRFID.Controls.Add(this.btnScanAgain);
             this.gbScannedRFID.Controls.Add(this.btnStopReader);
             this.gbScannedRFID.Controls.Add(this.lbReaderLog);
@@ -324,9 +328,9 @@
             // 
             // btnScanAgain
             // 
-            this.btnScanAgain.Location = new System.Drawing.Point(12, 234);
+            this.btnScanAgain.Location = new System.Drawing.Point(201, 104);
             this.btnScanAgain.Name = "btnScanAgain";
-            this.btnScanAgain.Size = new System.Drawing.Size(224, 23);
+            this.btnScanAgain.Size = new System.Drawing.Size(43, 52);
             this.btnScanAgain.TabIndex = 12;
             this.btnScanAgain.Text = "Scan Again";
             this.btnScanAgain.UseVisualStyleBackColor = true;
@@ -334,7 +338,7 @@
             // 
             // btnStopReader
             // 
-            this.btnStopReader.Location = new System.Drawing.Point(161, 17);
+            this.btnStopReader.Location = new System.Drawing.Point(161, 55);
             this.btnStopReader.Name = "btnStopReader";
             this.btnStopReader.Size = new System.Drawing.Size(83, 26);
             this.btnStopReader.TabIndex = 9;
@@ -357,25 +361,25 @@
             // 
             this.tbScannedRFIDStatus.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.tbScannedRFIDStatus.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.tbScannedRFIDStatus.Location = new System.Drawing.Point(94, 124);
+            this.tbScannedRFIDStatus.Location = new System.Drawing.Point(88, 136);
             this.tbScannedRFIDStatus.Name = "tbScannedRFIDStatus";
             this.tbScannedRFIDStatus.ReadOnly = true;
-            this.tbScannedRFIDStatus.Size = new System.Drawing.Size(141, 20);
+            this.tbScannedRFIDStatus.Size = new System.Drawing.Size(107, 20);
             this.tbScannedRFIDStatus.TabIndex = 3;
             // 
             // tbScannedRFDNmb
             // 
             this.tbScannedRFDNmb.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.tbScannedRFDNmb.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.tbScannedRFDNmb.Location = new System.Drawing.Point(94, 92);
+            this.tbScannedRFDNmb.Location = new System.Drawing.Point(88, 104);
             this.tbScannedRFDNmb.Name = "tbScannedRFDNmb";
             this.tbScannedRFDNmb.ReadOnly = true;
-            this.tbScannedRFDNmb.Size = new System.Drawing.Size(141, 20);
+            this.tbScannedRFDNmb.Size = new System.Drawing.Size(107, 20);
             this.tbScannedRFDNmb.TabIndex = 2;
             // 
             // btnActivateReader
             // 
-            this.btnActivateReader.Location = new System.Drawing.Point(5, 19);
+            this.btnActivateReader.Location = new System.Drawing.Point(5, 57);
             this.btnActivateReader.Name = "btnActivateReader";
             this.btnActivateReader.Size = new System.Drawing.Size(97, 26);
             this.btnActivateReader.TabIndex = 7;
@@ -387,7 +391,7 @@
             // 
             this.lblScannedRfidStatus.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblScannedRfidStatus.AutoSize = true;
-            this.lblScannedRfidStatus.Location = new System.Drawing.Point(9, 127);
+            this.lblScannedRfidStatus.Location = new System.Drawing.Point(9, 139);
             this.lblScannedRfidStatus.Name = "lblScannedRfidStatus";
             this.lblScannedRfidStatus.Size = new System.Drawing.Size(68, 13);
             this.lblScannedRfidStatus.TabIndex = 1;
@@ -397,7 +401,7 @@
             // 
             this.lblScannedRfidNmb.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblScannedRfidNmb.AutoSize = true;
-            this.lblScannedRfidNmb.Location = new System.Drawing.Point(9, 95);
+            this.lblScannedRfidNmb.Location = new System.Drawing.Point(9, 107);
             this.lblScannedRfidNmb.Name = "lblScannedRfidNmb";
             this.lblScannedRfidNmb.Size = new System.Drawing.Size(73, 13);
             this.lblScannedRfidNmb.TabIndex = 0;
@@ -426,6 +430,27 @@
             this.lbSearchLog.Name = "lbSearchLog";
             this.lbSearchLog.Size = new System.Drawing.Size(496, 82);
             this.lbSearchLog.TabIndex = 7;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(5, 18);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(239, 33);
+            this.textBox1.TabIndex = 13;
+            this.textBox1.Text = "Use RFID reader to scan a new RFID\r\nBRACELET and assign it to the visitor";
+            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // btnDeactivateScannedBrac
+            // 
+            this.btnDeactivateScannedBrac.Location = new System.Drawing.Point(143, 214);
+            this.btnDeactivateScannedBrac.Name = "btnDeactivateScannedBrac";
+            this.btnDeactivateScannedBrac.Size = new System.Drawing.Size(101, 44);
+            this.btnDeactivateScannedBrac.TabIndex = 17;
+            this.btnDeactivateScannedBrac.Text = "DEACTIVATE scanned bracelet";
+            this.btnDeactivateScannedBrac.UseVisualStyleBackColor = true;
+            this.btnDeactivateScannedBrac.Click += new System.EventHandler(this.btnDeactivateScannedBrac_Click);
             // 
             // Form1
             // 
@@ -486,6 +511,8 @@
         private System.Windows.Forms.Label lblVisitorRFIDStatus;
         private System.Windows.Forms.TextBox tbVisitorEmail;
         private System.Windows.Forms.Label lblVisitorEmail;
+        private System.Windows.Forms.Button btnDeactivateScannedBrac;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
 
