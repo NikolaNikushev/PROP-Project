@@ -1,0 +1,10 @@
+- Documentation - a bit earlier
+- Website - on athena
+- app for background running - console app to retrieve information and put in in the main windows forms app. Split the functionality so that two apps dont interfere and do the same process
+- background writing to a file automatically starting.
+- Overall revenue did Mr.George made throughout the event
+- Gather information so that it would be used at a later time for another event to make improvements from the previous event
+- Make stats for each product and the quantity it has been sold and find out the pattern of consumption <== Could have.
+- History of user's balance for his purchases made at the event
+- switch the listboxes colors: make the big one with colors, and the small one with the text 
+
