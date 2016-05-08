@@ -1,7 +1,7 @@
 $(document).ready(function() {
 	// first page load
 	// to load up the header
-	$( "#header").load( "../default/headerstatic.html" );
+	// $( "#header").load( "../default/headerstatic.html" );
 	// to manage opening and closing the banner
 	// $(".closedfirst").hide();
 	// $(".closedsecond").hide();

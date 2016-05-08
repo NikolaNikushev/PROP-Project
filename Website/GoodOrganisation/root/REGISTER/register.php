@@ -9,30 +9,14 @@
   <!--<link rel="stylesheet" type="text/css" href="css/main/header.css">-->
   <link rel="stylesheet" type="text/css" href="css/main/footer.css">
   <link rel="stylesheet" type="text/css" href="css/forms/forms.css">
-  <link rel="stylesheet" type="text/css" href="../../default/css/fixedmenu.css">
+  <link rel="stylesheet" type="text/css" href="../default/css/fixedmenu.css">
 </head>
 
 <body>
-  <div id="header" class="scrolled" class="container-fluid">
-     <img id="logo" class="logo" src="images/logo.png"/>
-       <ul id="nav">
-				<li class="dropdown">
-					<a class="dropbtn" href="//localhost/ProP/DEVELOPMENT/index.html">INFO</a>
-					<div class="dropdown-content">
-						<a href="//localhost/ProP/DEVELOPMENT/info/general.html">GENERAL</a>
-						<a href="//localhost/ProP/DEVELOPMENT/info/explore.html">EXPLORE</a>
-						<!--<a href="//localhost/ProP/DEVELOPMENT/info/location.html">LOCATION</a>-->
-						<a href="//localhost/ProP/DEVELOPMENT/info/rules.html">RULES</a>
-					</div>
-				</li>
-				<li><a href="//localhost/ProP/DEVELOPMENT/program.html">PROGRAM</a></li>
-				<li><a href="//localhost/ProP/DEVELOPMENT/tickets.html">TICKETS</a></li>
-				<li><a href="//localhost/ProP/DEVELOPMENT/camping.html">CAMPING</a></li>
-				<li><a href="//localhost/ProP/DEVELOPMENT/tickets/register/register.html">ACCOUNT</a></li>
-			</ul>
-	   
+  <div id="header" class="scrolled container-fluid">
+     <?php include '../DEFAULT/PAGEPARTS/Header.php';?>
    </div>
-  <div id="title" class=" container-fluid">
+  <div id="title" class="container-fluid">
     <p id="title-text">
       SOUND ACCOUNT
     </p>
@@ -59,7 +43,7 @@
     </div>
   </div>
 
-  </div>
+
   <div id="footer" class="container-fluid">
     <img id="footerlogo" src="images/LOGOFOOT.png" />
     <ul id="footernav">

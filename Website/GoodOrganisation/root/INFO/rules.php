@@ -12,22 +12,7 @@
 
 <body>
 <div id="header" class="scrolled">
-		<img id="logo" class="logo" src="../DEFAULT/IMAGES/logohead.png"/>
-			<ul id="nav">
-				<li class="dropdown">
-					<a class="dropbtn" href="//localhost/ProP/DEVELOPMENT/index.html">INFO</a>
-					<div class="dropdown-content">
-						<a href="//localhost/ProP/DEVELOPMENT/info/general.html">GENERAL</a>
-						<a href="//localhost/ProP/DEVELOPMENT/info/explore.html">EXPLORE</a>
-						<!--<a href="//localhost/ProP/DEVELOPMENT/info/location.html">LOCATION</a>-->
-						<a href="//localhost/ProP/DEVELOPMENT/info/rules.html">RULES</a>
-					</div>
-				</li>
-				<li><a href="//localhost/ProP/DEVELOPMENT/program.html">PROGRAM</a></li>
-				<li><a href="//localhost/ProP/DEVELOPMENT/tickets.html">TICKETS</a></li>
-				<li><a href="//localhost/ProP/DEVELOPMENT/camping.html">CAMPING</a></li>
-				<li><a href="//localhost/ProP/DEVELOPMENT/tickets/register/register.html">ACCOUNT</a></li>
-			</ul>
+		<?php include '../DEFAULT/PAGEPARTS/Header.php';?>
 	</div>
 	
 	<div id="spacer"></div>

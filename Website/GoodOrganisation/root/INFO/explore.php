@@ -15,7 +15,7 @@
 <body>
 	
 	<div id="header" class="scrolled">
-		<!-- WIll BE LOADED WITH JQUERY -->
+		<?php include '../DEFAULT/PAGEPARTS/Header.php';?>
 	</div>
 	<!-- once you click the map a huge ass banner appears-->
 	<div class="overlap banner">

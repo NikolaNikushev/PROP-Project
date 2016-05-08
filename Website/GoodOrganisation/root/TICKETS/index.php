@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <link rel="stylesheet" type="text/css" href="tickets/css/tickets.css">
+    <link rel="stylesheet" type="text/css" href="css/tickets.css">
 	
 </head>
 <body>
@@ -11,7 +11,7 @@
         </div>
         <div id="contents">
         <div class="TICKETS">
-            <img src="tickets/images/TICKETS.png">
+            <img src="images/TICKETS.png" alt="TICKETS">
         </div>
 		<div id="tickinfo">
 			<div class="desccontainer" id="left">
@@ -30,7 +30,7 @@
 							</p>
 						</div>
 						<a href="tickets/register/register.html">
-							<img class="pricelink" src="tickets/images/BTNBEST.png">
+							<img class="pricelink" src="images/BTNBEST.png">
 						</a>
 					</div>
 					<!-- For the second type -->
@@ -47,7 +47,7 @@
 							</p>
 						</div>
 						<a href="tickets/register/register.html">
-							<img class="pricelink" src="tickets/images/BTNBETR.png">
+							<img class="pricelink" src="images/BTNBETR.png">
 						</a>
 					</div>
 					<!-- For the third type -->
@@ -67,7 +67,7 @@
 							</p>
 						</div>
 						<a href="tickets/register/register.html">
-							<img class="pricelink" src="tickets/images/BTNPER.png">
+							<img class="pricelink" src="images/BTNPER.png">
 						</a>	
 					</div>
 					<!--
@@ -168,16 +168,16 @@
         </div> 
 		
 	<div id="footer">
-<img id="footerlogo" src="default/images/LOGOFOOT.png" />
+<img id="footerlogo" src="../default/images/LOGOFOOT.png" />
 <ul id="footernav">
   <li><a href="#">NEWS & SOCIAL</a></li>
   <li><a href="#">CONTACT US</a></li>
   <li><a href="#">TERMS AND PRIVACY</a></li>
 </ul>
 <div id="social">
-	<img id="footerfacebook" src="default/images/facebook.png" />
-	<img id="footertwitter" src="default/images/twitter.png" />
-	<img id="footergplus" src="default/images/gplus.png" />
+	<img id="footerfacebook" src="../default/images/facebook.png" />
+	<img id="footertwitter" src="../default/images/twitter.png" />
+	<img id="footergplus" src="../default/images/gplus.png" />
 </div>
 <p id="copyright">COPYRIGHT:2016</p>
 </div>

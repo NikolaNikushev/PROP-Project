@@ -16,18 +16,18 @@
 		<img id="logo" src="DEFAULT/IMAGES/logohead.png"/>
 			<ul id="nav">
 				<li class="dropdown">
-					<a class="dropbtn" href="//localhost/ProP/DEVELOPMENT/index.html">INFO</a>
+					<a class="dropbtn" href="index.php">INFO</a>
 					<div class="dropdown-content">
-						<a href="//localhost/ProP/DEVELOPMENT/info/general.html">GENERAL</a>
-						<a href="//localhost/ProP/DEVELOPMENT/info/explore.html">EXPLORE</a>
-						<!--<a href="//localhost/ProP/DEVELOPMENT/info/location.html">LOCATION</a>-->
-						<a href="//localhost/ProP/DEVELOPMENT/info/rules.html">RULES</a>
+						<a href="info/general.php">GENERAL</a>
+						<a href="info/explore.php">EXPLORE</a>
+						<a href="info/location.php">LOCATION</a>
+						<a href="info/rules.php">RULES</a>
 					</div>
 				</li>
-				<li><a href="//localhost/ProP/DEVELOPMENT/program.html">PROGRAM</a></li>
-				<li><a href="//localhost/ProP/DEVELOPMENT/tickets.html">TICKETS</a></li>
-				<li><a href="//localhost/ProP/DEVELOPMENT/camping.html">CAMPING</a></li>
-				<li><a href="//localhost/ProP/DEVELOPMENT/tickets/register/register.html">ACCOUNT</a></li>
+				<li><a href="program/index.php">PROGRAM</a></li>
+				<li><a href="tickets/index.php">TICKETS</a></li>
+				<li><a href="camping/index.php">CAMPING</a></li>
+				<li><a href="register/register.php">ACCOUNT</a></li>
 			</ul>
 	</div>
 	<!-- this div is with default display none and it 
