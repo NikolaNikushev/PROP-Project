@@ -47,7 +47,7 @@
 <dataTypeSize>15</dataTypeSize>
 <ownDataTypeParameters>15,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="USERPIN" id="B8EB689C-63CC-5DFA-5678-52411CF76886">
+<Attribute name="SECCODE" id="B8EB689C-63CC-5DFA-5678-52411CF76886">
 <createdBy>Dmitry</createdBy>
 <createdTime>2016-03-29 10:05:42 UTC</createdTime>
 <comment>A UNIQUE CODE GENERATED FOR EVERY USER THAT HAD PAID</comment>
@@ -58,8 +58,22 @@
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>3</dataTypeSize>
-<ownDataTypeParameters>3,,</ownDataTypeParameters>
+<dataTypeSize>4</dataTypeSize>
+<ownDataTypeParameters>4,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="STATUS" id="285AA0CA-CEEB-DEF6-F052-2FFEF21ABD67">
+<createdBy>Dmitry</createdBy>
+<createdTime>2016-05-08 07:36:14 UTC</createdTime>
+<comment>Depicts user&apos;s being inside/outside</comment>
+<ownerDesignName>databaseDesignVersion0</ownerDesignName>
+<engineerTo>
+<item key="61197903-AE99-12F5-D9F9-9761B88F1D71" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT006</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
 </Attribute>
 </attributes>
 </Entity>
