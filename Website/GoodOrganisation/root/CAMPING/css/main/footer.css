@@ -1,0 +1,74 @@
+*{
+	margin:0;
+	padding:0;
+}
+@font-face {
+    font-family: "bauhaus93";
+    src:url("../../fonts/bauhaus93.ttf") format("truetype");
+}
+body {
+	font-family: bauhaus93;
+}
+
+#footer {
+position:relative;
+width:100%;
+background-color:#3C4C80;
+border-top: 1px solid;
+border-top-color: #506094;
+
+}
+
+#footerlogo{
+    display: block;
+	padding: 30px 0 30px 0;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+#footernav {
+display:block;
+position:relative;
+left:50%;top:0;
+margin-left:-375px; /* negative margin equal to half the width */
+width:750px;
+list-style:none;
+height:7%;
+}
+#footernav li {
+float:left;
+}
+#footernav a {
+display:block;
+color:#D7E1F2;
+text-align:center;
+width:250px; /* fixed width */
+text-decoration:none;
+font-size:125%;
+}
+#footernav li a:hover {
+    background-color: #F58235;
+}
+
+#social{
+    margin: 0 auto; /* to make the div center align to the browser */
+    padding: 20px;
+    width: 500px; /* set it to anything */
+    text-align: center;
+	margin-top:30px;
+}
+#social img{
+width:30pt;
+height:auto;
+margin:0 5px 0 5px;
+}
+#social img:hover{
+cursor:pointer;
+}
+
+#copyright{
+	margin-top: 30px;
+	text-align:center;
+	color:#D7E1F2;
+}

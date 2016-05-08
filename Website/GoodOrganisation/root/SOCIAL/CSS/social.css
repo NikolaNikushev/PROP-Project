@@ -1,0 +1,71 @@
+*{
+	font-family: bauhaus93;
+}
+#contents{
+
+
+}
+.caption img{
+  width : 324pt;
+  height : 102pt;
+}
+.caption{
+  width : 324pt;
+  height : 102pt;
+  margin: auto;
+  display: block;
+  margin-bottom: 30pt;
+  margin-top: 30pt
+}
+#containerholder{
+	position: relative;
+	height: auto;
+	min-height: 600px;
+	width: 60vw;
+	max-width: 1200pt;
+	margin: auto;
+	padding-bottom: 150pt;
+}
+.desccontainer{
+	max-width: 45%;
+	margin-left: 40pt;
+	display: inline-block;
+	vertical-align: top;
+}
+.right{
+	text-align: center;
+	float: right;
+}
+.titles h1{
+	font-size : 28pt;
+	color : #FFD105;
+	color : rgb(255, 209, 5);
+}
+.rtb{
+	text-align: right;
+}
+.mline{
+	  font-size : 18pt;
+  color : #3B4D80;
+  color : rgb(59, 77, 128);
+}
+.textblock{
+	margin-top: 30pt;
+}
+ul.sharing{
+	list-style-type: none;
+}
+ul.sharing li{
+	display: inline;
+	margin-bottom: 0pt;
+}
+#fbk *{
+	padding-bottom: 2px;
+}
+/* Because the upp div are floating */
+#footer{
+	clear: both;
+}
+
+
+
