@@ -16,7 +16,8 @@
 		<?php include '../DEFAULT/PAGEPARTS/Header.php';?>
 	</div>
 	<!-- the light blue rectangle in he middle -->
-	<div id="tentform" class="content">
+	<form>
+        <div id="tentform" class="content">
 		<div id="grtit">
 			<h1>GROUP DETAILS</h1>
 		</div>
@@ -31,7 +32,7 @@
 					<label class="deflabel plus">+</label>
 				</div>
 				
-		<form role="form" method="post">  <!-- do not forget to add an action-->	
+		  <!-- do not forget to add an action-->	
 			<p class="shortline dateline">Arrival date: </p>
 				<div class="defcont datecont">
 					<input class="rdbtn" required="required" type="radio" name="datechoice" id="dateeight">
@@ -44,47 +45,49 @@
 			<div id="leader" class="boxie">
 				<h2>TENANT 1</h2>
 				<p>Leader email: 
-					<input autofocus="autofocus" class="form-control" required="required" type="email" name="email" id="user_email" />
+					<input autofocus="autofocus" class="form-control" required="required" type="email" name="email" id="user_email">
 				</p>
 				<p>Leader password:
-					<input class="form-control" required="required" type="password" name="password" id="user_password" />
+					<input class="form-control" required="required" type="password" name="password" id="user_password">
 				</p>
 			</div>
 			<div class="boxie tenant" id="gu1">
 				<h2>TENANT 2</h2>
 				<p>Email: 
-					<input class="form-control" required="required" type="email" name="guest_em1" id="guest_em1" />
+					<input class="form-control" required="required" type="email" name="guest_em1" id="guest_em1">
 				</p>
 			</div>
 			<div class="boxie tenant" id="gu2">
 				<h2>TENANT 3</h2>
 				<p>Email: 
-					<input class="form-control" required="required" type="email" name="guest_em2" id="guest_em2" />
+					<input class="form-control" required="required" type="email" name="guest_em2" id="guest_em2">
 				</p>
 			</div>
 			<div class="boxie tenant" id="gu3">
 				<h2>TENANT 4</h2>
 				<p>Email: 
-					<input class="form-control" required="required" type="email" name="guest_em3" id="guest_em3" />
+					<input class="form-control" required="required" type="email" name="guest_em3" id="guest_em3">
 				</p>
 			</div>
 			<div class="boxie tenant" id="gu4">
 				<h2>TENANT 5</h2>
 				<p>Email: 
-					<input class="form-control" required="required" type="email" name="guest_em4" id="guest_em4" />
+					<input class="form-control" required="required" type="email" name="guest_em4" id="guest_em4">
 				</p>
 			</div>
 			<div class="boxie tenant" id="gu5">
 				<h2>TENANT 6</h2>
 				<p>Email: 
-					<input class="form-control" required="required" type="email" name="guest_em5" id="guest_em5" />
+					<input class="form-control" required="required" type="email" name="guest_em5" id="guest_em5">
 				</p>
 			</div>
 			<div id="price_ver" class="boxie verify">
-				<h2>RESERVATION PRICE:</h2>
+				<h2>RESERVATION PRICE:<input class="form-control" 
+						required="required" type="number" readonly
+						name="finprice" id="finprice"></h2>
 				<div id="ckbx">
 					
-					<input type="checkbox" name="verify" value="yes" id="check" required="required"/>
+					<input type="checkbox" name="verify" value="yes" id="check" required="required">
 					<label>
 						I verify the information
 					</label>
@@ -93,9 +96,9 @@
 					</div>
 				</div>
 			</div>
-		</form>
+		
 	</div>
-	
+	</form>
 	<!-- FOOTER -->
 	<div id="imges">
 			<div>

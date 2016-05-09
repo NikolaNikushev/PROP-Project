@@ -24,6 +24,7 @@ $(document).ready(function() {
 			value++;
 			$("#tennum").val(value)
 			$(tenants[value-1]).show();
+                        GetPrice();
 		}
 		
     });
@@ -34,8 +35,38 @@ $(document).ready(function() {
 			value--;
 			$("#tennum").val(value)
 			$(tenants[value]).hide();
+                        GetPrice();
 		}
     });
+     $("input[name=datechoice]:radio").change(function () {
+        GetPrice();
+    });
+    ("#dateeight").change(function () {
+        GetPrice();
+    });
+    ("#datenine").change(function () {
+        GetPrice();
+    });
 });
+
+
+function GetPrice()
+{
+    if($('.rdbtn').is(':checked') )
+    {
+        var entrprice;
+        if($('#dateeight').is(':checked'))
+        {
+            entrprice = 25;
+        }
+        else
+        {
+            entrprice = 15;
+        }
+        var price = entrprice * $("#tennum").val();
+        $('#finprice').val(price);
+    }
+}
+
 
 

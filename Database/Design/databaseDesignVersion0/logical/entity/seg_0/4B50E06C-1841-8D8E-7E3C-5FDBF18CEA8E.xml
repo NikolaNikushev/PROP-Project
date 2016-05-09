@@ -27,6 +27,19 @@
 <logicalDatatype>LOGDT019</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
+<Attribute name="NAME" id="6A284B0F-1CB6-2549-8D32-9E1A8468448B">
+<createdBy>Dmitry</createdBy>
+<createdTime>2016-05-09 21:16:32 UTC</createdTime>
+<ownerDesignName>databaseDesignVersion0</ownerDesignName>
+<engineerTo>
+<item key="61197903-AE99-12F5-D9F9-9761B88F1D71" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>25</dataTypeSize>
+<ownDataTypeParameters>25,,</ownDataTypeParameters>
+</Attribute>
 <Attribute name="RENTPRICE" id="EA17C2D6-C26C-8F77-9340-3107240D43D9">
 <createdBy>Dmitry</createdBy>
 <createdTime>2016-03-14 20:43:38 UTC</createdTime>
@@ -34,15 +47,14 @@
 <engineerTo>
 <item key="61197903-AE99-12F5-D9F9-9761B88F1D71" value="true"/>
 </engineerTo>
-<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT043</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="PRICINGTYPE" id="E8FFC5AE-0138-DDC4-8ACE-DDF03997F5C8">
+<Attribute name="STARTDATE" id="4A446217-5A93-8BD9-EEBC-531D27319064">
 <createdBy>Dmitry</createdBy>
-<createdTime>2016-03-14 20:43:53 UTC</createdTime>
+<createdTime>2016-05-09 21:15:51 UTC</createdTime>
 <ownerDesignName>databaseDesignVersion0</ownerDesignName>
 <engineerTo>
 <item key="61197903-AE99-12F5-D9F9-9761B88F1D71" value="true"/>
@@ -50,17 +62,45 @@
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>10</dataTypeSize>
-<ownDataTypeParameters>10,,</ownDataTypeParameters>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="STOCK" id="E9CD5842-CDE3-1111-8BC3-896CE0298F93">
+<Attribute name="DUEDATE" id="D597DDFC-7657-C80D-3F80-997D91FE1F0C">
 <createdBy>Dmitry</createdBy>
-<createdTime>2016-03-14 20:47:46 UTC</createdTime>
+<createdTime>2016-05-09 21:15:45 UTC</createdTime>
 <ownerDesignName>databaseDesignVersion0</ownerDesignName>
 <engineerTo>
 <item key="61197903-AE99-12F5-D9F9-9761B88F1D71" value="true"/>
 </engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="RETURNDATE" id="2C065ECB-97D0-8496-08E9-7D26A3DBBC6D">
+<createdBy>Dmitry</createdBy>
+<createdTime>2016-05-09 21:15:56 UTC</createdTime>
+<ownerDesignName>databaseDesignVersion0</ownerDesignName>
+<engineerTo>
+<item key="61197903-AE99-12F5-D9F9-9761B88F1D71" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="USER_ID" id="F1F24C55-95FD-F049-3D96-F30F4E4CB004">
+<createdBy>Dmitry</createdBy>
+<createdTime>2016-05-09 21:19:49 UTC</createdTime>
+<generatorID>B62FA062-97CC-F4C4-3BA3-1613EAEB825A</generatorID>
+<ownerDesignName>databaseDesignVersion0</ownerDesignName>
+<engineerTo>
+<item key="61197903-AE99-12F5-D9F9-9761B88F1D71" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<referedAttribute>3D4F250B-9952-4B6F-FC03-764B2102ABD3</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>

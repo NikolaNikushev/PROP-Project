@@ -82,6 +82,11 @@ input{
 	height: 24pt;
 	font-size: 20pt;
 }
+#finprice{
+    margin-top: 7pt;
+    vertical-align: middle;
+    width: 30%;
+}
 
 #check {
 	/* this does not work! */
