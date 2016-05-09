@@ -39,7 +39,7 @@
                 </p2>
             </div>
             <div class="map">
-                <div id='gmap_canvas' style='height:500px;width:700px;'></div><style>#gmap_canvas img{max-width:none!important;background:none!important}</style>
+               <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d59636.79383823322!2d-4.4642895490716725!3d55.12715202095303!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4862c258910e29f7%3A0xa90965d89d290483!2sGalloway+Forest+Park!5e0!3m2!1sen!2sbg!4v1462718063161" width="500" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
             </div>
         </div>
         <div id="footer">

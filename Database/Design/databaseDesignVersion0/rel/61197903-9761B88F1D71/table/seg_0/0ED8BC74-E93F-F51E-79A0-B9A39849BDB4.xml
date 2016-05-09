@@ -1,0 +1,59 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="0ED8BC74-E93F-F51E-79A0-B9A39849BDB4" name="FOODPRODUCTS">
+<createdBy>Dmitry</createdBy>
+<createdTime>2016-05-08 22:13:48 UTC</createdTime>
+<generatorID>02C50F2C-679C-AC86-C88F-BAAD09EE6866</generatorID>
+<ownerDesignName>databaseDesignVersion0</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="PRODUCT_ID" id="4C3BD75D-1832-3B8E-1F1C-4A99CCF1D2E5">
+<createdBy>Dmitry</createdBy>
+<createdTime>2016-05-08 22:13:48 UTC</createdTime>
+<generatorID>85981A7E-601A-2FCF-DA3D-A3E74E0B1E1C</generatorID>
+<ownerDesignName>databaseDesignVersion0</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PRICE" id="163CE503-C314-709E-22F1-DF8917B4C27D">
+<createdBy>Dmitry</createdBy>
+<createdTime>2016-05-08 22:13:48 UTC</createdTime>
+<generatorID>2DF480A0-2143-75B3-35FD-598D43D02918</generatorID>
+<ownerDesignName>databaseDesignVersion0</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT043</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="STOCK" id="9CCBE59F-B1C3-E35B-436A-A7C65DB7078E">
+<createdBy>Dmitry</createdBy>
+<createdTime>2016-05-08 22:13:48 UTC</createdTime>
+<generatorID>2D13442C-CED2-E5FB-270E-4AB3DE8AA13C</generatorID>
+<ownerDesignName>databaseDesignVersion0</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="93A6DD44-93FB-E1DB-739F-246C82B69E67" name="FOODPRODUCTS_PK">
+<createdBy>Dmitry</createdBy>
+<createdTime>2016-05-08 22:13:48 UTC</createdTime>
+<generatorID>E1034737-E165-E792-4B2B-9B1AA463E425</generatorID>
+<ownerDesignName>databaseDesignVersion0</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4C3BD75D-1832-3B8E-1F1C-4A99CCF1D2E5"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

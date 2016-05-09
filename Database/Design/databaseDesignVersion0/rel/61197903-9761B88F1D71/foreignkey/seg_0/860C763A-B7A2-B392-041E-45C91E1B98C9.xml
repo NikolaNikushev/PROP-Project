@@ -1,0 +1,15 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="860C763A-B7A2-B392-041E-45C91E1B98C9" containerWithKeyObject="0FF58AE3-04FB-29F8-C8C1-4E6EA877162E" localFKIndex="81BDBFC1-92F5-5CCB-CA96-8831E601067C" name="SALELINES_STOREPAYMENT_FK">
+<createdBy>Dmitry</createdBy>
+<createdTime>2016-05-08 22:13:49 UTC</createdTime>
+<generatorID>D5A16521-15E4-6021-FDA9-A63E4F890080</generatorID>
+<ownerDesignName>databaseDesignVersion0</ownerDesignName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>33D2AA77-706C-A218-1827-2AE0F4E6E390</referredTableID>
+<keyObject>55B1DE89-2427-A499-A001-0531CABDE8FC</keyObject>
+<referredKeyID>55B1DE89-2427-A499-A001-0531CABDE8FC</referredKeyID>
+<mandatory>true</mandatory>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

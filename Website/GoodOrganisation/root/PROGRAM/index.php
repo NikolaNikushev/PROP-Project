@@ -6,7 +6,7 @@
 
 <!-- TRYING TO CONNECT GOOGLE PROVIDED JQUERY -->
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-<script type="text/javascript" src="PROGRAM\JS\jquery-1.12.2.min.js"></script>
+<script type="text/javascript" src="../DEFAULT/JS/jquery-1.12.2.min.js"></script>
 
 
 
@@ -80,20 +80,7 @@
 			</div>
 		</div>
 	</div>
-		<div id="footer">
-			<img id="footerlogo" src="../DEFAULT/Images/LOGOFOOT.png" />
-		<ul id="footernav">
-			<li><a href="#">NEWS & SOCIAL</a></li>
-			<li><a href="#">CONTACT US</a></li>
-			<li><a href="#">TERMS AND PRIVACY</a></li>
-		</ul>
-		<div id="social">
-			<img id="footerfacebook" src="../DEFAULT/Images/facebook.png" />
-			<img id="footertwitter" src="../DEFAULT/Images/twitter.png" />
-			<img id="footergplus" src="../DEFAULT/Images/gplus.png" />
-		</div>
-		<p id="copyright">COPYRIGHT:2016</p>
-	</div>
+	<?php include '../DEFAULT/PAGEPARTS/footer.php';?>
 	
 </body>
 </html>

@@ -1,0 +1,94 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="0FF58AE3-04FB-29F8-C8C1-4E6EA877162E" name="SALELINES">
+<createdBy>Dmitry</createdBy>
+<createdTime>2016-05-08 22:13:48 UTC</createdTime>
+<generatorID>8A8F8CF5-CF1D-930D-374A-2D76A2B5A1BA</generatorID>
+<ownerDesignName>databaseDesignVersion0</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="PRODUCT_ID" id="87FC828B-0052-DE51-0B43-C812F212914D">
+<createdBy>Dmitry</createdBy>
+<createdTime>2016-05-08 22:13:48 UTC</createdTime>
+<generatorID>9C80A409-D2C2-CB18-3E85-0A36CA6675A2</generatorID>
+<ownerDesignName>databaseDesignVersion0</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="USER_ID" id="D6449FC0-B453-BDAE-F839-6266F84ABB1E">
+<createdBy>Dmitry</createdBy>
+<createdTime>2016-05-08 22:13:48 UTC</createdTime>
+<generatorID>2D2847BD-2C5E-4C1E-31A5-F46B1C26A730</generatorID>
+<ownerDesignName>databaseDesignVersion0</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="QUANTITY" id="C92CCC26-1178-9BB0-9C8E-FD771E4858BB">
+<createdBy>Dmitry</createdBy>
+<createdTime>2016-05-08 22:13:48 UTC</createdTime>
+<generatorID>669ABC48-210E-AF61-C0B4-F2C385F74047</generatorID>
+<ownerDesignName>databaseDesignVersion0</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="STOREPAYMENT_PAYMENT_ID" id="DC045012-6B1F-9962-8889-EA4E398A2FB2">
+<createdBy>Dmitry</createdBy>
+<createdTime>2016-05-08 22:13:48 UTC</createdTime>
+<generatorID>247C3859-0150-4303-6F6F-E2BE85E9925F</generatorID>
+<ownerDesignName>databaseDesignVersion0</ownerDesignName>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="860C763A-B7A2-B392-041E-45C91E1B98C9" referredColumn="5DE64FFC-EFE7-610E-9C46-83FE38193277"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="E9FB7AC8-6FB5-B0E1-3452-6D509A9DD369" name="SALELINES_PK">
+<createdBy>Dmitry</createdBy>
+<createdTime>2016-05-08 22:13:48 UTC</createdTime>
+<generatorID>343CDE23-6BAF-7346-DC39-2428A5D3316F</generatorID>
+<ownerDesignName>databaseDesignVersion0</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="DC045012-6B1F-9962-8889-EA4E398A2FB2"/>
+<colUsage columnID="87FC828B-0052-DE51-0B43-C812F212914D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="81BDBFC1-92F5-5CCB-CA96-8831E601067C" name="SALELINES_STOREPAYMENT_FK">
+<createdBy>Dmitry</createdBy>
+<createdTime>2016-05-08 22:13:49 UTC</createdTime>
+<generatorID>D5A16521-15E4-6021-FDA9-A63E4F890080</generatorID>
+<ownerDesignName>databaseDesignVersion0</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="DC045012-6B1F-9962-8889-EA4E398A2FB2"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="A14794E9-2C29-5FC9-A2D0-A66897954604" name="SALELINES_PRODUCTSTORAGES_FK">
+<createdBy>Dmitry</createdBy>
+<createdTime>2016-05-08 22:13:49 UTC</createdTime>
+<generatorID>8A93A696-8386-128E-80BD-19017CE2EFF2</generatorID>
+<ownerDesignName>databaseDesignVersion0</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+</ind_PK_UK>
+</indexes>
+</Table>

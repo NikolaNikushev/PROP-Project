@@ -3,7 +3,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <link rel="stylesheet" type="text/css" href="css/tickets.css">
-	
+    
 </head>
 <body>
         <div id="header" class="nav">
@@ -29,7 +29,7 @@
 								BEST WRISTBAND, ISSUED AT THE ENTRANCE
 							</p>
 						</div>
-						<a href="tickets/register/register.html">
+						<a href="../register/register.php">
 							<img class="pricelink" src="images/BTNBEST.png">
 						</a>
 					</div>
@@ -46,7 +46,7 @@
 								INCLUDES A T-SHIRT AT THE EVENT STORE.
 							</p>
 						</div>
-						<a href="tickets/register/register.html">
+						<a href="../register/register.php">
 							<img class="pricelink" src="images/BTNBETR.png">
 						</a>
 					</div>
@@ -66,7 +66,7 @@
 								HAT AT THE EVENT STORE.
 							</p>
 						</div>
-						<a href="tickets/register/register.html">
+						<a href="../register/register.php">
 							<img class="pricelink" src="images/BTNPER.png">
 						</a>	
 					</div>
@@ -125,7 +125,7 @@
 					</a>
 				</div>
 				<div class="lrgbutt">
-					<a href="tickets/register/register.html">
+					<a href="../register/register.php">
 						<div class="largebutt lbr"><p>SIGN IN/REGISTER</p></div>
 					</a>
 				</div>

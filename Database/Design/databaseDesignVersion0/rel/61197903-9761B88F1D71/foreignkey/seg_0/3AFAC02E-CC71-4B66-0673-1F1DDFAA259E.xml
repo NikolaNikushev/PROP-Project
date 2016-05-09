@@ -1,0 +1,15 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="3AFAC02E-CC71-4B66-0673-1F1DDFAA259E" containerWithKeyObject="A59CC7E3-B86A-62A4-A6E6-4EA5600A018D" localFKIndex="5099D4EB-618A-D0DE-D13F-7AD7BDC83ED2" name="VISITORS_RFIDS_FK">
+<createdBy>Dmitry</createdBy>
+<createdTime>2016-05-08 22:13:49 UTC</createdTime>
+<generatorID>3F015945-D3E0-5EA6-1A12-E23DF786A013</generatorID>
+<ownerDesignName>databaseDesignVersion0</ownerDesignName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>94CA8414-6986-4B09-6A11-ACE7322DB561</referredTableID>
+<keyObject>AF4C10BC-00E0-80FA-4E3A-8D214AB1130E</keyObject>
+<referredKeyID>AF4C10BC-00E0-80FA-4E3A-8D214AB1130E</referredKeyID>
+<mandatory>true</mandatory>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

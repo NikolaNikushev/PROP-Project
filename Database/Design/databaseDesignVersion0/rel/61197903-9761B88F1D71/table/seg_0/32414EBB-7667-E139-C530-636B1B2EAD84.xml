@@ -1,0 +1,101 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="32414EBB-7667-E139-C530-636B1B2EAD84" name="TENTLEADER">
+<createdBy>Dmitry</createdBy>
+<createdTime>2016-05-08 22:13:48 UTC</createdTime>
+<generatorID>D81B7849-B45E-0671-2017-E0255E2719C3</generatorID>
+<ownerDesignName>databaseDesignVersion0</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="CAMPS_CAMPING_ID" id="8543746C-4B17-1E24-DCC2-6B7E2CE4B40F">
+<createdBy>Dmitry</createdBy>
+<createdTime>2016-05-08 22:13:48 UTC</createdTime>
+<generatorID>AD96152F-E031-0638-02E2-EF25A5E9A31C</generatorID>
+<ownerDesignName>databaseDesignVersion0</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="3776B18A-835B-A480-1FF2-A991B5589F59" referredColumn="382716A0-1F43-AB73-953B-3615E1A0DB60"/>
+</associations>
+</Column>
+<Column name="VISITORS_USER_ID" id="660C2F25-BAE6-0C97-CAA3-C2964D4B30D3">
+<createdBy>Dmitry</createdBy>
+<createdTime>2016-05-08 22:13:48 UTC</createdTime>
+<generatorID>D65F7233-806A-11DB-3A8F-68854C1BCF30</generatorID>
+<ownerDesignName>databaseDesignVersion0</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="5B1D2D6C-34B5-5357-74C5-E65A0C631E76" referredColumn="E932FAC3-D4FB-9AFF-4A88-F6B812A5CDB8"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="2C25D4AC-7BED-A698-FA20-7CB0D956CD4D" name="TENTLEADER_PK">
+<createdBy>Dmitry</createdBy>
+<createdTime>2016-05-08 22:13:48 UTC</createdTime>
+<generatorID>F21392B7-8E04-40CA-7DCC-79E6F80BB6C8</generatorID>
+<ownerDesignName>databaseDesignVersion0</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="8543746C-4B17-1E24-DCC2-6B7E2CE4B40F"/>
+<colUsage columnID="660C2F25-BAE6-0C97-CAA3-C2964D4B30D3"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="3A5104F3-E2CA-BAC9-D566-88D378059955" name="TENTLEADER__IDX">
+<createdBy>Dmitry</createdBy>
+<createdTime>2016-05-08 22:13:49 UTC</createdTime>
+<ownerDesignName>databaseDesignVersion0</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<relationGeneratorID>C6E43573-5F5C-2BEE-732B-BB2A43CF4819</relationGeneratorID>
+<indexColumnUsage>
+<colUsage columnID="8543746C-4B17-1E24-DCC2-6B7E2CE4B40F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="3BC8C1C7-66BB-8ACC-34CF-DC9D0AA85D3E" name="TENTLEADER__IDXv1">
+<createdBy>Dmitry</createdBy>
+<createdTime>2016-05-08 22:13:49 UTC</createdTime>
+<ownerDesignName>databaseDesignVersion0</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<relationGeneratorID>C5010249-E244-C24A-BB3C-0B84E0144521</relationGeneratorID>
+<indexColumnUsage>
+<colUsage columnID="660C2F25-BAE6-0C97-CAA3-C2964D4B30D3"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="F892BD65-7FD2-FFFF-659B-BCCD107778CD" name="TENTLEADER_CAMPS_FK">
+<createdBy>Dmitry</createdBy>
+<createdTime>2016-05-08 22:13:49 UTC</createdTime>
+<generatorID>C6E43573-5F5C-2BEE-732B-BB2A43CF4819</generatorID>
+<ownerDesignName>databaseDesignVersion0</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="8543746C-4B17-1E24-DCC2-6B7E2CE4B40F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="56C238A3-F31B-F72E-F467-797A22258631" name="TENTLEADER_VISITORS_FK">
+<createdBy>Dmitry</createdBy>
+<createdTime>2016-05-08 22:13:49 UTC</createdTime>
+<generatorID>C5010249-E244-C24A-BB3C-0B84E0144521</generatorID>
+<ownerDesignName>databaseDesignVersion0</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="660C2F25-BAE6-0C97-CAA3-C2964D4B30D3"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

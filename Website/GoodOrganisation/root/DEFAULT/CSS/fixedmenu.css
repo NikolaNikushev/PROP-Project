@@ -57,6 +57,7 @@ body {
 	position:fixed;
 	background-image: none;
 	background-color:#060709;
+        border-bottom: 1px solid #FFD105;
 }
 .scrolled ul{
 	float:left;

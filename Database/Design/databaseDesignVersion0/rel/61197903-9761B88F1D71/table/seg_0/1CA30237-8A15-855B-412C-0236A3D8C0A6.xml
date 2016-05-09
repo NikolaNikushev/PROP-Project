@@ -1,0 +1,90 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="1CA30237-8A15-855B-412C-0236A3D8C0A6" name="PRODUCTSTORAGES">
+<createdBy>Dmitry</createdBy>
+<createdTime>2016-05-08 22:13:48 UTC</createdTime>
+<generatorID>D69B4C12-6180-01D2-8DA4-F658029F6E69</generatorID>
+<ownerDesignName>databaseDesignVersion0</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="INSTOREQUAN" id="EF05A78C-E710-3445-59AA-E59602110A4A">
+<createdBy>Dmitry</createdBy>
+<createdTime>2016-05-08 22:13:48 UTC</createdTime>
+<generatorID>CE69E99E-69C6-B0EE-7D01-9CC743BADB7B</generatorID>
+<ownerDesignName>databaseDesignVersion0</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FOODPRODUCTS_PRODUCT_ID" id="FA698407-E50A-E435-4B23-70F6A0E46C22">
+<createdBy>Dmitry</createdBy>
+<createdTime>2016-05-08 22:13:48 UTC</createdTime>
+<generatorID>AB87CB6B-9EA5-083A-A5DA-13952A020F09</generatorID>
+<ownerDesignName>databaseDesignVersion0</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="BB8F9E65-CE15-49A3-5EC1-12CBDC7164A4" referredColumn="4C3BD75D-1832-3B8E-1F1C-4A99CCF1D2E5"/>
+</associations>
+</Column>
+<Column name="STORES_STORE_ID" id="0BFF84AA-ACA2-C555-66CC-EADC2BC0DF17">
+<createdBy>Dmitry</createdBy>
+<createdTime>2016-05-08 22:13:48 UTC</createdTime>
+<generatorID>416B302E-BDF3-6357-0A12-A4F388E5DFF8</generatorID>
+<ownerDesignName>databaseDesignVersion0</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="A7426F65-4DE9-26F1-B2EC-45C9CB91C8E8" referredColumn="61CF8622-B280-DE8D-8705-504622083AF8"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="02EF378C-2374-0F88-42DC-24BEE08D3ED1" name="PRODUCTSTORAGES_PK">
+<createdBy>Dmitry</createdBy>
+<createdTime>2016-05-08 22:13:48 UTC</createdTime>
+<generatorID>2E03F6BC-668E-7E78-2326-0F6F2AD54E0E</generatorID>
+<ownerDesignName>databaseDesignVersion0</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="FA698407-E50A-E435-4B23-70F6A0E46C22"/>
+<colUsage columnID="0BFF84AA-ACA2-C555-66CC-EADC2BC0DF17"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="844BEC67-8F80-36D2-C87D-E14E4BF6AE42" name="PRODUCTSTORAGES_FOODPRODUCTS_FK">
+<createdBy>Dmitry</createdBy>
+<createdTime>2016-05-08 22:13:49 UTC</createdTime>
+<generatorID>21300BEE-63C0-A6F9-DD0B-6AE2C592514B</generatorID>
+<ownerDesignName>databaseDesignVersion0</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="FA698407-E50A-E435-4B23-70F6A0E46C22"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="E62ECB26-E971-DE58-5DED-885F86C366F1" name="PRODUCTSTORAGES_STORES_FK">
+<createdBy>Dmitry</createdBy>
+<createdTime>2016-05-08 22:13:49 UTC</createdTime>
+<generatorID>424CE086-627F-3B2B-B082-FD2235008EC7</generatorID>
+<ownerDesignName>databaseDesignVersion0</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0BFF84AA-ACA2-C555-66CC-EADC2BC0DF17"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

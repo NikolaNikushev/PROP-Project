@@ -23,7 +23,7 @@ body{
 }
 .desc{
     text-align: left;
-    padding-left: 150px;
+    padding-left: 50px;
     
 }
 .desc p{
@@ -40,9 +40,16 @@ p2{
     float: right;
     position: relative;
     margin: auto;
-    padding-right: 150px;
+    padding-right: 100px;
+}
+#contents{
+    height: 100%;
+    position: relative;
 }
 #contents div{
     display: inline-block;
     padding-bottom: 40px;
+}
+#footer{
+    clear: both;
 }

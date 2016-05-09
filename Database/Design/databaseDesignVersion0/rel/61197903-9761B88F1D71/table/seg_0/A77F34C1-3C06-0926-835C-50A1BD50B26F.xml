@@ -1,0 +1,114 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="A77F34C1-3C06-0926-835C-50A1BD50B26F" name="LOANLINES">
+<createdBy>Dmitry</createdBy>
+<createdTime>2016-05-08 22:13:48 UTC</createdTime>
+<generatorID>E126E316-B2AD-5D87-1C09-F0B92BC6FAFF</generatorID>
+<ownerDesignName>databaseDesignVersion0</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="LOANITEMS_ARTICLE_ID" id="54AD0A60-F538-EDDC-8279-3DA3905F9B31">
+<createdBy>Dmitry</createdBy>
+<createdTime>2016-05-08 22:13:48 UTC</createdTime>
+<generatorID>F68847E4-8EE9-3D36-919C-0DAC4637EB2A</generatorID>
+<ownerDesignName>databaseDesignVersion0</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="3927109C-616F-4349-3942-D1D15C899CCB" referredColumn="54E132BE-EB18-4A35-CD4B-D563F854DA97"/>
+</associations>
+</Column>
+<Column name="STARTDATE" id="4CD92E68-4B29-79C0-A128-1B960E54BB99">
+<createdBy>Dmitry</createdBy>
+<createdTime>2016-05-08 22:13:48 UTC</createdTime>
+<generatorID>77031A95-440C-5B9D-2005-A9BAB88DD7CA</generatorID>
+<ownerDesignName>databaseDesignVersion0</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DUEDATE" id="B76C8B38-7005-079A-9495-F393287EDF50">
+<createdBy>Dmitry</createdBy>
+<createdTime>2016-05-08 22:13:48 UTC</createdTime>
+<generatorID>4A9EB09A-1B7F-678E-168B-F81908129F8D</generatorID>
+<ownerDesignName>databaseDesignVersion0</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="RETURNDATE" id="E40BDF5D-14A2-C99A-D12A-7B770632898E">
+<createdBy>Dmitry</createdBy>
+<createdTime>2016-05-08 22:13:48 UTC</createdTime>
+<generatorID>83C04D56-087C-AEB3-CADF-7326ACA87A5E</generatorID>
+<ownerDesignName>databaseDesignVersion0</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="VISITORS_USER_ID" id="8A259626-41A5-1ADA-9AD7-FE12CDBFCBEE">
+<createdBy>Dmitry</createdBy>
+<createdTime>2016-05-08 22:13:48 UTC</createdTime>
+<generatorID>387B1B8E-E6E3-C871-C580-BC591B5DBC0B</generatorID>
+<ownerDesignName>databaseDesignVersion0</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="9F7B028E-F159-DCBF-6D84-4F5801DA1469" referredColumn="E932FAC3-D4FB-9AFF-4A88-F6B812A5CDB8"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="E9A06718-11C2-3043-13F9-BF62808231EC" name="LOANLINES_PK">
+<createdBy>Dmitry</createdBy>
+<createdTime>2016-05-08 22:13:48 UTC</createdTime>
+<generatorID>788FA5C3-210C-4983-160F-8F17D401D5B2</generatorID>
+<ownerDesignName>databaseDesignVersion0</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="8A259626-41A5-1ADA-9AD7-FE12CDBFCBEE"/>
+<colUsage columnID="54AD0A60-F538-EDDC-8279-3DA3905F9B31"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="C7C2E3A1-F831-95EB-CA95-565BEA078D17" name="LOANLINES_VISITORS_FK">
+<createdBy>Dmitry</createdBy>
+<createdTime>2016-05-08 22:13:49 UTC</createdTime>
+<generatorID>F4A91A10-EBEB-C62A-D15C-80928CBB8716</generatorID>
+<ownerDesignName>databaseDesignVersion0</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="8A259626-41A5-1ADA-9AD7-FE12CDBFCBEE"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="3A9A2791-EB5F-EABE-EDBB-9ABE7F7CD430" name="LOANLINES_LOANITEMS_FK">
+<createdBy>Dmitry</createdBy>
+<createdTime>2016-05-08 22:13:49 UTC</createdTime>
+<generatorID>7F5751A1-EBA5-0FB7-3D40-466984119BD5</generatorID>
+<ownerDesignName>databaseDesignVersion0</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="54AD0A60-F538-EDDC-8279-3DA3905F9B31"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
