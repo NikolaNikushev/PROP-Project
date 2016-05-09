@@ -1,0 +1,81 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="33D2AA77-706C-A218-1827-2AE0F4E6E390" name="STOREPAYMENT">
+<createdBy>Dmitry</createdBy>
+<createdTime>2016-05-08 22:13:48 UTC</createdTime>
+<generatorID>F0D79AF3-9382-F588-FE15-9FD6297A0890</generatorID>
+<ownerDesignName>databaseDesignVersion0</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="VISITORS_USER_ID" id="F6E02ED5-91C3-3D48-9AA8-2B291EBB37CE">
+<createdBy>Dmitry</createdBy>
+<createdTime>2016-05-08 22:13:48 UTC</createdTime>
+<generatorID>94980A17-AEC9-0671-D08E-E33F376F7521</generatorID>
+<ownerDesignName>databaseDesignVersion0</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="11DB17FF-A5F3-AE14-014A-2241C6FAC313" referredColumn="E932FAC3-D4FB-9AFF-4A88-F6B812A5CDB8"/>
+</associations>
+</Column>
+<Column name="PAYMENT_ID" id="5DE64FFC-EFE7-610E-9C46-83FE38193277">
+<createdBy>Dmitry</createdBy>
+<createdTime>2016-05-08 22:13:48 UTC</createdTime>
+<generatorID>51866256-DEA9-844C-1C76-15FD0B34B8F1</generatorID>
+<ownerDesignName>databaseDesignVersion0</ownerDesignName>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TOTALPRICE" id="B601E47D-AA2F-3F57-2D72-73708AA631BB">
+<createdBy>Dmitry</createdBy>
+<createdTime>2016-05-08 22:13:48 UTC</createdTime>
+<generatorID>AEA77B81-1027-D0EA-9361-AFCD3B3DD49A</generatorID>
+<ownerDesignName>databaseDesignVersion0</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DATE" id="701766EF-C804-7ED8-2DB0-0C3A791EBC57">
+<createdBy>Dmitry</createdBy>
+<createdTime>2016-05-08 22:13:48 UTC</createdTime>
+<generatorID>1F1EFCFD-1041-5BAB-EB11-D36A48B67BB7</generatorID>
+<ownerDesignName>databaseDesignVersion0</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="55B1DE89-2427-A499-A001-0531CABDE8FC" name="STOREPAYMENT_PK">
+<createdBy>Dmitry</createdBy>
+<createdTime>2016-05-08 22:13:48 UTC</createdTime>
+<generatorID>924F8074-FEC4-5A53-B04C-C46C8C4AC946</generatorID>
+<ownerDesignName>databaseDesignVersion0</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="5DE64FFC-EFE7-610E-9C46-83FE38193277"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="69EF009E-279B-7E3E-ACA4-B0ADCD92B61F" name="STOREPAYMENT_VISITORS_FK">
+<createdBy>Dmitry</createdBy>
+<createdTime>2016-05-08 22:13:49 UTC</createdTime>
+<generatorID>7AFA5CE2-6A60-94AF-FBF3-F4EC70530969</generatorID>
+<ownerDesignName>databaseDesignVersion0</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F6E02ED5-91C3-3D48-9AA8-2B291EBB37CE"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,103 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="C3B8FBC3-3048-151E-8082-771681BD761A" name="USERS">
+<createdBy>Dmitry</createdBy>
+<createdTime>2016-05-08 22:13:48 UTC</createdTime>
+<generatorID>C33868E7-B110-9945-9CC9-550B3080C8EA</generatorID>
+<ownerDesignName>databaseDesignVersion0</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="USER_ID" id="A33980E4-6B90-F138-59D7-2A04BF685E8F">
+<createdBy>Dmitry</createdBy>
+<createdTime>2016-05-08 22:13:48 UTC</createdTime>
+<generatorID>3D4F250B-9952-4B6F-FC03-764B2102ABD3</generatorID>
+<ownerDesignName>databaseDesignVersion0</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PASSWORD" id="E2295AC0-2718-05E2-2FED-932FFF68CC75">
+<createdBy>Dmitry</createdBy>
+<createdTime>2016-05-08 22:13:48 UTC</createdTime>
+<generatorID>929CF4CA-E617-F2B3-067C-3CC10184A28E</generatorID>
+<ownerDesignName>databaseDesignVersion0</ownerDesignName>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="EMAIL" id="C77BEB9E-3042-CBB0-7BD1-D2ACF1E8D563">
+<createdBy>Dmitry</createdBy>
+<createdTime>2016-05-08 22:13:48 UTC</createdTime>
+<generatorID>D967A765-CE15-3DE8-166E-A674EE97D8D3</generatorID>
+<ownerDesignName>databaseDesignVersion0</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>40</dataTypeSize>
+<ownDataTypeParameters>40,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DATEOFBIRTH" id="A1FDC2C5-4119-DCF4-FBB1-DEDE158AEB07">
+<createdBy>Dmitry</createdBy>
+<createdTime>2016-05-08 22:13:48 UTC</createdTime>
+<generatorID>76ED578D-4A5A-6A6E-0E17-C47D698105D7</generatorID>
+<ownerDesignName>databaseDesignVersion0</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="BALANCE" id="B172EB9D-E132-5783-FE92-1CF2D81F7FDD">
+<createdBy>Dmitry</createdBy>
+<createdTime>2016-05-08 22:13:48 UTC</createdTime>
+<generatorID>D7C58D11-7071-3584-CA7B-4F2F8948A2D7</generatorID>
+<ownerDesignName>databaseDesignVersion0</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT043</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PAID" id="B381EC94-3EB5-238C-03EB-40BD989EC954">
+<createdBy>Dmitry</createdBy>
+<createdTime>2016-05-08 22:13:48 UTC</createdTime>
+<generatorID>10E2E85A-C919-0C00-7A4E-55F98DF3DD0B</generatorID>
+<ownerDesignName>databaseDesignVersion0</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT033</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="REGDATE" id="4486A701-C204-729E-0A0C-7DBE052C8977">
+<createdBy>Dmitry</createdBy>
+<createdTime>2016-05-08 22:13:48 UTC</createdTime>
+<generatorID>E9C03ED7-61FA-6B7B-794C-CD60E08DFA24</generatorID>
+<ownerDesignName>databaseDesignVersion0</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="936A1621-D5B3-00ED-EDBC-376C88C2E27B" name="USERS_PK">
+<createdBy>Dmitry</createdBy>
+<createdTime>2016-05-08 22:13:48 UTC</createdTime>
+<generatorID>E95EC36F-5DD7-2C00-050A-C87E6052406D</generatorID>
+<ownerDesignName>databaseDesignVersion0</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A33980E4-6B90-F138-59D7-2A04BF685E8F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

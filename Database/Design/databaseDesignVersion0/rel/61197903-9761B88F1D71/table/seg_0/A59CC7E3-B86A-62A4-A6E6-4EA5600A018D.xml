@@ -1,0 +1,143 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="A59CC7E3-B86A-62A4-A6E6-4EA5600A018D" name="VISITORS">
+<createdBy>Dmitry</createdBy>
+<createdTime>2016-05-08 22:13:48 UTC</createdTime>
+<generatorID>9CF38A7C-7CAB-336D-B2C6-6D126A8D87FA</generatorID>
+<notes>BECOMES ONE ONLY WHEN PAID ENOUGH</notes>
+<ownerDesignName>databaseDesignVersion0</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="USER_ID" id="E932FAC3-D4FB-9AFF-4A88-F6B812A5CDB8">
+<createdBy>Dmitry</createdBy>
+<createdTime>2016-05-08 22:13:48 UTC</createdTime>
+<generatorID>3D4F250B-9952-4B6F-FC03-764B2102ABD3</generatorID>
+<ownerDesignName>databaseDesignVersion0</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="1E42728B-AF38-4070-419B-66F3847E6740" referredColumn="A33980E4-6B90-F138-59D7-2A04BF685E8F"/>
+</associations>
+</Column>
+<Column name="CAMPS_CAMPING_ID" id="B7E7CB18-6639-373E-AE46-49F3C21EA32C">
+<createdBy>Dmitry</createdBy>
+<createdTime>2016-05-08 22:13:48 UTC</createdTime>
+<generatorID>C5B45CEB-8D5C-E5D7-E640-B22374E4EAAC</generatorID>
+<ownerDesignName>databaseDesignVersion0</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="2F41817C-FB3B-11DC-6B98-96E4B337AD00" referredColumn="382716A0-1F43-AB73-953B-3615E1A0DB60"/>
+</associations>
+</Column>
+<Column name="RFIDS_BRACELET_ID" id="0EC6A924-A7E8-C783-60B4-7FEE06DE2F52">
+<createdBy>Dmitry</createdBy>
+<createdTime>2016-05-08 22:13:48 UTC</createdTime>
+<generatorID>9984275E-F453-AB6D-1136-49500049CFAF</generatorID>
+<ownerDesignName>databaseDesignVersion0</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>15</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="3AFAC02E-CC71-4B66-0673-1F1DDFAA259E" referredColumn="854F9A77-B2DB-2566-A673-06FC0D84097C"/>
+</associations>
+</Column>
+<Column name="SECCODE" id="FA18CF90-36F8-C3D2-AE6E-1132F1E3459A">
+<createdBy>Dmitry</createdBy>
+<createdTime>2016-05-08 22:13:48 UTC</createdTime>
+<comment>A UNIQUE CODE GENERATED FOR EVERY USER THAT HAD PAID</comment>
+<generatorID>B8EB689C-63CC-5DFA-5678-52411CF76886</generatorID>
+<ownerDesignName>databaseDesignVersion0</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>4</dataTypeSize>
+<ownDataTypeParameters>4,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="STATUS" id="429595E1-6B22-5188-5AE2-026BA25144B2">
+<createdBy>Dmitry</createdBy>
+<createdTime>2016-05-08 22:13:48 UTC</createdTime>
+<comment>Depicts user&apos;s being inside/outside</comment>
+<generatorID>285AA0CA-CEEB-DEF6-F052-2FFEF21ABD67</generatorID>
+<ownerDesignName>databaseDesignVersion0</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT006</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="8AD9370E-2CD0-8DE9-0BAF-F9BD0A5F2119" name="VISITORS_PK">
+<createdBy>Dmitry</createdBy>
+<createdTime>2016-05-08 22:13:48 UTC</createdTime>
+<generatorID>E95EC36F-5DD7-2C00-050A-C87E6052406D</generatorID>
+<ownerDesignName>databaseDesignVersion0</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E932FAC3-D4FB-9AFF-4A88-F6B812A5CDB8"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="0EA55E56-2EF1-9C8E-74E7-9F7E1172ADA7" name="VISITORS__IDX">
+<createdBy>Dmitry</createdBy>
+<createdTime>2016-05-08 22:13:49 UTC</createdTime>
+<ownerDesignName>databaseDesignVersion0</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<relationGeneratorID>3F015945-D3E0-5EA6-1A12-E23DF786A013</relationGeneratorID>
+<indexColumnUsage>
+<colUsage columnID="0EC6A924-A7E8-C783-60B4-7FEE06DE2F52"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="EB9633E4-A2F7-23E4-218E-BE389DFD5682" name="VISITORS_USERS_FK">
+<createdBy>Dmitry</createdBy>
+<createdTime>2016-05-08 22:13:49 UTC</createdTime>
+<generatorID>15934324-A2CC-31A2-C324-42AE83BDC786</generatorID>
+<ownerDesignName>databaseDesignVersion0</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E932FAC3-D4FB-9AFF-4A88-F6B812A5CDB8"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="5099D4EB-618A-D0DE-D13F-7AD7BDC83ED2" name="VISITORS_RFIDS_FK">
+<createdBy>Dmitry</createdBy>
+<createdTime>2016-05-08 22:13:49 UTC</createdTime>
+<generatorID>3F015945-D3E0-5EA6-1A12-E23DF786A013</generatorID>
+<ownerDesignName>databaseDesignVersion0</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0EC6A924-A7E8-C783-60B4-7FEE06DE2F52"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="0392952B-E3A0-CC06-E7A5-E76D89E8F381" name="VISITORS_CAMPS_FK">
+<createdBy>Dmitry</createdBy>
+<createdTime>2016-05-08 22:13:49 UTC</createdTime>
+<generatorID>C3F52872-7525-1505-C490-9CAF79E87059</generatorID>
+<ownerDesignName>databaseDesignVersion0</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B7E7CB18-6639-373E-AE46-49F3C21EA32C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

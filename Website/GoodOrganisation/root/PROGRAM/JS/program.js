@@ -58,7 +58,7 @@ function DayClick(indicBtn)
 	// load content
 	if(isLoaded[indicBtn] === 0)
 	{
-		$( ".schedule" ).load( "program/blank.html" );
+		//$( ".schedule" ).load( "data/blank.html" );
 		$( ".schedule" ).load( contents[indicBtn] );
 		isLoaded[indicBtn] = 1;
 		

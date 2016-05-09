@@ -1,0 +1,156 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : May 9, 2016, 1:14:47 AM
+    Author     : Dmitry
+*/
+#contents{
+    padding-top: 36pt;
+    min-height: 100vh;
+    height: 100%;
+    padding-bottom: 5vh;
+    position: relative;
+}
+#actpad{
+    position: static;
+    min-height: 100vh;
+    padding-bottom: 5vh;
+    height: 100%;
+    display: inline-block;
+    width: 95vw;
+    float:left;
+}
+#personstat{
+    position: fixed;
+    background: #D7E1F2;
+    display: inline-block;
+    float: right;
+    color: white;
+    text-align: right;
+    border: 1px solid #FFD105;
+    width: auto;
+    padding: 0 2pt 0 2pt;
+}
+#footer{
+    clear:both;
+}
+/* inside of the left (orange) part */
+#padinnercontainer{
+    position: relative;
+    width: 80%;
+    margin: auto;
+}
+#desctextbox{
+    padding-top: 60pt;
+    color: #FFD105;
+    text-align: center;
+    padding-bottom: 50pt;
+    border-bottom: #3B4D80 1pt solid;
+}
+#desctextbox h1{
+    font-size: 48pt;
+    
+}
+#desctextbox h2{
+    font-size: 26pt;
+
+}
+#allactivities{
+    margin-top: 30pt;
+}
+.act_container{
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  
+  -webkit-flex-flow: row wrap;
+  justify-content: space-around;
+}
+.act_item{
+  padding: 5px;
+  margin-top: 10px;
+  text-align: center;
+}
+.activity{
+    background: #D7E1F2;
+    width: 300px;
+    border: #3B4D80 1pt solid;
+    cursor: pointer;
+}
+.activity_img{
+    margin-top: 10pt;
+    height: 130px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.activity_info{
+    
+    min-height: 75px;
+    border-top: #3B4D80 1pt dashed;
+    margin-top: 10pt;
+}
+.reservebtn{
+    border: none;
+    font-size: 18pt;
+    border-top: #3B4D80 1pt dashed;
+}
+.reservebtn :hover{
+    background: #FFD105;
+}
+.actname{
+    font-size: 22pt;
+    padding-bottom: 0;
+}
+.actdate{
+    font-size: 14pt;
+}
+.text{
+        vertical-align: middle;
+        display: block;
+        color:#3B4D80;
+}
+
+.description{
+    border-bottom: #3B4D80 1pt dotted;
+    border-top: #3B4D80 1pt dotted;
+    background-color : rgba(59, 77, 128, 0.2);
+      //yellow : rgb(255, 209, 5);
+      // blue: rgba(59, 77, 128, 0.2);
+    padding: 2pt 8pt 2pt 8pt;
+    text-align: left;
+    display: none;
+}
+
+.btn{
+    font-family: bauhaus93;
+    text-align: center;
+    display: inline;
+    width: 100%;
+    border: none;
+    background-color: #D7E1F2;
+    font-size: 20pt;
+    font-weight: bold;
+}
+.chkbox{
+    font-family: bauhaus93;
+    color: #3B4D80;
+}
+.desc{
+    border-bottom: 1px rgba(59, 77, 128, 0.4) dashed;
+    padding-top: 3pt;
+    padding-bottom: 6pt;
+    margin-bottom: 3pt;
+}
+.secret{
+    display: none;
+}

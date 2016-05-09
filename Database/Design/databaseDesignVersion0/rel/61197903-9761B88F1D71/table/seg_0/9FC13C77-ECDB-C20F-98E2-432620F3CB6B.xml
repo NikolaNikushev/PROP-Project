@@ -1,0 +1,79 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="9FC13C77-ECDB-C20F-98E2-432620F3CB6B" name="ACTIVITYRESERVATIONS">
+<createdBy>Dmitry</createdBy>
+<createdTime>2016-05-08 22:13:48 UTC</createdTime>
+<generatorID>CEFCBB10-20A5-8734-2688-B0D6C0CE599C</generatorID>
+<ownerDesignName>databaseDesignVersion0</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ACTIVITIES_ACTIVITY_ID" id="E3B949C1-51E8-C903-62CC-47EE455244C6">
+<createdBy>Dmitry</createdBy>
+<createdTime>2016-05-08 22:13:48 UTC</createdTime>
+<generatorID>58BD521C-38BA-C224-CBC2-8201948F35F5</generatorID>
+<ownerDesignName>databaseDesignVersion0</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="B918006C-A5EA-8765-3FDC-73A00194327A" referredColumn="D9045174-D8D7-9BB1-15A4-68F43C4DC065"/>
+</associations>
+</Column>
+<Column name="VISITORS_USER_ID" id="1D0E2E44-1CAD-237F-5A85-A67240816446">
+<createdBy>Dmitry</createdBy>
+<createdTime>2016-05-08 22:13:48 UTC</createdTime>
+<generatorID>AFCE01B5-1258-CB60-F626-30A6CF9F500F</generatorID>
+<ownerDesignName>databaseDesignVersion0</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="7CB73A68-6BB3-9D3F-56D2-09EC355DA0C3" referredColumn="E932FAC3-D4FB-9AFF-4A88-F6B812A5CDB8"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="7FBD9AB7-A828-78FA-7BFF-DEE60139C667" name="ACTIVITYRESERVATIONS_PK">
+<createdBy>Dmitry</createdBy>
+<createdTime>2016-05-08 22:13:48 UTC</createdTime>
+<generatorID>07F44A7A-8B65-3B41-C5F9-02AFB8C878EF</generatorID>
+<ownerDesignName>databaseDesignVersion0</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E3B949C1-51E8-C903-62CC-47EE455244C6"/>
+<colUsage columnID="1D0E2E44-1CAD-237F-5A85-A67240816446"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="8CD40AE8-B883-9CE4-0E04-03A146B48BBE" name="ACTIVITYRESERVATIONS_VISITORS_FK">
+<createdBy>Dmitry</createdBy>
+<createdTime>2016-05-08 22:13:49 UTC</createdTime>
+<generatorID>193C0F01-C508-3C77-6743-93EEEAE3C5F1</generatorID>
+<ownerDesignName>databaseDesignVersion0</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="1D0E2E44-1CAD-237F-5A85-A67240816446"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="D51859C1-A3DD-5EC0-B392-18AD6CA6F076" name="ACTIVITYRESERVATIONS_ACTIVITIES_FK">
+<createdBy>Dmitry</createdBy>
+<createdTime>2016-05-08 22:13:49 UTC</createdTime>
+<generatorID>6037C392-4394-233E-2B76-CC7AF0619258</generatorID>
+<ownerDesignName>databaseDesignVersion0</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E3B949C1-51E8-C903-62CC-47EE455244C6"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

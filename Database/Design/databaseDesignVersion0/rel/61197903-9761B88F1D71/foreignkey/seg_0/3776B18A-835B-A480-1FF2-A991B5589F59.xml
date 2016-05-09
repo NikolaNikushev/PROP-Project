@@ -1,0 +1,15 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="3776B18A-835B-A480-1FF2-A991B5589F59" containerWithKeyObject="32414EBB-7667-E139-C530-636B1B2EAD84" localFKIndex="F892BD65-7FD2-FFFF-659B-BCCD107778CD" name="TENTLEADER_CAMPS_FK">
+<createdBy>Dmitry</createdBy>
+<createdTime>2016-05-08 22:13:49 UTC</createdTime>
+<generatorID>C6E43573-5F5C-2BEE-732B-BB2A43CF4819</generatorID>
+<ownerDesignName>databaseDesignVersion0</ownerDesignName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>58E58D43-4D58-E796-6E35-3CF8B0A1136C</referredTableID>
+<keyObject>17CDBF91-7144-B186-BCE9-096A5FB6A8B2</keyObject>
+<referredKeyID>17CDBF91-7144-B186-BCE9-096A5FB6A8B2</referredKeyID>
+<mandatory>true</mandatory>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>
