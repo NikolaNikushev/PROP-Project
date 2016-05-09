@@ -9,7 +9,7 @@
   $date_of_birth = $_POST['date_of_birth'];
   $user_password = $_POST['password'];
   $user_email = $_POST['user_email'];
-  $user_address = $_POST['sba'].', '.$_POST['city'].', '.$_POST['country'].', '.$_POST['zip'];
+  $user_address = $_POST['sba'].','.$_POST['city'].','.$_POST['country'].','.$_POST['zip'];
   $joining_date = date('Y-m-d H:i:s');
 
   try
@@ -33,6 +33,7 @@
 
     if($stmt->execute())
     {
+    $_SESSION['username'] = $row['USER_ID'];
      echo "Registered successfully";
     }
     else

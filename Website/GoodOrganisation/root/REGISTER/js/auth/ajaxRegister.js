@@ -7,7 +7,9 @@ $(document).ready(function() {
       url: './php/register.php',
       data: data,
       success: function(response) {
-        console.log(response);
+        alert(response + ' - You are being redirected to your personal page');
+        window.location="../PERSONAL-PAGE";
+
       }
     });
     return false;
