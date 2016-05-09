@@ -1,6 +1,6 @@
 <?php
  $db_host = "localhost";
- $db_name = "users";
+ $db_name = "propdbtest";
  $db_user = "root";
  $db_pass = "";
  try{

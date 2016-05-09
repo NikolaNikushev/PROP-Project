@@ -21,7 +21,7 @@
 
    if($count==0){
 
-   $stmt = $db_con->prepare("INSERT INTO users(firstname,lastname,email,pass,address,date_of_birth,joining_date) VALUES(:fname,:lname,:email, :pass,:uaddress,:dob,:jdate)");
+   $stmt = $db_con->prepare("INSERT INTO users(FNAME,LNAME,EMAIL,PASSWORD,ADDRESS,DOB,REGDATE) VALUES(:fname,:lname,:email, :pass,:uaddress,:dob,:jdate)");
    $stmt->bindParam(":fname",$first_name);
    $stmt->bindParam(":lname",$last_name);
    $stmt->bindParam(":pass",$password);
