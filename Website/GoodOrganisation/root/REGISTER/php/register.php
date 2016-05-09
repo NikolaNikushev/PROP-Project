@@ -15,13 +15,13 @@
   try
   {
 
-   $stmt = $db_con->prepare("SELECT * FROM users WHERE email=:email");
+   $stmt = $db_con->prepare("SELECT * FROM visitors WHERE EMAIL=:email");
    $stmt->execute(array(":email"=>$user_email));
    $count = $stmt->rowCount();
 
    if($count==0){
 
-   $stmt = $db_con->prepare("INSERT INTO users(FNAME,LNAME,EMAIL,PASSWORD,ADDRESS,DOB,REGDATE) VALUES(:fname,:lname,:email, :pass,:uaddress,:dob,:jdate)");
+   $stmt = $db_con->prepare("INSERT INTO visitors(FNAME,LNAME,EMAIL,PASSWORD,ADDRESS,DOB,REGDATE) VALUES(:fname,:lname,:email, :pass,:uaddress,:dob,:jdate)");
    $stmt->bindParam(":fname",$first_name);
    $stmt->bindParam(":lname",$last_name);
    $stmt->bindParam(":pass",$password);

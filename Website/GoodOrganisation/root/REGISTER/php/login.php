@@ -12,15 +12,15 @@
   try
   {
 
-   $stmt = $db_con->prepare("SELECT * FROM users WHERE email=:email");
+   $stmt = $db_con->prepare("SELECT * FROM visitors WHERE EMAIL=:email");
    $stmt->execute(array(":email"=>$user_email));
    $row = $stmt->fetch(PDO::FETCH_ASSOC);
    $count = $stmt->rowCount();
 
-   if($row['pass']==$password){
+   if($row['PASSWORD']==$password){
 
     echo "ok-you logged in"; // log in
-    $_SESSION['username'] = $row['user_id'];
+    $_SESSION['username'] = $row['USER_ID'];
    }
    else{
 
