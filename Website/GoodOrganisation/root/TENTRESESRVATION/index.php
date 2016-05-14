@@ -16,7 +16,7 @@
 		<?php include '../DEFAULT/PAGEPARTS/Header.php';?>
 	</div>
 	<!-- the light blue rectangle in he middle -->
-	<form>
+	<form action="ProcessBooking.php" method="post">
         <div id="tentform" class="content">
 		<div id="grtit">
 			<h1>GROUP DETAILS</h1>
@@ -92,7 +92,7 @@
 						I verify the information
 					</label>
 					<div>
-						<input type="submit" name="Continue" value="CONTINUE" class="btn">
+						<input type="submit" value="CONTINUE" class="btn">
 					</div>
 				</div>
 			</div>

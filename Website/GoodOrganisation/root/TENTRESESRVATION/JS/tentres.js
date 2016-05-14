@@ -22,8 +22,10 @@ $(document).ready(function() {
         if(value != 6)
 		{
 			value++;
-			$("#tennum").val(value)
+			$("#tennum").val(value);
+                        $(tenants[value-1]).prop('disabled', false);
 			$(tenants[value-1]).show();
+                       
                         GetPrice();
 		}
 		
@@ -33,7 +35,8 @@ $(document).ready(function() {
         if(value != 1)
 		{
 			value--;
-			$("#tennum").val(value)
+			$("#tennum").val(value);
+                        $(tenants[value]).prop('disabled', true);
 			$(tenants[value]).hide();
                         GetPrice();
 		}
@@ -41,12 +44,12 @@ $(document).ready(function() {
      $("input[name=datechoice]:radio").change(function () {
         GetPrice();
     });
-    ("#dateeight").change(function () {
-        GetPrice();
-    });
-    ("#datenine").change(function () {
-        GetPrice();
-    });
+//    ("#dateeight").change(function () {
+//        GetPrice();
+//    });
+//    ("#datenine").change(function () {
+//        GetPrice();
+//    });
 });
 
 
