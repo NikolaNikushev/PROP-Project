@@ -1,4 +1,5 @@
 <?php
+session_start();
 require_once '../php/dbconfig.php';
 require_once '../php/data.php';
  ?>

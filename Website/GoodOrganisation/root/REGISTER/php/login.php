@@ -19,8 +19,8 @@
 
    if($row['PASSWORD']==$password){
 
-    echo "ok-you logged in"; // log in
-    $_SESSION['username'] = $row['USER_ID'];
+    echo "ok-you logged in".print_r ($row); // log in
+      $_SESSION["USER_ID"] = $row['USER_ID'];
    }
    else{
 
