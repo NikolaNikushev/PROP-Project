@@ -1,8 +1,11 @@
 *{
 	font-family: bauhaus93;
 }
+body{
+    margin-top: 0;
+}
 #contents{
-
+    
 
 }
 .caption img{
@@ -15,20 +18,19 @@
   margin: auto;
   display: block;
   margin-bottom: 30pt;
-  margin-top: 30pt
+  padding-top: 60pt;
 }
 #containerholder{
 	position: relative;
 	height: auto;
 	min-height: 600px;
 	width: 60vw;
-	max-width: 1200pt;
+
 	margin: auto;
 	padding-bottom: 150pt;
 }
 .desccontainer{
-	max-width: 45%;
-	margin-left: 40pt;
+	max-width: 48%;
 	display: inline-block;
 	vertical-align: top;
 }
