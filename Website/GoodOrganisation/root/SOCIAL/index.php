@@ -15,22 +15,7 @@
 		
 		
         <div id="header" class="scrolled">
-            <img id="logo" class="logo" src="../default/images/logohead.png"/>
-            <ul id="nav">
-				<li class="dropdown">
-					<a class="dropbtn" href="//localhost/ProP/DEVELOPMENT/index.html">INFO</a>
-					<div class="dropdown-content">
-						<a href="//localhost/ProP/DEVELOPMENT/info/general.html">GENERAL</a>
-						<a href="//localhost/ProP/DEVELOPMENT/info/explore.html">EXPLORE</a>
-						<!--<a href="//localhost/ProP/DEVELOPMENT/info/location.html">LOCATION</a>-->
-						<a href="//localhost/ProP/DEVELOPMENT/info/rules.html">RULES</a>
-					</div>
-				</li>
-				<li><a href="//localhost/ProP/DEVELOPMENT/program.html">PROGRAM</a></li>
-				<li><a href="//localhost/ProP/DEVELOPMENT/tickets.html">TICKETS</a></li>
-				<li><a href="//localhost/ProP/DEVELOPMENT/camping.html">CAMPING</a></li>
-				<li><a href="//localhost/ProP/DEVELOPMENT/tickets/register/register.html">ACCOUNT</a></li>
-			</ul>
+            <?php include '../DEFAULT/PAGEPARTS/Header.php';?>
         </div>
         <div id="contents">
         <div class="caption">
@@ -93,9 +78,13 @@
 							</div>
 						</li>
 						<li>
-							<a href="https://twitter.com/share" class="twitter-share-button" data-via="DimiOrlov">Tweet</a>
+                                                    <!--
+                                                    <a href="https://twitter.com/share" class="twitter-share-button" data-via="DimiOrlov">Tweet</a>
 							<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-						</li>
+                                                    -->
+                                                    <a href="https://twitter.com/share" class="twitter-share-button" data-text="Check out this cool festival! #universeofsound" >Tweet</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+                                                </li>
 						<li>
 							<!-- I can not set up google button to display properly -->
 						</li>
@@ -104,15 +93,14 @@
 			</div>
 			<div class="desccontainer right" >
 				<!-- TWITTER EMBED IS TO BE FEATURED HERE -->
-				<a class="twitter-timeline" href="https://twitter.com/hashtag/universeofsound" 
-					data-widget-id="726399681710968832">#universeofsound Tweets</a>
+				<a class="twitter-timeline" href="https://twitter.com/hashtag/universeofsound" data-widget-id="731903177809899520">#universeofsound Tweets</a>
 				<!-- twitter generated script -->
-				<script>
-					!function(d,s,id){
-					var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id))
-					{js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}
-					}(document,"script","twitter-wjs");
-				</script>
+				
+                                <script>
+                                    !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';
+                                        if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";
+                                            fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+                                </script>
 			</div>
 		</div>
 		

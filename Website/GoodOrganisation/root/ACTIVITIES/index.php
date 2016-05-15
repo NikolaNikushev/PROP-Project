@@ -1,6 +1,6 @@
 <?php
     require_once '../default/phpfunc/dbconfig.php';
-    require_once '../default/phpfunc/getallactivities.php';
+    require_once 'php/getallactivities.php';
 ?>
 
 

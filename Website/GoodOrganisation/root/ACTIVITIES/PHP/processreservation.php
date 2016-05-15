@@ -7,7 +7,7 @@ if($_POST['avplaces'] != 0)
     $newnr = $_POST['resplaces']+1;
     //echo "<script type='text/javascript'> alert('Congratulations, ".$newnr." you have registered for the event ".$_POST['actid']."!'); </script>";
     $stmt = $db_con->prepare($sql);
-$result = $stmt->execute([
+    $result = $stmt->execute([
         ':reservedplaces' => $newnr,
         ':actid' => $_POST['actid'],
         ]);

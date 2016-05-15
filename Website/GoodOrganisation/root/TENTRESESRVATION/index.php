@@ -15,8 +15,8 @@
 	<div id="header" class="scrolled">
 		<?php include '../DEFAULT/PAGEPARTS/Header.php';?>
 	</div>
-	<!-- the light blue rectangle in he middle -->
-	<form action="ProcessBooking.php" method="post">
+	<!-- the light blue rectangle in he middle USE AJAX FORM MANIPULATION! -->
+	<form action="PHP/ProcessBooking.php" method="post">
         <div id="tentform" class="content">
 		<div id="grtit">
 			<h1>GROUP DETAILS</h1>
