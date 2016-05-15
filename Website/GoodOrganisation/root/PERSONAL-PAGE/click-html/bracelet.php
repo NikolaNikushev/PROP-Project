@@ -1,42 +1,30 @@
 <?php
 session_start();
 require_once '../php/dbconfig.php';
-require_once '../php/data.php';
+require_once '../php/loanItemsData.php';
  ?>
 <div class="row"> </div>
 <div class="row">
-  <div class="col-xs-4">
+  <div class="col-xs-5">
     <p class="object-info-bracelet">
       Status:
     </p>
   </div>
-  <div class="col-xs-8">
+  <div class="col-xs-7">
     <p class="object-text-bracelet">
       <?php echo $STATUS ?>
     </p>
   </div>
 </div>
 <div class="row">
-  <div class="col-xs-6">
+  <div class="col-xs-5">
     <p class="object-info-bracelet">
-      Type:
+      Bracelet ID:
     </p>
   </div>
-  <div class="col-xs-6">
+  <div class="col-xs-7">
     <p class="object-text-bracelet">
-    Best
-    </p>
-  </div>
-</div>
-<div class="row">
-  <div class="col-xs-6">
-    <p class="object-info-bracelet">
-      Color:
-    </p>
-  </div>
-  <div class="col-xs-6">
-    <p class="object-text-bracelet">
-      Dark blue shit
+      <?php echo $BRACELET_ID ?>
     </p>
   </div>
 </div>

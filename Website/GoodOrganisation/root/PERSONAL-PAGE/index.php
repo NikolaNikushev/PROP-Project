@@ -1,8 +1,9 @@
 <?php
 session_start();
 require_once 'php/dbconfig.php';
-require_once 'php/data.php';
-
+require_once 'php/loanItemsData.php';
+require_once 'php/campData.php';
+require_once 'php/acivitiesData.php';
  ?>
 <!DOCTYPE html>
 <html>
@@ -92,20 +93,17 @@ require_once 'php/data.php';
 
                 <div class="row" id="blank"></div>
                 <div class="row user-text-container" id="bracelet">
-                    <div class="col-xs-4">
+                    <div class="col-xs-3">
                         <p class="user-text bracelet-text">
                             Bracelet:
                         </p>
                     </div>
-                    <div class="col-xs-5">
-                        <p class="user-text bracelet-text">
-                            3X8
-                        </p>
+                    <div class="col-xs-4 col-xs-offset-2">                
                     </div>
                     <div class="col-xs-3">
                         <a href="#/">
                             <p class="person-button" id="more-button">
-                                more
+                                show
                             </p>
                         </a>
                     </div>
@@ -133,7 +131,7 @@ require_once 'php/data.php';
                     </div>
                     <div class="col-xs-9">
                         <p class="tipi-text">
-                            192
+                            <?php echo $TENTNR ?>
                         </p>
                     </div>
                 </div>
@@ -145,7 +143,7 @@ require_once 'php/data.php';
                     </div>
                     <div class="col-xs-9">
                         <p class="tipi-text">
-                            Moby Sick
+                            <?php echo $CHIEFFNAME." ".$CHIEFLNAME ?>
                         </p>
                     </div>
                 </div>
@@ -156,8 +154,6 @@ require_once 'php/data.php';
         <div class="row " id="bottom-containers">
             <!--ITEMS BAR  -->
             <div class="col-md-3 col-md-offset-2 info-bar" id="items">
-
-
 
                 <div class="row">
                     <p class="container-title">
@@ -224,96 +220,31 @@ require_once 'php/data.php';
                     </p>
                 </div>
                 <div id="scroll">
+                  <?php
+                  for ($i=0; $i < count($activities); $i++) {
 
-
-                    <div id="object-contrainer">
+                  echo ' <div id="object-contrainer">
                         <div class="row">
                             <p class="object-title">
-                                GUITAR LESSON
+                                  '.$activities[$i].'
                             </p>
                         </div>
                         <div class="row">
                             <div class="col-xs-6">
                                 <p class="object-info">
-                                    START DATE:
+                                    DATE:
                                 </p>
                             </div>
                             <div class="col-xs-6">
                                 <p class="object-text">
-                                    29 JULY
+                                     '.$activities[$i+=1].'
                                 </p>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col-xs-6">
-                                <p class="object-info">
-                                    DUE DATE:
-                                </p>
-                            </div>
-                            <div class="col-xs-6">
-                                <p class="object-text">
-                                    NONE
-                                </p>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-xs-6">
-                                <p class="object-info">
-                                    PRICE/DAY:
-                                </p>
-                            </div>
-                            <div class="col-xs-6">
-                                <p class="object-text">
-                                    20
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="object-contrainer">
-                        <div class="row">
-                            <p class="object-title">
-                                GUITAR
-                            </p>
-                        </div>
-                        <div class="row">
-                            <div class="col-xs-6">
-                                <p class="object-info">
-                                    START DATE:
-                                </p>
-                            </div>
-                            <div class="col-xs-6">
-                                <p class="object-text">
-                                    29 JULY
-                                </p>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-xs-6">
-                                <p class="object-info">
-                                    DUE DATE:
-                                </p>
-                            </div>
-                            <div class="col-xs-6">
-                                <p class="object-text">
-                                    NONE
-                                </p>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-xs-6">
-                                <p class="object-info">
-                                    PRICE/DAY:
-                                </p>
-                            </div>
-                            <div class="col-xs-6">
-                                <p class="object-text">
-                                    20
-                                </p>
-                            </div>
-                        </div>
-                    </div>
+                    </div>';
+                    }
+                    ?>
                 </div>
-
             </div>
         </div>
     </div>

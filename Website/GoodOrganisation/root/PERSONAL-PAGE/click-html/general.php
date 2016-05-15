@@ -1,7 +1,7 @@
 <?php
 session_start();
 require_once '../php/dbconfig.php';
-require_once '../php/data.php';
+require_once '../php/loanItemsData.php';
  ?>
  <div class="row"> </div>
  <div class="row">
