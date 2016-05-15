@@ -59,15 +59,18 @@ ul.sharing{
 }
 ul.sharing li{
 	display: inline;
-	margin-bottom: 0pt;
 }
-#fbk *{
-	padding-bottom: 2px;
+#fbk {
+	padding: 10px;
 }
 /* Because the upp div are floating */
 #footer{
 	clear: both;
 }
+.g-plus{
+    width: 100px;
+}
+
 
 
 

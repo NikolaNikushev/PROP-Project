@@ -12,7 +12,14 @@
 	
 </head>
 <body>
-		
+	<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/bg_BG/sdk.js#xfbml=1&version=v2.6";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>	
 		
         <div id="header" class="scrolled">
             <?php include '../DEFAULT/PAGEPARTS/Header.php';?>
@@ -86,7 +93,7 @@
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
                                                 </li>
 						<li>
-							<!-- I can not set up google button to display properly -->
+							<div class="fb-share-button" data-href="http://localhost/GoodOrganisation/root/social/" data-layout="button_count" data-mobile-iframe="true"></div>
 						</li>
 					</ul>
 				</div>
