@@ -270,7 +270,7 @@ require_once 'php/acivitiesData.php';
     <script src="js/general-show.js"></script>
     <script src="js/bracelet-more.js"></script>
     <script src="js/balance-add.js"></script>
-
+    <script src="js/add-credits.js"></script>
 
 
 </body>

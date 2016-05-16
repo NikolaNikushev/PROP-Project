@@ -1,29 +1,27 @@
 <div class="row"></div>
-<form class="" >
+
   <div class="row">
     <div class="col-xs-12">
-      <p>
+      <p id ="ballance-info-bar">
         Here you can increse the ballace of your credits and use them on the territory of the event
       </p>
     </div>
 
   </div>
-
+<form id="add-credits">
   <div class="row">
-    <div class="col-xs-3">
-      <p>
-        Amount:
-      </p>
+    <div class="col-xs-4">
+    <p id="amount-text">
+      Amount:
+    </p>
     </div>
-    <div class="col-xs-6">
-      <input type="number" name="name" value="">
+    <div class="col-xs-5">
+      <input type="number" name="amount" min="1" id=input-number>
     </div>
-    <div class="col-xs-3">
-      <input type="button" name="name" value="Submit">
+    <div class="col-xs-1">
+      <button type="submit" class="btn" id="submit-button">Add</button>
     </div>
   </div>
-
-
 
 </form>
 <hr>

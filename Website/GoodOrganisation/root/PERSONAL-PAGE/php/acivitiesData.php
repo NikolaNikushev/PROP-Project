@@ -26,6 +26,7 @@ if (isset($_SESSION['USER_ID']))
           }
        }
     }
+    unset($stmt);
 }
 
  ?>
