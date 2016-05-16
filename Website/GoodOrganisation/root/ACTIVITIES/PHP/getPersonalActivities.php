@@ -1,4 +1,5 @@
 <?php
+    $persact = array();
     if(isset($_SESSION['USER_ID']))
     {
         $stmt=$db_con->prepare( 'SELECT a.activityname, a.date, a.activity_id

@@ -7,8 +7,10 @@
   <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="css/main/main.css">
   <link rel="stylesheet" type="text/css" href="css/main/footer.css">
+  <link rel="stylesheet" type="text/css" href="../DEFAULT/CSS/INTEGRAL.css">
   <link rel="stylesheet" type="text/css" href="css/forms/forms.css">
-  <link rel="stylesheet" type="text/css" href="css/main/fixedmenu.css">
+  <!--<link rel="stylesheet" type="text/css" href="css/main/fixedmenu.css">-->
+  <link rel="stylesheet" type="text/css" href="../DEFAULT/CSS/fixedmenu.css">
 </head>
 
 <body>
