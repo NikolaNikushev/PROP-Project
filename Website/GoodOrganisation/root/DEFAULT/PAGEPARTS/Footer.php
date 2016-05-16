@@ -1,4 +1,4 @@
-<div id="footer">
+<div id="footer" class="container-fluid">
 			<img id="footerlogo" src="../DEFAULT/Images/LOGOFOOT.png" />
 		<ul id="footernav">
 			<li><a href="#">NEWS & SOCIAL</a></li>

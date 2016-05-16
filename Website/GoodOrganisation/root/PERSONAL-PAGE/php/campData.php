@@ -8,7 +8,7 @@ if (isset($_SESSION['USER_ID']))
         $campQuery = "SELECT IFNULL(c.TENTNR,'No tipi reserved') AS 'TENTNR', IFNULL(t.FNAME,'No') AS 'CHIEFFNAME',IFNULL(t.LNAME,'Chief') AS 'CHIEFLNAME'
                       FROM visitors v left outer join rfids r
                       ON v.BRACELET_ID = r.BRACELET_ID left outer join camps c
-                      ON v.CAMPING_ID = c.CAMPING_ID left outer join tentleader t
+                      ON v.CAMPING_ID = c.CAMPING_ID left outer join tentleadersextra_view t
                       ON c.CAMPING_ID = t.CAMPING_ID
                       WHERE v.USER_ID = :user_id";
 
