@@ -24,13 +24,7 @@ require_once 'php/acivitiesData.php';
 
 <body>
     <div id="header" class="scrolled" class="container-fluid">
-        <img id="logo" class="logo" src="images/logo.png" />
-        <ul id="nav">
-            <li><a href="index.html">INFO</a></li>
-            <li><a href="/css/">PROGRAM</a></li>
-            <li><a href="/js/">TICKETS</a></li>
-            <li><a href="/jquery/">CAMPING</a></li>
-        </ul>
+        <?php include '../DEFAULT/PAGEPARTS/Header.php';?>
     </div>
 
     <div id="container" class="container-fluid">

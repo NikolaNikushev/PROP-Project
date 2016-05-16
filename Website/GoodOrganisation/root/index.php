@@ -32,7 +32,7 @@
 				</li>
 				<li><a href="tickets/index.php">TICKETS</a></li>
 				<li><a href="camping/index.php">CAMPING</a></li>
-				<li><a href="register/register.php">ACCOUNT</a></li>
+				<li><a href="register/index.php">ACCOUNT</a></li>
 			</ul>
 	</div>
 	<!-- this div is with default display none and it 

@@ -13,13 +13,7 @@
 
 <body>
   <div id="header" class="scrolled" class="container-fluid">
-    <img id="logo" class="logo" src="images/logo.png" />
-    <ul id="nav">
-      <li><a href="index.html">INFO</a></li>
-      <li><a href="/css/">PROGRAM</a></li>
-      <li><a href="/js/">TICKETS</a></li>
-      <li><a href="/jquery/">CAMPING</a></li>
-    </ul>
+    <?php include '../DEFAULT/PAGEPARTS/Header.php';?>
   </div>
   <div id="title" class=" container-fluid">
     <p id="title-text">
@@ -49,20 +43,7 @@
   </div>
 
   </div>
-  <div id="footer" class="container-fluid">
-    <img id="footerlogo" src="images/LOGOFOOT.png" />
-    <ul id="footernav">
-      <li><a href="#">NEWS & SOCIAL</a></li>
-      <li><a href="#">CONTACT US</a></li>
-      <li><a href="#">TERMS AND PRIVACY</a></li>
-    </ul>
-    <div id="social">
-      <img id="footerfacebook" src="images/facebook.png" />
-      <img id="footertwitter" src="images/twitter.png" />
-      <img id="footergplus" src="images/gplus.png" />
-    </div>
-    <p id="copyright">COPYRIGHT:2016</p>
-  </div>
+  <?php include '../DEFAULT/PAGEPARTS/footer.php';?>
 
   <script src="https://code.jquery.com/jquery-2.2.2.min.js"></script>
   <script src="js/form-loader.js"></script>
