@@ -1,6 +1,9 @@
 <?php
     require_once '../default/phpfunc/dbconfig.php';
     require_once 'php/getallactivities.php';
+    
+    session_start();
+    require_once 'php/getPersonalActivities.php';
 ?>
 
 
@@ -89,8 +92,47 @@
         
         <!-- for personal stats, login required -->
         <div id="personstat">
-            <div id="managingbtn">
-                <p id="arrow_sign">&lt&lt</p>
+            <div id="localheader">
+                <div id="popupdes">
+                    <p id="bord">Reservations</p>
+                </div>
+                <div id="managingbtn">
+                    <p>Your<br>Info</p>
+                </div>
+            </div>
+            <div>
+            <div id="perscont">
+                <!--
+                <p>Name:</p>
+                <p>
+                    Date:
+                   </p>
+                 <p id="CANCELBTN">CANCEL</p>
+                -->
+                <?php 
+                        for ($i=0; $i < count($persact); $i++) {
+
+                        echo 
+                        '
+                        <ul>
+                            <li class="res_item">
+                            <form action="php/processreservation.php" method="post">
+                                <div class="res-tion">
+
+                                        <p>Name:
+                                            '.$persact[$i]./*the name 0 */' 
+                                        </p>
+                                        <p>Date:
+                                            '.$persact[$i+=1]./*date 6*/'
+                                        </p> 
+                                        <input class="secret" type="text" name="actid" value="'.$persact[$i+=1]./*ID 3 ..*/'">
+                                        <button type="submit" class="CANCELBTN text resbtntext">Cancel</button>
+                                </div>
+                            </form>    
+                            </li>
+                        </ul>';
+                        }
+                        ?>
             </div>
         </div>
     </div>

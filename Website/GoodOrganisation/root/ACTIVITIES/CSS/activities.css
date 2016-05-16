@@ -23,17 +23,7 @@ and open the template in the editor.
     width: 95vw;
     float:left;
 }
-#personstat{
-    position: fixed;
-    background: #D7E1F2;
-    display: inline-block;
-    float: right;
-    color: white;
-    text-align: right;
-    border: 1px solid #FFD105;
-    width: auto;
-    padding: 0 2pt 0 2pt;
-}
+
 #footer{
     clear:both;
 }
@@ -154,3 +144,89 @@ and open the template in the editor.
 .secret{
     display: none;
 }
+
+
+/*Left pop-up thing*/
+
+#personstat{
+    position: fixed;
+    background: #D7E1F2;
+    color: white;
+    
+    border: 1px solid #FFD105;
+    width: auto;
+    right: 20pt;
+    padding-left: 2pt;
+    padding-right: 2pt;
+}
+#managingbtn{
+    float:right;
+    text-align: right;
+    display: inline-block;
+    
+}
+#localheader{
+    display: block;
+    padding-bottom: 4pt;
+    vertical-align: bottom;
+    color: #3B4D80;
+}
+
+#managingbtn p{
+    line-height: 90%;    
+    
+}
+
+/*Div for the dynamic content */
+
+#perscont{
+    clear: both;
+    margin-top: 1pt;
+    border-top: 1px #3B4D80 solid;
+    color: #3B4D80;
+    text-align: left;
+    display: block;
+}
+#perscont p{
+    padding-right: 20pt;
+}
+#perscont ul li{
+    margin-top: 2pt;
+    list-style: none;
+}
+.CANCELBTN{
+    
+    font-family: bauhaus93;
+    text-align: center;
+    display: inline;
+    width: 30%;
+    float: right;
+    border: none;
+    background-color: #3B4D80;
+    color: #D7E1F2;
+    font-size: 14pt;
+    
+
+/*
+    font-family: bauhaus93;
+    text-align: center;
+    display: inline;
+    width: 100%;
+    border: none;
+    background-color: #3B4D80;
+    font-size: 14pt;
+    color: #D7E1F2;
+    padding-left: 1pt;
+    padding-right: 1pt;
+
+*/
+}
+#bord{
+    font-size: 14pt;
+    display: inline-block;
+}
+#popupdes{
+    display: inline-block;
+}
+
+
