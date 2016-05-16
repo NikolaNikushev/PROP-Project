@@ -8,11 +8,13 @@ and open the template in the editor.
     Author     : Dmitry
 */
 #contents{
-    padding-top: 36pt;
+    padding: 0;
+    padding-top: 36pt !important;
     min-height: 100vh;
     height: 100%;
-    padding-bottom: 5vh;
+
     position: relative;
+    
 }
 #actpad{
     position: static;
@@ -182,30 +184,35 @@ and open the template in the editor.
 #perscont{
     clear: both;
     margin-top: 1pt;
-    border-top: 1px #3B4D80 solid;
+    border: 1px #3B4D80 solid;
+    border-bottom: none;
     color: #3B4D80;
     text-align: left;
     display: block;
+    background-color: rgba(59, 77, 128, 0.2);
 }
 #perscont p{
-    padding-right: 20pt;
+    margin-left: 2pt;
 }
 #perscont ul li{
+    
     margin-top: 2pt;
     list-style: none;
+    border-bottom: 1px rgba(59, 77, 128, 0.4) dotted;
+    
 }
 .CANCELBTN{
-    
+
     font-family: bauhaus93;
     text-align: center;
-    display: inline;
+    display: inline-block;
     width: 30%;
     float: right;
     border: none;
     background-color: #3B4D80;
     color: #D7E1F2;
     font-size: 14pt;
-    
+    margin-right: 1%;
 
 /*
     font-family: bauhaus93;
@@ -228,5 +235,17 @@ and open the template in the editor.
 #popupdes{
     display: inline-block;
 }
-
-
+.actnameanddate{
+    width: 65%;
+    display: inline-block;
+    
+}
+#reservedactconts{
+    max-height: 20vh;
+    overflow-y: scroll;
+    
+        width: 100%;
+}
+.CANCELBTN:hover{
+    color: #F58235;
+}
