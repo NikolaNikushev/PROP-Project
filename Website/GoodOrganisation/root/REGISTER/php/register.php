@@ -1,7 +1,6 @@
 <?php
 session_start();
  require_once 'dbconfig.php';
- // require_once 'login.php';
  if($_POST)
  {
     $first_name = $_POST['first_name'];
@@ -33,18 +32,10 @@ session_start();
               if($stmt->execute())
               {
                   $stmt = $db_con->prepare("SELECT * FROM visitors WHERE EMAIL=:email");
-
                   $stmt->execute(array(":email"=>$user_email));
                   $row = $stmt->fetch(PDO::FETCH_ASSOC);
-
-                  // $stmt = $db_con->prepare("INSERT INTO rfids(STATUS,BRACELET_ID) VALUES('DEACTIVATED','NULL')");
-                  // $stmt = $db_con->prepare("SELECT USER_ID FROM visitors v WHERE USER_ID=:user_id");
-                  // $stmt->bindParam(":user_id",$_SESSION['USER_ID']);
-                  // $stmt->execute();
-                  // $user_row = $stmt->fetch(PDO::FETCH_ASSOC);
                   $_SESSION['USER_ID'] = $row['USER_ID'];
                    echo "Registered successfully".print_r($row).$_SESSION['USER_ID'];
-
               }
               else{
                  echo "Query could not execute !";
@@ -52,7 +43,7 @@ session_start();
 
              }
        else{
-              echo "Existing email"; //  not available
+              echo "Existing email"; 
        }
 
       }

@@ -9,6 +9,7 @@
   <link rel="stylesheet" type="text/css" href="css/main/footer.css">
   <link rel="stylesheet" type="text/css" href="css/forms/forms.css">
   <link rel="stylesheet" type="text/css" href="css/main/fixedmenu.css">
+  <link rel="stylesheet" type="text/css" href="../DEFAULT/sweetalert-master/sweetalert-master/dist/sweetalert.css">
 </head>
 
 <body>
@@ -46,6 +47,7 @@
   <?php include '../DEFAULT/PAGEPARTS/footer.php';?>
 
   <script src="https://code.jquery.com/jquery-2.2.2.min.js"></script>
+  <script src="../DEFAULT/sweetalert-master/sweetalert-master/dist/sweetalert.min.js"></script>
   <script src="js/form-loader.js"></script>
   <script src="js/auth/ajaxLogin.js"></script>
   <script src="js/auth/ajaxRegister.js"></script>

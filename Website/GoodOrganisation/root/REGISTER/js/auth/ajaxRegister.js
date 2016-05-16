@@ -7,10 +7,25 @@ $(document).ready(function() {
             data: data,
             success: function(response) {
                 if (response.includes('Registered')) {
-                    alert(response + ' - You are being redirected to your personal page');
-                    window.location = "../PERSONAL-PAGE";
+
+                    swal({
+                      title: "Succesfully registered!",
+                      text: "Now you are going to be redirected to your personal page!",
+                      type: "success",
+                      confirmButtonText: "Okay"
+                    }, function(isConfirm) {
+                        if (isConfirm) {
+                          window.location = "../PERSONAL-PAGE";
+                         }
+                    });
+
                 } else {
-                    alert(response);
+                  swal({
+                    title: "Unsuccessfull registration",
+                    text: "Please insert correct data!",
+                    type: "error",
+                    confirmButtonText: "Try again"                  
+                  });
                 }
             }
         });
