@@ -97,13 +97,13 @@
         <div id="personstat">
             <div id="localheader">
                 <div id="popupdes">
-                    <p id="bord">Reservations</p>
+                    <p id="bord" class="tocloseoropen">Reservations</p>
                 </div>
                 <div id="managingbtn">
-                    <p>Your<br>Info</p>
+                    <p id="clickbtntext">Your<br>Info</p>
                 </div>
             </div>
-        <div id="reservedactconts">
+        <div id="reservedactconts" class="tocloseoropen">
             <div id="perscont">
                 <!--
                 <p>Name:</p>
@@ -122,7 +122,7 @@
                         '
                         <ul>
                             <li class="res_item">
-                            <form action="#" method="post">
+                            <form action="php/cancelReservation.php" method="post">
                                 <div class="actnameanddate">
 
                                         <p>Name:

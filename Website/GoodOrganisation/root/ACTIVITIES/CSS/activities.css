@@ -158,25 +158,27 @@ and open the template in the editor.
     border: 1px solid #FFD105;
     width: auto;
     right: 20pt;
-    padding-left: 2pt;
-    padding-right: 2pt;
+
 }
 #managingbtn{
     float:right;
     text-align: right;
     display: inline-block;
-    
+    cursor: pointer;
 }
 #localheader{
     display: block;
-    padding-bottom: 4pt;
+    padding-bottom: 5pt;
     vertical-align: bottom;
     color: #3B4D80;
+}
+#managingbtn:hover{
+    background-color: rgba(245, 130, 53, 0.5);
 }
 
 #managingbtn p{
     line-height: 90%;    
-    
+    margin: 2pt 2pt 2pt 2pt;
 }
 
 /*Div for the dynamic content */
@@ -196,7 +198,7 @@ and open the template in the editor.
 }
 #perscont ul li{
     
-    margin-top: 2pt;
+    margin-bottom: 2pt;
     list-style: none;
     border-bottom: 1px rgba(59, 77, 128, 0.4) dotted;
     
@@ -231,6 +233,7 @@ and open the template in the editor.
 #bord{
     font-size: 14pt;
     display: inline-block;
+    display: none;
 }
 #popupdes{
     display: inline-block;
@@ -243,7 +246,7 @@ and open the template in the editor.
 #reservedactconts{
     max-height: 20vh;
     overflow-y: scroll;
-    
+    display: none;
         width: 100%;
 }
 .CANCELBTN:hover{

@@ -13,7 +13,7 @@ require_once 'php/acivitiesData.php';
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/main/footer.css">
-    <link rel="stylesheet" type="text/css" href="css/main/fixedmenu.css">
+    <link rel="stylesheet" type="text/css" href="../DEFAULT/CSS/fixedmenu.css">
     <link rel="stylesheet" type="text/css" href="css/main/information-and-tipi.css">
     <link rel="stylesheet" type="text/css" href="css/main/items-and-activities.css">
     <link rel="stylesheet" type="text/css" href="css/click-html/general-show.css">

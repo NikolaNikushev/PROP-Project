@@ -125,7 +125,7 @@
 					</a>
 				</div>
 				<div class="lrgbutt">
-					<a href="../register/register.php">
+					<a href="../register/index.php">
 						<div class="largebutt lbr"><p>SIGN IN/REGISTER</p></div>
 					</a>
 				</div>
