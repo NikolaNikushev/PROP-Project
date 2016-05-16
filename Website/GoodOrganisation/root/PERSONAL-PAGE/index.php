@@ -98,7 +98,7 @@ require_once 'php/acivitiesData.php';
                             Bracelet:
                         </p>
                     </div>
-                    <div class="col-xs-4 col-xs-offset-2">                
+                    <div class="col-xs-4 col-xs-offset-2">
                     </div>
                     <div class="col-xs-3">
                         <a href="#/">
@@ -219,29 +219,32 @@ require_once 'php/acivitiesData.php';
                         ACTIVITIES
                     </p>
                 </div>
+
                 <div id="scroll">
                   <?php
                   for ($i=0; $i < count($activities); $i++) {
 
                   echo ' <div id="object-contrainer">
-                        <div class="row">
-                            <p class="object-title">
-                                  '.$activities[$i].'
-                            </p>
-                        </div>
-                        <div class="row">
-                            <div class="col-xs-6">
-                                <p class="object-info">
-                                    DATE:
+                            <div class="row">
+                              <div class="col-xs-12">
+                                <p class="object-title">
+                                      '.$activities[$i].'
                                 </p>
+                              </div>
                             </div>
-                            <div class="col-xs-6">
-                                <p class="object-text">
-                                     '.$activities[$i+=1].'
-                                </p>
+                            <div class="row">
+                                <div class="col-xs-6">
+                                    <p class="object-info">
+                                        DATE:
+                                    </p>
+                                </div>
+                                <div class="col-xs-6">
+                                    <p class="object-text">
+                                         '.$activities[$i+=1].'
+                                    </p>
+                                </div>
                             </div>
-                        </div>
-                    </div>';
+                        </div>';
                     }
                     ?>
                 </div>
