@@ -9,9 +9,11 @@ $(document).ready(function() {
                 if (response.includes('logged')) {
 
                     swal({
-                        title: "Succesfully signed in!",
-                        text: "Now you are going to be redirected to your personal page!",
+                        html: true,
+                        title: "<span style= \"color:#fce600\" >Succesfully signed in!</span>",
+                        text: "<span style= \"color:#ff9933\" >Now you are going to be redirected to your personal page!</span>",
                         type: "success",
+                        confirmButtonColor: "#333399",
                         confirmButtonText: "Okay"
                     }, function(isConfirm) {
                         if (isConfirm) {
@@ -20,9 +22,11 @@ $(document).ready(function() {
                     });
                 } else {
                     swal({
-                        title: "Unsuccessfull logging",
-                        text: "Please insert correct data!",
+                        html: true,
+                        title: "<span style= \"color:#fce600\" >Unsuccessfull logging</span>",
+                        text: "<span style= \"color:#ff9933\" >Please insert correct data!</span>",
                         type: "error",
+                        confirmButtonColor: "#333399",
                         confirmButtonText: "Try again"
                     });
                 }

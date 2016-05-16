@@ -17,14 +17,14 @@
    $row = $stmt->fetch(PDO::FETCH_ASSOC);
    $count = $stmt->rowCount();
 
-   if($row['PASSWORD']==$password){
+   if($row['PASSWORD']==$password && $password !="" ){
 
-    echo "ok-you logged in".print_r ($row); // log in
+    echo "ok-you logged in".print_r ($row);
       $_SESSION["USER_ID"] = $row['USER_ID'];
    }
    else{
 
-    echo "email or password does not exist."; // wrong details
+    echo "email or password does not exist.";
    }
 
   }

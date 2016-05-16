@@ -9,23 +9,27 @@ $(document).ready(function() {
                 if (response.includes('Registered')) {
 
                     swal({
-                      title: "Succesfully registered!",
-                      text: "Now you are going to be redirected to your personal page!",
-                      type: "success",
-                      confirmButtonText: "Okay"
+                        html: true,
+                        title: "<span style= \"color:#fce600\" >Succesfully registered!</span>",
+                        text: "<span style= \"color:#ff9933\" >Now you are going to be redirected to your personal page!</span>",
+                        confirmButtonColor: "#333399",
+                        type: "success",
+                        confirmButtonText: "Okay"
                     }, function(isConfirm) {
                         if (isConfirm) {
-                          window.location = "../PERSONAL-PAGE";
-                         }
+                            window.location = "../PERSONAL-PAGE";
+                        }
                     });
 
                 } else {
-                  swal({
-                    title: "Unsuccessfull registration",
-                    text: "Please insert correct data!",
-                    type: "error",
-                    confirmButtonText: "Try again"                  
-                  });
+                    swal({
+                        html: true,
+                        title: "<span style= \"color:#fce600\" >Unsuccessfull registration</span>",
+                        text: "<span style= \"color:#ff9933\" >Please insert correct data!</span>",
+                        type: "error",
+                        confirmButtonColor: "#333399",
+                        confirmButtonText: "Try again"
+                    });
                 }
             }
         });
