@@ -40,10 +40,11 @@ if(isset($_SESSION['USER_ID']))
 		<li class="dropdown">
 				<a class="dropbtn" href="../register/index.php">ACCOUNT</a>
 				<div class="dropdown-content">
-					<a class="dropbtn" href="../register/index.php">LOGOUT</a>
+					<a class="dropbtn" href="../DEFAULT/PHPFUNC/logout.php">LOGOUT</a>
 				<div>
 		</li>
-	</ul>';
+	</ul>'
+	;
 }
 else {
 	echo '<ul id="nav">
@@ -65,7 +66,7 @@ else {
 	 </li>
 	 <li><a href="../tickets/index.php">TICKETS</a></li>
 	 <li><a href="../camping/index.php">CAMPING</a></li>
-	 <li id="logout-li"><a id="logout-a" href="../register/index.php">ACCOUNT</a></li>
+	 <li><a href="../register/index.php">ACCOUNT</a></li>
  </ul>';
 
 

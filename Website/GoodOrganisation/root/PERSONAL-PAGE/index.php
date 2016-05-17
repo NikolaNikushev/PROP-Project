@@ -1,5 +1,9 @@
 <?php
 session_start();
+if(!isset($_SESSION['USER_ID']))
+{
+  header("Location: ../REGISTER/index.php");
+}
 require_once 'php/dbconfig.php';
 require_once 'php/loanItemsData.php';
 require_once 'php/campData.php';

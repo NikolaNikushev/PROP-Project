@@ -15,7 +15,12 @@
 
 <body>
   <div id="header" class="scrolled" class="container-fluid">
-    <?php include '../DEFAULT/PAGEPARTS/Header.php';?>
+    <?php include '../DEFAULT/PAGEPARTS/Header.php';
+    if(isset($_SESSION['USER_ID']))
+    {
+      header("Location: ../PERSONAL-PAGE/index.php");
+    }
+    ?>
   </div>
   <div id="title" class=" container-fluid">
     <p id="title-text">
