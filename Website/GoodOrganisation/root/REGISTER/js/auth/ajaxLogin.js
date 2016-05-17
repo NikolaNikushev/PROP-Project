@@ -7,7 +7,7 @@ $(document).ready(function() {
             data: data,
             success: function(response) {
                 if (response.includes('logged')) {
-
+                  
                     swal({
                         html: true,
                         title: "<span style= \"color:#fce600\" >Succesfully signed in!</span>",
