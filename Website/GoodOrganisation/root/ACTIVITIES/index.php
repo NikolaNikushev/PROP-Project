@@ -36,7 +36,7 @@
         <div id="actpad">
             <div id="padinnercontainer">
                 <div id="desctextbox">
-                    <h1 id="actcap">ENJOY THE VAST CHOICE OF ACTIVITIES</h1>
+                    <h1 id="actcap">EXPLORE THE VAST CHOICE OF ACTIVITIES</h1>
                     <h2 id="rescap">RESERVE IN ADVANCE FOR THE BEST EXPERIENCE</h2>
                 </div>
                 <div id="allactivities">

@@ -23,7 +23,7 @@ $(document).ready(function() {
 		{
 			value++;
 			$("#tennum").val(value);
-                        $(tenants[value-1]).prop('disabled', false);
+                        $(tenants[value-1]).find(".form-control").prop('disabled', false);
 			$(tenants[value-1]).show();
                        
                         GetPrice();
@@ -36,7 +36,9 @@ $(document).ready(function() {
 		{
 			value--;
 			$("#tennum").val(value);
-                        $(tenants[value]).prop('disabled', true);
+                        $(tenants[value]).find(".form-control").removeAttr('value');
+                        $(tenants[value]).find(".form-control").prop('disabled', true);
+                        
 			$(tenants[value]).hide();
                         GetPrice();
 		}
