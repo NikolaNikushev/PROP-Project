@@ -35,9 +35,9 @@
 		  <!-- do not forget to add an action-->	
 			<p class="shortline dateline">Arrival date: </p>
 				<div class="defcont datecont">
-					<input class="rdbtn" required="required" type="radio" name="datechoice" id="dateeight">
+					<input class="rdbtn" required="required" type="radio" name="datechoice" id="dateeight" value="28">
 					<label class="deflabel" for="dateeight">28 July</label>
-					<input class="rdbtn" required="required" type="radio" name="datechoice" id="datenine">
+					<input class="rdbtn" required="required" type="radio" name="datechoice" id="datenine" value="29">
 					<label class="deflabel" for="datenine">29 July</label>
 				</div>
 		</div>
@@ -72,13 +72,13 @@
 			<div class="boxie tenant" id="gu4">
 				<h2>TENANT 5</h2>
 				<p>Email: 
-					<input class="form-control" required="required" type="email" name="guest_em4" id="guest_em4">
+					<input class="form-control" required="required" type="email" name="guest_em4" id="guest_em4" disabled>
 				</p>
 			</div>
 			<div class="boxie tenant" id="gu5">
 				<h2>TENANT 6</h2>
 				<p>Email: 
-					<input class="form-control" required="required" type="email" name="guest_em5" id="guest_em5">
+					<input class="form-control" required="required" type="email" name="guest_em5" id="guest_em5" disabled>
 				</p>
 			</div>
 			<div id="price_ver" class="boxie verify">
