@@ -16,13 +16,13 @@ require_once 'php/acivitiesData.php';
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="css/main/footer.css">
+    <link rel="stylesheet" type="text/css" href="../DEFAULT/CSS/footer.css">
     <link rel="stylesheet" type="text/css" href="../DEFAULT/CSS/fixedmenu.css">
     <link rel="stylesheet" type="text/css" href="css/main/information-and-tipi.css">
     <link rel="stylesheet" type="text/css" href="css/main/items-and-activities.css">
-    <link rel="stylesheet" type="text/css" href="css/click-html/general-show.css">
-    <link rel="stylesheet" type="text/css" href="css/click-html/bracelet-more.css">
-    <link rel="stylesheet" type="text/css" href="css/click-html/balance-add.css">
+    <link rel="stylesheet" type="text/css" href="css/ajax-loaded-content/balance-load-content.css">
+    <link rel="stylesheet" type="text/css" href="css/ajax-loaded-content/bracelet-load-content.css">
+    <link rel="stylesheet" type="text/css" href="css/ajax-loaded-content/general-load-content.css">
     <title>Personal Page</title>
 </head>
 
@@ -249,25 +249,12 @@ require_once 'php/acivitiesData.php';
             </div>
         </div>
     </div>
-
-    <div id="footer" class="container-fluid">
-        <img id="footerlogo" src="images/LOGOFOOT.png" />
-        <ul id="footernav">
-            <li><a href="#">NEWS & SOCIAL</a></li>
-            <li><a href="#">CONTACT US</a></li>
-            <li><a href="#">TERMS AND PRIVACY</a></li>
-        </ul>
-        <div id="social">
-            <img id="footerfacebook" src="images/facebook.png" />
-            <img id="footertwitter" src="images/twitter.png" />
-            <img id="footergplus" src="images/gplus.png" />
-        </div>
-        <p id="copyright">COPYRIGHT:2016</p>
-    </div>
-    <script src="https://code.jquery.com/jquery-2.2.2.min.js" integrity="sha256-36cp2Co+/62rEAAYHLmRCPIych47CvdM+uTBJwSzWjI=" crossorigin="anonymous"></script>
-    <script src="js/general-show.js"></script>
-    <script src="js/bracelet-more.js"></script>
-    <script src="js/balance-add.js"></script>
+    <?php include '../DEFAULT/PAGEPARTS/footer.php';?>
+    <script src="../DEFAULT/js/jquery-2.2.3.min.js"></script>
+    <script src="../DEFAULT/sweetalert-master/sweetalert-master/dist/sweetalert.min.js"></script>
+    <script src="js/general-load-content.js"></script>
+    <script src="js/bracelet-load-content.js"></script>
+    <script src="js/balance-load-content.js"></script>
     <script src="js/add-credits.js"></script>
 
 

@@ -47,11 +47,11 @@
   </div>
   </div>
   <?php include '../DEFAULT/PAGEPARTS/footer.php';?>
-  <script src="https://code.jquery.com/jquery-2.2.2.min.js"></script>
+  <script src="../DEFAULT/js/jquery-2.2.3.min.js"></script>
   <script src="../DEFAULT/sweetalert-master/sweetalert-master/dist/sweetalert.min.js"></script>
   <script src="js/form-loader.js"></script>
-  <script src="js/auth/ajaxLogin.js"></script>
-  <script src="js/auth/ajaxRegister.js"></script>
+  <script src="js/auth/ajax-login.js"></script>
+  <script src="js/auth/ajax-register.js"></script>
 </body>
 
 </html>
