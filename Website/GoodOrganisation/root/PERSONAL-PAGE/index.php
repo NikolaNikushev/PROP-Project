@@ -16,6 +16,7 @@ require_once 'php/acivitiesData.php';
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../DEFAULT/sweetalert-master/sweetalert-master/dist/sweetalert.css">
     <link rel="stylesheet" type="text/css" href="../DEFAULT/CSS/footer.css">
     <link rel="stylesheet" type="text/css" href="../DEFAULT/CSS/fixedmenu.css">
     <link rel="stylesheet" type="text/css" href="css/main/information-and-tipi.css">
