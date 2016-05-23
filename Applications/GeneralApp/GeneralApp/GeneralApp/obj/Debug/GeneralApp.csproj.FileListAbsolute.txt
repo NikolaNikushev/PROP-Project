@@ -1,0 +1,9 @@
+E:\Dropbox\workspace\Apps\PROP-Project\Applications\GeneralApp\GeneralApp\GeneralApp\bin\Debug\GeneralApp.exe.config
+E:\Dropbox\workspace\Apps\PROP-Project\Applications\GeneralApp\GeneralApp\GeneralApp\bin\Debug\GeneralApp.exe
+E:\Dropbox\workspace\Apps\PROP-Project\Applications\GeneralApp\GeneralApp\GeneralApp\bin\Debug\GeneralApp.pdb
+E:\Dropbox\workspace\Apps\PROP-Project\Applications\GeneralApp\GeneralApp\GeneralApp\obj\Debug\GeneralApp.csprojResolveAssemblyReference.cache
+E:\Dropbox\workspace\Apps\PROP-Project\Applications\GeneralApp\GeneralApp\GeneralApp\obj\Debug\GeneralApp.Form1.resources
+E:\Dropbox\workspace\Apps\PROP-Project\Applications\GeneralApp\GeneralApp\GeneralApp\obj\Debug\GeneralApp.Properties.Resources.resources
+E:\Dropbox\workspace\Apps\PROP-Project\Applications\GeneralApp\GeneralApp\GeneralApp\obj\Debug\GeneralApp.csproj.GenerateResource.Cache
+E:\Dropbox\workspace\Apps\PROP-Project\Applications\GeneralApp\GeneralApp\GeneralApp\obj\Debug\GeneralApp.exe
+E:\Dropbox\workspace\Apps\PROP-Project\Applications\GeneralApp\GeneralApp\GeneralApp\obj\Debug\GeneralApp.pdb
