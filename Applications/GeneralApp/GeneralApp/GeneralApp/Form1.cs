@@ -49,7 +49,6 @@ namespace GeneralApp
 
         private void button3_Click(object sender, EventArgs e)
         {
-            process.StartInfo.FileName = "C:\\Program Files (x86)\\Winamp\\winamp.exe";
         }
 
         private void button2_Click(object sender, EventArgs e)
