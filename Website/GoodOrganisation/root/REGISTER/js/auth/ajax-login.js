@@ -7,7 +7,7 @@ $(document).ready(function() {
             data: data,
             success: function(response) {
                 if (response.includes('logged')) {
-                  
+                  //use of sweetalert-master libraly to display messages
                     swal({
                         html: true,
                         title: "<span style= \"color:#fce600\" >Succesfully signed in!</span>",

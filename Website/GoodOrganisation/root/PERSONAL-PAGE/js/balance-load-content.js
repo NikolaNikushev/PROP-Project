@@ -7,7 +7,7 @@ $(document).ready(function() {
         // $('#bottom-containers').css("padding-top", "23vh");
         $('.balance-text').css("color", "#fce600");
         $('#balance-container').css('height', 'auto');
-        $('#balance-container').load("click-html/balance.php");
+        $('#balance-container').load("ajax-loaded-content/balance.php");
         $('#add-button').hide();
     });
     //when you click the close button

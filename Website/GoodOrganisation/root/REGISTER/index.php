@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Sound Account</title>
@@ -15,7 +14,12 @@
 
 <body>
   <div id="header" class="scrolled" class="container-fluid">
-    <?php include '../DEFAULT/PAGEPARTS/Header.php';?>
+    <?php include '../DEFAULT/PAGEPARTS/Header.php';
+    if(isset($_SESSION['USER_ID']))
+    {
+      header("Location: ../PERSONAL-PAGE/index.php");
+    }
+    ?>
   </div>
   <div id="title" class=" container-fluid">
     <p id="title-text">
@@ -23,7 +27,6 @@
     </p>
   </div>
   <div id="main" class="container-fluid">
-
     <div id="buttons-form-container" class="acc-button col-xs-10 col-md-4 col-xs-offset-1 col-md-offset-4">
       <div class="row">
         <div class="acc-button col-md-4 col-xs-4 col-md-offset-1 col-xs-offset-1">
@@ -39,20 +42,16 @@
       </div>
       <!--Here are loaded the forms  -->
       <div id="form-container">
-
       </div>
     </div>
   </div>
-
   </div>
   <?php include '../DEFAULT/PAGEPARTS/footer.php';?>
-
-  <script src="https://code.jquery.com/jquery-2.2.2.min.js"></script>
+  <script src="../DEFAULT/js/jquery-2.2.3.min.js"></script>
   <script src="../DEFAULT/sweetalert-master/sweetalert-master/dist/sweetalert.min.js"></script>
   <script src="js/form-loader.js"></script>
-  <script src="js/auth/ajaxLogin.js"></script>
-  <script src="js/auth/ajaxRegister.js"></script>
-  </script>
+  <script src="js/auth/ajax-login.js"></script>
+  <script src="js/auth/ajax-register.js"></script>
 </body>
 
 </html>

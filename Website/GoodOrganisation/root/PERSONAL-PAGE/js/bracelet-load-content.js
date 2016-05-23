@@ -7,7 +7,7 @@ $(document).ready(function() {
         // $('#bottom-containers').css("padding-top", "23vh");
         $('.bracelet-text').css("color", "#fce600");
         $('#bracelet-container').css('height', 'auto');
-        $('#bracelet-container').load("click-html/bracelet.php");
+        $('#bracelet-container').load("ajax-loaded-content/bracelet.php");
         $('#more-button').hide();
     });
     //when you click the close button
