@@ -1,0 +1,128 @@
+17 May
+Apps: 
+Shop application 
+1. First you can't do anything while the rfid is not scanned
+The employee is using it 
+UNDO button is complicated: 
+
+Why X lines for product with quantity X
+UNDO is draw back one action 
+
+UNDO UNDO UNDO - goes 3 steps back 
+MOSCOW - consider what is possible and necessary to do 
+	maybe use UNDO like in paint - only the last action and every other change is canceled 
+	if you do UNDO then most likely you would like to implement the REDO 
+
+Keep track of general actions, and  a separate track of undo actions
+Design pattern of undo/redo
+	put the action in an array - limited size ;;
+		put in the list instead
+	every action should have an inverse -- 
+/*
+	blur - sets a new color by neighbourhood - original 50% + x% of neighbour colors
+*/
+	remember what method should be called - add/delete 
+	but suppose that you do actions: 
+		a c d e f g
+then if you do undo -
+	g undone
+then if you do undo -
+	f undone
+then if you do undo -
+	e undone
+then you are here: 
+	a c d (e f g)
+what will happen if you continue working? 
+	overwrite it or go to the end of list of actions? 
+two patterns: 
+a) deleteding actions
+b) keeping inverses
+if every method has an easy inverse then it is very easy to store it there
+	stack - check how to use those things
+one stack for undo information and
+one stack for the redo information - maybe check how to use it
+check for patterns - storing information and actions
+	/*
+		the same patterns is applied to the systems where the postpone should be implemented 
+for example the company can log the actins to be used and then at the set time theuhave ti be performed
+	*/
+
+for example use the interaction object - where you store what to do and for what information
+stack: imagine you have a list then if you want fi-fo == qeue (whatever)
+	thena we come to the notion of stacks - the in the STACK li-fo 
+	pointer for the first note is changed but you never shift anythinng! 
+
+currently everything is hardcoded: 
+	should we remake that to be dynamic! 
+	yes we do! 
+it is alright to start with hardcoded - but we neeeed to do it more flexible and dynamic
+pay more attention to the design of the applications
+
+
++++
+HOME PAGE FOR THE APPS:
+one app to start some apps - to manage the applications 
+maybe use the the authorisation for getting access to the apps
+//////////// done with applications
+
+Website: 
+1#
+Registration and user profile: 
+	we tell him that he is going to be redirected to the personal page: 
+		using the alert
+	currently the login is available even if you have logged in before
+	balance and stuff 
+2#
+Activities - alright
+3#
+Socialize
+Divs managing with jquery 
+	you can delete/remove it or just hide it, you have to think of what would be better
+	manage it with href="_ " in another tab of your browser
+maybe you can open it in another tab?
+
+documentation: 
+report
+
+----
+Main part
+
+Decisions you have made should be listed 
+What is working what is not working (or different) 
+	maybe the idea was changed
+Explain how did we do everything: show the path how to use and make test
+	for example for testing logins e.g: existent and non-existent users etc
+	!important 
+	!veryveryveryvery! 
+
+
+
+Personal parts: 
+
+What did you learn 
+What did you like
+What would you do different
+
+<Part about yourself and your own personal opinion>
+
+----
+Also you have to deliver the project 
+	therefore you have to orginise your directories and say that this and that is there 
+	how did you organise the apps 
+	tell about the structure 
+	tell about the code
+	explain some things about the code
+	consider telling and determining who did what - explain the tasks and action items per person 	
+
+
+// Lifecycle: 	
+Requirements 
+Designs
+Development
+Testing
+
+
+--- conduct the tests and make testing reports 
+(alpha, beta, user-acceptance)
+provide the client with testing data
+

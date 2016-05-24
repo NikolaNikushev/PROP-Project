@@ -54,6 +54,13 @@
 				<br/> <!-- Empty line intended-->
 				<p>Join our professional guides for an adventure and step into the beauty of </p>
 				</p>Scottish nature.</p>
+                                <br/> <!-- Empty line intended-->
+                        	</p>Click the map picture for more. And see the LOCATION page for routes.</p>
+
+			</div>
+                        <div id="map_pic">
+				<!-- this shit will redirect to the location-info page, or maybe it will be a pop-up, I just have to figure out how to do it -->
+				<img src="explore/img/mapimg.png" id="imgmap" alt="Visit our location">
 			</div>
 		</div>
 	</div>
@@ -96,10 +103,7 @@
 				<p>Visit the location page and feel free to contact us for</p>
 				</p>more information.</p>
 			</div>
-			<div id="map_pic">
-				<!-- this shit will redirect to the location-info page, or maybe it will be a pop-up, I just have to figure out how to do it -->
-				<img src="explore/img/mapimg.png" id="imgmap" alt="Visit our location">
-			</div>
+			
 		</div>
 	</div>
 	<div id="fhsec" class="closedsecond">

@@ -34,9 +34,11 @@
 }
 #map_pic{
 	display: inline-block;
-	margin-left: 25vw;
+	margin-left: 15vw;
+
 }
 #imgmap{
+        padding-bottom: 40pt;
 	height: 270px;
 	cursor: pointer;
 }

@@ -1,7 +1,10 @@
 <?php
 $stmt=$db_con->prepare( 'SELECT LPAD(a.activity_id,6,\'0\') as actcode,a.activity_id, a.activityname, 
-    a.description, a.date, cast((a.totalplaces/2 - IFNULL(a.reservedplaces,0))as UNSIGNED) as availableplaces, a.reservedplaces
-                          FROM activities a;');
+                                a.description, a.date, 
+                                cast((a.totalplaces/2 - IFNULL(av.reservedplaces,0))as UNSIGNED) as availableplaces, 
+                                IFNULL(av.reservedplaces,0) as reservedplaces
+                          FROM activities a left outer join activityplaces_view av
+                                on a.activity_id = av.activity_id;');
 
     $stmt->execute();
     $activities = array();

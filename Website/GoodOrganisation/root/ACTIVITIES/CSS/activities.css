@@ -8,11 +8,13 @@ and open the template in the editor.
     Author     : Dmitry
 */
 #contents{
-    padding-top: 36pt;
+    padding: 0;
+    padding-top: 36pt !important;
     min-height: 100vh;
     height: 100%;
-    padding-bottom: 5vh;
+
     position: relative;
+    
 }
 #actpad{
     position: static;
@@ -23,17 +25,7 @@ and open the template in the editor.
     width: 95vw;
     float:left;
 }
-#personstat{
-    position: fixed;
-    background: #D7E1F2;
-    display: inline-block;
-    float: right;
-    color: white;
-    text-align: right;
-    border: 1px solid #FFD105;
-    width: auto;
-    padding: 0 2pt 0 2pt;
-}
+
 #footer{
     clear:both;
 }
@@ -153,4 +145,110 @@ and open the template in the editor.
 }
 .secret{
     display: none;
+}
+
+
+/*Left pop-up thing*/
+
+#personstat{
+    position: fixed;
+    background: #D7E1F2;
+    color: white;
+    
+    border: 1px solid #FFD105;
+    width: auto;
+    right: 20pt;
+
+}
+#managingbtn{
+    float:right;
+    text-align: right;
+    display: inline-block;
+    cursor: pointer;
+}
+#localheader{
+    display: block;
+    padding-bottom: 5pt;
+    vertical-align: bottom;
+    color: #3B4D80;
+}
+#managingbtn:hover{
+    background-color: rgba(245, 130, 53, 0.5);
+}
+
+#managingbtn p{
+    line-height: 90%;    
+    margin: 2pt 2pt 2pt 2pt;
+}
+
+/*Div for the dynamic content */
+
+#perscont{
+    clear: both;
+    margin-top: 1pt;
+    border: 1px #3B4D80 solid;
+    border-bottom: none;
+    color: #3B4D80;
+    text-align: left;
+    display: block;
+    background-color: rgba(59, 77, 128, 0.2);
+}
+#perscont p{
+    margin-left: 2pt;
+}
+#perscont ul li{
+    
+    margin-bottom: 2pt;
+    list-style: none;
+    border-bottom: 1px rgba(59, 77, 128, 0.4) dotted;
+    
+}
+.CANCELBTN{
+
+    font-family: bauhaus93;
+    text-align: center;
+    display: inline-block;
+    width: 30%;
+    float: right;
+    border: none;
+    background-color: #3B4D80;
+    color: #D7E1F2;
+    font-size: 14pt;
+    margin-right: 1%;
+
+/*
+    font-family: bauhaus93;
+    text-align: center;
+    display: inline;
+    width: 100%;
+    border: none;
+    background-color: #3B4D80;
+    font-size: 14pt;
+    color: #D7E1F2;
+    padding-left: 1pt;
+    padding-right: 1pt;
+
+*/
+}
+#bord{
+    font-size: 14pt;
+    display: inline-block;
+    display: none;
+}
+#popupdes{
+    display: inline-block;
+}
+.actnameanddate{
+    width: 65%;
+    display: inline-block;
+    
+}
+#reservedactconts{
+    max-height: 20vh;
+    overflow-y: scroll;
+    display: none;
+        width: 100%;
+}
+.CANCELBTN:hover{
+    color: #F58235;
 }

@@ -1,8 +1,13 @@
 <?php
 session_start();
+if(!isset($_SESSION['USER_ID']))
+{
+  header("Location: ../REGISTER/index.php");
+}
 require_once 'php/dbconfig.php';
-require_once 'php/data.php';
-
+require_once 'php/loanItemsData.php';
+require_once 'php/campData.php';
+require_once 'php/acivitiesData.php';
  ?>
 <!DOCTYPE html>
 <html>
@@ -11,25 +16,20 @@ require_once 'php/data.php';
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="css/main/footer.css">
-    <link rel="stylesheet" type="text/css" href="css/main/fixedmenu.css">
+    <link rel="stylesheet" type="text/css" href="../DEFAULT/sweetalert-master/sweetalert-master/dist/sweetalert.css">
+    <link rel="stylesheet" type="text/css" href="../DEFAULT/CSS/footer.css">
+    <link rel="stylesheet" type="text/css" href="../DEFAULT/CSS/fixedmenu.css">
     <link rel="stylesheet" type="text/css" href="css/main/information-and-tipi.css">
     <link rel="stylesheet" type="text/css" href="css/main/items-and-activities.css">
-    <link rel="stylesheet" type="text/css" href="css/click-html/general-show.css">
-    <link rel="stylesheet" type="text/css" href="css/click-html/bracelet-more.css">
-    <link rel="stylesheet" type="text/css" href="css/click-html/balance-add.css">
+    <link rel="stylesheet" type="text/css" href="css/ajax-loaded-content/balance-load-content.css">
+    <link rel="stylesheet" type="text/css" href="css/ajax-loaded-content/bracelet-load-content.css">
+    <link rel="stylesheet" type="text/css" href="css/ajax-loaded-content/general-load-content.css">
     <title>Personal Page</title>
 </head>
 
 <body>
     <div id="header" class="scrolled" class="container-fluid">
-        <img id="logo" class="logo" src="images/logo.png" />
-        <ul id="nav">
-            <li><a href="index.html">INFO</a></li>
-            <li><a href="/css/">PROGRAM</a></li>
-            <li><a href="/js/">TICKETS</a></li>
-            <li><a href="/jquery/">CAMPING</a></li>
-        </ul>
+        <?php include '../DEFAULT/PAGEPARTS/Header.php';?>
     </div>
 
     <div id="container" class="container-fluid">
@@ -92,20 +92,17 @@ require_once 'php/data.php';
 
                 <div class="row" id="blank"></div>
                 <div class="row user-text-container" id="bracelet">
-                    <div class="col-xs-4">
+                    <div class="col-xs-3">
                         <p class="user-text bracelet-text">
                             Bracelet:
                         </p>
                     </div>
-                    <div class="col-xs-5">
-                        <p class="user-text bracelet-text">
-                            3X8
-                        </p>
+                    <div class="col-xs-4 col-xs-offset-2">
                     </div>
                     <div class="col-xs-3">
                         <a href="#/">
                             <p class="person-button" id="more-button">
-                                more
+                                show
                             </p>
                         </a>
                     </div>
@@ -133,7 +130,7 @@ require_once 'php/data.php';
                     </div>
                     <div class="col-xs-9">
                         <p class="tipi-text">
-                            192
+                            <?php echo $TENTNR ?>
                         </p>
                     </div>
                 </div>
@@ -145,7 +142,7 @@ require_once 'php/data.php';
                     </div>
                     <div class="col-xs-9">
                         <p class="tipi-text">
-                            Moby Sick
+                            <?php echo $CHIEFFNAME." ".$CHIEFLNAME ?>
                         </p>
                     </div>
                 </div>
@@ -156,8 +153,6 @@ require_once 'php/data.php';
         <div class="row " id="bottom-containers">
             <!--ITEMS BAR  -->
             <div class="col-md-3 col-md-offset-2 info-bar" id="items">
-
-
 
                 <div class="row">
                     <p class="container-title">
@@ -223,120 +218,45 @@ require_once 'php/data.php';
                         ACTIVITIES
                     </p>
                 </div>
+
                 <div id="scroll">
+                  <?php
+                  for ($i=0; $i < count($activities); $i++) {
 
-
-                    <div id="object-contrainer">
-                        <div class="row">
-                            <p class="object-title">
-                                GUITAR LESSON
-                            </p>
-                        </div>
-                        <div class="row">
-                            <div class="col-xs-6">
-                                <p class="object-info">
-                                    START DATE:
+                  echo ' <div id="object-contrainer">
+                            <div class="row">
+                              <div class="col-xs-12">
+                                <p class="object-title">
+                                      '.$activities[$i].'
                                 </p>
+                              </div>
                             </div>
-                            <div class="col-xs-6">
-                                <p class="object-text">
-                                    29 JULY
-                                </p>
+                            <div class="row">
+                                <div class="col-xs-6">
+                                    <p class="object-info">
+                                        DATE:
+                                    </p>
+                                </div>
+                                <div class="col-xs-6">
+                                    <p class="object-text">
+                                         '.$activities[$i+=1].'
+                                    </p>
+                                </div>
                             </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-xs-6">
-                                <p class="object-info">
-                                    DUE DATE:
-                                </p>
-                            </div>
-                            <div class="col-xs-6">
-                                <p class="object-text">
-                                    NONE
-                                </p>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-xs-6">
-                                <p class="object-info">
-                                    PRICE/DAY:
-                                </p>
-                            </div>
-                            <div class="col-xs-6">
-                                <p class="object-text">
-                                    20
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="object-contrainer">
-                        <div class="row">
-                            <p class="object-title">
-                                GUITAR
-                            </p>
-                        </div>
-                        <div class="row">
-                            <div class="col-xs-6">
-                                <p class="object-info">
-                                    START DATE:
-                                </p>
-                            </div>
-                            <div class="col-xs-6">
-                                <p class="object-text">
-                                    29 JULY
-                                </p>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-xs-6">
-                                <p class="object-info">
-                                    DUE DATE:
-                                </p>
-                            </div>
-                            <div class="col-xs-6">
-                                <p class="object-text">
-                                    NONE
-                                </p>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-xs-6">
-                                <p class="object-info">
-                                    PRICE/DAY:
-                                </p>
-                            </div>
-                            <div class="col-xs-6">
-                                <p class="object-text">
-                                    20
-                                </p>
-                            </div>
-                        </div>
-                    </div>
+                        </div>';
+                    }
+                    ?>
                 </div>
-
             </div>
         </div>
     </div>
-
-    <div id="footer" class="container-fluid">
-        <img id="footerlogo" src="images/LOGOFOOT.png" />
-        <ul id="footernav">
-            <li><a href="#">NEWS & SOCIAL</a></li>
-            <li><a href="#">CONTACT US</a></li>
-            <li><a href="#">TERMS AND PRIVACY</a></li>
-        </ul>
-        <div id="social">
-            <img id="footerfacebook" src="images/facebook.png" />
-            <img id="footertwitter" src="images/twitter.png" />
-            <img id="footergplus" src="images/gplus.png" />
-        </div>
-        <p id="copyright">COPYRIGHT:2016</p>
-    </div>
-    <script src="https://code.jquery.com/jquery-2.2.2.min.js" integrity="sha256-36cp2Co+/62rEAAYHLmRCPIych47CvdM+uTBJwSzWjI=" crossorigin="anonymous"></script>
-    <script src="js/general-show.js"></script>
-    <script src="js/bracelet-more.js"></script>
-    <script src="js/balance-add.js"></script>
-
+    <?php include '../DEFAULT/PAGEPARTS/footer.php';?>
+    <script src="../DEFAULT/js/jquery-2.2.3.min.js"></script>
+    <script src="../DEFAULT/sweetalert-master/sweetalert-master/dist/sweetalert.min.js"></script>
+    <script src="js/general-load-content.js"></script>
+    <script src="js/bracelet-load-content.js"></script>
+    <script src="js/balance-load-content.js"></script>
+    <script src="js/add-credits.js"></script>
 
 
 </body>

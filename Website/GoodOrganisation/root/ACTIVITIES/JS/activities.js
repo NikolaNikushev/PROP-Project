@@ -1,6 +1,8 @@
 // jQuery hovering functionality
 $(document).ready(function() {
-	$(".activity").mouseenter(function() {
+	
+    
+        $(".activity").mouseenter(function() {
 		
 		$(this).animate({
 			paddingTop: '+=8px'
@@ -20,4 +22,27 @@ $(document).ready(function() {
                 $(this).find('.chkbox').prop('checked', true);
 		
 	});
+        
+        $("#managingbtn").click(function(){
+            closeOrOpen();
+        });
+       
 });
+
+
+$tabOpened = false;
+
+function closeOrOpen() 
+{
+     if($tabOpened)
+        {
+                $(".tocloseoropen").hide();
+                $tabOpened = false;
+  
+        }else
+        {             
+                $tabOpened=true;
+                $(".tocloseoropen").show();
+
+        }
+}
