@@ -25,7 +25,7 @@ $(document).ready(function() {
 
                 } else {
                    $(".banner").show();
-                   $(".central").load("pageparts/BannerNoReg.php");
+                   $(".central").load("pageparts/BannerNoReg.php", {resp: response});
                   //$("#noReg").show();
                   alert(response);
                   resp = response;
