@@ -113,20 +113,17 @@ function CheckEmailUnique() {
 //            }
 //        }
 //    }
-    
+
 }
 function CheckForReps() {
-    var noProblems = true;
+    // var noProblems = true;
     var probid = "";
-    if(noProblems)
-    {
-        HideWarnings();
-    }
+    HideWarnings();
     for (i = 0; i < (tenants.length - 1); i++)
     {
         for (j = (tenants.length - 1); j > i; j--)
         {
-            probid = ("#"+$(tenants[j]).find(".emimp").attr('id'));
+            probid = ("#" + $(tenants[j]).find(".emimp").attr('id'));
             var leftcont = $(tenants[i]).find(".emimp").val();
             var rightcont = $(tenants[j]).find(".emimp").val();
             if (
@@ -142,6 +139,10 @@ function CheckForReps() {
             }
         }
     }
+    //if(noProblems)
+    // {
+    //     HideWarnings();
+    // }
 }
 
 function HideWarnings() {

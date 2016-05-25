@@ -2,9 +2,11 @@ var dataMain;
 var numberTennts = $("#tennum").val();
 var totalPrice = $("#finprice").val();
 var pricePerDay = Math.floor(totalPrice/numberTennts);
+var resp;
 $(document).ready(function() {
     $(document).on('submit', '#first-form', function() {
         dataMain = $(this).serialize();
+        //alert(dataMain);
         //var email = $("#user_email").val();
         //var password = $("#user_password").val();
         //var partialdatastring = 'email='+ email 
@@ -15,15 +17,18 @@ $(document).ready(function() {
             data: dataMain,
             success: function(response) {
                 if (response.includes('logged')) {
-                    
+
                     $(".banner").show();
                     $(".central").load("pageparts/BannerReg.php");
                     //$("#Reg").show();
-                   
+                    alert(response);
+
                 } else {
                    $(".banner").show();
                    $(".central").load("pageparts/BannerNoReg.php");
                   //$("#noReg").show();
+                  alert(response);
+                  resp = response;
                 }
             }
         });
