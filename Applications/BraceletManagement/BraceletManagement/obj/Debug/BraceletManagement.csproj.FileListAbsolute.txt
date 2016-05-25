@@ -9,3 +9,6 @@ D:\Projects\FONTYSPRO\PROP-Project\Applications\BraceletManagement\BraceletManag
 D:\Projects\FONTYSPRO\PROP-Project\Applications\BraceletManagement\BraceletManagement\obj\Debug\BraceletManagement.pdb
 D:\Projects\FONTYSPRO\PROP-Project\Applications\BraceletManagement\BraceletManagement\bin\Debug\MySql.Data.dll
 D:\Projects\FONTYSPRO\PROP-Project\Applications\BraceletManagement\BraceletManagement\bin\Debug\Phidget21.NET.dll
+E:\Dropbox\workspace\Apps\PROP-Project\Applications\BraceletManagement\BraceletManagement\bin\Debug\BraceletManagement.exe.config
+E:\Dropbox\workspace\Apps\PROP-Project\Applications\BraceletManagement\BraceletManagement\obj\Debug\BraceletManagement.exe
+E:\Dropbox\workspace\Apps\PROP-Project\Applications\BraceletManagement\BraceletManagement\obj\Debug\BraceletManagement.pdb

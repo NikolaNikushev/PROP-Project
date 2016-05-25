@@ -53,8 +53,11 @@ namespace GeneralApp
 
         private void button2_Click(object sender, EventArgs e)
         {
-            process.StartInfo.FileName = "C:\\Program Files (x86)\\Winamp\\winamp.exe";
-            process.Start();
+            BraceletManagement.Form1 br = new BraceletManagement.Form1();
+            //StatsApp.Form1 ivan = new StatsApp.Form1();
+            br.Show();
+            this.Hide();
+
         }
     }
 }
