@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BraceletManagement
 {
-    static class StatusTypes 
+    public static class StatusTypes 
     {
         public enum BraceletStatus
         {

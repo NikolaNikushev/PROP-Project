@@ -45,10 +45,12 @@ function InsertLeaderData($dbcon, &$campdata) {
                 "VALUES(:camp_id, :leader_id);";
         $sqlsrts ="INSERT INTO serpayments (USER_ID, DATE, PAYSUM, DESCRIPTION) " .
           "VALUES(:leader_id,:date,:sum,'Tent Reservation Payment. Group of :tennumber .');";
-        
+        $sqlvis ="INSERT INTO serpayments (USER_ID, DATE, PAYSUM, DESCRIPTION) " .
+          "VALUES(:leader_id,:date,:sum,'Tent Reservation Payment. Group of :tennumber .');";
 
         $stmtOne = $dbcon->prepare($sqltlds);
         $stmtTwo = $dbcon->prepare($sqlsrts);
+        $stmtThree = $dbcon->prepare($sqlsrts);
         
         $stmtOne -> execute([
             // looking for a first tent with suitable capacity 

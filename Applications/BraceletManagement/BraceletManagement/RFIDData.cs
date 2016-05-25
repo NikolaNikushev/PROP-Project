@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BraceletManagement
 {
-    class RFIDData: SomeAbstractData
+    public class RFIDData: SomeAbstractData
     {
         //--------Properties and Fields:
         public String RFIDNumber
