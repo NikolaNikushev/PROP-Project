@@ -59,8 +59,9 @@
                 <div id="leader" class="boxie">
                     <h2>TENANT 1</h2>
                     <p>Leader email: 
-                        <input autofocus="autofocus" class="form-control" required="required" type="email" name="email" id="user_email">
+                        <input autofocus="autofocus" class="form-control emimp" required="required" type="email" name="email" id="user_email">
                     </p>
+                    <p class="nuwarning">This email was entered more than once!<br>'Continue' button is now deactivated.</p>
                     <p>Leader password:
                         <input class="form-control" required="required" type="password" name="password" id="user_password">
                     </p>
@@ -68,32 +69,37 @@
                 <div class="boxie tenant" id="gu1">
                     <h2>TENANT 2</h2>
                     <p>Email: 
-                        <input class="form-control" required="required" type="email" name="guest_em1" id="guest_em1">
+                        <input class="form-control emimp" required="required" type="email" name="guest_em1" id="guest_em1">
                     </p>
+                    <p class="nuwarning">This email was entered more than once!<br>'Continue' button is now deactivated.</p>
                 </div>
                 <div class="boxie tenant" id="gu2">
                     <h2>TENANT 3</h2>
                     <p>Email: 
-                        <input class="form-control" required="required" type="email" name="guest_em2" id="guest_em2">
+                        <input class="form-control emimp" required="required" type="email" name="guest_em2" id="guest_em2">
                     </p>
+                    <p class="nuwarning">This email was entered more than once!<br>'Continue' button is now deactivated.</p>
                 </div>
                 <div class="boxie tenant" id="gu3">
                     <h2>TENANT 4</h2>
                     <p>Email: 
-                        <input class="form-control" required="required" type="email" name="guest_em3" id="guest_em3">
+                        <input class="form-control emimp" required="required" type="email" name="guest_em3" id="guest_em3">
                     </p>
+                    <p class="nuwarning">This email was entered more than once!<br>'Continue' button is now deactivated.</p>
                 </div>
                 <div class="boxie tenant" id="gu4">
                     <h2>TENANT 5</h2>
                     <p>Email: 
-                        <input class="form-control" required="required" type="email" name="guest_em4" id="guest_em4" disabled>
+                        <input class="form-control emimp" required="required" type="email" name="guest_em4" id="guest_em4" disabled>
                     </p>
+                    <p class="nuwarning">This email was entered more than once!<br>'Continue' button is now deactivated.</p>
                 </div>
                 <div class="boxie tenant" id="gu5">
                     <h2>TENANT 6</h2>
                     <p>Email: 
-                        <input class="form-control" required="required" type="email" name="guest_em5" id="guest_em5" disabled>
+                        <input class="form-control emimp" required="required" type="email" name="guest_em5" id="guest_em5" disabled>
                     </p>
+                    <p class="nuwarning">This email was entered more than once!<br>'Continue' button is now deactivated.</p>
                 </div>
                 <div id="price_ver" class="boxie verify">
                     <h2>RESERVATION PRICE:<input class="form-control" 
@@ -106,7 +112,7 @@
                             I verify the information
                         </label>
                         <div>
-                            <input type="submit" value="CONTINUE" class="btn">
+                            <input type="submit" value="CONTINUE" class="btn" id="submbtn">
                         </div>
                     </div>
                 </div>

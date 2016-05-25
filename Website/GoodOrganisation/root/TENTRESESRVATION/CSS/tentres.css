@@ -78,7 +78,7 @@ input{
 	width: 50%;
 	position: relative;
 	float: right;
-	background-color: #f58235;
+	background-color: #FFD105;
 	height: 24pt;
 	font-size: 20pt;
 }
@@ -149,3 +149,10 @@ input{
 .dateline{
 	vertical-align: top;
 }
+
+.nuwarning{
+    text-align: right;
+    font-size: 12pt;
+    display: none;
+}
+/* a warning about the uniqueness of an email*/

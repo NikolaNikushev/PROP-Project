@@ -256,6 +256,9 @@ body {
 	margin-top: 6pt;
 	float: right;
 }
+.pricelink:hover{
+    cursor: pointer;
+}
 .mline{
 	font-size: 20pt;
 }

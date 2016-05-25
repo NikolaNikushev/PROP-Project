@@ -1,0 +1,11 @@
+﻿How to setup the db to get the random codes?
+
+Start with a trivial mapping from integers to strings (like the base-26 mapping 0 ↦ aaaaaa, 1 ↦ aaaaab, …, 499999 ↦ abclqt), then use format-preserving encryption with some constant secret key to encrypt the strings (depending on the chosen key, this might look like aaaaaa ↦ c1uy7o, aaaaab ↦ y1ikeh, …, abclqt ↦ n95ayi).  The result will be indistinguishable from random to anyone who doesn’t know the encryption key, and uniqueness is guaranteed because a decryption function exists.
+
+Format-preserving encryption is distinguished from regular encryption in that a clever construction allows the input and output spaces to have an arbitrary size; they need not be in correspondence with the 2k2k binary strings of some block size kk (e.g. k∈{128,192,256}k∈{128,192,256} for AES).
+
+There are provably secure constructions for format-preserving encryption based on a regular block cipher like AES.  The modern standard is called the FFX mode of AES.
+http://en.wikipedia.org/wiki/For...
+https://www.quora.com/What-is-an-efficient-way-to-create-a-large-number-of-random-but-unique-strings
+
+If you can live with 128 bit numbers, try doing AES encryption on 1,2,3,4,... (using a secret key). They will always be unique (because aes is a one-to-one mapping), yet also random.

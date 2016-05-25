@@ -8,7 +8,8 @@
  {
   $user_email = trim($_POST['email']);
   $user_password = trim($_POST['password']);
-  
+  $_SESSION["totalprice"] = trim($_POST['finprice']);
+  $_SESSION["tennum"] = trim($_POST['tennum']);
   $password = ($user_password);
 
   try

@@ -66,3 +66,36 @@
     position: relative;
     width: 100%;
 }
+
+input{
+        background-color: #3B4D81;
+    font-family: bauhaus93;
+    color: #D7E1F2;
+    border: none;
+    font-size: 16pt;
+    text-align: right;
+    width: 120px;
+}
+select{
+        background-color: #3B4D81;
+    font-family: bauhaus93;
+    color: #D7E1F2;
+    border: none;
+    font-size: 14pt;
+}
+.btn{
+        background-color: #D7E1F2;
+	margin: auto;
+	margin-top: 30pt;
+        margin-bottom: 15pt;
+	width: 180pt;
+	height: 44pt;
+	display: block;
+	font-size: 30pt;
+        color: #3B4D81;
+	text-align: center;
+        cursor: pointer;
+}
+.btn:hover{
+    background-color: #FFD105;
+}

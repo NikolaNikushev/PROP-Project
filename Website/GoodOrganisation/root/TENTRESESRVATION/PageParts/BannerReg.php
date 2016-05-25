@@ -2,8 +2,12 @@
     session_start();
     $_SESSION["LEADERDATA"];
     $leaderData = $_SESSION["LEADERDATA"];
+    $tennum = $_SESSION["tennum"];
+    $totalprice = $_SESSION["totalprice"];
     unset($_SESSION["LEADERDATA"]);
-    echo print_r($leaderData);
+    unset($_SESSION["tennum"]);
+    unset($_SESSION["totalprice"]);
+    //echo print_r($leaderData);
 ?>
 
 
@@ -12,29 +16,28 @@
     <div class="extra toptext">
         <p>Greetings <?php echo $leaderData["FNAME"].' '.$leaderData["LNAME"] ?>!</p><br>
         <p>You are halfway on becoming a new tent chief!</p>
-        <p>Confirm the information and proceed.</p><br>
+        <p>Confirm the information and pay.</p><br>
+        <form id="second-form">
         <div class="tentresconfirm">
             <table id="checkouttable">
                 <tr>
                     <th>Tenants</th>
-                    <th>Price/Day</th>
-                    <th>Your Balance</th>
                     <th>Total Price</th>
+                    <th>Your Balance</th>
                 </tr>
                 <tr>
-                    <td width="25%"></td>
-                    <td width="25%"></td>
-                    <td width="25%"><?php echo $leaderData["BALANCE"] ?></td>
-                    <td width="25%"></td>
-                    
+                    <td width="25%"><?php echo $tennum ?></td>
+                    <td width="25%" id="tprice"><?php echo $totalprice ?></td>
+                    <td width="25%" id="ybal"><?php echo $leaderData["BALANCE"] ?></td>
                 </tr>
                 <tr>
-                    <td>Cell</td>
-                    <td>Cell</td>
+                    <td></td>
+                    <td><input type="submit" value="CONFIRM" class="btn"></td>
                 </tr>
 
             </table>
         </div>
+        </form>
         
         
         

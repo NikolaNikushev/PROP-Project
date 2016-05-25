@@ -5,14 +5,14 @@ var pricePerDay = Math.floor(totalPrice/numberTennts);
 $(document).ready(function() {
     $(document).on('submit', '#first-form', function() {
         dataMain = $(this).serialize();
-        var email = $("#user_email").val();
-        var password = $("#user_password").val();
-        var partialdatastring = 'email='+ email 
-                + '&password='+ password;
+        //var email = $("#user_email").val();
+        //var password = $("#user_password").val();
+        //var partialdatastring = 'email='+ email 
+          //      + '&password='+ password;
         $.ajax({
             type: 'POST',
             url: 'php/loginLeader.php',
-            data: partialdatastring,
+            data: dataMain,
             success: function(response) {
                 if (response.includes('logged')) {
                     
