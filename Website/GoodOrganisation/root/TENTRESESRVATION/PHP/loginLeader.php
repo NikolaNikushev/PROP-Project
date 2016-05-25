@@ -39,22 +39,27 @@ if (isset($_POST)) {
         if ($count == $tennbr) {
             // only if returned as many rows as emails were input
             if ($row['PASSWORD'] == $password && $password != "") {
-
-                echo "ok-you logged in" . print_r($row) . print_r($params) . " for this number of tenants:" . $tennbr . " searchguest " . $chckGuest . " :ANDSEARCHQUERYWAS:" . print_r($params);
+                echo "Congrats, you have logged in";
+                //echo "ok-you logged in" . print_r($row) . print_r($params) . " for this number of tenants:" . $tennbr . " searchguest " . $chckGuest . " :ANDSEARCHQUERYWAS:" . print_r($params);
                 $_SESSION["USER_ID"] = $row['USER_ID'];
                 $_SESSION["LEADERDATA"] = $row;
             } else {
-
-                echo "email or password does not exist." . print_r($params) . " for this number of tenants:" . $tennbr . " searchguest " . $chckGuest . ":ANDSEARCHQUERYWAS:" . print_r($params);
-                ;
+                echo "This combination of an email and a password is unknown. Please make sure you have entered it correctly";  
+                //echo "This combination of an email and a password is unkknown" . print_r($params) . " for this number of tenants:" . $tennbr . " searchguest " . $chckGuest . ":ANDSEARCHQUERYWAS:" . print_r($params);                ;
             }
         } 
         else 
         {
             echo "At least one of the email is not registered in out system. Make sure that you have entered correct emails";
         }
+        unset($stmt);
     } catch (PDOException $e) {
+        unset($stmt);
         echo $e->getMessage();
     }
+    // uncompetible with language version? srsly? 
+//    finally {
+//        unset($stmt);
+//    }
 }
 ?>

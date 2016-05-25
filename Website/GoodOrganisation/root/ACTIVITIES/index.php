@@ -13,15 +13,12 @@
 <title>ACTIVITIES</title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 
-<!-- TRYING TO CONNECT GOOGLE PROVIDED JQUERY -->
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-<script type="text/javascript" src="../DEFAULT/JS/jquery-1.12.2.min.js"></script>
 
 <!-- main stuff -->
 <link rel="stylesheet" type="text/css" href="CSS/activities.css">
 <link rel="stylesheet" type="text/css" href="../DEFAULT/CSS/INTEGRAL.css">
 <link rel="stylesheet" type="text/css" href="../DEFAULT/CSS/FOOTER.css">
-<script type="text/javascript" src="JS\activities.js"></script>
+
 <link rel="stylesheet" type="text/css" href="../DEFAULT/CSS/fixedmenu.css">
 
 </head>
@@ -168,4 +165,8 @@
     </div>
     
     <?php include '../DEFAULT/PAGEPARTS/footer.php';?>
+    <!-- TRYING TO CONNECT GOOGLE PROVIDED JQUERY -->
+        <script type="text/javascript" src="../DEFAULT/JS/jquery-2.2.3.min.js"></script>
+        <script type="text/javascript" src="JS\activities.js"></script>
+        <script type="text/javascript" src="../DEFAULT/JS/velocity.min.js"></script>
 </body>

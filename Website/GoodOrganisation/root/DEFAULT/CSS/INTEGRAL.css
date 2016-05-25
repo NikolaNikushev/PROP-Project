@@ -9,3 +9,7 @@
 body{
 	    background: rgba(245, 130, 53, 1);
 }
+@font-face {
+    font-family: "odinlight";
+    src:url("../FONTS/odinroundedlight.otf") format("truetype");
+}

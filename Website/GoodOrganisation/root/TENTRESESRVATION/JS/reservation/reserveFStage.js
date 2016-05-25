@@ -21,13 +21,13 @@ $(document).ready(function() {
                     $(".banner").show();
                     $(".central").load("pageparts/BannerReg.php");
                     //$("#Reg").show();
-                    alert(response);
+                    //alert(response);
 
                 } else {
                    $(".banner").show();
                    $(".central").load("pageparts/BannerNoReg.php", {resp: response});
                   //$("#noReg").show();
-                  alert(response);
+                  //alert(response);
                   resp = response;
                 }
             }
