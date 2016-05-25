@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BraceletManagement
 {
-    abstract class SomeAbstractData
+    public abstract  class SomeAbstractData
     {
         
     }

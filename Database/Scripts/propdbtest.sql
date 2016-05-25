@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: May 25, 2016 at 12:18 AM
+-- Generation Time: May 25, 2016 at 07:18 PM
 -- Server version: 10.1.9-MariaDB
 -- PHP Version: 5.6.15
 
@@ -104,7 +104,6 @@ CREATE TABLE `camps` (
   `CAMPING_ID` int(11) NOT NULL,
   `TENTNR` int(11) NOT NULL,
   `CAPACITY` int(11) NOT NULL,
-  `STATUS` varchar(15) DEFAULT NULL,
   `TYPE` varchar(25) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -112,11 +111,11 @@ CREATE TABLE `camps` (
 -- Dumping data for table `camps`
 --
 
-INSERT INTO `camps` (`CAMPING_ID`, `TENTNR`, `CAPACITY`, `STATUS`, `TYPE`) VALUES
-(10001, 33, 12, NULL, NULL),
-(11112, 34, 2, NULL, NULL),
-(11113, 12, 12, NULL, NULL),
-(11114, 13, 36, NULL, NULL);
+INSERT INTO `camps` (`CAMPING_ID`, `TENTNR`, `CAPACITY`, `TYPE`) VALUES
+(10001, 33, 12, 'TIPI'),
+(11112, 34, 2, 'CARDBOARD BOX'),
+(11113, 12, 12, 'CHAIR CASTLE'),
+(11114, 13, 36, 'TREE HOUSE');
 
 -- --------------------------------------------------------
 
@@ -225,6 +224,7 @@ CREATE TABLE `serpayments` (
   `PAYMENT_ID` int(11) NOT NULL,
   `USER_ID` int(11) NOT NULL,
   `DATE` datetime NOT NULL,
+  `TYPE` varchar(1) NOT NULL,
   `PAYSUM` double NOT NULL,
   `DESCRIPTION` varchar(250) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -258,25 +258,13 @@ CREATE TABLE `stores` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tentleader`
+-- Table structure for table `tentleaders`
 --
 
-CREATE TABLE `tentleader` (
+CREATE TABLE `tentleaders` (
   `CAMPING_ID` int(11) NOT NULL,
   `USER_ID` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
--- --------------------------------------------------------
-
---
--- Stand-in structure for view `tentleadersextra_view`
---
-CREATE TABLE `tentleadersextra_view` (
-`USER_ID` int(11)
-,`CAMPING_ID` int(11)
-,`FNAME` varchar(25)
-,`LNAME` varchar(25)
-);
 
 -- --------------------------------------------------------
 
@@ -334,15 +322,6 @@ INSERT INTO `visitors` (`USER_ID`, `SECCODE`, `PASSWORD`, `EMAIL`, `FNAME`, `LNA
 DROP TABLE IF EXISTS `activityplaces_view`;
 
 CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `activityplaces_view`  AS  select `a`.`ACTIVITY_ID` AS `ACTIVITY_ID`,`a`.`TOTALPLACES` AS `TOTALPLACES`,floor((`a`.`TOTALPLACES` / 2)) AS `TORESPLCS`,count(`ar`.`USER_ID`) AS `RESERVEDPLACES` from (`activities` `a` join `activityreservations` `ar` on((`a`.`ACTIVITY_ID` = `ar`.`ACTIVITY_ID`))) group by `a`.`ACTIVITY_ID` ;
-
--- --------------------------------------------------------
-
---
--- Structure for view `tentleadersextra_view`
---
-DROP TABLE IF EXISTS `tentleadersextra_view`;
-
-CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `tentleadersextra_view`  AS  select `t`.`USER_ID` AS `USER_ID`,`t`.`CAMPING_ID` AS `CAMPING_ID`,`v`.`FNAME` AS `FNAME`,`v`.`LNAME` AS `LNAME` from (`tentleader` `t` join `visitors` `v` on((`t`.`USER_ID` = `v`.`USER_ID`))) ;
 
 --
 -- Indexes for dumped tables
@@ -428,9 +407,9 @@ ALTER TABLE `stores`
   ADD UNIQUE KEY `ACCESSCODE` (`ACCESSCODE`);
 
 --
--- Indexes for table `tentleader`
+-- Indexes for table `tentleaders`
 --
-ALTER TABLE `tentleader`
+ALTER TABLE `tentleaders`
   ADD PRIMARY KEY (`CAMPING_ID`,`USER_ID`),
   ADD KEY `USER_ID` (`USER_ID`);
 
@@ -470,7 +449,7 @@ ALTER TABLE `pincodes`
 -- AUTO_INCREMENT for table `serpayments`
 --
 ALTER TABLE `serpayments`
-  MODIFY `PAYMENT_ID` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `PAYMENT_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT for table `visitors`
 --
@@ -502,23 +481,17 @@ ALTER TABLE `salelines`
   ADD CONSTRAINT `salelines_ibfk_2` FOREIGN KEY (`PRODUCT_ID`) REFERENCES `productstorages` (`PRODUCT_ID`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Constraints for table `serpayments`
---
-ALTER TABLE `serpayments`
-  ADD CONSTRAINT `serpayments_ibfk_1` FOREIGN KEY (`PAYMENT_ID`) REFERENCES `visitors` (`USER_ID`) ON DELETE CASCADE ON UPDATE CASCADE;
-
---
 -- Constraints for table `storepayment`
 --
 ALTER TABLE `storepayment`
   ADD CONSTRAINT `storepayment_ibfk_1` FOREIGN KEY (`USER_ID`) REFERENCES `visitors` (`USER_ID`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Constraints for table `tentleader`
+-- Constraints for table `tentleaders`
 --
-ALTER TABLE `tentleader`
-  ADD CONSTRAINT `tentleader_ibfk_1` FOREIGN KEY (`USER_ID`) REFERENCES `visitors` (`USER_ID`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `tentleader_ibfk_2` FOREIGN KEY (`CAMPING_ID`) REFERENCES `camps` (`CAMPING_ID`) ON DELETE CASCADE ON UPDATE CASCADE;
+ALTER TABLE `tentleaders`
+  ADD CONSTRAINT `tentleaders_ibfk_1` FOREIGN KEY (`USER_ID`) REFERENCES `visitors` (`USER_ID`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `tentleaders_ibfk_2` FOREIGN KEY (`CAMPING_ID`) REFERENCES `camps` (`CAMPING_ID`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `visitors`

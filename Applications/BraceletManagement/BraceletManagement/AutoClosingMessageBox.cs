@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace BraceletManagement
 {
-    public class AutoClosingMessageBox
+    public  class AutoClosingMessageBox
     {
         System.Threading.Timer _timeoutTimer;
         string _caption;

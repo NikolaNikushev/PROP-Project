@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BraceletManagement
 {
-    interface IDataContainer
+    public interface IDataContainer
     {
         //StatusTypes GetData(string info);
     }

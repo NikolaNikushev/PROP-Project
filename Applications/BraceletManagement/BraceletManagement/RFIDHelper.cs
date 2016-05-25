@@ -8,7 +8,7 @@ using Phidgets.Events;
 
 namespace BraceletManagement
 {
-    class RFIDHelper
+    public class RFIDHelper
     {
         //--------Properties and Fields:
 

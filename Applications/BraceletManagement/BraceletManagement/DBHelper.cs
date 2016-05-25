@@ -9,7 +9,7 @@ using MySql.Data.MySqlClient;
 
 namespace BraceletManagement
 {
-    class DBHelper
+    public class DBHelper
     {
         private int messageShowTime = 1000;
         public MySqlConnection connection;
