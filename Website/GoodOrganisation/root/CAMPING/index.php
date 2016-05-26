@@ -1,4 +1,30 @@
+<?php
+    require_once '../default/phpfunc/dbconfig.php';
+    require_once 'php/checkCampsAvailable.php';
+    $count = FillCampData($db_con);
+    $imgPath= "";
+    $linkPath ="";
+    if($count>0)
+    {
+        if($count>1)
+        {
+            $imgPath = "images/BTNRESERVE.png";
+        }
+        else
+        {
+            $imgPath = "images/onetipisleft.png";
+        }
+        $linkPath = "../tentreservation/";
+    }
+    else
+    {
+        $imgPath = "images/notipisleft.png";
+        $linkPath = "#";
+    }
+    
+?>
 <!DOCTYPE html>
+
 <html>
 
 <head>
@@ -24,7 +50,7 @@
     </div>
     <div class="row" id="main-content">
       <div class="col-md-4 col-md-offset-2" id="image">
-        <a href="../TENTRESESRVATION/index.php"><img id="campresim" src="images/BTNRESERVE.png" alt="Reserve a Tent!" /></a>
+          <a href="<?php echo $linkPath ?>"><img id="campresim" src="<?php echo $imgPath ?>" alt="Reserve a Tent!" /></a>
       </div>
       <div class="col-md-4" id="text-container">
         <p id="text">

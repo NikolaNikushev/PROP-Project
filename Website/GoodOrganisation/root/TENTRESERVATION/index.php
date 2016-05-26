@@ -1,3 +1,24 @@
+<?php
+    require_once '../default/phpfunc/dbconfig.php';
+    require_once 'php/checkCampsAvailable.php';
+    $count = FillCampData($db_con);
+    $text= "GROUP DETAILS";
+    $linkPath ="";
+    $chckbox = '<input type="checkbox" name="verify" value="yes" id="check" required="required">';
+    if($count>0)
+    {
+        $text = "GROUP DETAILS";
+        $disbtn = "true"; 
+         $chckbox = '<input type="checkbox" name="verify" value="yes" id="check" required="required">';
+    }
+    else
+    {
+        $text = "WE DEEPLY REGRET, BUT NO PLACES ARE LEFT.";
+        $chckbox = '<input type="checkbox" disabled name="verify" value="yes" id="check" required="required">';
+    }
+    
+?>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -34,7 +55,7 @@
         <form id = "first-form">
             <div id="tentform" class="content">
                 <div id="grtit">
-                    <h1>GROUP DETAILS</h1>
+                    <h1><?php echo $text ?></h1>
                 </div>
                 <div id="controls" class="boxie">
                     <p class="shortline ">Number of tenants: </p>
@@ -107,8 +128,8 @@
                                                  required="required" type="number" readonly
                                                  name="finprice" id="finprice"></h2>
                     <div id="ckbx">
-
-                        <input type="checkbox" name="verify" value="yes" id="check" required="required">
+                        <?php echo $chckbox ?>
+                        <!--<input type="checkbox" name="verify" value="yes" id="check" required="required">-->
                         <label>
                             I verify the information
                         </label>
@@ -128,5 +149,6 @@
         </div>
 
         <?php include '../DEFAULT/PAGEPARTS/footer.php'; ?>
+     <script src="../DEFAULT/sweetalert-master/sweetalert-master/dist/sweetalert.min.js"></script>
     </body>
 </html>

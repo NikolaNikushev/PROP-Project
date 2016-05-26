@@ -26,15 +26,29 @@ if (isset($_POST)) {
 
     /* Create a string for the parameter placeholders filled to the number of params */
     $place_holders = implode(',', array_fill(0, count($params), '?'));
-    $sqlstmt = "SELECT USER_ID, PASSWORD, EMAIL, FNAME, LNAME, BALANCE, IFNULL(CAMPING_ID,'nan') as CAMP FROM "
+    // stmnt to retrieve user data
+    $sqlForLead = "SELECT USER_ID, PASSWORD, EMAIL, FNAME, LNAME, BALANCE, IFNULL(CAMPING_ID,'nan') as CAMP FROM "
             . "visitors WHERE "
-            . "EMAIL IN ($place_holders)";
+            . "EMAIL = :email";
+    // stmnt to count
+    $sqlForCount = "SELECT COUNT(*) as NMBR "
+            . "FROM visitors "
+            . "WHERE "
+            . "visitors.EMAIL IN ($place_holders);";
     try {
-
-        $stmt = $db_con->prepare($sqlstmt);
-        $stmt->execute($params);
-        $row = $stmt->fetch(PDO::FETCH_ASSOC);
-        $count = $stmt->rowCount();
+        $db_con->beginTransaction();
+        
+        $stmtLD = $db_con->prepare($sqlForLead);
+        $stmtNBR = $db_con->prepare($sqlForCount);
+        $stmtLD->execute([
+            ":email" => $_POST['email'],
+        ]);
+        $stmtNBR->execute($params);
+        
+        $row = $stmtLD->fetch(PDO::FETCH_ASSOC);
+        $countres = $stmtNBR->fetch(PDO::FETCH_ASSOC);
+        
+        $count = $countres["NMBR"];
         // checking if returned the same amount as expected
         if ($count == $tennbr) {
             // only if returned as many rows as emails were input
@@ -55,7 +69,8 @@ if (isset($_POST)) {
         unset($stmt);
     } catch (PDOException $e) {
         unset($stmt);
-        echo $e->getMessage();
+        $info = print_r($_POST);
+        echo $info.$e->getMessage();
     }
     // uncompetible with language version? srsly? 
 //    finally {

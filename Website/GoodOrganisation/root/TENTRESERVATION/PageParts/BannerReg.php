@@ -18,6 +18,7 @@
         <p>You are halfway on becoming a new tent chief!</p>
         <p>Confirm the information and pay.</p><br>
         <form id="second-form">
+            <input class="secret" type="number" name="ybal" readonly value='<?php echo $leaderData["BALANCE"]?>' style="display: none">
         <div class="tentresconfirm">
             <table id="checkouttable">
                 <tr>

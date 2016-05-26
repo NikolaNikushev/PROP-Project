@@ -20,7 +20,7 @@ if(isset($_SESSION['USER_ID']))
 {
 	echo '<ul id="nav">
 		<li class="dropdown">
-			<a class="dropbtn" href="../index.php">INFO</a>
+			<a class="dropbtn" href="../">INFO</a>
 			<div class="dropdown-content">
 				<a href="../info/general.php">GENERAL</a>
 				<a href="../info/explore.php">EXPLORE</a>
@@ -28,17 +28,17 @@ if(isset($_SESSION['USER_ID']))
 				<a href="../info/rules.php">RULES</a>
 			</div>
 		</li>
-		<!-- <li><a href="../program/index.php">PROGRAM</a></li> -->
+		<!-- <li><a href="../program/">PROGRAM</a></li> -->
 		<li class="dropdown">
-			<a class="dropbtn" href="../program/index.php">PROGRAM</a>
+			<a class="dropbtn" href="../program">PROGRAM</a>
 			<div class="dropdown-content">
-				<a href="../activities/index.php">ACTIVITIES</a>
+				<a href="../activities">ACTIVITIES</a>
 			</div>
 		</li>
-		<li><a href="../tickets/index.php">TICKETS</a></li>
-		<li><a href="../camping/index.php">CAMPING</a>
+		<li><a href="../tickets">TICKETS</a></li>
+		<li><a href="../camping">CAMPING</a>
 		<li class="dropdown">
-				<a class="dropbtn" href="../register/index.php">ACCOUNT</a>
+				<a class="dropbtn" href="../register/">ACCOUNT</a>
 				<div class="dropdown-content">
 					<a class="dropbtn" href="../DEFAULT/PHPFUNC/logout.php">LOGOUT</a>
 				<div>
@@ -49,7 +49,7 @@ if(isset($_SESSION['USER_ID']))
 else {
 	echo '<ul id="nav">
 	 <li class="dropdown">
-		 <a class="dropbtn" href="../index.php">INFO</a>
+		 <a class="dropbtn" href="../">INFO</a>
 		 <div class="dropdown-content">
 			 <a href="../info/general.php">GENERAL</a>
 			 <a href="../info/explore.php">EXPLORE</a>
@@ -57,16 +57,16 @@ else {
 			 <a href="../info/rules.php">RULES</a>
 		 </div>
 	 </li>
-	 <!-- <li><a href="../program/index.php">PROGRAM</a></li> -->
+	 <!-- <li><a href="../program/">program</a></li> -->
 		<li class="dropdown">
 		 <a class="dropbtn" href="../program/index.php">PROGRAM</a>
 		 <div class="dropdown-content">
 			 <a href="../activities/index.php">ACTIVITIES</a>
 		 </div>
 	 </li>
-	 <li><a href="../tickets/index.php">TICKETS</a></li>
-	 <li><a href="../camping/index.php">CAMPING</a></li>
-	 <li><a href="../register/index.php">ACCOUNT</a></li>
+	 <li><a href="../tickets/">TICKETS</a></li>
+	 <li><a href="../camping/">CAMPING</a></li>
+	 <li><a href="../register/">ACCOUNT</a></li>
  </ul>';
 
 
