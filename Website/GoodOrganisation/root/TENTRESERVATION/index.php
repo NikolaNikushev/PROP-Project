@@ -1,22 +1,18 @@
 <?php
-    require_once '../default/phpfunc/dbconfig.php';
-    require_once 'php/checkCampsAvailable.php';
-    $count = FillCampData($db_con);
-    $text= "GROUP DETAILS";
-    $linkPath ="";
+require_once '../default/phpfunc/dbconfig.php';
+require_once 'php/checkCampsAvailable.php';
+$count = FillCampData($db_con);
+$text = "GROUP DETAILS";
+$linkPath = "";
+$chckbox = '<input type="checkbox" name="verify" value="yes" id="check" required="required">';
+if ($count > 0) {
+    $text = "GROUP DETAILS";
+    $disbtn = "true";
     $chckbox = '<input type="checkbox" name="verify" value="yes" id="check" required="required">';
-    if($count>0)
-    {
-        $text = "GROUP DETAILS";
-        $disbtn = "true"; 
-         $chckbox = '<input type="checkbox" name="verify" value="yes" id="check" required="required">';
-    }
-    else
-    {
-        $text = "WE DEEPLY REGRET, BUT NO PLACES ARE LEFT.";
-        $chckbox = '<input type="checkbox" disabled name="verify" value="yes" id="check" required="required">';
-    }
-    
+} else {
+    $text = "WE DEEPLY REGRET, BUT NO PLACES ARE LEFT.";
+    $chckbox = '<input type="checkbox" disabled name="verify" value="yes" id="check" required="required">';
+}
 ?>
 
 <!DOCTYPE html>
@@ -30,6 +26,7 @@
         <link rel="stylesheet" type="text/css" href="CSS/tentres.css">
         <link rel="stylesheet" type="text/css" href="CSS/banner.css">
         <link rel="stylesheet" type="text/css" href="css/txtareaconsole.css">
+        <link rel="stylesheet" type="text/css" href="../DEFAULT/sweetalert-master/sweetalert-master/dist/sweetalert.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
         <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
 
@@ -43,12 +40,12 @@
 
             <div class="central">
                 <!-- Stuff to be loaded here with ajax -->
-                
+
             </div>
         </div>
 
         <div id="header" class="scrolled">
-            <?php include '../DEFAULT/PAGEPARTS/Header.php'; ?>
+<?php include '../DEFAULT/PAGEPARTS/Header.php'; ?>
         </div>
         <!-- the light blue rectangle in he middle USE AJAX FORM MANIPULATION! -->
         <!--<form action="PHP/ProcessBooking.php" method="post">-->
@@ -128,7 +125,7 @@
                                                  required="required" type="number" readonly
                                                  name="finprice" id="finprice"></h2>
                     <div id="ckbx">
-                        <?php echo $chckbox ?>
+<?php echo $chckbox ?>
                         <!--<input type="checkbox" name="verify" value="yes" id="check" required="required">-->
                         <label>
                             I verify the information
@@ -148,7 +145,7 @@
             </div>
         </div>
 
-        <?php include '../DEFAULT/PAGEPARTS/footer.php'; ?>
-     <script src="../DEFAULT/sweetalert-master/sweetalert-master/dist/sweetalert.min.js"></script>
+<?php include '../DEFAULT/PAGEPARTS/footer.php'; ?>
+        <script src="../DEFAULT/sweetalert-master/sweetalert-master/dist/sweetalert.min.js"></script>
     </body>
 </html>

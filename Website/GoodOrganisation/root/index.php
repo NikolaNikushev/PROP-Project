@@ -96,11 +96,7 @@
 	</div>
 	<div id="footer">
 <img id="footerlogo" src="DEFAULT/IMAGES/LOGOFOOT.png" />
-<ul id="footernav">
-  <li><a href="#">NEWS & SOCIAL</a></li>
-  <li><a href="#">CONTACT US</a></li>
-  <li><a href="#">TERMS AND PRIVACY</a></li>
-</ul>
+<?php require_once 'default/pageparts/footerlinks.php'; ?>
 <div id="social">
 	<img id="footerfacebook" src="DEFAULT/IMAGES/facebook.png" />
 	<img id="footertwitter" src="DEFAULT/IMAGES/twitter.png" />

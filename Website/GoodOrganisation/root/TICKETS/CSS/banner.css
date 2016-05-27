@@ -8,8 +8,8 @@
 	//display: block;
 }
 .central{
-	min-width: 600px;
-        width: 50vw;
+	min-width: 500px;
+        width: 30vw;
 	position: relative;
 	margin: auto;
 	text-align: center;
@@ -20,6 +20,13 @@
 }
 .reg{
     width: 600px;
+}
+.expl{
+    margin-left: 2pt;
+    margin-right: 2pt;
+}
+.ban{
+    width: inherit !important;
 }
 .topcont{
 	display: block;
@@ -84,7 +91,7 @@ select{
     font-size: 14pt;
 }
 .btn{
-        background-color: #D7E1F2;
+        background-color: #F58235;
 	margin: auto;
 	margin-top: 30pt;
         margin-bottom: 15pt;
@@ -96,6 +103,7 @@ select{
 	text-align: center;
         cursor: pointer;
 }
-.btn:hover{
-    background-color: #FFD105;
+#regis{
+    color:#F58235;
+    text-decoration: underline dotted;
 }

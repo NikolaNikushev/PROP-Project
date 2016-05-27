@@ -47,9 +47,7 @@ session_start();
                                 echo '<img id="best" class="pricelink logged" src="images/BTNBEST.png">';
                             } else {
                                 echo
-                                '<a href="../register/">
-                                        <img class="pricelink" src="images/BTNBEST.png">
-                                        </a>';
+                                '<img class="pricelink notlogged" src="images/BTNBEST.png"></a>';
                             }
                             ?>
                         </div>
@@ -68,12 +66,10 @@ session_start();
                             </div>
                             <?php
                             if (isset($_SESSION["USER_ID"])) {
-                                echo '<img id="btr"  class="pricelink logged" src="images/BTNBETR.png">';
+                                echo '<img id="best" class="pricelink logged" src="images/BTNBETR.png">';
                             } else {
                                 echo
-                                '<a href="../register/">
-                                        <img class="pricelink" src="images/BTNBETR.png">
-                                        </a>';
+                                '<img class="pricelink notlogged" src="images/BTNBETR.png"></a>';
                             }
                             ?>
                         </div>
@@ -95,12 +91,10 @@ session_start();
                             </div>
                             <?php
                             if (isset($_SESSION["USER_ID"])) {
-                                echo '<img id="per"  class="pricelink logged" src="images/BTNPER.png">';
+                                echo '<img id="best" class="pricelink logged" src="images/BTNPER.png">';
                             } else {
                                 echo
-                                '<a href="../register/">
-                                        <img class="pricelink" src="images/BTNPER.png">
-                                        </a>';
+                                '<img class="pricelink notlogged" src="images/BTNPER.png"></a>';
                             }
                             ?>
                         </div>
@@ -154,7 +148,7 @@ session_start();
                 </div>
                 <div id="largebtns">
                     <div class="lrgbutt">
-                        <a href="mailto:faq@uos.com?subject=Oh Jeez, Help Me Pleeze&body=I am having troubles with: ">
+                        <a href="mailto:jobsdoneuniversal@gmail.com?subject=Oh Jeez, Help Me Pleeze&body=I am having troubles with: ">
                             <div class="largebutt FAQ"><p>QUESTIONS?</p></div>
                         </a>
                     </div>
@@ -205,6 +199,8 @@ session_start();
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
         <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
         <script type="text/javascript" src="JS/pricelinkclick.js"></script>
+        <script type="text/javascript" src="JS/login-control.js"></script>
+        <script type="text/javascript" src="JS/checkout-controls.js"></script>
     </body>
 
 </html>

@@ -34,7 +34,8 @@ if (isset($_POST)) {
     $sqlForCount = "SELECT COUNT(*) as NMBR "
             . "FROM visitors "
             . "WHERE "
-            . "visitors.EMAIL IN ($place_holders);";
+            . "visitors.EMAIL IN ($place_holders) "
+            . "AND visitors.CAMPING_ID is NULL;";
     try {
         $db_con->beginTransaction();
         

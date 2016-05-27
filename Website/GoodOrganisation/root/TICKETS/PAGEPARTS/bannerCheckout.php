@@ -9,18 +9,20 @@
                                     <tr>
                                         <th>Bracelet</th>
                                         <th>Total Price</th>
+                                        <!-- <th>Balance</th> -->
                                     </tr>
                                     <tr>
-                                        <td width="50%">
-                                            <select>
-                                                <option value="volvo">BEST</option>
-                                                <option value="saab">BETTER</option>
-                                                <option value="opel">PERFECT</option>
+                                        <td width="33%">
+                                            <select class="droptions" onchange="changePrice()">
+                                                <option value="BEST">BEST</option>
+                                                <option value="BETTER">BETTER</option>
+                                                <option value="PERFECT">PERFECT</option>
                                             </select>
                                         </td>
-                                        <td width="50%" id="tprice">
-                                            <input type="number" readonly id="pr" name="price">
+                                        <td width="33%" id="tprice">
+                                            <input type="number" readonly id="pr" name="price" value="<?php echo $_POST['price']?>">
                                         </td>
+                                        <!-- Extra for the balance -->
                                     </tr>
 
                                 </table>

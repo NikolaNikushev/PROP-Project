@@ -45,7 +45,7 @@ require_once 'php/getPersonalActivities.php';
                                 '
                             <li class="act_item">
                                 <div class="activity">
-                                    <div class="activity_img" style=\'background-image: url("images/deficon.png")\'>
+                                    <div class="activity_img" style=\'background-image: url("images/deficon.gif")\'>
 
                                     </div>
                                     
