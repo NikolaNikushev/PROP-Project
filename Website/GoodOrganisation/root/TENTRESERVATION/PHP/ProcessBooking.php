@@ -4,6 +4,7 @@ require_once 'dbconfig.php';
 $outputmsg = "";
 $campdata = [];
 $count = 0;
+
 if (isset($_POST)) {
     try {
         // retrieves the data about an available camp and puts it into the campdata array
@@ -57,8 +58,8 @@ function InsertLeaderData($dbcon, &$campdata) {
         $sqltlds = "INSERT INTO tentleaders (CAMPING_ID, USER_ID) " .
                 "VALUES(:camp_id, :leader_id);";
 
-        $sqlsrts = "INSERT INTO serpayments (USER_ID, DATE, PAYSUM, DESCRIPTION) " .
-                "VALUES(:leader_id,:date,:sum,'Tent Reservation Payment. Group of " . trim($_POST['tennum']) . " .');";
+        $sqlsrts = "INSERT INTO serpayments (USER_ID, DATE, TYPE, PAYSUM, DESCRIPTION) " .
+                "VALUES(:leader_id, '-',:date,:sum,'Tent Reservation Payment. Group of " . trim($_POST['tennum']) . " .');";
 
         $sqlgrres = "UPDATE visitors SET visitors.BALANCE = :reducedBalance where visitors.USER_ID = :leader_id";
 

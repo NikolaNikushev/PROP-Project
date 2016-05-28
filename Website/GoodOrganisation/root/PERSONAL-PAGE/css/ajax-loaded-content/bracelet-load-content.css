@@ -19,3 +19,10 @@
 #bracelet-close-button{
   padding-right: 1vh;
 }
+.clckbl{
+    border-bottom: 2pt #3b4d81 dashed;
+}
+.clckbl:hover{
+    border-bottom: 2pt #3b4d81 solid;
+    cursor: pointer;
+}

@@ -8,7 +8,7 @@ session_start();
     $date_of_birth = $_POST['date_of_birth'];
     $user_password = $_POST['password'];
     $user_email = $_POST['user_email'];
-    $user_address = $_POST['sba'].','.$_POST['city'].','.$_POST['country'].','.$_POST['zip'];
+    $user_address = ucwords(strtolower($_POST['sba'])).','.ucwords(strtolower($_POST['city'])).','.strtoupper($_POST['country']).','.strtoupper($_POST['zip']);
     $joining_date = date('Y-m-d H:i:s');
 
     try
@@ -20,19 +20,19 @@ session_start();
 
              $stmt = $db_con->prepare("INSERT INTO visitors(FNAME,LNAME,EMAIL,PASSWORD,ADDRESS,DOB,REGDATE) VALUES(:fname,:lname,:email, :pass,:uaddress,:dob,:jdate)");
 
-             $stmt->bindParam(":fname",$first_name);
-             $stmt->bindParam(":lname",$last_name);
-             $stmt->bindParam(":pass",$password);
+             $stmt->bindParam(":fname",ucwords(strtolower($first_name)) );
+             $stmt->bindParam(":lname",ucwords(strtolower($last_name)) );
+             $stmt->bindParam(":pass",strtolower($password));
              $stmt->bindParam(":dob",$date_of_birth);
              $stmt->bindParam(":jdate",$joining_date);
-             $stmt->bindParam(":email",$user_email);
-             $stmt->bindParam(":pass",$user_password);
+             $stmt->bindParam(":email",strtolower($user_email));
+             $stmt->bindParam(":pass",strtolower($user_password));
              $stmt->bindParam(":uaddress",$user_address);
 
               if($stmt->execute())
               {
                   $stmt = $db_con->prepare("SELECT * FROM visitors WHERE EMAIL=:email");
-                  $stmt->execute(array(":email"=>$user_email));
+                  $stmt->execute(array(":email"=> strtolower ($user_email) ));
                   $row = $stmt->fetch(PDO::FETCH_ASSOC);
                   $_SESSION['USER_ID'] = $row['USER_ID'];
                    echo "Registered successfully".print_r($row).$_SESSION['USER_ID'];

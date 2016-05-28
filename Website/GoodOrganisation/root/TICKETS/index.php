@@ -8,8 +8,10 @@ session_start();
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
         <link rel="stylesheet" type="text/css" href="css/tickets.css">
+        <link rel="stylesheet" type="text/css" href="../DEFAULT/CSS/footer.css">
         <link rel="stylesheet" type="text/css" href="css/banner.css">
-        
+        <link rel="stylesheet" type="text/css" href="css/txtareaconsole.css">
+        <link rel="stylesheet" type="text/css" href="../DEFAULT/sweetalert-master/sweetalert-master/dist/sweetalert.css">
         
     </head>
     <body>
@@ -43,12 +45,13 @@ session_start();
                                 </p>
                             </div>
                             <?php
-                            if (isset($_SESSION["USER_ID"])) {
-                                echo '<img id="best" class="pricelink logged" src="images/BTNBEST.png">';
-                            } else {
+                            //if (isset($_SESSION["BALANCE"])) {
+                                //echo '<img id="best" class="pricelink logged" src="images/BTNBEST.png">';
+                                //echo $_SESSION["BALANCE"];
+//                            } else {
                                 echo
                                 '<img class="pricelink notlogged" src="images/BTNBEST.png"></a>';
-                            }
+//                            }
                             ?>
                         </div>
                         <!-- For the second type -->
@@ -65,12 +68,12 @@ session_start();
                                 </p>
                             </div>
                             <?php
-                            if (isset($_SESSION["USER_ID"])) {
-                                echo '<img id="best" class="pricelink logged" src="images/BTNBETR.png">';
-                            } else {
+                            //if (isset($_SESSION["BALANCE"])) {
+                                //echo '<img id="best" class="pricelink logged" src="images/BTNBETR.png">';
+                            //} else {
                                 echo
                                 '<img class="pricelink notlogged" src="images/BTNBETR.png"></a>';
-                            }
+                            //}
                             ?>
                         </div>
                         <!-- For the third type -->
@@ -90,12 +93,12 @@ session_start();
                                 </p>
                             </div>
                             <?php
-                            if (isset($_SESSION["USER_ID"])) {
-                                echo '<img id="best" class="pricelink logged" src="images/BTNPER.png">';
-                            } else {
+                            //if (isset($_SESSION["BALANCE"])) {
+                            //    echo '<img id="best" class="pricelink logged" src="images/BTNPER.png">';
+//                            } else {
                                 echo
                                 '<img class="pricelink notlogged" src="images/BTNPER.png"></a>';
-                            }
+//                            }
                             ?>
                         </div>
                         <!--
@@ -196,6 +199,7 @@ session_start();
         </div> 
 
         <?php include '../DEFAULT/PAGEPARTS/footer.php'; ?>
+        <script src="../DEFAULT/sweetalert-master/sweetalert-master/dist/sweetalert.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
         <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
         <script type="text/javascript" src="JS/pricelinkclick.js"></script>

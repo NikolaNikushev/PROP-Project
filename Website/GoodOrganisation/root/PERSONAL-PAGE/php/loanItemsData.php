@@ -5,7 +5,7 @@ if (isset($_SESSION['USER_ID']))
       echo "not logged in + we have to make some fancy error shit, redirect to error page";
     }
     $user_id = $_SESSION['USER_ID'];
-    $loanItemsQuery = "SELECT v.FNAME, v.LNAME, v.DOB, v.ADDRESS, v.BALANCE, IFNULL(r.STATUS,'NOT ACTIVE') AS 'STATUS', IFNULL(r.BRACELET_ID,'NOT SET') AS 'BRACELET_ID',
+    $loanItemsQuery = "SELECT v.FNAME, v.LNAME, v.DOB, v.ADDRESS, v.PAID, v.BALANCE, IFNULL(r.STATUS,'NOT ACTIVE') AS 'STATUS', IFNULL(r.BRACELET_ID,'NOT SET') AS 'BRACELET_ID',
                        IFNULL(l.STARTDATE,'N/A') AS 'STARTDATE', IFNULL(l.DUEDATE,'N/A') as 'DUEDATE', IFNULL(l.PRICEDAY,'N/A') AS 'PRICEDAY',IFNULL(l.NAME,'NO ITEMS RESERVED') AS 'ITEMNAME'
                        FROM visitors v left outer join rfids r
                        ON v.BRACELET_ID = r.BRACELET_ID left outer join loanitems l

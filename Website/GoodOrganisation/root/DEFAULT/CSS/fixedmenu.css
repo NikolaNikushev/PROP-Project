@@ -6,6 +6,10 @@
     font-family: "bauhaus93";
     src:url("bauhaus93.ttf") format("truetype");
 }
+@font-face {
+    font-family: "odinlight";
+    src:url("../FONTS/odinroundedlight.otf") format("truetype");
+}
 body {
 	font-family: bauhaus93;
 }

@@ -118,22 +118,10 @@ body {
 	width : 1000pt;
 	height : 243pt;
 }
-.NormalCharacterStyle
-{
-	font-family : Bauhaus 93;
-	font-size : 24pt;
-	color : #FFD105;
-	color : rgb(255, 209, 5);
-}
-.NormalCharacterStyle2
-{
-	font-family : Bauhaus 93;
-	font-size : 18pt;
-	color : #3B4D80;
-	color : rgb(59, 77, 128);
-}
+
 #header{
-    z-index: 9999; 
+    z-index: 9999;
+    border-bottom: 1px solid #FFD105;
 }
 
 .nav {
@@ -144,6 +132,7 @@ body {
 	position:fixed;
 	background-image: none;
 	background-color:#060709;
+        
 }
 .nav img{
 	height:100%;
@@ -159,6 +148,7 @@ body {
 	background-color: #060709;
 	width:97%;
 	height:100%;
+        border-bottom: 1px solid #FFD105;
 
 }
 

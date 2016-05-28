@@ -1,5 +1,10 @@
 $(document).ready(function() {
     $(document).on('submit', '#loginform', function() {
+        if(consopen)
+        {
+            $("#cons").remove();
+        }
+        
         var data = $(this).serialize();
         $.ajax({
             type: 'POST',
@@ -11,7 +16,8 @@ $(document).ready(function() {
                     $(".forlogin").remove();
                     $(".central").load("pageparts/bannerCheckout.php", {price: 55});
                 } else {
-                    alert(response);
+                    consopen = true;
+                    $(".errorconsole").load("pageparts/alertBox.php", {resp: response});
 //                    swal({
 //                        html: true,
 //                        title: "<span style= \"color:#fce600\" >Unsuccessfull logging</span>",
@@ -26,3 +32,5 @@ $(document).ready(function() {
         return false;
     });
 });
+
+var consopen = false;

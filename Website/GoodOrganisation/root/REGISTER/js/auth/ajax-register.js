@@ -11,13 +11,13 @@ $(document).ready(function() {
                     swal({
                         html: true,
                         title: "<span style= \"color:#fce600\" >Succesfully registered!</span>",
-                        text: "<span style= \"color:#ff9933\" >Now you are going to be redirected to your personal page!</span>",
+                        text: "<span style= \"color:#ff9933\" >Now you are going to be redirected to the tickets page!</span>",
                         confirmButtonColor: "#333399",
                         type: "success",
                         confirmButtonText: "Okay"
                     }, function(isConfirm) {
                         if (isConfirm) {
-                            window.location = "../PERSONAL-PAGE";
+                            window.location = "../tickets";
                         }
                     });
 
