@@ -8,8 +8,6 @@ E:\Dropbox\workspace\Apps\PROP-Project\Applications\GeneralApp\GeneralApp\Genera
 E:\Dropbox\workspace\Apps\PROP-Project\Applications\GeneralApp\GeneralApp\GeneralApp\obj\Debug\GeneralApp.exe
 E:\Dropbox\workspace\Apps\PROP-Project\Applications\GeneralApp\GeneralApp\GeneralApp\obj\Debug\GeneralApp.pdb
 E:\Dropbox\workspace\Apps\PROP-Project\Applications\GeneralApp\GeneralApp\GeneralApp\bin\Debug\MySql.Data.dll
-E:\Dropbox\workspace\Apps\PROP-Project\Applications\GeneralApp\GeneralApp\GeneralApp\bin\Debug\StatsApp.exe
-E:\Dropbox\workspace\Apps\PROP-Project\Applications\GeneralApp\GeneralApp\GeneralApp\bin\Debug\StatsApp.pdb
 E:\Dropbox\workspace\Apps\PROP-Project\Applications\GeneralApp\GeneralApp\GeneralApp\bin\Debug\BraceletManagement.exe
 E:\Dropbox\workspace\Apps\PROP-Project\Applications\GeneralApp\GeneralApp\GeneralApp\bin\Debug\Phidget21.NET.dll
 E:\Dropbox\workspace\Apps\PROP-Project\Applications\GeneralApp\GeneralApp\GeneralApp\bin\Debug\BraceletManagement.pdb

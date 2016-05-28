@@ -1,0 +1,12 @@
+E:\Dropbox\workspace\Apps\PROP-Project\Applications\ActivityEntrance\ActivityEntrance\bin\Debug\ActivityEntrance.exe.config
+E:\Dropbox\workspace\Apps\PROP-Project\Applications\ActivityEntrance\ActivityEntrance\bin\Debug\ActivityEntrance.exe
+E:\Dropbox\workspace\Apps\PROP-Project\Applications\ActivityEntrance\ActivityEntrance\bin\Debug\ActivityEntrance.pdb
+E:\Dropbox\workspace\Apps\PROP-Project\Applications\ActivityEntrance\ActivityEntrance\bin\Debug\Phidget21.NET.dll
+E:\Dropbox\workspace\Apps\PROP-Project\Applications\ActivityEntrance\ActivityEntrance\bin\Debug\Phidget21.NET.xml
+E:\Dropbox\workspace\Apps\PROP-Project\Applications\ActivityEntrance\ActivityEntrance\obj\Debug\ActivityEntrance.csprojResolveAssemblyReference.cache
+E:\Dropbox\workspace\Apps\PROP-Project\Applications\ActivityEntrance\ActivityEntrance\obj\Debug\ActivityEntrance.Properties.Resources.resources
+E:\Dropbox\workspace\Apps\PROP-Project\Applications\ActivityEntrance\ActivityEntrance\obj\Debug\ActivityEntrance.csproj.GenerateResource.Cache
+E:\Dropbox\workspace\Apps\PROP-Project\Applications\ActivityEntrance\ActivityEntrance\obj\Debug\ActivityEntrance.exe
+E:\Dropbox\workspace\Apps\PROP-Project\Applications\ActivityEntrance\ActivityEntrance\obj\Debug\ActivityEntrance.pdb
+E:\Dropbox\workspace\Apps\PROP-Project\Applications\ActivityEntrance\ActivityEntrance\obj\Debug\ActivityEntrance.ActivityReservationForm.resources
+E:\Dropbox\workspace\Apps\PROP-Project\Applications\ActivityEntrance\ActivityEntrance\bin\Debug\MySql.Data.dll

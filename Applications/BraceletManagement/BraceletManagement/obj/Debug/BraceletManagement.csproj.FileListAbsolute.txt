@@ -12,3 +12,10 @@ D:\Projects\FONTYSPRO\PROP-Project\Applications\BraceletManagement\BraceletManag
 E:\Dropbox\workspace\Apps\PROP-Project\Applications\BraceletManagement\BraceletManagement\bin\Debug\BraceletManagement.exe.config
 E:\Dropbox\workspace\Apps\PROP-Project\Applications\BraceletManagement\BraceletManagement\obj\Debug\BraceletManagement.exe
 E:\Dropbox\workspace\Apps\PROP-Project\Applications\BraceletManagement\BraceletManagement\obj\Debug\BraceletManagement.pdb
+E:\Dropbox\workspace\Apps\PROP-Project\Applications\BraceletManagement\BraceletManagement\bin\Debug\BraceletManagement.exe
+E:\Dropbox\workspace\Apps\PROP-Project\Applications\BraceletManagement\BraceletManagement\bin\Debug\BraceletManagement.pdb
+E:\Dropbox\workspace\Apps\PROP-Project\Applications\BraceletManagement\BraceletManagement\bin\Debug\Phidget21.NET.dll
+E:\Dropbox\workspace\Apps\PROP-Project\Applications\BraceletManagement\BraceletManagement\obj\Debug\BraceletManagement.csprojResolveAssemblyReference.cache
+E:\Dropbox\workspace\Apps\PROP-Project\Applications\BraceletManagement\BraceletManagement\obj\Debug\BraceletManagement.Form1.resources
+E:\Dropbox\workspace\Apps\PROP-Project\Applications\BraceletManagement\BraceletManagement\obj\Debug\BraceletManagement.Properties.Resources.resources
+E:\Dropbox\workspace\Apps\PROP-Project\Applications\BraceletManagement\BraceletManagement\obj\Debug\BraceletManagement.csproj.GenerateResource.Cache
