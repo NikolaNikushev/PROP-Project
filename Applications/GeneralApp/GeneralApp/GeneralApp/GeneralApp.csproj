@@ -37,9 +37,6 @@
     <Reference Include="BraceletManagement">
       <HintPath>..\..\..\BraceletManagement\BraceletManagement\bin\Debug\BraceletManagement.exe</HintPath>
     </Reference>
-    <Reference Include="StatsApp">
-      <HintPath>..\..\..\StatsApp\StatsApp\bin\Debug\StatsApp.exe</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />

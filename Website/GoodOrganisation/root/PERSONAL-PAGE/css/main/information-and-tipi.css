@@ -10,30 +10,28 @@ body {
     height: auto;
 }
 .container-title {
-    font-size: 4.5vh;
+    font-size: 2.2vw;
     text-align: center;
     background-color: #3b4d81;
     color: #fce600;
 }
-.info-bar {
+.solid-bar {
     background-color: #fce600;
-    height: 47vh;
+    width: 25vw;
+    /*height: 24vw;*/
 }
 #top-containers {
-    padding-top: 22vh;
+    padding-top: 150px;
 }
-#bottom-containers {
-    margin-top: 5vh;
-    padding-bottom: 20vh;
-}
+
 #information {
     height:auto;
 }
 #blank {
-    height: 3.2vh;
+    height: 1.65vw;
 }
 .user-text {
-    font-size: 4.5vh;
+    font-size: 2.2vw;
     color: #3b4d81;
     text-align: right;
 }
@@ -42,17 +40,17 @@ body {
 }
 .user-text-container {
     background-color: #fce600;
-    height: 6.5vh;
+    height: 3.2vw;
 }
 .person-button {
     color: #3b4d81;
-    font-size: 3vh;
-    margin-top: 1vh;
+    font-size: 1.4vw;
+    margin-top: 0.4vw;
     text-align: right;
 }
 #tipi-picture {
-    height: 30vh;
-    margin-top: -1vh;
+    height: 14vw;
+    margin-top: -0.4vw;
 }
 #pic-container {
     border-bottom: 2px solid;
@@ -60,7 +58,7 @@ body {
 }
 .tipi-text {
     color: #3b4d81;
-    font-size: 3vh;
+    font-size: 1.5vw;
     text-align: right;
 }
 #general-container {
@@ -71,12 +69,11 @@ body {
 }
 #bracelet-container {
     height: 0px;
-    position: relative;
 }
 hr {
     border: 0;
     height: 2px;
     background-color: #3b4d81;
     margin: 0 auto;
-    width: 45vh;
+    width: 22vw;
 }

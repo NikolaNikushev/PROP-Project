@@ -3,6 +3,7 @@ session_start();
 require_once '../php/dbconfig.php';
 require_once '../php/loanItemsData.php';
  ?>
+<div class="row"> </div> 
 <div class="row">
 <div class="col-xs-5">
     <p class="object-info-bracelet">
@@ -13,7 +14,7 @@ require_once '../php/loanItemsData.php';
     <p class="object-text-bracelet">
         <!-- Dmitrii: Please, can anyone fix the styling? -->
         <!--<span class='clckbl' onclick='window.location = "../tickets";'>Make</span>-->
-      <?php 
+      <?php
         if($PAID == 1)
         {
             echo "Done";
