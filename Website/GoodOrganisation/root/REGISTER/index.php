@@ -52,6 +52,8 @@
   <script src="js/form-loader.js"></script>
   <script src="js/auth/ajax-login.js"></script>
   <script src="js/auth/ajax-register.js"></script>
+  <script src="js/form-validate.js"></script>
+
 </body>
 
 </html>
