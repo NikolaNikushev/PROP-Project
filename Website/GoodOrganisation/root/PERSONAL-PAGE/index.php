@@ -35,7 +35,7 @@ require_once 'php/acivitiesData.php';
     <div id="container" class="container-fluid">
         <div class="row " id="top-containers">
             <!--INFORMATION BAR  -->
-            <div class="col-md-3 col-md-offset-2 col-sm-3 col-sm-offset-2" id="information">
+            <div class="col-md-3 col-md-offset-2 col-xs-3 col-xs-offset-5" id="information">
                 <div class="row ">
                     <p class="container-title">
                         INFORMATION
@@ -113,7 +113,7 @@ require_once 'php/acivitiesData.php';
                 </div>
             </div>
             <!--TIPI BAR  -->
-            <div class="col-md-3 col-md-offset-2 col-sm-3 col-sm-offset-2 solid-bar" id="tipi">
+            <div class="col-md-3 col-md-offset-2 col-xs-3 col-xs-offset-5 solid-bar" id="tipi">
                 <div class="row">
                     <p class="container-title">
                         YOUR TIPI
@@ -152,7 +152,7 @@ require_once 'php/acivitiesData.php';
         </div>
         <div class="row " id="bottom-containers">
             <!--ITEMS BAR  -->
-            <div class="col-md-3 col-md-offset-2 col-sm-3 col-sm-offset-2 solid-bar" id="items">
+            <div class="col-md-3 col-md-offset-2 col-xs-3 col-xs-offset-5 solid-bar" id="items">
 
                 <div class="row">
                     <p class="container-title">
@@ -212,7 +212,7 @@ require_once 'php/acivitiesData.php';
                 </div>
             </div>
             <!-- ACTIVITIES BAR  -->
-            <div class="col-md-3  col-md-offset-2 solid-bar col-sm-3 col-sm-offset-2 " id="activities">
+            <div class="col-md-3  col-md-offset-2 solid-bar col-xs-3 col-xs-offset-5 " id="activities">
                 <div class="row">
                     <p class="container-title">
                         ACTIVITIES
@@ -257,7 +257,6 @@ require_once 'php/acivitiesData.php';
     <script src="js/bracelet-load-content.js"></script>
     <script src="js/balance-load-content.js"></script>
     <script src="js/add-credits.js"></script>
-
 </body>
 
 </html>

@@ -56,9 +56,13 @@ body{
 }
 ul.sharing{
 	list-style-type: none;
+    margin-top: 50px;
+    width: 800px;
 }
 ul.sharing li{
 	display: inline;
+    padding: 20px;
+    
 }
 #fbk {
 	padding: 10px;

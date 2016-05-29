@@ -93,7 +93,8 @@
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
                                                 </li>
 						<li>
-							<div class="fb-share-button" data-href="http://localhost/GoodOrganisation/root/social/" data-layout="button_count" data-mobile-iframe="true"></div>
+							<div class="g-plus" data-action="share" data-href="http://localhost/GoodOrganisation/root/social/"></div>
+                            <script src="https://apis.google.com/js/platform.js" async defer></script>
 						</li>
 					</ul>
 				</div>

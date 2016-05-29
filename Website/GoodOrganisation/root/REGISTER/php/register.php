@@ -24,11 +24,11 @@ if ($_POST) {
 
                 $stmt->bindParam(":fname", ucwords(strtolower($first_name)));
                 $stmt->bindParam(":lname", ucwords(strtolower($last_name)));
-                $stmt->bindParam(":pass", strtolower($password));
+                $stmt->bindParam(":pass", $password);
                 $stmt->bindParam(":dob", $date_of_birth);
                 $stmt->bindParam(":jdate", $joining_date);
                 $stmt->bindParam(":email", strtolower($user_email));
-                $stmt->bindParam(":pass", strtolower($user_password));
+                $stmt->bindParam(":pass", $user_password);
                 $stmt->bindParam(":uaddress", $user_address);
 
                 if ($stmt->execute()) {
