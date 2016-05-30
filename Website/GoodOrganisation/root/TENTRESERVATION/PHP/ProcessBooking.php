@@ -55,7 +55,7 @@ function InsertLeaderData($dbcon, &$campdata) {
 
         $dbcon->beginTransaction();
         $campid = $campdata['CAMPING_ID'];
-        echo "----" . $campid . "----";
+        //echo "----" . $campid . "----";
         $sqltlds = "INSERT INTO tentleaders (CAMPING_ID, USER_ID, ARRIVALDATE) " .
                 "VALUES(:camp_id, :leader_id, :arrdate);";
 
