@@ -115,19 +115,6 @@
 	
 </div>
 
-	<div id="footer">
-		<img id="footerlogo" src="../default/images/LOGOFOOT.png" />
-		<ul id="footernav">
-			<li><a href="#">NEWS & SOCIAL</a></li>
-			<li><a href="#">CONTACT US</a></li>
-			<li><a href="#">TERMS AND PRIVACY</a></li>
-		</ul>
-		<div id="social">
-			<img id="footerfacebook" src="../default/images/facebook.png" />
-			<img id="footertwitter" src="../default/images/twitter.png" />
-			<img id="footergplus" src="../default/images/gplus.png" />
-		</div>
-		<p id="copyright">COPYRIGHT:2016</p>
-	</div>
+	<?php include '../DEFAULT/PAGEPARTS/footer.php'; ?>
     </body>
 </html>

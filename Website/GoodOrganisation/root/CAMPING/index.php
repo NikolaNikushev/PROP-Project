@@ -66,20 +66,7 @@
       </div>
     </div>
   </div>
-  <div id="footer" class="container-fluid">
-    <img id="footerlogo" src="images/LOGOFOOT.png" />
-    <ul id="footernav">
-      <li><a href="#">NEWS & SOCIAL</a></li>
-      <li><a href="#">CONTACT US</a></li>
-      <li><a href="#">TERMS AND PRIVACY</a></li>
-    </ul>
-    <div id="social">
-      <img id="footerfacebook" src="images/facebook.png" />
-      <img id="footertwitter" src="images/twitter.png" />
-      <img id="footergplus" src="images/gplus.png" />
-    </div>
-    <p id="copyright">COPYRIGHT:2016</p>
-  </div>
+  <?php include '../DEFAULT/PAGEPARTS/footer.php'; ?>
 </body>
 
 </html>

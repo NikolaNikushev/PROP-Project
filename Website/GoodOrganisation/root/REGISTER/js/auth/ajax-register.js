@@ -6,7 +6,7 @@ $(document).ready(function() {
             url: './php/register.php',
             data: data,
             success: function(response) {
-                alert(response);
+                //alert(response);
                 if (response.includes('Registered')) {
                     //use of sweetalert-master libraly to display messages
                     swal({
