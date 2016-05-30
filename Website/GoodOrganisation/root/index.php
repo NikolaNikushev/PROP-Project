@@ -15,7 +15,26 @@
 <body>
 	<div id="header">
 		<img id="logo" src="DEFAULT/IMAGES/logohead.png"/>
-			<?php require_once 'default/pageparts/HeaderLinksHome.php'; ?>
+			<ul id="nav">
+				<li class="dropdown">
+					<a class="dropbtn" href="index.php">INFO</a>
+					<div class="dropdown-content">
+						<a href="info/general.php">GENERAL</a>
+						<a href="info/explore.php">EXPLORE</a>
+						<a href="info/location.php">LOCATION</a>
+						<a href="info/rules.php">RULES</a>
+					</div>
+				</li>
+                                <li class="dropdown">
+					<a class="dropbtn" href="program/index.php">PROGRAM</a>
+					<div class="dropdown-content">
+						<a href="activities/index.php">ACTIVITIES</a>
+					</div>
+				</li>
+				<li><a href="tickets/index.php">TICKETS</a></li>
+				<li><a href="camping/index.php">CAMPING</a></li>
+				<li><a href="register/index.php">ACCOUNT</a></li>
+			</ul>
 	</div>
 	<!-- this div is with default display none and it 
 	appears when it needs to fill the space from header-->
@@ -77,7 +96,7 @@
 	</div>
 	<div id="footer">
 <img id="footerlogo" src="DEFAULT/IMAGES/LOGOFOOT.png" />
-<?php require_once 'default/pageparts/footerlinkshome.php'; ?>
+<?php require_once 'default/pageparts/footerlinks.php'; ?>
 <div id="social">
 	<img id="footerfacebook" src="DEFAULT/IMAGES/facebook.png" />
 	<img id="footertwitter" src="DEFAULT/IMAGES/twitter.png" />
