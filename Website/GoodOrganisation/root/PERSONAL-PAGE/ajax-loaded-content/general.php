@@ -33,6 +33,7 @@ require_once '../php/loanItemsData.php';
     </p>
   </div>
 </div>
+ <!--
 <div class="row">
   <div class="col-xs-6">
     <p class="object-info-general">
@@ -47,6 +48,7 @@ require_once '../php/loanItemsData.php';
     </a>
   </div>
 </div>
+ -->
 <hr>
 <div class="row">
   <div class="col-xs-3 col-xs-offset-9">
