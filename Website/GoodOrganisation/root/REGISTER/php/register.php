@@ -44,7 +44,7 @@ if ($_POST) {
                 echo "Existing email";
             }
         } else {
-            echo "Emails or passwords do not match!".$user_password." ".$c_user_password." ".$user_email." ".$c_user_email;
+            echo "Emails or passwords do not match!";
         }
     } catch (PDOException $e) {
         echo $e->getMessage();
