@@ -20,7 +20,7 @@ $(document).ready(function () {
 
                         swal({
                             html: true,
-                            title: "<span style= \"color:#fce600\" >Succesfully purchased a ticket!</span>",
+                            title: "<span style= \"color:#fce600\" >Succesfully purchased a tent!</span>",
                             text: "<span style= \"color:#ff9933\" >Now you are going to be redirected to your personal page!</span>",
                             type: "success",
                             confirmButtonColor: "#333399",
