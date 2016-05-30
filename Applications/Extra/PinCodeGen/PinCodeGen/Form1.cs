@@ -17,5 +17,10 @@ namespace PinCodeGen
         {
             InitializeComponent();
         }
+
+        private void btnEncrypt_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -20,7 +20,7 @@ if(isset($_SESSION['USER_ID']))
 {
 	echo '<ul id="nav">
 		<li class="dropdown">
-			<a class="dropbtn" href="../">INFO</a>
+			<a class="dropbtn" href="#">INFO</a>
 			<div class="dropdown-content">
 				<a href="info/general.php">GENERAL</a>
 				<a href="info/explore.php">EXPLORE</a>
@@ -38,7 +38,7 @@ if(isset($_SESSION['USER_ID']))
 		<li><a href="tickets">TICKETS</a></li>
 		<li><a href="camping">CAMPING</a>
 		<li class="dropdown">
-				<a class="dropbtn" href="register/">ACCOUNT</a>
+				<a class="dropbtn" href="personal-page/">ACCOUNT</a>
 				<div class="dropdown-content">
 					<a class="dropbtn" href="DEFAULT/PHPFUNC/logout.php">LOGOUT</a>
 				<div>
@@ -57,9 +57,9 @@ else {
 			 <a href="info/rules.php">RULES</a>
 		 </div>
 	 </li>
-	 <!-- <li><a href="../program/">program</a></li> -->
+	 <!-- <li><a href="program/">program</a></li> -->
 		<li class="dropdown">
-		 <a class="dropbtn" href="../program/index.php">PROGRAM</a>
+		 <a class="dropbtn" href="program/index.php">PROGRAM</a>
 		 <div class="dropdown-content">
 			 <a href="activities/index.php">ACTIVITIES</a>
 		 </div>
