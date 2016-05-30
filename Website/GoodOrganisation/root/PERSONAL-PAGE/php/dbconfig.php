@@ -1,7 +1,8 @@
 <?php
- $db_name = "propdbtest";
- $db_user = "root";
- $db_pass = "";
+ $db_host = "localhost";
+ $db_name = "dbi339282";
+ $db_user = "dbi339282";
+ $db_pass = "bccMxqtHck";
  try{
 
  $db_con = new PDO("mysql:host={$db_host};dbname={$db_name}",$db_user,$db_pass);
