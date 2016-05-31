@@ -9,7 +9,7 @@ if ($_POST) {
     $user_password = $_POST['password'];
     $c_user_password = $_POST['cpassword'];
     $user_email = $_POST['user_email'];
-    $c_user_email = $_POST['$c_user_email'];
+    $c_user_email = $_POST['c_user_email'];
     $user_address = ucwords(strtolower($_POST['sba'])) . ',' . ucwords(strtolower($_POST['city'])) . ',' . strtoupper($_POST['country']) . ',' . strtoupper($_POST['zip']);
     $joining_date = date('Y-m-d H:i:s');
 

@@ -14,6 +14,7 @@
 </head>
 
 <body>
+
 	<div id="header" class="headernotscrolled">
 		<img id="logo" class="logo" src="HOME/logotext.png" />
 		<ul id="nav" class="nav">
@@ -36,6 +37,11 @@
 			<li><a href="camping/index.php">CAMPING</a></li>
 			<li><a href="register/index.php">ACCOUNT</a></li>
 		</ul>
+
+	<div id="header">
+		<img id="logo" src="DEFAULT/IMAGES/logohead.png"/>
+			<?php require_once 'default/pageparts/HeaderLinksHome.php'; ?>
+
 	</div>
 	<!-- this div is with default display none and it
 	appears when it needs to fill the space from header-->
@@ -96,6 +102,7 @@
 
 	</div>
 	<div id="footer">
+
 		<img id="footerlogo" src="DEFAULT/IMAGES/LOGOFOOT.png" />
 		<?php require_once 'default/pageparts/footerlinks.php'; ?>
 		<div id="social">
@@ -106,7 +113,15 @@
 		<p id="copyright">COPYRIGHT:2016</p>
 	</div>
 
-
+<img id="footerlogo" src="DEFAULT/IMAGES/LOGOFOOT.png" />
+<?php require_once 'default/pageparts/footerlinkshome.php'; ?>
+<div id="social">
+	<img id="footerfacebook" src="DEFAULT/IMAGES/facebook.png" />
+	<img id="footertwitter" src="DEFAULT/IMAGES/twitter.png" />
+	<img id="footergplus" src="DEFAULT/IMAGES/gplus.png" />
+</div>
+<p id="copyright">COPYRIGHT:2016</p>
+</div>
 
 
 	<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>

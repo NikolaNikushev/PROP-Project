@@ -24,7 +24,7 @@
                 <tr>
                     <th>Tenants</th>
                     <th>Total Price</th>
-                    <th>Your Balance</th>
+                    <th><span id="balanceset" onclick="window.location = '../personal-page'">Your Balance <img src="../DEFAULT/IMAGES/gearFat.png" title="Go to the personal page to manage your balance" alt="Set"></span></th>
                 </tr>
                 <tr>
                     <td width="25%"><?php echo $tennum ?></td>

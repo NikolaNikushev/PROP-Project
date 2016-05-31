@@ -17,3 +17,12 @@ D:\School\ProP\PROP-Project\Applications\StatsApp\StatsApp\obj\Debug\StatsApp.cs
 D:\School\ProP\PROP-Project\Applications\StatsApp\StatsApp\obj\Debug\StatsApp.Form1.resources
 D:\School\ProP\PROP-Project\Applications\StatsApp\StatsApp\obj\Debug\StatsApp.Properties.Resources.resources
 D:\School\ProP\PROP-Project\Applications\StatsApp\StatsApp\obj\Debug\StatsApp.csproj.GenerateResource.Cache
+D:\Projects\FONTYSPRO\PROP-Project\Applications\StatsApp\StatsApp\bin\Debug\StatsApp.exe.config
+D:\Projects\FONTYSPRO\PROP-Project\Applications\StatsApp\StatsApp\obj\Debug\StatsApp.exe
+D:\Projects\FONTYSPRO\PROP-Project\Applications\StatsApp\StatsApp\obj\Debug\StatsApp.pdb
+D:\Projects\FONTYSPRO\PROP-Project\Applications\StatsApp\StatsApp\bin\Debug\StatsApp.exe
+D:\Projects\FONTYSPRO\PROP-Project\Applications\StatsApp\StatsApp\bin\Debug\StatsApp.pdb
+D:\Projects\FONTYSPRO\PROP-Project\Applications\StatsApp\StatsApp\obj\Debug\StatsApp.csprojResolveAssemblyReference.cache
+D:\Projects\FONTYSPRO\PROP-Project\Applications\StatsApp\StatsApp\obj\Debug\StatsApp.Form1.resources
+D:\Projects\FONTYSPRO\PROP-Project\Applications\StatsApp\StatsApp\obj\Debug\StatsApp.Properties.Resources.resources
+D:\Projects\FONTYSPRO\PROP-Project\Applications\StatsApp\StatsApp\obj\Debug\StatsApp.csproj.GenerateResource.Cache

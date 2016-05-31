@@ -66,3 +66,10 @@
     position: relative;
     width: 100%;
 }
+#balanceset{
+    border-bottom: 2pt #3B4D81 dashed;
+    cursor: pointer;
+}
+#balanceset hover{
+    border-bottom: 2pt #3B4D81 solid;
+}

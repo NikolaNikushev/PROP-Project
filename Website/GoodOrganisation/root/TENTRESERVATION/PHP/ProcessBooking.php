@@ -1,4 +1,5 @@
 <?php
+
 session_start();
 require_once 'dbconfig.php';
 $outputmsg = "";
@@ -54,22 +55,22 @@ function InsertLeaderData($dbcon, &$campdata) {
 
         $dbcon->beginTransaction();
         $campid = $campdata['CAMPING_ID'];
-
-        $sqltlds = "INSERT INTO tentleaders (CAMPING_ID, USER_ID) " .
-                "VALUES(:camp_id, :leader_id);";
+        //echo "----" . $campid . "----";
+        $sqltlds = "INSERT INTO tentleaders (CAMPING_ID, USER_ID, ARRIVALDATE) " .
+                "VALUES(:camp_id, :leader_id, :arrdate);";
 
         $sqlsrts = "INSERT INTO serpayments (USER_ID, DATE, TYPE, PAYSUM, DESCRIPTION) " .
-                "VALUES(:leader_id, '-',:date,:sum,'Tent Reservation Payment. Group of " . trim($_POST['tennum']) . " .');";
+                "VALUES(:leader_id,:date,'-',:sum,'Tent Reservation Payment. Group of " . $_POST['tennum'] . " .');";
 
         $sqlgrres = "UPDATE visitors SET visitors.BALANCE = :reducedBalance where visitors.USER_ID = :leader_id";
 
         $sqlvis = "UPDATE visitors "
-                . "SET visitors.CAMPING_ID = '.$campid.' "
+                . "SET visitors.CAMPING_ID = ".$campid." "
                 . "WHERE visitors.email in ( $place_holders );";
 
         $sqlcamps = "UPDATE camps "
                 . "SET camps.AVAILABLE = '0' "
-                . "WHERE camps.CAMPING_ID = '" . $campid . "' ;";
+                . "WHERE camps.CAMPING_ID = '". $campid ."' ;";
 
         // asks for an array... 
         // populates the tent leader table
@@ -86,6 +87,7 @@ function InsertLeaderData($dbcon, &$campdata) {
             // looking for a first tent with suitable capacity 
             ":camp_id" => $campdata['CAMPING_ID'],
             ":leader_id" => $_SESSION["USER_ID"],
+            ":arrdate" => $_POST['datechoice'],
         ]);
         $stmtTwo->execute([
             // looking for a first tent with suitable capacity 
@@ -102,7 +104,6 @@ function InsertLeaderData($dbcon, &$campdata) {
         ]);
 
         $stmtFour->execute($params);
-
         $stmtFive->execute();
 
         // selecting the first suitable camp
