@@ -13,3 +13,6 @@ C:\Users\User1\Desktop\ShopApp\ShopApp\bin\Debug\Phidget21.NET.xml
 D:\School\ProP\PROP-Project\Applications\ShopApp\ShopApp\bin\Debug\ShopApp.exe.config
 D:\School\ProP\PROP-Project\Applications\ShopApp\ShopApp\obj\Debug\ShopApp.exe
 D:\School\ProP\PROP-Project\Applications\ShopApp\ShopApp\obj\Debug\ShopApp.pdb
+D:\Projects\FONTYSPRO\PROP-Project\Applications\ShopApp\ShopApp\bin\Debug\ShopApp.exe.config
+D:\Projects\FONTYSPRO\PROP-Project\Applications\ShopApp\ShopApp\obj\Debug\ShopApp.exe
+D:\Projects\FONTYSPRO\PROP-Project\Applications\ShopApp\ShopApp\obj\Debug\ShopApp.pdb
