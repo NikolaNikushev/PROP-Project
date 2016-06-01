@@ -18,7 +18,7 @@ if ( is_session_started() === FALSE ) session_start();
 
 if(isset($_SESSION['USER_ID']))
 {
-	echo '<ul id="nav">
+	echo '<ul id="nav" class="nav">
 		<li class="dropdown">
 			<a class="dropbtn" href="#">INFO</a>
 			<div class="dropdown-content">
@@ -47,7 +47,7 @@ if(isset($_SESSION['USER_ID']))
 	;
 }
 else {
-	echo '<ul id="nav">
+	echo '<ul id="nav" class="nav">
 	 <li class="dropdown">
 		 <a class="dropbtn" href="../">INFO</a>
 		 <div class="dropdown-content">

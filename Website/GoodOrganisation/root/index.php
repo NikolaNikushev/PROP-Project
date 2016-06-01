@@ -2,7 +2,6 @@
 <html>
 
 <head>
-
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<link rel="stylesheet" type="text/css" href="HOME/header.css">
 	<link rel="stylesheet" type="text/css" href="HOME/homepage.css">
@@ -16,32 +15,8 @@
 <body>
 
 	<div id="header" class="headernotscrolled">
-		<img id="logo" class="logo" src="HOME/logotext.png" />
-		<ul id="nav" class="nav">
-			<li class="dropdown">
-				<a class="dropbtn" href="index.php">INFO</a>
-				<div class="dropdown-content">
-					<a href="info/general.php">GENERAL</a>
-					<a href="info/explore.php">EXPLORE</a>
-					<a href="info/location.php">LOCATION</a>
-					<a href="info/rules.php">RULES</a>
-				</div>
-			</li>
-			<li class="dropdown">
-				<a class="dropbtn" href="program/index.php">PROGRAM</a>
-				<div class="dropdown-content">
-					<a href="activities/index.php">ACTIVITIES</a>
-				</div>
-			</li>
-			<li><a href="tickets/index.php">TICKETS</a></li>
-			<li><a href="camping/index.php">CAMPING</a></li>
-			<li><a href="register/index.php">ACCOUNT</a></li>
-		</ul>
-
-	<div id="header">
-		<img id="logo" src="DEFAULT/IMAGES/logohead.png"/>
+		<img id="logo" class="logo" src="HOME/logotext.png"/>
 			<?php require_once 'default/pageparts/HeaderLinksHome.php'; ?>
-
 	</div>
 	<!-- this div is with default display none and it
 	appears when it needs to fill the space from header-->
@@ -101,18 +76,8 @@
 
 
 	</div>
+
 	<div id="footer">
-
-		<img id="footerlogo" src="DEFAULT/IMAGES/LOGOFOOT.png" />
-		<?php require_once 'default/pageparts/footerlinks.php'; ?>
-		<div id="social">
-			<img id="footerfacebook" src="DEFAULT/IMAGES/facebook.png" />
-			<img id="footertwitter" src="DEFAULT/IMAGES/twitter.png" />
-			<img id="footergplus" src="DEFAULT/IMAGES/gplus.png" />
-		</div>
-		<p id="copyright">COPYRIGHT:2016</p>
-	</div>
-
 <img id="footerlogo" src="DEFAULT/IMAGES/LOGOFOOT.png" />
 <?php require_once 'default/pageparts/footerlinkshome.php'; ?>
 <div id="social">
@@ -125,18 +90,7 @@
 
 
 	<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
-	<!-- <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script> -->
 	<script>
-		// window.onload = function() {
-		// $("#header").addClass("headernotscrolled");
-		// document.getElementById("potato").style.display="none";
-		//         $("#header").removeClass("scrolled");
-		// 		$("#nav").addClass("nav");
-		// 		$("#logo").addClass("logo");
-		// 		$("#header").addClass("headernotscrolled");
-		// 		logo.src = "HOME/logotext.png";
-		// 		document.getElementById("potato").style.display="none";
-		// }
 		var logo = document.getElementById('logo');
 		var potato = document.getElementById("potato");
 		$(document).on("scroll", function() {
