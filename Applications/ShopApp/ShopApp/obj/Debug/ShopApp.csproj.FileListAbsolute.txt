@@ -16,3 +16,11 @@ D:\School\ProP\PROP-Project\Applications\ShopApp\ShopApp\obj\Debug\ShopApp.pdb
 D:\Projects\FONTYSPRO\PROP-Project\Applications\ShopApp\ShopApp\bin\Debug\ShopApp.exe.config
 D:\Projects\FONTYSPRO\PROP-Project\Applications\ShopApp\ShopApp\obj\Debug\ShopApp.exe
 D:\Projects\FONTYSPRO\PROP-Project\Applications\ShopApp\ShopApp\obj\Debug\ShopApp.pdb
+D:\Projects\FONTYSPRO\PROP-Project\Applications\ShopApp\ShopApp\bin\Debug\ShopApp.exe
+D:\Projects\FONTYSPRO\PROP-Project\Applications\ShopApp\ShopApp\bin\Debug\ShopApp.pdb
+D:\Projects\FONTYSPRO\PROP-Project\Applications\ShopApp\ShopApp\bin\Debug\Phidget21.NET.dll
+D:\Projects\FONTYSPRO\PROP-Project\Applications\ShopApp\ShopApp\bin\Debug\Phidget21.NET.xml
+D:\Projects\FONTYSPRO\PROP-Project\Applications\ShopApp\ShopApp\obj\Debug\ShopApp.csprojResolveAssemblyReference.cache
+D:\Projects\FONTYSPRO\PROP-Project\Applications\ShopApp\ShopApp\obj\Debug\ShopApp.Form1.resources
+D:\Projects\FONTYSPRO\PROP-Project\Applications\ShopApp\ShopApp\obj\Debug\ShopApp.Properties.Resources.resources
+D:\Projects\FONTYSPRO\PROP-Project\Applications\ShopApp\ShopApp\obj\Debug\ShopApp.csproj.GenerateResource.Cache
