@@ -21,7 +21,7 @@
         $imgPath = "images/notipisleft.png";
         $linkPath = "#";
     }
-    
+
 ?>
 <!DOCTYPE html>
 
@@ -32,9 +32,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="css/main/camping.css">
-  <link rel="stylesheet" type="text/css" href="css/main/footer.css">
-  <link rel="stylesheet" type="text/css" href="../default/css/fixedmenu.css">
-  <title></title>
+  <link rel="stylesheet" type="text/css" href="../DEFAULT/CSS/footer.css">
+  <link rel="stylesheet" type="text/css" href="../DEFAULT/CSS/fixedmenu.css">
+  <title>Reserve Camping</title>
 </head>
 
 <body>
@@ -66,20 +66,7 @@
       </div>
     </div>
   </div>
-  <div id="footer" class="container-fluid">
-    <img id="footerlogo" src="images/LOGOFOOT.png" />
-    <ul id="footernav">
-      <li><a href="#">NEWS & SOCIAL</a></li>
-      <li><a href="#">CONTACT US</a></li>
-      <li><a href="#">TERMS AND PRIVACY</a></li>
-    </ul>
-    <div id="social">
-      <img id="footerfacebook" src="images/facebook.png" />
-      <img id="footertwitter" src="images/twitter.png" />
-      <img id="footergplus" src="images/gplus.png" />
-    </div>
-    <p id="copyright">COPYRIGHT:2016</p>
-  </div>
+<?php include '../DEFAULT/PAGEPARTS/footer.php';?>
 </body>
 
 </html>
