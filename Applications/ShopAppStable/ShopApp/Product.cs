@@ -8,35 +8,44 @@ namespace ShopApp
 {
     class Product
     {
-        private string name;
-        private double price;
-        private int quantity;
 
+        // all the fields are retrieved from the DB
+        public int Id
+        {
+            get; private set;
+        }
         public string Name
         {
-            get { return this.name; }
-            set { this.name = value; }
+            get; private set;
         }
             public double Price
         {
-            get { return this.price; }
-            set { this.price = value; }
+            get; private set;
         }
         public int Quantity
         {
-            get { return this.quantity; }
-            set { this.quantity = value; }
+            get; private set;
         }
-        public Product(string nm, double prc, int qntt)
+
+        //--------------------------Constructor
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="nm"></param>
+        /// <param name="prc"></param>
+        /// <param name="qntt"></param>
+        public Product(int id, string nm, double prc, int qntt)
         {
-            this.name = nm;
-            this.price = prc;
-            this.quantity = qntt;
+            this.Id = id;
+            this.Name = nm;
+            this.Price = prc;
+            this.Quantity = qntt;
         }
 
         public string getInfo()
         {
-            return this.name + "   -   price: " + this.price.ToString() + "   -   quantity: " + this.quantity.ToString();
+            return this.Name + "   -   price: " + this.Price.ToString() + "   -   quantity: " + this.Quantity.ToString();
         }
     }
 }

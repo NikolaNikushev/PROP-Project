@@ -27,7 +27,7 @@ namespace ShopApp
 
         public List<Product> GetAllProducts()
         {
-            String sql = "SELECT * FROM foodproducts1";
+            String sql = "SELECT * FROM foodproducts";
             MySqlCommand command = new MySqlCommand(sql, connection);
 
             List<Product> temp;
@@ -37,21 +37,20 @@ namespace ShopApp
             {
                 connection.Open();
                 MySqlDataReader reader = command.ExecuteReader();
-
+                // data to build a new product upon 
+                int id;
                 int quantity;
                 string name;
                 double price;
 
                 while (reader.Read())
                 {
-
-                    quantity = Convert.ToInt32(reader["quantity"]);
-
+                    id = Convert.ToInt32(reader["product_id"]);
                     name = Convert.ToString(reader["name"]);
-
                     price = Convert.ToDouble(reader["price"]);
+                    quantity = Convert.ToInt32(reader["stock"]);
 
-                    temp.Add(new Product(name, price,quantity));
+                    temp.Add(new Product(id,name, price,quantity));
                 }
             }
             catch (Exception ex)
@@ -64,11 +63,13 @@ namespace ShopApp
             }
             return temp;
         }
+
+
         public int GetQuantity(string name)
         {
             int quantity = -1;
 
-            String sql = "SELECT quantity FROM foodproducts1 WHERE name = " + "\"" + name + "\"";
+            String sql = "SELECT STOCK FROM foodproducts WHERE name = " + "\"" + name + "\"";
             MySqlCommand command = new MySqlCommand(sql, connection);
 
             try
@@ -77,7 +78,7 @@ namespace ShopApp
                 MySqlDataReader reader = command.ExecuteReader();
                 while (reader.Read())
                 {
-                    quantity = Convert.ToInt32(reader["quantity"]);
+                    quantity = Convert.ToInt32(reader["STOCK"]);
                 }
 
             }
@@ -91,6 +92,8 @@ namespace ShopApp
             }
             return quantity;
         }
+
+
         public void UpdateQuantity(string name, int newQantity)
         {
             String sql = "UPDATE foodproducts1 SET quantity = "+newQantity.ToString()+" WHERE name = " + "\"" + name+ "\"";

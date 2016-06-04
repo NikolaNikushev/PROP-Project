@@ -8,23 +8,36 @@ namespace ShopApp
 {
     class Shop
     {
-        List<Product> Stock;
-        DBHelper dbh;
-        public void Initialize()
+        private List<Product> stock;
+        private List<Product> basket;
+        private DBHelper dbh;
+        private int storeID;
+
+        public List<Product> Stock
         {
-            List<Product> Stock = new List<Product>();
-            DBHelper dbh=new DBHelper();
-            Stock = dbh.GetAllProducts();
+            get { return this.stock; }
+            private set { this.stock = value; }
         }
-        public void LowerQuantity(string name, int quantity)
+
+        /// <summary>
+        /// Constructor for the shop
+        /// </summary>
+        public Shop()
         {
-            foreach(Product p in Stock)
-            {
-                if (p.Name == name)
-                {
+            this.stock = new List<Product>();
+            this.dbh=new DBHelper();
+            this.stock = dbh.GetAllProducts();
+        }
+
+        //public void LowerQuantity(string name, int quantity)
+        //{
+        //    foreach(Product p in Stock)
+        //    {
+        //        if (p.Name == name)
+        //        {
                     
-                }
-            }
-        }
+        //        }
+        //    }
+        //}
     }
 }

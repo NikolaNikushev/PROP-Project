@@ -15,7 +15,8 @@ namespace ShopApp
     //dont forget to make an if for selling more then you have!
     public partial class Form1 : Form
     {
-        List<Product> Shop;
+        //List<Product> Shop;
+        Shop chosenShop = new Shop();
         DBHelper dbh;
         private RFID myRFIDReader;
         int cocacolas;
@@ -52,14 +53,14 @@ namespace ShopApp
             InitializeComponent();
             workingRFID = 0;
             dbh = new DBHelper();
-            try
-            {
-                myRFIDReader = new RFID();
-                openRFID();
-                myRFIDReader.Tag += new TagEventHandler(ProcessThisTag);
-                
-            }
-            catch (PhidgetException) { listBox1.Items.Add("error at start-up."); }
+            //try
+            //{
+            //    myRFIDReader = new RFID();
+            //    openRFID();
+            //    myRFIDReader.Tag += new TagEventHandler(ProcessThisTag);
+
+            //}
+            //catch (PhidgetException) { listBox1.Items.Add("error at start-up."); }
 
             cocacolas = dbh.GetQuantity("CocaCola");
             fantas = dbh.GetQuantity("Fanta");
@@ -86,10 +87,11 @@ namespace ShopApp
             quantity = 1;
             basket = new Stack<Product>();
             reverseBasket = new Stack<Product>();
-            Shop = dbh.GetAllProducts();
-            foreach(Product p in Shop)
+            //chosenShop.GetProductStockData();
+            int X = 9, Y = 0;
+            foreach (Product p in chosenShop.Stock)
             {
-
+                this.GenerateProductControl(p, ref X, ref Y);
             }
 
         }
@@ -109,10 +111,10 @@ namespace ShopApp
         private void ProcessThisTag(object sender, TagEventArgs e)
         {
             int paid = dbh.CheckIfPaid(e.Tag);
-            if (paid == 1 && workingRFID==0 )
+            if (paid == 1 && workingRFID == 0)
             {
 
-                btnScan.Visible = false;
+                //btnScan.Visible = false;
                 balance = dbh.getBalance(e.Tag);
                 tbBalance.Text = Convert.ToString(balance);
                 tag = e.Tag;
@@ -128,7 +130,7 @@ namespace ShopApp
         {
             if (balance > totalPrice)
             {
-                double newbalance = balance-totalPrice;
+                double newbalance = balance - totalPrice;
                 dbh.UpdateBalance(tag, newbalance);
 
                 int newcocacolas = cocacolas - cocacolasInBasket;
@@ -175,11 +177,11 @@ namespace ShopApp
                 totalPrice = 0;
                 tbPrice.Text = totalPrice.ToString();
                 workingRFID = 0;
-                
+
 
 
                 MessageBox.Show("Purchase successfull");
-                btnScan.Visible = true;
+                //btnScan.Visible = true;
             }
             else { MessageBox.Show("Not enough money"); }
         }
@@ -211,7 +213,7 @@ namespace ShopApp
             {
                 listBox1.Items.Add("CocaCola " + clickproducts.ToString());
                 //for the undo button
-                Product temp = new Product("CocaCola", 2.5, clickproducts);
+                //Product temp = new Product("CocaCola", 2.5, clickproducts);
                 reverseBasket.Clear();
                 basket.Push(temp);
             }
@@ -219,238 +221,6 @@ namespace ShopApp
 
         }
 
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-            int clickproducts = 0;
-            while (quantity > i)
-            {
-                if (fantasInBasket < fantas)
-                {
-                    fantasInBasket++;
-                   // listBox1.Items.Add("Fanta");
-                    totalPrice += 2.5;
-                    tbPrice.Text = totalPrice.ToString();
-                    i++;
-                    clickproducts++;
-                }
-                else { MessageBox.Show("Not enough items in stock");
-                    break;
-                }
-            }
-            if (clickproducts > 0)
-            {
-                listBox1.Items.Add("Fanta " + clickproducts.ToString());
-                //for the undo button
-                Product temp = new Product("Fanta", 2.5, clickproducts);
-                reverseBasket.Clear();
-                basket.Push(temp);
-            }
-            i = 0;
-        }
-
-        private void pictureBox3_Click(object sender, EventArgs e)
-        {
-            int clickproducts = 0;
-            while (quantity > i)
-            {
-                if (spritesInBasket < sprites)
-                {
-                    spritesInBasket++;
-                    //listBox1.Items.Add("Sprite");
-                    totalPrice += 2.5;
-                    tbPrice.Text = totalPrice.ToString();
-                    i++;
-                    clickproducts++;
-                }
-                else { MessageBox.Show("Not enough items in stock");
-                    break;
-                }
-                
-            }
-            if (clickproducts > 0)
-            {
-                listBox1.Items.Add("Sprite " + clickproducts.ToString());
-                //for the undo button
-                Product temp = new Product("Sprite", 2.5, clickproducts);
-                reverseBasket.Clear();
-                basket.Push(temp);
-            }
-            i = 0;
-        }
-
-        private void pictureBox6_Click(object sender, EventArgs e)
-        {
-            int clickproducts = 0;
-            while (quantity > i)
-            {
-                if (hotdogsInBasket < hotdogs)
-                {
-                    hotdogsInBasket++;
-                //listBox1.Items.Add("HotDog");
-                totalPrice += 3;
-                tbPrice.Text = totalPrice.ToString();
-                i++;
-                    clickproducts++;
-                }
-                else { MessageBox.Show("Not enough items in stock");
-                    break;
-                }
-            }
-            if (clickproducts > 0)
-            {
-                listBox1.Items.Add("HotDog " + clickproducts.ToString());
-                //for the undo button
-                Product temp = new Product("HotDog", 3, clickproducts);
-                reverseBasket.Clear();
-                basket.Push(temp);
-            }
-            i = 0;
-        }
-
-        private void pictureBox5_Click(object sender, EventArgs e)
-        {
-            int clickproducts = 0;
-            while (quantity > i)
-            {
-                if (pizzasInBasket < pizzas)
-                {
-                    pizzasInBasket++;
-                //listBox1.Items.Add("Pizza");
-                totalPrice += 3.5;
-                tbPrice.Text = totalPrice.ToString();
-                i++;
-                    clickproducts++;
-                }
-                else { MessageBox.Show("Not enough items in stock");
-                    break;
-                }
-            }
-            if (clickproducts > 0)
-            {
-                listBox1.Items.Add("Pizza " + clickproducts.ToString());
-                //for the undo button
-                Product temp = new Product("Pizza", 3.5, clickproducts);
-                reverseBasket.Clear();
-                basket.Push(temp);
-            }
-            i = 0;
-        }
-
-        private void pictureBox4_Click(object sender, EventArgs e)
-        {
-            int clickproducts = 0;
-            while (quantity > i)
-            {
-                if (burgersInBasket < burgers)
-                {
-                    burgersInBasket++;
-                //listBox1.Items.Add("Burger");
-                totalPrice += 4;
-                tbPrice.Text = totalPrice.ToString();
-                i++;
-                    clickproducts++;
-                }
-                else { MessageBox.Show("Not enough items in stock");
-                    break;
-                }
-            }
-            if (clickproducts > 0)
-            {
-                listBox1.Items.Add("Burger " + clickproducts.ToString());
-                //for the undo button
-                Product temp = new Product("Burger", 4, clickproducts);
-                reverseBasket.Clear();
-                basket.Push(temp);
-            }
-            i = 0;
-        }
-
-        private void pictureBox9_Click(object sender, EventArgs e)
-        {
-            int clickproducts = 0;
-            while (quantity > i)
-            {
-                if (friesInBasket < fries)
-                {
-                    friesInBasket++;
-               // listBox1.Items.Add("Fries");
-                totalPrice += 3;
-                tbPrice.Text = totalPrice.ToString();
-                i++;
-                    clickproducts++;
-                }
-                else { MessageBox.Show("Not enough items in stock");
-                    break;
-                }
-            }
-            if (clickproducts > 0)
-            {
-                listBox1.Items.Add("Fries " + clickproducts.ToString());
-                //for the undo button
-                Product temp = new Product("Fries", 3, clickproducts);
-                reverseBasket.Clear();
-                basket.Push(temp);
-            }
-            i = 0;
-        }
-
-        private void pictureBox8_Click(object sender, EventArgs e)
-        {
-            int clickproducts = 0;
-            while (quantity > i)
-            {
-                if (beersInBasket < beers)
-                {
-                    beersInBasket++;
-                //listBox1.Items.Add("Beer");
-                totalPrice += 3;
-                tbPrice.Text = totalPrice.ToString();
-                i++;
-                    clickproducts++;
-                }
-                else { MessageBox.Show("Not enough items in stock");
-                    break;
-                }
-            }
-            if (clickproducts > 0)
-            {
-                listBox1.Items.Add("Beer " + clickproducts.ToString());
-                //for the undo button
-                Product temp = new Product("Beer", 3, clickproducts);
-                reverseBasket.Clear();
-                basket.Push(temp);
-            }
-            i = 0;
-        }
-
-        private void pictureBox7_Click(object sender, EventArgs e)
-        {
-            int clickproducts = 0;
-            while (quantity > i)
-            {
-                if (womenInBasket < women)
-                {
-                    womenInBasket++;
-                //listBox1.Items.Add("SexyLady");
-                totalPrice += 2.5;
-                tbPrice.Text = totalPrice.ToString();
-                i++;
-                clickproducts++;
-                }
-                else { MessageBox.Show("Not enough items in stock");
-                    break;
-                }
-            }
-            if(clickproducts>0)
-            {
-                listBox1.Items.Add("SexyLady " + clickproducts.ToString());
-                //for the undo button
-                Product temp = new Product("SexyLady", 2.5, clickproducts);
-                reverseBasket.Clear();
-                basket.Push(temp);
-            }
-            i = 0;
-        }
 
         private void btnClear_Click(object sender, EventArgs e)
         {
@@ -472,7 +242,8 @@ namespace ShopApp
 
         private void tbQuantity_TextChanged(object sender, EventArgs e)
         {
-            try {
+            try
+            {
                 quantity = Convert.ToInt32(tbQuantity.Text);
             }
             catch
@@ -488,9 +259,9 @@ namespace ShopApp
 
         private void Form1_FormClosed(object sender, FormClosedEventArgs e)
         {
-            myRFIDReader.LED = false;
-            myRFIDReader.Antenna = false;
-            myRFIDReader.close();
+            //myRFIDReader.LED = false;
+            //myRFIDReader.Antenna = false;
+            //myRFIDReader.close();
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
@@ -510,7 +281,7 @@ namespace ShopApp
             totalPrice = 0;
             tbPrice.Text = totalPrice.ToString();
             balance = 0;
-            btnScan.Visible = true;
+            //btnScan.Visible = true;
             workingRFID = 0;
             basket.Clear();
         }
@@ -571,21 +342,9 @@ namespace ShopApp
         /// <param name="Y"></param>
         private void GenerateProductControl(Product Prod, ref int X, ref int Y)
         {
-            // margin for the panel
-            const int LEFTMARGIN = 9, TOPMARGIN = 3;
-            // position of a button inside of a panel. always stays unchanged
-            const int BTNX = 6, BTNY = 26;
-            // position of a label sotring the product name
-            const int LBLPRODUCTNAMEX = 3, LBLPRODUCTNAMEY = 8;
-            // position of a unit storing the price and a currency
-            const int LBLUNITPRICEX = 87, LBLLEVELTWOY = 173, LBLCURRENCYX = 128;
-            // the length and the width of a button
-            const int BTNSIDE = 140; // the other labels should be positioned this length away from the top border
-            // the size of a panel
-            const int PANELWIDTH = 152, PANELHEIGHT = 224;
-            // the position of the queantity labels
-            const int LBLQUANX = 3, LBLLEVELTHREE = 201, LBLQUANVALX = 124;
-            // each panel has 5 labels and 1 button
+            //The height of a panel + a margin
+            const int VDIFFERENCE = 227;
+
             Panel myPanel;
             Button myButton;
             Label myLblProductName;
@@ -594,50 +353,28 @@ namespace ShopApp
             Label myLblProductQuantityCaption;
             Label myLblProductQuantity;
 
-
-            //if you need them you may store them in an array, otherwise do it anonymously
-
-            //int i = 0;
-            //foreach (DeliciousStuff ds in this.myShop.getMyDeliciousStuff())
-            //{
-            // panel
-            myPanel = new Panel();
-            myPanel.Location = new System.Drawing.Point(X, Y);
-            myPanel.Size = new System.Drawing.Size(PANELWIDTH, PANELHEIGHT);
-            //myPanel.Name = "pnlTest";
-            myPanel.BackColor = Color.AliceBlue;
+            // the main thing to store every other product related control
+            myPanel = ControlFactory.ProducePanel(ref X, ref Y);
 
             // Product Name
-            myLblProductName = new Label();
-            myLblProductName.Location = new System.Drawing.Point(LBLPRODUCTNAMEX, LBLPRODUCTNAMEY);
-            myLblProductName.Text = Prod.Name;
+            myLblProductName = ControlFactory.ProduceLabelProductName(Prod.Name);
 
             // Product price
-            myLblProductPrice = new Label();
-            myLblProductPrice.Location = new System.Drawing.Point(LBLUNITPRICEX, LBLLEVELTWOY);
-            myLblProductPrice.Text = Prod.Price.ToString();
+            myLblProductPrice = ControlFactory.ProduceLabelProductPrice(Prod.Price);
 
             // Currency
-            myLblCurrency = new Label();
-            myLblCurrency.Text = "c";
-            myLblProductPrice.Location = new System.Drawing.Point(LBLCURRENCYX, LBLLEVELTWOY);
+            myLblCurrency = ControlFactory.ProduceLabelCurrency();
 
             // Quantity caption
-            myLblProductQuantityCaption = new Label();
-            myLblProductQuantityCaption.Text = "Quantity: ";
-            myLblProductQuantityCaption.Location = new System.Drawing.Point(LBLQUANX, LBLLEVELTHREE);
-            
-            // tha actual prison
-            myLblProductQuantity = new Label();
-            myLblProductQuantity.Text = Prod.Quantity.ToString();
-            myLblProductQuantityCaption.Location = new System.Drawing.Point(LBLQUANVALX, LBLLEVELTHREE);
+            myLblProductQuantityCaption = ControlFactory.ProduceLabelQuantityCaption();
 
-            myButton = new Button();
-            myButton.Location = new System.Drawing.Point(BTNX, BTNY);
-            myButton.Size = new System.Drawing.Size(BTNSIDE, BTNSIDE);
-            myButton.Text = Prod.Name;
+            // tha actual value
+            myLblProductQuantity = ControlFactory.ProduceLabelQuantity(Prod.Quantity);
+
+            myButton = ControlFactory.ProduceButton(Prod.Name);
             myButton.Click += new EventHandler(this.SellShit);
             myButton.Tag = Prod;
+
             i++;
             myPanel.Controls.Add(myButton);
             myPanel.Controls.Add(myLblProductName);
@@ -645,15 +382,18 @@ namespace ShopApp
             myPanel.Controls.Add(myLblCurrency);
             myPanel.Controls.Add(myLblProductQuantityCaption);
             myPanel.Controls.Add(myLblProductQuantity);
-            this.Controls.Add(myPanel);
-            
-            X = X + PANELWIDTH + LEFTMARGIN;
-            if(X>= this.pnlProducts.Width + LEFTMARGIN)
+            this.pnlProducts.Controls.Add(myPanel);
+
+            //X = X + PANELWIDTH + LEFTMARGIN;
+            if (X + myPanel.Width >= this.pnlProducts.Width)
             {
                 X = 9;
-                Y = Y + TOPMARGIN + PANELHEIGHT;
+                Y = Y + VDIFFERENCE;
             }
         }
+
+
+
 
         private void SellShit(object sender, EventArgs e)
         {
