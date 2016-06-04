@@ -212,29 +212,27 @@ namespace BraceletManagement
             return methodResult;
         }
 
-        public bool UpdateVisitorBracelet(string newChipNum, string secCode)
+        public bool UpdateVisitorBracelet(RFIDData newChipData, string email)
         {
             connection.Close();
             bool methodResult = false;
             String sql = "UPDATE VISITORS "
-                + "SET BRACELET_ID =" + " \"" + newChipNum + "\" "
-                + "WHERE SECCODE =" + " \"" + secCode + "\" ";
+                + "SET BRACELET_ID =" + " \"" + newChipData.RFIDNumber + "\" "
+                + "WHERE LOWER(EMAIL) =" + " \"" + email.ToLower() + "\" ";
             MySqlCommand command = new MySqlCommand(sql, connection);
 
 
             try
             {
                 connection.Open();
+                this.ActivateBracelet(newChipData);
                 int affectedRows = 0;
                 affectedRows += command.ExecuteNonQuery();
                 switch (affectedRows)
                 {
-                    case 0:
-                        methodResult = false;
-                        break;
                     //check sum == 1
                     case 1:
-                        methodResult = this.ActivateBracelet(newChipNum);
+                        methodResult = true;
                         break;
                     default:
                         methodResult = false;
@@ -259,13 +257,24 @@ namespace BraceletManagement
         /// </summary>
         /// <param name="chipNum"></param>
         /// <returns></returns>
-        private bool ActivateBracelet(string chipNum)
+        private bool ActivateBracelet(RFIDData chipData)
         {
             connection.Close();
             bool methodResult = false;
-            String sql = "UPDATE RFIDS "
+            String sql = "";
+            if (chipData.Status == StatusTypes.BraceletStatus.STAND_BY)
+            {
+                sql = "UPDATE RFIDS "
                 + "SET STATUS = \"ACTIVE\""
-                + "WHERE BRACELET_ID =" + " \"" + chipNum + "\" ";
+                + "WHERE BRACELET_ID =" + " \"" + chipData.RFIDNumber + "\" ";
+            };
+            if(chipData.Status == StatusTypes.BraceletStatus.NOT_VALID)
+            {
+                sql = "INSERT INTO RFIDS "
+                + " (STATUS,BRACELET_ID) values" 
+                + "\"ACTIVE\"," + " \"" + chipData.RFIDNumber + "\" ";
+            }
+            
             MySqlCommand command = new MySqlCommand(sql, connection);
 
 

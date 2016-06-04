@@ -211,9 +211,10 @@ namespace BraceletManagement
             // first we deactivate his old one
             this.DeactiveVisBracelet();
             //new method
-            if(this.scannedRFID.RFIDNumber != this.myVisitor.ChipNumber && this.scannedRFID.Status == StatusTypes.BraceletStatus.STAND_BY)
+            if(this.scannedRFID.RFIDNumber != this.myVisitor.ChipNumber && 
+                (this.scannedRFID.Status == StatusTypes.BraceletStatus.STAND_BY || this.scannedRFID.Status == StatusTypes.BraceletStatus.NOT_VALID))
             {
-                if(this.myDBHelper.UpdateVisitorBracelet(this.scannedRFID.RFIDNumber,this.myVisitor.Code))
+                if(this.myDBHelper.UpdateVisitorBracelet(this.scannedRFID,this.myVisitor.Email))
                 {
                     string code = this.myVisitor.Code;
                     myVisitor = myDBHelper.getVisitorData(StatusTypes.SearchType.SECCODE, code);
