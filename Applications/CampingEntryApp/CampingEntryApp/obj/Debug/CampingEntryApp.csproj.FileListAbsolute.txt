@@ -18,3 +18,13 @@ C:\Users\User1\Desktop\CampingEntryApp\CampingEntryApp\obj\Debug\CampingEntryApp
 C:\Users\User1\Desktop\CampingEntryApp\CampingEntryApp\obj\Debug\WAvisitorCheck.Form1.resources
 C:\Users\User1\Desktop\CampingEntryApp\CampingEntryApp\obj\Debug\WAvisitorCheck.Properties.Resources.resources
 C:\Users\User1\Desktop\CampingEntryApp\CampingEntryApp\obj\Debug\CampingEntryApp.csproj.GenerateResource.Cache
+D:\School\ProP\PROP-Project\Applications\CampingEntryApp\CampingEntryApp\bin\Debug\WAvisitorCheck.exe.config
+D:\School\ProP\PROP-Project\Applications\CampingEntryApp\CampingEntryApp\obj\Debug\WAvisitorCheck.exe
+D:\School\ProP\PROP-Project\Applications\CampingEntryApp\CampingEntryApp\obj\Debug\WAvisitorCheck.pdb
+D:\School\ProP\PROP-Project\Applications\CampingEntryApp\CampingEntryApp\bin\Debug\WAvisitorCheck.exe
+D:\School\ProP\PROP-Project\Applications\CampingEntryApp\CampingEntryApp\bin\Debug\WAvisitorCheck.pdb
+D:\School\ProP\PROP-Project\Applications\CampingEntryApp\CampingEntryApp\bin\Debug\MySql.Data.dll
+D:\School\ProP\PROP-Project\Applications\CampingEntryApp\CampingEntryApp\obj\Debug\CampingEntryApp.csprojResolveAssemblyReference.cache
+D:\School\ProP\PROP-Project\Applications\CampingEntryApp\CampingEntryApp\obj\Debug\WAvisitorCheck.Form1.resources
+D:\School\ProP\PROP-Project\Applications\CampingEntryApp\CampingEntryApp\obj\Debug\WAvisitorCheck.Properties.Resources.resources
+D:\School\ProP\PROP-Project\Applications\CampingEntryApp\CampingEntryApp\obj\Debug\CampingEntryApp.csproj.GenerateResource.Cache
