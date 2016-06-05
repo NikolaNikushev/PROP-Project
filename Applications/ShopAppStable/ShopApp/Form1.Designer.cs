@@ -54,14 +54,14 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.grbCheckout = new System.Windows.Forms.GroupBox();
             this.pnlCheckout = new System.Windows.Forms.Panel();
-            this.lblCheckOutSign = new System.Windows.Forms.Label();
-            this.lblInStock = new System.Windows.Forms.Label();
-            this.lblUnitPrice = new System.Windows.Forms.Label();
-            this.lblProductName = new System.Windows.Forms.Label();
-            this.lblStockNmbr = new System.Windows.Forms.Label();
-            this.btnTest = new System.Windows.Forms.Button();
-            this.lblCredits = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.lblCredits = new System.Windows.Forms.Label();
+            this.btnTest = new System.Windows.Forms.Button();
+            this.lblStockNmbr = new System.Windows.Forms.Label();
+            this.lblProductName = new System.Windows.Forms.Label();
+            this.lblUnitPrice = new System.Windows.Forms.Label();
+            this.lblInStock = new System.Windows.Forms.Label();
+            this.lblCheckOutSign = new System.Windows.Forms.Label();
             this.grbProducts.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudQuantityToAdd)).BeginInit();
             this.panel2.SuspendLayout();
@@ -98,7 +98,7 @@
             this.lbBasket.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lbBasket.FormattingEnabled = true;
             this.lbBasket.ItemHeight = 16;
-            this.lbBasket.Location = new System.Drawing.Point(27, 41);
+            this.lbBasket.Location = new System.Drawing.Point(27, 44);
             this.lbBasket.Margin = new System.Windows.Forms.Padding(2);
             this.lbBasket.Name = "lbBasket";
             this.lbBasket.Size = new System.Drawing.Size(320, 308);
@@ -107,7 +107,7 @@
             // lblBasket
             // 
             this.lblBasket.AutoSize = true;
-            this.lblBasket.Location = new System.Drawing.Point(24, 10);
+            this.lblBasket.Location = new System.Drawing.Point(24, 15);
             this.lblBasket.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblBasket.Name = "lblBasket";
             this.lblBasket.Size = new System.Drawing.Size(60, 16);
@@ -339,6 +339,7 @@
             // 
             // pnlCheckout
             // 
+            this.pnlCheckout.Controls.Add(this.lbBasket);
             this.pnlCheckout.Controls.Add(this.panel4);
             this.pnlCheckout.Controls.Add(this.lblCheckOutSign);
             this.pnlCheckout.Controls.Add(this.lblTotalPrice);
@@ -346,7 +347,6 @@
             this.pnlCheckout.Controls.Add(this.btnCancel);
             this.pnlCheckout.Controls.Add(this.btnClear);
             this.pnlCheckout.Controls.Add(this.tbBalance);
-            this.pnlCheckout.Controls.Add(this.lbBasket);
             this.pnlCheckout.Controls.Add(this.btnUndo);
             this.pnlCheckout.Controls.Add(this.lblBasket);
             this.pnlCheckout.Controls.Add(this.btnRedo);
@@ -358,82 +358,6 @@
             this.pnlCheckout.Name = "pnlCheckout";
             this.pnlCheckout.Size = new System.Drawing.Size(410, 553);
             this.pnlCheckout.TabIndex = 34;
-            // 
-            // lblCheckOutSign
-            // 
-            this.lblCheckOutSign.AutoSize = true;
-            this.lblCheckOutSign.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblCheckOutSign.Location = new System.Drawing.Point(367, 59);
-            this.lblCheckOutSign.Name = "lblCheckOutSign";
-            this.lblCheckOutSign.Size = new System.Drawing.Size(34, 264);
-            this.lblCheckOutSign.TabIndex = 33;
-            this.lblCheckOutSign.Text = "C\r\nH\r\nE\r\nC\r\nK\r\nO\r\nU\r\nT\r\n\r\n\r\n>>";
-            // 
-            // lblInStock
-            // 
-            this.lblInStock.AutoSize = true;
-            this.lblInStock.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblInStock.Location = new System.Drawing.Point(3, 201);
-            this.lblInStock.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblInStock.Name = "lblInStock";
-            this.lblInStock.Size = new System.Drawing.Size(58, 16);
-            this.lblInStock.TabIndex = 29;
-            this.lblInStock.Text = "In Stock:";
-            // 
-            // lblUnitPrice
-            // 
-            this.lblUnitPrice.AutoSize = true;
-            this.lblUnitPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblUnitPrice.Location = new System.Drawing.Point(35, 173);
-            this.lblUnitPrice.Margin = new System.Windows.Forms.Padding(3);
-            this.lblUnitPrice.Name = "lblUnitPrice";
-            this.lblUnitPrice.Size = new System.Drawing.Size(36, 16);
-            this.lblUnitPrice.TabIndex = 30;
-            this.lblUnitPrice.Text = "2.50";
-            // 
-            // lblProductName
-            // 
-            this.lblProductName.AutoSize = true;
-            this.lblProductName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblProductName.Location = new System.Drawing.Point(3, 8);
-            this.lblProductName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblProductName.Name = "lblProductName";
-            this.lblProductName.Size = new System.Drawing.Size(95, 16);
-            this.lblProductName.TabIndex = 9;
-            this.lblProductName.Text = "Lamb burger";
-            // 
-            // lblStockNmbr
-            // 
-            this.lblStockNmbr.AutoSize = true;
-            this.lblStockNmbr.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblStockNmbr.Location = new System.Drawing.Point(124, 201);
-            this.lblStockNmbr.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblStockNmbr.Name = "lblStockNmbr";
-            this.lblStockNmbr.Size = new System.Drawing.Size(22, 16);
-            this.lblStockNmbr.TabIndex = 31;
-            this.lblStockNmbr.Text = "19";
-            // 
-            // btnTest
-            // 
-            this.btnTest.BackgroundImage = global::ShopApp.Properties.Resources.cocacola;
-            this.btnTest.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnTest.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnTest.Location = new System.Drawing.Point(6, 27);
-            this.btnTest.Name = "btnTest";
-            this.btnTest.Size = new System.Drawing.Size(140, 140);
-            this.btnTest.TabIndex = 33;
-            this.btnTest.UseVisualStyleBackColor = true;
-            // 
-            // lblCredits
-            // 
-            this.lblCredits.AutoSize = true;
-            this.lblCredits.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblCredits.Location = new System.Drawing.Point(123, 173);
-            this.lblCredits.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblCredits.Name = "lblCredits";
-            this.lblCredits.Size = new System.Drawing.Size(18, 16);
-            this.lblCredits.TabIndex = 34;
-            this.lblCredits.Text = "C";
             // 
             // panel4
             // 
@@ -448,6 +372,82 @@
             this.panel4.Size = new System.Drawing.Size(152, 224);
             this.panel4.TabIndex = 32;
             this.panel4.Visible = false;
+            // 
+            // lblCredits
+            // 
+            this.lblCredits.AutoSize = true;
+            this.lblCredits.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblCredits.Location = new System.Drawing.Point(123, 173);
+            this.lblCredits.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblCredits.Name = "lblCredits";
+            this.lblCredits.Size = new System.Drawing.Size(18, 16);
+            this.lblCredits.TabIndex = 34;
+            this.lblCredits.Text = "C";
+            // 
+            // btnTest
+            // 
+            this.btnTest.BackgroundImage = global::ShopApp.Properties.Resources.cocacola;
+            this.btnTest.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnTest.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnTest.Location = new System.Drawing.Point(6, 27);
+            this.btnTest.Name = "btnTest";
+            this.btnTest.Size = new System.Drawing.Size(140, 140);
+            this.btnTest.TabIndex = 33;
+            this.btnTest.UseVisualStyleBackColor = true;
+            // 
+            // lblStockNmbr
+            // 
+            this.lblStockNmbr.AutoSize = true;
+            this.lblStockNmbr.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblStockNmbr.Location = new System.Drawing.Point(124, 201);
+            this.lblStockNmbr.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblStockNmbr.Name = "lblStockNmbr";
+            this.lblStockNmbr.Size = new System.Drawing.Size(22, 16);
+            this.lblStockNmbr.TabIndex = 31;
+            this.lblStockNmbr.Text = "19";
+            // 
+            // lblProductName
+            // 
+            this.lblProductName.AutoSize = true;
+            this.lblProductName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblProductName.Location = new System.Drawing.Point(3, 8);
+            this.lblProductName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblProductName.Name = "lblProductName";
+            this.lblProductName.Size = new System.Drawing.Size(95, 16);
+            this.lblProductName.TabIndex = 9;
+            this.lblProductName.Text = "Lamb burger";
+            // 
+            // lblUnitPrice
+            // 
+            this.lblUnitPrice.AutoSize = true;
+            this.lblUnitPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblUnitPrice.Location = new System.Drawing.Point(35, 173);
+            this.lblUnitPrice.Margin = new System.Windows.Forms.Padding(3);
+            this.lblUnitPrice.Name = "lblUnitPrice";
+            this.lblUnitPrice.Size = new System.Drawing.Size(36, 16);
+            this.lblUnitPrice.TabIndex = 30;
+            this.lblUnitPrice.Text = "2.50";
+            // 
+            // lblInStock
+            // 
+            this.lblInStock.AutoSize = true;
+            this.lblInStock.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblInStock.Location = new System.Drawing.Point(3, 201);
+            this.lblInStock.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblInStock.Name = "lblInStock";
+            this.lblInStock.Size = new System.Drawing.Size(58, 16);
+            this.lblInStock.TabIndex = 29;
+            this.lblInStock.Text = "In Stock:";
+            // 
+            // lblCheckOutSign
+            // 
+            this.lblCheckOutSign.AutoSize = true;
+            this.lblCheckOutSign.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblCheckOutSign.Location = new System.Drawing.Point(367, 59);
+            this.lblCheckOutSign.Name = "lblCheckOutSign";
+            this.lblCheckOutSign.Size = new System.Drawing.Size(34, 264);
+            this.lblCheckOutSign.TabIndex = 33;
+            this.lblCheckOutSign.Text = "C\r\nH\r\nE\r\nC\r\nK\r\nO\r\nU\r\nT\r\n\r\n\r\n>>";
             // 
             // Form1
             // 
