@@ -27,7 +27,7 @@ namespace ShopApp
 
         public List<Product> GetAllProducts()
         {
-            String sql = "SELECT * FROM foodproducts";
+            String sql = "SELECT * FROM foodproducts ORDER BY name";
             MySqlCommand command = new MySqlCommand(sql, connection);
 
             List<Product> temp;

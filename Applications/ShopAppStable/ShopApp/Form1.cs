@@ -16,28 +16,9 @@ namespace ShopApp
     public partial class Form1 : Form
     {
         //List<Product> Shop;
-        Shop chosenShop = new Shop();
+        Shop chosenShop;
         DBHelper dbh;
         private RFID myRFIDReader;
-        int cocacolas;
-        int fantas;
-        int sprites;
-        int hotdogs;
-        int pizzas;
-        int burgers;
-        int fries;
-        int beers;
-        int women;
-
-        int cocacolasInBasket;
-        int fantasInBasket;
-        int spritesInBasket;
-        int hotdogsInBasket;
-        int pizzasInBasket;
-        int burgersInBasket;
-        int friesInBasket;
-        int beersInBasket;
-        int womenInBasket;
 
         int quantity;
         double balance;
@@ -62,38 +43,15 @@ namespace ShopApp
             //}
             //catch (PhidgetException) { listBox1.Items.Add("error at start-up."); }
 
-            cocacolas = dbh.GetQuantity("CocaCola");
-            fantas = dbh.GetQuantity("Fanta");
-            sprites = dbh.GetQuantity("Sprite");
-            hotdogs = dbh.GetQuantity("HotDog");
-            pizzas = dbh.GetQuantity("Pizza");
-            burgers = dbh.GetQuantity("Burger");
-            fries = dbh.GetQuantity("Fries");
-            beers = dbh.GetQuantity("Beer");
-            women = dbh.GetQuantity("SexyLady");
 
-            cocacolasInBasket = 0;
-            fantasInBasket = 0;
-            spritesInBasket = 0;
-            hotdogsInBasket = 0;
-            pizzasInBasket = 0;
-            burgersInBasket = 0;
-            friesInBasket = 0;
-            beersInBasket = 0;
-            womenInBasket = 0;
 
             tbPrice.Text = "0";
             balance = 0;
             quantity = 1;
             basket = new Stack<Product>();
             reverseBasket = new Stack<Product>();
-            //chosenShop.GetProductStockData();
-            int X = 9, Y = 0;
-            foreach (Product p in chosenShop.Stock)
-            {
-                this.GenerateProductControl(p, ref X, ref Y);
-            }
-
+            // do all the stuff to display the products etc
+            this.ReinitializeTheStore();
         }
 
         private void openRFID()
@@ -126,6 +84,7 @@ namespace ShopApp
                 MessageBox.Show("Invalid RFID / RFID Already in use");
             }
         }
+
         private void btnPurchase_Click(object sender, EventArgs e)
         {
             if (balance > totalPrice)
@@ -133,45 +92,13 @@ namespace ShopApp
                 double newbalance = balance - totalPrice;
                 dbh.UpdateBalance(tag, newbalance);
 
-                int newcocacolas = cocacolas - cocacolasInBasket;
-                dbh.UpdateQuantity("CocaCola", newcocacolas);
-
-                int newfantas = fantas - fantasInBasket;
-                dbh.UpdateQuantity("Fanta", newfantas);
-
-                int newsprites = sprites - spritesInBasket;
-                dbh.UpdateQuantity("Sprite", newsprites);
-
-                int newhotdogs = hotdogs - hotdogsInBasket;
-                dbh.UpdateQuantity("HotDog", newhotdogs);
-
-                int newpizzas = pizzas - pizzasInBasket;
-                dbh.UpdateQuantity("Pizza", newpizzas);
-
-                int newburgers = burgers - burgersInBasket;
-                dbh.UpdateQuantity("Burger", newburgers);
-
-                int newfries = fries - friesInBasket;
-                dbh.UpdateQuantity("Fries", newfries);
-
-                int newbeers = beers - beersInBasket;
-                dbh.UpdateQuantity("Beer", newbeers);
-
-                int newwomen = women - womenInBasket;
-                dbh.UpdateQuantity("SexyLady", newwomen);
+                //int newcocacolas = cocacolas - cocacolasInBasket;
+                //dbh.UpdateQuantity("CocaCola", newcocacolas);
 
 
-                listBox1.Items.Clear();
+                lbBasket.Items.Clear();
 
-                cocacolasInBasket = 0;
-                fantasInBasket = 0;
-                spritesInBasket = 0;
-                hotdogsInBasket = 0;
-                pizzasInBasket = 0;
-                burgersInBasket = 0;
-                friesInBasket = 0;
-                beersInBasket = 0;
-                womenInBasket = 0;
+
 
                 balance = 0;
                 totalPrice = 0;
@@ -186,75 +113,12 @@ namespace ShopApp
             else { MessageBox.Show("Not enough money"); }
         }
 
-        int i = 0;
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-            //for showing items in one row like: CocaCola 5
-            int clickproducts = 0;
-
-            while (quantity > i)
-            {
-                if (cocacolasInBasket < cocacolas)
-                {
-                    cocacolasInBasket++;
-                    //listBox1.Items.Add("CocaCola");
-                    totalPrice += 2.5;
-                    tbPrice.Text = totalPrice.ToString();
-                    i++;
-                    clickproducts++;
-                }
-                else
-                {
-                    MessageBox.Show("Not enough items in stock");
-                    break;
-                }
-            }
-            if (clickproducts > 0)
-            {
-                listBox1.Items.Add("CocaCola " + clickproducts.ToString());
-                //for the undo button
-                //Product temp = new Product("CocaCola", 2.5, clickproducts);
-                reverseBasket.Clear();
-                basket.Push(temp);
-            }
-            i = 0;
-
-        }
-
-
         private void btnClear_Click(object sender, EventArgs e)
         {
-            listBox1.Items.Clear();
-
-            cocacolasInBasket = 0;
-            fantasInBasket = 0;
-            spritesInBasket = 0;
-            hotdogsInBasket = 0;
-            pizzasInBasket = 0;
-            burgersInBasket = 0;
-            friesInBasket = 0;
-            beersInBasket = 0;
-            womenInBasket = 0;
+            lbBasket.Items.Clear();
 
             totalPrice = 0;
             tbPrice.Text = totalPrice.ToString();
-        }
-
-        private void tbQuantity_TextChanged(object sender, EventArgs e)
-        {
-            try
-            {
-                quantity = Convert.ToInt32(tbQuantity.Text);
-            }
-            catch
-            {
-                MessageBox.Show("Not a valid value");
-            }
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            //my mistake
         }
 
         private void Form1_FormClosed(object sender, FormClosedEventArgs e)
@@ -264,19 +128,18 @@ namespace ShopApp
             //myRFIDReader.close();
         }
 
+
+
+        /// <summary>
+        /// Cancels all the changes done during the last period. Returns back to the Database retrieved state.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            listBox1.Items.Clear();
-
-            cocacolasInBasket = 0;
-            fantasInBasket = 0;
-            spritesInBasket = 0;
-            hotdogsInBasket = 0;
-            pizzasInBasket = 0;
-            burgersInBasket = 0;
-            friesInBasket = 0;
-            beersInBasket = 0;
-            womenInBasket = 0;
+            lbBasket.Items.Clear();
+            // the easiest way to set everything to the db state - to reinitialize the shop
+            this.ReinitializeTheStore();
 
             totalPrice = 0;
             tbPrice.Text = totalPrice.ToString();
@@ -286,51 +149,70 @@ namespace ShopApp
             basket.Clear();
         }
 
-        Product temp;
-        private void button1_Click(object sender, EventArgs e)
-        {
-            if (basket.Count > 0)
-            {
-                temp = basket.Pop();
-                reverseBasket.Push(temp);
-                totalPrice = totalPrice - (temp.Price * temp.Quantity);
-                tbPrice.Text = totalPrice.ToString();
+        //Product temp;
+        //private void button1_Click(object sender, EventArgs e)
+        //{
+        //    if (basket.Count > 0)
+        //    {
+        //        temp = basket.Pop();
+        //        reverseBasket.Push(temp);
+        //        totalPrice = totalPrice - (temp.Price * temp.Quantity);
+        //        tbPrice.Text = totalPrice.ToString();
 
-                switch (temp.Name)
-                {
-                    case "CocaCola":
-                        cocacolasInBasket = cocacolasInBasket - temp.Quantity;
-                        break;
-                    case "Fanta":
-                        fantasInBasket = fantasInBasket - temp.Quantity;
-                        break;
-                    case "Sprite":
-                        spritesInBasket = spritesInBasket - temp.Quantity;
-                        break;
-                    case "HotDog":
-                        hotdogsInBasket = hotdogsInBasket - temp.Quantity;
-                        break;
-                    case "Pizza":
-                        pizzasInBasket = pizzasInBasket - temp.Quantity;
-                        break;
-                    case "Burger":
-                        burgersInBasket = burgersInBasket - temp.Quantity;
-                        break;
-                    case "Fries":
-                        friesInBasket = friesInBasket - temp.Quantity;
-                        break;
-                    case "Beer":
-                        beersInBasket = beersInBasket - temp.Quantity;
-                        break;
-                    case "SexyLady":
-                        womenInBasket = womenInBasket - temp.Quantity;
-                        break;
-                }
-                listBox1.Items.RemoveAt(listBox1.Items.Count - 1);
-            }
-            else { MessageBox.Show("Nothing to undo"); }
+        //        switch (temp.Name)
+        //        {
+        //            case "CocaCola":
+        //                cocacolasInBasket = cocacolasInBasket - temp.Quantity;
+        //                break;
+        //            case "Fanta":
+        //                fantasInBasket = fantasInBasket - temp.Quantity;
+        //                break;
+        //            case "Sprite":
+        //                spritesInBasket = spritesInBasket - temp.Quantity;
+        //                break;
+        //            case "HotDog":
+        //                hotdogsInBasket = hotdogsInBasket - temp.Quantity;
+        //                break;
+        //            case "Pizza":
+        //                pizzasInBasket = pizzasInBasket - temp.Quantity;
+        //                break;
+        //            case "Burger":
+        //                burgersInBasket = burgersInBasket - temp.Quantity;
+        //                break;
+        //            case "Fries":
+        //                friesInBasket = friesInBasket - temp.Quantity;
+        //                break;
+        //            case "Beer":
+        //                beersInBasket = beersInBasket - temp.Quantity;
+        //                break;
+        //            case "SexyLady":
+        //                womenInBasket = womenInBasket - temp.Quantity;
+        //                break;
+        //        }
+        //        lbBasket.Items.RemoveAt(lbBasket.Items.Count - 1);
+        //    }
+        //    else { MessageBox.Show("Nothing to undo"); }
+        //}
+
+        private void ReinitializeTheStore()
+        {
+            while (pnlProducts.Controls.Count > 0)
+            {
+                this.pnlProducts.Controls[0].Dispose();
+            } 
+            this.chosenShop = new Shop();
+            this.DisplayAllProducts();
         }
 
+
+        private void DisplayAllProducts()
+        {
+            int X = 9, Y = 5;
+            foreach (Product p in chosenShop.Stock)
+            {
+                this.GenerateProductControl(p, ref X, ref Y);
+            }
+        }
 
 
         /// <summary>
@@ -372,16 +254,15 @@ namespace ShopApp
             myLblProductQuantity = ControlFactory.ProduceLabelQuantity(Prod.Quantity);
 
             myButton = ControlFactory.ProduceButton(Prod.Name);
-            myButton.Click += new EventHandler(this.SellShit);
+            myButton.Click += new EventHandler(this.PutProductToBasket);
             myButton.Tag = Prod;
 
-            i++;
-            myPanel.Controls.Add(myButton);
-            myPanel.Controls.Add(myLblProductName);
-            myPanel.Controls.Add(myLblProductPrice);
-            myPanel.Controls.Add(myLblCurrency);
-            myPanel.Controls.Add(myLblProductQuantityCaption);
-            myPanel.Controls.Add(myLblProductQuantity);
+            myPanel.Controls.Add(myButton); // index 0
+            myPanel.Controls.Add(myLblProductName);  // index 1
+            myPanel.Controls.Add(myLblProductPrice); // index 2
+            myPanel.Controls.Add(myLblCurrency); // index 3
+            myPanel.Controls.Add(myLblProductQuantityCaption); // index 4
+            myPanel.Controls.Add(myLblProductQuantity); // index 5
             this.pnlProducts.Controls.Add(myPanel);
 
             //X = X + PANELWIDTH + LEFTMARGIN;
@@ -394,53 +275,110 @@ namespace ShopApp
 
 
 
-
-        private void SellShit(object sender, EventArgs e)
+        /// <summary>
+        /// Puts a certain product to he basket and updates everything else accordingly
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void PutProductToBasket(object sender, EventArgs e)
         {
+            // we need to check how many those products do we have
+            int availableStock = int.Parse(((Button)sender).Parent.Controls[5].Text);
+            // the number of instances of one product to buy
+            int selectedQuantity = (int)this.nudQuantityToAdd.Value;
+            if (availableStock != 0)
+            {
+                Product productToBasket = chosenShop.getProductByName(((Button)sender).Text, chosenShop.Stock);
+                // if we want to sell more than what is left, we can not do that... so SELL AAAAAL THE ITEMS LEFT SO FAR
+                if (selectedQuantity > availableStock)
+                {
+                    selectedQuantity = availableStock;
+                    this.LogMessage("Sorry, requested to sell more than we have in stock. Sold out the " + productToBasket.Name);
+                }
+                productToBasket.LowerQuantityBy(selectedQuantity);
+                Product temp = new Product(productToBasket.Id, productToBasket.Name, productToBasket.Price, (int)this.nudQuantityToAdd.Value);
+                // prepared to be added to the basket
+                chosenShop.AddToBasket(temp);
+
+                // added to the basket, now we need to update the quantity (index 5)
+                ((Button)sender).Parent.Controls[5].Text = productToBasket.Quantity.ToString();
+                this.UpdateBasket();
+            }
+            else
+            {
+                this.LogMessage("Sorry " + ((Button)sender).Text + " is sold out! Request more from the warehouse!");
+            }
+            // need to reset the qualifier
+            this.nudQuantityToAdd.Value = 1;
 
         }
 
+        /// <summary>
+        /// Puts the message to a activity log - potentially also can be a part of event-triggered methods
+        /// </summary>
+        /// <param name="msg"></param>
+        private void LogMessage(string msg)
+        {
+            this.lbActivityLog.Items.Insert(0, msg);
+        }
+
+        /// <summary>
+        /// Reinitilizes the basket and displays the current contents of the basket of this shop
+        /// </summary>
+        private void UpdateBasket()
+        {
+            double totalPrice = 0;
+            lbBasket.Items.Clear();
+            foreach (Product p in chosenShop.Basket)
+            {
+                totalPrice += (p.Price * p.Quantity);
+                this.lbBasket.Items.Add(p);
+            }
+            this.tbPrice.Text = totalPrice.ToString();
+        }
+
+
         private void btnRedo_Click(object sender, EventArgs e)
         {
-            if (reverseBasket.Count > 0)
-            {
-                temp = reverseBasket.Pop();
-                basket.Push(temp);
-                totalPrice = totalPrice + (temp.Price * temp.Quantity);
-                tbPrice.Text = totalPrice.ToString();
-                switch (temp.Name)
-                {
-                    case "CocaCola":
-                        cocacolasInBasket = cocacolasInBasket + temp.Quantity;
-                        break;
-                    case "Fanta":
-                        fantasInBasket = fantasInBasket + temp.Quantity;
-                        break;
-                    case "Sprite":
-                        spritesInBasket = spritesInBasket + temp.Quantity;
-                        break;
-                    case "HotDog":
-                        hotdogsInBasket = hotdogsInBasket + temp.Quantity;
-                        break;
-                    case "Pizza":
-                        pizzasInBasket = pizzasInBasket + temp.Quantity;
-                        break;
-                    case "Burger":
-                        burgersInBasket = burgersInBasket + temp.Quantity;
-                        break;
-                    case "Fries":
-                        friesInBasket = friesInBasket + temp.Quantity;
-                        break;
-                    case "Beer":
-                        beersInBasket = beersInBasket + temp.Quantity;
-                        break;
-                    case "SexyLady":
-                        womenInBasket = womenInBasket + temp.Quantity;
-                        break;
-                }
-                listBox1.Items.Add(temp.Name + " " + temp.Quantity.ToString());
-            }
-            else { MessageBox.Show("Nothing to redo"); }
+            //    if (reverseBasket.Count > 0)
+            //    {
+            //        temp = reverseBasket.Pop();
+            //        basket.Push(temp);
+            //        totalPrice = totalPrice + (temp.Price * temp.Quantity);
+            //        tbPrice.Text = totalPrice.ToString();
+            //        switch (temp.Name)
+            //        {
+            //            case "CocaCola":
+            //                cocacolasInBasket = cocacolasInBasket + temp.Quantity;
+            //                break;
+            //            case "Fanta":
+            //                fantasInBasket = fantasInBasket + temp.Quantity;
+            //                break;
+            //            case "Sprite":
+            //                spritesInBasket = spritesInBasket + temp.Quantity;
+            //                break;
+            //            case "HotDog":
+            //                hotdogsInBasket = hotdogsInBasket + temp.Quantity;
+            //                break;
+            //            case "Pizza":
+            //                pizzasInBasket = pizzasInBasket + temp.Quantity;
+            //                break;
+            //            case "Burger":
+            //                burgersInBasket = burgersInBasket + temp.Quantity;
+            //                break;
+            //            case "Fries":
+            //                friesInBasket = friesInBasket + temp.Quantity;
+            //                break;
+            //            case "Beer":
+            //                beersInBasket = beersInBasket + temp.Quantity;
+            //                break;
+            //            case "SexyLady":
+            //                womenInBasket = womenInBasket + temp.Quantity;
+            //                break;
+            //        }
+            //        lbBasket.Items.Add(temp.Name + " " + temp.Quantity.ToString());
+            //    }
+            //    else { MessageBox.Show("Nothing to redo"); }
         }
     }
 }

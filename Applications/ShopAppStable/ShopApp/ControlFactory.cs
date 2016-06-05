@@ -17,13 +17,13 @@ namespace ShopApp
         // position of a label sotring the product name
         private const int LBLPRODUCTNAMEX = 3, LBLPRODUCTNAMEY = 8;
         // position of a unit storing the price and a currency
-        private const int LBLUNITPRICEX = 87, LBLLEVELTWOY = 173, LBLCURRENCYX = 128;
+        private const int LBLUNITPRICEX = 75, LBLLEVELTWOY = 173, LBLCURRENCYX = 120;
         // the length and the width of a button
         private const int BTNSIDE = 140; // the other labels should be positioned this length away from the top border
                                          // the size of a panel
         private const int PANELWIDTH = 152, PANELHEIGHT = 224;
         // the position of the queantity labels
-        const int LBLQUANX = 3, LBLLEVELTHREE = 201, LBLQUANVALX = 124;
+        const int LBLQUANX = 3, LBLLEVELTHREE = 201, LBLQUANVALX = 110;
 
 
         public static Panel ProducePanel(ref int X,ref int Y)
@@ -33,7 +33,7 @@ namespace ShopApp
             myPanel.Size = new System.Drawing.Size(PANELWIDTH, PANELHEIGHT);
             //myPanel.Name = "pnlTest";
             myPanel.BackColor = Color.AliceBlue;
-            myPanel.Font = new Font(, 9.25, FontStyle.Bold);
+            myPanel.Font = new Font(new FontFamily("Microsoft Sans Serif"), 9.75F, FontStyle.Bold);
             X = X + PANELWIDTH + LEFTMARGIN;
             return myPanel;
         }
@@ -73,6 +73,7 @@ namespace ShopApp
             Label myLblProductQuantityCaption = new Label();
             myLblProductQuantityCaption.Text = "Quantity: ";
             myLblProductQuantityCaption.Location = new System.Drawing.Point(LBLQUANX, LBLLEVELTHREE);
+            myLblProductQuantityCaption.Font = new Font(new FontFamily("Microsoft Sans Serif"), 9.75F, FontStyle.Regular);
             return myLblProductQuantityCaption;
         }
 
@@ -82,6 +83,7 @@ namespace ShopApp
             Label myLblProductQuantity = new Label();
             myLblProductQuantity.Text = ProdQuantity.ToString();
             myLblProductQuantity.Location = new System.Drawing.Point(LBLQUANVALX, LBLLEVELTHREE);
+            myLblProductQuantity.Font = new Font(new FontFamily("Microsoft Sans Serif"), 9.75F, FontStyle.Regular);
             return myLblProductQuantity;
         }
 

@@ -6,9 +6,8 @@ using System.Threading.Tasks;
 
 namespace ShopApp
 {
-    class Product
+    class Product: IComparable<Product>
     {
-
         // all the fields are retrieved from the DB
         public int Id
         {
@@ -18,7 +17,7 @@ namespace ShopApp
         {
             get; private set;
         }
-            public double Price
+        public double Price
         {
             get; private set;
         }
@@ -26,6 +25,9 @@ namespace ShopApp
         {
             get; private set;
         }
+
+
+
 
         //--------------------------Constructor
 
@@ -43,9 +45,35 @@ namespace ShopApp
             this.Quantity = qntt;
         }
 
-        public string getInfo()
+        //------------------------------Methods
+
+        public void LowerQuantityBy(int amount)
+        {
+            if(amount>=0)
+            {
+                this.Quantity -= amount;
+            }
+        }
+        public void IncreaseQuantityBy(int amount)
+        {
+            if (amount >= 0)
+            {
+                this.Quantity += amount;
+            }
+        }
+
+        /// <summary>
+        /// Shows information about a product
+        /// </summary>
+        /// <returns></returns>
+        public override string ToString()
         {
             return this.Name + "   -   price: " + this.Price.ToString() + "   -   quantity: " + this.Quantity.ToString();
+        }
+
+        public int CompareTo(Product obj)
+        {
+            return string.Compare(this.Name,obj.Name);
         }
     }
 }
