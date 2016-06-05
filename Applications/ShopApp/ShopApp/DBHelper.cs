@@ -27,7 +27,7 @@ namespace ShopApp
 
         public List<Product> GetAllProducts()
         {
-            String sql = "SELECT * FROM foodproducts";
+            String sql = "SELECT * FROM foodproducts1";
             MySqlCommand command = new MySqlCommand(sql, connection);
 
             List<Product> temp;
@@ -68,7 +68,7 @@ namespace ShopApp
         {
             int quantity = -1;
 
-            String sql = "SELECT quantity FROM foodproducts WHERE name = " + "\"" + name + "\"";
+            String sql = "SELECT quantity FROM foodproducts1 WHERE name = " + "\"" + name + "\"";
             MySqlCommand command = new MySqlCommand(sql, connection);
 
             try
@@ -93,7 +93,7 @@ namespace ShopApp
         }
         public void UpdateQuantity(string name, int newQantity)
         {
-            String sql = "UPDATE foodproducts SET quantity = "+newQantity.ToString()+" WHERE name = " + "\"" + name+ "\"";
+            String sql = "UPDATE foodproducts1 SET quantity = "+newQantity.ToString()+" WHERE name = " + "\"" + name+ "\"";
             MySqlCommand command = new MySqlCommand(sql, connection);
             try
             {

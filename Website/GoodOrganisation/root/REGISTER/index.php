@@ -17,7 +17,7 @@
     <?php include '../DEFAULT/PAGEPARTS/Header.php';
     if(isset($_SESSION['USER_ID']))
     {
-      header("Location: ../PERSONAL-PAGE/index.php");
+      //header("Location: ../PERSONAL-PAGE/index.php");
     }
     ?>
   </div>

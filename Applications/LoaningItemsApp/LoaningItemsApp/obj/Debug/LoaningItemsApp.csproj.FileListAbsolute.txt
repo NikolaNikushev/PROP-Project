@@ -1,1 +1,10 @@
 c:\users\hris\documents\visual studio 2015\Projects\LoaningItemsApp\LoaningItemsApp\bin\Debug\LoaningItemsApp.exe.config
+D:\Projects\FONTYSPRO\PROP-Project\Applications\LoaningItemsApp\LoaningItemsApp\bin\Debug\LoaningItemsApp.exe.config
+D:\Projects\FONTYSPRO\PROP-Project\Applications\LoaningItemsApp\LoaningItemsApp\bin\Debug\LoaningItemsApp.exe
+D:\Projects\FONTYSPRO\PROP-Project\Applications\LoaningItemsApp\LoaningItemsApp\bin\Debug\LoaningItemsApp.pdb
+D:\Projects\FONTYSPRO\PROP-Project\Applications\LoaningItemsApp\LoaningItemsApp\obj\Debug\LoaningItemsApp.csprojResolveAssemblyReference.cache
+D:\Projects\FONTYSPRO\PROP-Project\Applications\LoaningItemsApp\LoaningItemsApp\obj\Debug\LoaningItemsApp.Form1.resources
+D:\Projects\FONTYSPRO\PROP-Project\Applications\LoaningItemsApp\LoaningItemsApp\obj\Debug\LoaningItemsApp.Properties.Resources.resources
+D:\Projects\FONTYSPRO\PROP-Project\Applications\LoaningItemsApp\LoaningItemsApp\obj\Debug\LoaningItemsApp.csproj.GenerateResource.Cache
+D:\Projects\FONTYSPRO\PROP-Project\Applications\LoaningItemsApp\LoaningItemsApp\obj\Debug\LoaningItemsApp.exe
+D:\Projects\FONTYSPRO\PROP-Project\Applications\LoaningItemsApp\LoaningItemsApp\obj\Debug\LoaningItemsApp.pdb

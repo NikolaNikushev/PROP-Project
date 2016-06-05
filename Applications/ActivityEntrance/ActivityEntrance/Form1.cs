@@ -73,5 +73,8 @@ namespace ActivityEntrance
 
             listBox1.Items.Add("rfid has tag-nr: " + e.Tag + "  " + temp);
         }
+
+    
+
     }
 }
