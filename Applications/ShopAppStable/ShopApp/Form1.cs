@@ -113,9 +113,14 @@ namespace ShopApp
             else { MessageBox.Show("Not enough money"); }
         }
 
+        /// <summary>
+        /// Clears the basket and resets the store but keeps the user data untouched
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnClear_Click(object sender, EventArgs e)
         {
-            lbBasket.Items.Clear();
+            this.ReinitializeTheStore();
 
             totalPrice = 0;
             tbPrice.Text = totalPrice.ToString();
@@ -128,8 +133,6 @@ namespace ShopApp
             //myRFIDReader.close();
         }
 
-
-
         /// <summary>
         /// Cancels all the changes done during the last period. Returns back to the Database retrieved state.
         /// </summary>
@@ -137,7 +140,7 @@ namespace ShopApp
         /// <param name="e"></param>
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            lbBasket.Items.Clear();
+            
             // the easiest way to set everything to the db state - to reinitialize the shop
             this.ReinitializeTheStore();
 
@@ -194,8 +197,12 @@ namespace ShopApp
         //    else { MessageBox.Show("Nothing to undo"); }
         //}
 
+        /// <summary>
+        /// Recreates the store object and retrieves the data from the database
+        /// </summary>
         private void ReinitializeTheStore()
         {
+            lbBasket.Items.Clear();
             while (pnlProducts.Controls.Count > 0)
             {
                 this.pnlProducts.Controls[0].Dispose();
@@ -204,7 +211,9 @@ namespace ShopApp
             this.DisplayAllProducts();
         }
 
-
+        /// <summary>
+        /// Displays all the products there are in stock
+        /// </summary>
         private void DisplayAllProducts()
         {
             int X = 9, Y = 5;
@@ -379,6 +388,29 @@ namespace ShopApp
             //        lbBasket.Items.Add(temp.Name + " " + temp.Quantity.ToString());
             //    }
             //    else { MessageBox.Show("Nothing to redo"); }
+        }
+
+        /// <summary>
+        /// Just for fun. Change the label on the right part of a checkout module
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void Form1_ResizeEnd(object sender, EventArgs e)
+        {
+            if(this.Width - this.grbCheckout.Width >= this.MinimumSize.Width)
+            {
+                this.lblCheckOutSign.Text = "C\nH\nE\nC\nK\nO\nU\nT\n\n\n<<";
+            }
+            else
+            {
+                this.lblCheckOutSign.Text = "C\nH\nE\nC\nK\nO\nU\nT\n\n\n>>";
+            }
+        }
+
+        private void btnUndo_Click(object sender, EventArgs e)
+        {
+            // keep imaginary "history"-product with properties WhereTo(to the Basket or back from the basket) Quantity Name
+            // well, since the controls inside of a panel are generated based on the array they should share the same indexes
         }
     }
 }

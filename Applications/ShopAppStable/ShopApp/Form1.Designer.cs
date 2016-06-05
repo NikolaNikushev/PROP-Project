@@ -34,7 +34,7 @@
             this.lblBasket = new System.Windows.Forms.Label();
             this.btnClear = new System.Windows.Forms.Button();
             this.btnPurchase = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblTotalPrice = new System.Windows.Forms.Label();
             this.tbPrice = new System.Windows.Forms.TextBox();
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnUndo = new System.Windows.Forms.Button();
@@ -52,9 +52,9 @@
             this.tbShopCode = new System.Windows.Forms.TextBox();
             this.cmbxShopNames = new System.Windows.Forms.ComboBox();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.gbCheckout = new System.Windows.Forms.GroupBox();
+            this.grbCheckout = new System.Windows.Forms.GroupBox();
             this.pnlCheckout = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lblCheckOutSign = new System.Windows.Forms.Label();
             this.lblInStock = new System.Windows.Forms.Label();
             this.lblUnitPrice = new System.Windows.Forms.Label();
             this.lblProductName = new System.Windows.Forms.Label();
@@ -64,11 +64,10 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.grbProducts.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudQuantityToAdd)).BeginInit();
-            this.pnlProducts.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel3.SuspendLayout();
-            this.gbCheckout.SuspendLayout();
+            this.grbCheckout.SuspendLayout();
             this.pnlCheckout.SuspendLayout();
             this.panel4.SuspendLayout();
             this.SuspendLayout();
@@ -76,19 +75,21 @@
             // lblBalance
             // 
             this.lblBalance.AutoSize = true;
-            this.lblBalance.Location = new System.Drawing.Point(118, 19);
+            this.lblBalance.Location = new System.Drawing.Point(24, 396);
             this.lblBalance.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblBalance.Name = "lblBalance";
-            this.lblBalance.Size = new System.Drawing.Size(105, 16);
+            this.lblBalance.Size = new System.Drawing.Size(112, 16);
             this.lblBalance.TabIndex = 19;
-            this.lblBalance.Text = "Your Balance:";
+            this.lblBalance.Text = "Client Balance:";
             // 
             // tbBalance
             // 
-            this.tbBalance.Location = new System.Drawing.Point(237, 16);
+            this.tbBalance.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.tbBalance.Location = new System.Drawing.Point(162, 390);
             this.tbBalance.Margin = new System.Windows.Forms.Padding(2);
             this.tbBalance.Name = "tbBalance";
-            this.tbBalance.Size = new System.Drawing.Size(76, 22);
+            this.tbBalance.ReadOnly = true;
+            this.tbBalance.Size = new System.Drawing.Size(185, 22);
             this.tbBalance.TabIndex = 20;
             // 
             // lbBasket
@@ -97,16 +98,16 @@
             this.lbBasket.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lbBasket.FormattingEnabled = true;
             this.lbBasket.ItemHeight = 16;
-            this.lbBasket.Location = new System.Drawing.Point(26, 58);
+            this.lbBasket.Location = new System.Drawing.Point(27, 41);
             this.lbBasket.Margin = new System.Windows.Forms.Padding(2);
             this.lbBasket.Name = "lbBasket";
-            this.lbBasket.Size = new System.Drawing.Size(320, 244);
+            this.lbBasket.Size = new System.Drawing.Size(320, 308);
             this.lbBasket.TabIndex = 21;
             // 
             // lblBasket
             // 
             this.lblBasket.AutoSize = true;
-            this.lblBasket.Location = new System.Drawing.Point(24, 40);
+            this.lblBasket.Location = new System.Drawing.Point(24, 10);
             this.lblBasket.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblBasket.Name = "lblBasket";
             this.lblBasket.Size = new System.Drawing.Size(60, 16);
@@ -115,7 +116,7 @@
             // 
             // btnClear
             // 
-            this.btnClear.Location = new System.Drawing.Point(242, 401);
+            this.btnClear.Location = new System.Drawing.Point(27, 428);
             this.btnClear.Margin = new System.Windows.Forms.Padding(2);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(104, 54);
@@ -126,7 +127,7 @@
             // 
             // btnPurchase
             // 
-            this.btnPurchase.Location = new System.Drawing.Point(135, 464);
+            this.btnPurchase.Location = new System.Drawing.Point(190, 486);
             this.btnPurchase.Margin = new System.Windows.Forms.Padding(2);
             this.btnPurchase.Name = "btnPurchase";
             this.btnPurchase.Size = new System.Drawing.Size(104, 54);
@@ -135,29 +136,29 @@
             this.btnPurchase.UseVisualStyleBackColor = true;
             this.btnPurchase.Click += new System.EventHandler(this.btnPurchase_Click);
             // 
-            // label1
+            // lblTotalPrice
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(70, 332);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(92, 16);
-            this.label1.TabIndex = 25;
-            this.label1.Text = "Total Price: ";
+            this.lblTotalPrice.AutoSize = true;
+            this.lblTotalPrice.Location = new System.Drawing.Point(24, 369);
+            this.lblTotalPrice.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblTotalPrice.Name = "lblTotalPrice";
+            this.lblTotalPrice.Size = new System.Drawing.Size(92, 16);
+            this.lblTotalPrice.TabIndex = 25;
+            this.lblTotalPrice.Text = "Total Price: ";
             // 
             // tbPrice
             // 
             this.tbPrice.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.tbPrice.Location = new System.Drawing.Point(166, 329);
+            this.tbPrice.Location = new System.Drawing.Point(162, 363);
             this.tbPrice.Margin = new System.Windows.Forms.Padding(2);
             this.tbPrice.Name = "tbPrice";
             this.tbPrice.ReadOnly = true;
-            this.tbPrice.Size = new System.Drawing.Size(98, 22);
+            this.tbPrice.Size = new System.Drawing.Size(185, 22);
             this.tbPrice.TabIndex = 26;
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(27, 464);
+            this.btnCancel.Location = new System.Drawing.Point(82, 486);
             this.btnCancel.Margin = new System.Windows.Forms.Padding(2);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(104, 54);
@@ -168,17 +169,18 @@
             // 
             // btnUndo
             // 
-            this.btnUndo.Location = new System.Drawing.Point(26, 401);
+            this.btnUndo.Location = new System.Drawing.Point(135, 428);
             this.btnUndo.Margin = new System.Windows.Forms.Padding(2);
             this.btnUndo.Name = "btnUndo";
             this.btnUndo.Size = new System.Drawing.Size(104, 54);
             this.btnUndo.TabIndex = 32;
             this.btnUndo.Text = "Undo";
             this.btnUndo.UseVisualStyleBackColor = true;
+            this.btnUndo.Click += new System.EventHandler(this.btnUndo_Click);
             // 
             // btnRedo
             // 
-            this.btnRedo.Location = new System.Drawing.Point(134, 401);
+            this.btnRedo.Location = new System.Drawing.Point(243, 428);
             this.btnRedo.Margin = new System.Windows.Forms.Padding(2);
             this.btnRedo.Name = "btnRedo";
             this.btnRedo.Size = new System.Drawing.Size(104, 54);
@@ -239,11 +241,9 @@
             // 
             // pnlProducts
             // 
-            this.pnlProducts.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.pnlProducts.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlProducts.AutoScroll = true;
-            this.pnlProducts.Controls.Add(this.panel4);
             this.pnlProducts.Location = new System.Drawing.Point(-3, 25);
             this.pnlProducts.Name = "pnlProducts";
             this.pnlProducts.Size = new System.Drawing.Size(687, 573);
@@ -318,29 +318,30 @@
             // panel3
             // 
             this.panel3.Controls.Add(this.grbProducts);
-            this.panel3.Controls.Add(this.gbCheckout);
+            this.panel3.Controls.Add(this.grbCheckout);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel3.Location = new System.Drawing.Point(0, 57);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1116, 594);
             this.panel3.TabIndex = 36;
             // 
-            // gbCheckout
+            // grbCheckout
             // 
-            this.gbCheckout.Controls.Add(this.pnlCheckout);
-            this.gbCheckout.Dock = System.Windows.Forms.DockStyle.Right;
-            this.gbCheckout.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.gbCheckout.Location = new System.Drawing.Point(700, 0);
-            this.gbCheckout.Name = "gbCheckout";
-            this.gbCheckout.Size = new System.Drawing.Size(416, 594);
-            this.gbCheckout.TabIndex = 34;
-            this.gbCheckout.TabStop = false;
-            this.gbCheckout.Text = "Checkout";
+            this.grbCheckout.Controls.Add(this.pnlCheckout);
+            this.grbCheckout.Dock = System.Windows.Forms.DockStyle.Right;
+            this.grbCheckout.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.grbCheckout.Location = new System.Drawing.Point(700, 0);
+            this.grbCheckout.Name = "grbCheckout";
+            this.grbCheckout.Size = new System.Drawing.Size(416, 594);
+            this.grbCheckout.TabIndex = 34;
+            this.grbCheckout.TabStop = false;
+            this.grbCheckout.Text = "Checkout";
             // 
             // pnlCheckout
             // 
-            this.pnlCheckout.Controls.Add(this.label3);
-            this.pnlCheckout.Controls.Add(this.label1);
+            this.pnlCheckout.Controls.Add(this.panel4);
+            this.pnlCheckout.Controls.Add(this.lblCheckOutSign);
+            this.pnlCheckout.Controls.Add(this.lblTotalPrice);
             this.pnlCheckout.Controls.Add(this.btnPurchase);
             this.pnlCheckout.Controls.Add(this.btnCancel);
             this.pnlCheckout.Controls.Add(this.btnClear);
@@ -358,15 +359,15 @@
             this.pnlCheckout.Size = new System.Drawing.Size(410, 553);
             this.pnlCheckout.TabIndex = 34;
             // 
-            // label3
+            // lblCheckOutSign
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.Location = new System.Drawing.Point(373, 130);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(34, 264);
-            this.label3.TabIndex = 33;
-            this.label3.Text = "C\r\nH\r\nE\r\nC\r\nK\r\nO\r\nU\r\nT\r\n\r\n\r\n>>";
+            this.lblCheckOutSign.AutoSize = true;
+            this.lblCheckOutSign.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblCheckOutSign.Location = new System.Drawing.Point(367, 59);
+            this.lblCheckOutSign.Name = "lblCheckOutSign";
+            this.lblCheckOutSign.Size = new System.Drawing.Size(34, 264);
+            this.lblCheckOutSign.TabIndex = 33;
+            this.lblCheckOutSign.Text = "C\r\nH\r\nE\r\nC\r\nK\r\nO\r\nU\r\nT\r\n\r\n\r\n>>";
             // 
             // lblInStock
             // 
@@ -442,7 +443,7 @@
             this.panel4.Controls.Add(this.lblProductName);
             this.panel4.Controls.Add(this.lblUnitPrice);
             this.panel4.Controls.Add(this.lblInStock);
-            this.panel4.Location = new System.Drawing.Point(526, 336);
+            this.panel4.Location = new System.Drawing.Point(371, 514);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(152, 224);
             this.panel4.TabIndex = 32;
@@ -462,15 +463,15 @@
             this.Text = "Form1";
             this.TransparencyKey = System.Drawing.Color.LightPink;
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form1_FormClosed);
+            this.ResizeEnd += new System.EventHandler(this.Form1_ResizeEnd);
             this.grbProducts.ResumeLayout(false);
             this.grbProducts.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudQuantityToAdd)).EndInit();
-            this.pnlProducts.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             this.panel3.ResumeLayout(false);
-            this.gbCheckout.ResumeLayout(false);
+            this.grbCheckout.ResumeLayout(false);
             this.pnlCheckout.ResumeLayout(false);
             this.pnlCheckout.PerformLayout();
             this.panel4.ResumeLayout(false);
@@ -486,7 +487,7 @@
         private System.Windows.Forms.Label lblBasket;
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.Button btnPurchase;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblTotalPrice;
         private System.Windows.Forms.TextBox tbPrice;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Button btnUndo;
@@ -504,9 +505,9 @@
         private System.Windows.Forms.Button btnChangeShop;
         private System.Windows.Forms.NumericUpDown nudQuantityToAdd;
         private System.Windows.Forms.ListBox lbActivityLog;
-        private System.Windows.Forms.GroupBox gbCheckout;
+        private System.Windows.Forms.GroupBox grbCheckout;
         private System.Windows.Forms.Panel pnlCheckout;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblCheckOutSign;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label lblCredits;
         private System.Windows.Forms.Button btnTest;
