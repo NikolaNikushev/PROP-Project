@@ -61,60 +61,66 @@ namespace WAvisitorCheck
             int camping_id = dbh.GetCampingID(e.Tag);
             DateTime today = DateTime.Today;
             DateTime arrivalDate = dbh.GetArrivalDate(user_id);
+            int isVisitorIn = dbh.IsVisitorIn(user_id);
 
-            if (workingRFID == 0) { 
-            if (paid == 1)
+            if (workingRFID == 0) //Prevents from accidentally scanning your RFID twice
             {
-                if (camping_id != 0)
+                if (paid == 1) //Prevents from people that haven't paid for the event (just in case)
                 {
-                    if (arrivalDate <= today)
+                    if (camping_id != 0) //Prevents from people that don't have a tent 
                     {
-                        dbh.UpdateLocation(user_id.ToString());
-                        pictureBox1.BackColor = Color.Green;
-                        workingRFID = 1;
-                        //Start timer, your program continues execution normaly
-                        timer1.Start();
-                        //If you use sleep(2000) your program stop working for two seconds.
-                        //listBox1.Items.Add(paid.ToString());
-                        //dbh.UpdateStatus(e.Tag);
+                        if (arrivalDate <= today) //Prevents from entering too early
+                        {
+                            if (isVisitorIn == 0) //Prevents bastards from giving their bracelets to other people
+                            {
+                                dbh.UpdateLocation(user_id.ToString());
+                                pictureBox1.BackColor = Color.Green;
+                                workingRFID = 1;
+                                //Start timer, your program continues execution normaly
+                                timer1.Start();
+                                //If you use sleep(2000) your program stop working for two seconds.
+                                //listBox1.Items.Add(paid.ToString());
+                                //dbh.UpdateStatus(e.Tag);
+                            }
+                            else { AutoClosingMessageBox.Show("You are already in", "NaskoSexy", 1000); }
+                        }
+                        else
+                        {
+                            pictureBox1.BackColor = Color.Red;
+                            //Start timer, your program continues execution normaly
+                            timer1.Start();
+                            AutoClosingMessageBox.Show("Sorry, you will have to wait until " + arrivalDate + " to enter", "capiton", 1000);
+                        }
                     }
                     else
                     {
                         pictureBox1.BackColor = Color.Red;
                         //Start timer, your program continues execution normaly
                         timer1.Start();
-                        AutoClosingMessageBox.Show("Sorry, you will have to wait until " + arrivalDate + " to enter", "capiton", 1000);
+                        AutoClosingMessageBox.Show("Sorry, you will have to try to book a tent to enter", "capiton", 1000);
+
                     }
+
+                }
+                else if (paid == 0)
+                {
+                    pictureBox1.BackColor = Color.Red;
+                    //Start timer, your program continues execution normaly
+                    timer1.Start();
+                    //If you use sleep(2000) your program stop working for two seconds.
+                    //listBox1.Items.Add(paid.ToString());
+                    AutoClosingMessageBox.Show("This person has not payed for the event - KICK HIM OUT!", "capiton", 1000);
                 }
                 else
                 {
                     pictureBox1.BackColor = Color.Red;
                     //Start timer, your program continues execution normaly
                     timer1.Start();
-                    AutoClosingMessageBox.Show("Sorry, you will have to try to book a tent to enter", "capiton", 1000);
-
+                    //If you use sleep(2000) your program stop working for two seconds.
+                    //listBox1.Items.Add(paid.ToString());
+                    AutoClosingMessageBox.Show("this rfid is not registered - KICK THIS PERSON OUT!", "capiton", 1000);
                 }
-
             }
-            else if (paid == 0)
-            {
-                pictureBox1.BackColor = Color.Red;
-                //Start timer, your program continues execution normaly
-                timer1.Start();
-                //If you use sleep(2000) your program stop working for two seconds.
-                //listBox1.Items.Add(paid.ToString());
-                AutoClosingMessageBox.Show("This person has not payed for the event - KICK HIM OUT!", "capiton", 1000);
-            }
-            else
-            {
-                pictureBox1.BackColor = Color.Red;
-                //Start timer, your program continues execution normaly
-                timer1.Start();
-                //If you use sleep(2000) your program stop working for two seconds.
-                //listBox1.Items.Add(paid.ToString());
-                AutoClosingMessageBox.Show("this rfid is not registered - KICK THIS PERSON OUT!", "capiton", 1000);
-            }
-        }
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -132,7 +138,7 @@ namespace WAvisitorCheck
 
         public void AddMoneyTag(object sender, TagEventArgs e)
         {
-            
+
             string bracelet_id = e.Tag;
             int paid = dbh.CheckIfPaid(e.Tag);
             int user_id = dbh.GetUserID(e.Tag);
@@ -180,7 +186,7 @@ namespace WAvisitorCheck
         {
             myRFIDReader.Tag -= new TagEventHandler(ProcessThisTag);
             myRFIDReader.Tag += new TagEventHandler(AddMoneyTag);
-            AutoClosingMessageBox.Show("Scan your RFID", "Nasko e Sexy",1000);
+            AutoClosingMessageBox.Show("Scan your RFID", "Nasko e Sexy", 1000);
             lblMode.Text = "Adding a day";
             EnableCancel();
         }

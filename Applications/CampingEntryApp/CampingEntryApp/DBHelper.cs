@@ -472,6 +472,43 @@ namespace WAvisitorCheck
                 connection.Close();
             }
         }
+        public int IsVisitorIn(int user_id)
+        {
+            DateTime maxEnter = DateTime.MinValue;
+            DateTime maxExit = DateTime.MinValue;
+            String sql = "SELECT MAX(TIME_ENTRANCE) AS MAX, MAX(TIME_EXIT) AS MIN FROM location_history WHERE CAMPING=1 AND USER_ID="+user_id.ToString()+" GROUP BY USER_ID" ;
+            MySqlCommand command = new MySqlCommand(sql, connection);
+
+            try
+            {
+                connection.Open();
+                MySqlDataReader reader = command.ExecuteReader();
+                while (reader.Read())
+                {
+                    if (reader["MAX"] != DBNull.Value)
+                    {
+                        maxEnter = Convert.ToDateTime(reader["MAX"]);
+                    }
+                    if (reader["MIN"] != DBNull.Value)
+                    {
+                        maxExit = Convert.ToDateTime(reader["MIN"]);
+                    }
+                }
+
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+            finally
+            {
+                connection.Close();
+            }
+
+            if (maxEnter > maxExit) { return 1; }
+            else{ return 0; }
+        }
 
 
     }
