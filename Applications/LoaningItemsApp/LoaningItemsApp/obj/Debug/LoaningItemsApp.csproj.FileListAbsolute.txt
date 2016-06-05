@@ -8,3 +8,6 @@ D:\Projects\FONTYSPRO\PROP-Project\Applications\LoaningItemsApp\LoaningItemsApp\
 D:\Projects\FONTYSPRO\PROP-Project\Applications\LoaningItemsApp\LoaningItemsApp\obj\Debug\LoaningItemsApp.csproj.GenerateResource.Cache
 D:\Projects\FONTYSPRO\PROP-Project\Applications\LoaningItemsApp\LoaningItemsApp\obj\Debug\LoaningItemsApp.exe
 D:\Projects\FONTYSPRO\PROP-Project\Applications\LoaningItemsApp\LoaningItemsApp\obj\Debug\LoaningItemsApp.pdb
+C:\Users\HomeAsus\Desktop\ProP\PROP-Project\Applications\LoaningItemsApp\LoaningItemsApp\bin\Debug\LoaningItemsApp.exe.config
+C:\Users\HomeAsus\Desktop\ProP\PROP-Project\Applications\LoaningItemsApp\LoaningItemsApp\obj\Debug\LoaningItemsApp.exe
+C:\Users\HomeAsus\Desktop\ProP\PROP-Project\Applications\LoaningItemsApp\LoaningItemsApp\obj\Debug\LoaningItemsApp.pdb
