@@ -11,3 +11,6 @@ D:\Projects\FONTYSPRO\PROP-Project\Applications\LoaningItemsApp\LoaningItemsApp\
 C:\Users\HomeAsus\Desktop\ProP\PROP-Project\Applications\LoaningItemsApp\LoaningItemsApp\bin\Debug\LoaningItemsApp.exe.config
 C:\Users\HomeAsus\Desktop\ProP\PROP-Project\Applications\LoaningItemsApp\LoaningItemsApp\obj\Debug\LoaningItemsApp.exe
 C:\Users\HomeAsus\Desktop\ProP\PROP-Project\Applications\LoaningItemsApp\LoaningItemsApp\obj\Debug\LoaningItemsApp.pdb
+E:\Dropbox\workspace\Apps\PROP-Project\Applications\LoaningItemsApp\LoaningItemsApp\bin\Debug\LoaningItemsApp.exe.config
+E:\Dropbox\workspace\Apps\PROP-Project\Applications\LoaningItemsApp\LoaningItemsApp\obj\Debug\LoaningItemsApp.exe
+E:\Dropbox\workspace\Apps\PROP-Project\Applications\LoaningItemsApp\LoaningItemsApp\obj\Debug\LoaningItemsApp.pdb

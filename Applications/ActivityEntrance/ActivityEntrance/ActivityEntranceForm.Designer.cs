@@ -1,6 +1,6 @@
 ﻿namespace ActivityEntrance
 {
-    partial class ActivityReservationForm
+    partial class ActivityEntranceForm
     {
         /// <summary>
         /// Required designer variable.
@@ -31,28 +31,29 @@
             this.open_RFID = new System.Windows.Forms.Button();
             this.close_RFID = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.activityName = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label11 = new System.Windows.Forms.Label();
+            this.freePlaces = new System.Windows.Forms.Label();
+            this.reservedPlaces = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
+            this.totalPlaces = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.activityDate = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.typeOfPlace = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
+            this.braceletSerialNumber = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.statusValue = new System.Windows.Forms.Label();
+            this.readerNumberValue = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.label18 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -91,15 +92,14 @@
             this.label3.TabIndex = 5;
             this.label3.Text = "Activity name:";
             // 
-            // label4
+            // activityName
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label4.Location = new System.Drawing.Point(175, 44);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(64, 25);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "label4";
+            this.activityName.AutoSize = true;
+            this.activityName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.activityName.Location = new System.Drawing.Point(175, 44);
+            this.activityName.Name = "activityName";
+            this.activityName.Size = new System.Drawing.Size(0, 25);
+            this.activityName.TabIndex = 6;
             // 
             // label5
             // 
@@ -113,32 +113,42 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.label11);
+            this.groupBox1.Controls.Add(this.freePlaces);
+            this.groupBox1.Controls.Add(this.reservedPlaces);
             this.groupBox1.Controls.Add(this.label10);
             this.groupBox1.Controls.Add(this.label9);
-            this.groupBox1.Controls.Add(this.label8);
+            this.groupBox1.Controls.Add(this.totalPlaces);
             this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Controls.Add(this.label6);
+            this.groupBox1.Controls.Add(this.activityDate);
             this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.activityName);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(344, 358);
+            this.groupBox1.Size = new System.Drawing.Size(672, 358);
             this.groupBox1.TabIndex = 8;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Activity details";
             // 
-            // label11
+            // freePlaces
             // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label11.Location = new System.Drawing.Point(175, 169);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(75, 25);
-            this.label11.TabIndex = 13;
-            this.label11.Text = "label11";
+            this.freePlaces.AutoSize = true;
+            this.freePlaces.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.freePlaces.Location = new System.Drawing.Point(146, 316);
+            this.freePlaces.Name = "freePlaces";
+            this.freePlaces.Size = new System.Drawing.Size(75, 25);
+            this.freePlaces.TabIndex = 17;
+            this.freePlaces.Text = "label14";
+            // 
+            // reservedPlaces
+            // 
+            this.reservedPlaces.AutoSize = true;
+            this.reservedPlaces.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.reservedPlaces.Location = new System.Drawing.Point(175, 169);
+            this.reservedPlaces.Name = "reservedPlaces";
+            this.reservedPlaces.Size = new System.Drawing.Size(0, 25);
+            this.reservedPlaces.TabIndex = 13;
             // 
             // label10
             // 
@@ -156,19 +166,18 @@
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label9.Location = new System.Drawing.Point(6, 316);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(182, 25);
+            this.label9.Size = new System.Drawing.Size(120, 25);
             this.label9.TabIndex = 11;
-            this.label9.Text = "Open places taken:";
+            this.label9.Text = "Free places:";
             // 
-            // label8
+            // totalPlaces
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label8.Location = new System.Drawing.Point(175, 129);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(64, 25);
-            this.label8.TabIndex = 10;
-            this.label8.Text = "label8";
+            this.totalPlaces.AutoSize = true;
+            this.totalPlaces.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.totalPlaces.Location = new System.Drawing.Point(175, 129);
+            this.totalPlaces.Name = "totalPlaces";
+            this.totalPlaces.Size = new System.Drawing.Size(0, 25);
+            this.totalPlaces.TabIndex = 10;
             // 
             // label7
             // 
@@ -180,138 +189,29 @@
             this.label7.TabIndex = 9;
             this.label7.Text = "Total places:";
             // 
-            // label6
+            // activityDate
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label6.Location = new System.Drawing.Point(175, 87);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(64, 25);
-            this.label6.TabIndex = 8;
-            this.label6.Text = "label6";
+            this.activityDate.AutoSize = true;
+            this.activityDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.activityDate.Location = new System.Drawing.Point(175, 87);
+            this.activityDate.Name = "activityDate";
+            this.activityDate.Size = new System.Drawing.Size(0, 25);
+            this.activityDate.TabIndex = 8;
             // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.label18);
-            this.groupBox3.Controls.Add(this.label17);
+            this.groupBox3.Controls.Add(this.typeOfPlace);
             this.groupBox3.Controls.Add(this.label16);
-            this.groupBox3.Controls.Add(this.label13);
+            this.groupBox3.Controls.Add(this.braceletSerialNumber);
             this.groupBox3.Controls.Add(this.label12);
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.groupBox3.Location = new System.Drawing.Point(445, 12);
+            this.groupBox3.Location = new System.Drawing.Point(715, 12);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(344, 358);
+            this.groupBox3.Size = new System.Drawing.Size(478, 358);
             this.groupBox3.TabIndex = 10;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Visitor/Bracelet details";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label12.Location = new System.Drawing.Point(6, 44);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(139, 25);
-            this.label12.TabIndex = 6;
-            this.label12.Text = "Serial number:";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label13.Location = new System.Drawing.Point(199, 44);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(75, 25);
-            this.label13.TabIndex = 7;
-            this.label13.Text = "label13";
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.label15);
-            this.groupBox2.Controls.Add(this.label14);
-            this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Controls.Add(this.label1);
-            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.groupBox2.Location = new System.Drawing.Point(182, 393);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(211, 109);
-            this.groupBox2.TabIndex = 11;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Reader details";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(7, 27);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(118, 20);
-            this.label1.TabIndex = 12;
-            this.label1.Text = "Serial number:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(7, 57);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(62, 20);
-            this.label2.TabIndex = 13;
-            this.label2.Text = "Status:";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(131, 27);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(48, 20);
-            this.label14.TabIndex = 14;
-            this.label14.Text = "value";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(131, 57);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(48, 20);
-            this.label15.TabIndex = 15;
-            this.label15.Text = "value";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label16.Location = new System.Drawing.Point(6, 87);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(136, 25);
-            this.label16.TabIndex = 8;
-            this.label16.Text = "Type of place:";
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label17.Location = new System.Drawing.Point(199, 87);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(75, 25);
-            this.label17.TabIndex = 9;
-            this.label17.Text = "label17";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(445, 396);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(344, 123);
-            this.pictureBox1.TabIndex = 12;
-            this.pictureBox1.TabStop = false;
-            // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.Location = new System.Drawing.Point(800, 25);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(51, 268);
-            this.button1.TabIndex = 13;
-            this.button1.Text = "PROCEED";
-            this.button1.UseVisualStyleBackColor = true;
             // 
             // label18
             // 
@@ -323,11 +223,118 @@
             this.label18.TabIndex = 10;
             this.label18.Text = "User allowed to enter";
             // 
-            // ActivityReservationForm
+            // typeOfPlace
+            // 
+            this.typeOfPlace.AutoSize = true;
+            this.typeOfPlace.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.typeOfPlace.Location = new System.Drawing.Point(199, 87);
+            this.typeOfPlace.Name = "typeOfPlace";
+            this.typeOfPlace.Size = new System.Drawing.Size(75, 25);
+            this.typeOfPlace.TabIndex = 9;
+            this.typeOfPlace.Text = "label17";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label16.Location = new System.Drawing.Point(6, 87);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(136, 25);
+            this.label16.TabIndex = 8;
+            this.label16.Text = "Type of place:";
+            // 
+            // braceletSerialNumber
+            // 
+            this.braceletSerialNumber.AutoSize = true;
+            this.braceletSerialNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.braceletSerialNumber.Location = new System.Drawing.Point(199, 44);
+            this.braceletSerialNumber.Name = "braceletSerialNumber";
+            this.braceletSerialNumber.Size = new System.Drawing.Size(75, 25);
+            this.braceletSerialNumber.TabIndex = 7;
+            this.braceletSerialNumber.Text = "label13";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label12.Location = new System.Drawing.Point(6, 44);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(139, 25);
+            this.label12.TabIndex = 6;
+            this.label12.Text = "Serial number:";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.statusValue);
+            this.groupBox2.Controls.Add(this.readerNumberValue);
+            this.groupBox2.Controls.Add(this.label2);
+            this.groupBox2.Controls.Add(this.label1);
+            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.groupBox2.Location = new System.Drawing.Point(182, 393);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(502, 123);
+            this.groupBox2.TabIndex = 11;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Reader details";
+            // 
+            // statusValue
+            // 
+            this.statusValue.AutoSize = true;
+            this.statusValue.Location = new System.Drawing.Point(131, 57);
+            this.statusValue.Name = "statusValue";
+            this.statusValue.Size = new System.Drawing.Size(0, 20);
+            this.statusValue.TabIndex = 15;
+            // 
+            // readerNumberValue
+            // 
+            this.readerNumberValue.AutoSize = true;
+            this.readerNumberValue.Location = new System.Drawing.Point(131, 27);
+            this.readerNumberValue.Name = "readerNumberValue";
+            this.readerNumberValue.Size = new System.Drawing.Size(0, 20);
+            this.readerNumberValue.TabIndex = 14;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(7, 57);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(62, 20);
+            this.label2.TabIndex = 13;
+            this.label2.Text = "Status:";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(7, 27);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(118, 20);
+            this.label1.TabIndex = 12;
+            this.label1.Text = "Serial number:";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(715, 393);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(344, 123);
+            this.pictureBox1.TabIndex = 12;
+            this.pictureBox1.TabStop = false;
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button1.Location = new System.Drawing.Point(1214, 12);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(51, 268);
+            this.button1.TabIndex = 13;
+            this.button1.Text = "PROCEED";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // ActivityEntranceForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(863, 525);
+            this.ClientSize = new System.Drawing.Size(1277, 525);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.groupBox2);
@@ -335,8 +342,8 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.close_RFID);
             this.Controls.Add(this.open_RFID);
-            this.Name = "ActivityReservationForm";
-            this.Text = "ActivityReservationForm";
+            this.Name = "ActivityEntranceForm";
+            this.Text = "Activity Entrance";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox3.ResumeLayout(false);
@@ -353,28 +360,29 @@
         private System.Windows.Forms.Button open_RFID;
         private System.Windows.Forms.Button close_RFID;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label activityName;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label reservedPlaces;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label totalPlaces;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label activityDate;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label braceletSerialNumber;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label statusValue;
+        private System.Windows.Forms.Label readerNumberValue;
+        private System.Windows.Forms.Label typeOfPlace;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label freePlaces;
     }
 }
 
