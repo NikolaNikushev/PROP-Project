@@ -52,7 +52,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DBHelper.cs" />
     <Compile Include="ActivityEntranceForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -90,6 +89,12 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DatabaseInteraction\DatabaseInteraction.csproj">
+      <Project>{79f9bb9c-5f33-4681-8363-074d6e3a57bd}</Project>
+      <Name>DatabaseInteraction</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

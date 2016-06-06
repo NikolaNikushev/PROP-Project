@@ -12,7 +12,7 @@ namespace ActivityEntrance
     public partial class ActivityEntranceForm : Form
     {
         private RFID myRFIDReader;
-        private DBHelper myDBHelper = new DBHelper();
+        public DBHelper myDBHelper;
         private string RFIDTag;
         public ActivityEntranceForm()
         {
@@ -30,6 +30,8 @@ namespace ActivityEntrance
 
 
         }
+
+        //making the controls I need accesible, so i can use them in the other form 
         public string ActivityName
         {
             get
@@ -102,10 +104,18 @@ namespace ActivityEntrance
 
         private void close_RFID_Click(object sender, EventArgs e)
         {
-            myRFIDReader.LED = false;
-            myRFIDReader.Antenna = false;
-            myRFIDReader.close();
-            statusValue.Text = "Reader closed";
+            try
+            {
+                myRFIDReader.LED = false;
+                myRFIDReader.Antenna = false;
+                myRFIDReader.close();
+                statusValue.Text = "Reader closed";
+            }
+            catch (Exception)
+            {
+                statusValue.Text = "Error occured on closing";
+            }
+            
         }
         private void ShowWhoIsAttached(object sender, AttachEventArgs e)
         {
@@ -118,9 +128,10 @@ namespace ActivityEntrance
         }
         private void ProcessThisTag(object sender, TagEventArgs e)
         {
+            string braceletData;
             try
             {
-                string braceletData;
+                
                 RFIDTag = e.Tag;
                 braceletData = myDBHelper.RetrieveBraceletData(RFIDTag);
                 typeOfPlace.Text = braceletData;
