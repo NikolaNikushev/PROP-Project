@@ -343,6 +343,7 @@
             this.Controls.Add(this.open_RFID);
             this.Name = "ActivityEntranceForm";
             this.Text = "Activity Entrance";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ActivityEntranceForm_FormClosing);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox3.ResumeLayout(false);

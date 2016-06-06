@@ -11,7 +11,7 @@ public class DBHelper
     private string userID;
     private MySqlConnection connection;
     MySqlDataReader reader;
-
+    //Constructors
     public DBHelper()
     {
         String connectionInfo = "server=localhost;" +
@@ -35,37 +35,41 @@ public class DBHelper
 
         connection = new MySqlConnection(connectionInfo);
     }
-
+    // The method that is executed by the proceed button
     public string Entrance(string braceletID)
     {
         try
         {
             connection.Open();
+            //first I verify the given data
             reader = VerifyData(braceletID).ExecuteReader();
             if (reader.Read())
             {
                 userID = reader["USER_ID"].ToString();
                 reader.Close();
+                // Check if the user has a reserved place
                 reader = BraceletDataCommand(braceletID, activityID).ExecuteReader();
                 if (reader.Read())
                 {
 
                     queryOutput = "Visitor can go to his/her reserved place";
                     reader.Close();
+                    //keep track of the data
                     reader = InsertIntoHistory(userID).ExecuteReader();
                     reader.Close();
                 }
+                // here are operated the visitors that have no reservations for the given activity
                 else
                 {
                     reader.Close();
+                    //decrease free spots
                     reader = DecreasePlaces(selectedActivity).ExecuteReader();
                     queryOutput = "Visitor can enter and choose a spot";
                     reader.Close();
+                    //keep track of the data
                     reader = InsertIntoHistory(userID).ExecuteReader();
                     reader.Close();
-
                 }
-
             }
             else
             {
@@ -83,7 +87,6 @@ public class DBHelper
         }
         return queryOutput;
     }
-
 
     // methods for return the retrieved data
     public List<string> RetrieveActivityNames()
@@ -114,6 +117,7 @@ public class DBHelper
         try
         {
             connection.Open();
+            // first I need to retrieve the activity Id the use it in the next query
             reader = ActivityDetailsCommand(selectedActivity).ExecuteReader();
             if (reader.Read())
             {
@@ -181,7 +185,6 @@ public class DBHelper
                 activityID = activityData[2];
             }
         }
-
         catch (Exception ex)
         {
 
@@ -254,7 +257,7 @@ public class DBHelper
         MySqlCommand insertCommand = new MySqlCommand(insertQuery, connection);
         return insertCommand;
     }
-
+    
     private MySqlCommand VerifyData(string braceletID)
     {
         string verifyQuery = "SELECT v.USER_ID " +

@@ -149,6 +149,7 @@ namespace ActivityEntrance
 
         private void proceedButton_Click(object sender, EventArgs e)
         {
+            // here I change some labels and and execute update queries to the database
             List<string> placesData = new List<string>();
             userInfo.Text = myDBHelper.Entrance(RFIDTag);
             placesData = myDBHelper.RetrievePlacesDetails(activityID);
@@ -158,6 +159,11 @@ namespace ActivityEntrance
             braceletSerialNumber.Text = "Scan bracelet...";
             typeOfPlace.Text = "N/A";
             proceedButton.Enabled = false;
+        }
+
+        private void ActivityEntranceForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
