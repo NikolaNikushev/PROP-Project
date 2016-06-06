@@ -50,21 +50,20 @@ public class DBHelper
                 if (reader.Read())
                 {
 
-                    queryOutput = reader["BRACELET_ID"].ToString();
+                    queryOutput = "Visitor can go to his/her reserved place";
                     reader.Close();
                     reader = InsertIntoHistory(userID).ExecuteReader();
                     reader.Close();
                 }
                 else
                 {
+                    reader.Close();
                     reader = DecreasePlaces(selectedActivity).ExecuteReader();
-                    if (reader.Read())
-                    {
-                        queryOutput = "You can enter";
-                        reader.Close();
-                        reader = InsertIntoHistory(userID).ExecuteReader();
-                        reader.Close();
-                    }
+                    queryOutput = "Visitor can enter and choose a spot";
+                    reader.Close();
+                    reader = InsertIntoHistory(userID).ExecuteReader();
+                    reader.Close();
+
                 }
 
             }
@@ -128,7 +127,7 @@ public class DBHelper
             }
             else
             {
-                return "Free to go places";
+                return "Have not reserved";
             }
         }
         catch (Exception ex)
@@ -195,10 +194,6 @@ public class DBHelper
         return activityData;
 
     }
-
-
-
-
 
     //Commands for retrieving data
     private MySqlCommand PlacesDetailsCommand(string activityID)

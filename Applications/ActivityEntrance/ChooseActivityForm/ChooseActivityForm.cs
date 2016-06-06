@@ -41,6 +41,7 @@ namespace ChooseActivityForm
             aef.ActivityDate = activityData[1];
 
             activityID = activityData[2];
+            aef.activityID = activityID;
             placesData = myDBHelper.RetrievePlacesDetails(activityID);
 
             //assiging the data to the public propertis of the Activity entrance form
