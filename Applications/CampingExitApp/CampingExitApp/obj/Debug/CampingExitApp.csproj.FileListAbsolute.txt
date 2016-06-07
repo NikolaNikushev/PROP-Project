@@ -1,0 +1,11 @@
+C:\Users\User1\Desktop\CEA\CampingExitApp\CampingExitApp\bin\Debug\CampingExitApp.exe.config
+C:\Users\User1\Desktop\CEA\CampingExitApp\CampingExitApp\obj\Debug\CampingExitApp.csprojResolveAssemblyReference.cache
+C:\Users\User1\Desktop\CEA\CampingExitApp\CampingExitApp\obj\Debug\CampingExitApp.Properties.Resources.resources
+C:\Users\User1\Desktop\CEA\CampingExitApp\CampingExitApp\obj\Debug\CampingExitApp.csproj.GenerateResource.Cache
+C:\Users\User1\Desktop\CEA\CampingExitApp\CampingExitApp\bin\Debug\CampingExitApp.exe
+C:\Users\User1\Desktop\CEA\CampingExitApp\CampingExitApp\bin\Debug\CampingExitApp.pdb
+C:\Users\User1\Desktop\CEA\CampingExitApp\CampingExitApp\bin\Debug\MySql.Data.dll
+C:\Users\User1\Desktop\CEA\CampingExitApp\CampingExitApp\bin\Debug\Phidget21.NET.dll
+C:\Users\User1\Desktop\CEA\CampingExitApp\CampingExitApp\bin\Debug\Phidget21.NET.xml
+C:\Users\User1\Desktop\CEA\CampingExitApp\CampingExitApp\obj\Debug\CampingExitApp.exe
+C:\Users\User1\Desktop\CEA\CampingExitApp\CampingExitApp\obj\Debug\CampingExitApp.pdb
