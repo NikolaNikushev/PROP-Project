@@ -42,6 +42,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.activityDate = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.userInfo = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.typeOfPlace = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
@@ -52,12 +53,10 @@
             this.readerNumberValue = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.proceedButton = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // open_RFID
@@ -126,7 +125,7 @@
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(672, 358);
+            this.groupBox1.Size = new System.Drawing.Size(762, 358);
             this.groupBox1.TabIndex = 8;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Activity details";
@@ -137,9 +136,8 @@
             this.freePlaces.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.freePlaces.Location = new System.Drawing.Point(146, 316);
             this.freePlaces.Name = "freePlaces";
-            this.freePlaces.Size = new System.Drawing.Size(75, 25);
+            this.freePlaces.Size = new System.Drawing.Size(0, 25);
             this.freePlaces.TabIndex = 17;
-            this.freePlaces.Text = "label14";
             // 
             // reservedPlaces
             // 
@@ -200,18 +198,28 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.userInfo);
             this.groupBox3.Controls.Add(this.label18);
             this.groupBox3.Controls.Add(this.typeOfPlace);
             this.groupBox3.Controls.Add(this.label16);
             this.groupBox3.Controls.Add(this.braceletSerialNumber);
             this.groupBox3.Controls.Add(this.label12);
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.groupBox3.Location = new System.Drawing.Point(715, 12);
+            this.groupBox3.Location = new System.Drawing.Point(788, 12);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(478, 358);
             this.groupBox3.TabIndex = 10;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Visitor/Bracelet details";
+            // 
+            // userInfo
+            // 
+            this.userInfo.AutoSize = true;
+            this.userInfo.Location = new System.Drawing.Point(19, 316);
+            this.userInfo.Name = "userInfo";
+            this.userInfo.Size = new System.Drawing.Size(62, 32);
+            this.userInfo.TabIndex = 11;
+            this.userInfo.Text = "N/A";
             // 
             // label18
             // 
@@ -219,9 +227,8 @@
             this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label18.Location = new System.Drawing.Point(20, 316);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(194, 25);
+            this.label18.Size = new System.Drawing.Size(0, 25);
             this.label18.TabIndex = 10;
-            this.label18.Text = "User allowed to enter";
             // 
             // typeOfPlace
             // 
@@ -229,9 +236,9 @@
             this.typeOfPlace.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.typeOfPlace.Location = new System.Drawing.Point(199, 87);
             this.typeOfPlace.Name = "typeOfPlace";
-            this.typeOfPlace.Size = new System.Drawing.Size(75, 25);
+            this.typeOfPlace.Size = new System.Drawing.Size(46, 25);
             this.typeOfPlace.TabIndex = 9;
-            this.typeOfPlace.Text = "label17";
+            this.typeOfPlace.Text = "N/A";
             // 
             // label16
             // 
@@ -249,9 +256,9 @@
             this.braceletSerialNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.braceletSerialNumber.Location = new System.Drawing.Point(199, 44);
             this.braceletSerialNumber.Name = "braceletSerialNumber";
-            this.braceletSerialNumber.Size = new System.Drawing.Size(75, 25);
+            this.braceletSerialNumber.Size = new System.Drawing.Size(147, 25);
             this.braceletSerialNumber.TabIndex = 7;
-            this.braceletSerialNumber.Text = "label13";
+            this.braceletSerialNumber.Text = "Scan bracelet...";
             // 
             // label12
             // 
@@ -311,32 +318,24 @@
             this.label1.TabIndex = 12;
             this.label1.Text = "Serial number:";
             // 
-            // pictureBox1
+            // proceedButton
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(715, 393);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(344, 123);
-            this.pictureBox1.TabIndex = 12;
-            this.pictureBox1.TabStop = false;
-            // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.Location = new System.Drawing.Point(1214, 12);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(51, 268);
-            this.button1.TabIndex = 13;
-            this.button1.Text = "PROCEED";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.proceedButton.Enabled = false;
+            this.proceedButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.proceedButton.Location = new System.Drawing.Point(1285, 12);
+            this.proceedButton.Name = "proceedButton";
+            this.proceedButton.Size = new System.Drawing.Size(51, 268);
+            this.proceedButton.TabIndex = 13;
+            this.proceedButton.Text = "PROCEED";
+            this.proceedButton.UseVisualStyleBackColor = true;
+            this.proceedButton.Click += new System.EventHandler(this.proceedButton_Click);
             // 
             // ActivityEntranceForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1277, 525);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.pictureBox1);
+            this.ClientSize = new System.Drawing.Size(1348, 525);
+            this.Controls.Add(this.proceedButton);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox1);
@@ -344,13 +343,13 @@
             this.Controls.Add(this.open_RFID);
             this.Name = "ActivityEntranceForm";
             this.Text = "Activity Entrance";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ActivityEntranceForm_FormClosing);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -379,10 +378,10 @@
         private System.Windows.Forms.Label readerNumberValue;
         private System.Windows.Forms.Label typeOfPlace;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button proceedButton;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label freePlaces;
+        private System.Windows.Forms.Label userInfo;
     }
 }
 

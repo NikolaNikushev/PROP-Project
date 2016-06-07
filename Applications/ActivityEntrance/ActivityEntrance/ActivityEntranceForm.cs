@@ -12,8 +12,9 @@ namespace ActivityEntrance
     public partial class ActivityEntranceForm : Form
     {
         private RFID myRFIDReader;
-        private DBHelper myDBHelper = new DBHelper();
+        public DBHelper myDBHelper;
         private string RFIDTag;
+        public string activityID;
         public ActivityEntranceForm()
         {
             InitializeComponent();
@@ -30,6 +31,8 @@ namespace ActivityEntrance
 
 
         }
+
+        //making the controls I need accesible, so i can use them in the other form 
         public string ActivityName
         {
             get
@@ -51,7 +54,7 @@ namespace ActivityEntrance
             {
                 activityDate.Text = value;
             }
-            
+
         }
         public string TotalPlaces
         {
@@ -102,10 +105,18 @@ namespace ActivityEntrance
 
         private void close_RFID_Click(object sender, EventArgs e)
         {
-            myRFIDReader.LED = false;
-            myRFIDReader.Antenna = false;
-            myRFIDReader.close();
-            statusValue.Text = "Reader closed";
+            try
+            {
+                myRFIDReader.LED = false;
+                myRFIDReader.Antenna = false;
+                myRFIDReader.close();
+                statusValue.Text = "Reader closed";
+            }
+            catch (Exception)
+            {
+                statusValue.Text = "Error occured on closing";
+            }
+
         }
         private void ShowWhoIsAttached(object sender, AttachEventArgs e)
         {
@@ -118,13 +129,16 @@ namespace ActivityEntrance
         }
         private void ProcessThisTag(object sender, TagEventArgs e)
         {
+            string braceletData;
             try
             {
-                string braceletData;
+
                 RFIDTag = e.Tag;
                 braceletData = myDBHelper.RetrieveBraceletData(RFIDTag);
                 typeOfPlace.Text = braceletData;
                 braceletSerialNumber.Text = RFIDTag;
+                proceedButton.Enabled = true;
+                
             }
             catch (Exception ex)
             {
@@ -133,10 +147,23 @@ namespace ActivityEntrance
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void proceedButton_Click(object sender, EventArgs e)
         {
-            myDBHelper.Entrance(RFIDTag);
+            // here I change some labels and and execute update queries to the database
+            List<string> placesData = new List<string>();
+            userInfo.Text = myDBHelper.Entrance(RFIDTag);
+            placesData = myDBHelper.RetrievePlacesDetails(activityID);
+            TotalPlaces = placesData[0];
+            ReservedPlaces = placesData[1];
+            FreePlaces = placesData[2];
+            braceletSerialNumber.Text = "Scan bracelet...";
+            typeOfPlace.Text = "N/A";
+            proceedButton.Enabled = false;
         }
 
+        private void ActivityEntranceForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

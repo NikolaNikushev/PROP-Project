@@ -87,6 +87,10 @@
       <Project>{e21e46d0-bdd6-4c37-b895-0885b2b365d9}</Project>
       <Name>ActivityEntrance</Name>
     </ProjectReference>
+    <ProjectReference Include="..\DatabaseInteraction\DatabaseInteraction.csproj">
+      <Project>{79f9bb9c-5f33-4681-8363-074d6e3a57bd}</Project>
+      <Name>DatabaseInteraction</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
