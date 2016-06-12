@@ -33,7 +33,7 @@ namespace StatsApp
         private void timer1_Tick(object sender, EventArgs e)
         {
             label2.Text = dbh.GetNrCurrentVisitors().ToString();
-            if((Convert.ToString(DateTime.Now.ToString("dd/MM/yyyy")) == "25.04.2016" || Convert.ToString(DateTime.Now.ToString("dd/MM/yyyy")) == "26.04.2016" || Convert.ToString(DateTime.Now.ToString("dd/MM/yyyy")) == "27.04.2016") && timer2.Enabled!=true)
+            if((Convert.ToString(DateTime.Now.ToString("dd/MM/yyyy")) == "12.06.2016" || Convert.ToString(DateTime.Now.ToString("dd/MM/yyyy")) == "13.06.2016" || Convert.ToString(DateTime.Now.ToString("dd/MM/yyyy")) == "27.04.2016") && timer2.Enabled!=true)
             {
                 timer2.Start();
                 listBox1.Items.Add("The date is " + Convert.ToString(DateTime.Now.ToString("dd/MM/yyyy")));

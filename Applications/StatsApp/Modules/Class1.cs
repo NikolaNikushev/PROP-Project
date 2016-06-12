@@ -4,10 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Das
+namespace Modules
 {
-    class Class2
+    public class Class1
     {
-        private bool tester;
     }
 }
