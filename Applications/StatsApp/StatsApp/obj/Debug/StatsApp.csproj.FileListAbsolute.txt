@@ -26,3 +26,6 @@ D:\Projects\FONTYSPRO\PROP-Project\Applications\StatsApp\StatsApp\obj\Debug\Stat
 D:\Projects\FONTYSPRO\PROP-Project\Applications\StatsApp\StatsApp\obj\Debug\StatsApp.Form1.resources
 D:\Projects\FONTYSPRO\PROP-Project\Applications\StatsApp\StatsApp\obj\Debug\StatsApp.Properties.Resources.resources
 D:\Projects\FONTYSPRO\PROP-Project\Applications\StatsApp\StatsApp\obj\Debug\StatsApp.csproj.GenerateResource.Cache
+E:\Dropbox\workspace\Apps\PROP-Project\Applications\StatsApp\StatsApp\bin\Debug\StatsApp.exe.config
+E:\Dropbox\workspace\Apps\PROP-Project\Applications\StatsApp\StatsApp\obj\Debug\StatsApp.exe
+E:\Dropbox\workspace\Apps\PROP-Project\Applications\StatsApp\StatsApp\obj\Debug\StatsApp.pdb
