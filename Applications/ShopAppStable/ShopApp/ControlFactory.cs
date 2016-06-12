@@ -8,6 +8,12 @@ using System.Drawing;
 
 namespace ShopApp
 {
+    public enum ControlEnums
+    {
+        QUANTITY = 5,
+    }
+
+
     public static class ControlFactory
     {
         // margin for the panel
