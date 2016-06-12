@@ -1,0 +1,6 @@
+E:\Dropbox\workspace\Apps\PROP-Project\Applications\ActivityExit\ActivityExit\DatabaseInteraction\bin\Debug\DatabaseInteraction.dll
+E:\Dropbox\workspace\Apps\PROP-Project\Applications\ActivityExit\ActivityExit\DatabaseInteraction\bin\Debug\DatabaseInteraction.pdb
+E:\Dropbox\workspace\Apps\PROP-Project\Applications\ActivityExit\ActivityExit\DatabaseInteraction\bin\Debug\MySql.Data.dll
+E:\Dropbox\workspace\Apps\PROP-Project\Applications\ActivityExit\ActivityExit\DatabaseInteraction\obj\Debug\DatabaseInteraction.dll
+E:\Dropbox\workspace\Apps\PROP-Project\Applications\ActivityExit\ActivityExit\DatabaseInteraction\obj\Debug\DatabaseInteraction.pdb
+E:\Dropbox\workspace\Apps\PROP-Project\Applications\ActivityExit\ActivityExit\DatabaseInteraction\obj\Debug\DatabaseInteraction.csprojResolveAssemblyReference.cache

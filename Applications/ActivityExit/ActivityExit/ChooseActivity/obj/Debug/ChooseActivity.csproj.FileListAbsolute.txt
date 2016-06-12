@@ -1,0 +1,16 @@
+E:\Dropbox\workspace\Apps\PROP-Project\Applications\ActivityExit\ActivityExit\ChooseActivity\bin\Debug\ChooseActivity.exe.config
+E:\Dropbox\workspace\Apps\PROP-Project\Applications\ActivityExit\ActivityExit\ChooseActivity\bin\Debug\ChooseActivity.exe
+E:\Dropbox\workspace\Apps\PROP-Project\Applications\ActivityExit\ActivityExit\ChooseActivity\bin\Debug\ChooseActivity.pdb
+E:\Dropbox\workspace\Apps\PROP-Project\Applications\ActivityExit\ActivityExit\ChooseActivity\obj\Debug\ChooseActivity.csprojResolveAssemblyReference.cache
+E:\Dropbox\workspace\Apps\PROP-Project\Applications\ActivityExit\ActivityExit\ChooseActivity\obj\Debug\ChooseActivity.ChooseActivity.resources
+E:\Dropbox\workspace\Apps\PROP-Project\Applications\ActivityExit\ActivityExit\ChooseActivity\obj\Debug\ChooseActivity.Properties.Resources.resources
+E:\Dropbox\workspace\Apps\PROP-Project\Applications\ActivityExit\ActivityExit\ChooseActivity\obj\Debug\ChooseActivity.csproj.GenerateResource.Cache
+E:\Dropbox\workspace\Apps\PROP-Project\Applications\ActivityExit\ActivityExit\ChooseActivity\obj\Debug\ChooseActivity.exe
+E:\Dropbox\workspace\Apps\PROP-Project\Applications\ActivityExit\ActivityExit\ChooseActivity\obj\Debug\ChooseActivity.pdb
+E:\Dropbox\workspace\Apps\PROP-Project\Applications\ActivityExit\ActivityExit\ChooseActivity\bin\Debug\DatabaseInteraction.dll
+E:\Dropbox\workspace\Apps\PROP-Project\Applications\ActivityExit\ActivityExit\ChooseActivity\bin\Debug\MySql.Data.dll
+E:\Dropbox\workspace\Apps\PROP-Project\Applications\ActivityExit\ActivityExit\ChooseActivity\bin\Debug\DatabaseInteraction.pdb
+E:\Dropbox\workspace\Apps\PROP-Project\Applications\ActivityExit\ActivityExit\ChooseActivity\bin\Debug\ActivityExit.exe
+E:\Dropbox\workspace\Apps\PROP-Project\Applications\ActivityExit\ActivityExit\ChooseActivity\bin\Debug\Phidget21.NET.dll
+E:\Dropbox\workspace\Apps\PROP-Project\Applications\ActivityExit\ActivityExit\ChooseActivity\bin\Debug\ActivityExit.pdb
+E:\Dropbox\workspace\Apps\PROP-Project\Applications\ActivityExit\ActivityExit\ChooseActivity\bin\Debug\Phidget21.NET.xml

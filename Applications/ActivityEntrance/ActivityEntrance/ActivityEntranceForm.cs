@@ -132,7 +132,6 @@ namespace ActivityEntrance
             string braceletData;
             try
             {
-
                 RFIDTag = e.Tag;
                 braceletData = myDBHelper.RetrieveBraceletData(RFIDTag);
                 typeOfPlace.Text = braceletData;
