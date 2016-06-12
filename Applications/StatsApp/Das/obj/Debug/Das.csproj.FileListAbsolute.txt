@@ -1,1 +1,5 @@
-E:\Dropbox\workspace\Apps\PROP-Project\Applications\StatsApp\Das\obj\Debug\Das.csprojResolveAssemblyReference.cache
+D:\Projects\FONTYSPRO\PROP-Project\Applications\StatsApp\Das\bin\Debug\Das.dll
+D:\Projects\FONTYSPRO\PROP-Project\Applications\StatsApp\Das\bin\Debug\Das.pdb
+D:\Projects\FONTYSPRO\PROP-Project\Applications\StatsApp\Das\obj\Debug\Das.csprojResolveAssemblyReference.cache
+D:\Projects\FONTYSPRO\PROP-Project\Applications\StatsApp\Das\obj\Debug\Das.dll
+D:\Projects\FONTYSPRO\PROP-Project\Applications\StatsApp\Das\obj\Debug\Das.pdb

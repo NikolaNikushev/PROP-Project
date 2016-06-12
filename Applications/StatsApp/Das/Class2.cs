@@ -8,5 +8,6 @@ namespace Das
 {
     class Class2
     {
+        private bool tester;
     }
 }

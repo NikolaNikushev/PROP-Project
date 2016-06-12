@@ -44,26 +44,31 @@
             this.tabVisitors = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.lbStores = new System.Windows.Forms.ListBox();
-            this.lbProducts = new System.Windows.Forms.ListBox();
-            this.btnDisplayInfo = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.lblSelectedShop = new System.Windows.Forms.Label();
-            this.lblSelectedProduct = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.listBox3 = new System.Windows.Forms.ListBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Current_Stock = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Total_Sales = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Total_Revenue = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Warehouse_Stock = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.listBox3 = new System.Windows.Forms.ListBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.btnDisplayInfo = new System.Windows.Forms.Button();
+            this.lblSelectedProduct = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.lblSelectedShop = new System.Windows.Forms.Label();
+            this.lbProducts = new System.Windows.Forms.ListBox();
+            this.lbStores = new System.Windows.Forms.ListBox();
+            this.tabWarehouse = new System.Windows.Forms.TabPage();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.groupBox1.SuspendLayout();
             this.tabVisitors.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
-            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.panel1.SuspendLayout();
+            this.tabWarehouse.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -103,9 +108,9 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(7, 14);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(519, 294);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
@@ -114,7 +119,7 @@
             // button3
             // 
             this.button3.Location = new System.Drawing.Point(356, 177);
-            this.button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button3.Margin = new System.Windows.Forms.Padding(2);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(46, 30);
             this.button3.TabIndex = 8;
@@ -125,7 +130,7 @@
             // button2
             // 
             this.button2.Location = new System.Drawing.Point(356, 129);
-            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(46, 30);
             this.button2.TabIndex = 7;
@@ -136,7 +141,7 @@
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(356, 81);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(46, 30);
             this.button1.TabIndex = 6;
@@ -148,7 +153,7 @@
             // 
             this.listBox2.FormattingEnabled = true;
             this.listBox2.Location = new System.Drawing.Point(226, 81);
-            this.listBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.listBox2.Margin = new System.Windows.Forms.Padding(2);
             this.listBox2.Name = "listBox2";
             this.listBox2.Size = new System.Drawing.Size(108, 199);
             this.listBox2.TabIndex = 5;
@@ -178,7 +183,7 @@
             // 
             this.listBox1.FormattingEnabled = true;
             this.listBox1.Location = new System.Drawing.Point(38, 120);
-            this.listBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.listBox1.Margin = new System.Windows.Forms.Padding(2);
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(123, 160);
             this.listBox1.TabIndex = 2;
@@ -191,11 +196,12 @@
             // 
             this.tabVisitors.Controls.Add(this.tabPage1);
             this.tabVisitors.Controls.Add(this.tabPage2);
+            this.tabVisitors.Controls.Add(this.tabWarehouse);
             this.tabVisitors.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabVisitors.Location = new System.Drawing.Point(0, 0);
             this.tabVisitors.Name = "tabVisitors";
             this.tabVisitors.SelectedIndex = 0;
-            this.tabVisitors.Size = new System.Drawing.Size(699, 511);
+            this.tabVisitors.Size = new System.Drawing.Size(736, 524);
             this.tabVisitors.TabIndex = 3;
             // 
             // tabPage1
@@ -204,7 +210,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(544, 335);
+            this.tabPage1.Size = new System.Drawing.Size(728, 498);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Visitors";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -219,82 +225,19 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(691, 485);
+            this.tabPage2.Size = new System.Drawing.Size(728, 498);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // lbStores
+            // listBox3
             // 
-            this.lbStores.Dock = System.Windows.Forms.DockStyle.Left;
-            this.lbStores.FormattingEnabled = true;
-            this.lbStores.Location = new System.Drawing.Point(3, 3);
-            this.lbStores.Name = "lbStores";
-            this.lbStores.Size = new System.Drawing.Size(120, 479);
-            this.lbStores.TabIndex = 0;
-            // 
-            // lbProducts
-            // 
-            this.lbProducts.Dock = System.Windows.Forms.DockStyle.Left;
-            this.lbProducts.FormattingEnabled = true;
-            this.lbProducts.Location = new System.Drawing.Point(123, 3);
-            this.lbProducts.Name = "lbProducts";
-            this.lbProducts.Size = new System.Drawing.Size(120, 479);
-            this.lbProducts.TabIndex = 1;
-            // 
-            // btnDisplayInfo
-            // 
-            this.btnDisplayInfo.Location = new System.Drawing.Point(165, 28);
-            this.btnDisplayInfo.Name = "btnDisplayInfo";
-            this.btnDisplayInfo.Size = new System.Drawing.Size(77, 75);
-            this.btnDisplayInfo.TabIndex = 2;
-            this.btnDisplayInfo.Text = "ShowInfo";
-            this.btnDisplayInfo.UseVisualStyleBackColor = true;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(34, 83);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 3;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(34, 31);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 4;
-            // 
-            // lblSelectedShop
-            // 
-            this.lblSelectedShop.AutoSize = true;
-            this.lblSelectedShop.Location = new System.Drawing.Point(31, 15);
-            this.lblSelectedShop.Name = "lblSelectedShop";
-            this.lblSelectedShop.Size = new System.Drawing.Size(77, 13);
-            this.lblSelectedShop.TabIndex = 5;
-            this.lblSelectedShop.Text = "Selected Shop";
-            // 
-            // lblSelectedProduct
-            // 
-            this.lblSelectedProduct.AutoSize = true;
-            this.lblSelectedProduct.Location = new System.Drawing.Point(31, 67);
-            this.lblSelectedProduct.Name = "lblSelectedProduct";
-            this.lblSelectedProduct.Size = new System.Drawing.Size(89, 13);
-            this.lblSelectedProduct.TabIndex = 6;
-            this.lblSelectedProduct.Text = "Selected Product";
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.textBox2);
-            this.panel1.Controls.Add(this.btnDisplayInfo);
-            this.panel1.Controls.Add(this.lblSelectedProduct);
-            this.panel1.Controls.Add(this.textBox1);
-            this.panel1.Controls.Add(this.lblSelectedShop);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(243, 3);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(445, 479);
-            this.panel1.TabIndex = 8;
+            this.listBox3.Dock = System.Windows.Forms.DockStyle.Right;
+            this.listBox3.FormattingEnabled = true;
+            this.listBox3.Location = new System.Drawing.Point(547, 3);
+            this.listBox3.Name = "listBox3";
+            this.listBox3.Size = new System.Drawing.Size(178, 201);
+            this.listBox3.TabIndex = 10;
             // 
             // dataGridView1
             // 
@@ -307,10 +250,10 @@
             this.Total_Revenue,
             this.Warehouse_Stock});
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dataGridView1.Location = new System.Drawing.Point(243, 191);
+            this.dataGridView1.Location = new System.Drawing.Point(243, 204);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(445, 291);
+            this.dataGridView1.Size = new System.Drawing.Size(482, 291);
             this.dataGridView1.TabIndex = 9;
             // 
             // Current_Stock
@@ -337,22 +280,116 @@
             this.Warehouse_Stock.Name = "Warehouse_Stock";
             this.Warehouse_Stock.ReadOnly = true;
             // 
-            // listBox3
+            // panel1
             // 
-            this.listBox3.Dock = System.Windows.Forms.DockStyle.Right;
-            this.listBox3.FormattingEnabled = true;
-            this.listBox3.Location = new System.Drawing.Point(510, 3);
-            this.listBox3.Name = "listBox3";
-            this.listBox3.Size = new System.Drawing.Size(178, 188);
-            this.listBox3.TabIndex = 10;
+            this.panel1.Controls.Add(this.textBox2);
+            this.panel1.Controls.Add(this.btnDisplayInfo);
+            this.panel1.Controls.Add(this.lblSelectedProduct);
+            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.lblSelectedShop);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(243, 3);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(482, 492);
+            this.panel1.TabIndex = 8;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(34, 31);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(100, 20);
+            this.textBox2.TabIndex = 4;
+            // 
+            // btnDisplayInfo
+            // 
+            this.btnDisplayInfo.Location = new System.Drawing.Point(165, 28);
+            this.btnDisplayInfo.Name = "btnDisplayInfo";
+            this.btnDisplayInfo.Size = new System.Drawing.Size(77, 75);
+            this.btnDisplayInfo.TabIndex = 2;
+            this.btnDisplayInfo.Text = "ShowInfo";
+            this.btnDisplayInfo.UseVisualStyleBackColor = true;
+            // 
+            // lblSelectedProduct
+            // 
+            this.lblSelectedProduct.AutoSize = true;
+            this.lblSelectedProduct.Location = new System.Drawing.Point(31, 67);
+            this.lblSelectedProduct.Name = "lblSelectedProduct";
+            this.lblSelectedProduct.Size = new System.Drawing.Size(89, 13);
+            this.lblSelectedProduct.TabIndex = 6;
+            this.lblSelectedProduct.Text = "Selected Product";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(34, 83);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.TabIndex = 3;
+            // 
+            // lblSelectedShop
+            // 
+            this.lblSelectedShop.AutoSize = true;
+            this.lblSelectedShop.Location = new System.Drawing.Point(31, 15);
+            this.lblSelectedShop.Name = "lblSelectedShop";
+            this.lblSelectedShop.Size = new System.Drawing.Size(77, 13);
+            this.lblSelectedShop.TabIndex = 5;
+            this.lblSelectedShop.Text = "Selected Shop";
+            // 
+            // lbProducts
+            // 
+            this.lbProducts.Dock = System.Windows.Forms.DockStyle.Left;
+            this.lbProducts.FormattingEnabled = true;
+            this.lbProducts.Location = new System.Drawing.Point(123, 3);
+            this.lbProducts.Name = "lbProducts";
+            this.lbProducts.Size = new System.Drawing.Size(120, 492);
+            this.lbProducts.TabIndex = 1;
+            // 
+            // lbStores
+            // 
+            this.lbStores.Dock = System.Windows.Forms.DockStyle.Left;
+            this.lbStores.FormattingEnabled = true;
+            this.lbStores.Location = new System.Drawing.Point(3, 3);
+            this.lbStores.Name = "lbStores";
+            this.lbStores.Size = new System.Drawing.Size(120, 492);
+            this.lbStores.TabIndex = 0;
+            // 
+            // tabWarehouse
+            // 
+            this.tabWarehouse.Controls.Add(this.panel2);
+            this.tabWarehouse.Controls.Add(this.dataGridView2);
+            this.tabWarehouse.Location = new System.Drawing.Point(4, 22);
+            this.tabWarehouse.Name = "tabWarehouse";
+            this.tabWarehouse.Size = new System.Drawing.Size(728, 498);
+            this.tabWarehouse.TabIndex = 2;
+            this.tabWarehouse.Text = "Warehouse";
+            this.tabWarehouse.UseVisualStyleBackColor = true;
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.AllowUserToAddRows = false;
+            this.dataGridView2.AllowUserToDeleteRows = false;
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView2.Location = new System.Drawing.Point(0, 0);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.ReadOnly = true;
+            this.dataGridView2.Size = new System.Drawing.Size(728, 498);
+            this.dataGridView2.TabIndex = 0;
+            // 
+            // panel2
+            // 
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(278, 498);
+            this.panel2.TabIndex = 1;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(699, 511);
+            this.ClientSize = new System.Drawing.Size(736, 524);
             this.Controls.Add(this.tabVisitors);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.Text = "Form1";
             this.groupBox1.ResumeLayout(false);
@@ -360,9 +397,11 @@
             this.tabVisitors.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.tabWarehouse.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -398,6 +437,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Total_Sales;
         private System.Windows.Forms.DataGridViewTextBoxColumn Total_Revenue;
         private System.Windows.Forms.DataGridViewTextBoxColumn Warehouse_Stock;
+        private System.Windows.Forms.TabPage tabWarehouse;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.DataGridView dataGridView2;
     }
 }
 
