@@ -47,29 +47,22 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.lbActivityLog = new System.Windows.Forms.ListBox();
             this.btnChangeShop = new System.Windows.Forms.Button();
-            this.panel5 = new System.Windows.Forms.Panel();
+            this.pnlStoreSelect = new System.Windows.Forms.Panel();
             this.btnShopDataSubmit = new System.Windows.Forms.Button();
             this.tbShopCode = new System.Windows.Forms.TextBox();
             this.cmbxShopNames = new System.Windows.Forms.ComboBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.grbCheckout = new System.Windows.Forms.GroupBox();
             this.pnlCheckout = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.lblCredits = new System.Windows.Forms.Label();
-            this.btnTest = new System.Windows.Forms.Button();
-            this.lblStockNmbr = new System.Windows.Forms.Label();
-            this.lblProductName = new System.Windows.Forms.Label();
-            this.lblUnitPrice = new System.Windows.Forms.Label();
-            this.lblInStock = new System.Windows.Forms.Label();
+            this.btnRemoveSelectedItem = new System.Windows.Forms.Button();
             this.lblCheckOutSign = new System.Windows.Forms.Label();
             this.grbProducts.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudQuantityToAdd)).BeginInit();
             this.panel2.SuspendLayout();
-            this.panel5.SuspendLayout();
+            this.pnlStoreSelect.SuspendLayout();
             this.panel3.SuspendLayout();
             this.grbCheckout.SuspendLayout();
             this.pnlCheckout.SuspendLayout();
-            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblBalance
@@ -116,10 +109,11 @@
             // 
             // btnClear
             // 
-            this.btnClear.Location = new System.Drawing.Point(27, 428);
+            this.btnClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnClear.Location = new System.Drawing.Point(263, 12);
             this.btnClear.Margin = new System.Windows.Forms.Padding(2);
             this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(104, 54);
+            this.btnClear.Size = new System.Drawing.Size(84, 23);
             this.btnClear.TabIndex = 23;
             this.btnClear.Text = "Clear Order";
             this.btnClear.UseVisualStyleBackColor = true;
@@ -127,10 +121,10 @@
             // 
             // btnPurchase
             // 
-            this.btnPurchase.Location = new System.Drawing.Point(190, 486);
+            this.btnPurchase.Location = new System.Drawing.Point(27, 428);
             this.btnPurchase.Margin = new System.Windows.Forms.Padding(2);
             this.btnPurchase.Name = "btnPurchase";
-            this.btnPurchase.Size = new System.Drawing.Size(104, 54);
+            this.btnPurchase.Size = new System.Drawing.Size(137, 107);
             this.btnPurchase.TabIndex = 24;
             this.btnPurchase.Text = "Purchase";
             this.btnPurchase.UseVisualStyleBackColor = true;
@@ -158,10 +152,10 @@
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(82, 486);
+            this.btnCancel.Location = new System.Drawing.Point(213, 509);
             this.btnCancel.Margin = new System.Windows.Forms.Padding(2);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(104, 54);
+            this.btnCancel.Size = new System.Drawing.Size(134, 26);
             this.btnCancel.TabIndex = 31;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
@@ -169,10 +163,10 @@
             // 
             // btnUndo
             // 
-            this.btnUndo.Location = new System.Drawing.Point(135, 428);
+            this.btnUndo.Location = new System.Drawing.Point(213, 428);
             this.btnUndo.Margin = new System.Windows.Forms.Padding(2);
             this.btnUndo.Name = "btnUndo";
-            this.btnUndo.Size = new System.Drawing.Size(104, 54);
+            this.btnUndo.Size = new System.Drawing.Size(65, 61);
             this.btnUndo.TabIndex = 32;
             this.btnUndo.Text = "Undo";
             this.btnUndo.UseVisualStyleBackColor = true;
@@ -180,10 +174,10 @@
             // 
             // btnRedo
             // 
-            this.btnRedo.Location = new System.Drawing.Point(243, 428);
+            this.btnRedo.Location = new System.Drawing.Point(282, 428);
             this.btnRedo.Margin = new System.Windows.Forms.Padding(2);
             this.btnRedo.Name = "btnRedo";
-            this.btnRedo.Size = new System.Drawing.Size(104, 54);
+            this.btnRedo.Size = new System.Drawing.Size(65, 61);
             this.btnRedo.TabIndex = 33;
             this.btnRedo.Text = "Redo";
             this.btnRedo.UseVisualStyleBackColor = true;
@@ -254,7 +248,7 @@
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Controls.Add(this.lbActivityLog);
             this.panel2.Controls.Add(this.btnChangeShop);
-            this.panel2.Controls.Add(this.panel5);
+            this.panel2.Controls.Add(this.pnlStoreSelect);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
@@ -265,10 +259,12 @@
             // 
             this.lbActivityLog.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbActivityLog.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.lbActivityLog.FormattingEnabled = true;
+            this.lbActivityLog.ItemHeight = 16;
             this.lbActivityLog.Location = new System.Drawing.Point(324, 0);
             this.lbActivityLog.Name = "lbActivityLog";
-            this.lbActivityLog.Size = new System.Drawing.Size(790, 56);
+            this.lbActivityLog.Size = new System.Drawing.Size(790, 52);
             this.lbActivityLog.TabIndex = 4;
             // 
             // btnChangeShop
@@ -279,17 +275,18 @@
             this.btnChangeShop.TabIndex = 3;
             this.btnChangeShop.Text = "Change Shop";
             this.btnChangeShop.UseVisualStyleBackColor = true;
+            this.btnChangeShop.Click += new System.EventHandler(this.btnChangeShop_Click);
             // 
-            // panel5
+            // pnlStoreSelect
             // 
-            this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel5.Controls.Add(this.btnShopDataSubmit);
-            this.panel5.Controls.Add(this.tbShopCode);
-            this.panel5.Controls.Add(this.cmbxShopNames);
-            this.panel5.Location = new System.Drawing.Point(-1, -1);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(200, 58);
-            this.panel5.TabIndex = 3;
+            this.pnlStoreSelect.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlStoreSelect.Controls.Add(this.btnShopDataSubmit);
+            this.pnlStoreSelect.Controls.Add(this.tbShopCode);
+            this.pnlStoreSelect.Controls.Add(this.cmbxShopNames);
+            this.pnlStoreSelect.Location = new System.Drawing.Point(-1, -1);
+            this.pnlStoreSelect.Name = "pnlStoreSelect";
+            this.pnlStoreSelect.Size = new System.Drawing.Size(200, 58);
+            this.pnlStoreSelect.TabIndex = 3;
             // 
             // btnShopDataSubmit
             // 
@@ -297,8 +294,9 @@
             this.btnShopDataSubmit.Name = "btnShopDataSubmit";
             this.btnShopDataSubmit.Size = new System.Drawing.Size(60, 47);
             this.btnShopDataSubmit.TabIndex = 1;
-            this.btnShopDataSubmit.Text = "Sumbit";
+            this.btnShopDataSubmit.Text = "Display Products";
             this.btnShopDataSubmit.UseVisualStyleBackColor = true;
+            this.btnShopDataSubmit.Click += new System.EventHandler(this.btnShopDataSubmit_Click);
             // 
             // tbShopCode
             // 
@@ -310,10 +308,13 @@
             // cmbxShopNames
             // 
             this.cmbxShopNames.FormattingEnabled = true;
+            this.cmbxShopNames.Items.AddRange(new object[] {
+            "Select a Store"});
             this.cmbxShopNames.Location = new System.Drawing.Point(4, 4);
             this.cmbxShopNames.Name = "cmbxShopNames";
             this.cmbxShopNames.Size = new System.Drawing.Size(121, 21);
             this.cmbxShopNames.TabIndex = 0;
+            this.cmbxShopNames.Text = "Select a Store";
             // 
             // panel3
             // 
@@ -339,8 +340,8 @@
             // 
             // pnlCheckout
             // 
+            this.pnlCheckout.Controls.Add(this.btnRemoveSelectedItem);
             this.pnlCheckout.Controls.Add(this.lbBasket);
-            this.pnlCheckout.Controls.Add(this.panel4);
             this.pnlCheckout.Controls.Add(this.lblCheckOutSign);
             this.pnlCheckout.Controls.Add(this.lblTotalPrice);
             this.pnlCheckout.Controls.Add(this.btnPurchase);
@@ -359,85 +360,16 @@
             this.pnlCheckout.Size = new System.Drawing.Size(410, 553);
             this.pnlCheckout.TabIndex = 34;
             // 
-            // panel4
+            // btnRemoveSelectedItem
             // 
-            this.panel4.Controls.Add(this.lblCredits);
-            this.panel4.Controls.Add(this.btnTest);
-            this.panel4.Controls.Add(this.lblStockNmbr);
-            this.panel4.Controls.Add(this.lblProductName);
-            this.panel4.Controls.Add(this.lblUnitPrice);
-            this.panel4.Controls.Add(this.lblInStock);
-            this.panel4.Location = new System.Drawing.Point(371, 514);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(152, 224);
-            this.panel4.TabIndex = 32;
-            this.panel4.Visible = false;
-            // 
-            // lblCredits
-            // 
-            this.lblCredits.AutoSize = true;
-            this.lblCredits.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblCredits.Location = new System.Drawing.Point(123, 173);
-            this.lblCredits.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblCredits.Name = "lblCredits";
-            this.lblCredits.Size = new System.Drawing.Size(18, 16);
-            this.lblCredits.TabIndex = 34;
-            this.lblCredits.Text = "C";
-            // 
-            // btnTest
-            // 
-            this.btnTest.BackgroundImage = global::ShopApp.Properties.Resources.cocacola;
-            this.btnTest.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnTest.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnTest.Location = new System.Drawing.Point(6, 27);
-            this.btnTest.Name = "btnTest";
-            this.btnTest.Size = new System.Drawing.Size(140, 140);
-            this.btnTest.TabIndex = 33;
-            this.btnTest.UseVisualStyleBackColor = true;
-            // 
-            // lblStockNmbr
-            // 
-            this.lblStockNmbr.AutoSize = true;
-            this.lblStockNmbr.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblStockNmbr.Location = new System.Drawing.Point(124, 201);
-            this.lblStockNmbr.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblStockNmbr.Name = "lblStockNmbr";
-            this.lblStockNmbr.Size = new System.Drawing.Size(22, 16);
-            this.lblStockNmbr.TabIndex = 31;
-            this.lblStockNmbr.Text = "19";
-            // 
-            // lblProductName
-            // 
-            this.lblProductName.AutoSize = true;
-            this.lblProductName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblProductName.Location = new System.Drawing.Point(3, 8);
-            this.lblProductName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblProductName.Name = "lblProductName";
-            this.lblProductName.Size = new System.Drawing.Size(95, 16);
-            this.lblProductName.TabIndex = 9;
-            this.lblProductName.Text = "Lamb burger";
-            // 
-            // lblUnitPrice
-            // 
-            this.lblUnitPrice.AutoSize = true;
-            this.lblUnitPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblUnitPrice.Location = new System.Drawing.Point(35, 173);
-            this.lblUnitPrice.Margin = new System.Windows.Forms.Padding(3);
-            this.lblUnitPrice.Name = "lblUnitPrice";
-            this.lblUnitPrice.Size = new System.Drawing.Size(36, 16);
-            this.lblUnitPrice.TabIndex = 30;
-            this.lblUnitPrice.Text = "2.50";
-            // 
-            // lblInStock
-            // 
-            this.lblInStock.AutoSize = true;
-            this.lblInStock.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblInStock.Location = new System.Drawing.Point(3, 201);
-            this.lblInStock.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblInStock.Name = "lblInStock";
-            this.lblInStock.Size = new System.Drawing.Size(58, 16);
-            this.lblInStock.TabIndex = 29;
-            this.lblInStock.Text = "In Stock:";
+            this.btnRemoveSelectedItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnRemoveSelectedItem.Location = new System.Drawing.Point(193, 12);
+            this.btnRemoveSelectedItem.Name = "btnRemoveSelectedItem";
+            this.btnRemoveSelectedItem.Size = new System.Drawing.Size(65, 23);
+            this.btnRemoveSelectedItem.TabIndex = 34;
+            this.btnRemoveSelectedItem.Text = "Remove";
+            this.btnRemoveSelectedItem.UseVisualStyleBackColor = true;
+            this.btnRemoveSelectedItem.Click += new System.EventHandler(this.btnRemoveSelectedItem_Click);
             // 
             // lblCheckOutSign
             // 
@@ -447,7 +379,7 @@
             this.lblCheckOutSign.Name = "lblCheckOutSign";
             this.lblCheckOutSign.Size = new System.Drawing.Size(34, 264);
             this.lblCheckOutSign.TabIndex = 33;
-            this.lblCheckOutSign.Text = "C\r\nH\r\nE\r\nC\r\nK\r\nO\r\nU\r\nT\r\n\r\n\r\n>>";
+            this.lblCheckOutSign.Text = "C\r\nH\r\nE\r\nC\r\nK\r\nO\r\nU\r\nT\r\n\r\n\r\n<<";
             // 
             // Form1
             // 
@@ -468,14 +400,12 @@
             this.grbProducts.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudQuantityToAdd)).EndInit();
             this.panel2.ResumeLayout(false);
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
+            this.pnlStoreSelect.ResumeLayout(false);
+            this.pnlStoreSelect.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.grbCheckout.ResumeLayout(false);
             this.pnlCheckout.ResumeLayout(false);
             this.pnlCheckout.PerformLayout();
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -499,7 +429,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel pnlProducts;
         private System.Windows.Forms.ComboBox cmbxShopNames;
-        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Panel pnlStoreSelect;
         private System.Windows.Forms.Button btnShopDataSubmit;
         private System.Windows.Forms.TextBox tbShopCode;
         private System.Windows.Forms.Button btnChangeShop;
@@ -508,13 +438,7 @@
         private System.Windows.Forms.GroupBox grbCheckout;
         private System.Windows.Forms.Panel pnlCheckout;
         private System.Windows.Forms.Label lblCheckOutSign;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Label lblCredits;
-        private System.Windows.Forms.Button btnTest;
-        private System.Windows.Forms.Label lblStockNmbr;
-        private System.Windows.Forms.Label lblProductName;
-        private System.Windows.Forms.Label lblUnitPrice;
-        private System.Windows.Forms.Label lblInStock;
+        private System.Windows.Forms.Button btnRemoveSelectedItem;
     }
 }
 

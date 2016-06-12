@@ -1,17 +1,23 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ShopApp
 {
     class Shop
     {
+        
         private List<Product> stock;
         private List<Product> basket;
         private DBHelper dbh;
-        private int storeID;
+
+        public int Id
+        {
+            get; private set;
+        }
+        public string Name
+        {
+            get; private set;
+        }
 
         public List<Product> Stock
         {
@@ -24,8 +30,21 @@ namespace ShopApp
             private set { this.basket = value; }
         }
 
+        public double TotalPrice
+        {
+            get
+            {
+                double totalPrice = 0;
+                foreach(Product p in this.basket)
+                {
+                    totalPrice += p.Price * p.Quantity;
+                }
+                return totalPrice;
+            }
+        }
+
         /// <summary>
-        /// Constructor for the shop
+        /// Constructor for a shop without a name
         /// </summary>
         public Shop()
         {
@@ -35,6 +54,32 @@ namespace ShopApp
             this.stock = dbh.GetAllProducts();
         }
 
+        /// <summary>
+        /// Constructs an object of type shop with a specified name
+        /// makes sense for a chosenShop
+        /// </summary>
+        /// <param name="name"></param>
+        public Shop(string name)
+        {
+            this.Name = name;
+            
+            this.stock = new List<Product>();
+            this.basket = new List<Product>();
+            this.dbh = new DBHelper();
+            try
+            {
+                this.stock = dbh.GetAllProducts(this.Name);
+                this.Id = dbh.GetStoreId(this.Name);
+            }
+            catch(Exception ex)
+            {
+                throw new Exception("Something went wrong with DB, it says - " + ex.Message);
+            }
+            
+
+        }
+
+
         //-------------------------------Methods
 
         public void SortListByName(List<Product> listTiSort)
@@ -43,7 +88,10 @@ namespace ShopApp
         }
 
 
-
+        /// <summary>
+        /// Moves accroding number of products to the basket
+        /// </summary>
+        /// <param name="productToBasket"></param>
         public void AddToBasket(Product productToBasket)
         {
             Product temp = getProductByName(productToBasket.Name, this.basket);
@@ -58,8 +106,24 @@ namespace ShopApp
             }
         }
 
+        /// <summary>
+        /// Retrieve the quantity of a product in stock of a current store (this.Id)
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public int GetStockQunatityInStoreByProductID(int id)
+        {
+            int funcRes = 0;
+            funcRes = this.dbh.GetQuantity(this.Id, id);
+            return funcRes;
+        }
 
-        //
+        /// <summary>
+        /// retrieves all the products with a specified name
+        /// </summary>
+        /// <param name="name"></param>
+        /// <param name="listToManage"></param>
+        /// <returns></returns>
         public Product getProductByName(string name, List<Product> listToManage)
         {
             SortListByName(listToManage);

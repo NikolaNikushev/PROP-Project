@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ShopApp
 {
@@ -43,6 +39,13 @@ namespace ShopApp
             this.Name = nm;
             this.Price = prc;
             this.Quantity = qntt;
+        }
+        public Product(HistoryProduct hp)
+        {
+            this.Id = hp.Id;
+            this.Name = hp.Name;
+            this.Price = hp.Price;
+            this.Quantity = hp.Quantity;
         }
 
         //------------------------------Methods
