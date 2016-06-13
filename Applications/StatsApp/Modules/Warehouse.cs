@@ -46,7 +46,7 @@ namespace Modules
                 dgv.Columns.Add("colQuantity", "Qunatity");
             }
             dgv.Width = dgv.Columns.GetColumnsWidth(DataGridViewElementStates.None);
-            foreach(Product p in lp)
+            foreach(ProductToSell p in lp)
             {
                 dgv.Rows.Add(p.Id, p.Name, p.Price, p.Quantity);
             }
@@ -99,7 +99,7 @@ namespace Modules
                     price = Convert.ToDouble(reader["price"]);
                     quantity = Convert.ToInt32(reader["stock"]);
 
-                    temp.Add(new Product(id, name, price, quantity));
+                    temp.Add(new ProductToSell(id, name, price, quantity));
                 }
             }
             catch (Exception ex)
@@ -113,6 +113,11 @@ namespace Modules
             return temp;
         }
 
+        /// <summary>
+        /// Gets the data about all the products in storage of a shop specified by its name at a current moment
+        /// </summary>
+        /// <param name="ShopName"></param>
+        /// <returns></returns>
         static public List<Product> GetAllProducts(string ShopName)
         {
             String sql = "SELECT * " +
@@ -141,7 +146,7 @@ namespace Modules
                     price = Convert.ToDouble(reader["price"]);
                     quantity = Convert.ToInt32(reader["quantity"]);
 
-                    temp.Add(new Product(id, name, price, quantity));
+                    temp.Add(new ProductToSell(id, name, price, quantity));
                 }
             }
             catch (Exception ex)
@@ -189,6 +194,48 @@ namespace Modules
             }
             return temp;
 
+        }
+
+        static public List<Product> GetHistoryProducts(string ShopName)
+        {
+            String sql = "SELECT * " +
+                "FROM storeprodinfo " +
+                "WHERE storename = " + "'" + ShopName + "'" +
+                "ORDER BY prodname;";
+            MySqlCommand command = new MySqlCommand(sql, Connection.connection);
+
+            List<Product> temp;
+            temp = new List<Product>();
+
+            try
+            {
+                Connection.connection.Open();
+                MySqlDataReader reader = command.ExecuteReader();
+                // data to build a new product upon 
+                int id;
+                int quantity;
+                string name;
+                double price;
+
+                while (reader.Read())
+                {
+                    id = Convert.ToInt32(reader["product_id"]);
+                    name = Convert.ToString(reader["prodname"]);
+                    price = Convert.ToDouble(reader["price"]);
+                    quantity = Convert.ToInt32(reader["quantity"]);
+
+                    temp.Add(new ProductToSell(id, name, price, quantity));
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            finally
+            {
+                Connection.connection.Close();
+            }
+            return temp;
         }
 
     }

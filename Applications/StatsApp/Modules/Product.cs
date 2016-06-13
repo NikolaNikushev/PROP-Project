@@ -1,8 +1,9 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Modules
 {
-    public class Product: IComparable<Product>
+    public class Product : IComparable<Product>
     {
         // all the fields are retrieved from the DB
         public int Id
@@ -13,17 +14,6 @@ namespace Modules
         {
             get; private set;
         }
-        public double Price
-        {
-            get; private set;
-        }
-        public int Quantity
-        {
-            get; private set;
-        }
-
-
-
 
         //--------------------------Constructor
 
@@ -33,20 +23,43 @@ namespace Modules
         /// <param name="nm"></param>
         /// <param name="prc"></param>
         /// <param name="qntt"></param>
-        public Product(int id, string nm, double prc, int qntt)
+        public Product(int id, string nm)
         {
             this.Id = id;
             this.Name = nm;
-            this.Price = prc;
-            this.Quantity = qntt;
         }
-        
+
+        /// <summary>
+        /// Shows information about a product
+        /// </summary>
+        /// <returns></returns>
+        public override string ToString()
+        {
+            return this.Name;
+        }
+
+        public int CompareTo(Product obj)
+        {
+            return string.Compare(this.Name, obj.Name);
+        }
+    }
+
+    public class ProductToSell : Product
+    {
+        public double Price
+        {
+            get; private set;
+        }
+        public int Quantity
+        {
+            get; private set;
+        }
 
         //------------------------------Methods
 
         public void LowerQuantityBy(int amount)
         {
-            if(amount>=0)
+            if (amount >= 0)
             {
                 this.Quantity -= amount;
             }
@@ -59,18 +72,34 @@ namespace Modules
             }
         }
 
-        /// <summary>
-        /// Shows information about a product
-        /// </summary>
-        /// <returns></returns>
-        public override string ToString()
+
+        public ProductToSell(int id, string nm, double prc, int qntt)
+            : base(id, nm)
         {
-            return this.Name + "   -   price: " + this.Price.ToString() + "   -   quantity: " + this.Quantity.ToString();
+            this.Price = prc;
+            this.Quantity = qntt;
         }
 
-        public int CompareTo(Product obj)
+        public override string ToString()
         {
-            return string.Compare(this.Name,obj.Name);
+            return base.ToString() + "   -   price: " + this.Price.ToString() + "   -   quantity: " + this.Quantity.ToString();
+        }
+
+    }
+
+    public class ProductArchive : Product
+    {
+        public DateTime SliceTime;
+        public List<int> QuantityArch;
+        public List<int> NumSoldArch;
+
+        public ProductArchive(int id, string nm, DateTime stime, List<int> numsoldArch, List<int> qnttyArch)
+            :base(id,nm)
+        {
+            this.SliceTime = stime;
+            this.QuantityArch = qnttyArch;
+            this.NumSoldArch = numsoldArch;
         }
     }
+
 }

@@ -78,6 +78,7 @@
             this.button4 = new System.Windows.Forms.Button();
             this.panel8 = new System.Windows.Forms.Panel();
             this.listBox4 = new System.Windows.Forms.ListBox();
+            this.button5 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.tabModules.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -400,24 +401,25 @@
             this.chart1.Dock = System.Windows.Forms.DockStyle.Fill;
             legend1.Name = "Legend1";
             this.chart1.Legends.Add(legend1);
-            this.chart1.Location = new System.Drawing.Point(648, 143);
+            this.chart1.Location = new System.Drawing.Point(648, 174);
             this.chart1.Name = "chart1";
             series1.ChartArea = "ChartArea1";
             series1.Legend = "Legend1";
             series1.Name = "Series1";
             this.chart1.Series.Add(series1);
-            this.chart1.Size = new System.Drawing.Size(305, 355);
+            this.chart1.Size = new System.Drawing.Size(305, 324);
             this.chart1.TabIndex = 6;
             this.chart1.Text = "chart1";
             // 
             // panel4
             // 
+            this.panel4.Controls.Add(this.button5);
             this.panel4.Controls.Add(this.panel7);
             this.panel4.Controls.Add(this.comboBox1);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(648, 45);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(305, 98);
+            this.panel4.Size = new System.Drawing.Size(305, 129);
             this.panel4.TabIndex = 5;
             // 
             // panel3
@@ -537,7 +539,7 @@
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(75, 39);
             this.button4.TabIndex = 3;
-            this.button4.Text = "button4";
+            this.button4.Text = "???didn\'t decide what should it be yet";
             this.button4.UseVisualStyleBackColor = true;
             // 
             // panel8
@@ -557,6 +559,15 @@
             this.listBox4.Name = "listBox4";
             this.listBox4.Size = new System.Drawing.Size(650, 45);
             this.listBox4.TabIndex = 1;
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(9, 86);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(75, 25);
+            this.button5.TabIndex = 2;
+            this.button5.Text = "button5";
+            this.button5.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -639,6 +650,7 @@
         private System.Windows.Forms.ListBox listBox4;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button5;
     }
 }
 
