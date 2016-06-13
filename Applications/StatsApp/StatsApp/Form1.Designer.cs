@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.label1 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.label2 = new System.Windows.Forms.Label();
@@ -41,7 +44,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.timer2 = new System.Windows.Forms.Timer(this.components);
-            this.tabVisitors = new System.Windows.Forms.TabControl();
+            this.tabModules = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.listBox3 = new System.Windows.Forms.ListBox();
@@ -59,16 +62,25 @@
             this.lbProducts = new System.Windows.Forms.ListBox();
             this.lbStores = new System.Windows.Forms.ListBox();
             this.tabWarehouse = new System.Windows.Forms.TabPage();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.dgvProductStock = new System.Windows.Forms.DataGridView();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.cmbStorageSelect = new System.Windows.Forms.ComboBox();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.btnDisplayProducts = new System.Windows.Forms.Button();
+            this.panel5 = new System.Windows.Forms.Panel();
             this.groupBox1.SuspendLayout();
-            this.tabVisitors.SuspendLayout();
+            this.tabModules.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             this.tabWarehouse.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProductStock)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
+            this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -192,17 +204,19 @@
             // 
             this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
-            // tabVisitors
+            // tabModules
             // 
-            this.tabVisitors.Controls.Add(this.tabPage1);
-            this.tabVisitors.Controls.Add(this.tabPage2);
-            this.tabVisitors.Controls.Add(this.tabWarehouse);
-            this.tabVisitors.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabVisitors.Location = new System.Drawing.Point(0, 0);
-            this.tabVisitors.Name = "tabVisitors";
-            this.tabVisitors.SelectedIndex = 0;
-            this.tabVisitors.Size = new System.Drawing.Size(736, 524);
-            this.tabVisitors.TabIndex = 3;
+            this.tabModules.Controls.Add(this.tabPage1);
+            this.tabModules.Controls.Add(this.tabPage2);
+            this.tabModules.Controls.Add(this.tabWarehouse);
+            this.tabModules.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabModules.Location = new System.Drawing.Point(0, 0);
+            this.tabModules.Name = "tabModules";
+            this.tabModules.SelectedIndex = 0;
+            this.tabModules.Size = new System.Drawing.Size(961, 524);
+            this.tabModules.TabIndex = 3;
+            this.tabModules.SelectedIndexChanged += new System.EventHandler(this.tabModules_TabIndexChanged);
+            this.tabModules.TabIndexChanged += new System.EventHandler(this.tabModules_TabIndexChanged);
             // 
             // tabPage1
             // 
@@ -210,7 +224,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(728, 498);
+            this.tabPage1.Size = new System.Drawing.Size(953, 498);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Visitors";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -225,7 +239,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(728, 498);
+            this.tabPage2.Size = new System.Drawing.Size(953, 498);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -234,7 +248,7 @@
             // 
             this.listBox3.Dock = System.Windows.Forms.DockStyle.Right;
             this.listBox3.FormattingEnabled = true;
-            this.listBox3.Location = new System.Drawing.Point(547, 3);
+            this.listBox3.Location = new System.Drawing.Point(772, 3);
             this.listBox3.Name = "listBox3";
             this.listBox3.Size = new System.Drawing.Size(178, 201);
             this.listBox3.TabIndex = 10;
@@ -253,7 +267,7 @@
             this.dataGridView1.Location = new System.Drawing.Point(243, 204);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(482, 291);
+            this.dataGridView1.Size = new System.Drawing.Size(707, 291);
             this.dataGridView1.TabIndex = 9;
             // 
             // Current_Stock
@@ -290,7 +304,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(243, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(482, 492);
+            this.panel1.Size = new System.Drawing.Size(707, 492);
             this.panel1.TabIndex = 8;
             // 
             // textBox2
@@ -354,54 +368,124 @@
             // 
             // tabWarehouse
             // 
+            this.tabWarehouse.Controls.Add(this.chart1);
+            this.tabWarehouse.Controls.Add(this.panel4);
+            this.tabWarehouse.Controls.Add(this.panel3);
+            this.tabWarehouse.Controls.Add(this.dgvProductStock);
             this.tabWarehouse.Controls.Add(this.panel2);
-            this.tabWarehouse.Controls.Add(this.dataGridView2);
             this.tabWarehouse.Location = new System.Drawing.Point(4, 22);
             this.tabWarehouse.Name = "tabWarehouse";
-            this.tabWarehouse.Size = new System.Drawing.Size(728, 498);
+            this.tabWarehouse.Size = new System.Drawing.Size(953, 498);
             this.tabWarehouse.TabIndex = 2;
             this.tabWarehouse.Text = "Warehouse";
             this.tabWarehouse.UseVisualStyleBackColor = true;
             // 
-            // dataGridView2
-            // 
-            this.dataGridView2.AllowUserToAddRows = false;
-            this.dataGridView2.AllowUserToDeleteRows = false;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView2.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.ReadOnly = true;
-            this.dataGridView2.Size = new System.Drawing.Size(728, 498);
-            this.dataGridView2.TabIndex = 0;
-            // 
             // panel2
             // 
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel2.Controls.Add(this.panel5);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(278, 498);
+            this.panel2.Size = new System.Drawing.Size(953, 45);
             this.panel2.TabIndex = 1;
+            // 
+            // dgvProductStock
+            // 
+            this.dgvProductStock.AllowUserToAddRows = false;
+            this.dgvProductStock.AllowUserToDeleteRows = false;
+            this.dgvProductStock.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvProductStock.Dock = System.Windows.Forms.DockStyle.Left;
+            this.dgvProductStock.Location = new System.Drawing.Point(0, 45);
+            this.dgvProductStock.Name = "dgvProductStock";
+            this.dgvProductStock.Size = new System.Drawing.Size(412, 453);
+            this.dgvProductStock.TabIndex = 3;
+            // 
+            // panel3
+            // 
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel3.Location = new System.Drawing.Point(412, 45);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(236, 453);
+            this.panel3.TabIndex = 4;
+            // 
+            // cmbStorageSelect
+            // 
+            this.cmbStorageSelect.FormattingEnabled = true;
+            this.cmbStorageSelect.Items.AddRange(new object[] {
+            "Warehouse",
+            "MOES"});
+            this.cmbStorageSelect.Location = new System.Drawing.Point(8, 13);
+            this.cmbStorageSelect.Name = "cmbStorageSelect";
+            this.cmbStorageSelect.Size = new System.Drawing.Size(121, 21);
+            this.cmbStorageSelect.TabIndex = 0;
+            this.cmbStorageSelect.Text = "Select a storage";
+            // 
+            // panel4
+            // 
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel4.Location = new System.Drawing.Point(648, 45);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(305, 198);
+            this.panel4.TabIndex = 5;
+            // 
+            // chart1
+            // 
+            chartArea1.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea1);
+            this.chart1.Dock = System.Windows.Forms.DockStyle.Fill;
+            legend1.Name = "Legend1";
+            this.chart1.Legends.Add(legend1);
+            this.chart1.Location = new System.Drawing.Point(648, 243);
+            this.chart1.Name = "chart1";
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.chart1.Series.Add(series1);
+            this.chart1.Size = new System.Drawing.Size(305, 255);
+            this.chart1.TabIndex = 6;
+            this.chart1.Text = "chart1";
+            // 
+            // btnDisplayProducts
+            // 
+            this.btnDisplayProducts.Location = new System.Drawing.Point(150, 4);
+            this.btnDisplayProducts.Name = "btnDisplayProducts";
+            this.btnDisplayProducts.Size = new System.Drawing.Size(61, 38);
+            this.btnDisplayProducts.TabIndex = 1;
+            this.btnDisplayProducts.Text = "Display Products";
+            this.btnDisplayProducts.UseVisualStyleBackColor = true;
+            this.btnDisplayProducts.Click += new System.EventHandler(this.btnDisplayProducts_Click);
+            // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.btnDisplayProducts);
+            this.panel5.Controls.Add(this.cmbStorageSelect);
+            this.panel5.Location = new System.Drawing.Point(0, 0);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(216, 45);
+            this.panel5.TabIndex = 2;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(736, 524);
-            this.Controls.Add(this.tabVisitors);
+            this.ClientSize = new System.Drawing.Size(961, 524);
+            this.Controls.Add(this.tabModules);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.Text = "Form1";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.tabVisitors.ResumeLayout(false);
+            this.tabModules.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.tabWarehouse.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProductStock)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
+            this.panel5.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -420,7 +504,7 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ListBox listBox2;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TabControl tabVisitors;
+        private System.Windows.Forms.TabControl tabModules;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Panel panel1;
@@ -439,7 +523,13 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Warehouse_Stock;
         private System.Windows.Forms.TabPage tabWarehouse;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.DataGridView dgvProductStock;
+        private System.Windows.Forms.ComboBox cmbStorageSelect;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Button btnDisplayProducts;
     }
 }
 

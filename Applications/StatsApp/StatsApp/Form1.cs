@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Modules;
 
 namespace StatsApp
 {
@@ -105,6 +106,37 @@ namespace StatsApp
             foreach (string a in data)
             {
                 listBox2.Items.Add(a);
+            }
+        }
+
+        private void btnDisplayProducts_Click(object sender, EventArgs e)
+        {
+            int selectedType = this.cmbStorageSelect.SelectedIndex;
+
+            switch (selectedType)
+            {
+                case 0:
+                    WareHouseCntrl.PopulateGridData(this.dgvProductStock, StorageTypes.GLOBAL);
+                    break;
+                case -1:
+                    MessageBox.Show("Select a type first!");
+                    break;
+                default:
+                    WareHouseCntrl.PopulateGridData(this.dgvProductStock, StorageTypes.LOCAL,this.cmbStorageSelect.SelectedItem.ToString());
+                    break;
+
+            }
+
+            
+        }
+
+        private void tabModules_TabIndexChanged(object sender, EventArgs e)
+        {
+            switch(tabModules.SelectedIndex)
+            {
+                case 2:
+                    WareHouseCntrl.PopulateComboBox(this.cmbStorageSelect);
+                    break;
             }
         }
     }
