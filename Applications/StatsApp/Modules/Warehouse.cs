@@ -13,11 +13,11 @@ namespace Modules
         GLOBAL,
         LOCAL
     }
-    
+
 
     static public class WareHouseCntrl
     {
-       
+
         /// <summary>
         /// Populates the data in the specified datagridview. 
         /// Takes a dgv to be managed, type of storage and optionally a storeName to populate it with according data
@@ -25,10 +25,10 @@ namespace Modules
         /// <param name="dgv"></param>
         /// <param name="stype"></param>
         /// <param name="OptioalStoreName"></param>
-        static public void PopulateGridData(DataGridView dgv, StorageTypes stype, String OptioalStoreName = "" )
+        static public void PopulateGridData(DataGridView dgv, StorageTypes stype, String OptioalStoreName = "")
         {
             dgv.Rows.Clear();
-            
+
             List<Product> lp = new List<Product>();
             if (stype == StorageTypes.GLOBAL)
             {
@@ -38,7 +38,7 @@ namespace Modules
             {
                 lp = Warehouse.GetAllProducts(OptioalStoreName);
             }
-            if(dgv.Columns.Count<4)
+            if (dgv.Columns.Count < 4)
             {
                 dgv.Columns.Add("colID", "ID");
                 dgv.Columns.Add("colName", "Name");
@@ -46,11 +46,11 @@ namespace Modules
                 dgv.Columns.Add("colQuantity", "Qunatity");
             }
             dgv.Width = dgv.Columns.GetColumnsWidth(DataGridViewElementStates.None);
-            foreach(ProductToSell p in lp)
+            foreach (ProductToSell p in lp)
             {
                 dgv.Rows.Add(p.Id, p.Name, p.Price, p.Quantity);
             }
-            
+
         }
 
         /// <summary>
@@ -59,12 +59,20 @@ namespace Modules
         /// <param name="cmbx"></param>
         static public void PopulateComboBox(ComboBox cmbx)
         {
-            if(cmbx.Items.Count<=2)
+            if (cmbx.Items.Count <= 2)
             {
                 cmbx.Items.AddRange(Warehouse.RetrieveStoreNames().ToArray());
             }
         }
 
+        static public void UpdateOverview(ListBox lbTopPopProd, Label lblTotPurchVal, Label lblGrosAmPaidVal)
+        {
+            foreach(ProductToSell p in Warehouse.GetTopPopularProducts())
+            {
+                lbTopPopProd.Items.Add(p.Name+" was sold: "+p.Quantity + " times");
+            }
+            
+        }
     }
 
 
@@ -198,10 +206,9 @@ namespace Modules
 
         static public List<Product> GetHistoryProducts(string ShopName)
         {
-            String sql = "SELECT * " +
-                "FROM storeprodinfo " +
-                "WHERE storename = " + "'" + ShopName + "'" +
-                "ORDER BY prodname;";
+            String sql = "SELECT STORE_ID " +
+                "FROM STORES " +
+                "WHERE storename = " + "'" + ShopName + "';";
             MySqlCommand command = new MySqlCommand(sql, Connection.connection);
 
             List<Product> temp;
@@ -238,6 +245,55 @@ namespace Modules
             return temp;
         }
 
+        static public List<Product> GetTopPopularProducts()
+        {
+            String sql = "SELECT SUM(sl.QUANTITY) as SOLDITEMS, sl.PRODUCT_ID as ID, fp.NAME as prodname, fp.PRICE as price " +
+                "FROM salelines sl " +
+                "join foodproducts fp " +
+                "on sl.PRODUCT_ID = fp.PRODUCT_ID " +
+                "GROUP BY sl.PRODUCT_ID " +
+                "ORDER BY SUM(QUANTITY)DESC "+
+                "LIMIT 7;";
+            MySqlCommand command = new MySqlCommand(sql, Connection.connection);
+
+            List<Product> temp;
+            temp = new List<Product>();
+
+            try
+            {
+                Connection.connection.Open();
+                MySqlDataReader reader = command.ExecuteReader();
+                // data to build a new product upon 
+                int id;
+                int quantity;
+                string name;
+                double price;
+
+                while (reader.Read())
+                {
+                    id = Convert.ToInt32(reader["id"]);
+                    name = Convert.ToString(reader["prodname"]);
+                    price = Convert.ToDouble(reader["price"]);
+                    quantity = Convert.ToInt32(reader["SOLDITEMS"]);
+
+                    temp.Add(new ProductToSell(id, name, price, quantity));
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            finally
+            {
+                Connection.connection.Close();
+            }
+            return temp;
+        }
+
+        static public int GetNumberOfPurchases()
+        {
+            return 0;
+        }
     }
 
 }

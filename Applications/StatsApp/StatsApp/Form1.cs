@@ -139,5 +139,10 @@ namespace StatsApp
                     break;
             }
         }
+
+        private void btnRefreshGeneralOverview_Click(object sender, EventArgs e)
+        {
+            WareHouseCntrl.UpdateOverview(this.lbTopPopProd, this.lblTotPurchVal, this.lblGrossAmPaidVal);
+        }
     }
 }
