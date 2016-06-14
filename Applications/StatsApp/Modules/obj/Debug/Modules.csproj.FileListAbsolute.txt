@@ -1,0 +1,6 @@
+D:\Projects\FONTYSPRO\PROP-Project\Applications\StatsApp\Modules\bin\Debug\Modules.dll
+D:\Projects\FONTYSPRO\PROP-Project\Applications\StatsApp\Modules\bin\Debug\Modules.pdb
+D:\Projects\FONTYSPRO\PROP-Project\Applications\StatsApp\Modules\obj\Debug\Modules.csprojResolveAssemblyReference.cache
+D:\Projects\FONTYSPRO\PROP-Project\Applications\StatsApp\Modules\obj\Debug\Modules.dll
+D:\Projects\FONTYSPRO\PROP-Project\Applications\StatsApp\Modules\obj\Debug\Modules.pdb
+D:\Projects\FONTYSPRO\PROP-Project\Applications\StatsApp\Modules\bin\Debug\MySql.Data.dll
