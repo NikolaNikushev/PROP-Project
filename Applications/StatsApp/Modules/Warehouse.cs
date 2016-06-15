@@ -5,6 +5,10 @@ using System.Text;
 using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
 using System.Windows.Forms;
+using System.Data;
+
+
+
 
 namespace Modules
 {
@@ -15,9 +19,24 @@ namespace Modules
     }
 
 
-    static public class WareHouseCntrl
+    public class WareHouseCntrl
     {
+        public WareHouseCntrl(ComboBox cmbx, ComboBox cmbxHstry = null, ListBox lb = null, Label[] lbls = null)
+        {
+            try
+            {
+                WareHouseCntrl.PopulateComboBox(cmbx);
+                WareHouseCntrl.PopulateComboBox(cmbxHstry);
+                WareHouseCntrl.UpdateOverview(lb, lbls[0], lbls[1], lbls[2]);
+            }
+            catch
+            {
+                Console.WriteLine("Couldn't update the data");
+                throw new Exception("Couldn't update the data");
+            }
 
+
+        }
         /// <summary>
         /// Populates the data in the specified datagridview. 
         /// Takes a dgv to be managed, type of storage and optionally a storeName to populate it with according data
@@ -50,9 +69,7 @@ namespace Modules
             {
                 dgv.Rows.Add(p.Id, p.Name, p.Price, p.Quantity);
             }
-
         }
-
         /// <summary>
         /// Populates the data in the specified sombobox
         /// </summary>
@@ -64,14 +81,60 @@ namespace Modules
                 cmbx.Items.AddRange(Warehouse.RetrieveStoreNames().ToArray());
             }
         }
-
-        static public void UpdateOverview(ListBox lbTopPopProd, Label lblTotPurchVal, Label lblGrosAmPaidVal)
+        /// <summary>
+        /// Populates the coolection of a combobox to select a product
+        /// </summary>
+        /// <param name="cmbx"></param>
+        /// <param name="storeName"></param>
+        static public void PopulateProdOfStoreComboBox(ComboBox cmbx, string storeName)
         {
-            foreach(ProductToSell p in Warehouse.GetTopPopularProducts())
+            if (cmbx.Items.Count < 1)
             {
-                lbTopPopProd.Items.Add(p.Name+" was sold: "+p.Quantity + " times");
+                cmbx.Items.AddRange(Warehouse.RetrieveInStoreProds(storeName).ToArray());
             }
-            
+        }
+        /// <summary>
+        /// updates overview tab and populates it with all the data to the accroding controls
+        /// </summary>
+        /// <param name="lbTopPopProd"></param>
+        /// <param name="lblTotPurchVal"></param>
+        /// <param name="lblGrosAmPaidVal"></param>
+        /// <param name="lblHotHourVal"></param>
+        static public void UpdateOverview(ListBox lbTopPopProd, Label lblTotPurchVal, Label lblGrosAmPaidVal, Label lblHotHourVal)
+        {
+            // 0 - number of payments
+            // 1 - gross amount
+            // 2 - busiest hour
+            lbTopPopProd.Items.Clear();
+            string[] labels = Warehouse.GetNumberAndGrossAmountOfPurchases();
+            lblTotPurchVal.Text = labels[0];
+            lblGrosAmPaidVal.Text = labels[1] + " " + System.Globalization.CultureInfo.GetCultureInfo("nl-NL").NumberFormat.CurrencySymbol;
+            lblHotHourVal.Text = labels[2];
+            foreach (ProductToSell p in Warehouse.GetTopPopularProducts())
+            {
+                lbTopPopProd.Items.Add(p.Name + " was sold: " + p.Quantity + " times");
+            }
+
+        }
+
+        /// <summary>
+        /// Retrieves a list of archived product states
+        /// </summary>
+        /// <param name="ShopName"></param>
+        /// <param name="ProductName"></param>
+        static public void GetHistoricalData( string ShopName, string ProductName)
+        {
+            try
+            {
+                List<ProductArchive> pa = Warehouse.GetHistoryProducts(ShopName, ProductName);
+                
+
+            }
+            catch
+            {
+                Console.WriteLine("Damn! something went wrong");
+                throw new Exception("Damn! something went wrong");
+            }
         }
     }
 
@@ -204,34 +267,55 @@ namespace Modules
 
         }
 
-        static public List<Product> GetHistoryProducts(string ShopName)
-        {
-            String sql = "SELECT STORE_ID " +
-                "FROM STORES " +
-                "WHERE storename = " + "'" + ShopName + "';";
-            MySqlCommand command = new MySqlCommand(sql, Connection.connection);
 
-            List<Product> temp;
-            temp = new List<Product>();
+
+
+        /// <summary>
+        /// Retrieves the historical data about a certain product in a shop
+        /// </summary>
+        /// <param name="ShopName"></param>
+        /// <returns></returns>
+        static public List<ProductArchive> GetHistoryProducts(string ShopName, string ProductName)
+        {
+            Connection.connection.Open();
+
+            MySqlCommand command = Connection.connection.CreateCommand();
+
+            //// Must assign both transaction object and connection
+            //// to Command object for a pending local transaction
+            command.Connection = Connection.connection;
+
+            List<ProductArchive> temp;
+            temp = new List<ProductArchive>();
 
             try
             {
-                Connection.connection.Open();
+                command.CommandText = "SELECT PRODUCT_ID, SLICETIME, QUANTITY, NUMSALES " +
+                    "FROM storeperfarchive " +
+                    "WHERE PRODNAME = '" + ProductName + "' " +
+                    "AND STORE_ID = (SELECT STORE_ID FROM stores " +
+                    "WHERE STORENAME = '" + ShopName + "')";
+
+
+
                 MySqlDataReader reader = command.ExecuteReader();
                 // data to build a new product upon 
-                int id;
-                int quantity;
-                string name;
-                double price;
-
+                string name = ProductName;
+                DateTime SliceTime;
+                int id = -1;
+                int QuantityArch = 0;
+                int NumSoldArch = 0;
                 while (reader.Read())
                 {
-                    id = Convert.ToInt32(reader["product_id"]);
-                    name = Convert.ToString(reader["prodname"]);
-                    price = Convert.ToDouble(reader["price"]);
-                    quantity = Convert.ToInt32(reader["quantity"]);
+                    id = Convert.ToInt32(reader["PRODUCT_ID"]);
+                    SliceTime = Convert.ToDateTime(reader["SLICETIME"]);
+                    QuantityArch = Convert.ToInt32(reader["QUANTITY"]);
+                    NumSoldArch = Convert.ToInt32(reader["NUMSALES"]);
 
-                    temp.Add(new ProductToSell(id, name, price, quantity));
+                    //price = Convert.ToDouble(reader["price"]);
+                    //quantity = Convert.ToInt32(reader["quantity"]);
+
+                    temp.Add(new ProductArchive(id, name, SliceTime, NumSoldArch, QuantityArch));
                 }
             }
             catch (Exception ex)
@@ -245,6 +329,12 @@ namespace Modules
             return temp;
         }
 
+
+
+        /// <summary>
+        /// Retrieves a list of top 7 popular products gets their number of sales and also general info
+        /// </summary>
+        /// <returns></returns>
         static public List<Product> GetTopPopularProducts()
         {
             String sql = "SELECT SUM(sl.QUANTITY) as SOLDITEMS, sl.PRODUCT_ID as ID, fp.NAME as prodname, fp.PRICE as price " +
@@ -252,7 +342,7 @@ namespace Modules
                 "join foodproducts fp " +
                 "on sl.PRODUCT_ID = fp.PRODUCT_ID " +
                 "GROUP BY sl.PRODUCT_ID " +
-                "ORDER BY SUM(QUANTITY)DESC "+
+                "ORDER BY SUM(QUANTITY)DESC " +
                 "LIMIT 7;";
             MySqlCommand command = new MySqlCommand(sql, Connection.connection);
 
@@ -290,10 +380,96 @@ namespace Modules
             return temp;
         }
 
-        static public int GetNumberOfPurchases()
+        /// <summary>
+        /// Gets data about the payments returns an array of strings representing: 
+        /// 0 -  number of payments;
+        /// 1 - gross amount of money;
+        /// 2 - busiest time
+        /// </summary>
+        /// <returns></returns>
+        static public string[] GetNumberAndGrossAmountOfPurchases()
         {
-            return 0;
+            String sql = "SELECT COUNT(PAYMENT_ID) as NUMPMNTS," +
+                " SUM(TOTALPRICE) as GROSS, " +
+                    "(SELECT PURCHASETIME from storepayment " +
+                    "GROUP BY PURCHASETIME " +
+                    "ORDER BY COUNT(PAYMENT_ID) DESC LIMIT 1) as " +
+                "HOTHOUR " +
+                "FROM storepayment;";
+            MySqlCommand command = new MySqlCommand(sql, Connection.connection);
+
+            string[] querRes = new string[3];
+
+            try
+            {
+                Connection.connection.Open();
+                MySqlDataReader reader = command.ExecuteReader();
+                // data to build a new product upon 
+
+                while (reader.Read())
+                {
+                    // number of payments
+                    querRes[0] = (reader["NUMPMNTS"]).ToString();
+                    // gross amount of money
+                    querRes[1] = (reader["GROSS"]).ToString();
+                    // busiest time
+                    string hour = (reader["HOTHOUR"]).ToString();
+                    hour = hour.Substring(hour.IndexOf(' '));
+                    querRes[2] = hour;//(reader["HOTHOUR"]).ToString();
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            finally
+            {
+                Connection.connection.Close();
+            }
+
+            return querRes;
         }
+
+
+
+
+        /// <summary>
+        /// Gets all the products available in the store
+        /// query: SELECT PRODNAME FROM storeprodinfo
+        /// </summary>
+        /// <param name="StoreName"></param>
+        /// <returns></returns>
+        static public List<String> RetrieveInStoreProds(String StoreName)
+        {
+            String sql = "SELECT PRODNAME FROM storeprodinfo WHERE STORENAME = '" + StoreName + "';";
+            MySqlCommand command = new MySqlCommand(sql, Connection.connection);
+
+            List<String> temp;
+            temp = new List<String>();
+
+            try
+            {
+                Connection.connection.Open();
+                MySqlDataReader reader = command.ExecuteReader();
+                // data to build a new product upon 
+
+                while (reader.Read())
+                {
+                    temp.Add(reader["PRODNAME"].ToString());
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            finally
+            {
+                Connection.connection.Close();
+            }
+            return temp;
+
+        }
+
     }
 
 }

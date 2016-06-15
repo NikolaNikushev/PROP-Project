@@ -29,9 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.label1 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.label2 = new System.Windows.Forms.Label();
@@ -64,33 +65,38 @@
             this.tabWarehouse = new System.Windows.Forms.TabPage();
             this.chartProductHistory = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.button5 = new System.Windows.Forms.Button();
+            this.cmbSelectHisotryProduct = new System.Windows.Forms.ComboBox();
+            this.btnDisplayHistory = new System.Windows.Forms.Button();
             this.panel7 = new System.Windows.Forms.Panel();
             this.lblSalesOverview = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cmbSelectStoreForHistory = new System.Windows.Forms.ComboBox();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.lblTopProducts = new System.Windows.Forms.Label();
+            this.lbTopPopProd = new System.Windows.Forms.ListBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.lblGrossAmPaidVal = new System.Windows.Forms.Label();
+            this.lblTotalSales = new System.Windows.Forms.Label();
+            this.lblTotPurchVal = new System.Windows.Forms.Label();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.lblLowStocks = new System.Windows.Forms.Label();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.colProdID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colProdName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colProdQuan = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.btnRefreshGeneralOverview = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.dgvProductStock = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
             this.listBox4 = new System.Windows.Forms.ListBox();
-            this.btnRefreshGeneralOverview = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
             this.btnDisplayProducts = new System.Windows.Forms.Button();
             this.cmbStorageSelect = new System.Windows.Forms.ComboBox();
-            this.lblTotalSales = new System.Windows.Forms.Label();
-            this.lblTotPurchVal = new System.Windows.Forms.Label();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.lblLowStocks = new System.Windows.Forms.Label();
-            this.colProdID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colProdName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colProdQuan = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.panel10 = new System.Windows.Forms.Panel();
-            this.label6 = new System.Windows.Forms.Label();
-            this.lblGrossAmPaidVal = new System.Windows.Forms.Label();
-            this.lbTopPopProd = new System.Windows.Forms.ListBox();
-            this.lblTopProducts = new System.Windows.Forms.Label();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.lblHotHour = new System.Windows.Forms.Label();
+            this.lblHotHourVal = new System.Windows.Forms.Label();
+            this.btnChangeStore = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.tabModules.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -102,13 +108,14 @@
             this.panel4.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.panel10.SuspendLayout();
+            this.panel9.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductStock)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            this.panel9.SuspendLayout();
-            this.panel10.SuspendLayout();
+            this.panel8.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -241,7 +248,7 @@
             this.tabModules.Location = new System.Drawing.Point(0, 0);
             this.tabModules.Name = "tabModules";
             this.tabModules.SelectedIndex = 0;
-            this.tabModules.Size = new System.Drawing.Size(961, 524);
+            this.tabModules.Size = new System.Drawing.Size(1019, 524);
             this.tabModules.TabIndex = 3;
             this.tabModules.SelectedIndexChanged += new System.EventHandler(this.tabModules_TabIndexChanged);
             this.tabModules.TabIndexChanged += new System.EventHandler(this.tabModules_TabIndexChanged);
@@ -403,7 +410,7 @@
             this.tabWarehouse.Controls.Add(this.panel2);
             this.tabWarehouse.Location = new System.Drawing.Point(4, 22);
             this.tabWarehouse.Name = "tabWarehouse";
-            this.tabWarehouse.Size = new System.Drawing.Size(953, 498);
+            this.tabWarehouse.Size = new System.Drawing.Size(1011, 498);
             this.tabWarehouse.TabIndex = 2;
             this.tabWarehouse.Text = "Warehouse";
             this.tabWarehouse.UseVisualStyleBackColor = true;
@@ -411,41 +418,61 @@
             // chartProductHistory
             // 
             this.chartProductHistory.BackColor = System.Drawing.SystemColors.MenuBar;
-            chartArea1.Name = "ChartArea1";
-            this.chartProductHistory.ChartAreas.Add(chartArea1);
+            chartArea2.Name = "ChartArea1";
+            this.chartProductHistory.ChartAreas.Add(chartArea2);
             this.chartProductHistory.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend1.Name = "Legend1";
-            this.chartProductHistory.Legends.Add(legend1);
-            this.chartProductHistory.Location = new System.Drawing.Point(648, 174);
+            legend2.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Bottom;
+            legend2.Name = "Legend1";
+            this.chartProductHistory.Legends.Add(legend2);
+            this.chartProductHistory.Location = new System.Drawing.Point(670, 179);
             this.chartProductHistory.Name = "chartProductHistory";
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.chartProductHistory.Series.Add(series1);
-            this.chartProductHistory.Size = new System.Drawing.Size(305, 324);
+            series3.ChartArea = "ChartArea1";
+            series3.Legend = "Legend1";
+            series3.Name = "STOCK";
+            series4.ChartArea = "ChartArea1";
+            series4.Legend = "Legend1";
+            series4.Name = "SALES";
+            series4.YValuesPerPoint = 6;
+            this.chartProductHistory.Series.Add(series3);
+            this.chartProductHistory.Series.Add(series4);
+            this.chartProductHistory.Size = new System.Drawing.Size(341, 319);
             this.chartProductHistory.TabIndex = 6;
             this.chartProductHistory.Text = "chart1";
             // 
             // panel4
             // 
-            this.panel4.Controls.Add(this.button5);
+            this.panel4.Controls.Add(this.btnChangeStore);
+            this.panel4.Controls.Add(this.cmbSelectHisotryProduct);
+            this.panel4.Controls.Add(this.btnDisplayHistory);
             this.panel4.Controls.Add(this.panel7);
-            this.panel4.Controls.Add(this.comboBox1);
+            this.panel4.Controls.Add(this.cmbSelectStoreForHistory);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel4.Location = new System.Drawing.Point(648, 45);
+            this.panel4.Location = new System.Drawing.Point(670, 45);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(305, 129);
+            this.panel4.Size = new System.Drawing.Size(341, 134);
             this.panel4.TabIndex = 5;
             // 
-            // button5
+            // cmbSelectHisotryProduct
             // 
-            this.button5.BackColor = System.Drawing.SystemColors.Menu;
-            this.button5.Location = new System.Drawing.Point(6, 98);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 25);
-            this.button5.TabIndex = 2;
-            this.button5.Text = "button5";
-            this.button5.UseVisualStyleBackColor = false;
+            this.cmbSelectHisotryProduct.Enabled = false;
+            this.cmbSelectHisotryProduct.FormattingEnabled = true;
+            this.cmbSelectHisotryProduct.Location = new System.Drawing.Point(10, 107);
+            this.cmbSelectHisotryProduct.Name = "cmbSelectHisotryProduct";
+            this.cmbSelectHisotryProduct.Size = new System.Drawing.Size(121, 21);
+            this.cmbSelectHisotryProduct.TabIndex = 3;
+            this.cmbSelectHisotryProduct.Text = "Select a product";
+            // 
+            // btnDisplayHistory
+            // 
+            this.btnDisplayHistory.BackColor = System.Drawing.SystemColors.Menu;
+            this.btnDisplayHistory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDisplayHistory.Location = new System.Drawing.Point(148, 81);
+            this.btnDisplayHistory.Name = "btnDisplayHistory";
+            this.btnDisplayHistory.Size = new System.Drawing.Size(88, 47);
+            this.btnDisplayHistory.TabIndex = 2;
+            this.btnDisplayHistory.Text = "Display";
+            this.btnDisplayHistory.UseVisualStyleBackColor = false;
+            this.btnDisplayHistory.Click += new System.EventHandler(this.btnDisplayHistory_Click);
             // 
             // panel7
             // 
@@ -455,25 +482,27 @@
             this.panel7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.panel7.Location = new System.Drawing.Point(0, 0);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(305, 43);
+            this.panel7.Size = new System.Drawing.Size(341, 43);
             this.panel7.TabIndex = 1;
             // 
             // lblSalesOverview
             // 
             this.lblSalesOverview.AutoSize = true;
-            this.lblSalesOverview.Location = new System.Drawing.Point(6, 17);
+            this.lblSalesOverview.Location = new System.Drawing.Point(7, 17);
             this.lblSalesOverview.Name = "lblSalesOverview";
             this.lblSalesOverview.Size = new System.Drawing.Size(172, 18);
             this.lblSalesOverview.TabIndex = 1;
             this.lblSalesOverview.Text = "HISTORY OVERVIEW";
             // 
-            // comboBox1
+            // cmbSelectStoreForHistory
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(6, 49);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 0;
+            this.cmbSelectStoreForHistory.FormattingEnabled = true;
+            this.cmbSelectStoreForHistory.Location = new System.Drawing.Point(10, 55);
+            this.cmbSelectStoreForHistory.Name = "cmbSelectStoreForHistory";
+            this.cmbSelectStoreForHistory.Size = new System.Drawing.Size(121, 21);
+            this.cmbSelectStoreForHistory.TabIndex = 0;
+            this.cmbSelectStoreForHistory.Text = "Select a shop";
+            this.cmbSelectStoreForHistory.SelectedIndexChanged += new System.EventHandler(this.cmbSelectStoreForHistory_SelectedIndexChanged);
             // 
             // panel3
             // 
@@ -484,8 +513,139 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel3.Location = new System.Drawing.Point(412, 45);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(236, 453);
+            this.panel3.Size = new System.Drawing.Size(258, 453);
             this.panel3.TabIndex = 4;
+            // 
+            // panel10
+            // 
+            this.panel10.Controls.Add(this.lblHotHour);
+            this.panel10.Controls.Add(this.lblHotHourVal);
+            this.panel10.Controls.Add(this.panel8);
+            this.panel10.Controls.Add(this.lbTopPopProd);
+            this.panel10.Controls.Add(this.label6);
+            this.panel10.Controls.Add(this.lblGrossAmPaidVal);
+            this.panel10.Controls.Add(this.lblTotalSales);
+            this.panel10.Controls.Add(this.lblTotPurchVal);
+            this.panel10.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.panel10.Location = new System.Drawing.Point(0, 43);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(258, 223);
+            this.panel10.TabIndex = 7;
+            // 
+            // lblTopProducts
+            // 
+            this.lblTopProducts.AutoSize = true;
+            this.lblTopProducts.Location = new System.Drawing.Point(6, 6);
+            this.lblTopProducts.Name = "lblTopProducts";
+            this.lblTopProducts.Size = new System.Drawing.Size(157, 18);
+            this.lblTopProducts.TabIndex = 6;
+            this.lblTopProducts.Text = "Top Popular Products:";
+            // 
+            // lbTopPopProd
+            // 
+            this.lbTopPopProd.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.lbTopPopProd.FormattingEnabled = true;
+            this.lbTopPopProd.ItemHeight = 16;
+            this.lbTopPopProd.Location = new System.Drawing.Point(0, 123);
+            this.lbTopPopProd.Name = "lbTopPopProd";
+            this.lbTopPopProd.Size = new System.Drawing.Size(258, 100);
+            this.lbTopPopProd.TabIndex = 5;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(3, 33);
+            this.label6.Margin = new System.Windows.Forms.Padding(3, 0, 3, 5);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(124, 16);
+            this.label6.TabIndex = 3;
+            this.label6.Text = "Gross amount paid:";
+            // 
+            // lblGrossAmPaidVal
+            // 
+            this.lblGrossAmPaidVal.AutoSize = true;
+            this.lblGrossAmPaidVal.Location = new System.Drawing.Point(169, 33);
+            this.lblGrossAmPaidVal.Name = "lblGrossAmPaidVal";
+            this.lblGrossAmPaidVal.Size = new System.Drawing.Size(20, 16);
+            this.lblGrossAmPaidVal.TabIndex = 4;
+            this.lblGrossAmPaidVal.Text = "-/-";
+            // 
+            // lblTotalSales
+            // 
+            this.lblTotalSales.AutoSize = true;
+            this.lblTotalSales.Location = new System.Drawing.Point(3, 12);
+            this.lblTotalSales.Margin = new System.Windows.Forms.Padding(3, 0, 3, 5);
+            this.lblTotalSales.Name = "lblTotalSales";
+            this.lblTotalSales.Size = new System.Drawing.Size(109, 16);
+            this.lblTotalSales.TabIndex = 1;
+            this.lblTotalSales.Text = "Total Purchases:";
+            // 
+            // lblTotPurchVal
+            // 
+            this.lblTotPurchVal.AutoSize = true;
+            this.lblTotPurchVal.Location = new System.Drawing.Point(169, 12);
+            this.lblTotPurchVal.Name = "lblTotPurchVal";
+            this.lblTotPurchVal.Size = new System.Drawing.Size(20, 16);
+            this.lblTotPurchVal.TabIndex = 2;
+            this.lblTotPurchVal.Text = "-/-";
+            // 
+            // panel9
+            // 
+            this.panel9.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.panel9.Controls.Add(this.lblLowStocks);
+            this.panel9.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold);
+            this.panel9.Location = new System.Drawing.Point(0, 266);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(258, 37);
+            this.panel9.TabIndex = 6;
+            // 
+            // lblLowStocks
+            // 
+            this.lblLowStocks.AutoSize = true;
+            this.lblLowStocks.Location = new System.Drawing.Point(6, 10);
+            this.lblLowStocks.Name = "lblLowStocks";
+            this.lblLowStocks.Size = new System.Drawing.Size(108, 18);
+            this.lblLowStocks.TabIndex = 4;
+            this.lblLowStocks.Text = "LOW STOCK";
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.AllowUserToAddRows = false;
+            this.dataGridView2.AllowUserToDeleteRows = false;
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.colProdID,
+            this.colProdName,
+            this.colProdQuan});
+            this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.dataGridView2.Location = new System.Drawing.Point(0, 303);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.ReadOnly = true;
+            this.dataGridView2.Size = new System.Drawing.Size(258, 150);
+            this.dataGridView2.TabIndex = 4;
+            // 
+            // colProdID
+            // 
+            this.colProdID.HeaderText = "ID";
+            this.colProdID.Name = "colProdID";
+            this.colProdID.ReadOnly = true;
+            this.colProdID.Width = 40;
+            // 
+            // colProdName
+            // 
+            this.colProdName.HeaderText = "Name";
+            this.colProdName.Name = "colProdName";
+            this.colProdName.ReadOnly = true;
+            this.colProdName.Width = 77;
+            // 
+            // colProdQuan
+            // 
+            this.colProdQuan.HeaderText = "Quantity";
+            this.colProdQuan.Name = "colProdQuan";
+            this.colProdQuan.ReadOnly = true;
+            this.colProdQuan.Width = 75;
             // 
             // panel6
             // 
@@ -496,8 +656,22 @@
             this.panel6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.panel6.Location = new System.Drawing.Point(0, 0);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(236, 43);
+            this.panel6.Size = new System.Drawing.Size(258, 43);
             this.panel6.TabIndex = 0;
+            // 
+            // btnRefreshGeneralOverview
+            // 
+            this.btnRefreshGeneralOverview.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.btnRefreshGeneralOverview.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRefreshGeneralOverview.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F);
+            this.btnRefreshGeneralOverview.Location = new System.Drawing.Point(190, 0);
+            this.btnRefreshGeneralOverview.Name = "btnRefreshGeneralOverview";
+            this.btnRefreshGeneralOverview.Size = new System.Drawing.Size(68, 20);
+            this.btnRefreshGeneralOverview.TabIndex = 3;
+            this.btnRefreshGeneralOverview.Text = "Update";
+            this.btnRefreshGeneralOverview.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnRefreshGeneralOverview.UseVisualStyleBackColor = false;
+            this.btnRefreshGeneralOverview.Click += new System.EventHandler(this.btnRefreshGeneralOverview_Click);
             // 
             // label5
             // 
@@ -526,7 +700,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(953, 45);
+            this.panel2.Size = new System.Drawing.Size(1011, 45);
             this.panel2.TabIndex = 1;
             // 
             // listBox4
@@ -535,21 +709,8 @@
             this.listBox4.FormattingEnabled = true;
             this.listBox4.Location = new System.Drawing.Point(216, 0);
             this.listBox4.Name = "listBox4";
-            this.listBox4.Size = new System.Drawing.Size(737, 45);
+            this.listBox4.Size = new System.Drawing.Size(795, 45);
             this.listBox4.TabIndex = 1;
-            // 
-            // btnRefreshGeneralOverview
-            // 
-            this.btnRefreshGeneralOverview.BackColor = System.Drawing.SystemColors.Menu;
-            this.btnRefreshGeneralOverview.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnRefreshGeneralOverview.Location = new System.Drawing.Point(204, 3);
-            this.btnRefreshGeneralOverview.Name = "btnRefreshGeneralOverview";
-            this.btnRefreshGeneralOverview.Size = new System.Drawing.Size(29, 29);
-            this.btnRefreshGeneralOverview.TabIndex = 3;
-            this.btnRefreshGeneralOverview.Text = "*";
-            this.btnRefreshGeneralOverview.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnRefreshGeneralOverview.UseVisualStyleBackColor = false;
-            this.btnRefreshGeneralOverview.Click += new System.EventHandler(this.btnRefreshGeneralOverview_Click);
             // 
             // panel5
             // 
@@ -564,6 +725,7 @@
             // btnDisplayProducts
             // 
             this.btnDisplayProducts.BackColor = System.Drawing.SystemColors.Menu;
+            this.btnDisplayProducts.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDisplayProducts.Location = new System.Drawing.Point(150, 4);
             this.btnDisplayProducts.Name = "btnDisplayProducts";
             this.btnDisplayProducts.Size = new System.Drawing.Size(61, 38);
@@ -584,138 +746,55 @@
             this.cmbStorageSelect.TabIndex = 0;
             this.cmbStorageSelect.Text = "Select a storage";
             // 
-            // lblTotalSales
+            // panel8
             // 
-            this.lblTotalSales.AutoSize = true;
-            this.lblTotalSales.Location = new System.Drawing.Point(3, 19);
-            this.lblTotalSales.Name = "lblTotalSales";
-            this.lblTotalSales.Size = new System.Drawing.Size(109, 16);
-            this.lblTotalSales.TabIndex = 1;
-            this.lblTotalSales.Text = "Total Purchases:";
+            this.panel8.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.panel8.Controls.Add(this.lblTopProducts);
+            this.panel8.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.panel8.Location = new System.Drawing.Point(0, 89);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(258, 34);
+            this.panel8.TabIndex = 6;
             // 
-            // lblTotPurchVal
+            // lblHotHour
             // 
-            this.lblTotPurchVal.AutoSize = true;
-            this.lblTotPurchVal.Location = new System.Drawing.Point(169, 19);
-            this.lblTotPurchVal.Name = "lblTotPurchVal";
-            this.lblTotPurchVal.Size = new System.Drawing.Size(20, 16);
-            this.lblTotPurchVal.TabIndex = 2;
-            this.lblTotPurchVal.Text = "-/-";
+            this.lblHotHour.AutoSize = true;
+            this.lblHotHour.Location = new System.Drawing.Point(3, 54);
+            this.lblHotHour.Name = "lblHotHour";
+            this.lblHotHour.Size = new System.Drawing.Size(83, 16);
+            this.lblHotHour.TabIndex = 7;
+            this.lblHotHour.Text = "Busiest time:";
             // 
-            // dataGridView2
+            // lblHotHourVal
             // 
-            this.dataGridView2.AllowUserToAddRows = false;
-            this.dataGridView2.AllowUserToDeleteRows = false;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.colProdID,
-            this.colProdName,
-            this.colProdQuan});
-            this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dataGridView2.Location = new System.Drawing.Point(0, 303);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.ReadOnly = true;
-            this.dataGridView2.Size = new System.Drawing.Size(236, 150);
-            this.dataGridView2.TabIndex = 4;
+            this.lblHotHourVal.AutoSize = true;
+            this.lblHotHourVal.Location = new System.Drawing.Point(169, 54);
+            this.lblHotHourVal.Name = "lblHotHourVal";
+            this.lblHotHourVal.Size = new System.Drawing.Size(20, 16);
+            this.lblHotHourVal.TabIndex = 8;
+            this.lblHotHourVal.Text = "-/-";
             // 
-            // panel9
+            // btnChangeStore
             // 
-            this.panel9.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.panel9.Controls.Add(this.lblLowStocks);
-            this.panel9.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold);
-            this.panel9.Location = new System.Drawing.Point(0, 260);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(236, 43);
-            this.panel9.TabIndex = 6;
-            // 
-            // lblLowStocks
-            // 
-            this.lblLowStocks.AutoSize = true;
-            this.lblLowStocks.Location = new System.Drawing.Point(6, 14);
-            this.lblLowStocks.Name = "lblLowStocks";
-            this.lblLowStocks.Size = new System.Drawing.Size(108, 18);
-            this.lblLowStocks.TabIndex = 4;
-            this.lblLowStocks.Text = "LOW STOCK";
-            // 
-            // colProdID
-            // 
-            this.colProdID.HeaderText = "ID";
-            this.colProdID.Name = "colProdID";
-            this.colProdID.ReadOnly = true;
-            this.colProdID.Width = 40;
-            // 
-            // colProdName
-            // 
-            this.colProdName.HeaderText = "Name";
-            this.colProdName.Name = "colProdName";
-            this.colProdName.ReadOnly = true;
-            this.colProdName.Width = 77;
-            // 
-            // colProdQuan
-            // 
-            this.colProdQuan.HeaderText = "Quantity";
-            this.colProdQuan.Name = "colProdQuan";
-            this.colProdQuan.ReadOnly = true;
-            this.colProdQuan.Width = 75;
-            // 
-            // panel10
-            // 
-            this.panel10.Controls.Add(this.lblTopProducts);
-            this.panel10.Controls.Add(this.lbTopPopProd);
-            this.panel10.Controls.Add(this.label6);
-            this.panel10.Controls.Add(this.lblGrossAmPaidVal);
-            this.panel10.Controls.Add(this.lblTotalSales);
-            this.panel10.Controls.Add(this.lblTotPurchVal);
-            this.panel10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.panel10.Location = new System.Drawing.Point(0, 43);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(236, 217);
-            this.panel10.TabIndex = 7;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(3, 51);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(124, 16);
-            this.label6.TabIndex = 3;
-            this.label6.Text = "Gross amount paid:";
-            // 
-            // lblGrossAmPaidVal
-            // 
-            this.lblGrossAmPaidVal.AutoSize = true;
-            this.lblGrossAmPaidVal.Location = new System.Drawing.Point(169, 51);
-            this.lblGrossAmPaidVal.Name = "lblGrossAmPaidVal";
-            this.lblGrossAmPaidVal.Size = new System.Drawing.Size(20, 16);
-            this.lblGrossAmPaidVal.TabIndex = 4;
-            this.lblGrossAmPaidVal.Text = "-/-";
-            // 
-            // lbTopPopProd
-            // 
-            this.lbTopPopProd.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.lbTopPopProd.FormattingEnabled = true;
-            this.lbTopPopProd.ItemHeight = 16;
-            this.lbTopPopProd.Location = new System.Drawing.Point(0, 117);
-            this.lbTopPopProd.Name = "lbTopPopProd";
-            this.lbTopPopProd.Size = new System.Drawing.Size(236, 100);
-            this.lbTopPopProd.TabIndex = 5;
-            // 
-            // lblTopProducts
-            // 
-            this.lblTopProducts.AutoSize = true;
-            this.lblTopProducts.Location = new System.Drawing.Point(3, 86);
-            this.lblTopProducts.Name = "lblTopProducts";
-            this.lblTopProducts.Size = new System.Drawing.Size(142, 16);
-            this.lblTopProducts.TabIndex = 6;
-            this.lblTopProducts.Text = "Top Popular Products:";
+            this.btnChangeStore.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.btnChangeStore.FlatAppearance.BorderSize = 0;
+            this.btnChangeStore.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnChangeStore.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F);
+            this.btnChangeStore.Location = new System.Drawing.Point(148, 55);
+            this.btnChangeStore.Name = "btnChangeStore";
+            this.btnChangeStore.Size = new System.Drawing.Size(88, 21);
+            this.btnChangeStore.TabIndex = 4;
+            this.btnChangeStore.Text = "Change Store";
+            this.btnChangeStore.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnChangeStore.UseVisualStyleBackColor = false;
+            this.btnChangeStore.Click += new System.EventHandler(this.btnChangeStore_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(961, 524);
+            this.ClientSize = new System.Drawing.Size(1019, 524);
             this.Controls.Add(this.tabModules);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
@@ -734,16 +813,18 @@
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
             this.panel3.ResumeLayout(false);
+            this.panel10.ResumeLayout(false);
+            this.panel10.PerformLayout();
+            this.panel9.ResumeLayout(false);
+            this.panel9.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductStock)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            this.panel9.ResumeLayout(false);
-            this.panel9.PerformLayout();
-            this.panel10.ResumeLayout(false);
-            this.panel10.PerformLayout();
+            this.panel8.ResumeLayout(false);
+            this.panel8.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -790,12 +871,12 @@
         private System.Windows.Forms.Button btnDisplayProducts;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Label lblSalesOverview;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmbSelectStoreForHistory;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ListBox listBox4;
         private System.Windows.Forms.Button btnRefreshGeneralOverview;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button btnDisplayHistory;
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Label lblLowStocks;
         private System.Windows.Forms.DataGridView dataGridView2;
@@ -809,6 +890,11 @@
         private System.Windows.Forms.ListBox lbTopPopProd;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label lblGrossAmPaidVal;
+        private System.Windows.Forms.ComboBox cmbSelectHisotryProduct;
+        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.Label lblHotHour;
+        private System.Windows.Forms.Label lblHotHourVal;
+        private System.Windows.Forms.Button btnChangeStore;
     }
 }
 

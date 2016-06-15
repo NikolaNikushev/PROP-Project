@@ -122,27 +122,59 @@ namespace StatsApp
                     MessageBox.Show("Select a type first!");
                     break;
                 default:
-                    WareHouseCntrl.PopulateGridData(this.dgvProductStock, StorageTypes.LOCAL,this.cmbStorageSelect.SelectedItem.ToString());
+                    WareHouseCntrl.PopulateGridData(this.dgvProductStock, StorageTypes.LOCAL, this.cmbStorageSelect.SelectedItem.ToString());
                     break;
 
             }
 
-            
+
         }
 
         private void tabModules_TabIndexChanged(object sender, EventArgs e)
         {
-            switch(tabModules.SelectedIndex)
+            switch (tabModules.SelectedIndex)
             {
                 case 2:
-                    WareHouseCntrl.PopulateComboBox(this.cmbStorageSelect);
+                    // just so that the arguments fit
+                    Label[] lbls = { this.lblTotPurchVal, this.lblGrossAmPaidVal, this.lblHotHourVal };
+                    WareHouseCntrl WHC = new WareHouseCntrl(this.cmbStorageSelect, this.cmbSelectStoreForHistory, this.lbTopPopProd, lbls);
+                    //WareHouseCntrl.PopulateComboBox(this.cmbStorageSelect);
                     break;
             }
         }
 
         private void btnRefreshGeneralOverview_Click(object sender, EventArgs e)
         {
-            WareHouseCntrl.UpdateOverview(this.lbTopPopProd, this.lblTotPurchVal, this.lblGrossAmPaidVal);
+            WareHouseCntrl.UpdateOverview(this.lbTopPopProd, this.lblTotPurchVal, this.lblGrossAmPaidVal, this.lblHotHourVal);
+
+        }
+
+        private void cmbSelectStoreForHistory_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            WareHouseCntrl.PopulateProdOfStoreComboBox(this.cmbSelectHisotryProduct, this.cmbSelectStoreForHistory.SelectedItem.ToString());
+            this.cmbSelectStoreForHistory.Enabled = false;
+            this.cmbSelectHisotryProduct.Enabled = true;
+        }
+
+        private void btnChangeStore_Click(object sender, EventArgs e)
+        {
+            this.cmbSelectStoreForHistory.Enabled = true;
+            this.cmbSelectHisotryProduct.Items.Clear();
+            this.cmbSelectHisotryProduct.Text = "Select a product";
+            this.cmbSelectHisotryProduct.Enabled = false;
+        }
+
+        private void btnDisplayHistory_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                WareHouseCntrl.GetHistoricalData(this.chartProductHistory,this.cmbSelectStoreForHistory.SelectedItem.ToString(), this.cmbSelectHisotryProduct.SelectedItem.ToString());
+
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

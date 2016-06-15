@@ -90,10 +90,10 @@ namespace Modules
     public class ProductArchive : Product
     {
         public DateTime SliceTime;
-        public List<int> QuantityArch;
-        public List<int> NumSoldArch;
+        public int QuantityArch;
+        public int NumSoldArch;
 
-        public ProductArchive(int id, string nm, DateTime stime, List<int> numsoldArch, List<int> qnttyArch)
+        public ProductArchive(int id, string nm, DateTime stime, int numsoldArch, int qnttyArch)
             :base(id,nm)
         {
             this.SliceTime = stime;
