@@ -168,8 +168,8 @@ namespace StatsApp
         {
             try
             {
-                WareHouseCntrl.GetHistoricalData(this.chartProductHistory,this.cmbSelectStoreForHistory.SelectedItem.ToString(), this.cmbSelectHisotryProduct.SelectedItem.ToString());
-
+                WareHouseCntrl.GetHistoricalData(this.chartProductHistory, this.cmbSelectStoreForHistory.SelectedItem.ToString(), this.cmbSelectHisotryProduct.SelectedItem.ToString());
+                
             }
             catch(Exception ex)
             {

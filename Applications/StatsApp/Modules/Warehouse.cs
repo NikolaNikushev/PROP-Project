@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
 using System.Windows.Forms;
-using System.Data;
+using System.Windows.Forms.DataVisualization.Charting;
 
 
 
@@ -122,12 +122,27 @@ namespace Modules
         /// </summary>
         /// <param name="ShopName"></param>
         /// <param name="ProductName"></param>
-        static public void GetHistoricalData( string ShopName, string ProductName)
+        static public void GetHistoricalData(Chart chartToMan, string ShopName, string ProductName)
         {
             try
             {
                 List<ProductArchive> pa = Warehouse.GetHistoryProducts(ShopName, ProductName);
                 
+                    chartToMan.Series[0].Points.Clear();
+                chartToMan.Series[1].Points.Clear();
+
+                if (pa.Count == 0)
+                {
+                    chartToMan.Series[0].Points.Add(0, 0);
+                    chartToMan.Series[0].Points.Add(0, 1);
+                }
+                
+                foreach (ProductArchive pia in pa)
+                {
+                    chartToMan.Series[0].Points.AddXY(pia.SliceTime, pia.QuantityArch); // number in stock
+                    chartToMan.Series[1].Points.AddXY(pia.SliceTime, pia.NumSoldArch); // number sold
+                }
+                //this.chartProductHistory.Series[0].Points.AddXY(1, 2);
 
             }
             catch
