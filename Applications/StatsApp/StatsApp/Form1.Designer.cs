@@ -29,10 +29,13 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.label1 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.label2 = new System.Windows.Forms.Label();
@@ -47,24 +50,10 @@
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.tabModules = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.listBox3 = new System.Windows.Forms.ListBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Current_Stock = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Total_Sales = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Total_Revenue = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Warehouse_Stock = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.btnDisplayInfo = new System.Windows.Forms.Button();
-            this.lblSelectedProduct = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.lblSelectedShop = new System.Windows.Forms.Label();
-            this.lbProducts = new System.Windows.Forms.ListBox();
-            this.lbStores = new System.Windows.Forms.ListBox();
             this.tabWarehouse = new System.Windows.Forms.TabPage();
             this.chartProductHistory = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.btnChangeStore = new System.Windows.Forms.Button();
             this.cmbSelectHisotryProduct = new System.Windows.Forms.ComboBox();
             this.btnDisplayHistory = new System.Windows.Forms.Button();
             this.panel7 = new System.Windows.Forms.Panel();
@@ -72,6 +61,9 @@
             this.cmbSelectStoreForHistory = new System.Windows.Forms.ComboBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
+            this.lblHotHour = new System.Windows.Forms.Label();
+            this.lblHotHourVal = new System.Windows.Forms.Label();
+            this.panel8 = new System.Windows.Forms.Panel();
             this.lblTopProducts = new System.Windows.Forms.Label();
             this.lbTopPopProd = new System.Windows.Forms.ListBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -93,29 +85,68 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.btnDisplayProducts = new System.Windows.Forms.Button();
             this.cmbStorageSelect = new System.Windows.Forms.ComboBox();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.lblHotHour = new System.Windows.Forms.Label();
-            this.lblHotHourVal = new System.Windows.Forms.Label();
-            this.btnChangeStore = new System.Windows.Forms.Button();
+            this.tabFinance = new System.Windows.Forms.TabPage();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.pnlHeaderDnmcLog = new System.Windows.Forms.Panel();
+            this.lbLivePmntsLog = new System.Windows.Forms.ListBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.button4 = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.panel13 = new System.Windows.Forms.Panel();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.panel14 = new System.Windows.Forms.Panel();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label28 = new System.Windows.Forms.Label();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.lbLimitedPmntsLog = new System.Windows.Forms.ListBox();
             this.groupBox1.SuspendLayout();
             this.tabModules.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            this.tabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.panel1.SuspendLayout();
             this.tabWarehouse.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartProductHistory)).BeginInit();
             this.panel4.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel10.SuspendLayout();
+            this.panel8.SuspendLayout();
             this.panel9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductStock)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel5.SuspendLayout();
-            this.panel8.SuspendLayout();
+            this.tabFinance.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            this.pnlHeaderDnmcLog.SuspendLayout();
+            this.groupBox3.SuspendLayout();
+            this.panel12.SuspendLayout();
+            this.panel13.SuspendLayout();
+            this.groupBox4.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.panel11.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
+            this.panel14.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -242,8 +273,8 @@
             // tabModules
             // 
             this.tabModules.Controls.Add(this.tabPage1);
-            this.tabModules.Controls.Add(this.tabPage2);
             this.tabModules.Controls.Add(this.tabWarehouse);
+            this.tabModules.Controls.Add(this.tabFinance);
             this.tabModules.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabModules.Location = new System.Drawing.Point(0, 0);
             this.tabModules.Name = "tabModules";
@@ -259,147 +290,10 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(953, 498);
+            this.tabPage1.Size = new System.Drawing.Size(1011, 498);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Visitors";
             this.tabPage1.UseVisualStyleBackColor = true;
-            // 
-            // tabPage2
-            // 
-            this.tabPage2.Controls.Add(this.listBox3);
-            this.tabPage2.Controls.Add(this.dataGridView1);
-            this.tabPage2.Controls.Add(this.panel1);
-            this.tabPage2.Controls.Add(this.lbProducts);
-            this.tabPage2.Controls.Add(this.lbStores);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(953, 498);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "tabPage2";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // listBox3
-            // 
-            this.listBox3.Dock = System.Windows.Forms.DockStyle.Right;
-            this.listBox3.FormattingEnabled = true;
-            this.listBox3.Location = new System.Drawing.Point(772, 3);
-            this.listBox3.Name = "listBox3";
-            this.listBox3.Size = new System.Drawing.Size(178, 201);
-            this.listBox3.TabIndex = 10;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Current_Stock,
-            this.Total_Sales,
-            this.Total_Revenue,
-            this.Warehouse_Stock});
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dataGridView1.Location = new System.Drawing.Point(243, 204);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(707, 291);
-            this.dataGridView1.TabIndex = 9;
-            // 
-            // Current_Stock
-            // 
-            this.Current_Stock.HeaderText = "Current Stock";
-            this.Current_Stock.Name = "Current_Stock";
-            this.Current_Stock.ReadOnly = true;
-            // 
-            // Total_Sales
-            // 
-            this.Total_Sales.HeaderText = "Total Sales";
-            this.Total_Sales.Name = "Total_Sales";
-            this.Total_Sales.ReadOnly = true;
-            // 
-            // Total_Revenue
-            // 
-            this.Total_Revenue.HeaderText = "Total Revenue";
-            this.Total_Revenue.Name = "Total_Revenue";
-            this.Total_Revenue.ReadOnly = true;
-            // 
-            // Warehouse_Stock
-            // 
-            this.Warehouse_Stock.HeaderText = "Warehouse Stock";
-            this.Warehouse_Stock.Name = "Warehouse_Stock";
-            this.Warehouse_Stock.ReadOnly = true;
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.textBox2);
-            this.panel1.Controls.Add(this.btnDisplayInfo);
-            this.panel1.Controls.Add(this.lblSelectedProduct);
-            this.panel1.Controls.Add(this.textBox1);
-            this.panel1.Controls.Add(this.lblSelectedShop);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(243, 3);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(707, 492);
-            this.panel1.TabIndex = 8;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(34, 31);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 4;
-            // 
-            // btnDisplayInfo
-            // 
-            this.btnDisplayInfo.Location = new System.Drawing.Point(165, 28);
-            this.btnDisplayInfo.Name = "btnDisplayInfo";
-            this.btnDisplayInfo.Size = new System.Drawing.Size(77, 75);
-            this.btnDisplayInfo.TabIndex = 2;
-            this.btnDisplayInfo.Text = "ShowInfo";
-            this.btnDisplayInfo.UseVisualStyleBackColor = true;
-            // 
-            // lblSelectedProduct
-            // 
-            this.lblSelectedProduct.AutoSize = true;
-            this.lblSelectedProduct.Location = new System.Drawing.Point(31, 67);
-            this.lblSelectedProduct.Name = "lblSelectedProduct";
-            this.lblSelectedProduct.Size = new System.Drawing.Size(89, 13);
-            this.lblSelectedProduct.TabIndex = 6;
-            this.lblSelectedProduct.Text = "Selected Product";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(34, 83);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 3;
-            // 
-            // lblSelectedShop
-            // 
-            this.lblSelectedShop.AutoSize = true;
-            this.lblSelectedShop.Location = new System.Drawing.Point(31, 15);
-            this.lblSelectedShop.Name = "lblSelectedShop";
-            this.lblSelectedShop.Size = new System.Drawing.Size(77, 13);
-            this.lblSelectedShop.TabIndex = 5;
-            this.lblSelectedShop.Text = "Selected Shop";
-            // 
-            // lbProducts
-            // 
-            this.lbProducts.Dock = System.Windows.Forms.DockStyle.Left;
-            this.lbProducts.FormattingEnabled = true;
-            this.lbProducts.Location = new System.Drawing.Point(123, 3);
-            this.lbProducts.Name = "lbProducts";
-            this.lbProducts.Size = new System.Drawing.Size(120, 492);
-            this.lbProducts.TabIndex = 1;
-            // 
-            // lbStores
-            // 
-            this.lbStores.Dock = System.Windows.Forms.DockStyle.Left;
-            this.lbStores.FormattingEnabled = true;
-            this.lbStores.Location = new System.Drawing.Point(3, 3);
-            this.lbStores.Name = "lbStores";
-            this.lbStores.Size = new System.Drawing.Size(120, 492);
-            this.lbStores.TabIndex = 0;
             // 
             // tabWarehouse
             // 
@@ -412,29 +306,29 @@
             this.tabWarehouse.Name = "tabWarehouse";
             this.tabWarehouse.Size = new System.Drawing.Size(1011, 498);
             this.tabWarehouse.TabIndex = 2;
-            this.tabWarehouse.Text = "Warehouse";
+            this.tabWarehouse.Text = "Products";
             this.tabWarehouse.UseVisualStyleBackColor = true;
             // 
             // chartProductHistory
             // 
             this.chartProductHistory.BackColor = System.Drawing.SystemColors.MenuBar;
-            chartArea2.Name = "ChartArea1";
-            this.chartProductHistory.ChartAreas.Add(chartArea2);
+            chartArea1.Name = "ChartArea1";
+            this.chartProductHistory.ChartAreas.Add(chartArea1);
             this.chartProductHistory.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend2.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Bottom;
-            legend2.Name = "Legend1";
-            this.chartProductHistory.Legends.Add(legend2);
+            legend1.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Bottom;
+            legend1.Name = "Legend1";
+            this.chartProductHistory.Legends.Add(legend1);
             this.chartProductHistory.Location = new System.Drawing.Point(670, 179);
             this.chartProductHistory.Name = "chartProductHistory";
-            series3.ChartArea = "ChartArea1";
-            series3.Legend = "Legend1";
-            series3.Name = "STOCK";
-            series4.ChartArea = "ChartArea1";
-            series4.Legend = "Legend1";
-            series4.Name = "SALES";
-            series4.YValuesPerPoint = 6;
-            this.chartProductHistory.Series.Add(series3);
-            this.chartProductHistory.Series.Add(series4);
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "STOCK";
+            series2.ChartArea = "ChartArea1";
+            series2.Legend = "Legend1";
+            series2.Name = "SALES";
+            series2.YValuesPerPoint = 6;
+            this.chartProductHistory.Series.Add(series1);
+            this.chartProductHistory.Series.Add(series2);
             this.chartProductHistory.Size = new System.Drawing.Size(341, 319);
             this.chartProductHistory.TabIndex = 6;
             this.chartProductHistory.Text = "chart1";
@@ -451,6 +345,21 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(341, 134);
             this.panel4.TabIndex = 5;
+            // 
+            // btnChangeStore
+            // 
+            this.btnChangeStore.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.btnChangeStore.FlatAppearance.BorderSize = 0;
+            this.btnChangeStore.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnChangeStore.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F);
+            this.btnChangeStore.Location = new System.Drawing.Point(148, 55);
+            this.btnChangeStore.Name = "btnChangeStore";
+            this.btnChangeStore.Size = new System.Drawing.Size(88, 21);
+            this.btnChangeStore.TabIndex = 4;
+            this.btnChangeStore.Text = "Change Store";
+            this.btnChangeStore.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnChangeStore.UseVisualStyleBackColor = false;
+            this.btnChangeStore.Click += new System.EventHandler(this.btnChangeStore_Click);
             // 
             // cmbSelectHisotryProduct
             // 
@@ -532,6 +441,35 @@
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(258, 223);
             this.panel10.TabIndex = 7;
+            // 
+            // lblHotHour
+            // 
+            this.lblHotHour.AutoSize = true;
+            this.lblHotHour.Location = new System.Drawing.Point(3, 54);
+            this.lblHotHour.Name = "lblHotHour";
+            this.lblHotHour.Size = new System.Drawing.Size(83, 16);
+            this.lblHotHour.TabIndex = 7;
+            this.lblHotHour.Text = "Busiest time:";
+            // 
+            // lblHotHourVal
+            // 
+            this.lblHotHourVal.AutoSize = true;
+            this.lblHotHourVal.Location = new System.Drawing.Point(169, 54);
+            this.lblHotHourVal.Name = "lblHotHourVal";
+            this.lblHotHourVal.Size = new System.Drawing.Size(20, 16);
+            this.lblHotHourVal.TabIndex = 8;
+            this.lblHotHourVal.Text = "-/-";
+            // 
+            // panel8
+            // 
+            this.panel8.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.panel8.Controls.Add(this.lblTopProducts);
+            this.panel8.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.panel8.Location = new System.Drawing.Point(0, 89);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(258, 34);
+            this.panel8.TabIndex = 6;
             // 
             // lblTopProducts
             // 
@@ -746,49 +684,395 @@
             this.cmbStorageSelect.TabIndex = 0;
             this.cmbStorageSelect.Text = "Select a storage";
             // 
-            // panel8
+            // tabFinance
             // 
-            this.panel8.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.panel8.Controls.Add(this.lblTopProducts);
-            this.panel8.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.panel8.Location = new System.Drawing.Point(0, 89);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(258, 34);
-            this.panel8.TabIndex = 6;
+            this.tabFinance.Controls.Add(this.groupBox4);
+            this.tabFinance.Controls.Add(this.groupBox3);
+            this.tabFinance.Controls.Add(this.groupBox2);
+            this.tabFinance.Location = new System.Drawing.Point(4, 22);
+            this.tabFinance.Name = "tabFinance";
+            this.tabFinance.Size = new System.Drawing.Size(1011, 498);
+            this.tabFinance.TabIndex = 3;
+            this.tabFinance.Text = "Finance";
+            this.tabFinance.UseVisualStyleBackColor = true;
             // 
-            // lblHotHour
+            // groupBox2
             // 
-            this.lblHotHour.AutoSize = true;
-            this.lblHotHour.Location = new System.Drawing.Point(3, 54);
-            this.lblHotHour.Name = "lblHotHour";
-            this.lblHotHour.Size = new System.Drawing.Size(83, 16);
-            this.lblHotHour.TabIndex = 7;
-            this.lblHotHour.Text = "Busiest time:";
+            this.groupBox2.Controls.Add(this.lbLivePmntsLog);
+            this.groupBox2.Controls.Add(this.pnlHeaderDnmcLog);
+            this.groupBox2.Dock = System.Windows.Forms.DockStyle.Right;
+            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold);
+            this.groupBox2.Location = new System.Drawing.Point(717, 0);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(294, 498);
+            this.groupBox2.TabIndex = 0;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Live Payments";
             // 
-            // lblHotHourVal
+            // pnlHeaderDnmcLog
             // 
-            this.lblHotHourVal.AutoSize = true;
-            this.lblHotHourVal.Location = new System.Drawing.Point(169, 54);
-            this.lblHotHourVal.Name = "lblHotHourVal";
-            this.lblHotHourVal.Size = new System.Drawing.Size(20, 16);
-            this.lblHotHourVal.TabIndex = 8;
-            this.lblHotHourVal.Text = "-/-";
+            this.pnlHeaderDnmcLog.Controls.Add(this.label9);
+            this.pnlHeaderDnmcLog.Controls.Add(this.label8);
+            this.pnlHeaderDnmcLog.Controls.Add(this.label7);
+            this.pnlHeaderDnmcLog.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlHeaderDnmcLog.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.pnlHeaderDnmcLog.Location = new System.Drawing.Point(3, 20);
+            this.pnlHeaderDnmcLog.Name = "pnlHeaderDnmcLog";
+            this.pnlHeaderDnmcLog.Size = new System.Drawing.Size(288, 111);
+            this.pnlHeaderDnmcLog.TabIndex = 0;
             // 
-            // btnChangeStore
+            // lbLivePmntsLog
             // 
-            this.btnChangeStore.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.btnChangeStore.FlatAppearance.BorderSize = 0;
-            this.btnChangeStore.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnChangeStore.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F);
-            this.btnChangeStore.Location = new System.Drawing.Point(148, 55);
-            this.btnChangeStore.Name = "btnChangeStore";
-            this.btnChangeStore.Size = new System.Drawing.Size(88, 21);
-            this.btnChangeStore.TabIndex = 4;
-            this.btnChangeStore.Text = "Change Store";
-            this.btnChangeStore.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnChangeStore.UseVisualStyleBackColor = false;
-            this.btnChangeStore.Click += new System.EventHandler(this.btnChangeStore_Click);
+            this.lbLivePmntsLog.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbLivePmntsLog.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lbLivePmntsLog.FormattingEnabled = true;
+            this.lbLivePmntsLog.ItemHeight = 15;
+            this.lbLivePmntsLog.Location = new System.Drawing.Point(3, 131);
+            this.lbLivePmntsLog.Name = "lbLivePmntsLog";
+            this.lbLivePmntsLog.Size = new System.Drawing.Size(288, 364);
+            this.lbLivePmntsLog.TabIndex = 1;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(3, 39);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(47, 15);
+            this.label7.TabIndex = 0;
+            this.label7.Text = "label7";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(3, 69);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(47, 15);
+            this.label8.TabIndex = 1;
+            this.label8.Text = "label8";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(3, 54);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(47, 15);
+            this.label9.TabIndex = 2;
+            this.label9.Text = "label9";
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.SystemColors.Menu;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Location = new System.Drawing.Point(15, 53);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(134, 27);
+            this.button4.TabIndex = 1;
+            this.button4.Text = "Display Info";
+            this.button4.UseVisualStyleBackColor = false;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Warehouse",
+            "MOES"});
+            this.comboBox1.Location = new System.Drawing.Point(15, 14);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(134, 23);
+            this.comboBox1.TabIndex = 0;
+            this.comboBox1.Text = "Select an object";
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.panel13);
+            this.groupBox3.Controls.Add(this.panel12);
+            this.groupBox3.Dock = System.Windows.Forms.DockStyle.Left;
+            this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold);
+            this.groupBox3.Location = new System.Drawing.Point(0, 0);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(294, 498);
+            this.groupBox3.TabIndex = 6;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Global";
+            // 
+            // panel12
+            // 
+            this.panel12.Controls.Add(this.label19);
+            this.panel12.Controls.Add(this.label20);
+            this.panel12.Controls.Add(this.label14);
+            this.panel12.Controls.Add(this.label15);
+            this.panel12.Controls.Add(this.label13);
+            this.panel12.Controls.Add(this.label12);
+            this.panel12.Controls.Add(this.label10);
+            this.panel12.Controls.Add(this.label11);
+            this.panel12.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.panel12.Location = new System.Drawing.Point(3, 20);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(288, 111);
+            this.panel12.TabIndex = 0;
+            // 
+            // panel13
+            // 
+            this.panel13.Controls.Add(this.lbLimitedPmntsLog);
+            this.panel13.Controls.Add(this.panel14);
+            this.panel13.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.panel13.Location = new System.Drawing.Point(3, 131);
+            this.panel13.Name = "panel13";
+            this.panel13.Size = new System.Drawing.Size(288, 364);
+            this.panel13.TabIndex = 1;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(181, 39);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(55, 15);
+            this.label16.TabIndex = 2;
+            this.label16.Text = "label16";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(181, 65);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(55, 15);
+            this.label17.TabIndex = 1;
+            this.label17.Text = "label17";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(181, 14);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(55, 15);
+            this.label18.TabIndex = 0;
+            this.label18.Text = "label18";
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.panel1);
+            this.groupBox4.Controls.Add(this.panel11);
+            this.groupBox4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold);
+            this.groupBox4.Location = new System.Drawing.Point(294, 0);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(423, 498);
+            this.groupBox4.TabIndex = 7;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Choose the info";
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.chart1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.panel1.Location = new System.Drawing.Point(3, 115);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(417, 380);
+            this.panel1.TabIndex = 1;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(5, 59);
+            this.label10.Margin = new System.Windows.Forms.Padding(3, 6, 3, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(152, 15);
+            this.label10.TabIndex = 2;
+            this.label10.Text = "Revenue from services";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(205, 38);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(59, 15);
+            this.label11.TabIndex = 1;
+            this.label11.Text = "<Value>";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(5, 38);
+            this.label12.Margin = new System.Windows.Forms.Padding(3, 6, 3, 0);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(134, 15);
+            this.label12.TabIndex = 0;
+            this.label12.Text = "Revenue from sales";
+            // 
+            // panel11
+            // 
+            this.panel11.Controls.Add(this.label17);
+            this.panel11.Controls.Add(this.label16);
+            this.panel11.Controls.Add(this.label18);
+            this.panel11.Controls.Add(this.comboBox1);
+            this.panel11.Controls.Add(this.button4);
+            this.panel11.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.panel11.Location = new System.Drawing.Point(3, 20);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(417, 95);
+            this.panel11.TabIndex = 0;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(205, 59);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(59, 15);
+            this.label13.TabIndex = 3;
+            this.label13.Text = "<Value>";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(3, 80);
+            this.label14.Margin = new System.Windows.Forms.Padding(3, 6, 3, 0);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(154, 15);
+            this.label14.TabIndex = 4;
+            this.label14.Text = "Balance capacity worth";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(203, 80);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(59, 15);
+            this.label15.TabIndex = 5;
+            this.label15.Text = "<Value>";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(5, 17);
+            this.label19.Margin = new System.Windows.Forms.Padding(3, 6, 3, 0);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(115, 15);
+            this.label19.TabIndex = 6;
+            this.label19.Text = "Comlete revenue";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(205, 17);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(59, 15);
+            this.label20.TabIndex = 7;
+            this.label20.Text = "<Value>";
+            // 
+            // chart1
+            // 
+            this.chart1.BackColor = System.Drawing.SystemColors.MenuBar;
+            chartArea2.AxisX.Title = "Days";
+            chartArea2.AxisX.TitleAlignment = System.Drawing.StringAlignment.Far;
+            chartArea2.AxisY.Title = "Amount";
+            chartArea2.AxisY.TitleAlignment = System.Drawing.StringAlignment.Far;
+            chartArea2.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea2);
+            this.chart1.Dock = System.Windows.Forms.DockStyle.Fill;
+            legend2.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Bottom;
+            legend2.Name = "Legend1";
+            this.chart1.Legends.Add(legend2);
+            this.chart1.Location = new System.Drawing.Point(0, 0);
+            this.chart1.Name = "chart1";
+            series3.ChartArea = "ChartArea1";
+            series3.Legend = "Legend1";
+            series3.Name = "Revenue";
+            this.chart1.Series.Add(series3);
+            this.chart1.Size = new System.Drawing.Size(417, 380);
+            this.chart1.TabIndex = 0;
+            this.chart1.Text = "chart1";
+            // 
+            // panel14
+            // 
+            this.panel14.Controls.Add(this.radioButton2);
+            this.panel14.Controls.Add(this.radioButton1);
+            this.panel14.Controls.Add(this.dateTimePicker2);
+            this.panel14.Controls.Add(this.dateTimePicker1);
+            this.panel14.Controls.Add(this.label22);
+            this.panel14.Controls.Add(this.label28);
+            this.panel14.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.panel14.Location = new System.Drawing.Point(0, 0);
+            this.panel14.Name = "panel14";
+            this.panel14.Size = new System.Drawing.Size(288, 84);
+            this.panel14.TabIndex = 1;
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(5, 9);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(40, 15);
+            this.label22.TabIndex = 7;
+            this.label22.Text = "From";
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Location = new System.Drawing.Point(5, 33);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(23, 15);
+            this.label28.TabIndex = 1;
+            this.label28.Text = "To";
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.dateTimePicker1.Location = new System.Drawing.Point(85, 9);
+            this.dateTimePicker1.MaxDate = new System.DateTime(2016, 7, 31, 0, 0, 0, 0);
+            this.dateTimePicker1.MinDate = new System.DateTime(2016, 6, 1, 0, 0, 0, 0);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 21);
+            this.dateTimePicker1.TabIndex = 8;
+            this.dateTimePicker1.Value = new System.DateTime(2016, 6, 20, 19, 2, 6, 0);
+            // 
+            // dateTimePicker2
+            // 
+            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.dateTimePicker2.Location = new System.Drawing.Point(85, 33);
+            this.dateTimePicker2.MaxDate = new System.DateTime(2016, 7, 31, 0, 0, 0, 0);
+            this.dateTimePicker2.MinDate = new System.DateTime(2016, 6, 1, 0, 0, 0, 0);
+            this.dateTimePicker2.Name = "dateTimePicker2";
+            this.dateTimePicker2.Size = new System.Drawing.Size(200, 21);
+            this.dateTimePicker2.TabIndex = 9;
+            this.dateTimePicker2.Value = new System.DateTime(2016, 6, 20, 19, 2, 6, 0);
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Location = new System.Drawing.Point(8, 62);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(61, 19);
+            this.radioButton1.TabIndex = 10;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "Sales";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            // 
+            // radioButton2
+            // 
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Location = new System.Drawing.Point(206, 62);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(79, 19);
+            this.radioButton2.TabIndex = 11;
+            this.radioButton2.TabStop = true;
+            this.radioButton2.Text = "Services";
+            this.radioButton2.UseVisualStyleBackColor = true;
+            // 
+            // lbLimitedPmntsLog
+            // 
+            this.lbLimitedPmntsLog.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbLimitedPmntsLog.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lbLimitedPmntsLog.FormattingEnabled = true;
+            this.lbLimitedPmntsLog.ItemHeight = 15;
+            this.lbLimitedPmntsLog.Location = new System.Drawing.Point(0, 84);
+            this.lbLimitedPmntsLog.Name = "lbLimitedPmntsLog";
+            this.lbLimitedPmntsLog.Size = new System.Drawing.Size(288, 280);
+            this.lbLimitedPmntsLog.TabIndex = 2;
             // 
             // Form1
             // 
@@ -798,15 +1082,11 @@
             this.Controls.Add(this.tabModules);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Statistics";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.tabModules.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
-            this.tabPage2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.tabWarehouse.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.chartProductHistory)).EndInit();
             this.panel4.ResumeLayout(false);
@@ -815,6 +1095,8 @@
             this.panel3.ResumeLayout(false);
             this.panel10.ResumeLayout(false);
             this.panel10.PerformLayout();
+            this.panel8.ResumeLayout(false);
+            this.panel8.PerformLayout();
             this.panel9.ResumeLayout(false);
             this.panel9.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
@@ -823,8 +1105,21 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductStock)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
-            this.panel8.ResumeLayout(false);
-            this.panel8.PerformLayout();
+            this.tabFinance.ResumeLayout(false);
+            this.groupBox2.ResumeLayout(false);
+            this.pnlHeaderDnmcLog.ResumeLayout(false);
+            this.pnlHeaderDnmcLog.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.panel12.ResumeLayout(false);
+            this.panel12.PerformLayout();
+            this.panel13.ResumeLayout(false);
+            this.groupBox4.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.panel11.ResumeLayout(false);
+            this.panel11.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
+            this.panel14.ResumeLayout(false);
+            this.panel14.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -845,21 +1140,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TabControl tabModules;
         private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Button btnDisplayInfo;
-        private System.Windows.Forms.Label lblSelectedProduct;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label lblSelectedShop;
-        private System.Windows.Forms.ListBox lbProducts;
-        private System.Windows.Forms.ListBox lbStores;
-        private System.Windows.Forms.ListBox listBox3;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Current_Stock;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Total_Sales;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Total_Revenue;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Warehouse_Stock;
         private System.Windows.Forms.TabPage tabWarehouse;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.DataVisualization.Charting.Chart chartProductHistory;
@@ -895,6 +1175,41 @@
         private System.Windows.Forms.Label lblHotHour;
         private System.Windows.Forms.Label lblHotHourVal;
         private System.Windows.Forms.Button btnChangeStore;
+        private System.Windows.Forms.TabPage tabFinance;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.Panel panel13;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Panel panel12;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.ListBox lbLivePmntsLog;
+        private System.Windows.Forms.Panel pnlHeaderDnmcLog;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel11;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
+        private System.Windows.Forms.Panel panel14;
+        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.ListBox lbLimitedPmntsLog;
     }
 }
 
