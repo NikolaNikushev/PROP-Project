@@ -82,7 +82,7 @@ namespace StatsApp
         private void button1_Click(object sender, EventArgs e)
         {
             listBox2.Items.Clear();
-            List<string> data = bfh.LoadFromBinaryFile("../../DAY_25.04.2016");
+            List<string> data = bfh.LoadFromBinaryFile("../../DAY_13.06.2016");
             foreach (string a in data)
             {
                 listBox2.Items.Add(a);

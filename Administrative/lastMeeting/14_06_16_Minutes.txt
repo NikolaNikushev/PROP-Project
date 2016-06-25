@@ -1,0 +1,13 @@
+1.peer 
+	-In the final report we must have particular information who worked on what how much, what's working and what isn't, also add a personal part describing your time working on the 		project (in chapter personal evaluation)
+	-but so far we must just send Bert the word file on 14th or 15th
+
+2.Item loaning application
+	-app is corrupted/untrustworthy.
+	-start over, repaint everything and copy the parts of the code you want to use.
+
+3.Progress and division of work
+	-in the project plan show only general information and in an appendix show additional soecific information
+
+4.Documentation of things should have little guides and helpers for Mr. George
+
