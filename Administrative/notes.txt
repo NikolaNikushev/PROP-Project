@@ -1,0 +1,30 @@
+Notes: 7 July
+1.
+What happens when another use is coming 
+change the idea - so that the given activity should count the number of places not based on the total/2 but the 
+total - reserved places
+
+	1. The Visitor wants to enter - we need to update everything dynamically 
+	the label should be updated!
+	2. this is confusing - the app is not for the reservation, but for the entrance control
+
+	checking we made through the location history table
+	how does it work - who is the main form
+2.
+camping entrance
+	both are called camping entry and camping entry... 
+	shown the table 
+	closing of the entry terminates the rfid reader
+		{should we check this}
+	cool - that timer thing is nice for checking
+we have obe entry fot the loc hostory on entrance and exit not 2
+9940 - x = 9880??? why sixty? 
+it's perfect to give two modes
+we fix the camping to the one leader
+3. 
+hristian - loaning items app
+...l
+we load the items in the list box 
+troubles wih the rfid - rebuilt 
+4. 
+debugging debugging debugging
