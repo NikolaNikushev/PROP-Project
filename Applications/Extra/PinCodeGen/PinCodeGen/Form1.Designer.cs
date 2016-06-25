@@ -28,43 +28,77 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.tbToEncrypt = new System.Windows.Forms.TextBox();
+            this.lbResults = new System.Windows.Forms.ListBox();
+            this.btnEncrypt = new System.Windows.Forms.Button();
+            this.tbKey = new System.Windows.Forms.TextBox();
+            this.lbl1 = new System.Windows.Forms.Label();
+            this.lbl2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // textBox1
+            // tbToEncrypt
             // 
-            this.textBox1.Location = new System.Drawing.Point(12, 12);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 0;
+            this.tbToEncrypt.Location = new System.Drawing.Point(12, 41);
+            this.tbToEncrypt.Name = "tbToEncrypt";
+            this.tbToEncrypt.Size = new System.Drawing.Size(117, 20);
+            this.tbToEncrypt.TabIndex = 0;
             // 
-            // listBox1
+            // lbResults
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(12, 75);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(273, 95);
-            this.listBox1.TabIndex = 1;
+            this.lbResults.Dock = System.Windows.Forms.DockStyle.Right;
+            this.lbResults.FormattingEnabled = true;
+            this.lbResults.Location = new System.Drawing.Point(143, 0);
+            this.lbResults.Name = "lbResults";
+            this.lbResults.Size = new System.Drawing.Size(273, 263);
+            this.lbResults.TabIndex = 1;
             // 
-            // button1
+            // btnEncrypt
             // 
-            this.button1.Location = new System.Drawing.Point(142, 10);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnEncrypt.Location = new System.Drawing.Point(12, 136);
+            this.btnEncrypt.Name = "btnEncrypt";
+            this.btnEncrypt.Size = new System.Drawing.Size(117, 23);
+            this.btnEncrypt.TabIndex = 2;
+            this.btnEncrypt.Text = "Encrypt";
+            this.btnEncrypt.UseVisualStyleBackColor = true;
+            this.btnEncrypt.Click += new System.EventHandler(this.btnEncrypt_Click);
+            // 
+            // tbKey
+            // 
+            this.tbKey.Location = new System.Drawing.Point(12, 85);
+            this.tbKey.Name = "tbKey";
+            this.tbKey.Size = new System.Drawing.Size(117, 20);
+            this.tbKey.TabIndex = 3;
+            // 
+            // lbl1
+            // 
+            this.lbl1.AutoSize = true;
+            this.lbl1.Location = new System.Drawing.Point(12, 25);
+            this.lbl1.Name = "lbl1";
+            this.lbl1.Size = new System.Drawing.Size(31, 13);
+            this.lbl1.TabIndex = 4;
+            this.lbl1.Text = "Input";
+            // 
+            // lbl2
+            // 
+            this.lbl2.AutoSize = true;
+            this.lbl2.Location = new System.Drawing.Point(12, 69);
+            this.lbl2.Name = "lbl2";
+            this.lbl2.Size = new System.Drawing.Size(25, 13);
+            this.lbl2.TabIndex = 5;
+            this.lbl2.Text = "Key";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(546, 263);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.listBox1);
-            this.Controls.Add(this.textBox1);
+            this.ClientSize = new System.Drawing.Size(416, 263);
+            this.Controls.Add(this.lbl2);
+            this.Controls.Add(this.lbl1);
+            this.Controls.Add(this.tbKey);
+            this.Controls.Add(this.btnEncrypt);
+            this.Controls.Add(this.lbResults);
+            this.Controls.Add(this.tbToEncrypt);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
@@ -74,9 +108,12 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.ListBox listBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox tbToEncrypt;
+        private System.Windows.Forms.ListBox lbResults;
+        private System.Windows.Forms.Button btnEncrypt;
+        private System.Windows.Forms.TextBox tbKey;
+        private System.Windows.Forms.Label lbl1;
+        private System.Windows.Forms.Label lbl2;
     }
 }
 

@@ -8,5 +8,7 @@ E:\Dropbox\workspace\Apps\PROP-Project\Applications\ActivityEntrance\ActivityEnt
 E:\Dropbox\workspace\Apps\PROP-Project\Applications\ActivityEntrance\ActivityEntrance\obj\Debug\ActivityEntrance.csproj.GenerateResource.Cache
 E:\Dropbox\workspace\Apps\PROP-Project\Applications\ActivityEntrance\ActivityEntrance\obj\Debug\ActivityEntrance.exe
 E:\Dropbox\workspace\Apps\PROP-Project\Applications\ActivityEntrance\ActivityEntrance\obj\Debug\ActivityEntrance.pdb
-E:\Dropbox\workspace\Apps\PROP-Project\Applications\ActivityEntrance\ActivityEntrance\obj\Debug\ActivityEntrance.ActivityReservationForm.resources
 E:\Dropbox\workspace\Apps\PROP-Project\Applications\ActivityEntrance\ActivityEntrance\bin\Debug\MySql.Data.dll
+E:\Dropbox\workspace\Apps\PROP-Project\Applications\ActivityEntrance\ActivityEntrance\obj\Debug\ActivityEntrance.ActivityEntranceForm.resources
+E:\Dropbox\workspace\Apps\PROP-Project\Applications\ActivityEntrance\ActivityEntrance\bin\Debug\DatabaseInteraction.dll
+E:\Dropbox\workspace\Apps\PROP-Project\Applications\ActivityEntrance\ActivityEntrance\bin\Debug\DatabaseInteraction.pdb

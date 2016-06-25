@@ -1,0 +1,3 @@
+fix the the seats display
+Frees spaces = all spaces - reserved spacess - (count(all taken places)
+Dynamic shit maybe !!!!!!

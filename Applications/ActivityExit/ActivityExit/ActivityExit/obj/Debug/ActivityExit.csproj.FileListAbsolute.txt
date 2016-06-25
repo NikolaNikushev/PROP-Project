@@ -1,0 +1,14 @@
+E:\Dropbox\workspace\Apps\PROP-Project\Applications\ActivityExit\ActivityExit\ActivityExit\bin\Debug\ActivityExit.exe.config
+E:\Dropbox\workspace\Apps\PROP-Project\Applications\ActivityExit\ActivityExit\ActivityExit\bin\Debug\ActivityExit.exe
+E:\Dropbox\workspace\Apps\PROP-Project\Applications\ActivityExit\ActivityExit\ActivityExit\bin\Debug\ActivityExit.pdb
+E:\Dropbox\workspace\Apps\PROP-Project\Applications\ActivityExit\ActivityExit\ActivityExit\obj\Debug\ActivityExit.csprojResolveAssemblyReference.cache
+E:\Dropbox\workspace\Apps\PROP-Project\Applications\ActivityExit\ActivityExit\ActivityExit\obj\Debug\ActivityExit.Properties.Resources.resources
+E:\Dropbox\workspace\Apps\PROP-Project\Applications\ActivityExit\ActivityExit\ActivityExit\obj\Debug\ActivityExit.csproj.GenerateResource.Cache
+E:\Dropbox\workspace\Apps\PROP-Project\Applications\ActivityExit\ActivityExit\ActivityExit\obj\Debug\ActivityExit.exe
+E:\Dropbox\workspace\Apps\PROP-Project\Applications\ActivityExit\ActivityExit\ActivityExit\obj\Debug\ActivityExit.pdb
+E:\Dropbox\workspace\Apps\PROP-Project\Applications\ActivityExit\ActivityExit\ActivityExit\bin\Debug\MySql.Data.dll
+E:\Dropbox\workspace\Apps\PROP-Project\Applications\ActivityExit\ActivityExit\ActivityExit\bin\Debug\Phidget21.NET.dll
+E:\Dropbox\workspace\Apps\PROP-Project\Applications\ActivityExit\ActivityExit\ActivityExit\bin\Debug\Phidget21.NET.xml
+E:\Dropbox\workspace\Apps\PROP-Project\Applications\ActivityExit\ActivityExit\ActivityExit\obj\Debug\ActivityExit.ActivityExit.resources
+E:\Dropbox\workspace\Apps\PROP-Project\Applications\ActivityExit\ActivityExit\ActivityExit\bin\Debug\DatabaseInteraction.dll
+E:\Dropbox\workspace\Apps\PROP-Project\Applications\ActivityExit\ActivityExit\ActivityExit\bin\Debug\DatabaseInteraction.pdb
