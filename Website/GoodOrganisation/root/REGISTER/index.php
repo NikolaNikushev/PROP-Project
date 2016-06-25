@@ -13,7 +13,7 @@
 </head>
 
 <body>
-  <div id="header" class="scrolled" class="container-fluid">
+  <div id="header" class="scrolled container-fluid">
     <?php include '../DEFAULT/PAGEPARTS/Header.php';
     if(isset($_SESSION['USER_ID']))
     {

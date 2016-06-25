@@ -18,7 +18,7 @@ require_once 'php/getPersonalActivities.php';
         <link rel="stylesheet" type="text/css" href="CSS/activities.css">
         <link rel="stylesheet" type="text/css" href="../DEFAULT/CSS/INTEGRAL.css">
         <link rel="stylesheet" type="text/css" href="../DEFAULT/CSS/FOOTER.css">
-
+        <link rel="stylesheet" type="text/css" href="../DEFAULT/sweetalert-master/sweetalert-master/dist/sweetalert.css">
         <link rel="stylesheet" type="text/css" href="../DEFAULT/CSS/fixedmenu.css">
 
     </head>
@@ -165,5 +165,6 @@ if (isset($_SESSION['USER_ID'])) {
             <script type="text/javascript" src="../DEFAULT/JS/jquery-2.2.3.min.js"></script>
             <script type="text/javascript" src="JS\activities.js"></script>
             <script type="text/javascript" src="../DEFAULT/JS/velocity.min.js"></script>
+            <script src="../DEFAULT/sweetalert-master/sweetalert-master/dist/sweetalert.min.js"></script>
     </body>
 </html>

@@ -16,7 +16,13 @@ input{
 	color: #3B4D81;
 	border: none;
 }
-
+.inp{
+    margin-top: 4pt;
+	background-color: #f58235;
+	font-family:  bauhaus93;
+	color: #3B4D81;
+	border: none;
+}
 
 #grtit{
 	display: block;

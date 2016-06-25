@@ -39,6 +39,9 @@ function InsertLeaderData($dbcon, &$campdata) {
     date_default_timezone_set("Europe/Amsterdam");
     $date = date("Y-m-d h:i:sa");
     try {
+       echo $_SESSION["USER_ID"];
+                echo $date.' ';
+                echo trim($_POST['finprice']);
         $user_email = trim($_POST['email']);
         $chckGuest = "guest_em"; // + a number 1-5
         /* Execute a prepared statement using an array of values for an IN clause */
@@ -56,12 +59,12 @@ function InsertLeaderData($dbcon, &$campdata) {
         $dbcon->beginTransaction();
         $campid = $campdata['CAMPING_ID'];
         //echo "----" . $campid . "----";
-        $sqltlds = "INSERT INTO tentleaders (CAMPING_ID, USER_ID, ARRIVALDATE) " .
-                "VALUES(:camp_id, :leader_id, :arrdate);";
+        $sqltlds = "INSERT INTO tentleaders (CAMPING_ID, USER_ID, ARRIVALDATE, LEAVEDATE) " .
+                "VALUES(:camp_id, :leader_id, :datearr, :datel);";
 
         $sqlsrts = "INSERT INTO serpayments (USER_ID, DATE, TYPE, PAYSUM, DESCRIPTION) " .
                 "VALUES(:leader_id,:date,'-',:sum,'Tent Reservation Payment. Group of " . $_POST['tennum'] . " .');";
-
+                // maybe better it would be better to replace the '-' with a type of payment - like camping
         $sqlgrres = "UPDATE visitors SET visitors.BALANCE = :reducedBalance where visitors.USER_ID = :leader_id";
 
         $sqlvis = "UPDATE visitors "
@@ -74,22 +77,23 @@ function InsertLeaderData($dbcon, &$campdata) {
 
         // asks for an array... 
         // populates the tent leader table
-        $stmtOne = $dbcon->prepare($sqltlds);
+        $stmtTL = $dbcon->prepare($sqltlds);
         // creates the entry in the payments
-        $stmtTwo = $dbcon->prepare($sqlsrts);
-        $stmtThree = $dbcon->prepare($sqlgrres);
+        $stmtSERPAYMENTS = $dbcon->prepare($sqlsrts);
+        $stmtREDBAL = $dbcon->prepare($sqlgrres);
         // assigns the camping id to all the tenants in a group 
-        $stmtFour = $dbcon->prepare($sqlvis);
+        $stmtVISUPD = $dbcon->prepare($sqlvis);
         // makes a camp unavailable
-        $stmtFive = $dbcon->prepare($sqlcamps);
+        $stmtCAMPUPD = $dbcon->prepare($sqlcamps);
 
-        $stmtOne->execute([
+        $stmtTL->execute([
             // looking for a first tent with suitable capacity 
             ":camp_id" => $campdata['CAMPING_ID'],
             ":leader_id" => $_SESSION["USER_ID"],
-            ":arrdate" => $_POST['datechoice'],
+            ":datearr" => $_POST['datearr'],
+            ":datel" => $_POST['datel'],
         ]);
-        $stmtTwo->execute([
+        $stmtSERPAYMENTS->execute([
             // looking for a first tent with suitable capacity 
             ":leader_id" => $_SESSION["USER_ID"],
             ":date" => $date,
@@ -98,13 +102,13 @@ function InsertLeaderData($dbcon, &$campdata) {
         ]);
         //new balance for the leader: 
         $newBal = $_POST['ybal'] - $_POST['finprice'];
-        $stmtThree->execute([
+        $stmtREDBAL->execute([
             ":reducedBalance" => $newBal,
             ":leader_id" => $_SESSION["USER_ID"],
         ]);
 
-        $stmtFour->execute($params);
-        $stmtFive->execute();
+        $stmtVISUPD->execute($params);
+        $stmtCAMPUPD->execute();
 
         // selecting the first suitable camp
         $dbcon->commit();

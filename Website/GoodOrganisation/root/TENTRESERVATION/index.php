@@ -45,7 +45,7 @@ if ($count > 0) {
         </div>
 
         <div id="header" class="scrolled">
-<?php include '../DEFAULT/PAGEPARTS/Header.php'; ?>
+            <?php include '../DEFAULT/PAGEPARTS/Header.php'; ?>
         </div>
         <!-- the light blue rectangle in he middle USE AJAX FORM MANIPULATION! -->
         <!--<form action="PHP/ProcessBooking.php" method="post">-->
@@ -67,11 +67,27 @@ if ($count > 0) {
 
                     <!-- do not forget to add an action-->	
                     <p class="shortline dateline">Arrival date: </p>
+
                     <div class="defcont datecont">
+                        <label class="deflabel" for="datearr">July</label>
+                        <select name="datearr" id="datearr" class="form-control inp">
+                            <option value="2016-07-28">28</option>
+                            <option value="2016-07-29">29</option>
+                            <option value="2016-07-30">30</option>
+                        </select>
+                    </div>
+                    <p class="shortline dateline">Leave date: </p>
+                    <div class="defcont datecont">
+                        <label class="deflabel" for="datel">July</label>
+                        <select name="datel" id="datel" class="form-control inp">
+                            <option value="2016-07-29">29</option>
+                            <option value="2016-07-30">30</option>
+                            <option value="2016-07-31" selected>31</option>
+                        </select>
+                        <!--
                         <input class="rdbtn" required="required" type="radio" name="datechoice" id="dateeight" value="28">
-                        <label class="deflabel" for="dateeight">28 July</label>
                         <input class="rdbtn" required="required" type="radio" name="datechoice" id="datenine" value="29">
-                        <label class="deflabel" for="datenine">29 July</label>
+                        -->
                     </div>
                 </div>
 
@@ -125,7 +141,7 @@ if ($count > 0) {
                                                  required="required" type="number" readonly
                                                  name="finprice" id="finprice"></h2>
                     <div id="ckbx">
-<?php echo $chckbox ?>
+                        <?php echo $chckbox ?>
                         <!--<input type="checkbox" name="verify" value="yes" id="check" required="required">-->
                         <label>
                             I verify the information
@@ -145,7 +161,7 @@ if ($count > 0) {
             </div>
         </div>
 
-<?php include '../DEFAULT/PAGEPARTS/footer.php'; ?>
+        <?php include '../DEFAULT/PAGEPARTS/footer.php'; ?>
         <script src="../DEFAULT/sweetalert-master/sweetalert-master/dist/sweetalert.min.js"></script>
     </body>
 </html>

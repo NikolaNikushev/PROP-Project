@@ -25,7 +25,10 @@ if(isset($_SESSION['USER_ID']))
 
             echo "<script type='text/javascript'> alert('Congratulations, you have registered for the event ".$_POST['actid']."!'); window.location.replace('../index.php'); </script>";
         } catch (Exception $ex) {
-           echo "<script type='text/javascript'> alert('You appear to have already been registered'); window.location.replace('../index.php'); </script>";
+           echo "<script type='text/javascript'> "
+            . "alert('You appear to have already been registered'); "
+                   . "window.location.replace('../index.php'); "
+                   . "</script>";
         }
     }
     else
