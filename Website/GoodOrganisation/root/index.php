@@ -81,6 +81,7 @@
 
 	<div id="footer">
 <img id="footerlogo" src="DEFAULT/IMAGES/LOGOFOOT.png" />
+<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 <?php require_once 'default/pageparts/footerlinksHome.php'; ?>
 <div id="social">
 	<img id="footerfacebook" src="DEFAULT/IMAGES/facebook.png" />
@@ -91,7 +92,6 @@
 </div>
 
 
-	<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 	<script>
 		var logo = document.getElementById('logo');
 		var potato = document.getElementById("potato");
@@ -113,7 +113,7 @@
 			}
 		});
 	</script>
-<script src="../DEFAULT/alertifyjs/alertify.js"></script>
+<script src="DEFAULT/alertifyjs/alertify.min.js"></script>
 </body>
 
 </html>
