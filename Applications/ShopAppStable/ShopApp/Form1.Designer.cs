@@ -121,6 +121,7 @@
             // 
             // btnPurchase
             // 
+            this.btnPurchase.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btnPurchase.Location = new System.Drawing.Point(27, 428);
             this.btnPurchase.Margin = new System.Windows.Forms.Padding(2);
             this.btnPurchase.Name = "btnPurchase";
@@ -152,12 +153,13 @@
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(213, 509);
+            this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnCancel.Location = new System.Drawing.Point(196, 21);
             this.btnCancel.Margin = new System.Windows.Forms.Padding(2);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(134, 26);
+            this.btnCancel.Size = new System.Drawing.Size(215, 26);
             this.btnCancel.TabIndex = 31;
-            this.btnCancel.Text = "Cancel";
+            this.btnCancel.Text = "Cancel session";
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
@@ -166,7 +168,7 @@
             this.btnUndo.Location = new System.Drawing.Point(213, 428);
             this.btnUndo.Margin = new System.Windows.Forms.Padding(2);
             this.btnUndo.Name = "btnUndo";
-            this.btnUndo.Size = new System.Drawing.Size(65, 61);
+            this.btnUndo.Size = new System.Drawing.Size(65, 103);
             this.btnUndo.TabIndex = 32;
             this.btnUndo.Text = "Undo";
             this.btnUndo.UseVisualStyleBackColor = true;
@@ -177,7 +179,7 @@
             this.btnRedo.Location = new System.Drawing.Point(282, 428);
             this.btnRedo.Margin = new System.Windows.Forms.Padding(2);
             this.btnRedo.Name = "btnRedo";
-            this.btnRedo.Size = new System.Drawing.Size(65, 61);
+            this.btnRedo.Size = new System.Drawing.Size(65, 103);
             this.btnRedo.TabIndex = 33;
             this.btnRedo.Text = "Redo";
             this.btnRedo.UseVisualStyleBackColor = true;
@@ -329,6 +331,7 @@
             // grbCheckout
             // 
             this.grbCheckout.Controls.Add(this.pnlCheckout);
+            this.grbCheckout.Controls.Add(this.btnCancel);
             this.grbCheckout.Dock = System.Windows.Forms.DockStyle.Right;
             this.grbCheckout.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.grbCheckout.Location = new System.Drawing.Point(700, 0);
@@ -345,7 +348,6 @@
             this.pnlCheckout.Controls.Add(this.lblCheckOutSign);
             this.pnlCheckout.Controls.Add(this.lblTotalPrice);
             this.pnlCheckout.Controls.Add(this.btnPurchase);
-            this.pnlCheckout.Controls.Add(this.btnCancel);
             this.pnlCheckout.Controls.Add(this.btnClear);
             this.pnlCheckout.Controls.Add(this.tbBalance);
             this.pnlCheckout.Controls.Add(this.btnUndo);
@@ -355,9 +357,9 @@
             this.pnlCheckout.Controls.Add(this.lblBalance);
             this.pnlCheckout.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.pnlCheckout.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
-            this.pnlCheckout.Location = new System.Drawing.Point(3, 38);
+            this.pnlCheckout.Location = new System.Drawing.Point(3, 52);
             this.pnlCheckout.Name = "pnlCheckout";
-            this.pnlCheckout.Size = new System.Drawing.Size(410, 553);
+            this.pnlCheckout.Size = new System.Drawing.Size(410, 539);
             this.pnlCheckout.TabIndex = 34;
             // 
             // btnRemoveSelectedItem

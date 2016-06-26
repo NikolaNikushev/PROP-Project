@@ -82,7 +82,7 @@ namespace StatsApp
         private void button1_Click(object sender, EventArgs e)
         {
             listBox2.Items.Clear();
-            List<string> data = bfh.LoadFromBinaryFile("../../DAY_13.06.2016");
+            List<string> data = bfh.LoadFromBinaryFile("../../DAY_25.04.2016");
             foreach (string a in data)
             {
                 listBox2.Items.Add(a);
@@ -134,7 +134,7 @@ namespace StatsApp
         {
             switch (tabModules.SelectedIndex)
             {
-                case 2:
+                case 1: //warehouse
                     // just so that the arguments fit
                     Label[] lbls = { this.lblTotPurchVal, this.lblGrossAmPaidVal, this.lblHotHourVal };
                     WareHouseCntrl WHC = new WareHouseCntrl(this.cmbStorageSelect, this.cmbSelectStoreForHistory, this.lbTopPopProd, lbls);

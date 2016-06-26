@@ -139,8 +139,8 @@ namespace Modules
                 
                 foreach (ProductArchive pia in pa)
                 {
-                    chartToMan.Series[0].Points.AddXY(pia.SliceTime, pia.QuantityArch); // number in stock
-                    chartToMan.Series[1].Points.AddXY(pia.SliceTime, pia.NumSoldArch); // number sold
+                    chartToMan.Series[0].Points.AddXY((pia.SliceTime.Date).ToString(), pia.QuantityArch); // number in stock
+                    chartToMan.Series[1].Points.AddXY((pia.SliceTime.Date).ToString(), pia.NumSoldArch); // number sold
                 }
                 //this.chartProductHistory.Series[0].Points.AddXY(1, 2);
 
@@ -287,6 +287,7 @@ namespace Modules
 
         /// <summary>
         /// Retrieves the historical data about a certain product in a shop
+        /// Last entry depicts the current situation
         /// </summary>
         /// <param name="ShopName"></param>
         /// <returns></returns>
@@ -305,11 +306,23 @@ namespace Modules
 
             try
             {
-                command.CommandText = "SELECT PRODUCT_ID, SLICETIME, QUANTITY, NUMSALES " +
-                    "FROM storeperfarchive " +
-                    "WHERE PRODNAME = '" + ProductName + "' " +
+                /// select SLICETIME, PRODUCT_ID, QUANTITY, NUMSALES from storeperfarchive 
+                /// WHERE PRODNAME = 'Yellow Cheese' AND STORE_ID = (SELECT STORE_ID FROM stores WHERE UPPER(STORENAME) = 'MOES') 
+                /// UNION select SLICETIME, PRODUCT_ID, QUANTITY, NUMSALES from current_quan_sales 
+                /// WHERE PRODNAME = 'Yellow Cheese' AND STORE_ID = (SELECT STORE_ID FROM stores WHERE UPPER(STORENAME) = 'MOES')
+
+                string selectClause = " SELECT PRODUCT_ID, SLICETIME, QUANTITY, NUMSALES ";
+                string whereClause = " WHERE PRODNAME = '" + ProductName + "' " +
                     "AND STORE_ID = (SELECT STORE_ID FROM stores " +
-                    "WHERE STORENAME = '" + ShopName + "')";
+                    "WHERE STORENAME = '" + ShopName + "') ";
+
+                command.CommandText = selectClause +
+                    "FROM storeperfarchive " +
+                    whereClause +
+                    "UNION "+ selectClause +
+                    " from current_quan_sales" +
+                    whereClause + ";";
+
 
 
 

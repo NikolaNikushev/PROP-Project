@@ -59,6 +59,7 @@ namespace ShopApp
             InitializeComponent();
             workingRFID = 0;
             this.pnlCheckout.Enabled = false;
+            this.btnCancel.Enabled = true;
             try
             {
                 dbh = new DBHelper();
@@ -92,7 +93,7 @@ namespace ShopApp
             actions = new Stack<HistoryProduct>();
             undoneActions = new Stack<HistoryProduct>();
             // do all the stuff to display the products etc
-            
+
         }
 
         private void openRFID()
@@ -128,7 +129,7 @@ namespace ShopApp
 
         private void btnPurchase_Click(object sender, EventArgs e)
         {
-            if(chosenShop.Basket.Count>0 && workingRFID==1)
+            if (chosenShop.Basket.Count > 0 && workingRFID == 1)
             {
                 totalPrice = this.chosenShop.TotalPrice;
                 if (balance > totalPrice)
@@ -145,10 +146,8 @@ namespace ShopApp
                         buyerId = 0;
                         this.tbBalance.Text = balance.ToString();
                         this.ReinitializeTheStore();
-                        totalPrice = 0;
-                        tbPrice.Text = totalPrice.ToString();
-                        workingRFID = 0;
-
+                        this.ClearBuyer();
+                        actions.Clear();
                         this.LogMessage("Purchase successfull");
                         //btnScan.Visible = true;
                     }
@@ -156,8 +155,8 @@ namespace ShopApp
                     {
                         this.LogMessage(ex.Message);
                     }
-                    
-                    
+
+
                 }
                 else { this.LogMessage("Not enough money"); }
             }
@@ -165,7 +164,7 @@ namespace ShopApp
             {
                 this.LogMessage("Purchase is not successful");
             }
-           
+
         }
 
         /// <summary>
@@ -197,12 +196,7 @@ namespace ShopApp
 
             // the easiest way to set everything to the db state - to reinitialize the shop
             this.ReinitializeTheStore();
-            buyerId = 0;
-            totalPrice = 0;
-            //tbPrice.Text = totalPrice.ToString();
-            balance = 0;
-            //btnScan.Visible = true;
-            workingRFID = 0;
+            this.ClearBuyer();
             actions.Clear();
         }
 
@@ -269,12 +263,12 @@ namespace ShopApp
                 this.DisplayAllProducts();
                 this.tbPrice.Text = this.chosenShop.TotalPrice.ToString();
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
                 this.LogMessage("Could not connect to the db. Press the button SUBMIT to try again");
             }
-            
+
         }
 
 
@@ -373,7 +367,7 @@ namespace ShopApp
                     this.LogMessage("Sorry, requested to sell more than we have in stock. Sold out the " + productToBasket.Name);
                 }
                 this.actions.Push(new HistoryProduct(productToBasket.Id, productToBasket.Name, productToBasket.Price, selectedQuantity, DirectionOption.TOBASKET));
-                
+
                 productToBasket.LowerQuantityBy(selectedQuantity);
                 Product temp = new Product(productToBasket.Id, productToBasket.Name, productToBasket.Price, selectedQuantity);
                 // prepared to be added to the basket
@@ -474,15 +468,15 @@ namespace ShopApp
         {
             // keep imaginary "history"-product with properties WhereTo(to the Basket or back from the basket) Quantity Name
             // well, since the controls inside of a panel are generated based on the array they should share the same indexes
-            if(actions.Count> 0)
+            if (actions.Count > 0)
             {
                 HistoryProduct temp = this.actions.Pop();
                 this.ModifyControlQuantity(temp.Name, temp.Quantity);
                 // done adjusting
 
                 // make it objects
-                Product prodInBasket = this.chosenShop.getProductByName(temp.Name,this.chosenShop.Basket);
-                if(prodInBasket!=null)
+                Product prodInBasket = this.chosenShop.getProductByName(temp.Name, this.chosenShop.Basket);
+                if (prodInBasket != null)
                 {
                     prodInBasket.LowerQuantityBy(temp.Quantity);
                     if (prodInBasket.Quantity == 0)
@@ -490,7 +484,7 @@ namespace ShopApp
                         this.chosenShop.Basket.Remove(prodInBasket);
                     }
                 }
-                
+
 
                 temp.ChangeStack(undoneActions);
                 // very bad to do - since will a lot of time, but for now - it's okay
@@ -527,13 +521,13 @@ namespace ShopApp
 
         private void btnShopDataSubmit_Click(object sender, EventArgs e)
         {
-            if(this.cmbxShopNames.SelectedIndex!=0)
+            if (this.cmbxShopNames.SelectedIndex != 0)
             {
                 this.ReinitializeTheStore();
                 this.pnlStoreSelect.Enabled = false;
                 this.pnlCheckout.Enabled = true;
             }
-            
+
         }
 
         /// <summary>
@@ -544,7 +538,7 @@ namespace ShopApp
         private void btnRemoveSelectedItem_Click(object sender, EventArgs e)
         {
             Product productToRemove = (Product)this.lbBasket.SelectedItem;
-            if(productToRemove!=null)
+            if (productToRemove != null)
             {
                 this.ModifyControlQuantity(productToRemove.Name, productToRemove.Quantity);
                 this.chosenShop.Basket.Remove(productToRemove);
@@ -556,7 +550,29 @@ namespace ShopApp
         private void btnChangeShop_Click(object sender, EventArgs e)
         {
             this.pnlCheckout.Enabled = false;
+            this.btnCancel.Enabled = true;
             this.pnlStoreSelect.Enabled = true;
+            this.ClearBuyer();
+
+        }
+
+        /// <summary>
+        /// Clears the data abou the current visitor, if there's any
+        /// and makes it possible to register a new buyer
+        /// </summary>
+        private void ClearBuyer()
+        {
+            if (workingRFID!=0)
+            {
+                buyerId = 0;
+                totalPrice = 0;
+                //tbPrice.Text = totalPrice.ToString();
+                balance = 0;
+                this.tbBalance.Text = balance.ToString();
+                //btnScan.Visible = true;
+                workingRFID = 0;
+                tag = "";
+            }
         }
     }
 }
