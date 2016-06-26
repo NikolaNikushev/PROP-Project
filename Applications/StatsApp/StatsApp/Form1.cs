@@ -24,6 +24,7 @@ namespace StatsApp
 
             label2.Text = dbh.GetNrCurrentVisitors().ToString();
             timer1.Start();
+            VisitorsCntrl VCS = new VisitorsCntrl(this.dgvBracelets, this.lblBracNmbrVal);
 
             timer2.Interval = 5000 /*(uncomment for an hourly interval * 60 * 60 */;
             time = System.DateTime.Now.Hour;
@@ -134,6 +135,9 @@ namespace StatsApp
         {
             switch (tabModules.SelectedIndex)
             {
+                case 0: //visitors
+                    VisitorsCntrl VSC = new VisitorsCntrl(this.dgvBracelets, this.lblBracNmbrVal);
+                    break;
                 case 1: //warehouse
                     // just so that the arguments fit
                     Label[] lbls = { this.lblTotPurchVal, this.lblGrossAmPaidVal, this.lblHotHourVal };

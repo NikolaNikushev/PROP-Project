@@ -40,6 +40,8 @@
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.panel16 = new System.Windows.Forms.Panel();
+            this.lblVisAtCampVal = new System.Windows.Forms.Label();
+            this.lblVisAtActVal = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -53,6 +55,20 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.panel17 = new System.Windows.Forms.Panel();
+            this.lblNmbrBuyersVal = new System.Windows.Forms.Label();
+            this.lblNmbrCampersVal = new System.Windows.Forms.Label();
+            this.lblNmbrFestAcVal = new System.Windows.Forms.Label();
+            this.panel18 = new System.Windows.Forms.Panel();
+            this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.dgvBracelets = new System.Windows.Forms.DataGridView();
+            this.panel19 = new System.Windows.Forms.Panel();
+            this.lblBracNmbrVal = new System.Windows.Forms.Label();
+            this.label29 = new System.Windows.Forms.Label();
+            this.label28 = new System.Windows.Forms.Label();
+            this.lblNmbrExpectedVal = new System.Windows.Forms.Label();
+            this.button5 = new System.Windows.Forms.Button();
+            this.tbCompleteDataDescription = new System.Windows.Forms.TextBox();
+            this.lblNmbrPresentVal = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -117,22 +133,6 @@
             this.label12 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.lblVisAtActVal = new System.Windows.Forms.Label();
-            this.lblVisAtCampVal = new System.Windows.Forms.Label();
-            this.lblNmbrPresentVal = new System.Windows.Forms.Label();
-            this.tbCompleteDataDescription = new System.Windows.Forms.TextBox();
-            this.button5 = new System.Windows.Forms.Button();
-            this.lblNmbrExpectedVal = new System.Windows.Forms.Label();
-            this.panel18 = new System.Windows.Forms.Panel();
-            this.lblNmbrFestAcVal = new System.Windows.Forms.Label();
-            this.lblNmbrCampersVal = new System.Windows.Forms.Label();
-            this.lblNmbrBuyersVal = new System.Windows.Forms.Label();
-            this.groupBox7 = new System.Windows.Forms.GroupBox();
-            this.dgvBracelets = new System.Windows.Forms.DataGridView();
-            this.panel19 = new System.Windows.Forms.Panel();
-            this.label28 = new System.Windows.Forms.Label();
-            this.label29 = new System.Windows.Forms.Label();
-            this.lblBracNmbrVal = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.panel16.SuspendLayout();
@@ -142,6 +142,10 @@
             this.tabPage1.SuspendLayout();
             this.groupBox6.SuspendLayout();
             this.panel17.SuspendLayout();
+            this.panel18.SuspendLayout();
+            this.groupBox7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBracelets)).BeginInit();
+            this.panel19.SuspendLayout();
             this.tabWarehouse.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartProductHistory)).BeginInit();
             this.panel4.SuspendLayout();
@@ -163,10 +167,6 @@
             this.panel11.SuspendLayout();
             this.panel14.SuspendLayout();
             this.panel12.SuspendLayout();
-            this.panel18.SuspendLayout();
-            this.groupBox7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvBracelets)).BeginInit();
-            this.panel19.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -249,6 +249,26 @@
             this.panel16.Name = "panel16";
             this.panel16.Size = new System.Drawing.Size(296, 104);
             this.panel16.TabIndex = 10;
+            // 
+            // lblVisAtCampVal
+            // 
+            this.lblVisAtCampVal.AutoSize = true;
+            this.lblVisAtCampVal.Location = new System.Drawing.Point(189, 44);
+            this.lblVisAtCampVal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblVisAtCampVal.Name = "lblVisAtCampVal";
+            this.lblVisAtCampVal.Size = new System.Drawing.Size(66, 16);
+            this.lblVisAtCampVal.TabIndex = 8;
+            this.lblVisAtCampVal.Text = "<VALUE>";
+            // 
+            // lblVisAtActVal
+            // 
+            this.lblVisAtActVal.AutoSize = true;
+            this.lblVisAtActVal.Location = new System.Drawing.Point(189, 68);
+            this.lblVisAtActVal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblVisAtActVal.Name = "lblVisAtActVal";
+            this.lblVisAtActVal.Size = new System.Drawing.Size(66, 16);
+            this.lblVisAtActVal.TabIndex = 7;
+            this.lblVisAtActVal.Text = "<VALUE>";
             // 
             // label23
             // 
@@ -409,6 +429,158 @@
             this.panel17.Name = "panel17";
             this.panel17.Size = new System.Drawing.Size(480, 469);
             this.panel17.TabIndex = 9;
+            // 
+            // lblNmbrBuyersVal
+            // 
+            this.lblNmbrBuyersVal.AutoSize = true;
+            this.lblNmbrBuyersVal.Location = new System.Drawing.Point(198, 185);
+            this.lblNmbrBuyersVal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblNmbrBuyersVal.Name = "lblNmbrBuyersVal";
+            this.lblNmbrBuyersVal.Size = new System.Drawing.Size(66, 16);
+            this.lblNmbrBuyersVal.TabIndex = 16;
+            this.lblNmbrBuyersVal.Text = "<VALUE>";
+            // 
+            // lblNmbrCampersVal
+            // 
+            this.lblNmbrCampersVal.AutoSize = true;
+            this.lblNmbrCampersVal.Location = new System.Drawing.Point(198, 161);
+            this.lblNmbrCampersVal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblNmbrCampersVal.Name = "lblNmbrCampersVal";
+            this.lblNmbrCampersVal.Size = new System.Drawing.Size(66, 16);
+            this.lblNmbrCampersVal.TabIndex = 15;
+            this.lblNmbrCampersVal.Text = "<VALUE>";
+            // 
+            // lblNmbrFestAcVal
+            // 
+            this.lblNmbrFestAcVal.AutoSize = true;
+            this.lblNmbrFestAcVal.Location = new System.Drawing.Point(198, 123);
+            this.lblNmbrFestAcVal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblNmbrFestAcVal.Name = "lblNmbrFestAcVal";
+            this.lblNmbrFestAcVal.Size = new System.Drawing.Size(66, 16);
+            this.lblNmbrFestAcVal.TabIndex = 14;
+            this.lblNmbrFestAcVal.Text = "<VALUE>";
+            // 
+            // panel18
+            // 
+            this.panel18.Controls.Add(this.groupBox7);
+            this.panel18.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel18.Location = new System.Drawing.Point(0, 217);
+            this.panel18.Name = "panel18";
+            this.panel18.Size = new System.Drawing.Size(480, 252);
+            this.panel18.TabIndex = 13;
+            // 
+            // groupBox7
+            // 
+            this.groupBox7.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.groupBox7.Controls.Add(this.dgvBracelets);
+            this.groupBox7.Controls.Add(this.panel19);
+            this.groupBox7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold);
+            this.groupBox7.Location = new System.Drawing.Point(0, 0);
+            this.groupBox7.Name = "groupBox7";
+            this.groupBox7.Size = new System.Drawing.Size(480, 252);
+            this.groupBox7.TabIndex = 0;
+            this.groupBox7.TabStop = false;
+            this.groupBox7.Text = "Bracelets";
+            // 
+            // dgvBracelets
+            // 
+            this.dgvBracelets.AllowUserToAddRows = false;
+            this.dgvBracelets.AllowUserToDeleteRows = false;
+            this.dgvBracelets.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvBracelets.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvBracelets.Location = new System.Drawing.Point(3, 59);
+            this.dgvBracelets.Name = "dgvBracelets";
+            this.dgvBracelets.ReadOnly = true;
+            this.dgvBracelets.Size = new System.Drawing.Size(474, 190);
+            this.dgvBracelets.TabIndex = 3;
+            // 
+            // panel19
+            // 
+            this.panel19.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.panel19.Controls.Add(this.lblBracNmbrVal);
+            this.panel19.Controls.Add(this.label29);
+            this.panel19.Controls.Add(this.label28);
+            this.panel19.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel19.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold);
+            this.panel19.Location = new System.Drawing.Point(3, 20);
+            this.panel19.Name = "panel19";
+            this.panel19.Size = new System.Drawing.Size(474, 39);
+            this.panel19.TabIndex = 2;
+            // 
+            // lblBracNmbrVal
+            // 
+            this.lblBracNmbrVal.AutoSize = true;
+            this.lblBracNmbrVal.Location = new System.Drawing.Point(195, 9);
+            this.lblBracNmbrVal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblBracNmbrVal.Name = "lblBracNmbrVal";
+            this.lblBracNmbrVal.Size = new System.Drawing.Size(80, 18);
+            this.lblBracNmbrVal.TabIndex = 17;
+            this.lblBracNmbrVal.Text = "<VALUE>";
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Location = new System.Drawing.Point(11, 9);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(112, 18);
+            this.label29.TabIndex = 1;
+            this.label29.Text = "Total number:";
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Location = new System.Drawing.Point(11, 9);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(0, 18);
+            this.label28.TabIndex = 0;
+            // 
+            // lblNmbrExpectedVal
+            // 
+            this.lblNmbrExpectedVal.AutoSize = true;
+            this.lblNmbrExpectedVal.Location = new System.Drawing.Point(198, 98);
+            this.lblNmbrExpectedVal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblNmbrExpectedVal.Name = "lblNmbrExpectedVal";
+            this.lblNmbrExpectedVal.Size = new System.Drawing.Size(66, 16);
+            this.lblNmbrExpectedVal.TabIndex = 12;
+            this.lblNmbrExpectedVal.Text = "<VALUE>";
+            // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button5.Location = new System.Drawing.Point(399, 60);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(81, 23);
+            this.button5.TabIndex = 11;
+            this.button5.Text = "REFRESH";
+            this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // tbCompleteDataDescription
+            // 
+            this.tbCompleteDataDescription.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.tbCompleteDataDescription.Dock = System.Windows.Forms.DockStyle.Top;
+            this.tbCompleteDataDescription.Location = new System.Drawing.Point(0, 0);
+            this.tbCompleteDataDescription.Multiline = true;
+            this.tbCompleteDataDescription.Name = "tbCompleteDataDescription";
+            this.tbCompleteDataDescription.ReadOnly = true;
+            this.tbCompleteDataDescription.Size = new System.Drawing.Size(480, 59);
+            this.tbCompleteDataDescription.TabIndex = 10;
+            this.tbCompleteDataDescription.Text = "All the data below depicts the number of visitors per specific groups.\r\nThe data " +
+    "is updated every set interval of time, but, if you wish to force update, press t" +
+    "he button \'refresh\'.";
+            // 
+            // lblNmbrPresentVal
+            // 
+            this.lblNmbrPresentVal.AutoSize = true;
+            this.lblNmbrPresentVal.Location = new System.Drawing.Point(198, 74);
+            this.lblNmbrPresentVal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblNmbrPresentVal.Name = "lblNmbrPresentVal";
+            this.lblNmbrPresentVal.Size = new System.Drawing.Size(66, 16);
+            this.lblNmbrPresentVal.TabIndex = 9;
+            this.lblNmbrPresentVal.Text = "<VALUE>";
             // 
             // label24
             // 
@@ -1107,175 +1279,6 @@
             this.label11.TabIndex = 1;
             this.label11.Text = "<Value>";
             // 
-            // lblVisAtActVal
-            // 
-            this.lblVisAtActVal.AutoSize = true;
-            this.lblVisAtActVal.Location = new System.Drawing.Point(189, 68);
-            this.lblVisAtActVal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblVisAtActVal.Name = "lblVisAtActVal";
-            this.lblVisAtActVal.Size = new System.Drawing.Size(66, 16);
-            this.lblVisAtActVal.TabIndex = 7;
-            this.lblVisAtActVal.Text = "<VALUE>";
-            // 
-            // lblVisAtCampVal
-            // 
-            this.lblVisAtCampVal.AutoSize = true;
-            this.lblVisAtCampVal.Location = new System.Drawing.Point(189, 44);
-            this.lblVisAtCampVal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblVisAtCampVal.Name = "lblVisAtCampVal";
-            this.lblVisAtCampVal.Size = new System.Drawing.Size(66, 16);
-            this.lblVisAtCampVal.TabIndex = 8;
-            this.lblVisAtCampVal.Text = "<VALUE>";
-            // 
-            // lblNmbrPresentVal
-            // 
-            this.lblNmbrPresentVal.AutoSize = true;
-            this.lblNmbrPresentVal.Location = new System.Drawing.Point(198, 74);
-            this.lblNmbrPresentVal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblNmbrPresentVal.Name = "lblNmbrPresentVal";
-            this.lblNmbrPresentVal.Size = new System.Drawing.Size(66, 16);
-            this.lblNmbrPresentVal.TabIndex = 9;
-            this.lblNmbrPresentVal.Text = "<VALUE>";
-            // 
-            // tbCompleteDataDescription
-            // 
-            this.tbCompleteDataDescription.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.tbCompleteDataDescription.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tbCompleteDataDescription.Location = new System.Drawing.Point(0, 0);
-            this.tbCompleteDataDescription.Multiline = true;
-            this.tbCompleteDataDescription.Name = "tbCompleteDataDescription";
-            this.tbCompleteDataDescription.ReadOnly = true;
-            this.tbCompleteDataDescription.Size = new System.Drawing.Size(480, 59);
-            this.tbCompleteDataDescription.TabIndex = 10;
-            this.tbCompleteDataDescription.Text = "All the data below depicts the number of visitors per specific groups.\r\nThe data " +
-    "is updated every set interval of time, but, if you wish to force update, press t" +
-    "he button \'refresh\'.";
-            // 
-            // button5
-            // 
-            this.button5.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button5.Location = new System.Drawing.Point(399, 60);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(81, 23);
-            this.button5.TabIndex = 11;
-            this.button5.Text = "REFRESH";
-            this.button5.UseVisualStyleBackColor = false;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
-            // 
-            // lblNmbrExpectedVal
-            // 
-            this.lblNmbrExpectedVal.AutoSize = true;
-            this.lblNmbrExpectedVal.Location = new System.Drawing.Point(198, 98);
-            this.lblNmbrExpectedVal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblNmbrExpectedVal.Name = "lblNmbrExpectedVal";
-            this.lblNmbrExpectedVal.Size = new System.Drawing.Size(66, 16);
-            this.lblNmbrExpectedVal.TabIndex = 12;
-            this.lblNmbrExpectedVal.Text = "<VALUE>";
-            // 
-            // panel18
-            // 
-            this.panel18.Controls.Add(this.groupBox7);
-            this.panel18.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel18.Location = new System.Drawing.Point(0, 217);
-            this.panel18.Name = "panel18";
-            this.panel18.Size = new System.Drawing.Size(480, 252);
-            this.panel18.TabIndex = 13;
-            // 
-            // lblNmbrFestAcVal
-            // 
-            this.lblNmbrFestAcVal.AutoSize = true;
-            this.lblNmbrFestAcVal.Location = new System.Drawing.Point(198, 123);
-            this.lblNmbrFestAcVal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblNmbrFestAcVal.Name = "lblNmbrFestAcVal";
-            this.lblNmbrFestAcVal.Size = new System.Drawing.Size(66, 16);
-            this.lblNmbrFestAcVal.TabIndex = 14;
-            this.lblNmbrFestAcVal.Text = "<VALUE>";
-            // 
-            // lblNmbrCampersVal
-            // 
-            this.lblNmbrCampersVal.AutoSize = true;
-            this.lblNmbrCampersVal.Location = new System.Drawing.Point(198, 161);
-            this.lblNmbrCampersVal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblNmbrCampersVal.Name = "lblNmbrCampersVal";
-            this.lblNmbrCampersVal.Size = new System.Drawing.Size(66, 16);
-            this.lblNmbrCampersVal.TabIndex = 15;
-            this.lblNmbrCampersVal.Text = "<VALUE>";
-            // 
-            // lblNmbrBuyersVal
-            // 
-            this.lblNmbrBuyersVal.AutoSize = true;
-            this.lblNmbrBuyersVal.Location = new System.Drawing.Point(198, 185);
-            this.lblNmbrBuyersVal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblNmbrBuyersVal.Name = "lblNmbrBuyersVal";
-            this.lblNmbrBuyersVal.Size = new System.Drawing.Size(66, 16);
-            this.lblNmbrBuyersVal.TabIndex = 16;
-            this.lblNmbrBuyersVal.Text = "<VALUE>";
-            // 
-            // groupBox7
-            // 
-            this.groupBox7.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.groupBox7.Controls.Add(this.dgvBracelets);
-            this.groupBox7.Controls.Add(this.panel19);
-            this.groupBox7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold);
-            this.groupBox7.Location = new System.Drawing.Point(0, 0);
-            this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(480, 252);
-            this.groupBox7.TabIndex = 0;
-            this.groupBox7.TabStop = false;
-            this.groupBox7.Text = "Bracelets";
-            // 
-            // dgvBracelets
-            // 
-            this.dgvBracelets.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvBracelets.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvBracelets.Location = new System.Drawing.Point(3, 59);
-            this.dgvBracelets.Name = "dgvBracelets";
-            this.dgvBracelets.Size = new System.Drawing.Size(474, 190);
-            this.dgvBracelets.TabIndex = 3;
-            // 
-            // panel19
-            // 
-            this.panel19.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.panel19.Controls.Add(this.lblBracNmbrVal);
-            this.panel19.Controls.Add(this.label29);
-            this.panel19.Controls.Add(this.label28);
-            this.panel19.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel19.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold);
-            this.panel19.Location = new System.Drawing.Point(3, 20);
-            this.panel19.Name = "panel19";
-            this.panel19.Size = new System.Drawing.Size(474, 39);
-            this.panel19.TabIndex = 2;
-            // 
-            // label28
-            // 
-            this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(11, 9);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(0, 18);
-            this.label28.TabIndex = 0;
-            // 
-            // label29
-            // 
-            this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(11, 9);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(112, 18);
-            this.label29.TabIndex = 1;
-            this.label29.Text = "Total number:";
-            // 
-            // lblBracNmbrVal
-            // 
-            this.lblBracNmbrVal.AutoSize = true;
-            this.lblBracNmbrVal.Location = new System.Drawing.Point(195, 9);
-            this.lblBracNmbrVal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblBracNmbrVal.Name = "lblBracNmbrVal";
-            this.lblBracNmbrVal.Size = new System.Drawing.Size(80, 18);
-            this.lblBracNmbrVal.TabIndex = 17;
-            this.lblBracNmbrVal.Text = "<VALUE>";
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1296,6 +1299,11 @@
             this.groupBox6.ResumeLayout(false);
             this.panel17.ResumeLayout(false);
             this.panel17.PerformLayout();
+            this.panel18.ResumeLayout(false);
+            this.groupBox7.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBracelets)).EndInit();
+            this.panel19.ResumeLayout(false);
+            this.panel19.PerformLayout();
             this.tabWarehouse.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.chartProductHistory)).EndInit();
             this.panel4.ResumeLayout(false);
@@ -1324,11 +1332,6 @@
             this.panel14.PerformLayout();
             this.panel12.ResumeLayout(false);
             this.panel12.PerformLayout();
-            this.panel18.ResumeLayout(false);
-            this.groupBox7.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvBracelets)).EndInit();
-            this.panel19.ResumeLayout(false);
-            this.panel19.PerformLayout();
             this.ResumeLayout(false);
 
         }
