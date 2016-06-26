@@ -12,13 +12,15 @@ session_start();
         <link rel="stylesheet" type="text/css" href="css/banner.css">
         <link rel="stylesheet" type="text/css" href="css/txtareaconsole.css">
         <link rel="stylesheet" type="text/css" href="../DEFAULT/sweetalert-master/sweetalert-master/dist/sweetalert.css">
-        
+        <link rel="stylesheet" type="text/css" href="../DEFAULT/CSS/fixedmenu.css">
+        <link rel="stylesheet" type="text/css" href="../DEFAULT/alertifyjs/css/alertify.min.css">
+        <link rel="stylesheet" type="text/css" href="../DEFAULT/alertifyjs/css/themes/default.min.css">
     </head>
     <body>
         <div class="overlap banner">
 
             <div class="central">
-                
+
             </div>
         </div>
         <div id="header" class="nav">
@@ -46,11 +48,11 @@ session_start();
                             </div>
                             <?php
                             //if (isset($_SESSION["BALANCE"])) {
-                                //echo '<img id="best" class="pricelink logged" src="images/BTNBEST.png">';
-                                //echo $_SESSION["BALANCE"];
+                            //echo '<img id="best" class="pricelink logged" src="images/BTNBEST.png">';
+                            //echo $_SESSION["BALANCE"];
 //                            } else {
-                                echo
-                                '<img class="pricelink notlogged" src="images/BTNBEST.png"></a>';
+                            echo
+                            '<img class="pricelink notlogged" src="images/BTNBEST.png"></a>';
 //                            }
                             ?>
                         </div>
@@ -69,10 +71,10 @@ session_start();
                             </div>
                             <?php
                             //if (isset($_SESSION["BALANCE"])) {
-                                //echo '<img id="best" class="pricelink logged" src="images/BTNBETR.png">';
+                            //echo '<img id="best" class="pricelink logged" src="images/BTNBETR.png">';
                             //} else {
-                                echo
-                                '<img class="pricelink notlogged" src="images/BTNBETR.png"></a>';
+                            echo
+                            '<img class="pricelink notlogged" src="images/BTNBETR.png"></a>';
                             //}
                             ?>
                         </div>
@@ -96,8 +98,8 @@ session_start();
                             //if (isset($_SESSION["BALANCE"])) {
                             //    echo '<img id="best" class="pricelink logged" src="images/BTNPER.png">';
 //                            } else {
-                                echo
-                                '<img class="pricelink notlogged" src="images/BTNPER.png"></a>';
+                            echo
+                            '<img class="pricelink notlogged" src="images/BTNPER.png"></a>';
 //                            }
                             ?>
                         </div>
@@ -205,6 +207,7 @@ session_start();
         <script type="text/javascript" src="JS/pricelinkclick.js"></script>
         <script type="text/javascript" src="JS/login-control.js"></script>
         <script type="text/javascript" src="JS/checkout-controls.js"></script>
+        <script src="../DEFAULT/alertifyjs/alertify.js"></script>
     </body>
 
 </html>

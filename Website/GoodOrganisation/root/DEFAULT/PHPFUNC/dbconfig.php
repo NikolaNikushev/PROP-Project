@@ -1,5 +1,5 @@
 <?php
- $db_host = "localhost";
+ $db_host = "athena01.fhict.local";
  $db_name = "dbi339282";
  $db_user = "dbi339282";
  $db_pass = "bccMxqtHck";

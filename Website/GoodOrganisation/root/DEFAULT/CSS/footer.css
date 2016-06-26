@@ -67,6 +67,9 @@ margin:0 5px 0 5px;
 #social img:hover{
 cursor:pointer;
 }
+#tandc{
+cursor:pointer;
+}
 
 #copyright{
 	margin-top: 30px;

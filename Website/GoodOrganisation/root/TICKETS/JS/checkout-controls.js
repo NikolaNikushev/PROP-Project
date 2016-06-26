@@ -35,7 +35,14 @@ $(document).ready(function () {
                         //alert(response);
 
                     } else {
-                        alert(response);
+                        swal({
+                            html: true,
+                            title: "<span style= \"color:#fce600\" >Oups!</span>",
+                            text: "<span style= \"color:#ff9933\" >Something went wrong!</span>",
+                            type: "error",
+                            confirmButtonColor: "#333399",
+                            confirmButtonText: "Okay"
+                        });
                         //$("#noReg").show();
                     }
                 }

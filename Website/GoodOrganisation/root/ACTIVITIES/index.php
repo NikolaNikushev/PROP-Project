@@ -18,9 +18,16 @@ require_once 'php/getPersonalActivities.php';
         <link rel="stylesheet" type="text/css" href="CSS/activities.css">
         <link rel="stylesheet" type="text/css" href="../DEFAULT/CSS/INTEGRAL.css">
         <link rel="stylesheet" type="text/css" href="../DEFAULT/CSS/FOOTER.css">
-
+        <link rel="stylesheet" type="text/css" href="../DEFAULT/sweetalert-master/sweetalert-master/dist/sweetalert.css">
         <link rel="stylesheet" type="text/css" href="../DEFAULT/CSS/fixedmenu.css">
-
+        <link rel="stylesheet" type="text/css" href="../DEFAULT/alertifyjs/css/alertify.min.css">
+        <link rel="stylesheet" type="text/css" href="../DEFAULT/alertifyjs/css/themes/default.min.css">
+        <!--
+        <link rel="stylesheet" type="text/css" href="../DEFAULT/alertifyjs/css/alertify.css">
+        <link rel="stylesheet" type="text/css" href="../DEFAULT/alertify.js-0.3.11/themes/alertify.core.css">
+        <link rel="stylesheet" type="text/css" href="../DEFAULT/alertify.js-0.3.11/themes/alertify.default.css">
+        -->
+        <script type="text/javascript" src="../DEFAULT/JS/jquery-2.2.3.min.js"></script>
     </head>
     <body>
         <div id="header" class="scrolled">
@@ -49,7 +56,8 @@ require_once 'php/getPersonalActivities.php';
 
                                     </div>
                                     
-                                    <form action="php/processreservation.php" method="post">
+                                    <!--<form action="php/processreservation.php" method="post">-->
+                                    <form class="formreservation">
                                     
                                     <div class="activity_info">
                                         <p class="text actname">' . $activities[$i] . /* the name 0 7 */'</p>
@@ -120,7 +128,8 @@ if (isset($_SESSION['USER_ID'])) {
             '
                         <ul>
                             <li class="res_item">
-                            <form action="php/cancelReservation.php" method="post">
+                            <!--<form action="php/cancelReservation.php" method="post">-->
+                            <form class="cancelactform">
                                 <div class="actnameanddate">
 
                                         <p>Name:
@@ -161,9 +170,14 @@ if (isset($_SESSION['USER_ID'])) {
             </div>
         </div>
                         <?php include '../DEFAULT/PAGEPARTS/footer.php'; ?>
-            <!-- TRYING TO CONNECT GOOGLE PROVIDED JQUERY -->
-            <script type="text/javascript" src="../DEFAULT/JS/jquery-2.2.3.min.js"></script>
+            <!-- TRYING TO CONNECT GOOGLE PROVIDED JQUERY 
+            <script type="text/javascript" src="../DEFAULT/JS/jquery-2.2.3.min.js"></script> -->
             <script type="text/javascript" src="JS\activities.js"></script>
+            <script type="text/javascript" src="JS\reserve-activity.js"></script>
+            <script type="text/javascript" src="JS\cancel-activity.js"></script>
             <script type="text/javascript" src="../DEFAULT/JS/velocity.min.js"></script>
+            <!--<script src="../DEFAULT/sweetalert-master/sweetalert-master/dist/sweetalert.min.js"></script>
+            <script src="../DEFAULT/alertify.js-0.3.11/lib/alertify.min.js"></script>-->
+            <script src="../DEFAULT/alertifyjs/alertify.js"></script>
     </body>
 </html>

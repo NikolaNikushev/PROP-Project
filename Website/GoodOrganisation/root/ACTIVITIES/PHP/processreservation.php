@@ -22,22 +22,26 @@ if(isset($_SESSION['USER_ID']))
             ':actid' => $_POST['actid'],
             ':userId' => $_SESSION['USER_ID'], //later to be replaced with $_SESSION['USER_ID']
             ]);
-
-            echo "<script type='text/javascript'> alert('Congratulations, you have registered for the event ".$_POST['actid']."!'); window.location.replace('../index.php'); </script>";
+            echo "#correct%";
+            //echo "<script type='text/javascript'> alert('Congratulations, you have registered for the event ".$_POST['actid']."!'); window.location.replace('../index.php'); </script>";
         } catch (Exception $ex) {
-           echo "<script type='text/javascript'> alert('You appear to have already been registered'); window.location.replace('../index.php'); </script>";
+            echo "#failure%";
+//           echo "<script type='text/javascript'> "
+//            . "alert('You appear to have already been registered'); "
+//                   . "window.location.replace('../index.php'); "
+//                   . "</script>";
         }
     }
     else
     {
-
-    echo "<script type='text/javascript'> alert('Unfortunatelly, no places are left!'); window.location.replace('../index.php'); </script>";
+        echo "#noplaces%";
+    //echo "<script type='text/javascript'> alert('Unfortunatelly, no places are left!'); window.location.replace('../index.php'); </script>";
     }  
 }
 else
 {
-
-    echo "<script type='text/javascript'> alert('Please, register or login at first'); window.location.replace('../index.php'); </script>";
+    echo "#noreg%";
+    //echo "<script type='text/javascript'> alert('Please, register or login at first'); window.location.replace('../index.php'); </script>";
 }  
     
 ?>

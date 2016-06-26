@@ -28,7 +28,7 @@ $(document).ready(function () {
 
             GetPrice();
         }
-        
+
     });
     $(".minus").click(function () {
         var value = $("#tennum").val();
@@ -44,16 +44,21 @@ $(document).ready(function () {
             GetPrice();
         }
     });
-    $("input[name=datechoice]:radio").change(function () {
-        GetPrice();
+    GetPrice();
+    $("#datearr").change(function () {
+        
+        VerifySelects();
     });
-    $(".emimp").blur(function() {
-        var sender = "#"+this.id;
+    $("#datel").change(function () {
+        VerifySelects();
+    });
+    $(".emimp").blur(function () {
+        var sender = "#" + this.id;
         CheckEmailUnique();
         //alert(sender);
     });
     //$(".emimp").focusout(CheckEmailUnique(this.id));
-    
+
 //    ("#dateeight").change(function () {
 //        GetPrice();
 //    });
@@ -68,7 +73,7 @@ $(document).ready(function () {
 
 // should not depend on which email to check but check all of them instead, thus a parameter should not be expected
 function CheckEmailUnique() {
-     CheckForReps();
+    CheckForReps();
 //    var noProblems = true;
 ////    not good
 ////    for (var s = 0; s < tenants.length; s++)
@@ -147,7 +152,7 @@ function CheckForReps() {
 
 function HideWarnings() {
 //    $(elid).css('background-color', '#FFD105');
-   $("#submbtn").prop('disabled', false);
+    $("#submbtn").prop('disabled', false);
 //    
     for (var s = 0; s < tenants.length; s++)
     {
@@ -161,7 +166,7 @@ function DisplayEmailAlert(elid, tind) {
     $(tenants[tind]).find(".emimp").css('background-color', '#f58235');
     $(tenants[tind]).find(".nuwarning").show();
     $("#submbtn").prop('disabled', true);
-    
+
 }
 
 
@@ -174,21 +179,38 @@ function HideBanner()
 
 function GetPrice()
 {
-    if ($('.rdbtn').is(':checked'))
+    var entrprice = 15;
+    var arrdate = $('#datearr :selected').text();
+    var leavedate = $('#datel :selected').text();
+    var extraForADayBefore = 0;
+    if (arrdate == 28)
     {
-        var entrprice;
-        if ($('#dateeight').is(':checked'))
-        {
-            entrprice = 25;
-        }
-        else
-        {
-            entrprice = 15;
-        }
-        var price = entrprice * $("#tennum").val();
-        $('#finprice').val(price);
+        extraForADayBefore = 10;
     }
+
+
+    var nmbrNights = leavedate - arrdate;
+    var price = (entrprice * $("#tennum").val() + extraForADayBefore) * nmbrNights;
+    $('#finprice').val(price);
 }
 
 
+function VerifySelects()
+{
+    var datepart = "2016-07-";
+    var arrdate = $('#datearr :selected').text();
+    for (var i = 30; i > 28; i--)
+    {
+        if (i <= arrdate)
+        {
+            var value = datepart + String(i);
+            $("#datel").children('option[value=' + value + ']').attr("disabled", true);
+        }
+        else
+        {
+            $("#datel").children('option[value=' + datepart + i + ']').removeAttr("disabled");
+        }
+    }
+    GetPrice();
+}
 
