@@ -1,7 +1,3 @@
-@font-face {
-    font-family: "bauhaus93";
-    src:url("bauhaus93.ttf") format("truetype");
-}
 
 #blank{
 	height:100vh;
@@ -11,7 +7,7 @@
 }
 
 #wrapper p{
-	
+
 		color: rgb(215, 225, 242);
 }
 #txtcont {
@@ -26,7 +22,7 @@
 }
 .caption{
 		 font-family : bauhaus93, bauhaus;
- 
+
   color : #FFD105;
   color : rgb(255, 209, 5);
 }
@@ -64,7 +60,7 @@
 
 #imgs{
 
-	margin-top: -25pt;	
+	margin-top: -25pt;
 }
 #imgs div{
 	height:auto;
@@ -76,5 +72,5 @@
 
 	width: 700pt;
 	position: relative;
-	
+
 }

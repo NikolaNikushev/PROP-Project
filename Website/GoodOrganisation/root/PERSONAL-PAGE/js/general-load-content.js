@@ -3,14 +3,10 @@ $(document).ready(function() {
     $('#show-button').click(function() {
         $('#general').css({
             "background-color": "#3b4d81"
-
         });
-        // $('#bottom-containers').css("padding-top", "23vh");
-        // // $('#container').css("padding-bottom", "23vh");
-
         $('#general-text').css("color", "#fce600");
         $('#general-container').css('height', 'auto');
-        //loading dynamically content with jquery 
+        //loading dynamically content with jquery
         $('#general-container').load("ajax-loaded-content/general.php");
         $('#show-button').hide();
     });
@@ -18,7 +14,6 @@ $(document).ready(function() {
     $(document.body).on("click", '#general-close-button', function() {
         $('#general').css({
             "background-color": "#fce600"
-
         });
         $('#general-text').css("color", "#3b4d81");
         $('#general-container').empty();

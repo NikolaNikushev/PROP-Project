@@ -3,6 +3,7 @@
 session_start();
 require_once 'dbconfig.php';
 if ($_POST) {
+  //getting all the data from the form and setting to variables
     $first_name = $_POST['first_name'];
     $last_name = $_POST['last_name'];
     $date_of_birth = $_POST['date_of_birth'];
@@ -14,12 +15,13 @@ if ($_POST) {
     $joining_date = date('Y-m-d H:i:s');
 
     try {
+      //some server validations
         if ($user_password == $c_user_password && $user_email == $c_user_email) {
             $stmt = $db_con->prepare("SELECT * FROM visitors WHERE EMAIL=:email");
             $stmt->execute(array(":email" => $user_email));
             $count = $stmt->rowCount();
             if ($count == 0) {
-
+              // preparing query for inserting the data into the database
                 $stmt = $db_con->prepare("INSERT INTO visitors(FNAME,LNAME,EMAIL,PASSWORD,ADDRESS,DOB,REGDATE) VALUES(:fname,:lname,:email, :pass,:uaddress,:dob,:jdate)");
 
                 $stmt->bindParam(":fname", ucwords(strtolower($first_name)));
@@ -32,6 +34,7 @@ if ($_POST) {
                 $stmt->bindParam(":uaddress", $user_address);
 
                 if ($stmt->execute()) {
+                  //after registering here the user is automatically logged in
                     $stmt = $db_con->prepare("SELECT * FROM visitors WHERE EMAIL=:email");
                     $stmt->execute(array(":email" => strtolower($user_email)));
                     $row = $stmt->fetch(PDO::FETCH_ASSOC);

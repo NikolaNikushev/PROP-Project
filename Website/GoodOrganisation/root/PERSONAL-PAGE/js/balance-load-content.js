@@ -2,9 +2,7 @@ $(document).ready(function() {
     $('#add-button').click(function() {
         $('#balance').css({
             "background-color": "#3b4d81"
-
         });
-        // $('#bottom-containers').css("padding-top", "23vh");
         $('.balance-text').css("color", "#fce600");
         $('#balance-container').css('height', 'auto');
         //loading dynamically content with jquery
@@ -15,7 +13,6 @@ $(document).ready(function() {
     $(document.body).on("click", '#balance-close-button', function() {
         $('#balance').css({
             "background-color": "#fce600"
-
         });
         $('.balance-text').css("color", "#3b4d81");
         $('#balance-container').empty();

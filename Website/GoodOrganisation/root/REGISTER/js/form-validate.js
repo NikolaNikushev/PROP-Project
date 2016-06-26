@@ -1,3 +1,4 @@
+//some client form validation with jQuery
 (function() {
     function checkEmail() {
         if ($('#inputEmail2').val() != $('#inputEmail3').val()) {

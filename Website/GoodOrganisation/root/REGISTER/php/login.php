@@ -11,11 +11,11 @@
 
   try
   {
-
+    //making query to the databese the check if there is such email
    $stmt = $db_con->prepare("SELECT * FROM visitors WHERE EMAIL=:email");
    $stmt->execute(array(":email"=>$user_email));
    $row = $stmt->fetch(PDO::FETCH_ASSOC);
-   $count = $stmt->rowCount();
+  //  $count = $stmt->rowCount();
 
    if($row['PASSWORD']==$password && $password !="" ){
 

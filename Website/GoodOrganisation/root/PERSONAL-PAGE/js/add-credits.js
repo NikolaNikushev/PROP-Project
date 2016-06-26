@@ -7,7 +7,7 @@ $(document).ready(function() {
             data: data,
             success: function(response) {
                 if (response == 'Successfully updated') {
-                  // showing message with the help of 'Sweet Alert framework' 
+                    // showing message with the help of 'Sweet Alert framework'
                     swal({
                         html: true,
                         title: "<span style= \"color:#fce600\" >Succesfully updated balance!</span>",

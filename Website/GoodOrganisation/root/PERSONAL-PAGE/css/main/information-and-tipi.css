@@ -17,14 +17,13 @@ body {
 }
 .solid-bar {
     background-color: #fce600;
-    min-width:100px;
+    min-width: 100px;
 }
 #top-containers {
     padding-top: 150px;
 }
-
 #information {
-    height:auto;
+    height: auto;
 }
 #blank {
     height: 1.65vw;

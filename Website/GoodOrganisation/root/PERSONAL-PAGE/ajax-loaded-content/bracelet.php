@@ -13,8 +13,6 @@ require_once '../php/loanItemsData.php';
   </div>
   <div class="col-xs-7">
     <p class="object-text-bracelet">
-        <!-- Dmitrii: Please, can anyone fix the styling? -->
-        <!--<span class='clckbl' onclick='window.location = "../tickets";'>Make</span>-->
       <?php
         if($PAID == 1)
         {

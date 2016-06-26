@@ -3,8 +3,8 @@
 
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<link rel="stylesheet" type="text/css" href="HOME/header.css">
-	<link rel="stylesheet" type="text/css" href="HOME/homepage.css">
+	<link rel="stylesheet" type="text/css" href="HOME/css/header.css">
+	<link rel="stylesheet" type="text/css" href="HOME/css/homepage.css">
 	<link rel="stylesheet" type="text/css" href="DEFAULT/CSS/footer.css">
 	<link rel="stylesheet" type="text/css" href="DEFAULT/sweetalert-master/sweetalert-master/dist/sweetalert.css">
         <link rel="stylesheet" type="text/css" href="DEFAULT/alertifyjs/css/alertify.min.css">
@@ -15,7 +15,7 @@
 
 <body>
 	<div id="header" class="headernotscrolled">
-		<img id="logo" class="logo" src="HOME/logotext.png"/>
+		<img id="logo" class="logo" src="HOME/images/logotext.png"/>
 			<?php require_once 'default/pageparts/HeaderLinksHome.php'; ?>
 
 	</div>
@@ -71,7 +71,7 @@
 		</div>
 		<div id="imgs">
 			<div>
-				<img src="HOME/PICTOGRAMS.png" alt="Pictograms" id="pictograms">
+				<img src="HOME/images/PICTOGRAMS.png" alt="Pictograms" id="pictograms">
 			</div>
 		</div>
 
@@ -107,7 +107,7 @@
 				$("#nav").addClass("nav");
 				$("#logo").addClass("logo");
 				$("#header").addClass("headernotscrolled");
-				logo.src = "HOME/logotext.png";
+				logo.src = "HOME/images/logotext.png";
 				potato.style.display = "none";
 			}
 		});

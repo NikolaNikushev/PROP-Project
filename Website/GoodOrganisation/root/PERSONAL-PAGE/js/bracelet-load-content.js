@@ -3,7 +3,6 @@ $(document).ready(function() {
         $('#bracelet').css({
             "background-color": "#3b4d81"
         });
-        // $('#bottom-containers').css("padding-top", "23vh");
         $('.bracelet-text').css("color", "#fce600");
         $('#bracelet-container').css('height', 'auto');
         //loading content in the bracelet div with jquery load method

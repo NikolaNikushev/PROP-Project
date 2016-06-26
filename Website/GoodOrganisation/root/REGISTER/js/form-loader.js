@@ -1,3 +1,5 @@
+//events for loading the corresponding form on button click
+
 $(document).ready(function() {
   $('#form-container').load('forms/register-form.html');
   $('#sign-in-link').click(function() {
