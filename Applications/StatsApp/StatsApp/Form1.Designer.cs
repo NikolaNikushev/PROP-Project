@@ -29,13 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.label1 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.label2 = new System.Windows.Forms.Label();
@@ -86,39 +83,34 @@
             this.btnDisplayProducts = new System.Windows.Forms.Button();
             this.cmbStorageSelect = new System.Windows.Forms.ComboBox();
             this.tabFinance = new System.Windows.Forms.TabPage();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.pnlHeaderDnmcLog = new System.Windows.Forms.Panel();
-            this.lbLivePmntsLog = new System.Windows.Forms.ListBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.button4 = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.panel12 = new System.Windows.Forms.Panel();
-            this.panel13 = new System.Windows.Forms.Panel();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.panel11 = new System.Windows.Forms.Panel();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.panel13 = new System.Windows.Forms.Panel();
+            this.panel14 = new System.Windows.Forms.Panel();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.panel12 = new System.Windows.Forms.Panel();
             this.label19 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
-            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.panel14 = new System.Windows.Forms.Panel();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label28 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.lbLivePmntsLog = new System.Windows.Forms.ListBox();
+            this.pnlHeaderDnmcLog = new System.Windows.Forms.Panel();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.button4 = new System.Windows.Forms.Button();
             this.lbLimitedPmntsLog = new System.Windows.Forms.ListBox();
             this.groupBox1.SuspendLayout();
             this.tabModules.SuspendLayout();
@@ -137,16 +129,15 @@
             this.panel2.SuspendLayout();
             this.panel5.SuspendLayout();
             this.tabFinance.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            this.pnlHeaderDnmcLog.SuspendLayout();
-            this.groupBox3.SuspendLayout();
-            this.panel12.SuspendLayout();
-            this.panel13.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.panel11.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
+            this.groupBox3.SuspendLayout();
+            this.panel13.SuspendLayout();
             this.panel14.SuspendLayout();
+            this.panel12.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            this.pnlHeaderDnmcLog.SuspendLayout();
+            this.panel11.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -312,23 +303,23 @@
             // chartProductHistory
             // 
             this.chartProductHistory.BackColor = System.Drawing.SystemColors.MenuBar;
-            chartArea1.Name = "ChartArea1";
-            this.chartProductHistory.ChartAreas.Add(chartArea1);
+            chartArea3.Name = "ChartArea1";
+            this.chartProductHistory.ChartAreas.Add(chartArea3);
             this.chartProductHistory.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend1.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Bottom;
-            legend1.Name = "Legend1";
-            this.chartProductHistory.Legends.Add(legend1);
+            legend3.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Bottom;
+            legend3.Name = "Legend1";
+            this.chartProductHistory.Legends.Add(legend3);
             this.chartProductHistory.Location = new System.Drawing.Point(670, 179);
             this.chartProductHistory.Name = "chartProductHistory";
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "STOCK";
-            series2.ChartArea = "ChartArea1";
-            series2.Legend = "Legend1";
-            series2.Name = "SALES";
-            series2.YValuesPerPoint = 6;
-            this.chartProductHistory.Series.Add(series1);
-            this.chartProductHistory.Series.Add(series2);
+            series5.ChartArea = "ChartArea1";
+            series5.Legend = "Legend1";
+            series5.Name = "STOCK";
+            series6.ChartArea = "ChartArea1";
+            series6.Legend = "Legend1";
+            series6.Name = "SALES";
+            series6.YValuesPerPoint = 6;
+            this.chartProductHistory.Series.Add(series5);
+            this.chartProductHistory.Series.Add(series6);
             this.chartProductHistory.Size = new System.Drawing.Size(341, 319);
             this.chartProductHistory.TabIndex = 6;
             this.chartProductHistory.Text = "chart1";
@@ -696,91 +687,27 @@
             this.tabFinance.Text = "Finance";
             this.tabFinance.UseVisualStyleBackColor = true;
             // 
-            // groupBox2
+            // groupBox4
             // 
-            this.groupBox2.Controls.Add(this.lbLivePmntsLog);
-            this.groupBox2.Controls.Add(this.pnlHeaderDnmcLog);
-            this.groupBox2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold);
-            this.groupBox2.Location = new System.Drawing.Point(717, 0);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(294, 498);
-            this.groupBox2.TabIndex = 0;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Live Payments";
+            this.groupBox4.Controls.Add(this.panel1);
+            this.groupBox4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold);
+            this.groupBox4.Location = new System.Drawing.Point(294, 0);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(423, 498);
+            this.groupBox4.TabIndex = 7;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Choose the info";
             // 
-            // pnlHeaderDnmcLog
+            // panel1
             // 
-            this.pnlHeaderDnmcLog.Controls.Add(this.label9);
-            this.pnlHeaderDnmcLog.Controls.Add(this.label8);
-            this.pnlHeaderDnmcLog.Controls.Add(this.label7);
-            this.pnlHeaderDnmcLog.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlHeaderDnmcLog.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.pnlHeaderDnmcLog.Location = new System.Drawing.Point(3, 20);
-            this.pnlHeaderDnmcLog.Name = "pnlHeaderDnmcLog";
-            this.pnlHeaderDnmcLog.Size = new System.Drawing.Size(288, 111);
-            this.pnlHeaderDnmcLog.TabIndex = 0;
-            // 
-            // lbLivePmntsLog
-            // 
-            this.lbLivePmntsLog.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbLivePmntsLog.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lbLivePmntsLog.FormattingEnabled = true;
-            this.lbLivePmntsLog.ItemHeight = 15;
-            this.lbLivePmntsLog.Location = new System.Drawing.Point(3, 131);
-            this.lbLivePmntsLog.Name = "lbLivePmntsLog";
-            this.lbLivePmntsLog.Size = new System.Drawing.Size(288, 364);
-            this.lbLivePmntsLog.TabIndex = 1;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(3, 39);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(47, 15);
-            this.label7.TabIndex = 0;
-            this.label7.Text = "label7";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(3, 69);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(47, 15);
-            this.label8.TabIndex = 1;
-            this.label8.Text = "label8";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(3, 54);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(47, 15);
-            this.label9.TabIndex = 2;
-            this.label9.Text = "label9";
-            // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.SystemColors.Menu;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Location = new System.Drawing.Point(15, 53);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(134, 27);
-            this.button4.TabIndex = 1;
-            this.button4.Text = "Display Info";
-            this.button4.UseVisualStyleBackColor = false;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Warehouse",
-            "MOES"});
-            this.comboBox1.Location = new System.Drawing.Point(15, 14);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(134, 23);
-            this.comboBox1.TabIndex = 0;
-            this.comboBox1.Text = "Select an object";
+            this.panel1.Controls.Add(this.lbLimitedPmntsLog);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.panel1.Location = new System.Drawing.Point(3, 20);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(417, 475);
+            this.panel1.TabIndex = 1;
             // 
             // groupBox3
             // 
@@ -794,6 +721,54 @@
             this.groupBox3.TabIndex = 6;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Global";
+            // 
+            // panel13
+            // 
+            this.panel13.Controls.Add(this.panel11);
+            this.panel13.Controls.Add(this.panel14);
+            this.panel13.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.panel13.Location = new System.Drawing.Point(3, 161);
+            this.panel13.Name = "panel13";
+            this.panel13.Size = new System.Drawing.Size(288, 334);
+            this.panel13.TabIndex = 1;
+            // 
+            // panel14
+            // 
+            this.panel14.Controls.Add(this.label17);
+            this.panel14.Controls.Add(this.radioButton2);
+            this.panel14.Controls.Add(this.label16);
+            this.panel14.Controls.Add(this.radioButton1);
+            this.panel14.Controls.Add(this.label18);
+            this.panel14.Controls.Add(this.comboBox1);
+            this.panel14.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.panel14.Location = new System.Drawing.Point(0, 0);
+            this.panel14.Name = "panel14";
+            this.panel14.Size = new System.Drawing.Size(288, 167);
+            this.panel14.TabIndex = 1;
+            // 
+            // radioButton2
+            // 
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Location = new System.Drawing.Point(15, 131);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(79, 19);
+            this.radioButton2.TabIndex = 11;
+            this.radioButton2.TabStop = true;
+            this.radioButton2.Text = "Services";
+            this.radioButton2.UseVisualStyleBackColor = true;
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Location = new System.Drawing.Point(176, 131);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(61, 19);
+            this.radioButton1.TabIndex = 10;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "Sales";
+            this.radioButton1.UseVisualStyleBackColor = true;
             // 
             // panel12
             // 
@@ -809,140 +784,8 @@
             this.panel12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.panel12.Location = new System.Drawing.Point(3, 20);
             this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(288, 111);
+            this.panel12.Size = new System.Drawing.Size(288, 141);
             this.panel12.TabIndex = 0;
-            // 
-            // panel13
-            // 
-            this.panel13.Controls.Add(this.lbLimitedPmntsLog);
-            this.panel13.Controls.Add(this.panel14);
-            this.panel13.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.panel13.Location = new System.Drawing.Point(3, 131);
-            this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(288, 364);
-            this.panel13.TabIndex = 1;
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(181, 39);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(55, 15);
-            this.label16.TabIndex = 2;
-            this.label16.Text = "label16";
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(181, 65);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(55, 15);
-            this.label17.TabIndex = 1;
-            this.label17.Text = "label17";
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(181, 14);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(55, 15);
-            this.label18.TabIndex = 0;
-            this.label18.Text = "label18";
-            // 
-            // groupBox4
-            // 
-            this.groupBox4.Controls.Add(this.panel1);
-            this.groupBox4.Controls.Add(this.panel11);
-            this.groupBox4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold);
-            this.groupBox4.Location = new System.Drawing.Point(294, 0);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(423, 498);
-            this.groupBox4.TabIndex = 7;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Choose the info";
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.chart1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.panel1.Location = new System.Drawing.Point(3, 115);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(417, 380);
-            this.panel1.TabIndex = 1;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(5, 59);
-            this.label10.Margin = new System.Windows.Forms.Padding(3, 6, 3, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(152, 15);
-            this.label10.TabIndex = 2;
-            this.label10.Text = "Revenue from services";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(205, 38);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(59, 15);
-            this.label11.TabIndex = 1;
-            this.label11.Text = "<Value>";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(5, 38);
-            this.label12.Margin = new System.Windows.Forms.Padding(3, 6, 3, 0);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(134, 15);
-            this.label12.TabIndex = 0;
-            this.label12.Text = "Revenue from sales";
-            // 
-            // panel11
-            // 
-            this.panel11.Controls.Add(this.label17);
-            this.panel11.Controls.Add(this.label16);
-            this.panel11.Controls.Add(this.label18);
-            this.panel11.Controls.Add(this.comboBox1);
-            this.panel11.Controls.Add(this.button4);
-            this.panel11.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.panel11.Location = new System.Drawing.Point(3, 20);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(417, 95);
-            this.panel11.TabIndex = 0;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(205, 59);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(59, 15);
-            this.label13.TabIndex = 3;
-            this.label13.Text = "<Value>";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(3, 80);
-            this.label14.Margin = new System.Windows.Forms.Padding(3, 6, 3, 0);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(154, 15);
-            this.label14.TabIndex = 4;
-            this.label14.Text = "Balance capacity worth";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(203, 80);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(59, 15);
-            this.label15.TabIndex = 5;
-            this.label15.Text = "<Value>";
             // 
             // label19
             // 
@@ -963,105 +806,185 @@
             this.label20.TabIndex = 7;
             this.label20.Text = "<Value>";
             // 
-            // chart1
+            // label14
             // 
-            this.chart1.BackColor = System.Drawing.SystemColors.MenuBar;
-            chartArea2.AxisX.Title = "Days";
-            chartArea2.AxisX.TitleAlignment = System.Drawing.StringAlignment.Far;
-            chartArea2.AxisY.Title = "Amount";
-            chartArea2.AxisY.TitleAlignment = System.Drawing.StringAlignment.Far;
-            chartArea2.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea2);
-            this.chart1.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend2.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Bottom;
-            legend2.Name = "Legend1";
-            this.chart1.Legends.Add(legend2);
-            this.chart1.Location = new System.Drawing.Point(0, 0);
-            this.chart1.Name = "chart1";
-            series3.ChartArea = "ChartArea1";
-            series3.Legend = "Legend1";
-            series3.Name = "Revenue";
-            this.chart1.Series.Add(series3);
-            this.chart1.Size = new System.Drawing.Size(417, 380);
-            this.chart1.TabIndex = 0;
-            this.chart1.Text = "chart1";
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(3, 80);
+            this.label14.Margin = new System.Windows.Forms.Padding(3, 6, 3, 0);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(154, 15);
+            this.label14.TabIndex = 4;
+            this.label14.Text = "Balance capacity worth";
             // 
-            // panel14
+            // label15
             // 
-            this.panel14.Controls.Add(this.radioButton2);
-            this.panel14.Controls.Add(this.radioButton1);
-            this.panel14.Controls.Add(this.dateTimePicker2);
-            this.panel14.Controls.Add(this.dateTimePicker1);
-            this.panel14.Controls.Add(this.label22);
-            this.panel14.Controls.Add(this.label28);
-            this.panel14.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.panel14.Location = new System.Drawing.Point(0, 0);
-            this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(288, 84);
-            this.panel14.TabIndex = 1;
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(203, 80);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(59, 15);
+            this.label15.TabIndex = 5;
+            this.label15.Text = "<Value>";
             // 
-            // label22
+            // label13
             // 
-            this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(5, 9);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(40, 15);
-            this.label22.TabIndex = 7;
-            this.label22.Text = "From";
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(205, 59);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(59, 15);
+            this.label13.TabIndex = 3;
+            this.label13.Text = "<Value>";
             // 
-            // label28
+            // label12
             // 
-            this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(5, 33);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(23, 15);
-            this.label28.TabIndex = 1;
-            this.label28.Text = "To";
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(5, 38);
+            this.label12.Margin = new System.Windows.Forms.Padding(3, 6, 3, 0);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(134, 15);
+            this.label12.TabIndex = 0;
+            this.label12.Text = "Revenue from sales";
             // 
-            // dateTimePicker1
+            // label10
             // 
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dateTimePicker1.Location = new System.Drawing.Point(85, 9);
-            this.dateTimePicker1.MaxDate = new System.DateTime(2016, 7, 31, 0, 0, 0, 0);
-            this.dateTimePicker1.MinDate = new System.DateTime(2016, 6, 1, 0, 0, 0, 0);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 21);
-            this.dateTimePicker1.TabIndex = 8;
-            this.dateTimePicker1.Value = new System.DateTime(2016, 6, 20, 19, 2, 6, 0);
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(5, 59);
+            this.label10.Margin = new System.Windows.Forms.Padding(3, 6, 3, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(152, 15);
+            this.label10.TabIndex = 2;
+            this.label10.Text = "Revenue from services";
             // 
-            // dateTimePicker2
+            // label11
             // 
-            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dateTimePicker2.Location = new System.Drawing.Point(85, 33);
-            this.dateTimePicker2.MaxDate = new System.DateTime(2016, 7, 31, 0, 0, 0, 0);
-            this.dateTimePicker2.MinDate = new System.DateTime(2016, 6, 1, 0, 0, 0, 0);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(200, 21);
-            this.dateTimePicker2.TabIndex = 9;
-            this.dateTimePicker2.Value = new System.DateTime(2016, 6, 20, 19, 2, 6, 0);
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(205, 38);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(59, 15);
+            this.label11.TabIndex = 1;
+            this.label11.Text = "<Value>";
             // 
-            // radioButton1
+            // groupBox2
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(8, 62);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(61, 19);
-            this.radioButton1.TabIndex = 10;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Sales";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.groupBox2.Controls.Add(this.lbLivePmntsLog);
+            this.groupBox2.Controls.Add(this.pnlHeaderDnmcLog);
+            this.groupBox2.Dock = System.Windows.Forms.DockStyle.Right;
+            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold);
+            this.groupBox2.Location = new System.Drawing.Point(717, 0);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(294, 498);
+            this.groupBox2.TabIndex = 0;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Live Payments";
             // 
-            // radioButton2
+            // lbLivePmntsLog
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(206, 62);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(79, 19);
-            this.radioButton2.TabIndex = 11;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Services";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.lbLivePmntsLog.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbLivePmntsLog.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lbLivePmntsLog.FormattingEnabled = true;
+            this.lbLivePmntsLog.ItemHeight = 15;
+            this.lbLivePmntsLog.Location = new System.Drawing.Point(3, 131);
+            this.lbLivePmntsLog.Name = "lbLivePmntsLog";
+            this.lbLivePmntsLog.Size = new System.Drawing.Size(288, 364);
+            this.lbLivePmntsLog.TabIndex = 1;
+            // 
+            // pnlHeaderDnmcLog
+            // 
+            this.pnlHeaderDnmcLog.Controls.Add(this.label9);
+            this.pnlHeaderDnmcLog.Controls.Add(this.label8);
+            this.pnlHeaderDnmcLog.Controls.Add(this.label7);
+            this.pnlHeaderDnmcLog.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlHeaderDnmcLog.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.pnlHeaderDnmcLog.Location = new System.Drawing.Point(3, 20);
+            this.pnlHeaderDnmcLog.Name = "pnlHeaderDnmcLog";
+            this.pnlHeaderDnmcLog.Size = new System.Drawing.Size(288, 111);
+            this.pnlHeaderDnmcLog.TabIndex = 0;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(3, 49);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(47, 15);
+            this.label9.TabIndex = 2;
+            this.label9.Text = "label9";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(3, 80);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(47, 15);
+            this.label8.TabIndex = 1;
+            this.label8.Text = "label8";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(3, 17);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(47, 15);
+            this.label7.TabIndex = 0;
+            this.label7.Text = "label7";
+            // 
+            // panel11
+            // 
+            this.panel11.Controls.Add(this.button4);
+            this.panel11.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.panel11.Location = new System.Drawing.Point(0, 167);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(288, 167);
+            this.panel11.TabIndex = 2;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(65, 53);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(55, 15);
+            this.label17.TabIndex = 1;
+            this.label17.Text = "label17";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(182, 72);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(55, 15);
+            this.label16.TabIndex = 2;
+            this.label16.Text = "label16";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(182, 14);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(55, 15);
+            this.label18.TabIndex = 0;
+            this.label18.Text = "label18";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Warehouse",
+            "MOES"});
+            this.comboBox1.Location = new System.Drawing.Point(8, 14);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(134, 23);
+            this.comboBox1.TabIndex = 0;
+            this.comboBox1.Text = "Select an object";
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.SystemColors.Menu;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Location = new System.Drawing.Point(15, 53);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(134, 27);
+            this.button4.TabIndex = 1;
+            this.button4.Text = "Display Info";
+            this.button4.UseVisualStyleBackColor = false;
             // 
             // lbLimitedPmntsLog
             // 
@@ -1069,10 +992,10 @@
             this.lbLimitedPmntsLog.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.lbLimitedPmntsLog.FormattingEnabled = true;
             this.lbLimitedPmntsLog.ItemHeight = 15;
-            this.lbLimitedPmntsLog.Location = new System.Drawing.Point(0, 84);
+            this.lbLimitedPmntsLog.Location = new System.Drawing.Point(0, 0);
             this.lbLimitedPmntsLog.Name = "lbLimitedPmntsLog";
-            this.lbLimitedPmntsLog.Size = new System.Drawing.Size(288, 280);
-            this.lbLimitedPmntsLog.TabIndex = 2;
+            this.lbLimitedPmntsLog.Size = new System.Drawing.Size(417, 475);
+            this.lbLimitedPmntsLog.TabIndex = 4;
             // 
             // Form1
             // 
@@ -1106,20 +1029,18 @@
             this.panel2.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.tabFinance.ResumeLayout(false);
+            this.groupBox4.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.groupBox3.ResumeLayout(false);
+            this.panel13.ResumeLayout(false);
+            this.panel14.ResumeLayout(false);
+            this.panel14.PerformLayout();
+            this.panel12.ResumeLayout(false);
+            this.panel12.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.pnlHeaderDnmcLog.ResumeLayout(false);
             this.pnlHeaderDnmcLog.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
-            this.panel12.ResumeLayout(false);
-            this.panel12.PerformLayout();
-            this.panel13.ResumeLayout(false);
-            this.groupBox4.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
             this.panel11.ResumeLayout(false);
-            this.panel11.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
-            this.panel14.ResumeLayout(false);
-            this.panel14.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1178,12 +1099,7 @@
         private System.Windows.Forms.TabPage tabFinance;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Panel panel13;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Panel panel12;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Button button4;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.ListBox lbLivePmntsLog;
         private System.Windows.Forms.Panel pnlHeaderDnmcLog;
@@ -1192,7 +1108,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
@@ -1201,15 +1116,16 @@
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
         private System.Windows.Forms.Panel panel14;
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.Label label28;
         private System.Windows.Forms.ListBox lbLimitedPmntsLog;
+        private System.Windows.Forms.Panel panel11;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
 
