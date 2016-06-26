@@ -29,24 +29,35 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.label1 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.listBox2 = new System.Windows.Forms.ListBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.listBox1 = new System.Windows.Forms.ListBox();
+            this.panel16 = new System.Windows.Forms.Panel();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.listBox2 = new System.Windows.Forms.ListBox();
+            this.panel15 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.tabModules = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.panel17 = new System.Windows.Forms.Panel();
+            this.label24 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.tabWarehouse = new System.Windows.Forms.TabPage();
             this.chartProductHistory = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -85,11 +96,18 @@
             this.tabFinance = new System.Windows.Forms.TabPage();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lbLivePmntsLog = new System.Windows.Forms.ListBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.panel13 = new System.Windows.Forms.Panel();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.button4 = new System.Windows.Forms.Button();
             this.panel14 = new System.Windows.Forms.Panel();
+            this.label17 = new System.Windows.Forms.Label();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.label16 = new System.Windows.Forms.Label();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.label18 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.panel12 = new System.Windows.Forms.Panel();
             this.label19 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
@@ -99,22 +117,31 @@
             this.label12 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.lbLivePmntsLog = new System.Windows.Forms.ListBox();
-            this.pnlHeaderDnmcLog = new System.Windows.Forms.Panel();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.panel11 = new System.Windows.Forms.Panel();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.button4 = new System.Windows.Forms.Button();
-            this.lbLimitedPmntsLog = new System.Windows.Forms.ListBox();
+            this.lblVisAtActVal = new System.Windows.Forms.Label();
+            this.lblVisAtCampVal = new System.Windows.Forms.Label();
+            this.lblNmbrPresentVal = new System.Windows.Forms.Label();
+            this.tbCompleteDataDescription = new System.Windows.Forms.TextBox();
+            this.button5 = new System.Windows.Forms.Button();
+            this.lblNmbrExpectedVal = new System.Windows.Forms.Label();
+            this.panel18 = new System.Windows.Forms.Panel();
+            this.lblNmbrFestAcVal = new System.Windows.Forms.Label();
+            this.lblNmbrCampersVal = new System.Windows.Forms.Label();
+            this.lblNmbrBuyersVal = new System.Windows.Forms.Label();
+            this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.dgvBracelets = new System.Windows.Forms.DataGridView();
+            this.panel19 = new System.Windows.Forms.Panel();
+            this.label28 = new System.Windows.Forms.Label();
+            this.label29 = new System.Windows.Forms.Label();
+            this.lblBracNmbrVal = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
+            this.groupBox5.SuspendLayout();
+            this.panel16.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            this.panel15.SuspendLayout();
             this.tabModules.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            this.groupBox6.SuspendLayout();
+            this.panel17.SuspendLayout();
             this.tabWarehouse.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartProductHistory)).BeginInit();
             this.panel4.SuspendLayout();
@@ -133,22 +160,24 @@
             this.panel1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.panel13.SuspendLayout();
+            this.panel11.SuspendLayout();
             this.panel14.SuspendLayout();
             this.panel12.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            this.pnlHeaderDnmcLog.SuspendLayout();
-            this.panel11.SuspendLayout();
+            this.panel18.SuspendLayout();
+            this.groupBox7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBracelets)).BeginInit();
+            this.panel19.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(59, 26);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(12, 20);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 8, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(77, 13);
+            this.label1.Size = new System.Drawing.Size(115, 16);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Current Visitors";
+            this.label1.Text = "Visitors at the field";
             // 
             // timer1
             // 
@@ -158,104 +187,164 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(82, 49);
+            this.label2.Location = new System.Drawing.Point(189, 20);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 13);
+            this.label2.Size = new System.Drawing.Size(45, 16);
             this.label2.TabIndex = 1;
             this.label2.Text = "label2";
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.button3);
-            this.groupBox1.Controls.Add(this.button2);
-            this.groupBox1.Controls.Add(this.button1);
-            this.groupBox1.Controls.Add(this.listBox2);
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.listBox1);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(7, 14);
+            this.groupBox1.Controls.Add(this.groupBox5);
+            this.groupBox1.Controls.Add(this.panel16);
+            this.groupBox1.Controls.Add(this.groupBox2);
+            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold);
+            this.groupBox1.Location = new System.Drawing.Point(489, 3);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Size = new System.Drawing.Size(519, 294);
+            this.groupBox1.Size = new System.Drawing.Size(519, 492);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Visitors Tracking";
             // 
-            // button3
+            // groupBox5
             // 
-            this.button3.Location = new System.Drawing.Point(356, 177);
-            this.button3.Margin = new System.Windows.Forms.Padding(2);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(46, 30);
-            this.button3.TabIndex = 8;
-            this.button3.Text = "Day3";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(356, 129);
-            this.button2.Margin = new System.Windows.Forms.Padding(2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(46, 30);
-            this.button2.TabIndex = 7;
-            this.button2.Text = "Day2";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(356, 81);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(46, 30);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Day1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // listBox2
-            // 
-            this.listBox2.FormattingEnabled = true;
-            this.listBox2.Location = new System.Drawing.Point(226, 81);
-            this.listBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(108, 199);
-            this.listBox2.TabIndex = 5;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(275, 52);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(74, 13);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "Choose a Day";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(59, 95);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(78, 13);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Todays Visitors";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
+            this.groupBox5.Controls.Add(this.listBox1);
+            this.groupBox5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold);
+            this.groupBox5.Location = new System.Drawing.Point(2, 123);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(296, 367);
+            this.groupBox5.TabIndex = 11;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "Today\'s visitors";
             // 
             // listBox1
             // 
+            this.listBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.listBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.listBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(38, 120);
+            this.listBox1.ItemHeight = 18;
+            this.listBox1.Location = new System.Drawing.Point(3, 20);
             this.listBox1.Margin = new System.Windows.Forms.Padding(2);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(123, 160);
-            this.listBox1.TabIndex = 2;
+            this.listBox1.Size = new System.Drawing.Size(290, 344);
+            this.listBox1.TabIndex = 11;
+            // 
+            // panel16
+            // 
+            this.panel16.Controls.Add(this.lblVisAtCampVal);
+            this.panel16.Controls.Add(this.lblVisAtActVal);
+            this.panel16.Controls.Add(this.label1);
+            this.panel16.Controls.Add(this.label23);
+            this.panel16.Controls.Add(this.label2);
+            this.panel16.Controls.Add(this.label22);
+            this.panel16.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel16.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.panel16.Location = new System.Drawing.Point(2, 19);
+            this.panel16.Name = "panel16";
+            this.panel16.Size = new System.Drawing.Size(296, 104);
+            this.panel16.TabIndex = 10;
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(12, 68);
+            this.label23.Margin = new System.Windows.Forms.Padding(2, 8, 2, 0);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(142, 16);
+            this.label23.TabIndex = 6;
+            this.label23.Text = "Visitors at the activities";
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(12, 44);
+            this.label22.Margin = new System.Windows.Forms.Padding(2, 8, 2, 0);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(142, 16);
+            this.label22.TabIndex = 5;
+            this.label22.Text = "Visitors at the camping";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.listBox2);
+            this.groupBox2.Controls.Add(this.panel15);
+            this.groupBox2.Dock = System.Windows.Forms.DockStyle.Right;
+            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold);
+            this.groupBox2.Location = new System.Drawing.Point(298, 19);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(219, 471);
+            this.groupBox2.TabIndex = 9;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Choose a day";
+            // 
+            // listBox2
+            // 
+            this.listBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.listBox2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.listBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.listBox2.FormattingEnabled = true;
+            this.listBox2.ItemHeight = 18;
+            this.listBox2.Location = new System.Drawing.Point(3, 20);
+            this.listBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.listBox2.Name = "listBox2";
+            this.listBox2.Size = new System.Drawing.Size(147, 448);
+            this.listBox2.TabIndex = 5;
+            // 
+            // panel15
+            // 
+            this.panel15.Controls.Add(this.button1);
+            this.panel15.Controls.Add(this.button2);
+            this.panel15.Controls.Add(this.button3);
+            this.panel15.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel15.Location = new System.Drawing.Point(150, 20);
+            this.panel15.Name = "panel15";
+            this.panel15.Size = new System.Drawing.Size(66, 448);
+            this.panel15.TabIndex = 0;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(4, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(60, 30);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "Day1";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Location = new System.Drawing.Point(4, 41);
+            this.button2.Margin = new System.Windows.Forms.Padding(2);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(60, 30);
+            this.button2.TabIndex = 7;
+            this.button2.Text = "Day2";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Location = new System.Drawing.Point(4, 84);
+            this.button3.Margin = new System.Windows.Forms.Padding(2);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(60, 30);
+            this.button3.TabIndex = 8;
+            this.button3.Text = "Day3";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // timer2
             // 
@@ -277,6 +366,7 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.groupBox6);
             this.tabPage1.Controls.Add(this.groupBox1);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
@@ -285,6 +375,90 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Visitors";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // groupBox6
+            // 
+            this.groupBox6.Controls.Add(this.panel17);
+            this.groupBox6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold);
+            this.groupBox6.Location = new System.Drawing.Point(3, 3);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Size = new System.Drawing.Size(486, 492);
+            this.groupBox6.TabIndex = 3;
+            this.groupBox6.TabStop = false;
+            this.groupBox6.Text = "Complete Data";
+            // 
+            // panel17
+            // 
+            this.panel17.Controls.Add(this.lblNmbrBuyersVal);
+            this.panel17.Controls.Add(this.lblNmbrCampersVal);
+            this.panel17.Controls.Add(this.lblNmbrFestAcVal);
+            this.panel17.Controls.Add(this.panel18);
+            this.panel17.Controls.Add(this.lblNmbrExpectedVal);
+            this.panel17.Controls.Add(this.button5);
+            this.panel17.Controls.Add(this.tbCompleteDataDescription);
+            this.panel17.Controls.Add(this.lblNmbrPresentVal);
+            this.panel17.Controls.Add(this.label24);
+            this.panel17.Controls.Add(this.label21);
+            this.panel17.Controls.Add(this.label9);
+            this.panel17.Controls.Add(this.label8);
+            this.panel17.Controls.Add(this.label7);
+            this.panel17.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel17.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.panel17.Location = new System.Drawing.Point(3, 20);
+            this.panel17.Name = "panel17";
+            this.panel17.Size = new System.Drawing.Size(480, 469);
+            this.panel17.TabIndex = 9;
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(14, 185);
+            this.label24.Margin = new System.Windows.Forms.Padding(2, 8, 2, 0);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(105, 16);
+            this.label24.TabIndex = 7;
+            this.label24.Text = "Payed in a store";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(14, 161);
+            this.label21.Margin = new System.Windows.Forms.Padding(2, 8, 2, 0);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(117, 16);
+            this.label21.TabIndex = 4;
+            this.label21.Text = "Having a camping";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(14, 98);
+            this.label9.Margin = new System.Windows.Forms.Padding(2, 8, 2, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(110, 16);
+            this.label9.TabIndex = 3;
+            this.label9.Text = "Expected visitors";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(14, 74);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 8, 2, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(99, 16);
+            this.label8.TabIndex = 2;
+            this.label8.Text = "Present visitors";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(14, 122);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 8, 2, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(112, 16);
+            this.label7.TabIndex = 1;
+            this.label7.Text = "Festival accounts";
             // 
             // tabWarehouse
             // 
@@ -303,23 +477,23 @@
             // chartProductHistory
             // 
             this.chartProductHistory.BackColor = System.Drawing.SystemColors.MenuBar;
-            chartArea3.Name = "ChartArea1";
-            this.chartProductHistory.ChartAreas.Add(chartArea3);
+            chartArea1.Name = "ChartArea1";
+            this.chartProductHistory.ChartAreas.Add(chartArea1);
             this.chartProductHistory.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend3.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Bottom;
-            legend3.Name = "Legend1";
-            this.chartProductHistory.Legends.Add(legend3);
+            legend1.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Bottom;
+            legend1.Name = "Legend1";
+            this.chartProductHistory.Legends.Add(legend1);
             this.chartProductHistory.Location = new System.Drawing.Point(670, 179);
             this.chartProductHistory.Name = "chartProductHistory";
-            series5.ChartArea = "ChartArea1";
-            series5.Legend = "Legend1";
-            series5.Name = "STOCK";
-            series6.ChartArea = "ChartArea1";
-            series6.Legend = "Legend1";
-            series6.Name = "SALES";
-            series6.YValuesPerPoint = 6;
-            this.chartProductHistory.Series.Add(series5);
-            this.chartProductHistory.Series.Add(series6);
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "STOCK";
+            series2.ChartArea = "ChartArea1";
+            series2.Legend = "Legend1";
+            series2.Name = "SALES";
+            series2.YValuesPerPoint = 6;
+            this.chartProductHistory.Series.Add(series1);
+            this.chartProductHistory.Series.Add(series2);
             this.chartProductHistory.Size = new System.Drawing.Size(341, 319);
             this.chartProductHistory.TabIndex = 6;
             this.chartProductHistory.Text = "chart1";
@@ -679,7 +853,6 @@
             // 
             this.tabFinance.Controls.Add(this.groupBox4);
             this.tabFinance.Controls.Add(this.groupBox3);
-            this.tabFinance.Controls.Add(this.groupBox2);
             this.tabFinance.Location = new System.Drawing.Point(4, 22);
             this.tabFinance.Name = "tabFinance";
             this.tabFinance.Size = new System.Drawing.Size(1011, 498);
@@ -694,20 +867,31 @@
             this.groupBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold);
             this.groupBox4.Location = new System.Drawing.Point(294, 0);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(423, 498);
+            this.groupBox4.Size = new System.Drawing.Size(717, 498);
             this.groupBox4.TabIndex = 7;
             this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Choose the info";
+            this.groupBox4.Text = "Log";
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.lbLimitedPmntsLog);
+            this.panel1.Controls.Add(this.lbLivePmntsLog);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.panel1.Location = new System.Drawing.Point(3, 20);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(417, 475);
+            this.panel1.Size = new System.Drawing.Size(711, 475);
             this.panel1.TabIndex = 1;
+            // 
+            // lbLivePmntsLog
+            // 
+            this.lbLivePmntsLog.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbLivePmntsLog.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lbLivePmntsLog.FormattingEnabled = true;
+            this.lbLivePmntsLog.ItemHeight = 15;
+            this.lbLivePmntsLog.Location = new System.Drawing.Point(0, 0);
+            this.lbLivePmntsLog.Name = "lbLivePmntsLog";
+            this.lbLivePmntsLog.Size = new System.Drawing.Size(711, 475);
+            this.lbLivePmntsLog.TabIndex = 2;
             // 
             // groupBox3
             // 
@@ -728,10 +912,31 @@
             this.panel13.Controls.Add(this.panel14);
             this.panel13.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.panel13.Location = new System.Drawing.Point(3, 161);
+            this.panel13.Location = new System.Drawing.Point(3, 169);
             this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(288, 334);
+            this.panel13.Size = new System.Drawing.Size(288, 326);
             this.panel13.TabIndex = 1;
+            // 
+            // panel11
+            // 
+            this.panel11.Controls.Add(this.button4);
+            this.panel11.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.panel11.Location = new System.Drawing.Point(0, 171);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(288, 155);
+            this.panel11.TabIndex = 2;
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.SystemColors.Menu;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Location = new System.Drawing.Point(130, 22);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(134, 27);
+            this.button4.TabIndex = 1;
+            this.button4.Text = "Display Info";
+            this.button4.UseVisualStyleBackColor = false;
             // 
             // panel14
             // 
@@ -745,8 +950,17 @@
             this.panel14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.panel14.Location = new System.Drawing.Point(0, 0);
             this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(288, 167);
+            this.panel14.Size = new System.Drawing.Size(288, 171);
             this.panel14.TabIndex = 1;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(65, 53);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(55, 15);
+            this.label17.TabIndex = 1;
+            this.label17.Text = "label17";
             // 
             // radioButton2
             // 
@@ -759,6 +973,15 @@
             this.radioButton2.Text = "Services";
             this.radioButton2.UseVisualStyleBackColor = true;
             // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(182, 72);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(55, 15);
+            this.label16.TabIndex = 2;
+            this.label16.Text = "label16";
+            // 
             // radioButton1
             // 
             this.radioButton1.AutoSize = true;
@@ -769,6 +992,27 @@
             this.radioButton1.TabStop = true;
             this.radioButton1.Text = "Sales";
             this.radioButton1.UseVisualStyleBackColor = true;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(182, 14);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(55, 15);
+            this.label18.TabIndex = 0;
+            this.label18.Text = "label18";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Warehouse",
+            "MOES"});
+            this.comboBox1.Location = new System.Drawing.Point(8, 14);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(134, 23);
+            this.comboBox1.TabIndex = 0;
+            this.comboBox1.Text = "Select an object";
             // 
             // panel12
             // 
@@ -784,7 +1028,7 @@
             this.panel12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.panel12.Location = new System.Drawing.Point(3, 20);
             this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(288, 141);
+            this.panel12.Size = new System.Drawing.Size(288, 149);
             this.panel12.TabIndex = 0;
             // 
             // label19
@@ -863,139 +1107,174 @@
             this.label11.TabIndex = 1;
             this.label11.Text = "<Value>";
             // 
-            // groupBox2
+            // lblVisAtActVal
             // 
-            this.groupBox2.Controls.Add(this.lbLivePmntsLog);
-            this.groupBox2.Controls.Add(this.pnlHeaderDnmcLog);
-            this.groupBox2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold);
-            this.groupBox2.Location = new System.Drawing.Point(717, 0);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(294, 498);
-            this.groupBox2.TabIndex = 0;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Live Payments";
+            this.lblVisAtActVal.AutoSize = true;
+            this.lblVisAtActVal.Location = new System.Drawing.Point(189, 68);
+            this.lblVisAtActVal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblVisAtActVal.Name = "lblVisAtActVal";
+            this.lblVisAtActVal.Size = new System.Drawing.Size(66, 16);
+            this.lblVisAtActVal.TabIndex = 7;
+            this.lblVisAtActVal.Text = "<VALUE>";
             // 
-            // lbLivePmntsLog
+            // lblVisAtCampVal
             // 
-            this.lbLivePmntsLog.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbLivePmntsLog.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lbLivePmntsLog.FormattingEnabled = true;
-            this.lbLivePmntsLog.ItemHeight = 15;
-            this.lbLivePmntsLog.Location = new System.Drawing.Point(3, 131);
-            this.lbLivePmntsLog.Name = "lbLivePmntsLog";
-            this.lbLivePmntsLog.Size = new System.Drawing.Size(288, 364);
-            this.lbLivePmntsLog.TabIndex = 1;
+            this.lblVisAtCampVal.AutoSize = true;
+            this.lblVisAtCampVal.Location = new System.Drawing.Point(189, 44);
+            this.lblVisAtCampVal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblVisAtCampVal.Name = "lblVisAtCampVal";
+            this.lblVisAtCampVal.Size = new System.Drawing.Size(66, 16);
+            this.lblVisAtCampVal.TabIndex = 8;
+            this.lblVisAtCampVal.Text = "<VALUE>";
             // 
-            // pnlHeaderDnmcLog
+            // lblNmbrPresentVal
             // 
-            this.pnlHeaderDnmcLog.Controls.Add(this.label9);
-            this.pnlHeaderDnmcLog.Controls.Add(this.label8);
-            this.pnlHeaderDnmcLog.Controls.Add(this.label7);
-            this.pnlHeaderDnmcLog.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlHeaderDnmcLog.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.pnlHeaderDnmcLog.Location = new System.Drawing.Point(3, 20);
-            this.pnlHeaderDnmcLog.Name = "pnlHeaderDnmcLog";
-            this.pnlHeaderDnmcLog.Size = new System.Drawing.Size(288, 111);
-            this.pnlHeaderDnmcLog.TabIndex = 0;
+            this.lblNmbrPresentVal.AutoSize = true;
+            this.lblNmbrPresentVal.Location = new System.Drawing.Point(198, 74);
+            this.lblNmbrPresentVal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblNmbrPresentVal.Name = "lblNmbrPresentVal";
+            this.lblNmbrPresentVal.Size = new System.Drawing.Size(66, 16);
+            this.lblNmbrPresentVal.TabIndex = 9;
+            this.lblNmbrPresentVal.Text = "<VALUE>";
             // 
-            // label9
+            // tbCompleteDataDescription
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(3, 49);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(47, 15);
-            this.label9.TabIndex = 2;
-            this.label9.Text = "label9";
+            this.tbCompleteDataDescription.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.tbCompleteDataDescription.Dock = System.Windows.Forms.DockStyle.Top;
+            this.tbCompleteDataDescription.Location = new System.Drawing.Point(0, 0);
+            this.tbCompleteDataDescription.Multiline = true;
+            this.tbCompleteDataDescription.Name = "tbCompleteDataDescription";
+            this.tbCompleteDataDescription.ReadOnly = true;
+            this.tbCompleteDataDescription.Size = new System.Drawing.Size(480, 59);
+            this.tbCompleteDataDescription.TabIndex = 10;
+            this.tbCompleteDataDescription.Text = "All the data below depicts the number of visitors per specific groups.\r\nThe data " +
+    "is updated every set interval of time, but, if you wish to force update, press t" +
+    "he button \'refresh\'.";
             // 
-            // label8
+            // button5
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(3, 80);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(47, 15);
-            this.label8.TabIndex = 1;
-            this.label8.Text = "label8";
+            this.button5.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button5.Location = new System.Drawing.Point(399, 60);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(81, 23);
+            this.button5.TabIndex = 11;
+            this.button5.Text = "REFRESH";
+            this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
-            // label7
+            // lblNmbrExpectedVal
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(3, 17);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(47, 15);
-            this.label7.TabIndex = 0;
-            this.label7.Text = "label7";
+            this.lblNmbrExpectedVal.AutoSize = true;
+            this.lblNmbrExpectedVal.Location = new System.Drawing.Point(198, 98);
+            this.lblNmbrExpectedVal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblNmbrExpectedVal.Name = "lblNmbrExpectedVal";
+            this.lblNmbrExpectedVal.Size = new System.Drawing.Size(66, 16);
+            this.lblNmbrExpectedVal.TabIndex = 12;
+            this.lblNmbrExpectedVal.Text = "<VALUE>";
             // 
-            // panel11
+            // panel18
             // 
-            this.panel11.Controls.Add(this.button4);
-            this.panel11.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.panel11.Location = new System.Drawing.Point(0, 167);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(288, 167);
-            this.panel11.TabIndex = 2;
+            this.panel18.Controls.Add(this.groupBox7);
+            this.panel18.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel18.Location = new System.Drawing.Point(0, 217);
+            this.panel18.Name = "panel18";
+            this.panel18.Size = new System.Drawing.Size(480, 252);
+            this.panel18.TabIndex = 13;
             // 
-            // label17
+            // lblNmbrFestAcVal
             // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(65, 53);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(55, 15);
-            this.label17.TabIndex = 1;
-            this.label17.Text = "label17";
+            this.lblNmbrFestAcVal.AutoSize = true;
+            this.lblNmbrFestAcVal.Location = new System.Drawing.Point(198, 123);
+            this.lblNmbrFestAcVal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblNmbrFestAcVal.Name = "lblNmbrFestAcVal";
+            this.lblNmbrFestAcVal.Size = new System.Drawing.Size(66, 16);
+            this.lblNmbrFestAcVal.TabIndex = 14;
+            this.lblNmbrFestAcVal.Text = "<VALUE>";
             // 
-            // label16
+            // lblNmbrCampersVal
             // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(182, 72);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(55, 15);
-            this.label16.TabIndex = 2;
-            this.label16.Text = "label16";
+            this.lblNmbrCampersVal.AutoSize = true;
+            this.lblNmbrCampersVal.Location = new System.Drawing.Point(198, 161);
+            this.lblNmbrCampersVal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblNmbrCampersVal.Name = "lblNmbrCampersVal";
+            this.lblNmbrCampersVal.Size = new System.Drawing.Size(66, 16);
+            this.lblNmbrCampersVal.TabIndex = 15;
+            this.lblNmbrCampersVal.Text = "<VALUE>";
             // 
-            // label18
+            // lblNmbrBuyersVal
             // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(182, 14);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(55, 15);
-            this.label18.TabIndex = 0;
-            this.label18.Text = "label18";
+            this.lblNmbrBuyersVal.AutoSize = true;
+            this.lblNmbrBuyersVal.Location = new System.Drawing.Point(198, 185);
+            this.lblNmbrBuyersVal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblNmbrBuyersVal.Name = "lblNmbrBuyersVal";
+            this.lblNmbrBuyersVal.Size = new System.Drawing.Size(66, 16);
+            this.lblNmbrBuyersVal.TabIndex = 16;
+            this.lblNmbrBuyersVal.Text = "<VALUE>";
             // 
-            // comboBox1
+            // groupBox7
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Warehouse",
-            "MOES"});
-            this.comboBox1.Location = new System.Drawing.Point(8, 14);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(134, 23);
-            this.comboBox1.TabIndex = 0;
-            this.comboBox1.Text = "Select an object";
+            this.groupBox7.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.groupBox7.Controls.Add(this.dgvBracelets);
+            this.groupBox7.Controls.Add(this.panel19);
+            this.groupBox7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold);
+            this.groupBox7.Location = new System.Drawing.Point(0, 0);
+            this.groupBox7.Name = "groupBox7";
+            this.groupBox7.Size = new System.Drawing.Size(480, 252);
+            this.groupBox7.TabIndex = 0;
+            this.groupBox7.TabStop = false;
+            this.groupBox7.Text = "Bracelets";
             // 
-            // button4
+            // dgvBracelets
             // 
-            this.button4.BackColor = System.Drawing.SystemColors.Menu;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Location = new System.Drawing.Point(15, 53);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(134, 27);
-            this.button4.TabIndex = 1;
-            this.button4.Text = "Display Info";
-            this.button4.UseVisualStyleBackColor = false;
+            this.dgvBracelets.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvBracelets.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvBracelets.Location = new System.Drawing.Point(3, 59);
+            this.dgvBracelets.Name = "dgvBracelets";
+            this.dgvBracelets.Size = new System.Drawing.Size(474, 190);
+            this.dgvBracelets.TabIndex = 3;
             // 
-            // lbLimitedPmntsLog
+            // panel19
             // 
-            this.lbLimitedPmntsLog.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbLimitedPmntsLog.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lbLimitedPmntsLog.FormattingEnabled = true;
-            this.lbLimitedPmntsLog.ItemHeight = 15;
-            this.lbLimitedPmntsLog.Location = new System.Drawing.Point(0, 0);
-            this.lbLimitedPmntsLog.Name = "lbLimitedPmntsLog";
-            this.lbLimitedPmntsLog.Size = new System.Drawing.Size(417, 475);
-            this.lbLimitedPmntsLog.TabIndex = 4;
+            this.panel19.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.panel19.Controls.Add(this.lblBracNmbrVal);
+            this.panel19.Controls.Add(this.label29);
+            this.panel19.Controls.Add(this.label28);
+            this.panel19.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel19.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold);
+            this.panel19.Location = new System.Drawing.Point(3, 20);
+            this.panel19.Name = "panel19";
+            this.panel19.Size = new System.Drawing.Size(474, 39);
+            this.panel19.TabIndex = 2;
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Location = new System.Drawing.Point(11, 9);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(0, 18);
+            this.label28.TabIndex = 0;
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Location = new System.Drawing.Point(11, 9);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(112, 18);
+            this.label29.TabIndex = 1;
+            this.label29.Text = "Total number:";
+            // 
+            // lblBracNmbrVal
+            // 
+            this.lblBracNmbrVal.AutoSize = true;
+            this.lblBracNmbrVal.Location = new System.Drawing.Point(195, 9);
+            this.lblBracNmbrVal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblBracNmbrVal.Name = "lblBracNmbrVal";
+            this.lblBracNmbrVal.Size = new System.Drawing.Size(80, 18);
+            this.lblBracNmbrVal.TabIndex = 17;
+            this.lblBracNmbrVal.Text = "<VALUE>";
             // 
             // Form1
             // 
@@ -1007,9 +1286,16 @@
             this.Name = "Form1";
             this.Text = "Statistics";
             this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.groupBox5.ResumeLayout(false);
+            this.panel16.ResumeLayout(false);
+            this.panel16.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.panel15.ResumeLayout(false);
             this.tabModules.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
+            this.groupBox6.ResumeLayout(false);
+            this.panel17.ResumeLayout(false);
+            this.panel17.PerformLayout();
             this.tabWarehouse.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.chartProductHistory)).EndInit();
             this.panel4.ResumeLayout(false);
@@ -1033,14 +1319,16 @@
             this.panel1.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             this.panel13.ResumeLayout(false);
+            this.panel11.ResumeLayout(false);
             this.panel14.ResumeLayout(false);
             this.panel14.PerformLayout();
             this.panel12.ResumeLayout(false);
             this.panel12.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.pnlHeaderDnmcLog.ResumeLayout(false);
-            this.pnlHeaderDnmcLog.PerformLayout();
-            this.panel11.ResumeLayout(false);
+            this.panel18.ResumeLayout(false);
+            this.groupBox7.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBracelets)).EndInit();
+            this.panel19.ResumeLayout(false);
+            this.panel19.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1053,12 +1341,7 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.Timer timer2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ListBox listBox2;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TabControl tabModules;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabWarehouse;
@@ -1100,12 +1383,6 @@
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Panel panel13;
         private System.Windows.Forms.Panel panel12;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.ListBox lbLivePmntsLog;
-        private System.Windows.Forms.Panel pnlHeaderDnmcLog;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label13;
@@ -1119,13 +1396,45 @@
         private System.Windows.Forms.Panel panel14;
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.ListBox lbLimitedPmntsLog;
         private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ListBox lbLivePmntsLog;
+        private System.Windows.Forms.Panel panel16;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Panel panel15;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.GroupBox groupBox6;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Panel panel17;
+        private System.Windows.Forms.Label lblVisAtCampVal;
+        private System.Windows.Forms.Label lblVisAtActVal;
+        private System.Windows.Forms.Label lblNmbrBuyersVal;
+        private System.Windows.Forms.Label lblNmbrCampersVal;
+        private System.Windows.Forms.Label lblNmbrFestAcVal;
+        private System.Windows.Forms.Panel panel18;
+        private System.Windows.Forms.GroupBox groupBox7;
+        private System.Windows.Forms.DataGridView dgvBracelets;
+        private System.Windows.Forms.Panel panel19;
+        private System.Windows.Forms.Label lblBracNmbrVal;
+        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.Label lblNmbrExpectedVal;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.TextBox tbCompleteDataDescription;
+        private System.Windows.Forms.Label lblNmbrPresentVal;
     }
 }
 
