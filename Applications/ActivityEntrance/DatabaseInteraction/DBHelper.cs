@@ -260,10 +260,14 @@ public class DBHelper
     
     private MySqlCommand VerifyData(string braceletID)
     {
-        string verifyQuery = "SELECT v.USER_ID " +
-                             "FROM visitors v " +
-                             "WHERE v.BRACELET_ID = " + "\"" + braceletID + "\"; ";
-
+        string verifyQuery = "SELECT v.USER_ID  " +
+                             "FROM location_history lh LEFT JOIN visitors v " +
+                             "ON lh.USER_ID = v.USER_ID " +
+                             "WHERE v.BRACELET_ID = " + "\"" + braceletID + "\" " +
+                             "AND lh.TIME_EXIT IS NULL " +
+                             "AND lh.ACTIVITY_ID = 1 " +
+                             "ORDER BY lh.TIME_ENTRANCE DESC " +
+                             "LIMIT 1;";
 
         MySqlCommand verifyQueryCommand = new MySqlCommand(verifyQuery, connection);
         return verifyQueryCommand;
