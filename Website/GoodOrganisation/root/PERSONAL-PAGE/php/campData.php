@@ -14,15 +14,19 @@ if (isset($_SESSION['USER_ID']))
 
         $stmt=$db_con->prepare($campQuery);
         $stmt->bindParam(":user_id",$user_id);
+          //if the query returns some data on execution
         if($stmt->execute())
         {
            if($stmt->rowCount() > 0){
              while($row=$stmt->fetch(PDO::FETCH_ASSOC))
                {
+                 //the 'extract' method give us the possibility to generate a variable corresponding to the name of the row that is fetched
+                 //later these variable are used in the html to diplay the retrieved data
                  extract($row);
                }
            }
          }
+         //clearing the data from $stmt variable for further use in other queries
        unset($stmt);
 }
 ?>

@@ -1,3 +1,4 @@
+<!--snippet of html code which is loaded dynamically with the click of the corresponding button  -->
 <?php
 session_start();
 require_once '../php/dbconfig.php';

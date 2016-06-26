@@ -16,6 +16,7 @@ if (isset($_SESSION['USER_ID']))
 
       $stmt->bindParam(":user_id", $user_id);
       $stmt->bindParam(":amount", $amount);
+      //executing query for updating the balance 
       if($stmt->execute())
       {
        echo "Successfully updated";
@@ -24,6 +25,7 @@ if (isset($_SESSION['USER_ID']))
        echo "Query Problem";
       }
     }
+    //clearing the data from $stmt variable for further use in other queries
    unset($stmt);
  }
  else echo "error no session varriable user_id ";

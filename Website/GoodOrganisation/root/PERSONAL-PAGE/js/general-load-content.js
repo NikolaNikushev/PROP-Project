@@ -10,6 +10,7 @@ $(document).ready(function() {
 
         $('#general-text').css("color", "#fce600");
         $('#general-container').css('height', 'auto');
+        //loading dynamically content with jquery 
         $('#general-container').load("ajax-loaded-content/general.php");
         $('#show-button').hide();
     });

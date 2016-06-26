@@ -4,6 +4,7 @@ if(!isset($_SESSION['USER_ID']))
 {
   header("Location: ../REGISTER/index.php");
 }
+//executing all the scripts/queries after each other and retrieving the data for the current user
 require_once 'php/dbconfig.php';
 require_once 'php/loanItemsData.php';
 require_once 'php/campData.php';
@@ -162,6 +163,7 @@ require_once 'php/acivitiesData.php';
                 <div id="scroll">
 
                   <?php
+                  //displaying all the items that are retrieved in the array
                   for ($i=0; $i < count($items); $i++) {
                   echo ' <div id="object-contrainer">
                         <div class="row">
@@ -221,6 +223,7 @@ require_once 'php/acivitiesData.php';
 
                 <div id="scroll">
                   <?php
+                  //displaying the reserved activities which are pupulated in the $activities araay
                   for ($i=0; $i < count($activities); $i++) {
 
                   echo ' <div id="object-contrainer">
