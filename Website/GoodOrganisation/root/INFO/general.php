@@ -8,6 +8,7 @@
         <link rel="stylesheet" href="../default/css/fixedmenu.css">
         <link rel="stylesheet" href="../default/css/INTEGRAL.css">
         <link rel="stylesheet" href="../default/css/footer.css">
+        <link rel="shortcut icon" type="image/x-icon" href="../default/IMAGES/favicon.ico" />
         <link rel="stylesheet" type="text/css" href="../DEFAULT/CSS/fixedmenu.css">
         <link rel="stylesheet" type="text/css" href="../DEFAULT/alertifyjs/css/alertify.min.css">
         <link rel="stylesheet" type="text/css" href="../DEFAULT/alertifyjs/css/themes/default.min.css">

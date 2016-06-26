@@ -13,6 +13,7 @@ session_start();
         <link rel="stylesheet" type="text/css" href="css/txtareaconsole.css">
         <link rel="stylesheet" type="text/css" href="../DEFAULT/sweetalert-master/sweetalert-master/dist/sweetalert.css">
         <link rel="stylesheet" type="text/css" href="../DEFAULT/CSS/fixedmenu.css">
+        <link rel="shortcut icon" type="image/x-icon" href="../default/IMAGES/favicon.ico" />
         <link rel="stylesheet" type="text/css" href="../DEFAULT/alertifyjs/css/alertify.min.css">
         <link rel="stylesheet" type="text/css" href="../DEFAULT/alertifyjs/css/themes/default.min.css">
     </head>

@@ -7,7 +7,7 @@
         <link rel="stylesheet" type="text/css" href="../DEFAULT/CSS/fixedmenu.css">
         <link rel="stylesheet" type="text/css" href="../DEFAULT/CSS/integral.css">
         <link rel="stylesheet" type="text/css" href="../DEFAULT/CSS/footer.css">
-
+        <link rel="shortcut icon" type="image/x-icon" href="../default/IMAGES/favicon.ico" />
         <link rel="stylesheet" type="text/css" href="../DEFAULT/CSS/fixedmenu.css">
         <link rel="stylesheet" type="text/css" href="../DEFAULT/alertifyjs/css/alertify.min.css">
         <link rel="stylesheet" type="text/css" href="../DEFAULT/alertifyjs/css/themes/default.min.css">

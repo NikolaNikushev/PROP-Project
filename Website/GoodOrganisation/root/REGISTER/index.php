@@ -8,6 +8,7 @@
         <link rel="stylesheet" type="text/css" href="css/main/footer.css">
         <link rel="stylesheet" type="text/css" href="../DEFAULT/CSS/INTEGRAL.css">
         <link rel="stylesheet" type="text/css" href="css/forms/forms.css">
+        <link rel="shortcut icon" type="image/x-icon" href="../default/IMAGES/favicon.ico" />
         <link rel="stylesheet" type="text/css" href="../DEFAULT/sweetalert-master/sweetalert-master/dist/sweetalert.css">
         <link rel="stylesheet" type="text/css" href="../DEFAULT/CSS/fixedmenu.css">
         <link rel="stylesheet" type="text/css" href="../DEFAULT/CSS/fixedmenu.css">

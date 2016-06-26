@@ -63,7 +63,7 @@ function InsertLeaderData($dbcon, &$campdata) {
                 "VALUES(:camp_id, :leader_id, :datearr, :datel);";
 
         $sqlsrts = "INSERT INTO serpayments (USER_ID, DATE, TYPE, PAYSUM, DESCRIPTION) " .
-                "VALUES(:leader_id,:date,'-',:sum,'Tent Reservation Payment. Group of " . $_POST['tennum'] . " .');";
+                "VALUES(:leader_id,:date,'TENT',:sum,'Tent Reservation Payment. Group of " . $_POST['tennum'] . " .');";
                 // maybe better it would be better to replace the '-' with a type of payment - like camping
         $sqlgrres = "UPDATE visitors SET visitors.BALANCE = :reducedBalance where visitors.USER_ID = :leader_id";
 

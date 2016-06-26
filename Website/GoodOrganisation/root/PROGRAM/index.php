@@ -13,6 +13,7 @@
         <link rel="stylesheet" type="text/css" href="CSS/PROG.css">
         <link rel="stylesheet" type="text/css" href="../DEFAULT/CSS/INTEGRAL.css">
         <link rel="stylesheet" type="text/css" href="../DEFAULT/CSS/FOOTER.css">
+        <link rel="shortcut icon" type="image/x-icon" href="../default/IMAGES/favicon.ico" />
         <script type="text/javascript" src="JS\program.js"></script>
         <link rel="stylesheet" type="text/css" href="../DEFAULT/CSS/fixedmenu.css">
         <link rel="stylesheet" type="text/css" href="../DEFAULT/alertifyjs/css/alertify.min.css">

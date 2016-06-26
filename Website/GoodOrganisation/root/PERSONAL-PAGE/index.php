@@ -20,6 +20,7 @@ require_once 'php/acivitiesData.php';
         <link rel="stylesheet" type="text/css" href="../DEFAULT/CSS/footer.css">
         <link rel="stylesheet" type="text/css" href="../DEFAULT/CSS/fixedmenu.css">
         <link rel="stylesheet" type="text/css" href="css/main/information-and-tipi.css">
+        <link rel="shortcut icon" type="image/x-icon" href="../default/IMAGES/favicon.ico" />
         <link rel="stylesheet" type="text/css" href="css/main/items-and-activities.css">
         <link rel="stylesheet" type="text/css" href="css/ajax-loaded-content/balance-load-content.css">
         <link rel="stylesheet" type="text/css" href="css/ajax-loaded-content/bracelet-load-content.css">

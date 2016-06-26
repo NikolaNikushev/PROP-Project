@@ -9,6 +9,7 @@
 	<link rel="stylesheet" type="text/css" href="DEFAULT/sweetalert-master/sweetalert-master/dist/sweetalert.css">
         <link rel="stylesheet" type="text/css" href="DEFAULT/alertifyjs/css/alertify.min.css">
         <link rel="stylesheet" type="text/css" href="DEFAULT/alertifyjs/css/themes/default.min.css">
+        <link rel="shortcut icon" type="image/x-icon" href="default/IMAGES/favicon.ico" />
 	<!--<script type="text/javascript" src="HOMEtest.js"></script>-->
 
 </head>

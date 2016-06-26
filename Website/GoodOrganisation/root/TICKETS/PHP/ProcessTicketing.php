@@ -26,7 +26,7 @@ function RecordPayment($dbcon, &$campdata) {
         $dbcon->beginTransaction();
         $newBal = trim($_POST['ybal']) - trim($_POST['price']);
         $sqlsrts = "INSERT INTO serpayments (USER_ID, DATE, TYPE, PAYSUM, DESCRIPTION) " .
-                "VALUES(:user_id,:date, '-',:sum,'Ticket Payment');";
+                "VALUES(:user_id,:date, 'TICKET',:sum,'Ticket Payment');";
 
         $sqlgVisUpd = "UPDATE visitors "
                 . "SET visitors.BALANCE = :reducedBalance, "

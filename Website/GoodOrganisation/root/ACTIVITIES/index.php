@@ -17,6 +17,7 @@ require_once 'php/getPersonalActivities.php';
         <!-- main stuff -->
         <link rel="stylesheet" type="text/css" href="CSS/activities.css">
         <link rel="stylesheet" type="text/css" href="../DEFAULT/CSS/INTEGRAL.css">
+        <link rel="shortcut icon" type="image/x-icon" href="../default/IMAGES/favicon.ico" />
         <link rel="stylesheet" type="text/css" href="../DEFAULT/CSS/FOOTER.css">
         <link rel="stylesheet" type="text/css" href="../DEFAULT/sweetalert-master/sweetalert-master/dist/sweetalert.css">
         <link rel="stylesheet" type="text/css" href="../DEFAULT/CSS/fixedmenu.css">
