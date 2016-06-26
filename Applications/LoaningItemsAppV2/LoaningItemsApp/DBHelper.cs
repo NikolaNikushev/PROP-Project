@@ -40,20 +40,23 @@ namespace LoaningItemsApp
 
                 int priceperday;
                 string name;
-                bool loaned;
+                int loaned;
                 DateTime returndate;
+                DateTime loandate;
+                int article_id;
 
                 while (reader.Read())
                 {
-
+                    article_id = Convert.ToInt32(reader["ARTICLE_ID"]);
                     priceperday = Convert.ToInt32(reader["PRICEDAY"]);
 
                     name = Convert.ToString(reader["NAME"]);
 
-                    loaned = Convert.ToBoolean(reader["LoanStatus"]);
+                    loaned = Convert.ToInt32(reader["LoanStatus"]);
                     returndate = Convert.ToDateTime(reader["DUEDATE"]);
+                    loandate = Convert.ToDateTime(reader["STARTDATE"]);
 
-                    temp.Add(new Item(name, loaned,priceperday,returndate));
+                    temp.Add(new Item(article_id,name, loaned,priceperday,returndate, loandate));
                 }
             }
             catch (Exception ex)
@@ -141,7 +144,65 @@ namespace LoaningItemsApp
                 connection.Close();
             }
         }
-        
+        public void SetStartDate(int articleid, DateTime startDate)
+        {
+            
+            
+            String sql = "UPDATE loanitems SET STARTDATE = " + "NOW()" + " WHERE ARTICLE_ID = " + articleid+";";
+            MySqlCommand command = new MySqlCommand(sql, connection);
+            try
+            {
+                connection.Open();
+                MySqlDataReader reader = command.ExecuteReader();
+            }
+            catch
+            {
+                MessageBox.Show("Error updating database");
+            }
+            finally
+            {
+                connection.Close();
+            }
+        }
+        public void SetLoanStatus(int articleid)
+        {
+            string sql = "UPDATE loanitems SET LoanStatus = 1 " +  "WHERE ARTICLE_ID = " + articleid + ";";
+            MySqlCommand command = new MySqlCommand(sql, connection);
+            try
+            {
+                connection.Open();
+                MySqlDataReader reader = command.ExecuteReader();
+
+            }
+            catch (Exception exc)
+            {
+                MessageBox.Show(exc.ToString());
+            }
+            finally
+            {
+                connection.Close();
+            }
+        }
+        public void SetLoanStatusToFalse(int articleid)
+        {
+            string sql = "UPDATE loanitems SET LoanStatus = 0 " + "WHERE ARTICLE_ID = " + articleid + ";";
+            MySqlCommand command = new MySqlCommand(sql, connection);
+            try
+            {
+                connection.Open();
+                MySqlDataReader reader = command.ExecuteReader();
+
+            }
+            catch (Exception exc)
+            {
+                MessageBox.Show(exc.ToString());
+            }
+            finally
+            {
+                connection.Close();
+            }
+        }
+
 
 
     }

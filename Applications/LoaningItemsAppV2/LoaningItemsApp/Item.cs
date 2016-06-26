@@ -8,10 +8,30 @@ namespace LoaningItemsApp
 {
     class Item
     {
+        private int article_id;
         private string name;
-        private bool loaned;
+        private int loaned;
         private int priceperday;
         private DateTime returndate;
+        private DateTime loandate;
+        public DateTime Loandate
+        
+           
+        {
+            get { return loandate; }
+            set
+            {
+                loandate = value;
+            }
+        }
+        public int Article_id
+        {
+            get { return article_id; }
+            set
+            {
+                article_id = value;
+            }
+        }
 
         public string Name
         {
@@ -22,7 +42,7 @@ namespace LoaningItemsApp
             }
 
         }
-        public bool Loaned
+        public int Loaned
         {
             get
             {
@@ -55,22 +75,24 @@ namespace LoaningItemsApp
                 returndate = value;
             }
         }
-        public Item(string name, bool loaned, int priceperday, DateTime returndate)
+        public Item(int article_id, string name, int loaned, int priceperday, DateTime returndate, DateTime loandate)
         {
             this.Name = name;
             this.Loaned = loaned;
             this.Priceperday = priceperday;
             this.Returndate = returndate;
+            this.Loandate = loandate;
+            this.Article_id = article_id;
         }
         public string AsString()
         {
             string s = "Name of article: " + Name + " Price per day: " + Priceperday.ToString();
-            if(Loaned== true)
+            if(Loaned== 1)
             {
                 s += " Item is already loaned out" + " and will be returned on: " + Returndate.ToString();
                 return s;
             }
-            else if(Loaned==false)
+            else if(Loaned==0)
             {
                 s += " Item is available";
                 return s;
