@@ -6,8 +6,9 @@
 	<link rel="stylesheet" type="text/css" href="HOME/header.css">
 	<link rel="stylesheet" type="text/css" href="HOME/homepage.css">
 	<link rel="stylesheet" type="text/css" href="DEFAULT/CSS/footer.css">
-	<link rel="stylesheet" type="text/css" href="../DEFAULT/sweetalert-master/sweetalert-master/dist/sweetalert.css">
-
+	<link rel="stylesheet" type="text/css" href="DEFAULT/sweetalert-master/sweetalert-master/dist/sweetalert.css">
+        <link rel="stylesheet" type="text/css" href="DEFAULT/alertifyjs/css/alertify.min.css">
+        <link rel="stylesheet" type="text/css" href="DEFAULT/alertifyjs/css/themes/default.min.css">
 	<!--<script type="text/javascript" src="HOMEtest.js"></script>-->
 
 </head>
@@ -111,7 +112,7 @@
 			}
 		});
 	</script>
-
+<script src="../DEFAULT/alertifyjs/alertify.js"></script>
 </body>
 
 </html>

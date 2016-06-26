@@ -27,6 +27,9 @@ if ($count > 0) {
         <link rel="stylesheet" type="text/css" href="CSS/banner.css">
         <link rel="stylesheet" type="text/css" href="css/txtareaconsole.css">
         <link rel="stylesheet" type="text/css" href="../DEFAULT/sweetalert-master/sweetalert-master/dist/sweetalert.css">
+        <link rel="stylesheet" type="text/css" href="../DEFAULT/CSS/fixedmenu.css">
+        <link rel="stylesheet" type="text/css" href="../DEFAULT/alertifyjs/css/alertify.min.css">
+        <link rel="stylesheet" type="text/css" href="../DEFAULT/alertifyjs/css/themes/default.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
         <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
 

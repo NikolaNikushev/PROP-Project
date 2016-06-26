@@ -1,4 +1,5 @@
 <?php
+//require_once '../../default/phpfunc/dbconfig.php';
 $stmt=$db_con->prepare( 'SELECT LPAD(a.activity_id,6,\'0\') as actcode,a.activity_id, a.activityname, 
                                 a.description, a.date, 
                                 cast((a.totalplaces/2 - IFNULL(av.reservedplaces,0))as UNSIGNED) as availableplaces, 

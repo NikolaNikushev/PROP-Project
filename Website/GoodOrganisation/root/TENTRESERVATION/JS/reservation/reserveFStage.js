@@ -13,7 +13,7 @@ $(document).ready(function () {
             //var password = $("#user_password").val();
             //var partialdatastring = 'email='+ email 
             //      + '&password='+ password;
-            alert(dataMain)
+            //alert(dataMain)
             $.ajax({
                 type: 'POST',
                 url: 'php/loginLeader.php',
