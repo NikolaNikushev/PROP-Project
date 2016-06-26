@@ -23,7 +23,7 @@ session_start();
 
             </div>
         </div>
-        <div id="header" class="nav">
+        <div id="header" class="nav scrolled">
             <?php include '../DEFAULT/PAGEPARTS/Header.php'; ?>
         </div>
         <div id="contents">

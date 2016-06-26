@@ -34,7 +34,7 @@ if ($count > 0) {
     </head>
 
     <body>
-        <div id="header" class="scrolled container-fluid">
+        <div id="header" class=" nav scrolled container-fluid">
             <img id="logo" class="logo" src="images/logo.png"/>
 <?php include '../DEFAULT/PAGEPARTS/HeaderLinks.php'; ?>
         </div>

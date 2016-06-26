@@ -124,52 +124,6 @@ body {
     border-bottom: 1px solid #FFD105;
 }
 
-.nav {
-	width:100%;
-	height:47px;
-	background-color:green;
-	display:inline-block;
-	position:fixed;
-	background-image: none;
-	background-color:#060709;
-        
-}
-.nav img{
-	height:100%;
-	width:2.5%;
-	float:left;
-}
-.nav ul{
-	float:left;
-	list-style-type: none;
-    margin: 0;
-	padding:0;
-    /*overflow: hidden;*/
-	background-color: #060709;
-	width:97%;
-	height:100%;
-        border-bottom: 1px solid #FFD105;
-
-}
-
-.nav ul li{
-    float: left;
-	margin-left:5%;
-	width:12%;
-}
-.nav ul li a{
-	display: block;
-    text-align: center;
-    padding: 8px 16px;
-    text-decoration: none;
-	color : rgb(215, 225, 242);
-	font-size: 16pt;
-}
-.nav ul li a:hover {
-    background-color: #111;
-}
-
-
 
 .dropbtn {
 
