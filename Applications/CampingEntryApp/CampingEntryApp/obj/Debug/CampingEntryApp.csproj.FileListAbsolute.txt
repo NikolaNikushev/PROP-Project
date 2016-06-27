@@ -26,3 +26,14 @@ D:\Projects\FONTYSPRO\PROP-Project\Applications\CampingEntryApp\CampingEntryApp\
 D:\Projects\FONTYSPRO\PROP-Project\Applications\CampingEntryApp\CampingEntryApp\bin\Debug\Phidget21.NET.dll
 D:\Projects\FONTYSPRO\PROP-Project\Applications\CampingEntryApp\CampingEntryApp\bin\Debug\DBConnectionDll.pdb
 D:\Projects\FONTYSPRO\PROP-Project\Applications\CampingEntryApp\CampingEntryApp\bin\Debug\Phidget21.NET.xml
+D:\School\ProP\PROP-Project\Applications\CampingEntryApp\CampingEntryApp\bin\Debug\CampingEntryApp.exe
+D:\School\ProP\PROP-Project\Applications\CampingEntryApp\CampingEntryApp\bin\Debug\CampingEntryApp.pdb
+D:\School\ProP\PROP-Project\Applications\CampingEntryApp\CampingEntryApp\bin\Debug\DBConnectionDll.dll
+D:\School\ProP\PROP-Project\Applications\CampingEntryApp\CampingEntryApp\bin\Debug\MySql.Data.dll
+D:\School\ProP\PROP-Project\Applications\CampingEntryApp\CampingEntryApp\bin\Debug\Phidget21.NET.dll
+D:\School\ProP\PROP-Project\Applications\CampingEntryApp\CampingEntryApp\bin\Debug\DBConnectionDll.pdb
+D:\School\ProP\PROP-Project\Applications\CampingEntryApp\CampingEntryApp\bin\Debug\Phidget21.NET.xml
+D:\School\ProP\PROP-Project\Applications\CampingEntryApp\CampingEntryApp\obj\Debug\CampingEntryApp.csprojResolveAssemblyReference.cache
+D:\School\ProP\PROP-Project\Applications\CampingEntryApp\CampingEntryApp\obj\Debug\CampingEntryApp.Form1.resources
+D:\School\ProP\PROP-Project\Applications\CampingEntryApp\CampingEntryApp\obj\Debug\CampingEntryApp.Properties.Resources.resources
+D:\School\ProP\PROP-Project\Applications\CampingEntryApp\CampingEntryApp\obj\Debug\CampingEntryApp.csproj.GenerateResource.Cache

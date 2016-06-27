@@ -15,14 +15,14 @@ namespace ExitApp
 
         public DBHelper()
         {
-            String connectionInfo = "server=localhost;" +
-                                    "database=propdbtest;" +
-                                    "user id=root;" +
-                                    "password=;" +
-                                    "connect timeout=30;" +
-                                    "convert zero datetime=True";
+            //String connectionInfo = "server=localhost;" +
+            //                        "database=propdbtest;" +
+            //                        "user id=root;" +
+            //                        "password=;" +
+            //                        "connect timeout=30;" +
+            //                        "convert zero datetime=True";
 
-            connection = new MySqlConnection(connectionInfo);
+            connection = new MySqlConnection(DBConnectionDll.Connection.connectionInfo);
         }
         //public int CheckIfPaid(string bracelet_id)
         //{

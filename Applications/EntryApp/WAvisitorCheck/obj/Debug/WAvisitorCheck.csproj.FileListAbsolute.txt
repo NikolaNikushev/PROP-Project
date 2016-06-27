@@ -31,3 +31,5 @@ E:\Dropbox\workspace\Apps\PROP-Project\Applications\EntryApp\WAvisitorCheck\obj\
 E:\Dropbox\workspace\Apps\PROP-Project\Applications\EntryApp\WAvisitorCheck\obj\Debug\WAvisitorCheck.csproj.GenerateResource.Cache
 E:\Dropbox\workspace\Apps\PROP-Project\Applications\EntryApp\WAvisitorCheck\bin\Debug\Phidget21.NET.dll
 D:\School\ProP\PROP-Project\Applications\EntryApp\WAvisitorCheck\obj\Debug\WAvisitorCheck.Form1.resources
+D:\School\ProP\PROP-Project\Applications\EntryApp\WAvisitorCheck\bin\Debug\DBConnectionDll.dll
+D:\School\ProP\PROP-Project\Applications\EntryApp\WAvisitorCheck\bin\Debug\DBConnectionDll.pdb
