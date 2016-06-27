@@ -56,6 +56,10 @@ namespace BraceletManagement
             get;
             private set;
         }
+        public List<Payment> ListPayments
+        {
+            get; private set;
+        }
         private DBHelper myDBHelper = new DBHelper();
 
         //--------Constructors:
@@ -93,6 +97,7 @@ namespace BraceletManagement
             this.Code = secCode;
             this.ChipNumber = chipNum;
             this.Status = (StatusTypes.visitStatus)visitStatus;
+            this.ListPayments = new List<Payment>();
 
             if (chipNum != "NULL")
             {
@@ -115,7 +120,55 @@ namespace BraceletManagement
             return this.myDBHelper.UpdateVisitorData(this.UserId, em, fn, ln);
         }
 
+        public void FillPayments()
+        {
+            this.ListPayments = this.myDBHelper.GetPaymentLog(this.UserId);
+        }
+
     }
+
+    public class Payment
+    {// used to store the data about the payments done by the visitor
+        //DATE as PAYTIME, TYPE as REASON, PAYSUM as AMOUNT, DESCRIPTION
+        public DateTime Paytime
+        {
+            get; private set;
+        }
+        public string Reason
+        {
+            get; private set;
+        }
+        public int Amount
+        {
+            get; private set;
+        }
+        public string Desription
+        {
+            get; private set;
+        }
+        /// <summary>
+        /// used to store the data about all the payments done by the visitor
+        /// including shops and services
+        /// </summary>
+        /// <param name="paytime"></param>
+        /// <param name="reason"></param>
+        /// <param name="amount"></param>
+        /// <param name="desription"></param>
+        public Payment(DateTime paytime, string reason, int amount, string desription)
+        {
+            this.Amount = amount;
+            this.Desription = desription;
+            this.Paytime = paytime;
+            this.Reason = reason;
+        }
+
+        public override string ToString()
+        {
+            return this.Paytime + ": " + this.Amount + System.Globalization.NumberFormatInfo.CurrentInfo.CurrencySymbol + " at " + this.Reason + "; " + this.Desription;
+        }
+
+    }
+
 
     public class EmailClashException : Exception
     {

@@ -1,14 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using Phidgets;
-using Phidgets.Events;
 
 namespace BraceletManagement
 {
@@ -16,7 +7,6 @@ namespace BraceletManagement
     {
         private VisitorData myVisitor;
         private DBHelper myDBHelper;
-        private bool foundVisitor;
 
 
         private void UpdateVisitorInfo()
@@ -35,7 +25,6 @@ namespace BraceletManagement
             InitializeComponent();
             cmbxSearchType.Items.Clear();
             myDBHelper = new DBHelper();
-            this.foundVisitor = false;
             this.gbPayments.Enabled = false;
             this.gbVisitorInfo.Enabled = false;
             // solution from StackOverflow
@@ -53,7 +42,6 @@ namespace BraceletManagement
                 myVisitor = myDBHelper.getVisitorData((StatusTypes.SearchType)this.cmbxSearchType.SelectedItem, this.tbSearchVisitorText.Text);
                 if (myVisitor != null)
                 {
-                    foundVisitor = true;
                     // replaced by a method
                     UpdateVisitorInfo();
                     this.lbSearchLog.Items.Insert(0, System.DateTime.Now + " Search found visitor " + this.myVisitor.FirstName + " " + this.myVisitor.LastName);
@@ -65,6 +53,7 @@ namespace BraceletManagement
                     this.lbSearchLog.Items.Insert(0, System.DateTime.Now + " Search returned no visitors");
                     this.gbPayments.Enabled = false;
                     this.gbVisitorInfo.Enabled = false;
+                    this.lbPaymentLog.Items.Clear();
                 }
             }
             else
@@ -72,6 +61,7 @@ namespace BraceletManagement
                 this.lbSearchLog.Items.Insert(0, System.DateTime.Now + " Search unsuccessful");
                 this.gbPayments.Enabled = false;
                 this.gbVisitorInfo.Enabled = false;
+                this.lbPaymentLog.Items.Clear();
             }
 
         }
@@ -86,6 +76,40 @@ namespace BraceletManagement
             else
             {
                 this.lbActivityLog.Items.Insert(0, System.DateTime.Now + " Something went wrong, couldn't update account");
+            }
+        }
+
+        private void btnGetPaymentsData_Click(object sender, EventArgs e)
+        {
+            if(myVisitor!=null)
+            {
+                this.myVisitor.FillPayments();
+                this.lbPaymentLog.Items.AddRange(this.myVisitor.ListPayments.ToArray());
+            }
+        }
+
+        private void btnSavePaymentData_Click(object sender, EventArgs e)
+        {
+            this.sfdPaymentLogExport.Title = "Save your text";
+            //saveFileDialog1.CheckFileExists = true;
+            //saveFileDialog1.CheckPathExists = true;
+            // sets a filter for the files displayed in the dialog
+            this.sfdPaymentLogExport.Filter = "Text files (*.txt)|*.txt|All files (*.*)|*.*";
+            this.sfdPaymentLogExport.DefaultExt = "txt";
+            this.sfdPaymentLogExport.RestoreDirectory = true;
+            String FilePath = "";
+            String[] paymentLines = new String[this.myVisitor.ListPayments.Count];
+            int i = 0;
+            foreach (Payment p in this.myVisitor.ListPayments)
+            {
+                paymentLines[i] = p.ToString();
+                i++;
+            }
+
+            if (this.sfdPaymentLogExport.ShowDialog() == DialogResult.OK)
+            {
+                FilePath = this.sfdPaymentLogExport.FileName;
+                TextFileHelper.TextFileHelper.SaveFile(FilePath, paymentLines);
             }
         }
     }

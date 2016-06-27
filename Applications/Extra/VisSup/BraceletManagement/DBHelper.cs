@@ -143,7 +143,7 @@ namespace BraceletManagement
                             chipNum = (string)reader["BRACELET_ID"];
                         }
                         string seccode = "";
-                        if(reader["SECCODE"] == DBNull.Value)
+                        if (reader["SECCODE"] == DBNull.Value)
                         {
                             seccode = "N/A";
                         }
@@ -226,7 +226,7 @@ namespace BraceletManagement
 
                 command.CommandText = sql;
                 int numberOfRowsAffected = command.ExecuteNonQuery();
-                if(numberOfRowsAffected!=1)
+                if (numberOfRowsAffected != 1)
                 {
                     throw new Exception("Something went wrong");
                 }
@@ -260,11 +260,73 @@ namespace BraceletManagement
                 connection.Close();
             }
             return methodResult;
-
-
         }
-        
+
+
+        public List<Payment> GetPaymentLog(int userId)
+        {
+            /// SELECT DATE as PAYTIME, TYPE as REASON, PAYSUM as AMOUNT, DESCRIPTION
+            /// from serpayments WHERE USER_ID = 1123
+            /// UNION
+            /// SELECT stp.PURCHASETIME as PAYTIME, s.STORENAME as REASON, stp.TOTALPRICE as SPENT, "Payment in the store"
+            /// from storepayment stp JOIN
+            /// stores s
+            /// on stp.STORE_ID = s.store_id
+            /// WHERE USER_ID = 1124 order by DATE
+            List<Payment> lp = new List<Payment>();
+
+            // removing the whitespaces from user input
+
+
+            // We need to think of some ways to prevent the sql injections and other messed up user entries
+
+
+            string sql = "SELECT DATE as PAYTIME, TYPE as REASON, PAYSUM as AMOUNT, DESCRIPTION" +
+            " from serpayments WHERE USER_ID = " + userId +
+            " UNION " +
+            "SELECT stp.PURCHASETIME as PAYTIME, s.STORENAME as REASON, stp.TOTALPRICE as SPENT, 'Payment in the store' " +
+            " from storepayment stp JOIN " +
+            " stores s " +
+            " on stp.STORE_ID = s.store_id " +
+            " WHERE USER_ID = " + userId +
+            " order by PAYTIME ;";
+
+
+
+            MySqlCommand command = new MySqlCommand(sql, connection);
+
+
+            try
+            {
+                connection.Open();
+                MySqlDataReader reader = command.ExecuteReader();
+                while (reader.Read())
+                {
+                    DateTime paytime = Convert.ToDateTime(reader["PAYTIME"]);
+                    string reason = (string)reader["REASON"];
+                    int amount = Convert.ToInt32(reader["AMOUNT"]);
+                    string desc = (string)reader["DESCRIPTION"];
+                    //valueToReturn = new VisitorData((int)reader["USER_ID"], (string)reader["EMAIL"], (string)reader["FNAME"], (string)reader["LNAME"],
+                    //                        seccode, chipNum, (int)reader["STATUS"]);
+
+                    lp.Add(new Payment(paytime, reason, amount, desc));
+                }
+
+            }
+            catch (Exception ex)
+            {
+                //AutoClosingMessageBox.Show(ex.ToString(), "Oups!", messageShowTime);
+                MessageBox.Show(ex.ToString(), "Oups!");
+            }
+            finally
+            {
+                connection.Close();
+            }
+
+            return lp;
+        }
 
 
     }
+
 }
