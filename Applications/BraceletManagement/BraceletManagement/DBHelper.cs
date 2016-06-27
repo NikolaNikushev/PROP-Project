@@ -18,14 +18,14 @@ namespace BraceletManagement
         //----------Constructors:
         public DBHelper()
         {
-            String connectionInfo = "server=localhost;" +
-                                    "database=propdbtest;" +
-                                    "user id=root;" +
-                                    "password=;" +
-                                    "connect timeout=30;" +
-                                    "convert zero datetime=True";
+            //String connectionInfo = "server=localhost;" +
+            //                        "database=propdbtest;" +
+            //                        "user id=root;" +
+            //                        "password=;" +
+            //                        "connect timeout=30;" +
+            //                        "convert zero datetime=True";
 
-            connection = new MySqlConnection(connectionInfo);
+            connection = new MySqlConnection(DBConnectionDll.Connection.connectionInfo);
         }
         //----------Methods:
 
@@ -142,8 +142,17 @@ namespace BraceletManagement
                         {
                             chipNum = (string)reader["BRACELET_ID"];
                         }
-                        valueToReturn = new VisitorData((string)reader["EMAIL"], (string)reader["FNAME"], (string)reader["LNAME"],
-                                                (string)reader["SECCODE"], chipNum, (int)reader["STATUS"]);
+                        string seccode = "";
+                        if (reader["SECCODE"] == DBNull.Value)
+                        {
+                            seccode = "N/A";
+                        }
+                        else
+                        {
+                            seccode = (string)reader["SECCODE"];
+                        }
+                        valueToReturn = new VisitorData((int)reader["USER_ID"], (string)reader["EMAIL"], (string)reader["FNAME"], (string)reader["LNAME"],
+                                                seccode, chipNum, (int)reader["STATUS"]);
                     }
 
 

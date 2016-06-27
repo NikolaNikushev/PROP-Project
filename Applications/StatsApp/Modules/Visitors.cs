@@ -1,11 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
 using System.Windows.Forms;
-using System.Windows.Forms.DataVisualization.Charting;
 
 namespace Modules
 {
@@ -13,12 +9,23 @@ namespace Modules
     {
         /// <summary>
         /// Executed at the creation of the controller - in this case at the opening of a tab visitors
+        /// uses a datagridview, label for bracelet number and two groups of labels as parameters
         /// </summary>
         /// <param name="dgv"></param>
         /// <param name="lblBracNumVal"></param>
-        public VisitorsCntrl(DataGridView dgv, Label lblBracNumVal, Label[] lbls = null)
+        /// <param name="lblsVisGroup"></param>
+        /// <param name="lblsCBGroup"></param>
+        public VisitorsCntrl(DataGridView dgv, Label lblBracNumVal, Label[] lblsVisGroup = null, Label[] lblsCBGroup = null)
         {
             VisitorsCntrl.PopulateBraceletSection(dgv, lblBracNumVal);
+            if (lblsVisGroup != null)
+            {
+                VisitorsCntrl.PopulateVisitorGroupData(lblsVisGroup);
+            }
+            if (lblsCBGroup != null)
+            {
+                VisitorsCntrl.PopulateCampersAndBuyersData(lblsCBGroup);
+            }
         }
 
         /// <summary>
@@ -41,7 +48,7 @@ namespace Modules
                 dgv.Columns.Add("colID", "ID");
                 dgv.Columns.Add("colStatus", "Status");
             }
-            dgv.Width = dgv.Columns.GetColumnsWidth(DataGridViewElementStates.None);
+            dgv.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             foreach (Bracelet b in lb)
             {
                 dgv.Rows.Add(b.Id, b.Status);
@@ -49,9 +56,45 @@ namespace Modules
         }
 
 
-        static public void PopulateVisitorGroupData()
-        {
 
+        /// <summary>
+        /// Populates the data abou the current state of different visitor groups
+        /// Takes an array of labels as a parameter, from which 0th label - for present
+        /// 1st label - for expected
+        /// 2nd label - fro total
+        /// </summary>
+        /// <param name="lbls"></param>
+        static public void PopulateVisitorGroupData(Label[] lbls)
+        {
+            int nmbrTotal, nmbrExp, nmbrPres;
+            VisitorsDb.GetNmbrOfVistrPerStatus(out nmbrTotal, out nmbrExp, out nmbrPres);
+            try
+            {
+                lbls[0].Text = nmbrPres.ToString();
+                lbls[1].Text = nmbrExp.ToString();
+                lbls[2].Text = nmbrTotal.ToString();
+            }
+            catch
+            {
+                Console.WriteLine("okay, didn't work");
+            }
+        }
+
+
+        static public void PopulateCampersAndBuyersData(Label[] lbls)
+        {
+            int nmbrWithCamps, nmbrGroups, nmbrBuyers;
+            VisitorsDb.GetNmbrOfCampersAndBuyers(out nmbrWithCamps, out nmbrGroups, out nmbrBuyers);
+            try
+            {
+                lbls[0].Text = nmbrWithCamps.ToString();
+                lbls[1].Text = nmbrGroups.ToString();
+                lbls[2].Text = nmbrBuyers.ToString();
+            }
+            catch
+            {
+                Console.WriteLine("okay, didn't work");
+            }
         }
 
     }
@@ -67,14 +110,14 @@ namespace Modules
         static public List<Bracelet> GetAllBracelets(out int nmbr)
         {
             String sql = "SELECT * FROM rfids";
-            MySqlCommand command = new MySqlCommand(sql, Connection.connection);
+            MySqlCommand command = new MySqlCommand(sql, DBConnectionDll.Connection.connection);
             nmbr = 0;
             List<Bracelet> temp;
             temp = new List<Bracelet>();
 
             try
             {
-                Connection.connection.Open();
+                DBConnectionDll.Connection.connection.Open();
                 MySqlDataReader reader = command.ExecuteReader();
                 // data to build a new product upon 
                 string id;
@@ -93,7 +136,7 @@ namespace Modules
                     {
                         Console.WriteLine("damn");
                     }
-                    
+
                     temp.Add(new Bracelet(id, status));
                 }
             }
@@ -103,7 +146,7 @@ namespace Modules
             }
             finally
             {
-                Connection.connection.Close();
+                DBConnectionDll.Connection.connection.Close();
             }
             return temp;
         }
@@ -127,17 +170,17 @@ namespace Modules
             /// as PresVis 
             /// From visitors
             /// 
-            String sql = "SELECT count(*) as TotalVis"+
-                ", (Select count(*) from visitors where PAID = 1) as ExpVis"+
-                ", (Select count(*) from visitors where PAID = 1 AND STATUS = 1) as PresVis"+
+            String sql = "SELECT count(*) as TotalVis" +
+                ", (Select count(*) from visitors where PAID = 1) as ExpVis" +
+                ", (Select count(*) from visitors where PAID = 1 AND STATUS = 1) as PresVis" +
                 " From visitors";
-            MySqlCommand command = new MySqlCommand(sql, Connection.connection);
+            MySqlCommand command = new MySqlCommand(sql, DBConnectionDll.Connection.connection);
             List<Bracelet> temp;
             temp = new List<Bracelet>();
 
             try
             {
-                Connection.connection.Open();
+                DBConnectionDll.Connection.connection.Open();
                 MySqlDataReader reader = command.ExecuteReader();
 
                 while (reader.Read())
@@ -153,9 +196,49 @@ namespace Modules
             }
             finally
             {
-                Connection.connection.Close();
+                DBConnectionDll.Connection.connection.Close();
             }
         }
+
+        static public void GetNmbrOfCampersAndBuyers(out int nmbrWithCamps, out int nmbrGroups, out int nmbrBuyers)
+        {
+            nmbrWithCamps = 0;
+            nmbrGroups = 0;
+            nmbrBuyers = 0;
+            /// SELECT COUNT(*) as Campers, 
+            /// COUNT(DISTINCT CAMPING_ID) as nmbrOfGroups
+            /// FROM `visitors` where CAMPING_ID is not null;
+            /// 
+            String sql = "SELECT COUNT(*) as Campers, " +
+                         "COUNT(DISTINCT CAMPING_ID) as nmbrOfGroups, " +
+                         "(SELECT COUNT(DISTINCT USER_ID) from storepayment) as Buyers " +
+                         "FROM `visitors` where CAMPING_ID is not null;";
+            MySqlCommand command = new MySqlCommand(sql, DBConnectionDll.Connection.connection);
+            List<Bracelet> temp;
+            temp = new List<Bracelet>();
+
+            try
+            {
+                DBConnectionDll.Connection.connection.Open();
+                MySqlDataReader reader = command.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    int.TryParse(reader["Campers"].ToString(), out nmbrWithCamps);
+                    int.TryParse(reader["nmbrOfGroups"].ToString(), out nmbrGroups);
+                    int.TryParse(reader["Buyers"].ToString(), out nmbrBuyers);
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            finally
+            {
+                DBConnectionDll.Connection.connection.Close();
+            }
+        }
+
     }
 
     /// <summary>

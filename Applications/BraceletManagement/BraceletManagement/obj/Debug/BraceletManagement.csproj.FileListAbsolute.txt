@@ -19,3 +19,5 @@ E:\Dropbox\workspace\Apps\PROP-Project\Applications\BraceletManagement\BraceletM
 E:\Dropbox\workspace\Apps\PROP-Project\Applications\BraceletManagement\BraceletManagement\obj\Debug\BraceletManagement.Form1.resources
 E:\Dropbox\workspace\Apps\PROP-Project\Applications\BraceletManagement\BraceletManagement\obj\Debug\BraceletManagement.Properties.Resources.resources
 E:\Dropbox\workspace\Apps\PROP-Project\Applications\BraceletManagement\BraceletManagement\obj\Debug\BraceletManagement.csproj.GenerateResource.Cache
+D:\Projects\FONTYSPRO\PROP-Project\Applications\BraceletManagement\BraceletManagement\bin\Debug\DBConnectionDll.dll
+D:\Projects\FONTYSPRO\PROP-Project\Applications\BraceletManagement\BraceletManagement\bin\Debug\DBConnectionDll.pdb

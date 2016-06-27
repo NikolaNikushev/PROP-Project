@@ -30,6 +30,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DBConnectionDll">
+      <HintPath>..\..\DBConnectionDll\DBConnectionDll\bin\Debug\DBConnectionDll.dll</HintPath>
+    </Reference>
     <Reference Include="MySql.Data">
       <HintPath>..\..\..\..\..\Programs\CSharp\PCSFONTYS\PCS3\Week6\MySql.Data.dll</HintPath>
     </Reference>
@@ -45,8 +48,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <Compile Include="Connection.cs" />
     <Compile Include="Finance.cs" />
+=======
+>>>>>>> c059303d3ba61fb6eeb25c2953de7e31ed3f451c
     <Compile Include="Product.cs" />
     <Compile Include="Visitors.cs" />
     <Compile Include="Warehouse.cs" />

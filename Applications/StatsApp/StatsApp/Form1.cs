@@ -24,7 +24,9 @@ namespace StatsApp
 
             label2.Text = dbh.GetNrCurrentVisitors().ToString();
             timer1.Start();
-            VisitorsCntrl VCS = new VisitorsCntrl(this.dgvBracelets, this.lblBracNmbrVal);
+            
+            this.VisitorCntrlrInit();
+            this.tmrVisCDataPrt.Start();
 
             timer2.Interval = 5000 /*(uncomment for an hourly interval * 60 * 60 */;
             time = System.DateTime.Now.Hour;
@@ -32,6 +34,18 @@ namespace StatsApp
 
 
         }
+
+        /// <summary>
+        /// Used to initialize the visitor controller - i.e to populate all the data again
+        /// </summary>
+        private void VisitorCntrlrInit()
+        {
+            // sending labels as parameters is dumb - I started to suppose (dmitry)
+            Label[] labelUsStatGroup = { this.lblNmbrPresentVal, this.lblNmbrExpectedVal, this.lblNmbrFestAcVal };
+            Label[] labelCampersAndBuyersGroup = { this.lblNmbrCampersVal, this.lblNmbrCampingGroupsVal, this.lblNmbrBuyersVal };
+            VisitorsCntrl VSC = new VisitorsCntrl(this.dgvBracelets, this.lblBracNmbrVal, labelUsStatGroup, labelCampersAndBuyersGroup);
+        }
+
         private void timer1_Tick(object sender, EventArgs e)
         {
             label2.Text = dbh.GetNrCurrentVisitors().ToString();
@@ -136,13 +150,18 @@ namespace StatsApp
             switch (tabModules.SelectedIndex)
             {
                 case 0: //visitors
-                    VisitorsCntrl VSC = new VisitorsCntrl(this.dgvBracelets, this.lblBracNmbrVal);
+                    this.VisitorCntrlrInit();
+                    this.tmrVisCDataPrt.Start();
                     break;
                 case 1: //warehouse
+                    this.tmrVisCDataPrt.Stop();
                     // just so that the arguments fit
                     Label[] lbls = { this.lblTotPurchVal, this.lblGrossAmPaidVal, this.lblHotHourVal };
                     WareHouseCntrl WHC = new WareHouseCntrl(this.cmbStorageSelect, this.cmbSelectStoreForHistory, this.lbTopPopProd, lbls);
                     //WareHouseCntrl.PopulateComboBox(this.cmbStorageSelect);
+                    break;
+                case 2: //finance
+                    this.tmrVisCDataPrt.Stop();
                     break;
             }
         }
@@ -181,9 +200,25 @@ namespace StatsApp
             }
         }
 
-        private void button5_Click(object sender, EventArgs e)
+        
+        // timer refresh
+        private void tmrVisCDataPrt_Tick(object sender, EventArgs e)
         {
+            Label[] labelUsStatGroup = { this.lblNmbrPresentVal, this.lblNmbrExpectedVal, this.lblNmbrFestAcVal };
+            Label[] labelCampersAndBuyersGroup = { this.lblNmbrCampersVal, this.lblNmbrCampingGroupsVal, this.lblNmbrBuyersVal };
+            VisitorsCntrl.PopulateCampersAndBuyersData(labelCampersAndBuyersGroup);
+            VisitorsCntrl.PopulateVisitorGroupData(labelUsStatGroup);
+            
+        }
+        // force refresh
+        private void btnVisRefresh_Click(object sender, EventArgs e)
+        {
+            this.VisitorCntrlrInit();
+        }
 
+        private void btnBracRefresh_Click(object sender, EventArgs e)
+        {
+            VisitorsCntrl.PopulateBraceletSection(this.dgvBracelets, this.lblBracNmbrVal);
         }
     }
 }
