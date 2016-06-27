@@ -8,18 +8,19 @@ namespace Modules
 {
     class Finance
     {
-        Connection.c
+
         private static void ExecuteSqlTransaction(string connectionString)
         {
-            using ()
+
+            using (MySqlConnection connection = DBConnectionDll.Connection.connection)
             {
                 connection.Open();
 
-                SqlCommand command = connection.CreateCommand();
-                SqlTransaction transaction;
+                MySqlCommand command = connection.CreateCommand();
+                MySqlTransaction transaction;
 
                 // Start a local transaction.
-                transaction = connection.BeginTransaction("SampleTransaction");
+                transaction = connection.BeginTransaction();
 
                 // Must assign both transaction object and connection
                 // to Command object for a pending local transaction
@@ -28,12 +29,66 @@ namespace Modules
 
                 try
                 {
-                    command.CommandText =
-                        "Insert into Region (RegionID, RegionDescription) VALUES (100, 'Description')";
-                    command.ExecuteNonQuery();
-                    command.CommandText =
-                        "Insert into Region (RegionID, RegionDescription) VALUES (101, 'Description')";
-                    command.ExecuteNonQuery();
+                    command.CommandText = @"SELECT SUM(revenue) as rev
+                                           FROM(SELECT SUM(PAYSUM) as revenue FROM serpayments
+                                           UNION
+                                           SELECT SUM(TOTALPRICE) FROM storepayment) x; ";
+
+                    MySqlDataReader reader = command.ExecuteReader();
+                    if (reader.Read())
+                    {
+                        string completeRevenue = reader["rev"].ToString();
+                    }
+                    reader.Close();
+                    /////////////////////////////////
+                    command.CommandText = @"SELECT SUM(PAYSUM) as rev FROM serpayments;";
+                    
+                    reader = command.ExecuteReader();
+                    if (reader.Read())
+                    {
+                        string revenueServices = reader["rev"].ToString();
+                    }
+                    reader.Close();
+                    /////////////////////////////////
+                    command.CommandText = @"SELECT SUM(TOTALPRICE) as rev FROM storepayment; ";                   
+   
+                    reader = command.ExecuteReader();
+                    if (reader.Read())
+                    {
+                        string revenueSales = reader["rev"].ToString();
+                    }
+                    reader.Close();
+                    /////////////////////////////////
+                    command.CommandText = @"SELECT SUM(BALANCE) as balance FROM visitors; ";
+
+                    reader = command.ExecuteReader();
+                    if (reader.Read())
+                    {
+                        string balanceCapacityWorth = reader["balance"].ToString();
+                    }
+                    reader.Close();
+                    /////////////////////////////////
+                    command.CommandText = @"SELECT SUM(PAYSUM) as tent WHERE TYPE = 'TENT'; ";
+
+
+                    reader = command.ExecuteReader();
+                    if (reader.Read())
+                    {
+                        string tentsTotalSum = reader["tent"].ToString();
+                    }
+                    reader.Close();
+                    /////////////////////////////////
+                    command.CommandText = @"SELECT SUM(PAYSUM) as tent WHERE TYPE = 'TENT'; ";
+
+
+                    reader = command.ExecuteReader();
+                    if (reader.Read())
+                    {
+                        string tentsTotalSum = reader["tent"].ToString();
+                    }
+                    reader.Close();
+
+
 
                     // Attempt to commit the transaction.
                     transaction.Commit();
