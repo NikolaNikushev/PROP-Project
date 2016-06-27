@@ -40,10 +40,6 @@
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.panel16 = new System.Windows.Forms.Panel();
-            this.lblVisAtCampVal = new System.Windows.Forms.Label();
-            this.lblVisAtActVal = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.listBox2 = new System.Windows.Forms.ListBox();
             this.panel15 = new System.Windows.Forms.Panel();
@@ -55,6 +51,8 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.panel17 = new System.Windows.Forms.Panel();
+            this.lblNmbrCampingGroupsVal = new System.Windows.Forms.Label();
+            this.labelNmbrCampingGroups = new System.Windows.Forms.Label();
             this.lblNmbrBuyersVal = new System.Windows.Forms.Label();
             this.lblNmbrCampersVal = new System.Windows.Forms.Label();
             this.lblNmbrFestAcVal = new System.Windows.Forms.Label();
@@ -62,6 +60,7 @@
             this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.dgvBracelets = new System.Windows.Forms.DataGridView();
             this.panel19 = new System.Windows.Forms.Panel();
+            this.btnBracRefresh = new System.Windows.Forms.Button();
             this.lblBracNmbrVal = new System.Windows.Forms.Label();
             this.label29 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
@@ -133,10 +132,7 @@
             this.label12 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.lblNmbrCampingGroupsVal = new System.Windows.Forms.Label();
-            this.labelNmbrCampingGroups = new System.Windows.Forms.Label();
             this.tmrVisCDataPrt = new System.Windows.Forms.Timer(this.components);
-            this.btnBracRefresh = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.panel16.SuspendLayout();
@@ -176,7 +172,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 20);
+            this.label1.Location = new System.Drawing.Point(13, 20);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 8, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(115, 16);
@@ -219,9 +215,9 @@
             this.groupBox5.Controls.Add(this.listBox1);
             this.groupBox5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold);
-            this.groupBox5.Location = new System.Drawing.Point(2, 153);
+            this.groupBox5.Location = new System.Drawing.Point(2, 71);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(296, 337);
+            this.groupBox5.Size = new System.Drawing.Size(296, 419);
             this.groupBox5.TabIndex = 11;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Today\'s visitors";
@@ -236,63 +232,19 @@
             this.listBox1.Location = new System.Drawing.Point(3, 20);
             this.listBox1.Margin = new System.Windows.Forms.Padding(2);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(290, 314);
+            this.listBox1.Size = new System.Drawing.Size(290, 396);
             this.listBox1.TabIndex = 11;
             // 
             // panel16
             // 
-            this.panel16.Controls.Add(this.lblVisAtCampVal);
-            this.panel16.Controls.Add(this.lblVisAtActVal);
             this.panel16.Controls.Add(this.label1);
-            this.panel16.Controls.Add(this.label23);
             this.panel16.Controls.Add(this.label2);
-            this.panel16.Controls.Add(this.label22);
             this.panel16.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel16.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.panel16.Location = new System.Drawing.Point(2, 19);
             this.panel16.Name = "panel16";
-            this.panel16.Size = new System.Drawing.Size(296, 134);
+            this.panel16.Size = new System.Drawing.Size(296, 52);
             this.panel16.TabIndex = 10;
-            // 
-            // lblVisAtCampVal
-            // 
-            this.lblVisAtCampVal.AutoSize = true;
-            this.lblVisAtCampVal.Location = new System.Drawing.Point(189, 75);
-            this.lblVisAtCampVal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblVisAtCampVal.Name = "lblVisAtCampVal";
-            this.lblVisAtCampVal.Size = new System.Drawing.Size(66, 16);
-            this.lblVisAtCampVal.TabIndex = 8;
-            this.lblVisAtCampVal.Text = "<VALUE>";
-            // 
-            // lblVisAtActVal
-            // 
-            this.lblVisAtActVal.AutoSize = true;
-            this.lblVisAtActVal.Location = new System.Drawing.Point(189, 99);
-            this.lblVisAtActVal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblVisAtActVal.Name = "lblVisAtActVal";
-            this.lblVisAtActVal.Size = new System.Drawing.Size(66, 16);
-            this.lblVisAtActVal.TabIndex = 7;
-            this.lblVisAtActVal.Text = "<VALUE>";
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(12, 99);
-            this.label23.Margin = new System.Windows.Forms.Padding(2, 8, 2, 0);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(142, 16);
-            this.label23.TabIndex = 6;
-            this.label23.Text = "Visitors at the activities";
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(12, 75);
-            this.label22.Margin = new System.Windows.Forms.Padding(2, 8, 2, 0);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(142, 16);
-            this.label22.TabIndex = 5;
-            this.label22.Text = "Visitors at the camping";
             // 
             // groupBox2
             // 
@@ -436,6 +388,26 @@
             this.panel17.Size = new System.Drawing.Size(480, 469);
             this.panel17.TabIndex = 9;
             // 
+            // lblNmbrCampingGroupsVal
+            // 
+            this.lblNmbrCampingGroupsVal.AutoSize = true;
+            this.lblNmbrCampingGroupsVal.Location = new System.Drawing.Point(198, 185);
+            this.lblNmbrCampingGroupsVal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblNmbrCampingGroupsVal.Name = "lblNmbrCampingGroupsVal";
+            this.lblNmbrCampingGroupsVal.Size = new System.Drawing.Size(66, 16);
+            this.lblNmbrCampingGroupsVal.TabIndex = 18;
+            this.lblNmbrCampingGroupsVal.Text = "<VALUE>";
+            // 
+            // labelNmbrCampingGroups
+            // 
+            this.labelNmbrCampingGroups.AutoSize = true;
+            this.labelNmbrCampingGroups.Location = new System.Drawing.Point(14, 185);
+            this.labelNmbrCampingGroups.Margin = new System.Windows.Forms.Padding(2, 8, 2, 0);
+            this.labelNmbrCampingGroups.Name = "labelNmbrCampingGroups";
+            this.labelNmbrCampingGroups.Size = new System.Drawing.Size(109, 16);
+            this.labelNmbrCampingGroups.TabIndex = 17;
+            this.labelNmbrCampingGroups.Text = "Camping Groups";
+            // 
             // lblNmbrBuyersVal
             // 
             this.lblNmbrBuyersVal.AutoSize = true;
@@ -514,6 +486,19 @@
             this.panel19.Name = "panel19";
             this.panel19.Size = new System.Drawing.Size(474, 39);
             this.panel19.TabIndex = 2;
+            // 
+            // btnBracRefresh
+            // 
+            this.btnBracRefresh.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.btnBracRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBracRefresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnBracRefresh.Location = new System.Drawing.Point(390, 8);
+            this.btnBracRefresh.Name = "btnBracRefresh";
+            this.btnBracRefresh.Size = new System.Drawing.Size(81, 23);
+            this.btnBracRefresh.TabIndex = 18;
+            this.btnBracRefresh.Text = "REFRESH";
+            this.btnBracRefresh.UseVisualStyleBackColor = false;
+            this.btnBracRefresh.Click += new System.EventHandler(this.btnBracRefresh_Click);
             // 
             // lblBracNmbrVal
             // 
@@ -1286,42 +1271,9 @@
             this.label11.TabIndex = 1;
             this.label11.Text = "<Value>";
             // 
-            // lblNmbrCampingGroupsVal
-            // 
-            this.lblNmbrCampingGroupsVal.AutoSize = true;
-            this.lblNmbrCampingGroupsVal.Location = new System.Drawing.Point(198, 185);
-            this.lblNmbrCampingGroupsVal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblNmbrCampingGroupsVal.Name = "lblNmbrCampingGroupsVal";
-            this.lblNmbrCampingGroupsVal.Size = new System.Drawing.Size(66, 16);
-            this.lblNmbrCampingGroupsVal.TabIndex = 18;
-            this.lblNmbrCampingGroupsVal.Text = "<VALUE>";
-            // 
-            // labelNmbrCampingGroups
-            // 
-            this.labelNmbrCampingGroups.AutoSize = true;
-            this.labelNmbrCampingGroups.Location = new System.Drawing.Point(14, 185);
-            this.labelNmbrCampingGroups.Margin = new System.Windows.Forms.Padding(2, 8, 2, 0);
-            this.labelNmbrCampingGroups.Name = "labelNmbrCampingGroups";
-            this.labelNmbrCampingGroups.Size = new System.Drawing.Size(109, 16);
-            this.labelNmbrCampingGroups.TabIndex = 17;
-            this.labelNmbrCampingGroups.Text = "Camping Groups";
-            // 
             // tmrVisCDataPrt
             // 
             this.tmrVisCDataPrt.Tick += new System.EventHandler(this.tmrVisCDataPrt_Tick);
-            // 
-            // btnBracRefresh
-            // 
-            this.btnBracRefresh.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.btnBracRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBracRefresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnBracRefresh.Location = new System.Drawing.Point(390, 8);
-            this.btnBracRefresh.Name = "btnBracRefresh";
-            this.btnBracRefresh.Size = new System.Drawing.Size(81, 23);
-            this.btnBracRefresh.TabIndex = 18;
-            this.btnBracRefresh.Text = "REFRESH";
-            this.btnBracRefresh.UseVisualStyleBackColor = false;
-            this.btnBracRefresh.Click += new System.EventHandler(this.btnBracRefresh_Click);
             // 
             // Form1
             // 
@@ -1463,11 +1415,7 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Panel panel17;
-        private System.Windows.Forms.Label lblVisAtCampVal;
-        private System.Windows.Forms.Label lblVisAtActVal;
         private System.Windows.Forms.Label lblNmbrBuyersVal;
         private System.Windows.Forms.Label lblNmbrCampersVal;
         private System.Windows.Forms.Label lblNmbrFestAcVal;
