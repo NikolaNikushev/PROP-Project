@@ -14,6 +14,8 @@ namespace LoaningItemsApp
         private int priceperday;
         private DateTime returndate;
         private DateTime loandate;
+        private DateTime actualreturndate;
+        public DateTime Actualreturndate { get { return actualreturndate; } set { actualreturndate = value; } }
         public DateTime Loandate
         
            

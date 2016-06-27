@@ -202,6 +202,30 @@ namespace LoaningItemsApp
                 connection.Close();
             }
         }
+        public void SetDueDate(int articleid, string duedate)
+        {
+
+
+            String sql = "UPDATE loanitems SET DUEDATE = ?DueDate WHERE ARTICLE_ID = ?Article_id;";
+            MySqlCommand command = new MySqlCommand(sql, connection);
+            command.CommandText = sql;
+            command.Parameters.AddWithValue("?DueDate", duedate);
+            command.Parameters.AddWithValue("?Article_id", articleid);
+            try
+            {
+                connection.Open();
+                MySqlDataReader reader = command.ExecuteReader();
+            }
+            catch
+            {
+                MessageBox.Show("Error updating database");
+            }
+            finally
+            {
+                connection.Close();
+            }
+        }
+
 
 
 

@@ -71,6 +71,7 @@ namespace LoaningItemsApp
 
         private void btnLoad_Click(object sender, EventArgs e)
         {
+            lBoxItemsForLoan.Items.Clear();
             foreach(Item i in JobsDone.LoanItems)
             {
                 lBoxItemsForLoan.Items.Add(i.AsString());
@@ -112,10 +113,13 @@ namespace LoaningItemsApp
                         dbh.SetStartDate(i.Article_id, startdate);
                         dbh.SetLoanStatus(i.Article_id);
                         i.Loaned = 1;
-                        lBoxItemsForLoan.Items.Remove(i);
-                        lBoxLoanedItems.Items.Add(i.AsString());
+
                         DateTime duedate = dateTimePicker1.Value.Date;
                         i.Returndate = duedate;
+                        string dueDate = dateTimePicker1.Value.Date.ToString("yyyy-MM-dd HH:mm");
+                        dbh.SetDueDate(i.Article_id, dueDate);
+                        lBoxItemsForLoan.Items.Remove(i);
+                        lBoxLoanedItems.Items.Add(i.AsString());
                         int totaldays = (duedate - startdate).Days;
                         if (totaldays == 0)
                         {
@@ -162,6 +166,15 @@ namespace LoaningItemsApp
             var = JobsDone.LoanItems[index];
             int articleId = var.Article_id;
             dbh.SetLoanStatusToFalse(articleId);
+            var.Loaned = 0;
+            if(var.Returndate>var.Actualreturndate)
+            {
+                MessageBox.Show("You have returned this item late and you will have to pay extra fee");
+                balance = dbh.getBalance(tag);
+                int extrafee = 15;
+                double newbalance = balance - extrafee;
+                dbh.UpdateBalance(tag, newbalance);
+            }
             
             listBox1.Items.Remove(index);
             lBoxReturnedItems.Items.Add(var.AsString());
@@ -171,10 +184,14 @@ namespace LoaningItemsApp
 
         private void tabControl1_MouseClick(object sender, MouseEventArgs e)
         {
+            listBox1.Items.Clear();
             foreach (Item i in JobsDone.LoanItems)
             {
                 listBox1.Items.Add(i.AsString());
             }
+
+            
+            
         }
     }
 

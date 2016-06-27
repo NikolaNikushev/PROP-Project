@@ -221,7 +221,7 @@
             this.listBox1.FormattingEnabled = true;
             this.listBox1.Location = new System.Drawing.Point(557, 65);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(381, 355);
+            this.listBox1.Size = new System.Drawing.Size(625, 355);
             this.listBox1.TabIndex = 3;
             // 
             // label3
