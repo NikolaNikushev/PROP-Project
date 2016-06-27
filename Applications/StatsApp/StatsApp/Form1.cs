@@ -17,6 +17,7 @@ namespace StatsApp
         BinaryFileHelper bfh = new BinaryFileHelper();
         int time;
         string date;
+        Label[] financialLabels = new Label[0];
         public Form1()
         {
             InitializeComponent();
@@ -24,14 +25,15 @@ namespace StatsApp
 
             label2.Text = dbh.GetNrCurrentVisitors().ToString();
             timer1.Start();
-            
+
             this.VisitorCntrlrInit();
             this.tmrVisCDataPrt.Start();
 
             timer2.Interval = 5000 /*(uncomment for an hourly interval * 60 * 60 */;
             time = System.DateTime.Now.Hour;
             date = DateTime.Now.ToString("dd");
-
+            Label[] ar = { completeRevenueLabel, revenueSalesLabel, revenueServicesLabel, balanceCapacityLabel };
+            financialLabels = ar;
 
         }
 
@@ -163,6 +165,7 @@ namespace StatsApp
                     break;
                 case 2: //finance
                     this.tmrVisCDataPrt.Stop();
+                    Finance.PupulateFinanceData(financialLabels);
                     break;
             }
         }
@@ -193,15 +196,15 @@ namespace StatsApp
             try
             {
                 WareHouseCntrl.GetHistoricalData(this.chartProductHistory, this.cmbSelectStoreForHistory.SelectedItem.ToString(), this.cmbSelectHisotryProduct.SelectedItem.ToString());
-                
+
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
         }
 
-        
+
         // timer refresh
         private void tmrVisCDataPrt_Tick(object sender, EventArgs e)
         {
@@ -209,7 +212,7 @@ namespace StatsApp
             Label[] labelCampersAndBuyersGroup = { this.lblNmbrCampersVal, this.lblNmbrCampingGroupsVal, this.lblNmbrBuyersVal };
             VisitorsCntrl.PopulateCampersAndBuyersData(labelCampersAndBuyersGroup);
             VisitorsCntrl.PopulateVisitorGroupData(labelUsStatGroup);
-            
+
         }
         // force refresh
         private void btnVisRefresh_Click(object sender, EventArgs e)

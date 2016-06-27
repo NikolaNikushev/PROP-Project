@@ -4,13 +4,26 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
+using System.Windows.Forms;
+
 namespace Modules
 {
-    class Finance
+    public static class Finance
     {
 
-        private static void ExecuteSqlTransaction(string connectionString)
+        //string completeRevenue;
+        //string revenueServices;
+        //string revenueSales;
+        //string balanceCapacityWorth;
+        //string tentsTotalSum;
+        //string ticketsTotalSum;
+        //string mostPopularTicket;
+        //string mostPopularStore;
+
+        private static List<string> ExecuteSqlTransaction()
         {
+            List<string> financialValues = new List<string>();
+
 
             using (MySqlConnection connection = DBConnectionDll.Connection.connection)
             {
@@ -38,24 +51,27 @@ namespace Modules
                     if (reader.Read())
                     {
                         string completeRevenue = reader["rev"].ToString();
+                        financialValues.Add(completeRevenue);
                     }
                     reader.Close();
                     /////////////////////////////////
                     command.CommandText = @"SELECT SUM(PAYSUM) as rev FROM serpayments;";
-                    
+
                     reader = command.ExecuteReader();
                     if (reader.Read())
                     {
                         string revenueServices = reader["rev"].ToString();
+                        financialValues.Add(revenueServices);
                     }
                     reader.Close();
                     /////////////////////////////////
-                    command.CommandText = @"SELECT SUM(TOTALPRICE) as rev FROM storepayment; ";                   
-   
+                    command.CommandText = @"SELECT SUM(TOTALPRICE) as rev FROM storepayment; ";
+
                     reader = command.ExecuteReader();
                     if (reader.Read())
                     {
                         string revenueSales = reader["rev"].ToString();
+                        financialValues.Add(revenueSales);
                     }
                     reader.Close();
                     /////////////////////////////////
@@ -65,9 +81,10 @@ namespace Modules
                     if (reader.Read())
                     {
                         string balanceCapacityWorth = reader["balance"].ToString();
+                        financialValues.Add(balanceCapacityWorth);
                     }
                     reader.Close();
-                    /////////////////////////////////
+                    /////////////////////////////////                  
                     command.CommandText = @"SELECT SUM(PAYSUM) as tent WHERE TYPE = 'TENT'; ";
 
 
@@ -75,16 +92,7 @@ namespace Modules
                     if (reader.Read())
                     {
                         string tentsTotalSum = reader["tent"].ToString();
-                    }
-                    reader.Close();
-                    /////////////////////////////////
-                    command.CommandText = @"SELECT SUM(PAYSUM) as tent WHERE TYPE = 'TENT'; ";
-
-
-                    reader = command.ExecuteReader();
-                    if (reader.Read())
-                    {
-                        string tentsTotalSum = reader["tent"].ToString();
+                        financialValues.Add(tentsTotalSum);
                     }
                     reader.Close();
                     /////add number of updates 
@@ -94,7 +102,9 @@ namespace Modules
                     reader = command.ExecuteReader();
                     if (reader.Read())
                     {
+
                         string ticketsTotalSum = reader["tecket"].ToString();
+                        financialValues.Add(ticketsTotalSum);
                     }
                     reader.Close();
                     //////////////////////////
@@ -116,6 +126,21 @@ namespace Modules
                     if (reader.Read())
                     {
                         string mostPopularTicket = reader["PAYSUM"].ToString();
+                        financialValues.Add(mostPopularTicket);
+                    }
+                    reader.Close();
+                    //////////////////////////
+                    command.CommandText = @"SELECT COUNT(*),STORE_ID,STORENAME,DESCRIPTION
+                                            FROM storepayment JOIN stores
+                                            USING(STORE_ID)
+                                            GROUP BY STORE_ID
+                                            ORDER BY COUNT(*) DESC;";
+
+                    reader = command.ExecuteReader();
+                    if (reader.Read())
+                    {
+                        string mostPopularStore = reader["PAYSUM"].ToString();
+                        financialValues.Add(mostPopularStore);
                     }
                     reader.Close();
 
@@ -146,6 +171,17 @@ namespace Modules
                     }
                 }
             }
+            return financialValues;
         }
+
+        public static void PupulateFinanceData(Label[] labels)
+        {
+            for (int i = 0; i < ExecuteSqlTransaction().Count; i++)
+            {
+                labels[i].Text = ExecuteSqlTransaction()[i];
+            }
+
+        }
+
     }
 }
