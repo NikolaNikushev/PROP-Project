@@ -156,6 +156,7 @@ namespace CampingEntryApp
                     {
                         if (leaveDate < maxDate)
                         {
+                            //subtracts 15 euros for each person that is in the tent
                             dbh.PayForDay(bracelet_id, camping_id);
                             timer2.Start();
                         }
