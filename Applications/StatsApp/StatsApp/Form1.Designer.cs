@@ -133,6 +133,8 @@
             this.label12 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
+            this.lblNmbrCampingGroupsVal = new System.Windows.Forms.Label();
+            this.labelNmbrCampingGroups = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.panel16.SuspendLayout();
@@ -410,6 +412,8 @@
             // 
             // panel17
             // 
+            this.panel17.Controls.Add(this.lblNmbrCampingGroupsVal);
+            this.panel17.Controls.Add(this.labelNmbrCampingGroups);
             this.panel17.Controls.Add(this.lblNmbrBuyersVal);
             this.panel17.Controls.Add(this.lblNmbrCampersVal);
             this.panel17.Controls.Add(this.lblNmbrFestAcVal);
@@ -433,7 +437,7 @@
             // lblNmbrBuyersVal
             // 
             this.lblNmbrBuyersVal.AutoSize = true;
-            this.lblNmbrBuyersVal.Location = new System.Drawing.Point(198, 185);
+            this.lblNmbrBuyersVal.Location = new System.Drawing.Point(198, 209);
             this.lblNmbrBuyersVal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNmbrBuyersVal.Name = "lblNmbrBuyersVal";
             this.lblNmbrBuyersVal.Size = new System.Drawing.Size(66, 16);
@@ -464,9 +468,9 @@
             // 
             this.panel18.Controls.Add(this.groupBox7);
             this.panel18.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel18.Location = new System.Drawing.Point(0, 217);
+            this.panel18.Location = new System.Drawing.Point(0, 267);
             this.panel18.Name = "panel18";
-            this.panel18.Size = new System.Drawing.Size(480, 252);
+            this.panel18.Size = new System.Drawing.Size(480, 202);
             this.panel18.TabIndex = 13;
             // 
             // groupBox7
@@ -478,7 +482,7 @@
             this.groupBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold);
             this.groupBox7.Location = new System.Drawing.Point(0, 0);
             this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(480, 252);
+            this.groupBox7.Size = new System.Drawing.Size(480, 202);
             this.groupBox7.TabIndex = 0;
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Bracelets";
@@ -492,7 +496,7 @@
             this.dgvBracelets.Location = new System.Drawing.Point(3, 59);
             this.dgvBracelets.Name = "dgvBracelets";
             this.dgvBracelets.ReadOnly = true;
-            this.dgvBracelets.Size = new System.Drawing.Size(474, 190);
+            this.dgvBracelets.Size = new System.Drawing.Size(474, 140);
             this.dgvBracelets.TabIndex = 3;
             // 
             // panel19
@@ -585,7 +589,7 @@
             // label24
             // 
             this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(14, 185);
+            this.label24.Location = new System.Drawing.Point(14, 209);
             this.label24.Margin = new System.Windows.Forms.Padding(2, 8, 2, 0);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(105, 16);
@@ -1279,6 +1283,26 @@
             this.label11.TabIndex = 1;
             this.label11.Text = "<Value>";
             // 
+            // lblNmbrCampingGroupsVal
+            // 
+            this.lblNmbrCampingGroupsVal.AutoSize = true;
+            this.lblNmbrCampingGroupsVal.Location = new System.Drawing.Point(198, 185);
+            this.lblNmbrCampingGroupsVal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblNmbrCampingGroupsVal.Name = "lblNmbrCampingGroupsVal";
+            this.lblNmbrCampingGroupsVal.Size = new System.Drawing.Size(66, 16);
+            this.lblNmbrCampingGroupsVal.TabIndex = 18;
+            this.lblNmbrCampingGroupsVal.Text = "<VALUE>";
+            // 
+            // labelNmbrCampingGroups
+            // 
+            this.labelNmbrCampingGroups.AutoSize = true;
+            this.labelNmbrCampingGroups.Location = new System.Drawing.Point(14, 185);
+            this.labelNmbrCampingGroups.Margin = new System.Windows.Forms.Padding(2, 8, 2, 0);
+            this.labelNmbrCampingGroups.Name = "labelNmbrCampingGroups";
+            this.labelNmbrCampingGroups.Size = new System.Drawing.Size(109, 16);
+            this.labelNmbrCampingGroups.TabIndex = 17;
+            this.labelNmbrCampingGroups.Text = "Camping Groups";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1438,6 +1462,8 @@
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.TextBox tbCompleteDataDescription;
         private System.Windows.Forms.Label lblNmbrPresentVal;
+        private System.Windows.Forms.Label lblNmbrCampingGroupsVal;
+        private System.Windows.Forms.Label labelNmbrCampingGroups;
     }
 }
 
