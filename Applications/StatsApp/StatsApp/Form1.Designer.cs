@@ -136,6 +136,7 @@
             this.lblNmbrCampingGroupsVal = new System.Windows.Forms.Label();
             this.labelNmbrCampingGroups = new System.Windows.Forms.Label();
             this.tmrVisCDataPrt = new System.Windows.Forms.Timer(this.components);
+            this.btnBracRefresh = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.panel16.SuspendLayout();
@@ -503,6 +504,7 @@
             // panel19
             // 
             this.panel19.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.panel19.Controls.Add(this.btnBracRefresh);
             this.panel19.Controls.Add(this.lblBracNmbrVal);
             this.panel19.Controls.Add(this.label29);
             this.panel19.Controls.Add(this.label28);
@@ -1308,6 +1310,19 @@
             // 
             this.tmrVisCDataPrt.Tick += new System.EventHandler(this.tmrVisCDataPrt_Tick);
             // 
+            // btnBracRefresh
+            // 
+            this.btnBracRefresh.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.btnBracRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBracRefresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnBracRefresh.Location = new System.Drawing.Point(390, 8);
+            this.btnBracRefresh.Name = "btnBracRefresh";
+            this.btnBracRefresh.Size = new System.Drawing.Size(81, 23);
+            this.btnBracRefresh.TabIndex = 18;
+            this.btnBracRefresh.Text = "REFRESH";
+            this.btnBracRefresh.UseVisualStyleBackColor = false;
+            this.btnBracRefresh.Click += new System.EventHandler(this.btnBracRefresh_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1470,6 +1485,7 @@
         private System.Windows.Forms.Label lblNmbrCampingGroupsVal;
         private System.Windows.Forms.Label labelNmbrCampingGroups;
         private System.Windows.Forms.Timer tmrVisCDataPrt;
+        private System.Windows.Forms.Button btnBracRefresh;
     }
 }
 

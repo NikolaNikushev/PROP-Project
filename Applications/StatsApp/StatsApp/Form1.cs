@@ -26,6 +26,7 @@ namespace StatsApp
             timer1.Start();
             
             this.VisitorCntrlrInit();
+            this.tmrVisCDataPrt.Start();
 
             timer2.Interval = 5000 /*(uncomment for an hourly interval * 60 * 60 */;
             time = System.DateTime.Now.Hour;
@@ -203,12 +204,21 @@ namespace StatsApp
         // timer refresh
         private void tmrVisCDataPrt_Tick(object sender, EventArgs e)
         {
-            this.VisitorCntrlrInit();
+            Label[] labelUsStatGroup = { this.lblNmbrPresentVal, this.lblNmbrExpectedVal, this.lblNmbrFestAcVal };
+            Label[] labelCampersAndBuyersGroup = { this.lblNmbrCampersVal, this.lblNmbrCampingGroupsVal, this.lblNmbrBuyersVal };
+            VisitorsCntrl.PopulateCampersAndBuyersData(labelCampersAndBuyersGroup);
+            VisitorsCntrl.PopulateVisitorGroupData(labelUsStatGroup);
+            
         }
         // force refresh
         private void btnVisRefresh_Click(object sender, EventArgs e)
         {
             this.VisitorCntrlrInit();
+        }
+
+        private void btnBracRefresh_Click(object sender, EventArgs e)
+        {
+            VisitorsCntrl.PopulateBraceletSection(this.dgvBracelets, this.lblBracNmbrVal);
         }
     }
 }
