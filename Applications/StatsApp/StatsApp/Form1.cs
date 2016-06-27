@@ -150,12 +150,17 @@ namespace StatsApp
             {
                 case 0: //visitors
                     this.VisitorCntrlrInit();
+                    this.tmrVisCDataPrt.Start();
                     break;
                 case 1: //warehouse
+                    this.tmrVisCDataPrt.Stop();
                     // just so that the arguments fit
                     Label[] lbls = { this.lblTotPurchVal, this.lblGrossAmPaidVal, this.lblHotHourVal };
                     WareHouseCntrl WHC = new WareHouseCntrl(this.cmbStorageSelect, this.cmbSelectStoreForHistory, this.lbTopPopProd, lbls);
                     //WareHouseCntrl.PopulateComboBox(this.cmbStorageSelect);
+                    break;
+                case 2: //finance
+                    this.tmrVisCDataPrt.Stop();
                     break;
             }
         }
@@ -194,9 +199,16 @@ namespace StatsApp
             }
         }
 
-        private void button5_Click(object sender, EventArgs e)
+        
+        // timer refresh
+        private void tmrVisCDataPrt_Tick(object sender, EventArgs e)
         {
-
+            this.VisitorCntrlrInit();
+        }
+        // force refresh
+        private void btnVisRefresh_Click(object sender, EventArgs e)
+        {
+            this.VisitorCntrlrInit();
         }
     }
 }

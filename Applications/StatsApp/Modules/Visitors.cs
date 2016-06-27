@@ -52,7 +52,7 @@ namespace Modules
                 dgv.Columns.Add("colID", "ID");
                 dgv.Columns.Add("colStatus", "Status");
             }
-            dgv.Width = dgv.Columns.GetColumnsWidth(DataGridViewElementStates.None);
+            dgv.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             foreach (Bracelet b in lb)
             {
                 dgv.Rows.Add(b.Id, b.Status);
