@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace VisitorSupport.Properties
+namespace BraceletManagement.Properties
 {
 
 

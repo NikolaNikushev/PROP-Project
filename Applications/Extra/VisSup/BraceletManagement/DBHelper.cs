@@ -119,7 +119,7 @@ namespace BraceletManagement
             string whereClauseAttribute = searchAttribute.ToString();
 
             // We need to think of some ways to prevent the sql injections and other messed up user entries
-            String sql = "SELECT EMAIL, FNAME, LNAME, SECCODE, BRACELET_ID, STATUS FROM VISITORS WHERE UPPER("
+            String sql = "SELECT USER_ID, EMAIL, FNAME, LNAME, SECCODE, BRACELET_ID, STATUS FROM VISITORS WHERE UPPER("
                 + whereClauseAttribute + ") =" + " UPPER(\"" + whereClauseValue + "\")";
             MySqlCommand command = new MySqlCommand(sql, connection);
 
@@ -143,7 +143,7 @@ namespace BraceletManagement
                             chipNum = (string)reader["BRACELET_ID"];
                         }
                         string seccode = "";
-                        if (reader["SECCODE"] == DBNull.Value)
+                        if(reader["SECCODE"] == DBNull.Value)
                         {
                             seccode = "N/A";
                         }
@@ -172,184 +172,98 @@ namespace BraceletManagement
             return valueToReturn;
         }
 
-        /// <summary>
-        /// Deactivates the bracelet by according RFID
-        /// sets the status of the bracelet to DEACTIVATED
-        /// does not affect the visitors table
-        /// </summary>
-        /// <param name="chipNum"></param>
-        /// <param name="secCode"></param>
-        /// <returns></returns>
-        public bool DeactivateBracelet(string chipNum)
-        {
-            bool methodResult = false;
-            String sql = "UPDATE RFIDS "
-                + "SET STATUS = \"DEACTIVATED\""
-                + "WHERE BRACELET_ID =" + " \"" + chipNum + "\" ";
-            MySqlCommand command = new MySqlCommand(sql, connection);
-
-
-            try
-            {
-                connection.Open();
-                int affectedRows = 0;
-                affectedRows += command.ExecuteNonQuery();
-                switch (affectedRows)
-                {
-                    case 0:
-                        methodResult = false;
-                        break;
-                    //check sum == 1
-                    case 1:
-                        methodResult = true;
-                        break;
-                    default:
-                        methodResult = false;
-                        break;
-
-                }
-            }
-            catch (Exception ex)
-            {
-                methodResult = false;
-                AutoClosingMessageBox.Show(ex.Message, "Oups!", messageShowTime);
-            }
-            finally
-            {
-                connection.Close();
-            }
-            return methodResult;
-        }
-
-        public bool UpdateVisitorBracelet(RFIDData newChipData, string email)
-        {
-            connection.Close();
-            bool methodResult = false;
-            String sql = "UPDATE VISITORS "
-                + "SET BRACELET_ID =" + " \"" + newChipData.RFIDNumber + "\" "
-                + "WHERE LOWER(EMAIL) =" + " \"" + email.ToLower() + "\" ";
-            MySqlCommand command = new MySqlCommand(sql, connection);
-
-
-            try
-            {
-                connection.Open();
-                this.ActivateBracelet(newChipData);
-                int affectedRows = 0;
-                affectedRows += command.ExecuteNonQuery();
-                switch (affectedRows)
-                {
-                    //check sum == 1
-                    case 1:
-                        methodResult = true;
-                        break;
-                    default:
-                        methodResult = false;
-                        break;
-
-                }
-            }
-            catch (Exception ex)
-            {
-                methodResult = false;
-                AutoClosingMessageBox.Show(ex.Message, "Oups!", messageShowTime);
-            }
-            finally
-            {
-                connection.Close();
-            }
-            return methodResult;
-        }
 
         /// <summary>
-        /// Sets the status of a certain bracelet to active
+        /// Used to update the visitor data and set it to the new values
         /// </summary>
-        /// <param name="chipNum"></param>
+        /// <param name="newChipData"></param>
+        /// <param name="userid"></param>
+        /// <param name="email"></param>
+        /// <param name="fn"></param>
+        /// <param name="ln"></param>
         /// <returns></returns>
-        private bool ActivateBracelet(RFIDData chipData)
+        public bool UpdateVisitorData(int userid, string email, string fn, string ln)
         {
             connection.Close();
+            connection.Open();
             bool methodResult = false;
-            String sql = "";
-            if (chipData.Status == StatusTypes.BraceletStatus.STAND_BY)
-            {
-                sql = "UPDATE RFIDS "
-                + "SET STATUS = \"ACTIVE\""
-                + "WHERE BRACELET_ID =" + " \"" + chipData.RFIDNumber + "\" ";
-            };
-            if(chipData.Status == StatusTypes.BraceletStatus.NOT_VALID)
-            {
-                sql = "INSERT INTO RFIDS "
-                + " (STATUS,BRACELET_ID) values" 
-                + "\"ACTIVE\"," + " \"" + chipData.RFIDNumber + "\" ";
-            }
-            
-            MySqlCommand command = new MySqlCommand(sql, connection);
+            MySqlCommand command = connection.CreateCommand();
+            MySqlTransaction transaction;
+
+            // Start a local transaction.
+            transaction = connection.BeginTransaction();
+
+            // Must assign both transaction object and connection
+            // to Command object for a pending local transaction
+            command.Connection = connection;
+            command.Transaction = transaction;
 
 
             try
             {
-                connection.Open();
-                int affectedRows = 0;
-                affectedRows += command.ExecuteNonQuery();
-                switch (affectedRows)
+                //Payment ID
+                command.CommandText = "SELECT USER_ID FROM VISITORS WHERE EMAIL = '" + email + "';";
+                MySqlDataReader reader = command.ExecuteReader();
+                bool emailClash = false;
+                while (reader.Read())
                 {
-                    case 0:
-                        methodResult = false;
-                        break;
-                    //check sum == 1
-                    case 1:
-                        methodResult = true;
-                        break;
-                    default:
-                        methodResult = false;
-                        break;
-
+                    if (userid != (int)reader["USER_ID"])
+                    {
+                        emailClash = true;
+                    }
                 }
+                if (emailClash)
+                {
+                    throw new EmailClashException("Such email already exists");
+                }
+                reader.Close();
+                //UPDATE `visitors` SET `EMAIL`="jf@jf.jf",`FNAME`="Jennifer",`LNAME`="Franklin" WHERE USER_ID = 1137;
+                String sql = "UPDATE VISITORS " +
+                            "SET EMAIL =" + " \"" + email + "\", " +
+                            " FNAME='" + fn + "', " +
+                            " LNAME='" + ln + "' " +
+                            "WHERE USER_ID =" + " \"" + userid + "\" ";
+
+                command.CommandText = sql;
+                int numberOfRowsAffected = command.ExecuteNonQuery();
+                if(numberOfRowsAffected!=1)
+                {
+                    throw new Exception("Something went wrong");
+                }
+
+                // Attempt to commit the transaction.
+                transaction.Commit();
+                methodResult = true;
+                Console.WriteLine("All records are written to database.");
             }
             catch (Exception ex)
             {
-                methodResult = false;
-                AutoClosingMessageBox.Show(ex.Message, "Oups!", messageShowTime);
+
+                Console.WriteLine("Commit Exception Type: {0}", ex.GetType());
+                Console.WriteLine("  Message: {0}", ex.Message);
+                // Attempt to roll back the transaction.
+                try
+                {
+                    transaction.Rollback();
+                }
+                catch (Exception ex2)
+                {
+                    // This catch block will handle any errors that may have occurred
+                    // on the server that would cause the rollback to fail, such as
+                    // a closed connection.
+                    Console.WriteLine("Rollback Exception Type: {0}", ex2.GetType());
+                    Console.WriteLine("  Message: {0}", ex2.Message);
+                }
             }
             finally
             {
                 connection.Close();
             }
             return methodResult;
+
+
         }
-
-
-        // would be nice to make use of delegates somehow
-        //static public void GetData(string tableName, string SelectClauseAttribute, string whereClauseAttribute, string whereClauseValue)
-        //{
-        //    String sql = "SELECT "+ SelectClauseAttribute + " FROM "+ tableName + " WHERE "+ whereClauseAttribute + " = " + "\"" + whereClauseValue + "\"";
-        //    MySqlCommand command = new MySqlCommand(sql, connection);
-        //    try
-        //    {
-        //        connection.Open();
-        //        MySqlDataReader reader = command.ExecuteReader();
-        //        while (reader.Read())
-        //        {
-
-        //        }
-
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        MessageBox.Show(ex.ToString());
-        //    }
-        //    finally
-        //    {
-        //        connection.Close();
-        //    }
-        //}
-
-
-        //static public void GetData(int nrRows)
-        //{
-
-        //}
+        
 
 
     }
