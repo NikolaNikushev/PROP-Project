@@ -34,6 +34,7 @@
             this.pnlMainSearch = new System.Windows.Forms.Panel();
             this.btnSearchVisitor = new System.Windows.Forms.Button();
             this.gbVisitorInfo = new System.Windows.Forms.GroupBox();
+            this.btnUpdateVisData = new System.Windows.Forms.Button();
             this.tbVisitorRFIDStatus = new System.Windows.Forms.TextBox();
             this.lblVisitorRFIDStatus = new System.Windows.Forms.Label();
             this.tbVisitorEmail = new System.Windows.Forms.TextBox();
@@ -50,27 +51,32 @@
             this.lblVisitorLastName = new System.Windows.Forms.Label();
             this.lblVisitorFirstName = new System.Windows.Forms.Label();
             this.gbPayments = new System.Windows.Forms.GroupBox();
+            this.lbPaymentLog = new System.Windows.Forms.ListBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btnSavePaymentData = new System.Windows.Forms.Button();
+            this.btnGetPaymentsData = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.lbSearchLog = new System.Windows.Forms.ListBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.lbPaymentLog = new System.Windows.Forms.ListBox();
-            this.btnGetPaymentsData = new System.Windows.Forms.Button();
-            this.btnSavePaymentData = new System.Windows.Forms.Button();
-            this.btnUpdateVisData = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.sfdPaymentLogExport = new System.Windows.Forms.SaveFileDialog();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.pnlMainSearch.SuspendLayout();
             this.gbVisitorInfo.SuspendLayout();
             this.gbPayments.SuspendLayout();
-            this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // tbSearchVisitorText
             // 
-            this.tbSearchVisitorText.Location = new System.Drawing.Point(178, 5);
+            this.tbSearchVisitorText.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tbSearchVisitorText.Location = new System.Drawing.Point(178, 4);
             this.tbSearchVisitorText.Name = "tbSearchVisitorText";
             this.tbSearchVisitorText.Size = new System.Drawing.Size(321, 20);
             this.tbSearchVisitorText.TabIndex = 0;
@@ -82,7 +88,7 @@
             this.cmbxSearchType.Items.AddRange(new object[] {
             "CODE",
             "EMAIL"});
-            this.cmbxSearchType.Location = new System.Drawing.Point(68, 5);
+            this.cmbxSearchType.Location = new System.Drawing.Point(65, 4);
             this.cmbxSearchType.Name = "cmbxSearchType";
             this.cmbxSearchType.Size = new System.Drawing.Size(101, 21);
             this.cmbxSearchType.TabIndex = 1;
@@ -90,7 +96,7 @@
             // lblSearchType
             // 
             this.lblSearchType.AutoSize = true;
-            this.lblSearchType.Location = new System.Drawing.Point(6, 9);
+            this.lblSearchType.Location = new System.Drawing.Point(3, 8);
             this.lblSearchType.Name = "lblSearchType";
             this.lblSearchType.Size = new System.Drawing.Size(56, 13);
             this.lblSearchType.TabIndex = 3;
@@ -99,9 +105,8 @@
             // 
             // pnlMainSearch
             // 
+            this.pnlMainSearch.Controls.Add(this.panel4);
             this.pnlMainSearch.Controls.Add(this.tbSearchVisitorText);
-            this.pnlMainSearch.Controls.Add(this.lblSearchType);
-            this.pnlMainSearch.Controls.Add(this.cmbxSearchType);
             this.pnlMainSearch.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlMainSearch.Location = new System.Drawing.Point(3, 16);
             this.pnlMainSearch.Name = "pnlMainSearch";
@@ -111,9 +116,9 @@
             // btnSearchVisitor
             // 
             this.btnSearchVisitor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSearchVisitor.Location = new System.Drawing.Point(339, 48);
+            this.btnSearchVisitor.Location = new System.Drawing.Point(6, 51);
             this.btnSearchVisitor.Name = "btnSearchVisitor";
-            this.btnSearchVisitor.Size = new System.Drawing.Size(166, 29);
+            this.btnSearchVisitor.Size = new System.Drawing.Size(163, 26);
             this.btnSearchVisitor.TabIndex = 6;
             this.btnSearchVisitor.Text = "Search";
             this.btnSearchVisitor.UseVisualStyleBackColor = true;
@@ -144,6 +149,17 @@
             this.gbVisitorInfo.TabIndex = 7;
             this.gbVisitorInfo.TabStop = false;
             this.gbVisitorInfo.Text = "Visitor";
+            // 
+            // btnUpdateVisData
+            // 
+            this.btnUpdateVisData.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUpdateVisData.Location = new System.Drawing.Point(9, 223);
+            this.btnUpdateVisData.Name = "btnUpdateVisData";
+            this.btnUpdateVisData.Size = new System.Drawing.Size(235, 23);
+            this.btnUpdateVisData.TabIndex = 17;
+            this.btnUpdateVisData.Text = "Update Data";
+            this.btnUpdateVisData.UseVisualStyleBackColor = true;
+            this.btnUpdateVisData.Click += new System.EventHandler(this.btnUpdateVisData_Click);
             // 
             // tbVisitorRFIDStatus
             // 
@@ -289,6 +305,47 @@
             this.gbPayments.TabStop = false;
             this.gbPayments.Text = "Payments";
             // 
+            // lbPaymentLog
+            // 
+            this.lbPaymentLog.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbPaymentLog.FormattingEnabled = true;
+            this.lbPaymentLog.Location = new System.Drawing.Point(3, 68);
+            this.lbPaymentLog.Name = "lbPaymentLog";
+            this.lbPaymentLog.Size = new System.Drawing.Size(246, 319);
+            this.lbPaymentLog.TabIndex = 1;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.btnSavePaymentData);
+            this.panel1.Controls.Add(this.btnGetPaymentsData);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(3, 16);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(246, 52);
+            this.panel1.TabIndex = 0;
+            // 
+            // btnSavePaymentData
+            // 
+            this.btnSavePaymentData.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSavePaymentData.Location = new System.Drawing.Point(147, 3);
+            this.btnSavePaymentData.Name = "btnSavePaymentData";
+            this.btnSavePaymentData.Size = new System.Drawing.Size(94, 46);
+            this.btnSavePaymentData.TabIndex = 1;
+            this.btnSavePaymentData.Text = "Save as .txt";
+            this.btnSavePaymentData.UseVisualStyleBackColor = true;
+            this.btnSavePaymentData.Click += new System.EventHandler(this.btnSavePaymentData_Click);
+            // 
+            // btnGetPaymentsData
+            // 
+            this.btnGetPaymentsData.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGetPaymentsData.Location = new System.Drawing.Point(3, 3);
+            this.btnGetPaymentsData.Name = "btnGetPaymentsData";
+            this.btnGetPaymentsData.Size = new System.Drawing.Size(94, 46);
+            this.btnGetPaymentsData.TabIndex = 0;
+            this.btnGetPaymentsData.Text = "Get Payments";
+            this.btnGetPaymentsData.UseVisualStyleBackColor = true;
+            this.btnGetPaymentsData.Click += new System.EventHandler(this.btnGetPaymentsData_Click);
+            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.lbSearchLog);
@@ -311,56 +368,6 @@
             this.lbSearchLog.Size = new System.Drawing.Size(502, 82);
             this.lbSearchLog.TabIndex = 7;
             // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.btnSavePaymentData);
-            this.panel1.Controls.Add(this.btnGetPaymentsData);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(3, 16);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(246, 52);
-            this.panel1.TabIndex = 0;
-            // 
-            // lbPaymentLog
-            // 
-            this.lbPaymentLog.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbPaymentLog.FormattingEnabled = true;
-            this.lbPaymentLog.Location = new System.Drawing.Point(3, 68);
-            this.lbPaymentLog.Name = "lbPaymentLog";
-            this.lbPaymentLog.Size = new System.Drawing.Size(246, 319);
-            this.lbPaymentLog.TabIndex = 1;
-            // 
-            // btnGetPaymentsData
-            // 
-            this.btnGetPaymentsData.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGetPaymentsData.Location = new System.Drawing.Point(3, 3);
-            this.btnGetPaymentsData.Name = "btnGetPaymentsData";
-            this.btnGetPaymentsData.Size = new System.Drawing.Size(94, 46);
-            this.btnGetPaymentsData.TabIndex = 0;
-            this.btnGetPaymentsData.Text = "Get Payments";
-            this.btnGetPaymentsData.UseVisualStyleBackColor = true;
-            // 
-            // btnSavePaymentData
-            // 
-            this.btnSavePaymentData.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSavePaymentData.Location = new System.Drawing.Point(147, 3);
-            this.btnSavePaymentData.Name = "btnSavePaymentData";
-            this.btnSavePaymentData.Size = new System.Drawing.Size(94, 46);
-            this.btnSavePaymentData.TabIndex = 1;
-            this.btnSavePaymentData.Text = "Save as .txt";
-            this.btnSavePaymentData.UseVisualStyleBackColor = true;
-            // 
-            // btnUpdateVisData
-            // 
-            this.btnUpdateVisData.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUpdateVisData.Location = new System.Drawing.Point(9, 223);
-            this.btnUpdateVisData.Name = "btnUpdateVisData";
-            this.btnUpdateVisData.Size = new System.Drawing.Size(235, 23);
-            this.btnUpdateVisData.TabIndex = 17;
-            this.btnUpdateVisData.Text = "Update Data";
-            this.btnUpdateVisData.UseVisualStyleBackColor = true;
-            this.btnUpdateVisData.Click += new System.EventHandler(this.btnUpdateVisData_Click);
-            // 
             // panel2
             // 
             this.panel2.Controls.Add(this.gbVisitorInfo);
@@ -379,6 +386,16 @@
             this.panel3.Size = new System.Drawing.Size(252, 390);
             this.panel3.TabIndex = 11;
             // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.lblSearchType);
+            this.panel4.Controls.Add(this.cmbxSearchType);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel4.Location = new System.Drawing.Point(0, 0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(169, 29);
+            this.panel4.TabIndex = 1;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -395,10 +412,12 @@
             this.gbVisitorInfo.ResumeLayout(false);
             this.gbVisitorInfo.PerformLayout();
             this.gbPayments.ResumeLayout(false);
-            this.groupBox1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -436,6 +455,8 @@
         private System.Windows.Forms.Button btnGetPaymentsData;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.SaveFileDialog sfdPaymentLogExport;
+        private System.Windows.Forms.Panel panel4;
     }
 }
 
