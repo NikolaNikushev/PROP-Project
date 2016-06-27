@@ -87,6 +87,38 @@ namespace Modules
                         string tentsTotalSum = reader["tent"].ToString();
                     }
                     reader.Close();
+                    /////add number of updates 
+                    /////////
+                    command.CommandText = @"SELECT SUM(PAYSUM) ticket WHERE TYPE = 'TICKET'; ";
+
+                    reader = command.ExecuteReader();
+                    if (reader.Read())
+                    {
+                        string ticketsTotalSum = reader["tecket"].ToString();
+                    }
+                    reader.Close();
+                    //////////////////////////
+                    command.CommandText = @"SELECT MAX(most), PAYSUM
+                                            FROM(
+                                            SELECT COUNT(*) AS 'most',PAYSUM
+                                            FROM serpayments 
+                                            WHERE PAYSUM = 55
+                                            UNION
+                                            SELECT COUNT(*),PAYSUM
+                                            FROM serpayments 
+                                            WHERE PAYSUM = 85
+                                            UNION
+                                            SELECT COUNT(*),PAYSUM
+                                            FROM serpayments 
+                                            WHERE PAYSUM = 125) x;";
+
+                    reader = command.ExecuteReader();
+                    if (reader.Read())
+                    {
+                        string mostPopularTicket = reader["PAYSUM"].ToString();
+                    }
+                    reader.Close();
+
 
 
 
