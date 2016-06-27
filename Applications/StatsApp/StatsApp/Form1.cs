@@ -50,7 +50,7 @@ namespace StatsApp
         {
             label2.Text = dbh.GetNrCurrentVisitors().ToString();
             // one of the festival dates
-            if ((Convert.ToString(DateTime.Now.ToString("dd/MM/yyyy")) == "27/06/2016" || Convert.ToString(DateTime.Now.ToString("dd/MM/yyyy")) == "28.06.2016" || Convert.ToString(DateTime.Now.ToString("dd/MM/yyyy")) == "29.06.2016") && timer2.Enabled != true)
+            if ((Convert.ToString(DateTime.Now.ToString("dd_MM_yyyy")) == "27_06_2016" || Convert.ToString(DateTime.Now.ToString("dd_MM_yyyy")) == "28_06_2016" || Convert.ToString(DateTime.Now.ToString("dd_MM_yyyy")) == "29_06_2016") && timer2.Enabled != true)
             {
                 timer2.Start();
                 listBox1.Items.Add("The date is " + Convert.ToString(DateTime.Now.ToString("dd/MM/yyyy")));
@@ -98,7 +98,7 @@ namespace StatsApp
         private void button1_Click(object sender, EventArgs e)
         {
             listBox2.Items.Clear();
-            List<string> data = bfh.LoadFromBinaryFile("../../DAY_27.06.2016");
+            List<string> data = bfh.LoadFromBinaryFile("../../DAY_27_06_2016");
             foreach (string a in data)
             {
                 listBox2.Items.Add(a);
@@ -108,7 +108,7 @@ namespace StatsApp
         private void button2_Click(object sender, EventArgs e)
         {
             listBox2.Items.Clear();
-            List<string> data = bfh.LoadFromBinaryFile("../../DAY_28.06.2016");
+            List<string> data = bfh.LoadFromBinaryFile("../../DAY_28_06_2016");
             foreach (string a in data)
             {
                 listBox2.Items.Add(a);
@@ -118,7 +118,7 @@ namespace StatsApp
         private void button3_Click(object sender, EventArgs e)
         {
             listBox2.Items.Clear();
-            List<string> data = bfh.LoadFromBinaryFile("../../DAY_29.06.2016");
+            List<string> data = bfh.LoadFromBinaryFile("../../DAY_29_06_2016");
             foreach (string a in data)
             {
                 listBox2.Items.Add(a);

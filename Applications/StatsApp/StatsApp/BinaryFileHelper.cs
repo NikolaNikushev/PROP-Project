@@ -19,7 +19,7 @@ namespace StatsApp
 
         public void SaveToBinaryFile(List<string> List)
         {
-            string filename = "../../DAY_" + Convert.ToString(DateTime.Now.ToString("dd/MM/yyyy"));
+            string filename = "../../DAY_" + Convert.ToString(DateTime.Now.ToString("dd_MM_yyyy"));
             FileStream fs = null;
             BinaryFormatter bf = null;
 
@@ -31,8 +31,8 @@ namespace StatsApp
             }
             catch (SerializationException)
             { MessageBox.Show("something wrong with Serialization"); }
-            catch (IOException)
-            { MessageBox.Show("No Data Available"); }
+            catch (IOException e)
+            { MessageBox.Show(e.ToString()); }
             finally
             {
                 if (fs != null) fs.Close();
