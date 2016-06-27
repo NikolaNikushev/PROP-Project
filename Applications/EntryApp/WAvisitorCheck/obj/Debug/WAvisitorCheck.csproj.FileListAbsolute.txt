@@ -17,7 +17,6 @@ D:\School\ProP\PROP-Project\Applications\EntryApp\WAvisitorCheck\bin\Debug\WAvis
 D:\School\ProP\PROP-Project\Applications\EntryApp\WAvisitorCheck\bin\Debug\WAvisitorCheck.pdb
 D:\School\ProP\PROP-Project\Applications\EntryApp\WAvisitorCheck\bin\Debug\MySql.Data.dll
 D:\School\ProP\PROP-Project\Applications\EntryApp\WAvisitorCheck\obj\Debug\WAvisitorCheck.csprojResolveAssemblyReference.cache
-D:\School\ProP\PROP-Project\Applications\EntryApp\WAvisitorCheck\obj\Debug\WAvisitorCheck.Form1.resources
 D:\School\ProP\PROP-Project\Applications\EntryApp\WAvisitorCheck\obj\Debug\WAvisitorCheck.Properties.Resources.resources
 D:\School\ProP\PROP-Project\Applications\EntryApp\WAvisitorCheck\obj\Debug\WAvisitorCheck.csproj.GenerateResource.Cache
 E:\Dropbox\workspace\Apps\PROP-Project\Applications\EntryApp\WAvisitorCheck\bin\Debug\WAvisitorCheck.exe.config
@@ -31,3 +30,4 @@ E:\Dropbox\workspace\Apps\PROP-Project\Applications\EntryApp\WAvisitorCheck\obj\
 E:\Dropbox\workspace\Apps\PROP-Project\Applications\EntryApp\WAvisitorCheck\obj\Debug\WAvisitorCheck.Properties.Resources.resources
 E:\Dropbox\workspace\Apps\PROP-Project\Applications\EntryApp\WAvisitorCheck\obj\Debug\WAvisitorCheck.csproj.GenerateResource.Cache
 E:\Dropbox\workspace\Apps\PROP-Project\Applications\EntryApp\WAvisitorCheck\bin\Debug\Phidget21.NET.dll
+D:\School\ProP\PROP-Project\Applications\EntryApp\WAvisitorCheck\obj\Debug\WAvisitorCheck.Form1.resources
