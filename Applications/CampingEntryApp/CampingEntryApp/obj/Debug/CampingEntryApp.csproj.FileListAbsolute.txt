@@ -13,3 +13,6 @@ C:\Users\User1\Desktop\CEA\CampingEntryApp\CampingEntryApp\obj\Debug\CampingEntr
 D:\Projects\FONTYSPRO\PROP-Project\Applications\CampingEntryApp\CampingEntryApp\bin\Debug\CampingEntryApp.exe.config
 D:\Projects\FONTYSPRO\PROP-Project\Applications\CampingEntryApp\CampingEntryApp\obj\Debug\CampingEntryApp.exe
 D:\Projects\FONTYSPRO\PROP-Project\Applications\CampingEntryApp\CampingEntryApp\obj\Debug\CampingEntryApp.pdb
+D:\School\ProP\PROP-Project\Applications\CampingEntryApp\CampingEntryApp\bin\Debug\CampingEntryApp.exe.config
+D:\School\ProP\PROP-Project\Applications\CampingEntryApp\CampingEntryApp\obj\Debug\CampingEntryApp.exe
+D:\School\ProP\PROP-Project\Applications\CampingEntryApp\CampingEntryApp\obj\Debug\CampingEntryApp.pdb
