@@ -10,3 +10,6 @@ C:\Users\User1\Desktop\ExitApp\ExitApp\bin\Debug\Phidget21.NET.dll
 C:\Users\User1\Desktop\ExitApp\ExitApp\bin\Debug\Phidget21.NET.xml
 C:\Users\User1\Desktop\ExitApp\ExitApp\obj\Debug\ExitApp.exe
 C:\Users\User1\Desktop\ExitApp\ExitApp\obj\Debug\ExitApp.pdb
+D:\School\ProP\PROP-Project\Applications\ExitApp\ExitApp\bin\Debug\ExitApp.exe.config
+D:\School\ProP\PROP-Project\Applications\ExitApp\ExitApp\obj\Debug\ExitApp.exe
+D:\School\ProP\PROP-Project\Applications\ExitApp\ExitApp\obj\Debug\ExitApp.pdb
