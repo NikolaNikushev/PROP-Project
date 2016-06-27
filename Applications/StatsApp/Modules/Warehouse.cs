@@ -163,14 +163,14 @@ namespace Modules
         static public List<Product> GetAllProducts()
         {
             String sql = "SELECT * FROM foodproducts ORDER BY name";
-            MySqlCommand command = new MySqlCommand(sql, Connection.connection);
+            MySqlCommand command = new MySqlCommand(sql, DBConnectionDll.Connection.connection);
 
             List<Product> temp;
             temp = new List<Product>();
 
             try
             {
-                Connection.connection.Open();
+                DBConnectionDll.Connection.connection.Open();
                 MySqlDataReader reader = command.ExecuteReader();
                 // data to build a new product upon 
                 int id;
@@ -194,7 +194,7 @@ namespace Modules
             }
             finally
             {
-                Connection.connection.Close();
+                DBConnectionDll.Connection.connection.Close();
             }
             return temp;
         }
@@ -210,14 +210,14 @@ namespace Modules
                 "FROM storeprodinfo " +
                 "WHERE storename = " + "'" + ShopName + "'" +
                 "ORDER BY prodname;";
-            MySqlCommand command = new MySqlCommand(sql, Connection.connection);
+            MySqlCommand command = new MySqlCommand(sql, DBConnectionDll.Connection.connection);
 
             List<Product> temp;
             temp = new List<Product>();
 
             try
             {
-                Connection.connection.Open();
+                DBConnectionDll.Connection.connection.Open();
                 MySqlDataReader reader = command.ExecuteReader();
                 // data to build a new product upon 
                 int id;
@@ -241,7 +241,7 @@ namespace Modules
             }
             finally
             {
-                Connection.connection.Close();
+                DBConnectionDll.Connection.connection.Close();
             }
             return temp;
         }
@@ -254,14 +254,14 @@ namespace Modules
         static public List<String> RetrieveStoreNames()
         {
             String sql = "SELECT STORENAME FROM STORES";
-            MySqlCommand command = new MySqlCommand(sql, Connection.connection);
+            MySqlCommand command = new MySqlCommand(sql, DBConnectionDll.Connection.connection);
 
             List<String> temp;
             temp = new List<String>();
 
             try
             {
-                Connection.connection.Open();
+                DBConnectionDll.Connection.connection.Open();
                 MySqlDataReader reader = command.ExecuteReader();
                 // data to build a new product upon 
 
@@ -276,7 +276,7 @@ namespace Modules
             }
             finally
             {
-                Connection.connection.Close();
+                DBConnectionDll.Connection.connection.Close();
             }
             return temp;
 
@@ -293,13 +293,13 @@ namespace Modules
         /// <returns></returns>
         static public List<ProductArchive> GetHistoryProducts(string ShopName, string ProductName)
         {
-            Connection.connection.Open();
+            DBConnectionDll.Connection.connection.Open();
 
-            MySqlCommand command = Connection.connection.CreateCommand();
+            MySqlCommand command = DBConnectionDll.Connection.connection.CreateCommand();
 
             //// Must assign both transaction object and connection
             //// to Command object for a pending local transaction
-            command.Connection = Connection.connection;
+            command.Connection = DBConnectionDll.Connection.connection;
 
             List<ProductArchive> temp;
             temp = new List<ProductArchive>();
@@ -352,7 +352,7 @@ namespace Modules
             }
             finally
             {
-                Connection.connection.Close();
+                DBConnectionDll.Connection.connection.Close();
             }
             return temp;
         }
@@ -372,14 +372,14 @@ namespace Modules
                 "GROUP BY sl.PRODUCT_ID " +
                 "ORDER BY SUM(QUANTITY)DESC " +
                 "LIMIT 7;";
-            MySqlCommand command = new MySqlCommand(sql, Connection.connection);
+            MySqlCommand command = new MySqlCommand(sql, DBConnectionDll.Connection.connection);
 
             List<Product> temp;
             temp = new List<Product>();
 
             try
             {
-                Connection.connection.Open();
+                DBConnectionDll.Connection.connection.Open();
                 MySqlDataReader reader = command.ExecuteReader();
                 // data to build a new product upon 
                 int id;
@@ -403,7 +403,7 @@ namespace Modules
             }
             finally
             {
-                Connection.connection.Close();
+                DBConnectionDll.Connection.connection.Close();
             }
             return temp;
         }
@@ -424,13 +424,13 @@ namespace Modules
                     "ORDER BY COUNT(PAYMENT_ID) DESC LIMIT 1) as " +
                 "HOTHOUR " +
                 "FROM storepayment;";
-            MySqlCommand command = new MySqlCommand(sql, Connection.connection);
+            MySqlCommand command = new MySqlCommand(sql, DBConnectionDll.Connection.connection);
 
             string[] querRes = new string[3];
 
             try
             {
-                Connection.connection.Open();
+                DBConnectionDll.Connection.connection.Open();
                 MySqlDataReader reader = command.ExecuteReader();
                 // data to build a new product upon 
 
@@ -452,7 +452,7 @@ namespace Modules
             }
             finally
             {
-                Connection.connection.Close();
+                DBConnectionDll.Connection.connection.Close();
             }
 
             return querRes;
@@ -470,14 +470,14 @@ namespace Modules
         static public List<String> RetrieveInStoreProds(String StoreName)
         {
             String sql = "SELECT PRODNAME FROM storeprodinfo WHERE STORENAME = '" + StoreName + "';";
-            MySqlCommand command = new MySqlCommand(sql, Connection.connection);
+            MySqlCommand command = new MySqlCommand(sql, DBConnectionDll.Connection.connection);
 
             List<String> temp;
             temp = new List<String>();
 
             try
             {
-                Connection.connection.Open();
+                DBConnectionDll.Connection.connection.Open();
                 MySqlDataReader reader = command.ExecuteReader();
                 // data to build a new product upon 
 
@@ -492,7 +492,7 @@ namespace Modules
             }
             finally
             {
-                Connection.connection.Close();
+                DBConnectionDll.Connection.connection.Close();
             }
             return temp;
 

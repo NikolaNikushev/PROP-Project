@@ -12,14 +12,8 @@ namespace ShopApp
         //----------------------------CONSTRUCTOR
         public DBHelper()
         {
-            String connectionInfo = "server=localhost;" +
-                                    "database=propdbtest;" +
-                                    "user id=root;" +
-                                    "password=;" +
-                                    "connect timeout=30;" +
-                                    "convert zero datetime=True";
-
-            connection = new MySqlConnection(connectionInfo);
+            // using the shared dll to get the data
+            connection = DBConnectionDll.Connection.connection;
         }
 
         //----------------------------GENERAL

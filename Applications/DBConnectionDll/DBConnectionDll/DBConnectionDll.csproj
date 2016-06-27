@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{E0439A77-496F-4B59-BA9D-51705D7BA7B1}</ProjectGuid>
+    <ProjectGuid>{9A9DDE36-F6DD-48AE-B05D-A0F2A51C254A}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Modules</RootNamespace>
-    <AssemblyName>Modules</AssemblyName>
+    <RootNamespace>DBConnectionDll</RootNamespace>
+    <AssemblyName>DBConnectionDll</AssemblyName>
     <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -30,16 +30,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="DBConnectionDll">
-      <HintPath>..\..\DBConnectionDll\DBConnectionDll\bin\Debug\DBConnectionDll.dll</HintPath>
-    </Reference>
     <Reference Include="MySql.Data">
-      <HintPath>..\..\..\..\..\Programs\CSharp\PCSFONTYS\PCS3\Week6\MySql.Data.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\Programs\CSharp\PCSFONTYS\PCS3\Week6\MySql.Data.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Windows.Forms" />
-    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -48,9 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Product.cs" />
-    <Compile Include="Visitors.cs" />
-    <Compile Include="Warehouse.cs" />
+    <Compile Include="Connection.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

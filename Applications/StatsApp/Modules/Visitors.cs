@@ -1,11 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
 using System.Windows.Forms;
-using System.Windows.Forms.DataVisualization.Charting;
 
 namespace Modules
 {
@@ -114,14 +110,14 @@ namespace Modules
         static public List<Bracelet> GetAllBracelets(out int nmbr)
         {
             String sql = "SELECT * FROM rfids";
-            MySqlCommand command = new MySqlCommand(sql, Connection.connection);
+            MySqlCommand command = new MySqlCommand(sql, DBConnectionDll.Connection.connection);
             nmbr = 0;
             List<Bracelet> temp;
             temp = new List<Bracelet>();
 
             try
             {
-                Connection.connection.Open();
+                DBConnectionDll.Connection.connection.Open();
                 MySqlDataReader reader = command.ExecuteReader();
                 // data to build a new product upon 
                 string id;
@@ -150,7 +146,7 @@ namespace Modules
             }
             finally
             {
-                Connection.connection.Close();
+                DBConnectionDll.Connection.connection.Close();
             }
             return temp;
         }
@@ -178,13 +174,13 @@ namespace Modules
                 ", (Select count(*) from visitors where PAID = 1) as ExpVis" +
                 ", (Select count(*) from visitors where PAID = 1 AND STATUS = 1) as PresVis" +
                 " From visitors";
-            MySqlCommand command = new MySqlCommand(sql, Connection.connection);
+            MySqlCommand command = new MySqlCommand(sql, DBConnectionDll.Connection.connection);
             List<Bracelet> temp;
             temp = new List<Bracelet>();
 
             try
             {
-                Connection.connection.Open();
+                DBConnectionDll.Connection.connection.Open();
                 MySqlDataReader reader = command.ExecuteReader();
 
                 while (reader.Read())
@@ -200,7 +196,7 @@ namespace Modules
             }
             finally
             {
-                Connection.connection.Close();
+                DBConnectionDll.Connection.connection.Close();
             }
         }
 
@@ -217,13 +213,13 @@ namespace Modules
                          "COUNT(DISTINCT CAMPING_ID) as nmbrOfGroups, " +
                          "(SELECT COUNT(DISTINCT USER_ID) from storepayment) as Buyers " +
                          "FROM `visitors` where CAMPING_ID is not null;";
-            MySqlCommand command = new MySqlCommand(sql, Connection.connection);
+            MySqlCommand command = new MySqlCommand(sql, DBConnectionDll.Connection.connection);
             List<Bracelet> temp;
             temp = new List<Bracelet>();
 
             try
             {
-                Connection.connection.Open();
+                DBConnectionDll.Connection.connection.Open();
                 MySqlDataReader reader = command.ExecuteReader();
 
                 while (reader.Read())
@@ -239,7 +235,7 @@ namespace Modules
             }
             finally
             {
-                Connection.connection.Close();
+                DBConnectionDll.Connection.connection.Close();
             }
         }
 
