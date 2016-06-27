@@ -103,23 +103,20 @@ namespace LoaningItemsApp
                     i = JobsDone.LoanItems[index];
                     if (i.Loaned == 1)
                     {
-                        MessageBox.Show("Item is alredy loaned out");
+                        MessageBox.Show("Item is already loaned out");
                     }
                     else
                     {
                         balance = dbh.getBalance(tag);
                         DateTime startdate = DateTime.Now;
-                       
-                        dbh.SetStartDate(i.Article_id, startdate);
-                        dbh.SetLoanStatus(i.Article_id);
-                        i.Loaned = 1;
+                        
+                        
 
                         DateTime duedate = dateTimePicker1.Value.Date;
                         i.Returndate = duedate;
+                        i.Loandate = startdate;
                         string dueDate = dateTimePicker1.Value.Date.ToString("yyyy-MM-dd HH:mm");
-                        dbh.SetDueDate(i.Article_id, dueDate);
-                        lBoxItemsForLoan.Items.Remove(i);
-                        lBoxLoanedItems.Items.Add(i.AsString());
+                        
                         int totaldays = (duedate - startdate).Days;
                         if (totaldays == 0)
                         {
@@ -133,8 +130,23 @@ namespace LoaningItemsApp
                             txtBoxPrice.Text = totalprice.ToString();
                         }
                         double newbalance = balance - totalprice;
-                        dbh.UpdateBalance(tag, newbalance);
-                        textBox1.Text = Convert.ToString(newbalance);
+                        if (newbalance < 0)
+                        {
+                            MessageBox.Show("You have insufficient funds");
+                        }
+                        else
+                        {
+                            i.Loaned = 1;
+                            dbh.SetStartDate(i.Article_id);
+                            dbh.SetLoanStatus(i.Article_id, tag);
+                            dbh.SetDueDate(i.Article_id, dueDate);
+                            lBoxItemsForLoan.Items.Remove(i);
+                            lBoxLoanedItems.Items.Add(i.AsString());
+                            
+                            dbh.UpdateBalance(tag, newbalance);
+                            textBox1.Text = Convert.ToString(newbalance);
+
+                        }
 
                     }
                 }
@@ -162,21 +174,30 @@ namespace LoaningItemsApp
         private void button2_Click(object sender, EventArgs e)
         {
             Item var;
-            int index = listBox1.SelectedIndex;
-            var = JobsDone.LoanItems[index];
+            var = (Item)listBox1.SelectedItem;
+            
             int articleId = var.Article_id;
             dbh.SetLoanStatusToFalse(articleId);
+            var.Actualreturndate = DateTime.Now;
+           
             var.Loaned = 0;
-            if(var.Returndate>var.Actualreturndate)
+            if (var.Actualreturndate > var.Returndate)
             {
                 MessageBox.Show("You have returned this item late and you will have to pay extra fee");
                 balance = dbh.getBalance(tag);
                 int extrafee = 15;
                 double newbalance = balance - extrafee;
-                dbh.UpdateBalance(tag, newbalance);
+                if (newbalance < 0)
+                {
+                    MessageBox.Show("You have insufficient funds");
+                }
+                else
+                {
+                    dbh.UpdateBalance(tag, newbalance);
+                }
             }
             
-            listBox1.Items.Remove(index);
+            listBox1.Items.Remove(var);
             lBoxReturnedItems.Items.Add(var.AsString());
         }
 
@@ -187,7 +208,8 @@ namespace LoaningItemsApp
             listBox1.Items.Clear();
             foreach (Item i in JobsDone.LoanItems)
             {
-                listBox1.Items.Add(i.AsString());
+                if(i.Loaned ==1)
+                listBox1.Items.Add(i);
             }
 
             

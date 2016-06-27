@@ -86,7 +86,7 @@ namespace LoaningItemsApp
             this.Loandate = loandate;
             this.Article_id = article_id;
         }
-        public string AsString()
+        public  string AsString()
         {
             string s = "Name of article: " + Name + " Price per day: " + Priceperday.ToString();
             if(Loaned== 1)
@@ -106,6 +106,22 @@ namespace LoaningItemsApp
         public static implicit operator Item(string v)
         {
             throw new NotImplementedException();
+        }
+        public override string ToString()
+        {
+            string s = "Name of article: " + Name + " Price per day: " + Priceperday.ToString();
+            if (Loaned == 1)
+            {
+                s += " Item is already loaned out" + " and will be returned on: " + Returndate.ToString();
+                return s;
+            }
+            else if (Loaned == 0)
+            {
+                s += " Item is available";
+                return s;
+            }
+            return s;
+
         }
     }
 }

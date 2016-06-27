@@ -144,12 +144,15 @@ namespace LoaningItemsApp
                 connection.Close();
             }
         }
-        public void SetStartDate(int articleid, DateTime startDate)
+        public void SetStartDate(int articleid)
         {
             
             
-            String sql = "UPDATE loanitems SET STARTDATE = " + "NOW()" + " WHERE ARTICLE_ID = " + articleid+";";
+            String sql = "UPDATE loanitems SET STARTDATE = " + "NOW()" + " WHERE ARTICLE_ID = ?Article_id;";
+
             MySqlCommand command = new MySqlCommand(sql, connection);
+            command.CommandText = sql;
+            command.Parameters.AddWithValue("?Article_id", articleid);
             try
             {
                 connection.Open();
@@ -164,10 +167,13 @@ namespace LoaningItemsApp
                 connection.Close();
             }
         }
-        public void SetLoanStatus(int articleid)
+        public void SetLoanStatus(int articleid, string bracelet_id)
         {
-            string sql = "UPDATE loanitems SET LoanStatus = 1 " +  "WHERE ARTICLE_ID = " + articleid + ";";
+            string sql = "UPDATE loanitems SET LoanStatus = 1, USER_ID = (SELECT visitors.USER_ID FROM visitors WHERE BRACELET_ID = ?bracelet_ID LIMIT 1) WHERE ARTICLE_ID = ?Article_id;";
             MySqlCommand command = new MySqlCommand(sql, connection);
+            command.CommandText = sql;
+            command.Parameters.AddWithValue("?Article_id", articleid);
+            command.Parameters.AddWithValue("?bracelet_ID", bracelet_id);
             try
             {
                 connection.Open();
@@ -185,8 +191,10 @@ namespace LoaningItemsApp
         }
         public void SetLoanStatusToFalse(int articleid)
         {
-            string sql = "UPDATE loanitems SET LoanStatus = 0 " + "WHERE ARTICLE_ID = " + articleid + ";";
+            string sql = "UPDATE loanitems SET LoanStatus = 0, USER_ID = 0 ,RETURNDATE = NOW() WHERE ARTICLE_ID = ?Article_id;";
             MySqlCommand command = new MySqlCommand(sql, connection);
+            command.CommandText = sql;
+            command.Parameters.AddWithValue("?Article_id", articleid);
             try
             {
                 connection.Open();
@@ -225,6 +233,7 @@ namespace LoaningItemsApp
                 connection.Close();
             }
         }
+       
 
 
 
