@@ -54,7 +54,7 @@ namespace WAvisitorCheck
         {
             //listBox1.Items.Add("rfid has tag-nr: " + e.Tag);
            int paid = dbh.CheckIfPaid(e.Tag);
-            if (paid == 1)
+            if (paid == 1) //checks if the person has paid
             {
                 
                 pictureBox1.BackColor = Color.Green;
@@ -74,7 +74,7 @@ namespace WAvisitorCheck
                 //listBox1.Items.Add(paid.ToString());
                 AutoClosingMessageBox.Show("This person has not payed","capiton",1000);
             }
-            else
+            else // if the rfid is not registered
             {
                 pictureBox1.BackColor = Color.Red;
                 //Start timer, your program continues execution normaly
