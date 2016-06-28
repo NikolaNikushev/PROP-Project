@@ -9,7 +9,7 @@ public class DBHelper
     private string activityID;
     private string selectedActivity;
     private string userID;
-    private MySqlConnection connection;
+    private MySqlConnection connection = DBConnectionDll.Connection.connection;
     MySqlDataReader reader;
     //Constructors
     public DBHelper()

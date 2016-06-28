@@ -92,8 +92,7 @@ namespace ActivityExit
         {
             myDBHelper.IncreasePlaces(selectedItem);
            response.Text = myDBHelper.InsertIntoHistory(RFIDTag);
-            //izvikvame metod na koito podavame taga i selectirame neshtata na koito otgovarq tva neshto
-            // ot braceleta vzimame usera, ot usera activity idto i posle tva za maxa
+         
         }
     }
 }

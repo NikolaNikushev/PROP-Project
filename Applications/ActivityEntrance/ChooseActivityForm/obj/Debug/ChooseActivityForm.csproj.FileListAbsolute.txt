@@ -14,3 +14,5 @@ E:\Dropbox\workspace\Apps\PROP-Project\Applications\ActivityEntrance\ChooseActiv
 E:\Dropbox\workspace\Apps\PROP-Project\Applications\ActivityEntrance\ChooseActivityForm\obj\Debug\ChooseActivityForm.ChooseActivityForm.resources
 E:\Dropbox\workspace\Apps\PROP-Project\Applications\ActivityEntrance\ChooseActivityForm\bin\Debug\DatabaseInteraction.dll
 E:\Dropbox\workspace\Apps\PROP-Project\Applications\ActivityEntrance\ChooseActivityForm\bin\Debug\DatabaseInteraction.pdb
+E:\Dropbox\workspace\Apps\PROP-Project\Applications\ActivityEntrance\ChooseActivityForm\bin\Debug\DBConnectionDll.dll
+E:\Dropbox\workspace\Apps\PROP-Project\Applications\ActivityEntrance\ChooseActivityForm\bin\Debug\DBConnectionDll.pdb

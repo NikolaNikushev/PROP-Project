@@ -12,3 +12,5 @@ E:\Dropbox\workspace\Apps\PROP-Project\Applications\ActivityEntrance\ActivityEnt
 E:\Dropbox\workspace\Apps\PROP-Project\Applications\ActivityEntrance\ActivityEntrance\obj\Debug\ActivityEntrance.ActivityEntranceForm.resources
 E:\Dropbox\workspace\Apps\PROP-Project\Applications\ActivityEntrance\ActivityEntrance\bin\Debug\DatabaseInteraction.dll
 E:\Dropbox\workspace\Apps\PROP-Project\Applications\ActivityEntrance\ActivityEntrance\bin\Debug\DatabaseInteraction.pdb
+E:\Dropbox\workspace\Apps\PROP-Project\Applications\ActivityEntrance\ActivityEntrance\bin\Debug\DBConnectionDll.dll
+E:\Dropbox\workspace\Apps\PROP-Project\Applications\ActivityEntrance\ActivityEntrance\bin\Debug\DBConnectionDll.pdb

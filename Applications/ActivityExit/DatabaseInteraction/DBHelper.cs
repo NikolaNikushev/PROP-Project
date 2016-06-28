@@ -7,7 +7,7 @@ using MySql.Data;
 using MySql.Data.MySqlClient;
 public class DBHelper
 {
-    private MySqlConnection connection;
+    private MySqlConnection connection ;
     private MySqlDataReader reader;
     private string userID;
     public DBHelper()

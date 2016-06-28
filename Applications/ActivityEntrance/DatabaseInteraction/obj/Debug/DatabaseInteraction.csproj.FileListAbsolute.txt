@@ -4,3 +4,5 @@ E:\Dropbox\workspace\Apps\PROP-Project\Applications\ActivityEntrance\DatabaseInt
 E:\Dropbox\workspace\Apps\PROP-Project\Applications\ActivityEntrance\DatabaseInteraction\obj\Debug\DatabaseInteraction.csprojResolveAssemblyReference.cache
 E:\Dropbox\workspace\Apps\PROP-Project\Applications\ActivityEntrance\DatabaseInteraction\obj\Debug\DatabaseInteraction.dll
 E:\Dropbox\workspace\Apps\PROP-Project\Applications\ActivityEntrance\DatabaseInteraction\obj\Debug\DatabaseInteraction.pdb
+E:\Dropbox\workspace\Apps\PROP-Project\Applications\ActivityEntrance\DatabaseInteraction\bin\Debug\DBConnectionDll.dll
+E:\Dropbox\workspace\Apps\PROP-Project\Applications\ActivityEntrance\DatabaseInteraction\bin\Debug\DBConnectionDll.pdb
