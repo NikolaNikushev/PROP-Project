@@ -84,9 +84,9 @@
 <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 <?php require_once 'default/pageparts/footerlinksHome.php'; ?>
 <div id="social">
-	<img id="footerfacebook" src="DEFAULT/IMAGES/facebook.png" />
-	<img id="footertwitter" src="DEFAULT/IMAGES/twitter.png" />
-	<img id="footergplus" src="DEFAULT/IMAGES/gplus.png" />
+	<a href="https://www.twitter.com/"><img id="footerfacebook" src="DEFAULT/IMAGES/facebook.png" /></a>
+	<a href="https://plus.google.com/"><img id="footertwitter" src="DEFAULT/IMAGES/twitter.png" /></a>
+	<a href="https://www.facebook.com/"><img id="footergplus" src="DEFAULT/IMAGES/gplus.png" /></a>
 </div>
 <p id="copyright">COPYRIGHT:2016</p>
 </div>
