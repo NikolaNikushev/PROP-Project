@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series7 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series8 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.label1 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.label2 = new System.Windows.Forms.Label();
@@ -128,8 +128,9 @@
             this.label10 = new System.Windows.Forms.Label();
             this.revenueSalesLabel = new System.Windows.Forms.Label();
             this.tmrVisCDataPrt = new System.Windows.Forms.Timer(this.components);
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.ObjectDataTextBox = new System.Windows.Forms.TextBox();
+            this.ObjectDataTextBox1 = new System.Windows.Forms.TextBox();
+            this.refreshFinance = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.panel16.SuspendLayout();
@@ -652,24 +653,24 @@
             // chartProductHistory
             // 
             this.chartProductHistory.BackColor = System.Drawing.SystemColors.MenuBar;
-            chartArea4.Name = "ChartArea1";
-            this.chartProductHistory.ChartAreas.Add(chartArea4);
+            chartArea2.Name = "ChartArea1";
+            this.chartProductHistory.ChartAreas.Add(chartArea2);
             this.chartProductHistory.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend4.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Bottom;
-            legend4.Name = "Legend1";
-            this.chartProductHistory.Legends.Add(legend4);
+            legend2.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Bottom;
+            legend2.Name = "Legend1";
+            this.chartProductHistory.Legends.Add(legend2);
             this.chartProductHistory.Location = new System.Drawing.Point(893, 220);
             this.chartProductHistory.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.chartProductHistory.Name = "chartProductHistory";
-            series7.ChartArea = "ChartArea1";
-            series7.Legend = "Legend1";
-            series7.Name = "STOCK";
-            series8.ChartArea = "ChartArea1";
-            series8.Legend = "Legend1";
-            series8.Name = "SALES";
-            series8.YValuesPerPoint = 6;
-            this.chartProductHistory.Series.Add(series7);
-            this.chartProductHistory.Series.Add(series8);
+            series3.ChartArea = "ChartArea1";
+            series3.Legend = "Legend1";
+            series3.Name = "STOCK";
+            series4.ChartArea = "ChartArea1";
+            series4.Legend = "Legend1";
+            series4.Name = "SALES";
+            series4.YValuesPerPoint = 6;
+            this.chartProductHistory.Series.Add(series3);
+            this.chartProductHistory.Series.Add(series4);
             this.chartProductHistory.Size = new System.Drawing.Size(458, 396);
             this.chartProductHistory.TabIndex = 6;
             this.chartProductHistory.Text = "chart1";
@@ -1145,18 +1146,19 @@
             // 
             this.button4.BackColor = System.Drawing.SystemColors.Menu;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Location = new System.Drawing.Point(173, 27);
+            this.button4.Location = new System.Drawing.Point(192, 155);
             this.button4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(179, 33);
             this.button4.TabIndex = 1;
             this.button4.Text = "Display Info";
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // panel14
             // 
-            this.panel14.Controls.Add(this.label3);
-            this.panel14.Controls.Add(this.textBox1);
+            this.panel14.Controls.Add(this.ObjectDataTextBox1);
+            this.panel14.Controls.Add(this.ObjectDataTextBox);
             this.panel14.Controls.Add(this.comboBox1);
             this.panel14.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -1176,12 +1178,14 @@
             this.comboBox1.Location = new System.Drawing.Point(11, 17);
             this.comboBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(177, 26);
+            this.comboBox1.Size = new System.Drawing.Size(360, 26);
             this.comboBox1.TabIndex = 0;
             this.comboBox1.Text = "Select an object";
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // panel12
             // 
+            this.panel12.Controls.Add(this.refreshFinance);
             this.panel12.Controls.Add(this.label19);
             this.panel12.Controls.Add(this.completeRevenueLabel);
             this.panel12.Controls.Add(this.label14);
@@ -1282,21 +1286,32 @@
             // 
             this.tmrVisCDataPrt.Tick += new System.EventHandler(this.tmrVisCDataPrt_Tick);
             // 
-            // textBox1
+            // ObjectDataTextBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(10, 68);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 24);
-            this.textBox1.TabIndex = 12;
+            this.ObjectDataTextBox.Location = new System.Drawing.Point(11, 69);
+            this.ObjectDataTextBox.Name = "ObjectDataTextBox";
+            this.ObjectDataTextBox.ReadOnly = true;
+            this.ObjectDataTextBox.Size = new System.Drawing.Size(360, 24);
+            this.ObjectDataTextBox.TabIndex = 12;
             // 
-            // label3
+            // ObjectDataTextBox1
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(136, 74);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(52, 18);
-            this.label3.TabIndex = 13;
-            this.label3.Text = "label3";
+            this.ObjectDataTextBox1.Location = new System.Drawing.Point(11, 126);
+            this.ObjectDataTextBox1.Multiline = true;
+            this.ObjectDataTextBox1.Name = "ObjectDataTextBox1";
+            this.ObjectDataTextBox1.ReadOnly = true;
+            this.ObjectDataTextBox1.Size = new System.Drawing.Size(360, 77);
+            this.ObjectDataTextBox1.TabIndex = 14;
+            // 
+            // refreshFinance
+            // 
+            this.refreshFinance.Location = new System.Drawing.Point(267, 144);
+            this.refreshFinance.Name = "refreshFinance";
+            this.refreshFinance.Size = new System.Drawing.Size(87, 32);
+            this.refreshFinance.TabIndex = 3;
+            this.refreshFinance.Text = "Refresh";
+            this.refreshFinance.UseVisualStyleBackColor = true;
+            this.refreshFinance.Click += new System.EventHandler(this.refreshFinance_Click);
             // 
             // Form1
             // 
@@ -1452,8 +1467,9 @@
         private System.Windows.Forms.Label labelNmbrCampingGroups;
         private System.Windows.Forms.Timer tmrVisCDataPrt;
         private System.Windows.Forms.Button btnBracRefresh;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox ObjectDataTextBox;
+        private System.Windows.Forms.TextBox ObjectDataTextBox1;
+        private System.Windows.Forms.Button refreshFinance;
     }
 }
 

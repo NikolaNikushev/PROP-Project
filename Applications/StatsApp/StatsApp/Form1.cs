@@ -32,8 +32,8 @@ namespace StatsApp
             timer2.Interval = 5000 /*(uncomment for an hourly interval * 60 * 60 */;
             time = System.DateTime.Now.Hour;
             date = DateTime.Now.ToString("dd");
-            Label[] ar = { completeRevenueLabel, revenueSalesLabel, revenueServicesLabel, balanceCapacityLabel };
-            financialLabels = ar;
+            Label[] tempLabelList = { completeRevenueLabel, revenueSalesLabel, revenueServicesLabel, balanceCapacityLabel };
+            financialLabels = tempLabelList;
 
         }
 
@@ -165,7 +165,7 @@ namespace StatsApp
                     break;
                 case 2: //finance
                     this.tmrVisCDataPrt.Stop();
-                    Finance.PupulateFinanceData(financialLabels);
+                    Finance.PupulateGlobalData(financialLabels);
                     break;
             }
         }
@@ -223,6 +223,40 @@ namespace StatsApp
         private void btnBracRefresh_Click(object sender, EventArgs e)
         {
             VisitorsCntrl.PopulateBraceletSection(this.dgvBracelets, this.lblBracNmbrVal);
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            TextBox[] textBoxesArray = { ObjectDataTextBox, ObjectDataTextBox1 };
+            ObjectDataTextBox.Clear();
+            ObjectDataTextBox1.Clear();
+            switch (comboBox1.SelectedItem.ToString())
+            {
+                case "Tents":
+                    Finance.PopulateTents(textBoxesArray);
+
+                    break;
+                case "Sales":
+                    Finance.PopulateSales(textBoxesArray);
+                    break;
+                case "Tickets":
+                    Finance.PopulateTickets(textBoxesArray);
+                    break;
+
+                default:
+                    MessageBox.Show("select something bithc");
+                    break;
+            }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Finance.PopulateLog(lbLivePmntsLog);
+        }
+
+        private void refreshFinance_Click(object sender, EventArgs e)
+        {
+            Finance.PupulateGlobalData(financialLabels);
         }
     }
 }
