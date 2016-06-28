@@ -118,7 +118,6 @@ namespace BraceletManagement
             whereClauseValue = RemoveWhiteSpaces(whereClauseValue);
             string whereClauseAttribute = searchAttribute.ToString();
 
-            // We need to think of some ways to prevent the sql injections and other messed up user entries
             String sql = "SELECT EMAIL, FNAME, LNAME, SECCODE, BRACELET_ID, STATUS FROM VISITORS WHERE UPPER("
                 + whereClauseAttribute + ") =" + " UPPER(\"" + whereClauseValue + "\")";
             MySqlCommand command = new MySqlCommand(sql, connection);
