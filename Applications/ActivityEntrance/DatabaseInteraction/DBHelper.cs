@@ -42,7 +42,7 @@ public class DBHelper
         {
             connection.Open();
             //first I verify the given data
-            reader = VerifyData(braceletID).ExecuteReader();
+            reader = VerifyData(braceletID,activityID).ExecuteReader();
             if (reader.Read())
             {
                 userID = reader["USER_ID"].ToString();
@@ -88,7 +88,7 @@ public class DBHelper
         return queryOutput;
     }
 
-    // methods for return the retrieved data
+    // methods for returning the retrieved data
     public List<string> RetrieveActivityNames()
     {
         List<string> activityNames = new List<string>();
@@ -156,6 +156,7 @@ public class DBHelper
                 placesList.Add(reader["TOTALPLACES"].ToString());
                 placesList.Add(reader["RESERVEDPLACES"].ToString());
                 placesList.Add(reader["FREEPLACES"].ToString());
+                placesList.Add(reader["OPENPLACESTAKEN"].ToString());
             }
 
         }
@@ -201,7 +202,7 @@ public class DBHelper
     //Commands for retrieving data
     private MySqlCommand PlacesDetailsCommand(string activityID)
     {
-        string placesDetailsQuery = "SELECT TOTALPLACES, RESERVEDPLACES, FREEPLACES " +
+        string placesDetailsQuery = "SELECT TOTALPLACES, RESERVEDPLACES, FREEPLACES, OPENPLACESTAKEN " +
                                     "FROM  activityplaces_view " +
                                     "WHERE ACTIVITY_ID = " + "\"" + activityID + "\";";
         MySqlCommand placesDetailsCommand = new MySqlCommand(placesDetailsQuery, connection);
@@ -257,15 +258,15 @@ public class DBHelper
         MySqlCommand insertCommand = new MySqlCommand(insertQuery, connection);
         return insertCommand;
     }
-    
-    private MySqlCommand VerifyData(string braceletID)
+
+    private MySqlCommand VerifyData(string braceletID,string activityID)
     {
         string verifyQuery = "SELECT v.USER_ID  " +
                              "FROM location_history lh LEFT JOIN visitors v " +
                              "ON lh.USER_ID = v.USER_ID " +
                              "WHERE v.BRACELET_ID = " + "\"" + braceletID + "\" " +
                              "AND lh.TIME_EXIT IS NULL " +
-                             "AND lh.ACTIVITY_ID = 1 " +
+                             "AND lh.ACTIVITY_ID = " + "\"" + activityID + "\" " +
                              "ORDER BY lh.TIME_ENTRANCE DESC " +
                              "LIMIT 1;";
 

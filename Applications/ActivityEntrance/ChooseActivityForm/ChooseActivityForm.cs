@@ -51,6 +51,7 @@ namespace ChooseActivityForm
             aef.TotalPlaces = placesData[0];
             aef.ReservedPlaces = placesData[1];
             aef.FreePlaces = placesData[2];
+            aef.OpenPlacesTaken = placesData[3];
             // setting the dbhelper object to the one referring to activity reservation form, so it can make
             //use of the same variables
             aef.myDBHelper = this.myDBHelper;

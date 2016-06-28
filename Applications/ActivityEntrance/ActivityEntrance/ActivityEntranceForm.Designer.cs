@@ -34,6 +34,8 @@
             this.activityName = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.openPlacesTaken = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.freePlaces = new System.Windows.Forms.Label();
             this.reservedPlaces = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -112,6 +114,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.openPlacesTaken);
+            this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.freePlaces);
             this.groupBox1.Controls.Add(this.reservedPlaces);
             this.groupBox1.Controls.Add(this.label10);
@@ -130,6 +134,26 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Activity details";
             // 
+            // openPlacesTaken
+            // 
+            this.openPlacesTaken.AutoSize = true;
+            this.openPlacesTaken.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.openPlacesTaken.Location = new System.Drawing.Point(199, 169);
+            this.openPlacesTaken.Name = "openPlacesTaken";
+            this.openPlacesTaken.Size = new System.Drawing.Size(59, 25);
+            this.openPlacesTaken.TabIndex = 19;
+            this.openPlacesTaken.Text = "value";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label4.Location = new System.Drawing.Point(6, 169);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(187, 25);
+            this.label4.TabIndex = 18;
+            this.label4.Text = "Open places taken: ";
+            // 
             // freePlaces
             // 
             this.freePlaces.AutoSize = true;
@@ -143,16 +167,17 @@
             // 
             this.reservedPlaces.AutoSize = true;
             this.reservedPlaces.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.reservedPlaces.Location = new System.Drawing.Point(175, 169);
+            this.reservedPlaces.Location = new System.Drawing.Point(175, 203);
             this.reservedPlaces.Name = "reservedPlaces";
-            this.reservedPlaces.Size = new System.Drawing.Size(0, 25);
+            this.reservedPlaces.Size = new System.Drawing.Size(59, 25);
             this.reservedPlaces.TabIndex = 13;
+            this.reservedPlaces.Text = "value";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label10.Location = new System.Drawing.Point(6, 169);
+            this.label10.Location = new System.Drawing.Point(6, 203);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(163, 25);
             this.label10.TabIndex = 12;
@@ -382,6 +407,8 @@
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label freePlaces;
         private System.Windows.Forms.Label userInfo;
+        private System.Windows.Forms.Label openPlacesTaken;
+        private System.Windows.Forms.Label label4;
     }
 }
 

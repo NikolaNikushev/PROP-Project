@@ -89,7 +89,17 @@ namespace ActivityEntrance
                 freePlaces.Text = value;
             }
         }
-
+        public string OpenPlacesTaken
+        {
+            get
+            {
+                return openPlacesTaken.Text;
+            }
+            set
+            {
+                openPlacesTaken.Text = value;
+            }
+        }
         private void open_RFID_Click(object sender, EventArgs e)
         {
             try
@@ -137,7 +147,7 @@ namespace ActivityEntrance
                 typeOfPlace.Text = braceletData;
                 braceletSerialNumber.Text = RFIDTag;
                 proceedButton.Enabled = true;
-                
+
             }
             catch (Exception ex)
             {
