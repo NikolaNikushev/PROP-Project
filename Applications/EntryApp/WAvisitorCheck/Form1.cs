@@ -91,15 +91,6 @@ namespace WAvisitorCheck
             pictureBox1.BackColor = Color.White;
         }
 
-        private void button3_Click(object sender, EventArgs e)
-        {
-           List<Visitor> temp = dbh.GetAllVisitors();
-            foreach(Visitor visitor in temp)
-            {
-                listBox1.Items.Add(visitor.getInfo());
-            }
-        }
-
 
     }
 }
