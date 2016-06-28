@@ -51,3 +51,4 @@ D:\School\ProP\PROP-Project\Applications\ShopAppStable\ShopApp\bin\Debug\MySql.D
 D:\School\ProP\PROP-Project\Applications\ShopAppStable\ShopApp\bin\Debug\Phidget21.NET.dll
 D:\School\ProP\PROP-Project\Applications\ShopAppStable\ShopApp\bin\Debug\DBConnectionDll.pdb
 D:\School\ProP\PROP-Project\Applications\ShopAppStable\ShopApp\bin\Debug\Phidget21.NET.xml
+D:\Projects\FONTYSPRO\PROP-Project\Applications\ShopAppStable\ShopApp\bin\Debug\MySql.Data.dll

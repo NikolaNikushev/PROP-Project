@@ -31,7 +31,12 @@ namespace ShopApp
         // the position of the queantity labels
         const int LBLQUANX = 3, LBLLEVELTHREE = 201, LBLQUANVALX = 110;
 
-
+        /// <summary>
+        /// Creates a panel for a product to be kept in
+        /// </summary>
+        /// <param name="X"></param>
+        /// <param name="Y"></param>
+        /// <returns></returns>
         public static Panel ProducePanel(ref int X,ref int Y)
         {
             Panel myPanel = new Panel();
@@ -40,11 +45,16 @@ namespace ShopApp
             //myPanel.Name = "pnlTest";
             myPanel.BackColor = Color.AliceBlue;
             myPanel.Font = new Font(new FontFamily("Microsoft Sans Serif"), 9.75F, FontStyle.Bold);
+            // moves the starting point of a next panel to the right on an accodring distance
             X = X + PANELWIDTH + LEFTMARGIN;
             return myPanel;
         }
 
-        // Product Name
+        /// <summary>
+        ///  Product Name value is added as a label to the panel
+        /// </summary>
+        /// <param name="ProdName"></param>
+        /// <returns></returns>
         public static Label ProduceLabelProductName(string ProdName)
         {
             Label myLblProductName = new Label();
@@ -53,7 +63,11 @@ namespace ShopApp
             return myLblProductName;
         }
 
-
+        /// <summary>
+        /// The price value is added to the panel as a label
+        /// </summary>
+        /// <param name="ProdPrice"></param>
+        /// <returns></returns>
         public static Label ProduceLabelProductPrice(double ProdPrice)
         {
             Label myLblProductPrice = new Label();
@@ -62,7 +76,10 @@ namespace ShopApp
             return myLblProductPrice;
         }
 
-
+        /// <summary>
+        /// The label for currency is created
+        /// </summary>
+        /// <returns></returns>
         public static Label ProduceLabelCurrency()
         {
             // Currency
@@ -83,6 +100,11 @@ namespace ShopApp
             return myLblProductQuantityCaption;
         }
 
+        /// <summary>
+        /// Creates the quantity vaue label
+        /// </summary>
+        /// <param name="ProdQuantity"></param>
+        /// <returns></returns>
         public static Label ProduceLabelQuantity(int ProdQuantity)
         {
             // Quantity caption
