@@ -1,0 +1,11 @@
+.buttons{
+    margin: auto;
+    width: 50%;
+    text-align: center;
+    padding: 10px;
+}
+.intro{
+	font-weight: bold;
+	text-align: center;
+	padding:20px;
+}
