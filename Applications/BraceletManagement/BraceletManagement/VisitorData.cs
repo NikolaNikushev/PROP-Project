@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BraceletManagement
 {
-    public class VisitorData: SomeAbstractData
+    public class VisitorData
     {
 
         //--------Properties and Fields:

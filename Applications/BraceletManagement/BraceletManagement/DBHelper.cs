@@ -24,7 +24,7 @@ namespace BraceletManagement
             //                        "password=;" +
             //                        "connect timeout=30;" +
             //                        "convert zero datetime=True";
-
+            //connection = new MySqlConnection(connectionInfo);
             connection = new MySqlConnection(DBConnectionDll.Connection.connectionInfo);
         }
         //----------Methods:
@@ -150,7 +150,7 @@ namespace BraceletManagement
                         {
                             seccode = (string)reader["SECCODE"];
                         }
-                        valueToReturn = new VisitorData((int)reader["USER_ID"], (string)reader["EMAIL"], (string)reader["FNAME"], (string)reader["LNAME"],
+                        valueToReturn = new VisitorData((string)reader["EMAIL"], (string)reader["FNAME"], (string)reader["LNAME"],
                                                 seccode, chipNum, (int)reader["STATUS"]);
                     }
 
@@ -235,6 +235,10 @@ namespace BraceletManagement
                 connection.Open();
                 this.ActivateBracelet(newChipData);
                 int affectedRows = 0;
+                if(connection.State != System.Data.ConnectionState.Open)
+                {
+                    connection.Open();
+                }
                 affectedRows += command.ExecuteNonQuery();
                 switch (affectedRows)
                 {
@@ -280,7 +284,7 @@ namespace BraceletManagement
             {
                 sql = "INSERT INTO RFIDS "
                 + " (STATUS,BRACELET_ID) values" 
-                + "\"ACTIVE\"," + " \"" + chipData.RFIDNumber + "\" ";
+                + "(\"ACTIVE\"," + " \"" + chipData.RFIDNumber + "\"); ";
             }
             
             MySqlCommand command = new MySqlCommand(sql, connection);
@@ -309,7 +313,8 @@ namespace BraceletManagement
             catch (Exception ex)
             {
                 methodResult = false;
-                AutoClosingMessageBox.Show(ex.Message, "Oups!", messageShowTime);
+                //AutoClosingMessageBox.Show(ex.Message, "Oups!", messageShowTime);
+                MessageBox.Show(ex.Message);
             }
             finally
             {

@@ -211,30 +211,39 @@ namespace BraceletManagement
             // first we deactivate his old one
             this.DeactiveVisBracelet();
             //new method
-            if(this.scannedRFID.RFIDNumber != this.myVisitor.ChipNumber && 
-                (this.scannedRFID.Status == StatusTypes.BraceletStatus.STAND_BY || this.scannedRFID.Status == StatusTypes.BraceletStatus.NOT_VALID))
+            try
             {
-                if(this.myDBHelper.UpdateVisitorBracelet(this.scannedRFID,this.myVisitor.Email))
+                if (this.scannedRFID.RFIDNumber != this.myVisitor.ChipNumber &&
+                                (this.scannedRFID.Status == StatusTypes.BraceletStatus.STAND_BY || this.scannedRFID.Status == StatusTypes.BraceletStatus.NOT_VALID))
                 {
-                    string code = this.myVisitor.Code;
-                    myVisitor = myDBHelper.getVisitorData(StatusTypes.SearchType.SECCODE, code);
-                    UpdateVisitorInfo();
-                    // kinda bad to access it directly, but alright for now
-                    this.scannedRFID.Status = StatusTypes.BraceletStatus.ACTIVE;
-                    this.tbScannedRFIDStatus.Text = this.scannedRFID.Status.ToString();
-                    this.lbActivityLog.Items.Insert(0, ">> Sucessfully Assigned");
-                    this.lbReaderLog.Items.Insert(0, ">> Sucessfully Assigned");
+                    if (this.myDBHelper.UpdateVisitorBracelet(this.scannedRFID, this.myVisitor.Email))
+                    {
+                        string email = this.myVisitor.Email;
+                        myVisitor = myDBHelper.getVisitorData(StatusTypes.SearchType.EMAIL, email);
+                        UpdateVisitorInfo();
+                        // kinda bad to access it directly, but alright for now
+                        this.scannedRFID.Status = StatusTypes.BraceletStatus.ACTIVE;
+                        this.tbScannedRFIDStatus.Text = this.scannedRFID.Status.ToString();
+                        this.lbActivityLog.Items.Insert(0, ">> Sucessfully Assigned");
+                        this.lbReaderLog.Items.Insert(0, ">> Sucessfully Assigned");
+                    }
+                    else
+                    {
+                        lbReaderLog.Items.Insert(0, "<< Could not assign");
+                    }
                 }
                 else
                 {
-                    lbReaderLog.Items.Insert(0, "<< Could not assign");
+                    AutoClosingMessageBox.Show("This Bracelet can not be assigned, please scan a new one!", "NOT A VALID BRACELET", 1000);
+                    lbReaderLog.Items.Insert(0, "<< Tried to assign a not-valid bracelet");
                 }
             }
-            else
+            catch
             {
-                AutoClosingMessageBox.Show("This Bracelet can not be assigned, please scan a new one!", "NOT A VALID BRACELET", 1000);
-                lbReaderLog.Items.Insert(0, "<< Tried to assign a not-valid bracelet");
+                AutoClosingMessageBox.Show("Something went wrong", "NOT A VALID BRACELET", 1000);
+                lbReaderLog.Items.Insert(0, "<< Operation abort");
             }
+            
         }
 
         private void btnDeactivateScannedBrac_Click(object sender, EventArgs e)

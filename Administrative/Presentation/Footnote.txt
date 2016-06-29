@@ -1,0 +1,15 @@
+1. Vision
+
+	introdcution and reasoning
+
+2. Mission
+
+	solutions
+	
+3. Demonstration
+	
+	use case? 
+
+4. Conclusion
+
+	Pros and cons and further actions
