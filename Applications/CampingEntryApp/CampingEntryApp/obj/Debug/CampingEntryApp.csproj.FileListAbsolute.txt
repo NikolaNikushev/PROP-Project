@@ -36,3 +36,17 @@ D:\School\ProP\PROP-Project\Applications\CampingEntryApp\CampingEntryApp\obj\Deb
 D:\School\ProP\PROP-Project\Applications\CampingEntryApp\CampingEntryApp\obj\Debug\CampingEntryApp.Form1.resources
 D:\School\ProP\PROP-Project\Applications\CampingEntryApp\CampingEntryApp\obj\Debug\CampingEntryApp.Properties.Resources.resources
 D:\School\ProP\PROP-Project\Applications\CampingEntryApp\CampingEntryApp\obj\Debug\CampingEntryApp.csproj.GenerateResource.Cache
+E:\Dropbox\workspace\Apps\PROP-Project\Applications\CampingEntryApp\CampingEntryApp\bin\Debug\CampingEntryApp.exe.config
+E:\Dropbox\workspace\Apps\PROP-Project\Applications\CampingEntryApp\CampingEntryApp\obj\Debug\CampingEntryApp.exe
+E:\Dropbox\workspace\Apps\PROP-Project\Applications\CampingEntryApp\CampingEntryApp\obj\Debug\CampingEntryApp.pdb
+E:\Dropbox\workspace\Apps\PROP-Project\Applications\CampingEntryApp\CampingEntryApp\bin\Debug\CampingEntryApp.exe
+E:\Dropbox\workspace\Apps\PROP-Project\Applications\CampingEntryApp\CampingEntryApp\bin\Debug\CampingEntryApp.pdb
+E:\Dropbox\workspace\Apps\PROP-Project\Applications\CampingEntryApp\CampingEntryApp\bin\Debug\DBConnectionDll.dll
+E:\Dropbox\workspace\Apps\PROP-Project\Applications\CampingEntryApp\CampingEntryApp\bin\Debug\MySql.Data.dll
+E:\Dropbox\workspace\Apps\PROP-Project\Applications\CampingEntryApp\CampingEntryApp\bin\Debug\Phidget21.NET.dll
+E:\Dropbox\workspace\Apps\PROP-Project\Applications\CampingEntryApp\CampingEntryApp\bin\Debug\DBConnectionDll.pdb
+E:\Dropbox\workspace\Apps\PROP-Project\Applications\CampingEntryApp\CampingEntryApp\bin\Debug\Phidget21.NET.xml
+E:\Dropbox\workspace\Apps\PROP-Project\Applications\CampingEntryApp\CampingEntryApp\obj\Debug\CampingEntryApp.csprojResolveAssemblyReference.cache
+E:\Dropbox\workspace\Apps\PROP-Project\Applications\CampingEntryApp\CampingEntryApp\obj\Debug\CampingEntryApp.Form1.resources
+E:\Dropbox\workspace\Apps\PROP-Project\Applications\CampingEntryApp\CampingEntryApp\obj\Debug\CampingEntryApp.Properties.Resources.resources
+E:\Dropbox\workspace\Apps\PROP-Project\Applications\CampingEntryApp\CampingEntryApp\obj\Debug\CampingEntryApp.csproj.GenerateResource.Cache
