@@ -37,3 +37,17 @@ D:\Projects\FONTYSPRO\PROP-Project\Applications\ExitApp\ExitApp\obj\Debug\ExitAp
 D:\Projects\FONTYSPRO\PROP-Project\Applications\ExitApp\ExitApp\obj\Debug\ExitApp.Form1.resources
 D:\Projects\FONTYSPRO\PROP-Project\Applications\ExitApp\ExitApp\obj\Debug\ExitApp.Properties.Resources.resources
 D:\Projects\FONTYSPRO\PROP-Project\Applications\ExitApp\ExitApp\obj\Debug\ExitApp.csproj.GenerateResource.Cache
+E:\Dropbox\workspace\Apps\PROP-Project\Applications\ExitApp\ExitApp\bin\Debug\ExitApp.exe.config
+E:\Dropbox\workspace\Apps\PROP-Project\Applications\ExitApp\ExitApp\obj\Debug\ExitApp.exe
+E:\Dropbox\workspace\Apps\PROP-Project\Applications\ExitApp\ExitApp\obj\Debug\ExitApp.pdb
+E:\Dropbox\workspace\Apps\PROP-Project\Applications\ExitApp\ExitApp\bin\Debug\ExitApp.exe
+E:\Dropbox\workspace\Apps\PROP-Project\Applications\ExitApp\ExitApp\bin\Debug\ExitApp.pdb
+E:\Dropbox\workspace\Apps\PROP-Project\Applications\ExitApp\ExitApp\bin\Debug\DBConnectionDll.dll
+E:\Dropbox\workspace\Apps\PROP-Project\Applications\ExitApp\ExitApp\bin\Debug\MySql.Data.dll
+E:\Dropbox\workspace\Apps\PROP-Project\Applications\ExitApp\ExitApp\bin\Debug\Phidget21.NET.dll
+E:\Dropbox\workspace\Apps\PROP-Project\Applications\ExitApp\ExitApp\bin\Debug\DBConnectionDll.pdb
+E:\Dropbox\workspace\Apps\PROP-Project\Applications\ExitApp\ExitApp\bin\Debug\Phidget21.NET.xml
+E:\Dropbox\workspace\Apps\PROP-Project\Applications\ExitApp\ExitApp\obj\Debug\ExitApp.csprojResolveAssemblyReference.cache
+E:\Dropbox\workspace\Apps\PROP-Project\Applications\ExitApp\ExitApp\obj\Debug\ExitApp.Form1.resources
+E:\Dropbox\workspace\Apps\PROP-Project\Applications\ExitApp\ExitApp\obj\Debug\ExitApp.Properties.Resources.resources
+E:\Dropbox\workspace\Apps\PROP-Project\Applications\ExitApp\ExitApp\obj\Debug\ExitApp.csproj.GenerateResource.Cache
