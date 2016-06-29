@@ -159,7 +159,10 @@ namespace CampingExitApp
                 MySqlDataReader reader = command.ExecuteReader();
                 while (reader.Read())
                 {
-                    camping_id = Convert.ToInt32(reader["CAMPING_ID"]);
+                    if (reader["CAMPING_ID"] != DBNull.Value)
+                    {
+                        camping_id = Convert.ToInt32(reader["CAMPING_ID"]);
+                    }
                 }
 
             }
