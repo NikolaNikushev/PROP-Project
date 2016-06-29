@@ -23,3 +23,16 @@ D:\School\ProP\PROP-Project\Applications\CampingExitApp\CampingExitApp\obj\Debug
 D:\School\ProP\PROP-Project\Applications\CampingExitApp\CampingExitApp\obj\Debug\CampingExitApp.Form1.resources
 D:\School\ProP\PROP-Project\Applications\CampingExitApp\CampingExitApp\obj\Debug\CampingExitApp.Properties.Resources.resources
 D:\School\ProP\PROP-Project\Applications\CampingExitApp\CampingExitApp\obj\Debug\CampingExitApp.csproj.GenerateResource.Cache
+D:\Projects\FONTYSPRO\PROP-Project\Applications\CampingExitApp\CampingExitApp\bin\Debug\CampingExitApp.exe.config
+D:\Projects\FONTYSPRO\PROP-Project\Applications\CampingExitApp\CampingExitApp\obj\Debug\CampingExitApp.exe
+D:\Projects\FONTYSPRO\PROP-Project\Applications\CampingExitApp\CampingExitApp\obj\Debug\CampingExitApp.pdb
+D:\Projects\FONTYSPRO\PROP-Project\Applications\CampingExitApp\CampingExitApp\bin\Debug\CampingExitApp.exe
+D:\Projects\FONTYSPRO\PROP-Project\Applications\CampingExitApp\CampingExitApp\bin\Debug\CampingExitApp.pdb
+D:\Projects\FONTYSPRO\PROP-Project\Applications\CampingExitApp\CampingExitApp\bin\Debug\DBConnectionDll.dll
+D:\Projects\FONTYSPRO\PROP-Project\Applications\CampingExitApp\CampingExitApp\bin\Debug\Phidget21.NET.dll
+D:\Projects\FONTYSPRO\PROP-Project\Applications\CampingExitApp\CampingExitApp\bin\Debug\DBConnectionDll.pdb
+D:\Projects\FONTYSPRO\PROP-Project\Applications\CampingExitApp\CampingExitApp\bin\Debug\Phidget21.NET.xml
+D:\Projects\FONTYSPRO\PROP-Project\Applications\CampingExitApp\CampingExitApp\obj\Debug\CampingExitApp.csprojResolveAssemblyReference.cache
+D:\Projects\FONTYSPRO\PROP-Project\Applications\CampingExitApp\CampingExitApp\obj\Debug\CampingExitApp.Form1.resources
+D:\Projects\FONTYSPRO\PROP-Project\Applications\CampingExitApp\CampingExitApp\obj\Debug\CampingExitApp.Properties.Resources.resources
+D:\Projects\FONTYSPRO\PROP-Project\Applications\CampingExitApp\CampingExitApp\obj\Debug\CampingExitApp.csproj.GenerateResource.Cache

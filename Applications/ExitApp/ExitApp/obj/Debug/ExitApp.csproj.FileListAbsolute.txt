@@ -24,3 +24,16 @@ D:\School\ProP\PROP-Project\Applications\ExitApp\ExitApp\obj\Debug\ExitApp.cspro
 D:\School\ProP\PROP-Project\Applications\ExitApp\ExitApp\obj\Debug\ExitApp.Form1.resources
 D:\School\ProP\PROP-Project\Applications\ExitApp\ExitApp\obj\Debug\ExitApp.Properties.Resources.resources
 D:\School\ProP\PROP-Project\Applications\ExitApp\ExitApp\obj\Debug\ExitApp.csproj.GenerateResource.Cache
+D:\Projects\FONTYSPRO\PROP-Project\Applications\ExitApp\ExitApp\bin\Debug\ExitApp.exe.config
+D:\Projects\FONTYSPRO\PROP-Project\Applications\ExitApp\ExitApp\obj\Debug\ExitApp.exe
+D:\Projects\FONTYSPRO\PROP-Project\Applications\ExitApp\ExitApp\obj\Debug\ExitApp.pdb
+D:\Projects\FONTYSPRO\PROP-Project\Applications\ExitApp\ExitApp\bin\Debug\ExitApp.exe
+D:\Projects\FONTYSPRO\PROP-Project\Applications\ExitApp\ExitApp\bin\Debug\ExitApp.pdb
+D:\Projects\FONTYSPRO\PROP-Project\Applications\ExitApp\ExitApp\bin\Debug\DBConnectionDll.dll
+D:\Projects\FONTYSPRO\PROP-Project\Applications\ExitApp\ExitApp\bin\Debug\Phidget21.NET.dll
+D:\Projects\FONTYSPRO\PROP-Project\Applications\ExitApp\ExitApp\bin\Debug\DBConnectionDll.pdb
+D:\Projects\FONTYSPRO\PROP-Project\Applications\ExitApp\ExitApp\bin\Debug\Phidget21.NET.xml
+D:\Projects\FONTYSPRO\PROP-Project\Applications\ExitApp\ExitApp\obj\Debug\ExitApp.csprojResolveAssemblyReference.cache
+D:\Projects\FONTYSPRO\PROP-Project\Applications\ExitApp\ExitApp\obj\Debug\ExitApp.Form1.resources
+D:\Projects\FONTYSPRO\PROP-Project\Applications\ExitApp\ExitApp\obj\Debug\ExitApp.Properties.Resources.resources
+D:\Projects\FONTYSPRO\PROP-Project\Applications\ExitApp\ExitApp\obj\Debug\ExitApp.csproj.GenerateResource.Cache

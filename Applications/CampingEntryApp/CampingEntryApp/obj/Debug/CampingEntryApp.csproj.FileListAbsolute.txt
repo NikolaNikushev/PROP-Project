@@ -16,7 +16,6 @@ D:\Projects\FONTYSPRO\PROP-Project\Applications\CampingEntryApp\CampingEntryApp\
 D:\School\ProP\PROP-Project\Applications\CampingEntryApp\CampingEntryApp\bin\Debug\CampingEntryApp.exe.config
 D:\School\ProP\PROP-Project\Applications\CampingEntryApp\CampingEntryApp\obj\Debug\CampingEntryApp.exe
 D:\School\ProP\PROP-Project\Applications\CampingEntryApp\CampingEntryApp\obj\Debug\CampingEntryApp.pdb
-D:\Projects\FONTYSPRO\PROP-Project\Applications\CampingEntryApp\CampingEntryApp\obj\Debug\CampingEntryApp.csprojResolveAssemblyReference.cache
 D:\Projects\FONTYSPRO\PROP-Project\Applications\CampingEntryApp\CampingEntryApp\obj\Debug\CampingEntryApp.Form1.resources
 D:\Projects\FONTYSPRO\PROP-Project\Applications\CampingEntryApp\CampingEntryApp\obj\Debug\CampingEntryApp.Properties.Resources.resources
 D:\Projects\FONTYSPRO\PROP-Project\Applications\CampingEntryApp\CampingEntryApp\obj\Debug\CampingEntryApp.csproj.GenerateResource.Cache
