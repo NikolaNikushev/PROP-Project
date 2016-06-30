@@ -13,7 +13,7 @@ namespace ApplicationRunner
 {
     public partial class Form1 : Form
     {
-        string[] appNames = { "Bracelet management", "Event entrance", "Camping entrance", "Shop", "Statistics", "Visitor support" };
+        string[] appNames = { "Bracelet management", "Event entrance", "Camping entrance", "Item loaning", "Shop", "Statistics", "Visitor support" };
         public Form1()
         {
             InitializeComponent();
@@ -50,6 +50,9 @@ namespace ApplicationRunner
                     break;
                 case "Visitor support":
                     Process.Start(root + "/../../../../../Applications/VisSup/BraceletManagement/bin/Debug/BraceletManagement.exe");
+                    break;
+                case "Item loaning":
+                    Process.Start(root + "/../../../../../Applications/LoaningItemsAppV2/LoaningItemsApp/bin/Debug/LoaningItemsApp.exe");
                     break;
                 default:
                     break;
