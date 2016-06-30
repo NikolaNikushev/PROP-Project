@@ -14,16 +14,14 @@
 
     </head>
     <body>
-        <div id="fb-root"></div>
-        <script>(function (d, s, id) {
-                var js, fjs = d.getElementsByTagName(s)[0];
-                if (d.getElementById(id))
-                    return;
-                js = d.createElement(s);
-                js.id = id;
-                js.src = "//connect.facebook.net/bg_BG/sdk.js#xfbml=1&version=v2.6";
-                fjs.parentNode.insertBefore(js, fjs);
-            }(document, 'script', 'facebook-jssdk'));</script>	
+      <div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.6";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>	
 
         <div id="header" class="scrolled">
             <?php include '../DEFAULT/PAGEPARTS/Header.php'; ?>
@@ -82,11 +80,7 @@
                         </div>
                         <ul class="sharing">
                             <li id="fbk">
-                                <div class="fb-share-button" 
-                                     data-href="//localhost/ProP/DEVELOPMENT/index.html" 
-                                     data-layout="button_count" 
-                                     data-mobile-iframe="true">
-                                </div>
+                                <div class="fb-share-button" data-href="http://athena.fhict.nl/users/i339282/universeofsound/" data-layout="button_count" data-size="large" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fathena.fhict.nl%2Fusers%2Fi339282%2Funiverseofsound%2F&amp;src=sdkpreparse">Share</a></div>
                             </li>
                             <li>
                                 <!--
