@@ -173,12 +173,12 @@ namespace LoaningItemsApp
 
         private void button2_Click(object sender, EventArgs e)
         {
+            
             Item var;
             var = (Item)listBox1.SelectedItem;
-            
-            int articleId = var.Article_id;
-            dbh.SetLoanStatusToFalse(articleId);
             var.Actualreturndate = DateTime.Now;
+            
+           
            
             var.Loaned = 0;
             if (var.Actualreturndate > var.Returndate)
@@ -193,12 +193,23 @@ namespace LoaningItemsApp
                 }
                 else
                 {
+                    int articleId = var.Article_id;
+                    dbh.SetLoanStatusToFalse(articleId);
                     dbh.UpdateBalance(tag, newbalance);
+                    listBox1.Items.Remove(var);
+                    lBoxReturnedItems.Items.Add(var.AsString());
                 }
             }
+            else
+            {
+                int articleId = var.Article_id;
+                dbh.SetLoanStatusToFalse(articleId);
+                
+                listBox1.Items.Remove(var);
+                lBoxReturnedItems.Items.Add(var.AsString());
+            }
             
-            listBox1.Items.Remove(var);
-            lBoxReturnedItems.Items.Add(var.AsString());
+            
         }
 
         

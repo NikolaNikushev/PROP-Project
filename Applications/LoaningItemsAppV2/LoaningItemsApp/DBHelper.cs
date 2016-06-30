@@ -128,12 +128,12 @@ namespace LoaningItemsApp
         {
             double left = (newBalance - Math.Floor(newBalance))*10;
             newBalance = Math.Floor(newBalance);
-            String sql = "UPDATE visitors SET BALANCE = " + newBalance.ToString()+"."+left.ToString() + " WHERE BRACELET_ID = " + "\"" + bracelet_id + "\"";
+            String sql = "UPDATE visitors SET BALANCE = " + newBalance.ToString()+left.ToString() + " WHERE BRACELET_ID = " + "\"" + bracelet_id + "\"";
             MySqlCommand command = new MySqlCommand(sql, connection);
             try
             {
                 connection.Open();
-                MySqlDataReader reader = command.ExecuteReader();
+                command.ExecuteNonQuery();
             }
             catch (Exception ex)
             {
