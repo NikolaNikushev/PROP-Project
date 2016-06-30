@@ -125,7 +125,11 @@ namespace ShopApp
 
             try
             {
-                connection.Open();
+                if(connection.State != System.Data.ConnectionState.Open)
+                {
+                    connection.Open();
+                }
+
                 MySqlDataReader reader = command.ExecuteReader();
                 while (reader.Read())
                 {
@@ -363,6 +367,10 @@ namespace ShopApp
                         "SET INSTOREQUANTITY = " + "'" + (thatShop.GetStockQunatityInStoreByProductID(p.Id) - p.Quantity) + "' " + // new quantity = oldQ - inbasketQ
                         "WHERE PRODUCT_ID = " + p.Id +
                         " AND STORE_ID = " + thatShop.Id + ";";
+                    if(this.connection.State!=System.Data.ConnectionState.Open)
+                    {
+                        this.connection.Open();
+                    }
                     command.ExecuteNonQuery();
                 }
 

@@ -1,0 +1,7 @@
+bracelet man
+entry
+camping entry
+shop app 
+stats
+vis sup
+exit app

@@ -33,3 +33,6 @@ E:\Dropbox\workspace\Apps\PROP-Project\Applications\EntryApp\WAvisitorCheck\bin\
 D:\School\ProP\PROP-Project\Applications\EntryApp\WAvisitorCheck\obj\Debug\WAvisitorCheck.Form1.resources
 D:\School\ProP\PROP-Project\Applications\EntryApp\WAvisitorCheck\bin\Debug\DBConnectionDll.dll
 D:\School\ProP\PROP-Project\Applications\EntryApp\WAvisitorCheck\bin\Debug\DBConnectionDll.pdb
+D:\Projects\FONTYSPRO\PROP-Project\Applications\EntryApp\WAvisitorCheck\bin\Debug\WAvisitorCheck.exe.config
+D:\Projects\FONTYSPRO\PROP-Project\Applications\EntryApp\WAvisitorCheck\obj\Debug\WAvisitorCheck.exe
+D:\Projects\FONTYSPRO\PROP-Project\Applications\EntryApp\WAvisitorCheck\obj\Debug\WAvisitorCheck.pdb
