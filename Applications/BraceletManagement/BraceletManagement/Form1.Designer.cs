@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.tbSearchVisitorText = new System.Windows.Forms.TextBox();
             this.cmbxSearchType = new System.Windows.Forms.ComboBox();
             this.lblSearchType = new System.Windows.Forms.Label();
@@ -467,9 +468,10 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.gbScannedRFID);
             this.Controls.Add(this.gbVisitorInfo);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(524, 538);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Bracelet Management";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.pnlMainSearch.ResumeLayout(false);
             this.pnlMainSearch.PerformLayout();

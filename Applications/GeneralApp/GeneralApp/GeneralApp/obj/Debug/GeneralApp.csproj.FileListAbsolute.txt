@@ -11,3 +11,6 @@ E:\Dropbox\workspace\Apps\PROP-Project\Applications\GeneralApp\GeneralApp\Genera
 E:\Dropbox\workspace\Apps\PROP-Project\Applications\GeneralApp\GeneralApp\GeneralApp\bin\Debug\BraceletManagement.exe
 E:\Dropbox\workspace\Apps\PROP-Project\Applications\GeneralApp\GeneralApp\GeneralApp\bin\Debug\Phidget21.NET.dll
 E:\Dropbox\workspace\Apps\PROP-Project\Applications\GeneralApp\GeneralApp\GeneralApp\bin\Debug\BraceletManagement.pdb
+D:\Projects\FONTYSPRO\PROP-Project\Applications\GeneralApp\GeneralApp\GeneralApp\bin\Debug\GeneralApp.exe.config
+D:\Projects\FONTYSPRO\PROP-Project\Applications\GeneralApp\GeneralApp\GeneralApp\obj\Debug\GeneralApp.exe
+D:\Projects\FONTYSPRO\PROP-Project\Applications\GeneralApp\GeneralApp\GeneralApp\obj\Debug\GeneralApp.pdb
