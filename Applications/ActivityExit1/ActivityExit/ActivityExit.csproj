@@ -34,10 +34,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="DatabaseInteraction">
-      <HintPath>..\DatabaseInteraction\bin\Debug\DatabaseInteraction.dll</HintPath>
+    <Reference Include="DBConnectionDll">
+      <HintPath>..\..\DBConnectionDll\DBConnectionDll\bin\Debug\DBConnectionDll.dll</HintPath>
     </Reference>
-    <Reference Include="MySql.Data, Version=6.9.8.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Data">
+      <HintPath>..\..\..\..\..\Programs\CSharp\PCSFONTYS\PCS3\Week6\MySql.Data.dll</HintPath>
+    </Reference>
     <Reference Include="Phidget21.NET, Version=2.1.8.243, Culture=neutral, PublicKeyToken=c2b1f2a3594bce52, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>C:\Program Files\Phidgets\Phidget21.NET.dll</HintPath>
@@ -88,6 +90,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DatabaseInteraction\DatabaseInteraction.csproj">
+      <Project>{77fb70dd-55eb-4a8c-952f-f2c0f3c0682d}</Project>
+      <Name>DatabaseInteraction</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
