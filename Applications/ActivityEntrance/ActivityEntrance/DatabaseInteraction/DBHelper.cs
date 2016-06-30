@@ -14,26 +14,26 @@ public class DBHelper
     //Constructors
     public DBHelper()
     {
-        String connectionInfo = "server=localhost;" +
-                                "database=propdbtest;" +
-                                "user id=root;" +
-                                "password=;" +
-                                "connect timeout=30;" +
-                                "convert zero datetime=True";
+        //String connectionInfo = "server=localhost;" +
+        //                        "database=propdbtest;" +
+        //                        "user id=root;" +
+        //                        "password=;" +
+        //                        "connect timeout=30;" +
+        //                        "convert zero datetime=True";
 
-        connection = new MySqlConnection(connectionInfo);
+        connection = new MySqlConnection(DBConnectionDll.Connection.connectionInfo);
     }
     public DBHelper(string selectedActivity)
     {
         this.selectedActivity = selectedActivity;
-        String connectionInfo = "server=localhost;" +
-                                "database=propdbtest;" +
-                                "user id=root;" +
-                                "password=;" +
-                                "connect timeout=30;" +
-                                "convert zero datetime=True";
+        //String connectionInfo = "server=localhost;" +
+        //                        "database=propdbtest;" +
+        //                        "user id=root;" +
+        //                        "password=;" +
+        //                        "connect timeout=30;" +
+        //                        "convert zero datetime=True";
 
-        connection = new MySqlConnection(connectionInfo);
+        connection = new MySqlConnection(DBConnectionDll.Connection.connectionInfo);
     }
     // The method that is executed by the proceed button
     public string Entrance(string braceletID)
@@ -41,7 +41,19 @@ public class DBHelper
         try
         {
             connection.Open();
+            int count = 0;
             //first I verify the given data
+            reader = UserInLocationHistory(braceletID).ExecuteReader();
+            if(reader.Read())
+            {
+                
+                count = Convert.ToInt32(reader["history"]);
+                string userid = reader["USER_ID"].ToString();
+                reader.Close();
+                reader = InsertIntoHistory(userid).ExecuteReader();
+                reader.Close();
+            }
+
             reader = VerifyData(braceletID,activityID).ExecuteReader();
             if (reader.Read())
             {
@@ -55,8 +67,12 @@ public class DBHelper
                     queryOutput = "Visitor can go to his/her reserved place";
                     reader.Close();
                     //keep track of the data
-                    reader = InsertIntoHistory(userID).ExecuteReader();
-                    reader.Close();
+                    if(count != 0)
+                    {
+                        reader = InsertIntoHistory(userID).ExecuteReader();
+                        reader.Close();
+                    }
+                    
                 }
                 // here are operated the visitors that have no reservations for the given activity
                 else
@@ -218,11 +234,11 @@ public class DBHelper
     private MySqlCommand BraceletDataCommand(string braceletID, string activityID)
     {
         string isReservedQuery = "SELECT v.BRACELET_ID AS \'BRACELET_ID\', v.USER_ID " +
-                         "FROM visitors v left join rfids r " +
-                         "ON v.BRACELET_ID = r.BRACELET_ID left join activityreservations ar " +
+                         "FROM visitors v join rfids r " +
+                         "ON v.BRACELET_ID = r.BRACELET_ID join activityreservations ar " +
                          "ON v.USER_ID = ar.USER_ID " +
-                         "WHERE v.USER_ID = ar.USER_ID " +
-                         "AND ar.ACTIVITY_ID = " + "\"" + activityID + "\" " +
+                         //"WHERE v.USER_ID = ar.USER_ID " +
+                         "WHERE ar.ACTIVITY_ID = " + "\"" + activityID + "\" " +
                          "AND v.BRACELET_ID = " + "\"" + braceletID + "\";";
 
 
@@ -267,11 +283,24 @@ public class DBHelper
                              "WHERE v.BRACELET_ID = " + "\"" + braceletID + "\" " +
                              "AND lh.TIME_EXIT IS NULL " +
                              "AND lh.ACTIVITY_ID = " + "\"" + activityID + "\" " +
+                             "HAVING COUNT(*) = 1 " +
                              "ORDER BY lh.TIME_ENTRANCE DESC " +
                              "LIMIT 1;";
 
         MySqlCommand verifyQueryCommand = new MySqlCommand(verifyQuery, connection);
         return verifyQueryCommand;
+    }
+
+    private MySqlCommand UserInLocationHistory(string braceletID)
+    {
+        string historyQuery = "SELECT COUNT(v.USER_ID) as history, v.USER_ID as USER_ID " +
+                             "FROM location_history lh LEFT JOIN visitors v " +
+                             "ON lh.USER_ID = v.USER_ID " +
+                             "WHERE v.BRACELET_ID = " + "\"" + braceletID + "\" " +
+                             "AND lh.CAMPING = 0 ;";
+
+        MySqlCommand historyQueryCommand = new MySqlCommand(historyQuery, connection);
+        return historyQueryCommand;
     }
 }
 
