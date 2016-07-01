@@ -34,7 +34,6 @@ D:\Projects\FONTYSPRO\PROP-Project\Applications\ShopAppStable\ShopApp\bin\Debug\
 D:\Projects\FONTYSPRO\PROP-Project\Applications\ShopAppStable\ShopApp\bin\Debug\ShopApp.pdb
 D:\Projects\FONTYSPRO\PROP-Project\Applications\ShopAppStable\ShopApp\bin\Debug\Phidget21.NET.dll
 D:\Projects\FONTYSPRO\PROP-Project\Applications\ShopAppStable\ShopApp\bin\Debug\Phidget21.NET.xml
-D:\Projects\FONTYSPRO\PROP-Project\Applications\ShopAppStable\ShopApp\obj\Debug\ShopApp.csprojResolveAssemblyReference.cache
 D:\Projects\FONTYSPRO\PROP-Project\Applications\ShopAppStable\ShopApp\bin\Debug\DBConnectionDll.dll
 D:\Projects\FONTYSPRO\PROP-Project\Applications\ShopAppStable\ShopApp\bin\Debug\DBConnectionDll.pdb
 D:\School\ProP\PROP-Project\Applications\ShopAppStable\ShopApp\bin\Debug\ShopApp.exe.config
