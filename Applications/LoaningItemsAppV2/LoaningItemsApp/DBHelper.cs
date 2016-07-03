@@ -126,9 +126,9 @@ namespace LoaningItemsApp
 
         public void UpdateBalance(string bracelet_id, double newBalance)
         {
-            double left = (newBalance - Math.Floor(newBalance))*10;
+            //double left = (newBalance - Math.Floor(newBalance));
             newBalance = Math.Floor(newBalance);
-            String sql = "UPDATE visitors SET BALANCE = " + newBalance.ToString()+left.ToString() + " WHERE BRACELET_ID = " + "\"" + bracelet_id + "\"";
+            String sql = "UPDATE visitors SET BALANCE = " + newBalance.ToString() + " WHERE BRACELET_ID = " + "\"" + bracelet_id + "\"";
             MySqlCommand command = new MySqlCommand(sql, connection);
             try
             {

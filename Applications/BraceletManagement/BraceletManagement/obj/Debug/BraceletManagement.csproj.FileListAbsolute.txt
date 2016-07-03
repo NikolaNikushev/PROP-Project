@@ -1,7 +1,6 @@
 D:\Projects\FONTYSPRO\PROP-Project\Applications\BraceletManagement\BraceletManagement\bin\Debug\BraceletManagement.exe.config
 D:\Projects\FONTYSPRO\PROP-Project\Applications\BraceletManagement\BraceletManagement\bin\Debug\BraceletManagement.exe
 D:\Projects\FONTYSPRO\PROP-Project\Applications\BraceletManagement\BraceletManagement\bin\Debug\BraceletManagement.pdb
-D:\Projects\FONTYSPRO\PROP-Project\Applications\BraceletManagement\BraceletManagement\obj\Debug\BraceletManagement.csprojResolveAssemblyReference.cache
 D:\Projects\FONTYSPRO\PROP-Project\Applications\BraceletManagement\BraceletManagement\obj\Debug\BraceletManagement.Form1.resources
 D:\Projects\FONTYSPRO\PROP-Project\Applications\BraceletManagement\BraceletManagement\obj\Debug\BraceletManagement.Properties.Resources.resources
 D:\Projects\FONTYSPRO\PROP-Project\Applications\BraceletManagement\BraceletManagement\obj\Debug\BraceletManagement.csproj.GenerateResource.Cache
