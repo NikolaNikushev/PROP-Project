@@ -1,11 +1,16 @@
+<?php
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+?>
 <!DOCTYPE html>
 <html>
 
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<link rel="stylesheet" type="text/css" href="HOME/header.css">
-	<link rel="stylesheet" type="text/css" href="HOME/homepage.css">
-	<link rel="stylesheet" type="text/css" href="DEFAULT/CSS/footer.css">
+	<link rel="stylesheet" type="text/css" href="home/header.css">
+	<link rel="stylesheet" type="text/css" href="home/homepage.css">
+	<link rel="stylesheet" type="text/css" href="default/css/footer.css">
 	<link rel="stylesheet" type="text/css" href="../DEFAULT/sweetalert-master/sweetalert-master/dist/sweetalert.css">
 
 	<!--<script type="text/javascript" src="HOMEtest.js"></script>-->
@@ -15,7 +20,7 @@
 <body>
 
 	<div id="header" class="headernotscrolled">
-		<img id="logo" class="logo" src="HOME/logotext.png"/>
+		<img id="logo" class="logo" src="home/logotext.png"/>
 			<?php require_once 'default/pageparts/HeaderLinksHome.php'; ?>
 	</div>
 	<!-- this div is with default display none and it
@@ -70,20 +75,19 @@
 		</div>
 		<div id="imgs">
 			<div>
-				<img src="HOME/PICTOGRAMS.png" alt="Pictograms" id="pictograms">
+				<img src="home/PICTOGRAMS.png" alt="Pictograms" id="pictograms">
 			</div>
 		</div>
-
-
+		s
 	</div>
 
 	<div id="footer">
-<img id="footerlogo" src="DEFAULT/IMAGES/LOGOFOOT.png" />
-<?php require_once 'default/pageparts/footerlinkshome.php'; ?>
+<img id="footerlogo" src="default/images/LOGOFOOT.png" />
+<?php require_once 'default/pageparts/FooterLinksHome.php'; ?>
 <div id="social">
-	<img id="footerfacebook" src="DEFAULT/IMAGES/facebook.png" />
-	<img id="footertwitter" src="DEFAULT/IMAGES/twitter.png" />
-	<img id="footergplus" src="DEFAULT/IMAGES/gplus.png" />
+	<img id="footerfacebook" src="default/images/facebook.png" />
+	<img id="footertwitter" src="default/images/twitter.png" />
+	<img id="footergplus" src="default/images/gplus.png" />
 </div>
 <p id="copyright">COPYRIGHT:2016</p>
 </div>

@@ -1,0 +1,158 @@
+#tentform{
+	padding-top:25pt;
+	background : #D7E1F2;
+  background : rgba(215, 225, 242, 1);
+  width : 60vw;
+  min-width: 640pt;
+  height : auto;
+  min-height: 500pt;
+  margin: auto;
+  padding-bottom: 50pt;
+}
+
+input{
+	background-color: #f58235;
+	font-family:  bauhaus93;
+	color: #3B4D81;
+	border: none;
+}
+
+
+#grtit{
+	display: block;
+	width: 30%;
+	margin: auto;
+	text-align: center;
+	margin-top: 40pt;
+	margin-bottom: 40pt;
+}
+#grtit h1{
+	width: auto;
+	 font-size : 30pt;
+  color : #3B4D81;
+  color : rgb(59, 77, 129);
+}
+
+#imges {
+	width: 30%;
+	display: block;	
+	position: relative;
+	margin: auto;
+	height: auto;
+	margin-bottom: -1%;
+	margin-top: 45pt;
+}
+#camps {
+	width: 100%;
+	position: static;
+}
+
+.boxie{
+	width: 60%;
+	position: relative;
+	display: block;
+	margin: auto;
+	font-size: 18pt;
+	color : #3B4D81;
+	padding-bottom: 25pt;
+	border-bottom: 3pt #3B4D81 solid;
+	margin-bottom: 10pt;
+}
+.boxie p{
+	margin-top: 5pt;
+}
+
+.verify{
+	border: none;
+}
+
+#ckbx {
+	width: 210pt;
+	display: block;
+	margin: auto;
+	margin-top: 10pt;
+	padding: 0pt;
+}
+
+.form-control{
+	width: 50%;
+	position: relative;
+	float: right;
+	background-color: #FFD105;
+	height: 24pt;
+	font-size: 20pt;
+}
+#finprice{
+    margin-top: 7pt;
+    vertical-align: middle;
+    width: 30%;
+}
+
+#check {
+	/* this does not work! */
+	background-color: #f58235;
+	color: #f58235;
+	box-shadow: #f58235;
+	/* all the above things are not working */
+	height: 18pt;
+	width: 18pt;
+	vertical-align: middle;	
+}
+#ckbx label{
+	border-bottom: 1pt #3B4D81 solid;
+}
+
+.btn{
+	margin: auto;
+	margin-top: 15pt;
+	width: 180pt;
+	height: 44pt;
+	display: block;
+	font-size: 30pt;
+	
+}
+
+.defcont{
+	display: inline-block;
+	width: 75pt;
+	margin-left: 30%;
+}
+
+.shortline{
+	width:50%;
+	display: inline-block;
+}
+
+.form_numcon{
+	width: 28pt;
+	
+	position: relative;
+	padding-left: 5pt;
+	margin-left: 3pt;
+	margin-right: 0;
+	float: none;
+	text-align: center;
+}
+.rdbtn{
+	width: 18pt;
+	height: 18pt;
+}
+.deflabel{
+	font-size: 24pt;
+}
+
+.datecont{
+	width: 100pt;
+	margin-left: 23%;
+}
+
+.dateline{
+	vertical-align: top;
+}
+
+.nuwarning{
+    text-align: right;
+    font-size: 12pt;
+    display: none;
+}
+/* a warning about the uniqueness of an email*/

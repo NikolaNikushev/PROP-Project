@@ -1,0 +1,78 @@
+@font-face {
+    font-family: "bauhaus93";
+    src: url("../../../default/fonts/bauhaus93.ttf") format("truetype");
+}
+body {
+    font-family: bauhaus93;
+}
+#container {
+    background-color: #d7e1f2;
+    height: auto;
+}
+.container-title {
+    font-size: 2.2vw;
+    text-align: center;
+    background-color: #3b4d81;
+    color: #fce600;
+}
+.solid-bar {
+    background-color: #fce600;
+    min-width:100px;
+}
+#top-containers {
+    padding-top: 150px;
+}
+
+#information {
+    height:auto;
+}
+#blank {
+    height: 1.65vw;
+}
+.user-text {
+    font-size: 2.2vw;
+    color: #3b4d81;
+    text-align: right;
+}
+.user-text-center {
+    text-align: center;
+}
+.user-text-container {
+    background-color: #fce600;
+    height: 3.2vw;
+}
+.person-button {
+    color: #3b4d81;
+    font-size: 1.4vw;
+    margin-top: 0.4vw;
+    text-align: right;
+}
+#tipi-picture {
+    height: 14vw;
+    margin-top: -0.4vw;
+}
+#pic-container {
+    border-bottom: 2px solid;
+    border-bottom-color: #3b4d81;
+}
+.tipi-text {
+    color: #3b4d81;
+    font-size: 1.5vw;
+    text-align: right;
+}
+#general-container {
+    height: 0px;
+}
+#balance-container {
+    height: 0px;
+}
+#bracelet-container {
+    height: 0px;
+}
+hr {
+    border: 0;
+    height: 2px;
+    background-color: #3b4d81;
+    margin: 0 auto;
+    width: 22vw;
+}

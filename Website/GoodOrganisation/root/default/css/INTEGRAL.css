@@ -1,0 +1,15 @@
+*{
+	margin:0;
+	padding:0;
+}
+@font-face {
+    font-family: "bauhaus93";
+    src:url("../fonts/bauhaus93.ttf") format("truetype");
+}
+body{
+	    background: rgba(245, 130, 53, 1);
+}
+@font-face {
+    font-family: "odinlight";
+    src:url("../fonts/odinroundedlight.otf") format("truetype");
+}
