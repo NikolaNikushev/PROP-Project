@@ -24,7 +24,7 @@ if(isset($_SESSION['USER_ID']))
 			<div class="dropdown-content">
 				<a href="info/general.php">GENERAL</a>
 				<a href="info/explore.php">EXPLORE</a>
-				<a href="info/location.php">LOCATION</a>
+				<a href="info/LOCATION.php">LOCATION</a>
 				<a href="info/rules.php">RULES</a>
 			</div>
 		</li>
@@ -53,7 +53,7 @@ else {
 		 <div class="dropdown-content">
 			 <a href="info/general.php">GENERAL</a>
 			 <a href="info/explore.php">EXPLORE</a>
-			 <a href="info/location.php">LOCATION</a>
+			 <a href="info/LOCATION.php">LOCATION</a>
 			 <a href="info/rules.php">RULES</a>
 		 </div>
 	 </li>

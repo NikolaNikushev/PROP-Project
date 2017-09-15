@@ -5,7 +5,7 @@
     <link rel="stylesheet" type="text/css" href="css/social.css">
 	<link rel="stylesheet" type="text/css" href="css/social.css">
 	<link rel="stylesheet" type="text/css" href="../default/css/fixedmenu.css">
-	<link rel="stylesheet" type="text/css" href="../default/css/integral.css">
+	<link rel="stylesheet" type="text/css" href="../default/css/INTEGRAL.css">
 	<link rel="stylesheet" type="text/css" href="../default/css/footer.css">
 	
 	

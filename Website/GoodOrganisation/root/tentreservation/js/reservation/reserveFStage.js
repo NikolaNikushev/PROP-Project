@@ -19,13 +19,13 @@ $(document).ready(function() {
                 if (response.includes('logged')) {
 
                     $(".banner").show();
-                    $(".central").load("PAGEPARTS/BannerReg.php");
+                    $(".central").load("pageparts/BannerReg.php");
                     //$("#Reg").show();
                     //alert(response);
 
                 } else {
                    $(".banner").show();
-                   $(".central").load("PAGEPARTS/BannerNoReg.php", {resp: response});
+                   $(".central").load("pageparts/BannerNoReg.php", {resp: response});
                   //$("#noReg").show();
                   //alert(response);
                   resp = response;

@@ -1,6 +1,6 @@
 <?php
 require_once '../default/phpfunc/dbconfig.php';
-require_once 'php/getallactivities.php';
+require_once 'php/GetAllActivities.php';
 
 session_start();
 require_once 'php/getPersonalActivities.php';

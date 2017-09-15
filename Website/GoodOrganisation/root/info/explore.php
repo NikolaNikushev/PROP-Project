@@ -4,7 +4,7 @@
 <title>EXPLORE</title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <link rel="stylesheet" type="text/css" href="../default/css/fixedmenu.css">
-<link rel="stylesheet" type="text/css" href="../default/css/integral.css">
+<link rel="stylesheet" type="text/css" href="../default/css/INTEGRAL.css">
 <link rel="stylesheet" type="text/css" href="../default/css/footer.css">
 <link rel="stylesheet" type="text/css" href="explore/css/explore.css">
 <link rel="stylesheet" type="text/css" href="explore/css/banner.css">
@@ -21,7 +21,7 @@
 	<div class="overlap banner">
 		<div class="central">
 			<div id="top">
-				<img class="topcont" src="explore/img/mapimg.png" id="bannerapp" alt="Visit our location">
+				<img class="topcont" src="explore/img/MAPIMG.png" id="bannerapp" alt="Visit our location">
 				<div class="topcont" id="toptext">
 					<h2>LOCATION</h2>
 					<p>Here you can find our location and plan your route!</p>
@@ -60,7 +60,7 @@
 			</div>
                         <div id="map_pic">
 				<!-- this shit will redirect to the location-info page, or maybe it will be a pop-up, I just have to figure out how to do it -->
-				<img src="explore/img/mapimg.png" id="imgmap" alt="Visit our location">
+				<img src="explore/img/MAPIMG.png" id="imgmap" alt="Visit our location">
 			</div>
 		</div>
 	</div>
