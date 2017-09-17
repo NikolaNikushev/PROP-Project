@@ -15,9 +15,10 @@
 <body>
   <div id="header" class="scrolled" class="container-fluid">
     <?php include '../default/pageparts/Header.php';
+    session_start();
     if(isset($_SESSION['USER_ID']))
     {
-      //header("Location: ../PERSONAL-PAGE/index.php");
+      header("Location: ../PERSONAL-PAGE/index.php");
     }
     ?>
   </div>

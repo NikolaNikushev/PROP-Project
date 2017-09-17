@@ -1,13 +1,11 @@
-
-$(document).ready(function () {
-    $(document).on('submit', '#second-form', function () {
+$(document).ready(function() {
+    $(document).on('submit', '#second-form', function() {
 
         // converting the strings to numeric values
         $price = parseInt($("#tprice").text(), 10);
         $ybal = parseInt($("#ybal").text(), 10);
-        $("#ybal").css("background-color","transparent");
-        if ($price <= $ybal)
-        {
+        $("#ybal").css("background-color", "transparent");
+        if ($price <= $ybal) {
             dataNew = $(this).serialize();
             //var email = $("#user_email").val();
             //var password = $("#user_password").val();
@@ -19,7 +17,7 @@ $(document).ready(function () {
                 type: 'POST',
                 url: 'php/ProcessBooking.php',
                 data: dataToSend,
-                success: function (response) {
+                success: function(response) {
                     if (response.includes('sucessful')) {
                         $(".banner").hide();
 
@@ -30,9 +28,9 @@ $(document).ready(function () {
                             type: "success",
                             confirmButtonColor: "#333399",
                             confirmButtonText: "Okay"
-                        }, function (isConfirm) {
+                        }, function(isConfirm) {
                             if (isConfirm) {
-                                window.location = "../../../personal-page";
+                                window.location = "../personal-page";
                             }
                         });
                         //alert('Sorry, it is not possible yet, we are working on it though');
@@ -44,10 +42,8 @@ $(document).ready(function () {
                     }
                 }
             });
-        }
-        else
-        {
-            $("#ybal").css("background-color","#f58235")
+        } else {
+            $("#ybal").css("background-color", "#f58235")
         }
         return false;
     });

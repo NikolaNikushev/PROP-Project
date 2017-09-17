@@ -1,20 +1,18 @@
-
-$(document).ready(function () {
-    $(document).on('submit', '#second-form', function () {
+$(document).ready(function() {
+    $(document).on('submit', '#second-form', function() {
 
         // converting the strings to numeric values
         $price = parseInt($("#pr").val(), 10);
         $ybal = parseInt($("#ybal").val(), 10);
-        $("#ybal").css("background-color","#3B4D81");
-        if ($price <= $ybal)
-        {
+        $("#ybal").css("background-color", "#3B4D81");
+        if ($price <= $ybal) {
             data = $(this).serialize();
 
             $.ajax({
                 type: 'POST',
                 url: 'php/ProcessTicketing.php',
                 data: data,
-                success: function (response) {
+                success: function(response) {
                     if (response.includes('sucessful')) {
                         $(".banner").hide();
 
@@ -25,9 +23,9 @@ $(document).ready(function () {
                             type: "success",
                             confirmButtonColor: "#333399",
                             confirmButtonText: "Okay"
-                        }, function (isConfirm) {
+                        }, function(isConfirm) {
                             if (isConfirm) {
-                                window.location = "../../personal-page";
+                                window.location = "../personal-page";
                             }
                         });
                         //alert('Sorry, it is not possible yet, we are working on it though');
@@ -40,10 +38,8 @@ $(document).ready(function () {
                     }
                 }
             });
-        }
-        else
-        {
-            $("#ybal").css("background-color","#f58235")
+        } else {
+            $("#ybal").css("background-color", "#f58235")
         }
         return false;
     });
@@ -51,17 +47,17 @@ $(document).ready(function () {
 
 
 
-function changePrice(){
-  var choice = $(".droptions").val();
-  switch(choice) {
-    case "BEST":
-        $("#pr").val(55);
-        break;
-    case "BETTER":
-        $("#pr").val(85);
-        break;
-    case "PERFECT":
-        $("#pr").val(125);
-        break;
+function changePrice() {
+    var choice = $(".droptions").val();
+    switch (choice) {
+        case "BEST":
+            $("#pr").val(55);
+            break;
+        case "BETTER":
+            $("#pr").val(85);
+            break;
+        case "PERFECT":
+            $("#pr").val(125);
+            break;
     }
 };

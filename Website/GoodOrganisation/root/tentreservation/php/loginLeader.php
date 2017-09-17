@@ -4,6 +4,9 @@
 require_once 'dbconfig.php';
 
 if (isset($_POST)) {
+
+    session_start();
+
     $user_email = strtolower(trim($_POST['email']));
     $user_password = strtolower(trim($_POST['password']));
     $_SESSION["totalprice"] = trim($_POST['finprice']);

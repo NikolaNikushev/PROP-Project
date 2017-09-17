@@ -20,7 +20,7 @@ if ($_POST) {
             $count = $stmt->rowCount();
             if ($count == 0) {
 
-                $stmt = $db_con->prepare("INSERT INTO visitors(FNAME,LNAME,EMAIL,PASSWORD,DOB,REGDATE) VALUES(:fname,:lname,:email, :pass,:dob,:jdate)");
+                $stmt = $db_con->prepare("INSERT INTO visitors(FNAME,LNAME,EMAIL,PASSWORD,DOB,REGDATE,ADDRESS) VALUES(:fname,:lname,:email, :pass,:dob,:jdate,:addr)");
 
                 $stmt->bindParam(":fname", $first_name);
                 $stmt->bindParam(":lname", $last_name);
@@ -29,6 +29,7 @@ if ($_POST) {
                 $stmt->bindParam(":jdate", $joining_date);
                 $stmt->bindParam(":email", $user_email);
                 $stmt->bindParam(":pass", $user_password);
+                $stmt->bindParam(":addr", $user_address);
 
                 if ($stmt->execute()) {
                     $stmt = $db_con->prepare("SELECT * FROM visitors WHERE EMAIL=:email");

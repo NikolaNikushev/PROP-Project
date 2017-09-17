@@ -18,7 +18,7 @@ $(document).ready(function() {
                         confirmButtonText: "Okay"
                     }, function(isConfirm) {
                         if (isConfirm) {
-                            window.location = "../../../tickets";
+                            window.location = "../tickets";
                         }
                     });
 

@@ -17,7 +17,7 @@ $(document).ready(function() {
                         confirmButtonText: "Okay"
                     }, function(isConfirm) {
                         if (isConfirm) {
-                            window.location = "../../../personal-page";
+                            window.location = "../personal-page";
                         }
                     });
                 } else {

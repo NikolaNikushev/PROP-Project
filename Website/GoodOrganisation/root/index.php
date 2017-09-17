@@ -78,7 +78,6 @@ error_reporting(E_ALL);
 				<img src="home/PICTOGRAMS.png" alt="Pictograms" id="pictograms">
 			</div>
 		</div>
-		s
 	</div>
 
 	<div id="footer">

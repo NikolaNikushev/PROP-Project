@@ -16,7 +16,7 @@
                                     <tr>
                                         <th>Bracelet</th>
                                         <th>Total Price</th>
-                                        <th><span id="balanceset" onclick="window.location = '../../personal-page'">Balance <img src="../DEFAULT/IMAGES/gearFat.png" title="Go to the personal page to manage your balance" alt="Set"></span></th>
+                                        <th><span id="balanceset" onclick="window.location = '../personal-page'">Balance <img src="../DEFAULT/IMAGES/gearFat.png" title="Go to the personal page to manage your balance" alt="Set"></span></th>
                                     </tr>
                                     <tr>
                                         <td width="33%">
