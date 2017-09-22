@@ -10,10 +10,10 @@
 
 
 
-<link rel="stylesheet" type="text/css" href="css/PROG.css">
-<link rel="stylesheet" type="text/css" href="../default/css/INTEGRAL.css">
+<link rel="stylesheet" type="text/css" href="css/prog.css">
+<link rel="stylesheet" type="text/css" href="../default/css/footer.css">
 <link rel="stylesheet" type="text/css" href="../default/css/FOOTER.css">
-<script type="text/javascript" src="JS\program.js"></script>
+<script type="text/javascript" src="js/program.js"></script>
 <link rel="stylesheet" type="text/css" href="../default/css/fixedmenu.css">
 
 </head>

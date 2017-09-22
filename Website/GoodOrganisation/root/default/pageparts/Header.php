@@ -1,2 +1,2 @@
-<img id="logo" class="logo" src="../DEFAULT/Images/logohead.png"/>
+<img id="logo" class="logo" src="../default/images/logohead.png"/>
 <?php include 'HeaderLinks.php';?>
