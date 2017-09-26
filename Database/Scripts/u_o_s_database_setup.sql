@@ -1,4 +1,3 @@
--- phpMyAdmin SQL Dump
 -- version 4.5.1
 -- http://www.phpmyadmin.net
 --
@@ -9,7 +8,7 @@
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
-
+SET FOREIGN_KEY_CHECKS=0;
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -19,6 +18,26 @@ SET time_zone = "+00:00";
 --
 -- Database: `propdbtest`
 --
+
+DROP TABLE IF EXISTS activities;
+DROP TABLE IF EXISTS activityplaces_view;
+DROP TABLE IF EXISTS activityreservations;
+DROP TABLE IF EXISTS camps;
+DROP TABLE IF EXISTS foodproducts;
+DROP TABLE IF EXISTS loanitems;
+DROP TABLE IF EXISTS location_history;
+DROP TABLE IF EXISTS pincodes;
+DROP TABLE IF EXISTS productstorages;
+DROP TABLE IF EXISTS rfids;
+DROP TABLE IF EXISTS salelines;
+DROP TABLE IF EXISTS serpayments;
+DROP TABLE IF EXISTS storepayment;
+DROP TABLE IF EXISTS storeperfarchive;
+DROP TABLE IF EXISTS storeprodinfo;
+DROP TABLE IF EXISTS stores;
+DROP TABLE IF EXISTS tentleaders;
+DROP TABLE IF EXISTS tentleadersextra_view;
+DROP TABLE IF EXISTS visitors;
 
 -- --------------------------------------------------------
 
@@ -49,16 +68,6 @@ INSERT INTO `activities` (`ACTIVITY_ID`, `ACTIVITYNAME`, `DESCRIPTION`, `DATE`, 
 (7, 'PUSH IT TO THE LIMIT', 'Walk along the razor''s edge\r\nBut don''t look down, just keep your head\r\nOr you''ll be finished\r\n\r\nOpen up the limit\r\nPast the point of no return\r\nYou''ve reached the top but still you gotta learn\r\nHow to keep it', '2016-05-20 06:24:15', 9001, 0, 0);
 
 -- --------------------------------------------------------
-
---
--- Stand-in structure for view `activityplaces_view`
---
-CREATE TABLE `activityplaces_view` (
-`ACTIVITY_ID` int(11)
-,`TOTALPLACES` int(11)
-,`TORESPLCS` bigint(13)
-,`RESERVEDPLACES` bigint(21)
-);
 
 -- --------------------------------------------------------
 
@@ -300,16 +309,6 @@ INSERT INTO `storeperfarchive` (`SAVE_ID`, `SLICETIME`, `PRODNAME`, `PRODUCT_ID`
 
 -- --------------------------------------------------------
 
---
--- Stand-in structure for view `storeprodinfo`
---
-CREATE TABLE `storeprodinfo` (
-`STORENAME` varchar(25)
-,`PRODUCT_ID` int(11)
-,`PRODNAME` varchar(15)
-,`PRICE` double
-,`QUANTITY` int(11)
-);
 
 -- --------------------------------------------------------
 
@@ -350,15 +349,6 @@ CREATE TABLE `tentleaders` (
 
 -- --------------------------------------------------------
 
---
--- Stand-in structure for view `tentleadersextra_view`
---
-CREATE TABLE `tentleadersextra_view` (
-`USER_ID` int(11)
-,`CAMPING_ID` int(11)
-,`FNAME` varchar(25)
-,`LNAME` varchar(25)
-);
 
 -- --------------------------------------------------------
 
@@ -390,7 +380,7 @@ CREATE TABLE `visitors` (
 --
 DROP TABLE IF EXISTS `activityplaces_view`;
 
-CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `activityplaces_view`  AS  select `a`.`ACTIVITY_ID` AS `ACTIVITY_ID`,`a`.`TOTALPLACES` AS `TOTALPLACES`,floor((`a`.`TOTALPLACES` / 2)) AS `TORESPLCS`,count(`ar`.`USER_ID`) AS `RESERVEDPLACES` from (`activities` `a` join `activityreservations` `ar` on((`a`.`ACTIVITY_ID` = `ar`.`ACTIVITY_ID`))) group by `a`.`ACTIVITY_ID` ;
+CREATE ALGORITHM=UNDEFINED VIEW `activityplaces_view`  AS  select `a`.`ACTIVITY_ID` AS `ACTIVITY_ID`,`a`.`TOTALPLACES` AS `TOTALPLACES`,floor((`a`.`TOTALPLACES` / 2)) AS `TORESPLCS`,count(`ar`.`USER_ID`) AS `RESERVEDPLACES` from (`activities` `a` join `activityreservations` `ar` on((`a`.`ACTIVITY_ID` = `ar`.`ACTIVITY_ID`))) group by `a`.`ACTIVITY_ID` ;
 
 -- --------------------------------------------------------
 
@@ -399,7 +389,7 @@ CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW 
 --
 DROP TABLE IF EXISTS `storeprodinfo`;
 
-CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `storeprodinfo`  AS  select `st`.`STORENAME` AS `STORENAME`,`ps`.`PRODUCT_ID` AS `PRODUCT_ID`,`fp`.`NAME` AS `PRODNAME`,`fp`.`PRICE` AS `PRICE`,`ps`.`INSTOREQUANTITY` AS `QUANTITY` from ((`productstorages` `ps` join `foodproducts` `fp` on((`ps`.`PRODUCT_ID` = `fp`.`PRODUCT_ID`))) join `stores` `st` on((`st`.`STORE_ID` = `ps`.`STORE_ID`))) order by `fp`.`NAME` ;
+CREATE ALGORITHM=UNDEFINED VIEW `storeprodinfo`  AS  select `st`.`STORENAME` AS `STORENAME`,`ps`.`PRODUCT_ID` AS `PRODUCT_ID`,`fp`.`NAME` AS `PRODNAME`,`fp`.`PRICE` AS `PRICE`,`ps`.`INSTOREQUANTITY` AS `QUANTITY` from ((`productstorages` `ps` join `foodproducts` `fp` on((`ps`.`PRODUCT_ID` = `fp`.`PRODUCT_ID`))) join `stores` `st` on((`st`.`STORE_ID` = `ps`.`STORE_ID`))) order by `fp`.`NAME` ;
 
 -- --------------------------------------------------------
 
@@ -408,7 +398,7 @@ CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW 
 --
 DROP TABLE IF EXISTS `tentleadersextra_view`;
 
-CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `tentleadersextra_view`  AS  select `t`.`USER_ID` AS `USER_ID`,`t`.`CAMPING_ID` AS `CAMPING_ID`,`v`.`FNAME` AS `FNAME`,`v`.`LNAME` AS `LNAME` from (`tentleaders` `t` join `visitors` `v` on((`t`.`USER_ID` = `v`.`USER_ID`))) ;
+CREATE ALGORITHM=UNDEFINED VIEW `tentleadersextra_view`  AS  select `t`.`USER_ID` AS `USER_ID`,`t`.`CAMPING_ID` AS `CAMPING_ID`,`v`.`FNAME` AS `FNAME`,`v`.`LNAME` AS `LNAME` from (`tentleaders` `t` join `visitors` `v` on((`t`.`USER_ID` = `v`.`USER_ID`))) ;
 
 --
 -- Indexes for dumped tables
@@ -664,7 +654,7 @@ DELIMITER $$
 --
 -- Events
 --
-CREATE DEFINER=`root`@`localhost` EVENT `SALESSLICEREVENT` ON SCHEDULE EVERY 1 HOUR STARTS '2016-06-13 20:10:00' ENDS '2016-06-15 04:00:00' ON COMPLETION PRESERVE DISABLE COMMENT 'ARCHIVES INFO ABOUT THE SALES AND STORAGES PER STORE' DO INSERT INTO storeperfarchive (SLICETIME, PRODNAME, PRODUCT_ID, QUANTITY, NUMSALES, STORE_ID) 
+CREATE EVENT `SALESSLICEREVENT` ON SCHEDULE EVERY 1 HOUR STARTS '2016-06-13 20:10:00' ENDS '2016-06-15 04:00:00' ON COMPLETION PRESERVE DISABLE COMMENT 'ARCHIVES INFO ABOUT THE SALES AND STORAGES PER STORE' DO INSERT INTO storeperfarchive (SLICETIME, PRODNAME, PRODUCT_ID, QUANTITY, NUMSALES, STORE_ID) 
 	
      SELECT NOW(), fp.NAME, ps.PRODUCT_ID, ps.INSTOREQUANTITY, SUM(sl.QUANTITY) AS NUMSOLD, ps.STORE_ID 
      FROM foodproducts fp
@@ -678,6 +668,7 @@ CREATE DEFINER=`root`@`localhost` EVENT `SALESSLICEREVENT` ON SCHEDULE EVERY 1 H
 
 DELIMITER ;
 
+SET FOREIGN_KEY_CHECKS=1;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
