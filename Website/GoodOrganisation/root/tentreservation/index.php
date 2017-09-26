@@ -21,7 +21,7 @@ if ($count > 0) {
         <title>RESERVE A TENT</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
         <link rel="stylesheet" type="text/css" href="../default/css/fixedmenu.css">
-        <link rel="stylesheet" type="text/css" href="../default/css/INTEGRAL.css">
+        <link rel="stylesheet" type="text/css" href="../default/css/integral.css">
         <link rel="stylesheet" type="text/css" href="../default/css/footer.css">
         <link rel="stylesheet" type="text/css" href="css/tentres.css">
         <link rel="stylesheet" type="text/css" href="css/banner.css">
@@ -145,7 +145,7 @@ if ($count > 0) {
             </div>
         </div>
 
-<?php include '../default/pageparts/footer.php'; ?>
+<?php include '../default/pageparts/Footer.php'; ?>
         <script src="../default/sweetalert-master/sweetalert-master/dist/sweetalert.min.js"></script>
     </body>
 </html>

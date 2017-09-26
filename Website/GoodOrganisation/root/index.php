@@ -11,7 +11,7 @@ error_reporting(E_ALL);
 	<link rel="stylesheet" type="text/css" href="home/header.css">
 	<link rel="stylesheet" type="text/css" href="home/homepage.css">
 	<link rel="stylesheet" type="text/css" href="default/css/footer.css">
-	<link rel="stylesheet" type="text/css" href="../DEFAULT/sweetalert-master/sweetalert-master/dist/sweetalert.css">
+	<link rel="stylesheet" type="text/css" href="default/sweetalert-master/sweetalert-master/dist/sweetalert.css">
 
 	<!--<script type="text/javascript" src="HOMEtest.js"></script>-->
 
@@ -102,14 +102,14 @@ error_reporting(E_ALL);
 				$("#header").addClass("scrolled");
 				$("#nav").removeClass("nav");
 				$("#logo").removeClass("logo");
-				logo.src = "DEFAULT/IMAGES/logohead.png";
+				logo.src = "default/images/logohead.png";
 				potato.style.display = "inline";
 			} else {
 				$("#header").removeClass("scrolled");
 				$("#nav").addClass("nav");
 				$("#logo").addClass("logo");
 				$("#header").addClass("headernotscrolled");
-				logo.src = "HOME/logotext.png";
+				logo.src = "home/logotext.png";
 				potato.style.display = "none";
 			}
 		});

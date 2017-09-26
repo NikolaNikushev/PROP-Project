@@ -250,7 +250,7 @@ require_once 'php/acivitiesData.php';
             </div>
         </div>
     </div>
-    <?php include '../default/pageparts/footer.php';?>
+    <?php include '../default/pageparts/Footer.php';?>
     <script src="../default/js/jquery-2.2.3.min.js"></script>
     <script src="../default/sweetalert-master/sweetalert-master/dist/sweetalert.min.js"></script>
     <script src="js/general-load-content.js"></script>

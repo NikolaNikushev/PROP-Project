@@ -198,7 +198,7 @@ session_start();
             -->
         </div> 
 
-        <?php include '../default/pageparts/footer.php'; ?>
+        <?php include '../default/pageparts/Footer.php'; ?>
         <script src="../default/sweetalert-master/sweetalert-master/dist/sweetalert.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
         <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>

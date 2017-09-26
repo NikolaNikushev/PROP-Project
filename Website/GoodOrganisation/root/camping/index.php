@@ -66,7 +66,7 @@
       </div>
     </div>
   </div>
-<?php include '../default/pageparts/footer.php';?>
+<?php include '../default/pageparts/Footer.php';?>
 </body>
 
 </html>

@@ -6,7 +6,7 @@
   <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="css/main/main.css">
   <link rel="stylesheet" type="text/css" href="css/main/footer.css">
-  <link rel="stylesheet" type="text/css" href="../default/css/INTEGRAL.css">
+  <link rel="stylesheet" type="text/css" href="../default/css/integral.css">
   <link rel="stylesheet" type="text/css" href="css/forms/forms.css">
   <link rel="stylesheet" type="text/css" href="../default/sweetalert-master/sweetalert-master/dist/sweetalert.css">
   <link rel="stylesheet" type="text/css" href="../default/css/fixedmenu.css">
@@ -18,7 +18,7 @@
     session_start();
     if(isset($_SESSION['USER_ID']))
     {
-      header("Location: ../PERSONAL-PAGE/index.php");
+      header("Location: ../personal-page/index.php");
     }
     ?>
   </div>
@@ -47,7 +47,7 @@
     </div>
   </div>
   </div>
-  <?php include '../default/pageparts/footer.php';?>
+  <?php include '../default/pageparts/Footer.php';?>
   <script src="../default/js/jquery-2.2.3.min.js"></script>
   <script src="../default/sweetalert-master/sweetalert-master/dist/sweetalert.min.js"></script>
   <script src="js/form-loader.js"></script>

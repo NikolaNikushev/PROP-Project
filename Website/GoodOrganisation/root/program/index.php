@@ -12,7 +12,6 @@
 
 <link rel="stylesheet" type="text/css" href="css/prog.css">
 <link rel="stylesheet" type="text/css" href="../default/css/footer.css">
-<link rel="stylesheet" type="text/css" href="../default/css/FOOTER.css">
 <script type="text/javascript" src="js/program.js"></script>
 <link rel="stylesheet" type="text/css" href="../default/css/fixedmenu.css">
 
@@ -80,7 +79,7 @@
 			</div>
 		</div>
 	</div>
-	<?php include '../default/pageparts/footer.php';?>
+	<?php include '../default/pageparts/Footer.php';?>
 	
 </body>
 </html>

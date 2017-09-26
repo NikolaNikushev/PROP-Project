@@ -16,8 +16,8 @@ require_once 'php/getPersonalActivities.php';
 
         <!-- main stuff -->
         <link rel="stylesheet" type="text/css" href="css/activities.css">
-        <link rel="stylesheet" type="text/css" href="../default/css/INTEGRAL.css">
-        <link rel="stylesheet" type="text/css" href="../default/css/FOOTER.css">
+        <link rel="stylesheet" type="text/css" href="../default/css/integral.css">
+        <link rel="stylesheet" type="text/css" href="../default/css/footer.css">
 
         <link rel="stylesheet" type="text/css" href="../default/css/fixedmenu.css">
 
@@ -160,7 +160,7 @@ if (isset($_SESSION['USER_ID'])) {
                 </div>
             </div>
         </div>
-                        <?php include '../default/pageparts/footer.php'; ?>
+                        <?php include '../default/pageparts/Footer.php'; ?>
             <!-- TRYING TO CONNECT GOOGLE PROVIDED JQUERY -->
             <script type="text/javascript" src="../default/js/jquery-2.2.3.min.js"></script>
             <script type="text/javascript" src="JS\activities.js"></script>

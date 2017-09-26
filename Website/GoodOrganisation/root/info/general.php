@@ -6,7 +6,7 @@
   
   <link rel="stylesheet" href="generalinfo/css/infopage.css">
   <link rel="stylesheet" href="../default/css/fixedmenu.css">
-  <link rel="stylesheet" href="../default/css/INTEGRAL.css">
+  <link rel="stylesheet" href="../default/css/integral.css">
   <link rel="stylesheet" href="../default/css/footer.css">
 </head>
 
