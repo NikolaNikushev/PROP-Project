@@ -1,10 +1,10 @@
 <div id="footer" class="container-fluid">
-			<img id="footerlogo" src="../DEFAULT/Images/LOGOFOOT.png" />
+			<img id="footerlogo" src="../default/images/LOGOFOOT.png" />
 		<?php require 'FooterLinks.php'?>
 		<div id="social">
-			<img id="footerfacebook" src="../DEFAULT/Images/facebook.png" />
-			<img id="footertwitter" src="../DEFAULT/Images/twitter.png" />
-			<img id="footergplus" src="../DEFAULT/Images/gplus.png" />
+			<img id="footerfacebook" src="../default/images/facebook.png" />
+			<img id="footertwitter" src="../default/images/twitter.png" />
+			<img id="footergplus" src="../default/images/gplus.png" />
 		</div>
 		<p id="copyright">COPYRIGHT:2016</p>
 	</div>

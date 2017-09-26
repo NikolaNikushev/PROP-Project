@@ -11,6 +11,7 @@
 
 
 <link rel="stylesheet" type="text/css" href="css/prog.css">
+<link rel="stylesheet" type="text/css" href="../default/css/integral.css">
 <link rel="stylesheet" type="text/css" href="../default/css/footer.css">
 <script type="text/javascript" src="js/program.js"></script>
 <link rel="stylesheet" type="text/css" href="../default/css/fixedmenu.css">
