@@ -18,7 +18,7 @@ if (isset($_POST)) {
 
 function RecordPayment($dbcon, &$campdata) {
     date_default_timezone_set("Europe/Amsterdam");
-    $date = date("Y-m-d h:i:sa");
+    $date = date("Y-m-d h:i:s");
     try {
         $user_id = $_SESSION['USER_ID'];
         

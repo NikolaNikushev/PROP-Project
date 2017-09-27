@@ -37,7 +37,7 @@ function FillCampData($dbcon, &$campdata, &$count) {
 
 function InsertLeaderData($dbcon, &$campdata) {
     date_default_timezone_set("Europe/Amsterdam");
-    $date = date("Y-m-d h:i:sa");
+    $date = date("Y-m-d h:i:s");
     try {
         $user_email = trim($_POST['email']);
         $chckGuest = "guest_em"; // + a number 1-5
