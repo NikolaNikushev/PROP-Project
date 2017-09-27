@@ -163,7 +163,7 @@ if (isset($_SESSION['USER_ID'])) {
                         <?php include '../default/pageparts/Footer.php'; ?>
             <!-- TRYING TO CONNECT GOOGLE PROVIDED JQUERY -->
             <script type="text/javascript" src="../default/js/jquery-2.2.3.min.js"></script>
-            <script type="text/javascript" src="JS\activities.js"></script>
+            <script type="text/javascript" src="js/activities.js"></script>
             <script type="text/javascript" src="../default/js/velocity.min.js"></script>
     </body>
 </html>
