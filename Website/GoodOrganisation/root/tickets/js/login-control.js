@@ -1,10 +1,9 @@
 $(document).ready(function() {
     $(document).on('submit', '#loginform', function() {
-        if(consopen)
-        {
+        if (consopen) {
             $("#cons").remove();
         }
-        
+
         var data = $(this).serialize();
         $.ajax({
             type: 'POST',
@@ -12,20 +11,20 @@ $(document).ready(function() {
             data: data,
             success: function(response) {
                 if (response.includes('logged')) {
-                  //use of sweetalert-master libraly to display messages
+                    //use of sweetalert-master libraly to display messages
                     $(".forlogin").remove();
-                    $(".central").load("PAGEPARTS/bannerCheckout.php", {price: 55});
+                    $(".central").load("pageparts/bannerCheckout.php", { price: 55 });
                 } else {
                     consopen = true;
-                    $(".errorconsole").load("PAGEPARTS/alertBox.php", {resp: response});
-//                    swal({
-//                        html: true,
-//                        title: "<span style= \"color:#fce600\" >Unsuccessfull logging</span>",
-//                        text: "<span style= \"color:#ff9933\" >Please insert correct data!</span>",
-//                        type: "error",
-//                        confirmButtonColor: "#333399",
-//                        confirmButtonText: "Try again"
-//                    });
+                    $(".errorconsole").load("pageparts/alertBox.php", { resp: response });
+                    //                    swal({
+                    //                        html: true,
+                    //                        title: "<span style= \"color:#fce600\" >Unsuccessfull logging</span>",
+                    //                        text: "<span style= \"color:#ff9933\" >Please insert correct data!</span>",
+                    //                        type: "error",
+                    //                        confirmButtonColor: "#333399",
+                    //                        confirmButtonText: "Try again"
+                    //                    });
                 }
             }
         });
