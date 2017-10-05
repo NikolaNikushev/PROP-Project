@@ -36,7 +36,7 @@ if ($_POST) {
                     $stmt->execute(array(":email" => strtolower($user_email)));
                     $row = $stmt->fetch(PDO::FETCH_ASSOC);
                     $_SESSION['USER_ID'] = $row['USER_ID'];
-                    echo "Registered successfully" . print_r($row) . $_SESSION['USER_ID'];
+                    echo "Registered successfully";
                 } else {
                     echo "Query could not execute !";
                 }

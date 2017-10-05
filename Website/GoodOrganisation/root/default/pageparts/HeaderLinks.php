@@ -36,7 +36,7 @@ if(isset($_SESSION['USER_ID']))
 		<li class="dropdown">
 				<a class="dropbtn" href="../personal-page/">ACCOUNT</a>
 				<div class="dropdown-content">
-					<a class="dropbtn" href="../DEFAULT/PHPFUNC/logout.php">LOGOUT</a>
+					<a class="dropbtn" href="../default/phpfunc/logout.php">LOGOUT</a>
 				<div>
 		</li>
 	</ul>'
