@@ -66,7 +66,7 @@ require_once 'php/getPersonalActivities.php';
                                                 <input class="secret" type="text" name="avplaces" value="' . $activities[$i] . /* nr of available places 4 .. */'">
                                             </p>
                                             <input class="secret" type="text" name="resplaces" value="' . $activities[$i+=1] . /* nr of res places 5 .. */'">
-                                            <input type="checkbox" class="chkbox" required name="reserve" checked="true" value="yes"><label class="chkbox"> I want to reserve </label>
+                                            <input type="checkbox" class="chkbox" required name="reserve" value="yes"><label class="chkbox"> I want to reserve </label>
                                         </div>
                                         <p class="text actdate">' . $activities[$i+=1] . /* date 6 */'</p>
                                     </div>

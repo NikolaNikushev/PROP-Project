@@ -3,127 +3,140 @@ To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
 and open the template in the editor.
 */
+
+
 /* 
     Created on : May 9, 2016, 1:14:47 AM
     Author     : Dmitry
 */
-#contents{
+
+#contents {
     padding: 0;
     padding-top: 36pt !important;
     min-height: 100vh;
     height: 100%;
-
     position: relative;
-    
 }
-#actpad{
+
+#actpad {
     position: static;
     min-height: 100vh;
     padding-bottom: 5vh;
     height: 100%;
     display: inline-block;
     width: 95vw;
-    float:left;
+    float: left;
 }
 
-#footer{
-    clear:both;
+#footer {
+    clear: both;
 }
+
+
 /* inside of the left (orange) part */
-#padinnercontainer{
+
+#padinnercontainer {
     position: relative;
     width: 80%;
     margin: auto;
 }
-#desctextbox{
+
+#desctextbox {
     padding-top: 60pt;
     color: #FFD105;
     text-align: center;
     padding-bottom: 50pt;
     border-bottom: #3B4D80 1pt solid;
 }
-#desctextbox h1{
-    font-size: 48pt;
-    
-}
-#desctextbox h2{
-    font-size: 26pt;
 
+#desctextbox h1 {
+    font-size: 48pt;
 }
-#allactivities{
+
+#desctextbox h2 {
+    font-size: 26pt;
+}
+
+#allactivities {
     margin-top: 30pt;
 }
-.act_container{
-  padding: 0;
-  margin: 0;
-  list-style: none;
-  
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  
-  -webkit-flex-flow: row wrap;
-  justify-content: space-around;
+
+.act_container {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    justify-content: space-around;
 }
-.act_item{
-  padding: 5px;
-  margin-top: 10px;
-  text-align: center;
+
+.act_item {
+    padding: 5px;
+    margin-top: 10px;
+    text-align: center;
 }
-.activity{
+
+.activity {
     background: #D7E1F2;
     width: 300px;
     border: #3B4D80 1pt solid;
     cursor: pointer;
 }
-.activity_img{
+
+.activity_img {
     margin-top: 10pt;
     height: 130px;
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
 }
-.activity_info{
-    
+
+.activity_info {
     min-height: 75px;
     border-top: #3B4D80 1pt dashed;
     margin-top: 10pt;
 }
-.reservebtn{
+
+.reservebtn {
     border: none;
     font-size: 18pt;
     border-top: #3B4D80 1pt dashed;
 }
-.reservebtn :hover{
+
+.reservebtn :hover {
     background: #FFD105;
 }
-.actname{
+
+.actname {
     font-size: 22pt;
     padding-bottom: 0;
 }
-.actdate{
+
+.actdate {
     font-size: 14pt;
 }
-.text{
-        vertical-align: middle;
-        display: block;
-        color:#3B4D80;
+
+.text {
+    vertical-align: middle;
+    display: block;
+    color: #3B4D80;
 }
 
-.description{
+.description {
     border-bottom: #3B4D80 1pt dotted;
     border-top: #3B4D80 1pt dotted;
-    background-color : rgba(59, 77, 128, 0.2);
-      //yellow : rgb(255, 209, 5);
-      // blue: rgba(59, 77, 128, 0.2);
+    background-color: rgba(59, 77, 128, 0.2);
+    /* //yellow : rgb(255, 209, 5); */
+    /* // blue: rgba(59, 77, 128, 0.2); */
     padding: 2pt 8pt 2pt 8pt;
     text-align: left;
-    display: none;
 }
 
-.btn{
+.btn {
     font-family: bauhaus93;
     text-align: center;
     display: inline;
@@ -133,57 +146,62 @@ and open the template in the editor.
     font-size: 20pt;
     font-weight: bold;
 }
-.chkbox{
+
+.chkbox {
     font-family: bauhaus93;
     color: #3B4D80;
 }
-.desc{
+
+.desc {
     border-bottom: 1px rgba(59, 77, 128, 0.4) dashed;
     padding-top: 3pt;
     padding-bottom: 6pt;
     margin-bottom: 3pt;
 }
-.secret{
+
+.secret {
     display: none;
 }
 
 
 /*Left pop-up thing*/
 
-#personstat{
+#personstat {
     position: fixed;
     background: #D7E1F2;
     color: white;
-    
     border: 1px solid #FFD105;
     width: auto;
     right: 20pt;
-
 }
-#managingbtn{
-    float:right;
+
+#managingbtn {
+    float: right;
     text-align: right;
     display: inline-block;
     cursor: pointer;
 }
-#localheader{
+
+#localheader {
     display: block;
     padding-bottom: 5pt;
     vertical-align: bottom;
     color: #3B4D80;
 }
-#managingbtn:hover{
+
+#managingbtn:hover {
     background-color: rgba(245, 130, 53, 0.5);
 }
 
-#managingbtn p{
-    line-height: 90%;    
+#managingbtn p {
+    line-height: 90%;
     margin: 2pt 2pt 2pt 2pt;
 }
 
+
 /*Div for the dynamic content */
 
-#perscont{
+#perscont {
     clear: both;
     margin-top: 1pt;
     border: 1px #3B4D80 solid;
@@ -193,18 +211,18 @@ and open the template in the editor.
     display: block;
     background-color: rgba(59, 77, 128, 0.2);
 }
-#perscont p{
+
+#perscont p {
     margin-left: 2pt;
 }
-#perscont ul li{
-    
+
+#perscont ul li {
     margin-bottom: 2pt;
     list-style: none;
     border-bottom: 1px rgba(59, 77, 128, 0.4) dotted;
-    
 }
-.CANCELBTN{
 
+.CANCELBTN {
     font-family: bauhaus93;
     text-align: center;
     display: inline-block;
@@ -215,8 +233,7 @@ and open the template in the editor.
     color: #D7E1F2;
     font-size: 14pt;
     margin-right: 1%;
-
-/*
+    /*
     font-family: bauhaus93;
     text-align: center;
     display: inline;
@@ -230,25 +247,29 @@ and open the template in the editor.
 
 */
 }
-#bord{
+
+#bord {
     font-size: 14pt;
     display: inline-block;
     display: none;
 }
-#popupdes{
+
+#popupdes {
     display: inline-block;
 }
-.actnameanddate{
+
+.actnameanddate {
     width: 65%;
     display: inline-block;
-    
 }
-#reservedactconts{
+
+#reservedactconts {
     max-height: 20vh;
     overflow-y: scroll;
     display: none;
-        width: 100%;
+    width: 100%;
 }
-.CANCELBTN:hover{
+
+.CANCELBTN:hover {
     color: #F58235;
 }

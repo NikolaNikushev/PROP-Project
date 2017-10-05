@@ -15,7 +15,10 @@
 <body>
 	
 	<div id="header" class="scrolled">
-		<?php include '../default/pageparts/Header.php';?>
+		<?php 
+			session_start();
+			include '../default/pageparts/Header.php';
+		?>
 	</div>
 	<!-- once you click the map a huge ass banner appears-->
 	<div class="overlap banner">

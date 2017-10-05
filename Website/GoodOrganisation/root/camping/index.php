@@ -1,4 +1,5 @@
 <?php
+    session_start();
     require_once '../default/phpfunc/dbconfig.php';
     require_once 'php/checkCampsAvailable.php';
     $count = FillCampData($db_con);

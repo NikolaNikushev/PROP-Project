@@ -12,7 +12,10 @@
 
 <body>
 <div id="header" class="scrolled">
-		<?php include '../default/pageparts/Header.php';?>
+		<?php 
+			session_start();
+			include '../default/pageparts/Header.php';
+		?>
 	</div>
 
 	<div id="firstpart">
