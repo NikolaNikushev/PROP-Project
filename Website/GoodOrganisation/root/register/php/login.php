@@ -4,20 +4,20 @@
 
  if(isset($_POST))
  {
-  $user_email = trim($_POST['user_email']);
-  $user_password = trim($_POST['password']);
+  $user_email = ($_POST['user_email']);
+  $user_password = ($_POST['password']);
 
   $password = ($user_password);
 
   try
   {
 
-   $stmt = $db_con->prepare("SELECT * FROM visitors WHERE EMAIL=:email");
-   $stmt->execute(array(":email"=>$user_email));
+   $stmt = $db_con->prepare("SELECT * FROM visitors WHERE EMAIL='$user_email' AND PASSWORD='$user_password'");
+   $stmt->execute();
    $row = $stmt->fetch(PDO::FETCH_ASSOC);
    $count = $stmt->rowCount();
 
-   if($row['PASSWORD']==$password && $password !="" ){
+   if($count >= 1){
 
     echo "ok-you logged in".print_r ($row);
 	   if ( (session_id() == ''))  session_start();
